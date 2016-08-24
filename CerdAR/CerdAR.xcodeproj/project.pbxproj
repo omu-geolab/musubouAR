@@ -1,0 +1,593 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AC1AD69D1D6534E300A83C63 /* icon_warn.png in Resources */ = {isa = PBXBuildFile; fileRef = AC1AD69C1D6534E300A83C63 /* icon_warn.png */; };
+		AC2C52C61D5805F70032B689 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2C52C51D5805F70032B689 /* AppDelegate.swift */; };
+		AC2C52C81D5805F70032B689 /* ViewMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2C52C71D5805F70032B689 /* ViewMap.swift */; };
+		AC2C52CB1D5805F70032B689 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC2C52C91D5805F70032B689 /* Main.storyboard */; };
+		AC2C52CE1D5805F70032B689 /* CerdAR.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AC2C52CC1D5805F70032B689 /* CerdAR.xcdatamodeld */; };
+		AC2C52D01D5805F70032B689 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC2C52CF1D5805F70032B689 /* Assets.xcassets */; };
+		AC2C52D31D5805F70032B689 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC2C52D11D5805F70032B689 /* LaunchScreen.storyboard */; };
+		AC2C52DE1D5805F80032B689 /* CerdARTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2C52DD1D5805F80032B689 /* CerdARTests.swift */; };
+		AC2C52E91D5805F80032B689 /* CerdARUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2C52E81D5805F80032B689 /* CerdARUITests.swift */; };
+		AC2C52F71D5806AC0032B689 /* ViewARCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2C52F61D5806AC0032B689 /* ViewARCamera.swift */; };
+		AC2C52F91D5806DF0032B689 /* ViewDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2C52F81D5806DF0032B689 /* ViewDetail.swift */; };
+		AC2C52FB1D5807D00032B689 /* ViewConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2C52FA1D5807D00032B689 /* ViewConfig.swift */; };
+		AC2C52FD1D58092B0032B689 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC2C52FC1D58092B0032B689 /* MapKit.framework */; };
+		AC2C52FF1D5809360032B689 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC2C52FE1D5809360032B689 /* CoreLocation.framework */; };
+		AC2C53011D58093C0032B689 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC2C53001D58093C0032B689 /* AVFoundation.framework */; };
+		AC2C53091D58096F0032B689 /* icon_camera.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC2C53041D58096F0032B689 /* icon_camera.jpg */; };
+		AC2C530A1D58096F0032B689 /* icon_config.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC2C53051D58096F0032B689 /* icon_config.jpg */; };
+		AC2C530B1D58096F0032B689 /* icon_locate.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC2C53061D58096F0032B689 /* icon_locate.jpg */; };
+		AC2C530C1D58096F0032B689 /* icon_map.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC2C53071D58096F0032B689 /* icon_map.jpg */; };
+		AC7B6A841D66A9B20086897D /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC7B6A831D66A9B20086897D /* CoreMotion.framework */; };
+		ACA1C6791D59BB0500AF8CF4 /* icon_airtag.png in Resources */ = {isa = PBXBuildFile; fileRef = ACA1C6781D59BB0500AF8CF4 /* icon_airtag.png */; };
+		ACE87E281D5AC6820081560C /* icon_compass.png in Resources */ = {isa = PBXBuildFile; fileRef = ACE87E271D5AC6820081560C /* icon_compass.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AC2C52DA1D5805F80032B689 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC2C52BA1D5805F70032B689 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AC2C52C11D5805F70032B689;
+			remoteInfo = CerdAR;
+		};
+		AC2C52E51D5805F80032B689 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC2C52BA1D5805F70032B689 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AC2C52C11D5805F70032B689;
+			remoteInfo = CerdAR;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AC1AD69C1D6534E300A83C63 /* icon_warn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_warn.png; path = CerdAR/icon_warn.png; sourceTree = "<group>"; };
+		AC2C52C21D5805F70032B689 /* CerdAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CerdAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC2C52C51D5805F70032B689 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AC2C52C71D5805F70032B689 /* ViewMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewMap.swift; sourceTree = "<group>"; };
+		AC2C52CA1D5805F70032B689 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AC2C52CD1D5805F70032B689 /* CerdAR.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CerdAR.xcdatamodel; sourceTree = "<group>"; };
+		AC2C52CF1D5805F70032B689 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AC2C52D21D5805F70032B689 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AC2C52D41D5805F70032B689 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC2C52D91D5805F80032B689 /* CerdARTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CerdARTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC2C52DD1D5805F80032B689 /* CerdARTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CerdARTests.swift; sourceTree = "<group>"; };
+		AC2C52DF1D5805F80032B689 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC2C52E41D5805F80032B689 /* CerdARUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CerdARUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC2C52E81D5805F80032B689 /* CerdARUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CerdARUITests.swift; sourceTree = "<group>"; };
+		AC2C52EA1D5805F80032B689 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC2C52F61D5806AC0032B689 /* ViewARCamera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewARCamera.swift; sourceTree = "<group>"; };
+		AC2C52F81D5806DF0032B689 /* ViewDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewDetail.swift; sourceTree = "<group>"; };
+		AC2C52FA1D5807D00032B689 /* ViewConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewConfig.swift; sourceTree = "<group>"; };
+		AC2C52FC1D58092B0032B689 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		AC2C52FE1D5809360032B689 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		AC2C53001D58093C0032B689 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		AC2C53041D58096F0032B689 /* icon_camera.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = icon_camera.jpg; path = CerdAR/icon_camera.jpg; sourceTree = "<group>"; };
+		AC2C53051D58096F0032B689 /* icon_config.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = icon_config.jpg; path = CerdAR/icon_config.jpg; sourceTree = "<group>"; };
+		AC2C53061D58096F0032B689 /* icon_locate.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = icon_locate.jpg; path = CerdAR/icon_locate.jpg; sourceTree = "<group>"; };
+		AC2C53071D58096F0032B689 /* icon_map.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = icon_map.jpg; path = CerdAR/icon_map.jpg; sourceTree = "<group>"; };
+		AC7B6A831D66A9B20086897D /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		ACA1C6781D59BB0500AF8CF4 /* icon_airtag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_airtag.png; path = CerdAR/icon_airtag.png; sourceTree = "<group>"; };
+		ACE87E271D5AC6820081560C /* icon_compass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_compass.png; path = CerdAR/icon_compass.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AC2C52BF1D5805F70032B689 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC7B6A841D66A9B20086897D /* CoreMotion.framework in Frameworks */,
+				AC2C53011D58093C0032B689 /* AVFoundation.framework in Frameworks */,
+				AC2C52FF1D5809360032B689 /* CoreLocation.framework in Frameworks */,
+				AC2C52FD1D58092B0032B689 /* MapKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC2C52D61D5805F80032B689 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC2C52E11D5805F80032B689 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AC2C52B91D5805F70032B689 = {
+			isa = PBXGroup;
+			children = (
+				AC7B6A831D66A9B20086897D /* CoreMotion.framework */,
+				AC2C53021D5809610032B689 /* Image */,
+				AC2C53001D58093C0032B689 /* AVFoundation.framework */,
+				AC2C52FE1D5809360032B689 /* CoreLocation.framework */,
+				AC2C52FC1D58092B0032B689 /* MapKit.framework */,
+				AC2C52C41D5805F70032B689 /* CerdAR */,
+				AC2C52DC1D5805F80032B689 /* CerdARTests */,
+				AC2C52E71D5805F80032B689 /* CerdARUITests */,
+				AC2C52C31D5805F70032B689 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AC2C52C31D5805F70032B689 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AC2C52C21D5805F70032B689 /* CerdAR.app */,
+				AC2C52D91D5805F80032B689 /* CerdARTests.xctest */,
+				AC2C52E41D5805F80032B689 /* CerdARUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AC2C52C41D5805F70032B689 /* CerdAR */ = {
+			isa = PBXGroup;
+			children = (
+				AC2C52C51D5805F70032B689 /* AppDelegate.swift */,
+				AC2C52C71D5805F70032B689 /* ViewMap.swift */,
+				AC2C52C91D5805F70032B689 /* Main.storyboard */,
+				AC2C52CF1D5805F70032B689 /* Assets.xcassets */,
+				AC2C52D11D5805F70032B689 /* LaunchScreen.storyboard */,
+				AC2C52D41D5805F70032B689 /* Info.plist */,
+				AC2C52CC1D5805F70032B689 /* CerdAR.xcdatamodeld */,
+				AC2C52F61D5806AC0032B689 /* ViewARCamera.swift */,
+				AC2C52F81D5806DF0032B689 /* ViewDetail.swift */,
+				AC2C52FA1D5807D00032B689 /* ViewConfig.swift */,
+			);
+			path = CerdAR;
+			sourceTree = "<group>";
+		};
+		AC2C52DC1D5805F80032B689 /* CerdARTests */ = {
+			isa = PBXGroup;
+			children = (
+				AC2C52DD1D5805F80032B689 /* CerdARTests.swift */,
+				AC2C52DF1D5805F80032B689 /* Info.plist */,
+			);
+			path = CerdARTests;
+			sourceTree = "<group>";
+		};
+		AC2C52E71D5805F80032B689 /* CerdARUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AC2C52E81D5805F80032B689 /* CerdARUITests.swift */,
+				AC2C52EA1D5805F80032B689 /* Info.plist */,
+			);
+			path = CerdARUITests;
+			sourceTree = "<group>";
+		};
+		AC2C53021D5809610032B689 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				AC1AD69C1D6534E300A83C63 /* icon_warn.png */,
+				ACE87E271D5AC6820081560C /* icon_compass.png */,
+				ACA1C6781D59BB0500AF8CF4 /* icon_airtag.png */,
+				AC2C53041D58096F0032B689 /* icon_camera.jpg */,
+				AC2C53051D58096F0032B689 /* icon_config.jpg */,
+				AC2C53061D58096F0032B689 /* icon_locate.jpg */,
+				AC2C53071D58096F0032B689 /* icon_map.jpg */,
+			);
+			name = Image;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AC2C52C11D5805F70032B689 /* CerdAR */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC2C52ED1D5805F80032B689 /* Build configuration list for PBXNativeTarget "CerdAR" */;
+			buildPhases = (
+				AC2C52BE1D5805F70032B689 /* Sources */,
+				AC2C52BF1D5805F70032B689 /* Frameworks */,
+				AC2C52C01D5805F70032B689 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CerdAR;
+			productName = CerdAR;
+			productReference = AC2C52C21D5805F70032B689 /* CerdAR.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AC2C52D81D5805F80032B689 /* CerdARTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC2C52F01D5805F80032B689 /* Build configuration list for PBXNativeTarget "CerdARTests" */;
+			buildPhases = (
+				AC2C52D51D5805F80032B689 /* Sources */,
+				AC2C52D61D5805F80032B689 /* Frameworks */,
+				AC2C52D71D5805F80032B689 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AC2C52DB1D5805F80032B689 /* PBXTargetDependency */,
+			);
+			name = CerdARTests;
+			productName = CerdARTests;
+			productReference = AC2C52D91D5805F80032B689 /* CerdARTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AC2C52E31D5805F80032B689 /* CerdARUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC2C52F31D5805F80032B689 /* Build configuration list for PBXNativeTarget "CerdARUITests" */;
+			buildPhases = (
+				AC2C52E01D5805F80032B689 /* Sources */,
+				AC2C52E11D5805F80032B689 /* Frameworks */,
+				AC2C52E21D5805F80032B689 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AC2C52E61D5805F80032B689 /* PBXTargetDependency */,
+			);
+			name = CerdARUITests;
+			productName = CerdARUITests;
+			productReference = AC2C52E41D5805F80032B689 /* CerdARUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AC2C52BA1D5805F70032B689 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = BRILLIANTSERVICE;
+				TargetAttributes = {
+					AC2C52C11D5805F70032B689 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					AC2C52D81D5805F80032B689 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = AC2C52C11D5805F70032B689;
+					};
+					AC2C52E31D5805F80032B689 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = AC2C52C11D5805F70032B689;
+					};
+				};
+			};
+			buildConfigurationList = AC2C52BD1D5805F70032B689 /* Build configuration list for PBXProject "CerdAR" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AC2C52B91D5805F70032B689;
+			productRefGroup = AC2C52C31D5805F70032B689 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AC2C52C11D5805F70032B689 /* CerdAR */,
+				AC2C52D81D5805F80032B689 /* CerdARTests */,
+				AC2C52E31D5805F80032B689 /* CerdARUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AC2C52C01D5805F70032B689 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC2C53091D58096F0032B689 /* icon_camera.jpg in Resources */,
+				ACE87E281D5AC6820081560C /* icon_compass.png in Resources */,
+				ACA1C6791D59BB0500AF8CF4 /* icon_airtag.png in Resources */,
+				AC2C530C1D58096F0032B689 /* icon_map.jpg in Resources */,
+				AC2C530B1D58096F0032B689 /* icon_locate.jpg in Resources */,
+				AC2C52D31D5805F70032B689 /* LaunchScreen.storyboard in Resources */,
+				AC1AD69D1D6534E300A83C63 /* icon_warn.png in Resources */,
+				AC2C530A1D58096F0032B689 /* icon_config.jpg in Resources */,
+				AC2C52D01D5805F70032B689 /* Assets.xcassets in Resources */,
+				AC2C52CB1D5805F70032B689 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC2C52D71D5805F80032B689 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC2C52E21D5805F80032B689 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AC2C52BE1D5805F70032B689 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC2C52FB1D5807D00032B689 /* ViewConfig.swift in Sources */,
+				AC2C52F91D5806DF0032B689 /* ViewDetail.swift in Sources */,
+				AC2C52F71D5806AC0032B689 /* ViewARCamera.swift in Sources */,
+				AC2C52C81D5805F70032B689 /* ViewMap.swift in Sources */,
+				AC2C52CE1D5805F70032B689 /* CerdAR.xcdatamodeld in Sources */,
+				AC2C52C61D5805F70032B689 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC2C52D51D5805F80032B689 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC2C52DE1D5805F80032B689 /* CerdARTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC2C52E01D5805F80032B689 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC2C52E91D5805F80032B689 /* CerdARUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AC2C52DB1D5805F80032B689 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AC2C52C11D5805F70032B689 /* CerdAR */;
+			targetProxy = AC2C52DA1D5805F80032B689 /* PBXContainerItemProxy */;
+		};
+		AC2C52E61D5805F80032B689 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AC2C52C11D5805F70032B689 /* CerdAR */;
+			targetProxy = AC2C52E51D5805F80032B689 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AC2C52C91D5805F70032B689 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC2C52CA1D5805F70032B689 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AC2C52D11D5805F70032B689 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC2C52D21D5805F70032B689 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AC2C52EB1D5805F80032B689 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AC2C52EC1D5805F80032B689 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AC2C52EE1D5805F80032B689 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CerdAR/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ymn.CerdAR;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		AC2C52EF1D5805F80032B689 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CerdAR/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ymn.CerdAR;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Release;
+		};
+		AC2C52F11D5805F80032B689 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CerdARTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ymn.CerdARTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CerdAR.app/CerdAR";
+			};
+			name = Debug;
+		};
+		AC2C52F21D5805F80032B689 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CerdARTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ymn.CerdARTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CerdAR.app/CerdAR";
+			};
+			name = Release;
+		};
+		AC2C52F41D5805F80032B689 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = CerdARUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ymn.CerdARUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = CerdAR;
+			};
+			name = Debug;
+		};
+		AC2C52F51D5805F80032B689 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = CerdARUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ymn.CerdARUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = CerdAR;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AC2C52BD1D5805F70032B689 /* Build configuration list for PBXProject "CerdAR" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC2C52EB1D5805F80032B689 /* Debug */,
+				AC2C52EC1D5805F80032B689 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC2C52ED1D5805F80032B689 /* Build configuration list for PBXNativeTarget "CerdAR" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC2C52EE1D5805F80032B689 /* Debug */,
+				AC2C52EF1D5805F80032B689 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC2C52F01D5805F80032B689 /* Build configuration list for PBXNativeTarget "CerdARTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC2C52F11D5805F80032B689 /* Debug */,
+				AC2C52F21D5805F80032B689 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC2C52F31D5805F80032B689 /* Build configuration list for PBXNativeTarget "CerdARUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC2C52F41D5805F80032B689 /* Debug */,
+				AC2C52F51D5805F80032B689 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		AC2C52CC1D5805F70032B689 /* CerdAR.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AC2C52CD1D5805F70032B689 /* CerdAR.xcdatamodel */,
+			);
+			currentVersion = AC2C52CD1D5805F70032B689 /* CerdAR.xcdatamodel */;
+			path = CerdAR.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = AC2C52BA1D5805F70032B689 /* Project object */;
+}
