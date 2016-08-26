@@ -246,7 +246,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0730;
-				ORGANIZATIONNAME = BRILLIANTSERVICE;
+				ORGANIZATIONNAME = "2016 BRILLIANTSERVICE CO.,LTD., CERD (Osaka City University)";
 				TargetAttributes = {
 					AC2C52C11D5805F70032B689 = {
 						CreatedOnToolsVersion = 7.3.1;
