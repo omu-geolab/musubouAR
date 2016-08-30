@@ -12,6 +12,8 @@ import CoreMotion
 import CoreImage
 
 
+
+/* UIImageに変換する */
 extension UIView {
     
     func getImage() -> UIImage {
@@ -37,6 +39,7 @@ extension UIView {
 /* カスタムピンに持たせるデータ群 */
 class CustomAnnotation: MKPointAnnotation {
     var pinImage: UIImage!
+    var pinNum: Int!
 }
 
 class ViewMap: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate, UIGestureRecognizerDelegate {
@@ -45,17 +48,12 @@ class ViewMap: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate, U
 
     var center: CLLocationCoordinate2D! // 中心
 
-    let airtagImage = UIImage(named: "icon_airtag.png")!
+    let airtagImage = UIImage(named: "icon_airtag.png")! // 情報タグの画像
+    let warnImage = UIImage(named: "icon_warn.png")! // 警告タグの画像
 
-    var camera = MKMapCamera() // 地図を見下ろすカメラの視点を設定
     let motionmanager = CMMotionManager() // 加速度センサ
 
-    var magneticX: Double = 0
-    var magneticY: Double = 0
-
     let locationManager = CLLocationManager() // ユーザーの現在地を取得する
-
-    let regionRadius: CLLocationDistance = 3000 // 上空 何mから見るか
 
     var userLat: CLLocationDegrees = 0 // ユーザーの現在地の緯度
     var userLon: CLLocationDegrees = 0 // ユーザーの現在地の経度
@@ -85,10 +83,6 @@ class ViewMap: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate, U
     // 警告タグの構造体の配列
     var warnTags: [WarnTag] = []  // 空の配列
 
-    // 情報タグ
-    var infoLabelBox: [UILabel] = [] // 情報タグの文字
-    var infoImageBox: [UIImage] = [] // 情報タグの画像
-
     // 警告タグ
     var warnLabelBox: [UILabel] = [] // 警告タグの文字
     var warnImageBox: [UIImageView] = [] // 警告タグの画像
@@ -96,12 +90,7 @@ class ViewMap: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate, U
     let screenWidth: Double = Double(UIScreen.mainScreen().bounds.size.width)   // 実機の画面の横の長さ
     let screenHeight: Double = Double(UIScreen.mainScreen().bounds.size.height) // 実機の画面の縦の長さ
 
-    var num = 0
-
-    var userCenter = true // ユーザーの中心位置
-
     var annotationBox: [CustomAnnotation] = [] // ピン(保留)
-    var coordinate: [CLLocationCoordinate2D] = []
 
     // 定数
     let textPosMag: CGFloat = 0.2 // タグに表示するテキストの位置(xとy)の倍率
@@ -113,6 +102,10 @@ class ViewMap: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate, U
     let butSize: CGFloat = 100 // ボタンのサイズ(wid・hei)
     let camPos: CGFloat = 5 // カメラボタンの位置
 
+    var pinView: [MKAnnotationView] = []
+
+    var pinViewData: MKAnnotationView! // タップされたタグの情報を保持
+    var zoom: MKCoordinateRegion! // タグをタップしたときの表示範囲を保持
 
     // はじめにだけ呼ばれる
     override func viewDidLoad() {
@@ -122,6 +115,9 @@ class ViewMap: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate, U
 
         locationManager.delegate = self
         locationManager.startUpdatingLocation()
+        
+        mapView = MKMapView(frame: self.view.frame)
+        mapView.center = self.view.center
 
         //self.alert() //毎回呼ばれる・・・
 
@@ -131,13 +127,7 @@ class ViewMap: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate, U
     /* 画面が表示される直前 */
     override func viewWillAppear(animated: Bool) {
 
-        locationManager.delegate = self
-        locationManager.startUpdatingLocation()
-
         self.navigationController?.setNavigationBarHidden(true, animated: true)
-
-        mapView = MKMapView(frame: self.view.frame)
-        mapView.center = self.view.center
 
         // Delegateを設定
         mapView.delegate = self
@@ -149,8 +139,6 @@ class ViewMap: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate, U
         self.mapView.mapType = MKMapType.Standard  // 地図の種類
         self.mapView.showsUserLocation = true      // 現在地の表示を許可する
 
-        mapView.showsCompass = false // AppleMapのコンパスを非表示にする
-
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.startUpdatingLocation()
@@ -159,7 +147,6 @@ class ViewMap: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate, U
         motionmanager.magnetometerUpdateInterval = 0.1 // 加速度センサを取得する間隔
 
         locationManager.requestAlwaysAuthorization() // 常に現在地取得のリクエストメソッド
-
 
         /* (jsonからデータを取ってくるようになったらここをいじる) */
         // 情報タグに入れる情報
@@ -177,6 +164,7 @@ class ViewMap: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate, U
         self.renderView()
         self.initBox()
 
+        // 情報タグの生成
         for i in 0 ..< infoTags.count {
             let text = infoTags[i].iPlace + "\n" + String(infoTags[i].iDis) + "m" // 情報タグの内容
 
@@ -186,7 +174,7 @@ class ViewMap: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate, U
             label = UILabel(frame: CGRect.init(x: zero, y: zero, width: airtagImage.size.width, height: airtagImage.size.height)) //ラベルサイズ
             label.text = text // 文字
             label.textColor = UIColor.redColor() // 文字色
-            label.textAlignment = NSTextAlignment.Center
+            label.textAlignment = NSTextAlignment.Center // 中央揃え
             label.layer.position = CGPoint.init(x: self.view.frame.width, y: self.view.frame.height)
             label.font = UIFont.systemFontOfSize(100); // 初期文字サイズ // マジックナンバーは後ほど対応
             label.adjustsFontSizeToFitWidth = true // 文字の多さによってフォントサイズを調節する
@@ -210,30 +198,58 @@ class ViewMap: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate, U
 
             annotationBox.append(CustomAnnotation()) // 初期化
             annotationBox[i].coordinate = CLLocationCoordinate2DMake(infoTags[i].iLat, infoTags[i].iLon) //ピンの緯度経度の設定
-            annotationBox[i].title = "title" // ピンタップのイベントのために設定
             annotationBox[i].pinImage = newImage // ピン画像の設定
+            annotationBox[i].pinNum = i //ピン番号
+
+            pinView.append(MKAnnotationView())
 
             self.mapView.addAnnotation(annotationBox[i]) // ピンの追加
+        }
 
+        
+        if pinViewData != nil {
+            transFromDetailToMap(pinViewData)
         }
 
     }
 
-    // ピン画像の設定
+
+    /* 詳細画面から地図画面に遷移したときの表示の設定 */
+    func transFromDetailToMap(view: MKAnnotationView) {
+        
+        var span = MKCoordinateSpanMake(0.0001, 0.0001) //表示範囲  // マジックナンバーは後ほど対応
+        var region = MKCoordinateRegionMake(view.annotation!.coordinate, span) //中心座標と表示範囲をマップに登録する
+        self.mapView.setRegion(region, animated:true)
+        
+        runAfterDelay(0.1) { // マジックナンバーは後ほど対応
+
+            // 1.3秒でズームアウトする
+            UIView.animateWithDuration(1.3, delay: 0.0, options: .CurveEaseOut, animations: { // マジックナンバーは後ほど対応
+
+                span = MKCoordinateSpanMake(self.zoom.span.latitudeDelta, self.zoom.span.latitudeDelta) //表示範囲
+                region = MKCoordinateRegionMake(view.annotation!.coordinate, span) //中心座標と表示範囲をマップに登録する。
+
+                self.mapView.setRegion(region, animated:true)
+            
+            }, completion: nil)
+        }
+    }
+
+
+    /* ピン画像の設定 */
     func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
 
         if let pin = annotation as? CustomAnnotation {
 
             // 情報タグのとき
             if pin.pinImage != nil {
-
+                let pN = pin.pinNum //ピン番号をつける
                 //画像が設定されている場合
-                let pinView = MKAnnotationView()
-                pinView.annotation = annotation
-                pinView.image = pin.pinImage // ピンの画像設定
-                pinView.canShowCallout = true // ピンタップのイベントがtrue
+                pinView[pN].annotation = annotation
+                pinView[pN].image = pin.pinImage // ピンの画像設定
+                pinView[pN].canShowCallout = false // ピンをタップ時の吹き出しを非表示
 
-                return pinView
+                return pinView[pN]
             }
         }
 
@@ -242,23 +258,39 @@ class ViewMap: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate, U
     }
 
 
-    // 情報タグがタップされると、詳細画面に遷移する
+    /* 情報タグがタップされると、詳細画面に遷移する */
     func mapView(mapView: MKMapView, didSelectAnnotationView view: MKAnnotationView) {
+        
+        pinViewData = view // タップしたピンのデータを保持する
+
+        zoom = mapView.region
+        
+        // 1.3秒でズームインする
+        UIView.animateWithDuration(1.3, delay: 0.0, options: .CurveEaseOut, animations: {  // マジックナンバーは後ほど対応
+            
+            //表示範囲
+            let span = MKCoordinateSpanMake(0.0001, 0.0001) // マジックナンバーは後ほど対応
+
+            //中心座標と表示範囲をマップに登録する。
+            let region = MKCoordinateRegionMake(view.annotation!.coordinate, span)
+            
+            self.mapView.setRegion(region, animated:true)
+            
+        }, completion: nil)
+        
         let detail = ViewDetail()
-        self.navigationController?.pushViewController(detail, animated: false)
+
+        runAfterDelay(1.5) {
+            self.navigationController?.pushViewController(detail, animated: true) // 遷移
+        }
     }
 
+ 
 
 
-    // タグ初期化
+
+    /* タグ初期化 */
     func initBox() {
-
-        // 情報タグの初期化
-        for _ in 0 ..< infoTags.count {
-            infoImageBox.append(UIImage(named:"icon_airtag.png")!) // タグ画像の設定
-            infoLabelBox.append(UILabel(frame: CGRect.init(x: zero, y: zero, width: zero, height: zero))) // 空のタグ
-            coordinate.append(CLLocationCoordinate2DMake(Double(zero), Double(zero)))
-        }
 
         // 警告タグの初期化
         for _ in 0 ..< warnTags.count {
@@ -269,16 +301,11 @@ class ViewMap: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate, U
 
 
 
-    // 地図画面を開いたときの現在地の取得
+    /* 地図画面を開いたときの現在地の取得 */
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
 
-        //if(userCenter == true){
-            userLat = manager.location!.coordinate.latitude
-            userLon = manager.location!.coordinate.longitude
-            let initiallocation = CLLocation(latitude: userLat, longitude: userLon) //地図を開いたときの画面の中心の位置
-            centerMapOnLocation(initiallocation) //画面の中心を現在地にする
-            userCenter = false
-        //}
+        userLat = manager.location!.coordinate.latitude
+        userLon = manager.location!.coordinate.longitude
 
         runAfterDelay(5.0) {
             self.locationManager.stopUpdatingLocation()
@@ -314,14 +341,6 @@ class ViewMap: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate, U
                 self.locationManager.requestAlwaysAuthorization()
         }
     }
-
-
-    /* 画面の中心を現在地にする */
-    func centerMapOnLocation(location: CLLocation) {
-        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, regionRadius, regionRadius)
-        mapView.setRegion(coordinateRegion, animated: true)
-    }
-
 
 
     /* アプリを開いた時に出る注意書き */
@@ -382,21 +401,19 @@ class ViewMap: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate, U
         toCam_button.addTarget(self, action: #selector(ViewMap.clickAR(_:)), forControlEvents: .TouchUpInside)
     }
 
+
+
     /* iPhone の位置情報が更新されるたびに、デリゲートが呼ばれる */
     func locationManager(manager: CLLocationManager, didUpdateToLocation newLocation: CLLocation, fromLocation oldLocation: CLLocation) {
-
         userLat = newLocation.coordinate.latitude   // 現在地の緯度
         userLon = newLocation.coordinate.longitude  // 現在地の経度
     }
 
 
+
     /* 別の画面に遷移した直後(破棄) */
     override func viewDidDisappear(animated: Bool) {
         super.viewDidDisappear(animated)
-
-        for i in 0 ..< infoTags.count {
-            infoLabelBox[i].removeFromSuperview() // 情報タグの破棄
-        }
 
         for i in 0 ..< warnTags.count {
             warnLabelBox[i].removeFromSuperview() // 警告タグの破棄
@@ -404,14 +421,11 @@ class ViewMap: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate, U
 
         infoTags.removeAll()      // 情報タグ構造体配列の破棄
         warnTags.removeAll()      // 警告タグ構造体配列の破棄
-        infoLabelBox.removeAll() // 情報タグのラベル配列の破棄
-        infoImageBox.removeAll() // 情報タグの画像配列の破棄
         warnLabelBox.removeAll() // 警告タグのラベル配列の破棄
         warnImageBox.removeAll() // 警告タグの画像配列の破棄
-        //img.removeAll() // 画像の破棄
+        annotationBox.removeAll() //ピン情報の破棄
+        pinView.removeAll() // ピン画像の破棄
 
-        num = 0 // 情報タグの番号リセット
-        print("破棄！num:", num)
     }
 
 

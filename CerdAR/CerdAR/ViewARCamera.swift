@@ -17,6 +17,8 @@ class ViewARCamera: UIViewController, UIGestureRecognizerDelegate, CLLocationMan
     var avDevice: AVCaptureDevice! // AVキャプチャデバイス
     var avInput: AVCaptureInput! // AVキャプチャデバイスインプット
     var avOutput: AVCaptureStillImageOutput! // AVキャプチャアウトプット
+    var previewLayer: AVCaptureVideoPreviewLayer? // 画面表示用レイヤー
+
 
     var userLat: CLLocationDegrees = 0   // 緯度
     var userLon: CLLocationDegrees = 0 // 経度
@@ -181,7 +183,7 @@ class ViewARCamera: UIViewController, UIGestureRecognizerDelegate, CLLocationMan
         }
     }
 
-    // カメラ初期化
+    // カメラの初期化
     func initCamera() {
 
         // AVキャプチャセッション
@@ -190,82 +192,52 @@ class ViewARCamera: UIViewController, UIGestureRecognizerDelegate, CLLocationMan
 
         if avSession.canSetSessionPreset(AVCaptureSessionPresetPhoto) {
             avSession.beginConfiguration()
-
-            // キャプチャクオリティ設定
-            // AVCaptureSessionPresetPhoto    写真専用、デバイスの最大解像度
-            // AVCaptureSessionPresetHigh     最高録画品質 (静止画でも一番高画質なのはコレ)
-            // AVCaptureSessionPresetMedium   WiFi向け
-            // AVCaptureSessionPresetLow      3G向け
-            // AVCaptureSessionPreset640x480  640x480 VGA固定
-            // AVCaptureSessionPreset1280x720 1280x720 HD固定
+            
             avSession.sessionPreset = AVCaptureSessionPresetPhoto
-
+            
             avSession.commitConfiguration()
         }
-
-        // AVキャプチャデバイス
-        // (前背面カメラやマイク等のデバイス)
+        
         let devices = AVCaptureDevice.devices()
+        
         for capDevice in devices {
             if capDevice.position == AVCaptureDevicePosition.Back {
                 // 背面カメラを取得
                 avDevice = capDevice as? AVCaptureDevice
             }
         }
-
+        
         if avDevice != nil {
 
-            // AVキャプチャデバイスインプット
-            // (AVキャプチャデバイスからの入力)
             do {
-                // バックカメラからVideoInputを取得
                 avInput = try AVCaptureDeviceInput.init(device: avDevice!)
             } catch let error as NSError {
                 print(error)
             }
 
-            // AVキャプチャデバイスインプットをセッションに追加
             if avSession.canAddInput(avInput) {
 
                 avSession.addInput(avInput)
 
-                // AVキャプチャアウトプット (出力方法)
-                // AVCaptureStillImageOutput: 静止画
-                // AVCaptureMovieFileOutput: 動画ファイル
-                // AVCaptureAudioFileOutput: 音声ファイル
-                // AVCaptureVideoDataOutput: 動画フレームデータ
-                // AVCaptureAudioDataOutput: 音声データ
-
                 avOutput = AVCaptureStillImageOutput()
 
-                // 出力設定
                 avOutput.outputSettings = [AVVideoCodecKey: AVVideoCodecJPEG]
 
-                // AVキャプチャアウトプットをセッションに追加
                 if avSession.canAddOutput(avOutput) {
                     avSession.addOutput(avOutput)
                 }
 
-                // 画像を表示するレイヤーを生成.
-                let capVideoLayer: AVCaptureVideoPreviewLayer = AVCaptureVideoPreviewLayer.init(session: avSession)
+                let capVideoLayer: AVCaptureVideoPreviewLayer = AVCaptureVideoPreviewLayer.init(session:avSession)
                 capVideoLayer.frame = self.view.bounds
                 capVideoLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
 
-                // AVLayerVideoGravityResizeAspectFill
-                //      アスペクト比維持 + 必要に応じてトリミング (縦いっぱいに表示し横をトリミング)
+                self.previewLayer = capVideoLayer
 
-                // AVLayerVideoGravityResizeAspect
-                //      アスペクト比維持 (縦横とも収まる様に表示)
-
-                // AVLayerVideoGravityResize
-                //      利用可能な画面領域いっぱいにリサイズ
-
-
-                // Viewに追加.
                 self.view.layer.addSublayer(capVideoLayer)
 
-                // セッション開始.
                 avSession.startRunning()
+
+                renderView()
 
             }
         }
@@ -604,7 +576,7 @@ class ViewARCamera: UIViewController, UIGestureRecognizerDelegate, CLLocationMan
             imageBox[index].image = image
 
             // 画像の表示する座標を指定する.
-            x = screenWidth/2 + screenWidth * (angle/36.5)
+            x = screenWidth / 2 + screenWidth * (angle / 36.5)
             imageBox[index].layer.position = CGPoint(x: x, y: y)
 
             // タグをタップしたときのイベント
@@ -621,7 +593,6 @@ class ViewARCamera: UIViewController, UIGestureRecognizerDelegate, CLLocationMan
 
             count = count + 1
 
-
             // UIImageViewをViewに追加する.
             self.view.addSubview(imageBox[index])
             self.view.addSubview(labelBox[index])
@@ -635,5 +606,52 @@ class ViewARCamera: UIViewController, UIGestureRecognizerDelegate, CLLocationMan
         let detail = ViewDetail()
         self.navigationController?.pushViewController(detail, animated: true)
     }
+    
+    
+    
+    /* カメラの向きを変える */
+    private func updatePreviewLayer(layer: AVCaptureConnection, orientation: AVCaptureVideoOrientation) {
+        layer.videoOrientation = orientation
+        previewLayer!.frame = self.view.bounds
+    }
 
+
+
+    /* 携帯電話の向きに応じてカメラの向きを変える */
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+
+        if let connection = self.previewLayer?.connection {
+            let currentDevice: UIDevice = UIDevice.currentDevice()
+
+            let orientation: UIDeviceOrientation = currentDevice.orientation
+
+            let previewLayerConnection: AVCaptureConnection = connection
+
+            if previewLayerConnection.supportsVideoOrientation {
+
+                switch orientation {
+                    case .Portrait:
+                        updatePreviewLayer(previewLayerConnection, orientation: .LandscapeLeft )
+                    break
+
+                    case .LandscapeRight:
+                        updatePreviewLayer(previewLayerConnection, orientation: .LandscapeLeft)
+                    break
+
+                    case .LandscapeLeft:
+                        updatePreviewLayer(previewLayerConnection, orientation: .LandscapeRight)
+                    break
+
+                    case .PortraitUpsideDown:
+                        updatePreviewLayer(previewLayerConnection, orientation: .PortraitUpsideDown)
+                    break
+
+                    default:
+                        updatePreviewLayer(previewLayerConnection, orientation: .LandscapeLeft)
+                    break
+                }
+            }
+        }
+    }
 }
