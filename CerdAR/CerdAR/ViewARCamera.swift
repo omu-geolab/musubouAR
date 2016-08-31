@@ -10,7 +10,7 @@ import UIKit
 import AVFoundation
 import CoreLocation
 import CoreMotion
-
+import MapKit
 
 class ViewARCamera: UIViewController, UIGestureRecognizerDelegate, CLLocationManagerDelegate {
     var avSession: AVCaptureSession! // AVキャプチャセッション
@@ -358,7 +358,13 @@ class ViewARCamera: UIViewController, UIGestureRecognizerDelegate, CLLocationMan
             // 表示する画像を設定する.
             let infoImage = UIImage(named: "icon_airtag.png")
 
-            locationDistance(infoTags[i].iLat, tLon: infoTags[i].iLon, tDis: &infoTags[i].iDis)
+            /* 2点間の距離はこれで求めれる！ */
+            let circlelocation1 = CLLocationCoordinate2DMake(infoTags[i].iLat, infoTags[i].iLon)
+            let point1 = MKMapPointForCoordinate(circlelocation1)
+            let circlelocation2 = CLLocationCoordinate2DMake(userLat, userLon)
+            let point2 = MKMapPointForCoordinate(circlelocation2)
+            infoTags[i].iDis = Int(MKMetersBetweenMapPoints(point1, point2))
+            
             geoDirection(infoTags[i].iLat, tLon: infoTags[i].iLon, tDir: &infoTags[i].iDir)
             tagDisplay(i, labelBox: &infoLabelBox, imageBox: &infoImageBox, tDir: infoTags[i].iDir, tDis: infoTags[i].iDis, tPlace: infoTags[i].iPlace, image: infoImage!)
         }
@@ -367,7 +373,13 @@ class ViewARCamera: UIViewController, UIGestureRecognizerDelegate, CLLocationMan
             // 表示する画像を設定する.
             let warnImage = UIImage(named: "icon_warn.png")
 
-            locationDistance(warnTags[i].wLat, tLon: warnTags[i].wLon, tDis: &warnTags[i].wDis)
+            /* 2点間の距離はこれで求めれる！ */
+            let circlelocation1 = CLLocationCoordinate2DMake(infoTags[i].iLat, infoTags[i].iLon)
+            let point1 = MKMapPointForCoordinate(circlelocation1)
+            let circlelocation2 = CLLocationCoordinate2DMake(userLat, userLon)
+            let point2 = MKMapPointForCoordinate(circlelocation2)
+            warnTags[i].wDis = Int(MKMetersBetweenMapPoints(point1, point2))
+
             geoDirection(warnTags[i].wLat, tLon: warnTags[i].wLon, tDir: &warnTags[i].wDir)
             tagDisplay(i, labelBox: &warnLabelBox, imageBox: &warnImageBox, tDir: warnTags[i].wDir, tDis: warnTags[i].wDis, tPlace: warnTags[i].wPlace, image: warnImage!)
         }
@@ -379,7 +391,7 @@ class ViewARCamera: UIViewController, UIGestureRecognizerDelegate, CLLocationMan
             disaster()
             disa = false
         }
-
+        
     }
 
 
@@ -445,36 +457,6 @@ class ViewARCamera: UIViewController, UIGestureRecognizerDelegate, CLLocationMan
         self.view.addSubview(compassView)
 
         comCount = comCount + 1
-    }
-
-
-
-
-    // 距離を測る
-    func locationDistance(tLat: Double, tLon: Double, inout tDis: Int) {
-
-        // 2点の緯度の平均
-        let latAvg = (( userLat + ((tLat - userLat)/2) ) / 180) * M_PI
-
-        // 2点の緯度差
-        let latDifference = (( userLat - tLat ) / 180) * M_PI
-
-        // 2点の経度差
-        let lonDifference = (( userLon - tLon ) / 180) * M_PI
-        let curRadiusTemp = 1 - 0.00669438 * pow(sin(latAvg), 2)
-
-        // 子午線曲率半径
-        let meridianCurvatureRadius = 6335439.327 / sqrt(pow(curRadiusTemp, 3))
-
-        // 卯酉線曲率半径
-        let primeVerticalCircleCurvatureRadius = 6378137 / sqrt(curRadiusTemp)
-
-        // 2点間の距離
-        var distance = pow(meridianCurvatureRadius * latDifference, 2)
-                        + pow(primeVerticalCircleCurvatureRadius * cos(latAvg) * lonDifference, 2)
-        distance = sqrt(distance)
-
-        tDis = Int(round(distance))
     }
 
 

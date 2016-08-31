@@ -28,6 +28,7 @@
 		AC2C530C1D58096F0032B689 /* icon_map.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC2C53071D58096F0032B689 /* icon_map.jpg */; };
 		AC7B6A841D66A9B20086897D /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC7B6A831D66A9B20086897D /* CoreMotion.framework */; };
 		ACA1C6791D59BB0500AF8CF4 /* icon_airtag.png in Resources */ = {isa = PBXBuildFile; fileRef = ACA1C6781D59BB0500AF8CF4 /* icon_airtag.png */; };
+		ACCD94481D755B2800C717E1 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD94471D755B2800C717E1 /* SwiftyJSON.swift */; };
 		ACE87E281D5AC6820081560C /* icon_compass.png in Resources */ = {isa = PBXBuildFile; fileRef = ACE87E271D5AC6820081560C /* icon_compass.png */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +77,7 @@
 		AC2C53071D58096F0032B689 /* icon_map.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = icon_map.jpg; path = CerdAR/icon_map.jpg; sourceTree = "<group>"; };
 		AC7B6A831D66A9B20086897D /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		ACA1C6781D59BB0500AF8CF4 /* icon_airtag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_airtag.png; path = CerdAR/icon_airtag.png; sourceTree = "<group>"; };
+		ACCD94471D755B2800C717E1 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		ACE87E271D5AC6820081560C /* icon_compass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_compass.png; path = CerdAR/icon_compass.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -136,6 +138,7 @@
 		AC2C52C41D5805F70032B689 /* CerdAR */ = {
 			isa = PBXGroup;
 			children = (
+				ACCD94471D755B2800C717E1 /* SwiftyJSON.swift */,
 				AC2C52C51D5805F70032B689 /* AppDelegate.swift */,
 				AC2C52C71D5805F70032B689 /* ViewMap.swift */,
 				AC2C52C91D5805F70032B689 /* Main.storyboard */,
@@ -325,6 +328,7 @@
 				AC2C52F71D5806AC0032B689 /* ViewARCamera.swift in Sources */,
 				AC2C52C81D5805F70032B689 /* ViewMap.swift in Sources */,
 				AC2C52CE1D5805F70032B689 /* CerdAR.xcdatamodeld in Sources */,
+				ACCD94481D755B2800C717E1 /* SwiftyJSON.swift in Sources */,
 				AC2C52C61D5805F70032B689 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -26,6 +26,8 @@
 	<string>常に許可</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>ユーザーの位置をMKMapView上に表示します。</string>
+	<key>UIFileSharingEnabled</key>
+	<true/>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
