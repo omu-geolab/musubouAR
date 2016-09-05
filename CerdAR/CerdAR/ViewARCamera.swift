@@ -95,7 +95,7 @@ class ViewARCamera: UIViewController, UIGestureRecognizerDelegate, CLLocationMan
     var disa = false // 災害発生 → true
 
     var camZ = 0.0 // カメラの傾き(保留)
-    
+
     //定数
     let updateLoc: Double = 1.0 // 1°動いたら更新する
     let zero: CGFloat = 0 // 初期値0
@@ -192,21 +192,21 @@ class ViewARCamera: UIViewController, UIGestureRecognizerDelegate, CLLocationMan
 
         if avSession.canSetSessionPreset(AVCaptureSessionPresetPhoto) {
             avSession.beginConfiguration()
-            
+
             avSession.sessionPreset = AVCaptureSessionPresetPhoto
-            
+
             avSession.commitConfiguration()
         }
-        
+
         let devices = AVCaptureDevice.devices()
-        
+
         for capDevice in devices {
             if capDevice.position == AVCaptureDevicePosition.Back {
                 // 背面カメラを取得
                 avDevice = capDevice as? AVCaptureDevice
             }
         }
-        
+
         if avDevice != nil {
 
             do {
@@ -364,7 +364,7 @@ class ViewARCamera: UIViewController, UIGestureRecognizerDelegate, CLLocationMan
             let circlelocation2 = CLLocationCoordinate2DMake(userLat, userLon)
             let point2 = MKMapPointForCoordinate(circlelocation2)
             infoTags[i].iDis = Int(MKMetersBetweenMapPoints(point1, point2))
-            
+
             geoDirection(infoTags[i].iLat, tLon: infoTags[i].iLon, tDir: &infoTags[i].iDir)
             tagDisplay(i, labelBox: &infoLabelBox, imageBox: &infoImageBox, tDir: infoTags[i].iDir, tDis: infoTags[i].iDis, tPlace: infoTags[i].iPlace, image: infoImage!)
         }
@@ -391,7 +391,7 @@ class ViewARCamera: UIViewController, UIGestureRecognizerDelegate, CLLocationMan
             disaster()
             disa = false
         }
-        
+
     }
 
 
@@ -588,9 +588,9 @@ class ViewARCamera: UIViewController, UIGestureRecognizerDelegate, CLLocationMan
         let detail = ViewDetail()
         self.navigationController?.pushViewController(detail, animated: true)
     }
-    
-    
-    
+
+
+
     /* カメラの向きを変える */
     private func updatePreviewLayer(layer: AVCaptureConnection, orientation: AVCaptureVideoOrientation) {
         layer.videoOrientation = orientation

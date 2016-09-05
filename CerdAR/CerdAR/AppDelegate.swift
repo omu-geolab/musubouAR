@@ -15,13 +15,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var myNavigationController: UINavigationController?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        
+
         let first: ViewMap = ViewMap()
         myNavigationController = UINavigationController(rootViewController: first)
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
         self.window?.rootViewController = myNavigationController
         self.window?.makeKeyAndVisible()
-        
+
         // Override point for customization after application launch.
         return true
     }
@@ -90,7 +90,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //            NSLog("Unresolved error \(wrappedError), \(wrappedError.userInfo)")
 //            abort()
 //        }
-//        
+//
 //        return coordinator
 //    }()
 

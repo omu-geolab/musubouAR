@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 class ViewDetail: UIViewController {
-    
+
     var leftBarButton: UIBarButtonItem!
     var rightBarButton: UIBarButtonItem!
 
@@ -20,7 +20,7 @@ class ViewDetail: UIViewController {
 
         self.view.backgroundColor = UIColor.whiteColor()
     }
-    
+
 
 
     override func viewWillAppear(animated: Bool) {
