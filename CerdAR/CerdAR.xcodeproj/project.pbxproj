@@ -11,7 +11,6 @@
 		AC2C52C61D5805F70032B689 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2C52C51D5805F70032B689 /* AppDelegate.swift */; };
 		AC2C52C81D5805F70032B689 /* ViewMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2C52C71D5805F70032B689 /* ViewMap.swift */; };
 		AC2C52CB1D5805F70032B689 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC2C52C91D5805F70032B689 /* Main.storyboard */; };
-		AC2C52CE1D5805F70032B689 /* CerdAR.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AC2C52CC1D5805F70032B689 /* CerdAR.xcdatamodeld */; };
 		AC2C52D01D5805F70032B689 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC2C52CF1D5805F70032B689 /* Assets.xcassets */; };
 		AC2C52D31D5805F70032B689 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC2C52D11D5805F70032B689 /* LaunchScreen.storyboard */; };
 		AC2C52DE1D5805F80032B689 /* CerdARTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2C52DD1D5805F80032B689 /* CerdARTests.swift */; };
@@ -327,7 +326,6 @@
 				AC2C52F91D5806DF0032B689 /* ViewDetail.swift in Sources */,
 				AC2C52F71D5806AC0032B689 /* ViewARCamera.swift in Sources */,
 				AC2C52C81D5805F70032B689 /* ViewMap.swift in Sources */,
-				AC2C52CE1D5805F70032B689 /* CerdAR.xcdatamodeld in Sources */,
 				ACCD94481D755B2800C717E1 /* SwiftyJSON.swift in Sources */,
 				AC2C52C61D5805F70032B689 /* AppDelegate.swift in Sources */,
 			);
