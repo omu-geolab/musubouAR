@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ViewMap.swift
 //  CerdAR
 //
 //  Copyright (c) 2016 BRILLIANTSERVICE CO.,LTD., CERD (Osaka City University)
@@ -35,40 +35,6 @@ extension UIView {
 }
 
 
-
-/* タグに持たせるデータ群 */
-class TagData: MKPointAnnotation {
-    
-    // 共通タグ
-    var id: String!           // 共通ID(必要なのか？)
-    var name: String!         // タグの名前
-    var inforType: String!    // 種別(info or warn)
-    var icon: String!         // 使用する画像
-    var descript: String!     // 内容の解説文
-    var lat: Double!          // 緯度
-    var lon: Double!          // 経度
-    
-    var pinNum: Int!          // ピン番号
-    var pinImage: UIImage!    // タグ画像
-    var expandImage: UIImage! // サイズ調節用画像
-    
-    var distance = 0     // 現在地から目的地までの距離
-    
-    // 情報の独自タグ
-    var picType: String!      // 写真か動画か
-    var photo: String!        // 写真のURL
-    var movie: String!        // 動画のURL
-    
-    // 災害の独自タグ
-    var range: Int!           // 災害の範囲
-    var start: String!        // 災害の開始時間
-    var stop: String!         // 災害の終了時間
-    var message1: String!     // 警告範囲に近づいてきた時のメッセージ
-    var message2: String!     // 警告範囲に侵入した時のメッセージ
-    var riskType: Int!        // 災害の種類(1:火災,2:浸水,3:落橋,4:土砂崩れ)
-}
-
-
 class ViewMap: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
     @IBOutlet weak var mapView: MKMapView!
@@ -81,13 +47,7 @@ class ViewMap: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
     var locationManager: CLLocationManager! // 現在地の取得
     
-    let screenWidth = Double(UIScreen.mainScreen().bounds.size.width)   // 実機の画面の横の長さ
-    let screenHeight = Double(UIScreen.mainScreen().bounds.size.height) // 実機の画面の縦の長さ
-    
-    var annotationBox = [TagData]() // ピン(json)
-    
     var pinView = [MKAnnotationView]()
-
     
     var pinViewData: MKAnnotationView! // タップされたタグの情報を保持
     var retentionZoom: MKCoordinateRegion! // タグをタップしたときの表示範囲を保持
@@ -102,7 +62,6 @@ class ViewMap: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
     
     // 定数
-    let kZero: CGFloat = 0 // 初期値0
     let kButSize: CGFloat = 100 // ボタンのサイズ(wid・hei)
     let kCamPos: CGFloat = 5 // カメラボタンの位置
     
@@ -118,14 +77,6 @@ class ViewMap: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     let kMapNormal: CGFloat = 1.0 // 地図の透明度
     let kMapAbnormal: CGFloat = 0.8 // 地図の透明度
     
-    let kTagFont: CGFloat = 100 // タグのフォントサイズ
-    let kTagLine = 3 // タグの行数
-    
-    let kTagXY: CGFloat = 40 // タグのx,y座標
-    let kTagW: CGFloat = 80 // タグの横幅
-    let kTagH: CGFloat = 100 // タグの縦幅
-    let kTagSize: CGFloat = 500 // タグ画像のサイズ
-    
     let kZoomLevel = 0.001 // タグをタップしたときにzoomLevelまでズームインする
     let kZoomTime = 1.3 // ズームする時間
     let kZoomDelay = 0.0 // 遅延時間
@@ -139,8 +90,6 @@ class ViewMap: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
     let kCircleLine: CGFloat = 10 // 災害円の円周の太さ
     
-    let kInfo = "info" // 種別(情報)
-    let kWarn = "warn" // 種別(警告)
     let kPhoto = "photo" // 写真
     let kMovie = "movie" // 動画
     
@@ -150,14 +99,19 @@ class ViewMap: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
     
     //MARK:ライフサイクル
-    // はじめにだけ呼ばれる
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.title = "map"
         
+        /* 警告ビューの設定 */
+        warningView = UIView(frame: CGRect.init(x: kZero, y: kZero, width: CGFloat(screenWidth), height: CGFloat(screenHeight)))
+        view.addSubview(warningView) // viewに追加
+        
+        /* マップビューの設定 */
         mapView = MKMapView(frame: self.view.frame)
         mapView.center = self.view.center
+        view.addSubview(mapView)
         
         // 現在地の取得を開始
         if CLLocationManager.locationServicesEnabled() {
@@ -168,9 +122,6 @@ class ViewMap: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
         
         locationManager.requestAlwaysAuthorization()
         
-        /* 警告ビューの設定 */
-        warningView = UIView(frame: CGRect.init(x: kZero, y: kZero, width: CGFloat(screenWidth), height: CGFloat(screenHeight)))
-        view.addSubview(warningView) // viewに追加
         
         /* 警告メッセージの設定 */
         warningMessage = UILabel(frame: CGRect.init(x: CGFloat(screenWidth * kWarnX), y: CGFloat(screenHeight * kWarnY), width: CGFloat(screenWidth * kWarnW), height: CGFloat(screenHeight * kWarnH))) //ラベルサイズ
@@ -183,11 +134,11 @@ class ViewMap: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
         warningMessage.layer.borderWidth = kWarnBorder // 枠線の太さ
         warningMessage.layer.cornerRadius = kWarnCorner // 枠線を角丸にする
         
-        //TODO:UIViewで3/4画面くらいで作る
-        //self.alert() //毎回呼ばれる・・・
+        termsOfService(self.view) //毎回呼ばれる・・・
         
-        // annotationBoxへの代入処理を関数定義してその関数をここで呼び出す
+        
         storeData()
+        
         
         var labelImg: UIImage!
         for i in 0 ..< annotationBox.count {
@@ -215,16 +166,13 @@ class ViewMap: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
         self.navigationController?.setNavigationBarHidden(true, animated: true)
         
         //TODO:viewWillAppear()で生成されるべきクラスなどを見直す
-        
+
         // Delegateを設定
         mapView.delegate = self
         
-        // viewにMapViewを追加.
-        self.view.addSubview(mapView)
-        
-        self.mapView.delegate = self
-        self.mapView.mapType = MKMapType.Standard  // 地図の種類
-        self.mapView.showsUserLocation = true      // 現在地の表示を許可する
+        mapView.delegate = self
+        mapView.mapType = MKMapType.Standard  // 地図の種類
+        mapView.showsUserLocation = true      // 現在地の表示を許可する
         
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
@@ -237,10 +185,10 @@ class ViewMap: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
         // 画面遷移するためのボタンを生成
         let toCam_button = UIButton()
         toCam_button.frame = CGRect.init(x: kZero, y: kZero, width: kButSize, height: kButSize)
-        let buttonImage: UIImage = UIImage(named: "icon_camera.jpg")!
+        let buttonImage: UIImage = UIImage(named: "icon_camera.png")!
         toCam_button.setImage(buttonImage, forState: .Normal)
         toCam_button.layer.position = CGPoint(x: kCamPos + kButSize, y: self.view.bounds.height - kCamPos - kButSize)
-        self.view.addSubview(toCam_button)
+        mapView.addSubview(toCam_button)
         
         toCam_button.addTarget(self, action: #selector(ViewMap.clickAR(_:)), forControlEvents: .TouchUpInside)
         
@@ -419,19 +367,6 @@ class ViewMap: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
     
     //MARK:プライベート関数
-    
-    /* ユーザの現在地と目的地間の距離を求める */
-    func calcDistance(lat: Double, lon: Double, uLat: Double, uLon: Double) -> Int {
-        
-        let cLocation1 = CLLocationCoordinate2DMake(lat, lon)
-        let point1 = MKMapPointForCoordinate(cLocation1)
-        let cLocation2 = CLLocationCoordinate2DMake(uLat, uLon)
-        let point2 = MKMapPointForCoordinate(cLocation2)
-        
-        return Int(MKMetersBetweenMapPoints(point1, point2))
-    }
-    
-    
 
     /* データを格納する */
     func storeData() {
@@ -513,25 +448,8 @@ class ViewMap: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     }
     
     
-    /* 画像をリサイズする */
-    func getResizeImage(image: UIImage, newHeight: CGFloat) -> UIImage {
-        
-        let scale = newHeight / image.size.height // 縮尺度を決める
-        let newWidth = image.size.width * scale // 新しい画像の幅
-        UIGraphicsBeginImageContext(CGSize.init(width: newWidth, height: newHeight)) // 指定された画像の大きさのコンテキストを用意
-        image.drawInRect(CGRect.init(x: kZero, y: kZero, width: newWidth, height: newHeight)) // コンテキストに画像を描画する
-        let newImage = UIGraphicsGetImageFromCurrentImageContext() // コンテキストからUIImageを作る
-        UIGraphicsEndImageContext() // コンテキストを閉じる
-        
-        return newImage
-    }
-    
-    
     /* 警告モード(災害範囲に侵入したしていない) */
     func intrusion(riskType: Int, distance: Int, range: Int, inout warnState: Int, message1: String, message2: String) {
-        
-        //TODO:ついでにwarningMessageにnilを設定する
-        //warningMessageは"removeFromSuperview()"してもnilになっていなかったため、条件文の意味がなかったため削除
         
         // 災害範囲内に侵入した時
         if distance - range <= 0 {
@@ -565,7 +483,7 @@ class ViewMap: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
                     self.warningMessage.removeFromSuperview()
                 }
                 
-                view.addSubview(warningMessage)
+                mapView.addSubview(warningMessage)
                 warnState = 0
                 
             }
@@ -583,7 +501,7 @@ class ViewMap: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
                     self.warningMessage.removeFromSuperview()
                 }
                 
-                view.addSubview(warningMessage)
+                mapView.addSubview(warningMessage)
                 warnState = 1
             }
             
@@ -597,93 +515,8 @@ class ViewMap: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
             }
         }
     }
-    
-    
-    /* ラベルテキスト */
-    func getLabelText(num: Int) -> String {
-        
-        var text: String!
-        
-        // 情報タグ
-        if annotationBox[num].inforType == kInfo {
-            text = annotationBox[num].name + "\n" + String(annotationBox[num].distance) + "m"
-            
-        // 警告タグ
-        } else if annotationBox[num].inforType == kWarn {
-            
-            var distance = annotationBox[num].distance - annotationBox[num].range
-            var riskName: String!
-            
-            // ユーザが災害範囲内に入ったら、災害までの距離を0mで表示する
-            if distance <= 0 {
-                distance = 0
-            }
-            
-            switch annotationBox[num].riskType {
-                
-            case 0: riskName = "火災"
-            case 1: riskName = "浸水"
-            case 2: riskName = "落橋"
-            case 3: riskName = "土砂崩れ"
-            default: riskName = "その他の災害"
-            }
-            
-            text = riskName + "\n" + String(distance) + "m" + "\n" + "範囲: " + String(annotationBox[num].range) + "m"
-        }
-        
-        return text
-    }
-    
-    
-    /* ラベル画像を作る */
-    func makeLabel(num: Int) -> UIImage {
-        
-        var label: UILabel! // 情報タグの文字
-        var labelImg: UIImage! // ラベル画像
-        label = UILabel(frame: CGRect.init(x: kZero, y: kZero, width: airtagImage.size.width, height: airtagImage.size.height)) //ラベルサイズ
-        label.text = getLabelText(num) // テキスト
-        label.textColor = UIColor.blackColor() // 文字色
-        label.textAlignment = NSTextAlignment.Center // 中央揃え
-        label.layer.position = CGPoint.init(x: self.view.frame.width, y: self.view.frame.height)
-        label.font = UIFont.systemFontOfSize(kTagFont) // 初期文字サイズ
-        label.adjustsFontSizeToFitWidth = true // 文字の多さによってフォントサイズを調節する
-        label.numberOfLines = kTagLine // ラベル内の行数
-        
-        labelImg = label.getImage() as UIImage // UILabelをUIImageに変換する
-        
-        return labelImg
-    }
-    
-    
-    
-    /* ピン画像を設定する */
-    func getPinImage(img: UIImage, inforType: String) -> UIImage {
-        
-        if inforType == kInfo {
-            
-            let tagRect = CGRect.init(x: kZero, y: kZero, width: airtagImage.size.width, height: airtagImage.size.height) // タグ画像のサイズと位置
-            UIGraphicsBeginImageContext(airtagImage.size)
-            airtagImage.drawInRect(tagRect)
-            
-            let labelRect = CGRect.init(x: kTagXY, y: kTagXY, width: img.size.width - kTagW, height: img.size.height - kTagH) // ラベル画像のサイズと位置
-            
-            img.drawInRect(labelRect)
-            
-            // Context に描画された画像を新しく設定
-            let newImage = UIGraphicsGetImageFromCurrentImageContext()
-            
-            // Context 終了
-            UIGraphicsEndImageContext()
-            
-            return getResizeImage(newImage, newHeight: kTagSize)
-            
-        } else if inforType == kWarn {
-            
-            return img
-        }
-        
-        return img // ここに来ることはまずないので違うのを変えしたい
-    }
+
+
     
     
     
@@ -718,18 +551,18 @@ class ViewMap: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
                 newsize = CGFloat(screenWidth * ((han * kWarnNewSize) / (scaleZoom.span.latitudeDelta * kMPerDeg * kMeter)))
             }
             
-            newimage = self.getResizeImage(annotationBox[i].expandImage, newHeight: newsize) // 新しい画像
+            newimage = getResizeImage(annotationBox[i].expandImage, newHeight: newsize) // 新しい画像
             
             
             
             /*** annotationBox[i].pinImage = newimage のみで入れ替え可能だが、動作が遅い ***/
             
             let tmpAnnotation: TagData = annotationBox[i] // 一旦他の場所にデータを保持させる
-            self.mapView.removeAnnotation(self.annotationBox[i]) // 古い災害ピンを削除
+            mapView.removeAnnotation(annotationBox[i]) // 古い災害ピンを削除
             annotationBox[i] = tmpAnnotation
             annotationBox[i].pinImage = newimage
             
-            self.mapView.addAnnotation(self.annotationBox[i])
+            mapView.addAnnotation(annotationBox[i])
         }
     }
     
@@ -806,12 +639,14 @@ class ViewMap: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     }
 
 
-    /* TODO:UIViewで3/4画面くらいで作る */
-    /* アプリを開いた時に出る注意書き */
-    func alert() {
-        let alert = UIAlertController(title: "お願い", message: "操作する場合は、立ち止まって安全を確認してから操作してください", preferredStyle: UIAlertControllerStyle.Alert)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default) { action -> Void in print("OK!!!!") })
-        presentViewController(alert, animated: true, completion: nil)
+    /* (利用規約)OKボタンをクリックした時 */
+    internal func onClickOkButton(sender: UIButton) {
+        clearView.removeFromSuperview() // clearviewを消すことでアラートが消える
+    }
+    
+    /* (利用規約)キャンセルボタンをクリックした時 */
+    internal func onClickCancelButton(sender: UIButton) {
+        exit(0) // アプリを終了する
     }
     
     
