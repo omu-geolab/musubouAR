@@ -41,6 +41,10 @@ func termsOfService(view: UIView) {
     okButton.layer.position = CGPoint(x: screenWidth * 0.58, y: screenHeight * 0.8 * 0.85)
     okButton.addTarget(ViewMap(), action: #selector(ViewMap.onClickOkButton(_:)), forControlEvents: .TouchUpInside)
     
+    print(alertWidth * 0.45)
+    print(alertHeight * 0.15)
+    print(alertHeight * 0.4)
+    
     // キャンセルボタンの生成
     cancelButton.frame = CGRect.init(x: 0, y: 0, width: alertWidth * 0.4, height: alertHeight * 0.15)
     cancelButton.backgroundColor = UIColor.grayColor()

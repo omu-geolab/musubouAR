@@ -51,6 +51,8 @@ let kInfo = "info" // 種別(情報)
 let kWarn = "warn" // 種別(警告(今災害が起こっている))
 let kWillWarn = "willWarn" // 種別(警告(災害が今後発生する))
 let kDidWarn = "didWarn" // 種別(警告(災害がおさまった))
+let kPhoto = "photo" // 写真
+let kMovie = "movie" // 動画
 let airtagImage = UIImage(named: "icon_airtag.png")! // 情報タグの画像
 let kZero: CGFloat = 0 // 初期値0
 let kTagFont: CGFloat = 100 // タグのフォントサイズ
@@ -69,9 +71,14 @@ let screenHeight = Double(UIScreen.mainScreen().bounds.size.height) // 実機の
 var infoBox = [TagData]() // 情報タグ用
 var warnBox = [TagData]() // 警告タグ用
 
+var infoImageBox: [UIImageView] = [] // 画面上での情報タグ画像の表示を管理する
+var warnImageBox: [UIImageView] = [] // 画面上での警告タグ画像の表示を管理する
+
 var mode = 0 // 地図画面(0)、カメラ画面(1)
 var warnImage = UIImage(named: "icon_warn0.png") // 情報タグの画像
 var warningMessage: UILabel! // 災害範囲内・付近にいるときに表示するメッセージ
+
+var circleRadius = [CLLocationDistance]() // 災害範囲の円の半径
 
 enum warningState: String {
     case inst = "侵入"
@@ -81,4 +88,5 @@ enum warningState: String {
 
 var warnState = warningState.safe.rawValue
 
-var circleRadius = [CLLocationDistance]() // 災害範囲の円の半径
+var pinData: TagData! // タップされたタグの情報を保持
+

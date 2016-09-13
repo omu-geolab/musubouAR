@@ -30,9 +30,6 @@ class ViewARCamera: UIViewController, UIGestureRecognizerDelegate, CLLocationMan
     
     var count = 0 // タグを表示するときに、はじめはremoveしないためのもの
     
-    var infoImageBox: [UIImageView] = [] // 画面上での情報タグ画像の表示を管理する
-    var warnImageBox: [UIImageView] = [] // 画面上での警告タグ画像の表示を管理する
-    
     // コンパス
     let imgCompass = UIImage(named: "icon_compass.png")! // 画像設定
     var compassView: UIImageView! // コンパスのビュー
@@ -41,7 +38,7 @@ class ViewARCamera: UIViewController, UIGestureRecognizerDelegate, CLLocationMan
     // 警告
     var warningView = UIView(frame: CGRect.init(x: kZero, y: kZero, width: CGFloat(screenWidth), height: CGFloat(screenHeight)))
     
-    //var tunami = 0 // 津波の浸水度
+    
     
     // 災害の発生時刻の取得
     var calendar: NSCalendar!
@@ -197,7 +194,7 @@ class ViewARCamera: UIViewController, UIGestureRecognizerDelegate, CLLocationMan
                 // 方角を取得する
                 infoBox[i].direction = getGeoDirection(infoBox[i].lat, tLon: infoBox[i].lon)
                 
-                tagDisplay(i, imageBox: &infoImageBox[i], tDir: infoBox[i].direction, tDis: infoBox[i].distance, compass: newHeading.magneticHeading, inforType: infoBox[i].inforType)
+                tagDisplay(i, imageBox: &infoImageBox, tDir: infoBox[i].direction, tDis: infoBox[i].distance, compass: newHeading.magneticHeading, inforType: infoBox[i].inforType)
             }
         }
         
@@ -231,7 +228,7 @@ class ViewARCamera: UIViewController, UIGestureRecognizerDelegate, CLLocationMan
                         }
                     }
                     
-                    tagDisplay(i, imageBox: &warnImageBox[i], tDir: warnBox[i].direction, tDis: warnBox[i].distance, compass: newHeading.magneticHeading, inforType: warnBox[i].inforType)
+                    tagDisplay(i, imageBox: &warnImageBox, tDir: warnBox[i].direction, tDis: warnBox[i].distance, compass: newHeading.magneticHeading, inforType: warnBox[i].inforType)
                 }
                 
             }
@@ -366,7 +363,7 @@ class ViewARCamera: UIViewController, UIGestureRecognizerDelegate, CLLocationMan
                     default: warningView.backgroundColor = UIColor(red: 0.200, green: 1.000, blue: 0.384, alpha: 0.5)
                     }
                 }
-                                
+                
                 warningMessage.text = message2 // 警告メッセージ
                 
                 // 一定時間後に警告メッセージを消す
@@ -375,13 +372,12 @@ class ViewARCamera: UIViewController, UIGestureRecognizerDelegate, CLLocationMan
                 }
                 
                 view.addSubview(warningMessage)
-                warnState = warningState.near.rawValue
-                
+                warnState = warningState.inst.rawValue
             }
             
         } else if distance - range > 0 && distance - range <= 500 {
             
-            if warnState != warningState.near.rawValue  {
+            if warnState != warningState.near.rawValue {
                 
                 warningMessage.text = message1 // 警告メッセージ
                 
@@ -392,13 +388,13 @@ class ViewARCamera: UIViewController, UIGestureRecognizerDelegate, CLLocationMan
                 
                 warningView.alpha = 0 // alphaを直接操作する
                 view.addSubview(warningMessage)
-                warnState = warningState.inst.rawValue
+                warnState = warningState.near.rawValue
             }
             
             // 安全圏にいる時
         } else {
             
-            if warnState != warningState.safe.rawValue  {
+            if warnState != warningState.safe.rawValue {
                 warningView.alpha = 0 // alphaを直接操作する
                 warningMessage.removeFromSuperview()
                 warnState = warningState.safe.rawValue
@@ -457,7 +453,7 @@ class ViewARCamera: UIViewController, UIGestureRecognizerDelegate, CLLocationMan
     
     
     // タグを表示する(タグの表示方法が変わるかもしれないので、定数設定はしないでおく)
-    func tagDisplay(index: Int, inout imageBox: UIImageView, tDir: Double, tDis: Int, compass: Double, inforType: String) {
+    func tagDisplay(index: Int, inout imageBox: [UIImageView], tDir: Double, tDis: Int, compass: Double, inforType: String) {
         let angle = tDir - compass
         
         var x = 0.0
@@ -469,7 +465,7 @@ class ViewARCamera: UIViewController, UIGestureRecognizerDelegate, CLLocationMan
         var labelImg: UIImage!
         
         if count > 0 {
-            imageBox.removeFromSuperview()
+            imageBox[index].removeFromSuperview()
         }
         
         // カメラの視野に対象が入ったら・・・
@@ -496,40 +492,56 @@ class ViewARCamera: UIViewController, UIGestureRecognizerDelegate, CLLocationMan
                 
             }
             
+            y = screenHeight/2
+            
             if inforType == kInfo {
                 labelImg = makeLabel(infoBox[index].pinNum, inforType: inforType) // UILabelをUIImageに変換する
-                imageBox = UIImageView(frame: CGRect.init(x: kZero, y: kZero, width: CGFloat(sizeW), height: CGFloat(sizeH)))
-                imageBox.image = getPinImage(labelImg, inforType: infoBox[index].inforType)
+                imageBox[index] = UIImageView(frame: CGRect.init(x: kZero, y: kZero, width: CGFloat(sizeW), height: CGFloat(sizeH)))
+                imageBox[index].image = getPinImage(labelImg, inforType: infoBox[index].inforType)
+                imageBox[index].tag = index // 情報は0以上からで判断
                 
             } else if inforType == kWarn {
                 labelImg = makeLabel(warnBox[index].pinNum, inforType: inforType) // UILabelをUIImageに変換する
-                imageBox = UIImageView(frame: CGRect.init(x: kZero, y: kZero, width: CGFloat(sizeW), height: CGFloat(sizeH)))
-                imageBox.image = getPinImage(labelImg, inforType: warnBox[index].inforType)
+                imageBox[index] = UIImageView(frame: CGRect.init(x: kZero, y: kZero, width: CGFloat(sizeW), height: CGFloat(sizeH)))
+                imageBox[index].image = getPinImage(labelImg, inforType: warnBox[index].inforType)
+                imageBox[index].tag = (-1) + index * (-1) // 警告は-1以下からで判断 あとで+1してインデックス番号に合わせる
             }
             
             
             // 画像の表示する座標を指定する.
             x = screenWidth / 2 + screenWidth * (angle / 36.5)
-            imageBox.layer.position = CGPoint(x: x, y: y)
+            imageBox[index].layer.position = CGPoint(x: x, y: y)
             
             
             // タグをタップしたときのイベント
-            imageBox.userInteractionEnabled = true
-            imageBox.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(ViewARCamera.imageTapped(_:))))
+            imageBox[index].userInteractionEnabled = true
+            let gesture = UITapGestureRecognizer(target:self, action: #selector(ViewARCamera.didClickImageView(_:)))
+            imageBox[index].addGestureRecognizer(gesture)
             
             count = count + 1
             
             // UIImageViewをViewに追加する.
-            view.addSubview(imageBox) // 画像表示用
+            view.addSubview(imageBox[index]) // 画像表示用
         }
     }
     
     
-    /* タグをタップしたときのイベント(詳細画面に遷移する) */
-    internal func imageTapped(sender: UIButton) {
-        let detail = ViewDetail()
-        self.navigationController?.pushViewController(detail, animated: true)
+    func didClickImageView(recognizer: UIGestureRecognizer) {
+        
+        if let imageView = recognizer.view as? UIImageView {
+            
+            if imageView.tag >= 0 {
+                pinData = infoBox[imageView.tag]
+                
+            } else if imageView.tag < 0 {
+                pinData = warnBox[(-1) + imageView.tag * (-1)]
+            }
+            
+            let detail = ViewDetail()
+            self.navigationController?.pushViewController(detail, animated: true)
+        }
     }
+    
     
     
     

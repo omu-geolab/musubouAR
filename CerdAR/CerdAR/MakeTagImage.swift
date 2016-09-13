@@ -35,7 +35,7 @@ func getLabelText(num: Int, inforType: String) -> String {
         // 警告タグ
     } else if inforType == kWarn {
         
-        var distance = warnBox[num].distance - warnBox[num].range
+        var distance = warnBox[num].distance - Int(circleRadius[num])
         var riskName: String!
         
         // ユーザが災害範囲内に入ったら、災害までの距離を0mで表示する

@@ -50,13 +50,12 @@ class ViewMap: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     var infoPinView = [MKAnnotationView]()
     var warnPinView = [MKAnnotationView]()
     
-    
     var pinViewData: MKAnnotationView! // タップされたタグの情報を保持
     var retentionZoom: MKCoordinateRegion! // タグをタップしたときの表示範囲を保持
     var scaleZoom: MKCoordinateRegion! // タグをタップしたときの表示範囲を保持
     
     var warningView: UIView! // 災害範囲内に侵入した時に画面の色を変える
-
+    
     var circle = [MKCircle]() // 災害範囲の円
     
     // 定数
@@ -84,9 +83,6 @@ class ViewMap: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     let kWarnNewSize = 0.7 // 新しい警告タグの画像のサイズ
     
     let kCircleLine: CGFloat = 10 // 災害円の円周の太さ
-    
-    let kPhoto = "photo" // 写真
-    let kMovie = "movie" // 動画
     
     let kFill: CGFloat = 0.6   // 円内部の透明度
     let kStroke: CGFloat = 0.9 // 円周の透明度
@@ -173,7 +169,6 @@ class ViewMap: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
         
         motionManager.magnetometerUpdateInterval = 0.1 // 加速度センサを取得する間隔
         
-        
         // 画面遷移するためのボタンを生成
         let toCam_button = UIButton()
         toCam_button.frame = CGRect.init(x: kZero, y: kZero, width: kButSize, height: kButSize)
@@ -183,7 +178,6 @@ class ViewMap: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
         mapView.addSubview(toCam_button)
         
         toCam_button.addTarget(self, action: #selector(ViewMap.clickAR(_:)), forControlEvents: .TouchUpInside)
-        
         
         if pinViewData != nil {
             transFromDetailToMap(pinViewData) // ズームアウト
@@ -236,6 +230,18 @@ class ViewMap: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     /* 情報タグがタップされると、詳細画面に遷移する */
     func mapView(mapView: MKMapView, didSelectAnnotationView view: MKAnnotationView) {
         
+        for i in 0 ..< infoBox.count {
+            if view.annotation!.coordinate.latitude == infoBox[i].lat && view.annotation!.coordinate.longitude == infoBox[i].lon {
+                pinData = infoBox[i]
+            }
+        }
+        
+        for i in 0 ..< warnBox.count {
+            if view.annotation!.coordinate.latitude == warnBox[i].lat && view.annotation!.coordinate.longitude == warnBox[i].lon {
+                pinData = warnBox[i]
+            }
+        }
+        
         pinViewData = view // タップしたピンのデータを保持する
         retentionZoom = mapView.region // 詳細画面に遷移した時の地図画面の縮尺度を保持する
         
@@ -254,6 +260,7 @@ class ViewMap: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
             self.navigationController?.pushViewController(detail, animated: true) // 遷移
         }
     }
+    
     
     
     /* マップに描いた円をoverlayとして貼り付ける */
@@ -286,7 +293,7 @@ class ViewMap: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
                         color = UIColor(red: 0.200, green: 1.000, blue: 0.384, alpha: kMapNormal)
                         break
                     }
-
+                    
                     circle.lineWidth = kCircleLine // 円周の太さ
                     circle.fillColor = color.colorWithAlphaComponent(kFill)
                     circle.strokeColor = color.colorWithAlphaComponent(kStroke)
@@ -448,9 +455,9 @@ class ViewMap: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     }
     
     
+    
     /* 警告モード(災害範囲に侵入したしていない) */
     func intrusion(riskType: Int, distance: Int, range: Int, inout warnState: String, message1: String, message2: String) {
-
         // 災害範囲内に侵入した時
         if distance - range <= 0 {
             
@@ -458,22 +465,23 @@ class ViewMap: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
                 switch riskType {
                     
                 case 0: // 火災のとき：赤色
-                    warningView.backgroundColor = UIColor(red: 0.545, green: 0.020, blue: 0.220, alpha: kMapAbnormal)
+                    warningView.backgroundColor = UIColor(red: 0.545, green: 0.020, blue: 0.220, alpha: 1.0)
                     
                 case 1: // 浸水のとき：青色
-                    warningView.backgroundColor = UIColor(red: 0.000, green: 0.400, blue: 1.000, alpha: kMapAbnormal)
+                    warningView.backgroundColor = UIColor(red: 0.000, green: 0.400, blue: 1.000, alpha: 1.0)
                     
                 case 2: // 落橋のとき：黄色
-                    warningView.backgroundColor = UIColor(red: 1.000, green: 0.945, blue: 0.024, alpha: kMapAbnormal)
+                    warningView.backgroundColor = UIColor(red: 1.000, green: 0.945, blue: 0.024, alpha: 1.0)
                     
                 case 3: // 土砂崩れのとき：茶色
-                    warningView.backgroundColor = UIColor(red: 0.800, green: 0.400, blue: 0.000, alpha: kMapAbnormal)
+                    warningView.backgroundColor = UIColor(red: 0.800, green: 0.400, blue: 0.000, alpha: 1.0)
                     
                 default: // その他の災害のとき：緑色
-                    warningView.backgroundColor = UIColor(red: 0.200, green: 1.000, blue: 0.384, alpha: kMapAbnormal)
+                    warningView.backgroundColor = UIColor(red: 0.200, green: 1.000, blue: 0.384, alpha: 1.0)
                     break
                 }
                 
+                mapView.alpha = kMapAbnormal
                 warningMessage.text = message2 // 警告メッセージ
                 
                 // 一定時間後に警告メッセージを消す
@@ -585,8 +593,8 @@ class ViewMap: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     }
     
     
-    /* 災害円を描く(ここでのマジックナンバーはjsonのstartとstopで発火させるようにできるようになったら変える) */
-    func makeCircle(index: Int, inout circle: MKCircle, inout radius: CLLocationDistance, start: NSDate, stop: NSDate) {
+    /* 災害円を描く */
+    func makeCircle(index: Int, inout circle: MKCircle, start: NSDate, stop: NSDate) {
         
         let Sn = NSDate().timeIntervalSinceDate(start) / 60 // 開始時刻(start)と現在時刻(now)の差
         let Ne = stop.timeIntervalSinceDate(NSDate()) / 60 // 現在時刻(now)と終了時刻(end)の差
@@ -594,34 +602,38 @@ class ViewMap: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
         
         // アプリを開いたら災害範囲がすでに最大になっていたとき、最大の半径で円を描く
         if CLLocationDistance(Sn) > CLLocationDistance(warnBox[index].range) {
-            radius = CLLocationDistance(warnBox[index].range)
+            circleRadius[index] = CLLocationDistance(warnBox[index].range)
             
         } else { // 経過時間分だけの半径の円を描く
-            radius = CLLocationDistance(Sn)
+            circleRadius[index] = CLLocationDistance(Sn)
         }
         
-        circle = MKCircle(centerCoordinate: warnBox[index].coordinate, radius: radius)
+        circle = MKCircle(centerCoordinate: warnBox[index].coordinate, radius: circleRadius[index])
         self.mapView.addOverlay(circle, level: MKOverlayLevel.AboveRoads)
         
         // 1分で半径1mずつ広がっていく
-        for time in Int(Sn)...Int(Se) {
+        for time in 1...(Int(Se) - Int(Sn)) {
             
             runAfterDelay(Double(time)) {
-                
-                if Int(radius) < warnBox[index].range {
-                    radius = CLLocationDistance(time) // 災害範囲の半径の更新
+                print("makecircle", time)
+                if Int(circleRadius[index]) < warnBox[index].range {
+                    circleRadius[index] = CLLocationDistance(time) // 災害範囲の半径の更新
                     self.mapView.removeOverlay(circle)
-                    circle = MKCircle(centerCoordinate: warnBox[index].coordinate, radius: radius)
+                    circle = MKCircle(centerCoordinate: warnBox[index].coordinate, radius: circleRadius[index])
                     self.mapView.addOverlay(circle, level: MKOverlayLevel.AboveRoads)
                 }
             }
         }
         
         // stopの時刻を過ぎたから、災害の円や文字を消す
-        runAfterDelay(Double(Ne)) {
+        runAfterDelay(Double(Ne) + 60) {
             self.mapView.removeOverlay(circle) // 円を消す
-            warnBox[index].inforType = "pastWarn" // inforTypeを"warn"から"passWarn"に変更
+            self.mapView.alpha = 1.0
+            warnBox[index].inforType = kDidWarn // inforTypeを"warn"から"didWarn"に変更
             self.warnPinView[index].removeFromSuperview() // 災害のピン情報を削除
+            ViewARCamera().warningView.removeFromSuperview()
+            warnImageBox[index].removeFromSuperview()
+            
         }
     }
     
@@ -706,7 +718,7 @@ class ViewMap: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
                 // 現在災害発生中
             } else if stop.compare(nowTime) == NSComparisonResult.OrderedDescending && nowTime.compare(start) == NSComparisonResult.OrderedDescending {
                 if circleRadius[i] == 0 {
-                    makeCircle(i, circle: &circle[i], radius: &circleRadius[i], start: start, stop: stop)
+                    makeCircle(i, circle: &circle[i], start: start, stop: stop)
                 }
                 
                 // 今後発生する災害
