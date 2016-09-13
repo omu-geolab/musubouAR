@@ -2,7 +2,6 @@
 //  DataManager.swift
 //  CerdAR
 //
-//  Created by 山根 舞 on 2016/09/07.
 //  Copyright © 2016年 2016 BRILLIANTSERVICE CO.,LTD., CERD (Osaka City University). All rights reserved.
 //
 

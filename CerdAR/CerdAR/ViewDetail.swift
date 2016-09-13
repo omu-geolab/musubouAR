@@ -40,13 +40,18 @@ class ViewDetail: UIViewController, UIWebViewDelegate {
                 
                 let warnImageView = UIImageView(frame: CGRect.init(x: viewX, y: viewY, width: viewWid, height: viewHei))
                 url = NSURL(string: pinData.photo)
-                req = NSURLRequest(URL:url!)
+                req = NSURLRequest(URL: url!)
                 
-                NSURLConnection.sendAsynchronousRequest(req, queue:NSOperationQueue.mainQueue()) { (res, data, err) in
+                let configuration = NSURLSessionConfiguration.defaultSessionConfiguration()
+                let session = NSURLSession(configuration: configuration, delegate:nil, delegateQueue:NSOperationQueue.mainQueue())
+                
+                let task = session.dataTaskWithRequest(req, completionHandler: {
+                    (data, response, error) -> Void in
                     let image = UIImage(data: data!)
                     warnImageView.image = image
                     self.view.addSubview(warnImageView)
-                }
+                })
+                task.resume()
                 
             } else if pinData.picType == kMovie { // 動画
                 

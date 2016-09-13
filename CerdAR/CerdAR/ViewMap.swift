@@ -615,7 +615,6 @@ class ViewMap: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
         for time in 1...(Int(Se) - Int(Sn)) {
             
             runAfterDelay(Double(time)) {
-                print("makecircle", time)
                 if Int(circleRadius[index]) < warnBox[index].range {
                     circleRadius[index] = CLLocationDistance(time) // 災害範囲の半径の更新
                     self.mapView.removeOverlay(circle)
@@ -631,8 +630,10 @@ class ViewMap: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
             self.mapView.alpha = 1.0
             warnBox[index].inforType = kDidWarn // inforTypeを"warn"から"didWarn"に変更
             self.warnPinView[index].removeFromSuperview() // 災害のピン情報を削除
-            ViewARCamera().warningView.removeFromSuperview()
-            warnImageBox[index].removeFromSuperview()
+            ViewARCamera().warningView.backgroundColor = UIColor.clearColor()
+            if warnImageBox.count != 0 {
+                warnImageBox[index].removeFromSuperview()
+            }
             
         }
     }
