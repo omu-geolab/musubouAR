@@ -29,7 +29,7 @@ func termsOfService(view: UIView) {
     
     clearView = UIView(frame: CGRect.init(x: kZero, y: kZero, width: CGFloat(screenWidth), height: CGFloat(screenHeight)))
     
-    // カメラボタンの生成
+    // OKボタンの生成
     okButton.frame = CGRect.init(x: 0, y: 0, width: alertWidth * 0.45, height: alertHeight * 0.15)
     okButton.backgroundColor = UIColor.yellowColor()
     okButton.layer.masksToBounds = true
@@ -49,7 +49,6 @@ func termsOfService(view: UIView) {
     cancelButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
     cancelButton.titleLabel!.font = UIFont.systemFontOfSize(25)
     cancelButton.layer.position = CGPoint(x: screenWidth * 0.2, y: screenHeight * 0.8 * 0.85)
-    
     cancelButton.addTarget(ViewMap(), action: #selector(ViewMap.onClickCancelButton(_:)), forControlEvents: .TouchUpInside)
     
     // アラートビューの生成

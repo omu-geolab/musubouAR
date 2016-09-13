@@ -28,13 +28,10 @@ class ViewARCamera: UIViewController, UIGestureRecognizerDelegate, CLLocationMan
     var locationManager: CLLocationManager! // 現在地の取得
     var compassManager: CLLocationManager! // コンパスの向き測定
     
-    var distanceInt = 0 // 現在地〜災害地の距離
-    var direction = 0.0 // カメラ〜被災地の方角
-    
     var count = 0 // タグを表示するときに、はじめはremoveしないためのもの
     
-    // 情報タグ
-    var infoImageBox: [UIImageView] = [] // 情報タグの画像
+    var infoImageBox: [UIImageView] = [] // 画面上での情報タグ画像の表示を管理する
+    var warnImageBox: [UIImageView] = [] // 画面上での警告タグ画像の表示を管理する
     
     // コンパス
     let imgCompass = UIImage(named: "icon_compass.png")! // 画像設定
@@ -42,11 +39,9 @@ class ViewARCamera: UIViewController, UIGestureRecognizerDelegate, CLLocationMan
     var isExistCom = false // コンパスの表示制御用
     
     // 警告
-    var warningView: UIView!
-    var warnCount = 0 // 警告の表示制御用
-    var warn = "津波" // 警告の種類
-    //var tunami = 0 // 津波の浸水度
+    var warningView = UIView(frame: CGRect.init(x: kZero, y: kZero, width: CGFloat(screenWidth), height: CGFloat(screenHeight)))
     
+    //var tunami = 0 // 津波の浸水度
     
     // 災害の発生時刻の取得
     var calendar: NSCalendar!
@@ -58,10 +53,9 @@ class ViewARCamera: UIViewController, UIGestureRecognizerDelegate, CLLocationMan
     var camZ = 0.0 // カメラの傾き(保留)
     
     //定数
-    let updateLoc: Double = 1.0 // 1.0°動いたら更新する
-    let mapPos: CGFloat = 5 // 地図ボタンの位置(x、y)
-    let butSize: CGFloat = 100 // ボタンのサイズ(wid、hei)
-    let comPos: CGFloat = 5 // 地図ボタンの位置(x、y)
+    let updateLoc = 1.0 // 1.0°動いたら更新する
+    
+    
     
     
     // MARK: ライフサイクル
@@ -91,9 +85,9 @@ class ViewARCamera: UIViewController, UIGestureRecognizerDelegate, CLLocationMan
             
             // 1°動いたら更新する
             compassManager.headingFilter = updateLoc
+            
             // デバイスのどの向きを北とするか（デフォルトは画面上部）
             compassManager.headingOrientation = .Portrait
-            
             compassManager.startUpdatingHeading()
         }
     }
@@ -110,12 +104,14 @@ class ViewARCamera: UIViewController, UIGestureRecognizerDelegate, CLLocationMan
         self.initCamera()
         self.initBox()
         
+        view.addSubview(warningView)
+        
         // 画面遷移のためのボタン
         let toMapBut = UIButton()
-        toMapBut.frame = CGRect.init(x: kZero, y: kZero, width: butSize, height: butSize)
+        toMapBut.frame = CGRect.init(x: kZero, y: kZero, width: kButSize, height: kButSize)
         let buttonImage: UIImage = UIImage(named: "icon_map.png")!
         toMapBut.setImage(buttonImage, forState: .Normal)
-        toMapBut.layer.position = CGPoint(x: mapPos + butSize, y: self.view.bounds.height - mapPos - butSize)
+        toMapBut.layer.position = CGPoint(x: kButPos + kButSize, y: self.view.bounds.height - kButPos - kButSize)
         view.addSubview(toMapBut)
         toMapBut.addTarget(self, action: #selector(ViewARCamera.clickMap(_:)), forControlEvents: .TouchUpInside)
         
@@ -157,8 +153,8 @@ class ViewARCamera: UIViewController, UIGestureRecognizerDelegate, CLLocationMan
         
         compassView.removeFromSuperview() // コンパスの破棄
         
-        isExistCom = false             // コンパスのカウントの破棄
-        count = 0                 // タグのカウントの破棄
+        isExistCom = false // コンパスのカウントの破棄
+        count = 0 // タグのカウントの破棄
     }
     
     
@@ -187,39 +183,67 @@ class ViewARCamera: UIViewController, UIGestureRecognizerDelegate, CLLocationMan
         //        })
         
         
-        for i in 0 ..< annotationBox.count {
+        var min = 1001
+        var idx = -1
+        
+        for i in 0 ..< infoBox.count {
             
             // 距離を取得する
-            annotationBox[i].distance = calcDistance(annotationBox[i].lat, lon: annotationBox[i].lon, uLat: userLat, uLon: userLon)
+            infoBox[i].distance = calcDistance(infoBox[i].lat, lon: infoBox[i].lon, uLat: userLat, uLon: userLon)
             
             // 1000m以内の場所のタグは表示する
-            if annotationBox[i].distance <= 1000 {
+            if infoBox[i].distance <= 1000 {
                 
                 // 方角を取得する
-                annotationBox[i].direction = getGeoDirection(annotationBox[i].lat, tLon: annotationBox[i].lon)
+                infoBox[i].direction = getGeoDirection(infoBox[i].lat, tLon: infoBox[i].lon)
                 
-                // 警告タグの画像を設定する
-                if annotationBox[i].inforType == kWarn {
-                    switch annotationBox[i].riskType {
-                    case 0: warnImage = UIImage(named: "icon_warn0.png")! // 火災
-                    case 1: warnImage = UIImage(named: "icon_warn1.png")! // 浸水
-                    case 2: warnImage = UIImage(named: "icon_warn2.png")! // 土砂崩れ
-                    case 3: warnImage = UIImage(named: "icon_warn3.png")! // 通行止め
-                    default: warnImage = airtagImage; break
-                    }
-                }
-                
-                tagDisplay(i, imageBox: &infoImageBox, tDir: annotationBox[i].direction, tDis: annotationBox[i].distance, compass: newHeading.magneticHeading)
+                tagDisplay(i, imageBox: &infoImageBox[i], tDir: infoBox[i].direction, tDis: infoBox[i].distance, compass: newHeading.magneticHeading, inforType: infoBox[i].inforType)
             }
-            
         }
         
+        
+        for i in 0 ..< warnBox.count {
+            
+            if warnBox[i].inforType == kWarn {
+                
+                // 距離を取得する
+                warnBox[i].distance = calcDistance(warnBox[i].lat, lon: warnBox[i].lon, uLat: userLat, uLon: userLon)
+                
+                // 1000m以内の場所のタグは表示する
+                if warnBox[i].distance <= 1000 {
+                    
+                    // 方角を取得する
+                    warnBox[i].direction = getGeoDirection(warnBox[i].lat, tLon: warnBox[i].lon)
+                    
+                    // 警告タグの画像を設定する
+                    if warnBox[i].inforType == kWarn {
+                        switch warnBox[i].riskType {
+                        case 0: warnImage = UIImage(named: "icon_warn0.png")! // 火災
+                        case 1: warnImage = UIImage(named: "icon_warn1.png")! // 浸水
+                        case 2: warnImage = UIImage(named: "icon_warn2.png")! // 土砂崩れ
+                        case 3: warnImage = UIImage(named: "icon_warn3.png")! // 通行止め
+                        default: warnImage = airtagImage; break
+                        }
+                        
+                        if min >= warnBox[i].distance {
+                            min = warnBox[i].distance
+                            idx = i
+                        }
+                    }
+                    
+                    tagDisplay(i, imageBox: &warnImageBox[i], tDir: warnBox[i].direction, tDis: warnBox[i].distance, compass: newHeading.magneticHeading, inforType: warnBox[i].inforType)
+                }
+                
+            }
+        }
+        
+        
+        // コンパスの向きを調整する
         compassRotate(newHeading.magneticHeading)
         
         // 災害発生時
-        if disa == true {
-            disaster()
-            disa = false
+        if idx != -1 {
+            warningDisplay(idx, distance: warnBox[idx].distance, range: Int(circleRadius[idx]), warnState: &warnState, message1: warnBox[idx].message1, message2: warnBox[idx].message2)
         }
         
     }
@@ -238,8 +262,13 @@ class ViewARCamera: UIViewController, UIGestureRecognizerDelegate, CLLocationMan
     func initBox() {
         
         // 情報タグの初期化
-        for _ in 0 ..< annotationBox.count {
+        for _ in 0 ..< infoBox.count {
             infoImageBox.append(UIImageView(frame: CGRect.init(x: kZero, y: kZero, width: kZero, height: kZero)))
+        }
+        
+        // 情報タグの初期化
+        for _ in 0 ..< warnBox.count {
+            warnImageBox.append(UIImageView(frame: CGRect.init(x: kZero, y: kZero, width: kZero, height: kZero)))
         }
     }
     
@@ -308,46 +337,75 @@ class ViewARCamera: UIViewController, UIGestureRecognizerDelegate, CLLocationMan
     }
     
     
-    
-    
-    func warningTimer() {
-        time = NSDate().timeIntervalSinceDate(startDate) // 現在時刻と開始時刻の差
-        warningDisplay()
-    }
-    
-    
-    func disaster() {
-        timer = NSTimer.scheduledTimerWithTimeInterval(1.0,
-                                                       target: self,
-                                                       selector: #selector(ViewARCamera.warningTimer),
-                                                       userInfo: nil,
-                                                       repeats: true)
-    }
-    
-    
-    
-    
     // 災害地範囲内に入ったときに画面の色を変化させる
-    func warningDisplay() {
-        if warnCount > 0 {
-            warningView.removeFromSuperview()
-        }
+    func warningDisplay(index: Int, distance: Int, range: Int, inout warnState: String, message1: String, message2: String) {
         
-        if warn == "津波" {
-            warningView = UIView(frame: CGRect.init(x: kZero, y: CGFloat(screenHeight) - CGFloat(time), width: CGFloat(screenWidth), height: CGFloat(time)))
-            warningView.backgroundColor = UIColor.blueColor()
+        // 災害範囲内に侵入した時
+        if distance - range <= 0 {
             
-        } else if warn == "火災" {
-            warningView = UIView(frame: CGRect.init(x: kZero, y: kZero, width: CGFloat(screenWidth), height: CGFloat(screenHeight)))
-            warningView.backgroundColor = UIColor.redColor()
+            if warnState != warningState.inst.rawValue {
+                
+                // 災害が「火災」または「土砂崩れ」のとき
+                if warnBox[index].riskType == 0 || warnBox[index].riskType == 3 {
+                    warningView.frame = CGRect.init(x: kZero, y: kZero, width: CGFloat(screenWidth), height: CGFloat(screenHeight))
+                    
+                    switch warnBox[index].riskType {
+                    case 0: warningView.backgroundColor = UIColor(red: 0.545, green: 0.020, blue: 0.220, alpha: 0.5)
+                    case 3: warningView.backgroundColor = UIColor(red: 0.800, green: 0.400, blue: 0.000, alpha: 0.5)
+                    default: warningView.backgroundColor = UIColor(red: 0.200, green: 1.000, blue: 0.384, alpha: 0.5)
+                    }
+                    
+                // 災害が「浸水」または「落橋」のとき
+                } else if warnBox[index].riskType == 1 || warnBox[index].riskType == 2 {
+                    
+                    warningView.frame = CGRect.init(x: kZero, y: CGFloat(screenHeight * 3 / 4), width: CGFloat(screenWidth), height: CGFloat(screenHeight / 4))
+                    
+                    switch warnBox[index].riskType {
+                    case 1: warningView.backgroundColor = UIColor(red: 0.000, green: 0.400, blue: 1.000, alpha: 0.5)
+                    case 2: warningView.backgroundColor = UIColor(red: 1.000, green: 0.945, blue: 0.024, alpha: 0.5)
+                    default: warningView.backgroundColor = UIColor(red: 0.200, green: 1.000, blue: 0.384, alpha: 0.5)
+                    }
+                }
+                                
+                warningMessage.text = message2 // 警告メッセージ
+                
+                // 一定時間後に警告メッセージを消す
+                runAfterDelay(10.0) {
+                    warningMessage.removeFromSuperview()
+                }
+                
+                view.addSubview(warningMessage)
+                warnState = warningState.near.rawValue
+                
+            }
+            
+        } else if distance - range > 0 && distance - range <= 500 {
+            
+            if warnState != warningState.near.rawValue  {
+                
+                warningMessage.text = message1 // 警告メッセージ
+                
+                // 一定時間後に警告メッセージを消す
+                runAfterDelay(10.0) {
+                    warningMessage.removeFromSuperview()
+                }
+                
+                warningView.alpha = 0 // alphaを直接操作する
+                view.addSubview(warningMessage)
+                warnState = warningState.inst.rawValue
+            }
+            
+            // 安全圏にいる時
+        } else {
+            
+            if warnState != warningState.safe.rawValue  {
+                warningView.alpha = 0 // alphaを直接操作する
+                warningMessage.removeFromSuperview()
+                warnState = warningState.safe.rawValue
+            }
         }
-        
-        warningView.alpha = 0.3 // alphaを直接操作する
-        view.addSubview(warningView)
-        warnCount = warnCount + 1
         
     }
-    
     
     
     
@@ -359,7 +417,7 @@ class ViewARCamera: UIViewController, UIGestureRecognizerDelegate, CLLocationMan
         
         if isExistCom == false {
             
-            compassView = UIImageView(frame: CGRect(x: comPos+butSize, y: butSize+comPos, width: butSize, height: butSize))
+            compassView = UIImageView(frame: CGRect(x: kButPos + kButSize, y: kButSize + kButPos, width: kButSize, height: kButSize))
             
             // UIImageViewに画像を設定する.
             compassView.image = imgCompass
@@ -399,7 +457,7 @@ class ViewARCamera: UIViewController, UIGestureRecognizerDelegate, CLLocationMan
     
     
     // タグを表示する(タグの表示方法が変わるかもしれないので、定数設定はしないでおく)
-    func tagDisplay(index: Int, inout imageBox: [UIImageView], tDir: Double, tDis: Int, compass: Double) {
+    func tagDisplay(index: Int, inout imageBox: UIImageView, tDir: Double, tDis: Int, compass: Double, inforType: String) {
         let angle = tDir - compass
         
         var x = 0.0
@@ -408,8 +466,10 @@ class ViewARCamera: UIViewController, UIGestureRecognizerDelegate, CLLocationMan
         var sizeW = 0.0 // タグの横幅
         var sizeH = 0.0 // タグの縦幅
         
+        var labelImg: UIImage!
+        
         if count > 0 {
-            imageBox[index].removeFromSuperview()
+            imageBox.removeFromSuperview()
         }
         
         // カメラの視野に対象が入ったら・・・
@@ -436,24 +496,31 @@ class ViewARCamera: UIViewController, UIGestureRecognizerDelegate, CLLocationMan
                 
             }
             
-            let labelImg = makeLabel(annotationBox[index].pinNum) // UILabelをUIImageに変換する
-            imageBox[index] = UIImageView(frame: CGRect.init(x: kZero, y: kZero, width: CGFloat(sizeW), height: CGFloat(sizeH)))
-            imageBox[index].image = getPinImage(labelImg, inforType: annotationBox[index].inforType)
+            if inforType == kInfo {
+                labelImg = makeLabel(infoBox[index].pinNum, inforType: inforType) // UILabelをUIImageに変換する
+                imageBox = UIImageView(frame: CGRect.init(x: kZero, y: kZero, width: CGFloat(sizeW), height: CGFloat(sizeH)))
+                imageBox.image = getPinImage(labelImg, inforType: infoBox[index].inforType)
+                
+            } else if inforType == kWarn {
+                labelImg = makeLabel(warnBox[index].pinNum, inforType: inforType) // UILabelをUIImageに変換する
+                imageBox = UIImageView(frame: CGRect.init(x: kZero, y: kZero, width: CGFloat(sizeW), height: CGFloat(sizeH)))
+                imageBox.image = getPinImage(labelImg, inforType: warnBox[index].inforType)
+            }
             
             
             // 画像の表示する座標を指定する.
             x = screenWidth / 2 + screenWidth * (angle / 36.5)
-            imageBox[index].layer.position = CGPoint(x: x, y: y)
+            imageBox.layer.position = CGPoint(x: x, y: y)
             
             
             // タグをタップしたときのイベント
-            imageBox[index].userInteractionEnabled = true
-            imageBox[index].addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(ViewARCamera.imageTapped(_:))))
+            imageBox.userInteractionEnabled = true
+            imageBox.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(ViewARCamera.imageTapped(_:))))
             
             count = count + 1
             
             // UIImageViewをViewに追加する.
-            view.addSubview(imageBox[index]) // 画像表示用
+            view.addSubview(imageBox) // 画像表示用
         }
     }
     

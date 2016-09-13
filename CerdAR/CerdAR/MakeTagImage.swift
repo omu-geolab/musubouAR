@@ -24,18 +24,18 @@ func calcDistance(lat: Double, lon: Double, uLat: Double, uLon: Double) -> Int {
 
 
 /* ラベルテキスト */
-func getLabelText(num: Int) -> String {
+func getLabelText(num: Int, inforType: String) -> String {
     
     var text: String!
     
     // 情報タグ
-    if annotationBox[num].inforType == kInfo {
-        text = annotationBox[num].name + "\n" + String(annotationBox[num].distance) + "m"
+    if inforType == kInfo {
+        text = infoBox[num].name + "\n" + String(infoBox[num].distance) + "m"
         
         // 警告タグ
-    } else if annotationBox[num].inforType == kWarn {
+    } else if inforType == kWarn {
         
-        var distance = annotationBox[num].distance - annotationBox[num].range
+        var distance = warnBox[num].distance - warnBox[num].range
         var riskName: String!
         
         // ユーザが災害範囲内に入ったら、災害までの距離を0mで表示する
@@ -43,7 +43,7 @@ func getLabelText(num: Int) -> String {
             distance = 0
         }
         
-        switch annotationBox[num].riskType {
+        switch warnBox[num].riskType {
             
         case 0: riskName = "火災"
         case 1: riskName = "浸水"
@@ -52,7 +52,7 @@ func getLabelText(num: Int) -> String {
         default: riskName = "その他の災害"
         }
         
-        text = riskName + "\n" + String(distance) + "m" + "\n" + "範囲: " + String(annotationBox[num].range) + "m"
+        text = riskName + "\n" + String(distance) + "m" + "\n" + "範囲: " + String(Int(circleRadius[num])) + "m"
     }
     
     return text
@@ -60,20 +60,21 @@ func getLabelText(num: Int) -> String {
 
 
 /* ラベル画像を作る */
-func makeLabel(num: Int) -> UIImage {
+func makeLabel(num: Int, inforType: String) -> UIImage {
     
     var label: UILabel! // 情報タグの文字
     var labelImg: UIImage! // ラベル画像
     
-    if annotationBox[num].inforType == kInfo {
+    if inforType == kInfo {
         label = UILabel(frame: CGRect.init(x: kZero, y: kZero, width: airtagImage.size.width, height: airtagImage.size.height)) //ラベルサイズ
-    } else if annotationBox[num].inforType == kWarn {
+        
+    } else if inforType == kWarn {
         label = UILabel(frame: CGRect.init(x: kZero, y: kZero, width: warnImage!.size.width, height: warnImage!.size.height)) //ラベルサイズ
     }
-    label.text = getLabelText(num) // テキスト
+    
+    label.text = getLabelText(num, inforType: inforType) // テキスト
     label.textColor = UIColor.blackColor() // 文字色
     label.textAlignment = NSTextAlignment.Center // 中央揃え
-    //label.layer.position = CGPoint.init(x: view.frame.width, y: view.frame.height)
     label.font = UIFont.systemFontOfSize(kTagFont) // 初期文字サイズ
     label.adjustsFontSizeToFitWidth = true // 文字の多さによってフォントサイズを調節する
     label.numberOfLines = kTagLine // ラベル内の行数
@@ -93,18 +94,6 @@ func getPinImage(img: UIImage, inforType: String) -> UIImage {
         UIGraphicsBeginImageContext(airtagImage.size)
         airtagImage.drawInRect(tagRect)
         
-        let labelRect = CGRect.init(x: kTagXY, y: kTagXY, width: img.size.width - kTagW, height: img.size.height - kTagH) // ラベル画像のサイズと位置
-        
-        img.drawInRect(labelRect)
-        
-        // Context に描画された画像を新しく設定
-        let newImage = UIGraphicsGetImageFromCurrentImageContext()
-        
-        // Context 終了
-        UIGraphicsEndImageContext()
-        
-        return getResizeImage(newImage, newHeight: kTagSize)
-        
     } else if inforType == kWarn {
         
         if mode == 0 { // 地図画面のとき
@@ -115,22 +104,19 @@ func getPinImage(img: UIImage, inforType: String) -> UIImage {
             let tagRect = CGRect.init(x: kZero, y: kZero, width: warnImage!.size.width, height: warnImage!.size.height) // タグ画像のサイズと位置
             UIGraphicsBeginImageContext(warnImage!.size)
             warnImage!.drawInRect(tagRect)
-            
-            let labelRect = CGRect.init(x: kTagXY, y: kTagXY, width: img.size.width - kTagW, height: img.size.height - kTagH) // ラベル画像のサイズと位置
-            
-            img.drawInRect(labelRect)
-            
-            // Context に描画された画像を新しく設定
-            let newImage = UIGraphicsGetImageFromCurrentImageContext()
-            
-            // Context 終了
-            UIGraphicsEndImageContext()
-            
-            return getResizeImage(newImage, newHeight: kTagSize)
         }
     }
     
-    return img // ここに来ることはまずないので違うのを変えしたい
+    let labelRect = CGRect.init(x: kTagXY, y: kTagXY, width: img.size.width - kTagW, height: img.size.height - kTagH) // ラベル画像のサイズと位置
+    img.drawInRect(labelRect)
+    
+    // Context に描画された画像を新しく設定
+    let newImage = UIGraphicsGetImageFromCurrentImageContext()
+    
+    // Context 終了
+    UIGraphicsEndImageContext()
+    
+    return getResizeImage(newImage, newHeight: kTagSize)
 }
 
 
@@ -140,6 +126,8 @@ func getResizeImage(image: UIImage, newHeight: CGFloat) -> UIImage {
     
     let scale = newHeight / image.size.height // 縮尺度を決める
     let newWidth = image.size.width * scale // 新しい画像の幅
+    
+    
     UIGraphicsBeginImageContext(CGSize.init(width: newWidth, height: newHeight)) // 指定された画像の大きさのコンテキストを用意
     image.drawInRect(CGRect.init(x: kZero, y: kZero, width: newWidth, height: newHeight)) // コンテキストに画像を描画する
     let newImage = UIGraphicsGetImageFromCurrentImageContext() // コンテキストからUIImageを作る
