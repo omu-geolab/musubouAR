@@ -62,10 +62,17 @@ let kTagH: CGFloat = 100 // タグの縦幅
 let kTagSize: CGFloat = 500 // タグ画像のサイズ
 let kButSize: CGFloat = 100 // ボタンのサイズ(wid・hei)
 let kButPos: CGFloat = 5 // ボタンの位置
+let kZoomLevel = 0.001 // タグをタップしたときにzoomLevelまでズームインする
+let kZoomTime = 1.0 // ズームする時間
+let kZoomDelay = 0.0 // 遅延時間
+let kZoomOutDelay = 1.0 // 遷移後からズームアウト開始までの時間
 
 
 let screenWidth = Double(UIScreen.mainScreen().bounds.size.width)   // 実機の画面の横の長さ
 let screenHeight = Double(UIScreen.mainScreen().bounds.size.height) // 実機の画面の縦の長さ
+
+let dWid = screenWidth * 0.8
+let dHei = screenHeight * 0.8
 
 var infoBox = [TagData]() // 情報タグ用
 var warnBox = [TagData]() // 警告タグ用
@@ -73,19 +80,39 @@ var warnBox = [TagData]() // 警告タグ用
 var infoImageBox: [UIImageView] = [] // 画面上での情報タグ画像の表示を管理する
 var warnImageBox: [UIImageView] = [] // 画面上での警告タグ画像の表示を管理する
 
-var mode = 0 // 地図画面(0)、カメラ画面(1)
+/* 現在開いているページは地図画面か、ARカメラ画面か */
+enum mode: Int {
+    case map = 0
+    case cam = 1
+}
+
+// 現在の画面が、地図かカメラかを保持する変数
+var displayMode = 0
+
+
+
 var warnImage = UIImage(named: "icon_warn0.png") // 情報タグの画像
 var warningMessage: UILabel! // 災害範囲内・付近にいるときに表示するメッセージ
 
 var circleRadius = [CLLocationDistance]() // 災害範囲の円の半径
 
+// 現在地から一番近い災害の状況
 enum warningState: String {
     case inst = "侵入"
     case near = "付近"
     case safe = "安全"
 }
 
-var warnState = warningState.safe.rawValue
 
 var pinData: TagData! // タップされたタグの情報を保持
+
+
+let backgroundView = UIView(frame: CGRect.init(x: 0, y: 0, width: screenWidth, height: screenHeight)) // 詳細画面の後ろのビュー
+
+let backBut = UIButton(frame: CGRect.init(x: 0, y: 0, width: screenWidth * 0.8 * 0.1, height: screenHeight * 0.8 * 0.1))
+let changeMapBut = UIButton(frame: CGRect.init(x: 0, y: 0, width: screenWidth * 0.8 * 0.5, height: screenHeight * 0.8 * 0.2))
+
+let detailView = UIView(frame: CGRect.init(x: screenWidth * 0.1, y: screenWidth * 0.1, width: screenWidth * 0.8, height: screenHeight * 0.8)) // 詳細画面
+let configView = UIView(frame: CGRect.init(x: screenWidth * 0.1, y: screenWidth * 0.1, width: screenWidth * 0.8, height: screenHeight * 0.8)) // 設定画面
+let cannotTouchView = UIView(frame: CGRect.init(x: kZero, y: kZero, width: CGFloat(screenWidth), height: CGFloat(screenHeight))) // 画面に触れられないようにするためのビュー
 

@@ -96,10 +96,10 @@ func getPinImage(img: UIImage, inforType: String) -> UIImage {
         
     } else if inforType == kWarn {
         
-        if mode == 0 { // 地図画面のとき
+        if displayMode == mode.map.rawValue { // 地図画面のとき
             return img
             
-        } else if mode == 1 { // カメラ画面のとき
+        } else if displayMode == mode.cam.rawValue { // カメラ画面のとき
             
             let tagRect = CGRect.init(x: kZero, y: kZero, width: warnImage!.size.width, height: warnImage!.size.height) // タグ画像のサイズと位置
             UIGraphicsBeginImageContext(warnImage!.size)
@@ -127,7 +127,6 @@ func getResizeImage(image: UIImage, newHeight: CGFloat) -> UIImage {
     let scale = newHeight / image.size.height // 縮尺度を決める
     let newWidth = image.size.width * scale // 新しい画像の幅
     
-    
     UIGraphicsBeginImageContext(CGSize.init(width: newWidth, height: newHeight)) // 指定された画像の大きさのコンテキストを用意
     image.drawInRect(CGRect.init(x: kZero, y: kZero, width: newWidth, height: newHeight)) // コンテキストに画像を描画する
     let newImage = UIGraphicsGetImageFromCurrentImageContext() // コンテキストからUIImageを作る
@@ -141,4 +140,13 @@ func getResizeImage(image: UIImage, newHeight: CGFloat) -> UIImage {
 func runAfterDelay(delay: NSTimeInterval, block: dispatch_block_t) {
     let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay*Double(NSEC_PER_SEC)))
     dispatch_after(time, dispatch_get_main_queue(), block)
+}
+
+
+/* サブビューを削除する */
+func removeAllSubviews(parentView: UIView){
+    let subviews = parentView.subviews
+    for subview in subviews {
+        subview.removeFromSuperview()
+    }
 }

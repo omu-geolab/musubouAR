@@ -37,6 +37,7 @@ class ViewARCamera: UIViewController, UIGestureRecognizerDelegate, CLLocationMan
     
     // 警告
     var warningView = UIView(frame: CGRect.init(x: kZero, y: kZero, width: CGFloat(screenWidth), height: CGFloat(screenHeight)))
+    var warnState = warningState.safe.rawValue
     
     
     
@@ -49,12 +50,11 @@ class ViewARCamera: UIViewController, UIGestureRecognizerDelegate, CLLocationMan
     
     var camZ = 0.0 // カメラの傾き(保留)
     
+    
     //定数
     let updateLoc = 1.0 // 1.0°動いたら更新する
     
-    
-    
-    
+  
     // MARK: ライフサイクル
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -87,6 +87,8 @@ class ViewARCamera: UIViewController, UIGestureRecognizerDelegate, CLLocationMan
             compassManager.headingOrientation = .Portrait
             compassManager.startUpdatingHeading()
         }
+        
+        warnState = warningState.safe.rawValue
     }
     
     
@@ -94,7 +96,7 @@ class ViewARCamera: UIViewController, UIGestureRecognizerDelegate, CLLocationMan
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        mode = 1
+        displayMode = mode.cam.rawValue
         
         // NavigationBarを隠す処理
         self.navigationController?.setNavigationBarHidden(true, animated: true)
@@ -111,6 +113,9 @@ class ViewARCamera: UIViewController, UIGestureRecognizerDelegate, CLLocationMan
         toMapBut.layer.position = CGPoint(x: kButPos + kButSize, y: self.view.bounds.height - kButPos - kButSize)
         view.addSubview(toMapBut)
         toMapBut.addTarget(self, action: #selector(ViewARCamera.clickMap(_:)), forControlEvents: .TouchUpInside)
+        
+        backgroundView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(ViewARCamera.clickBackBut(_:))))
+        backBut.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(ViewARCamera.clickBackBut(_:))))
         
     }
     
@@ -263,7 +268,7 @@ class ViewARCamera: UIViewController, UIGestureRecognizerDelegate, CLLocationMan
             infoImageBox.append(UIImageView(frame: CGRect.init(x: kZero, y: kZero, width: kZero, height: kZero)))
         }
         
-        // 情報タグの初期化
+        // 警告タグの初期化
         for _ in 0 ..< warnBox.count {
             warnImageBox.append(UIImageView(frame: CGRect.init(x: kZero, y: kZero, width: kZero, height: kZero)))
         }
@@ -413,7 +418,7 @@ class ViewARCamera: UIViewController, UIGestureRecognizerDelegate, CLLocationMan
         
         if isExistCom == false {
             
-            compassView = UIImageView(frame: CGRect(x: kButPos + kButSize, y: kButSize + kButPos, width: kButSize, height: kButSize))
+            compassView = UIImageView(frame: CGRect(x: 50, y: 50, width: kButSize, height: kButSize)) // TODO: マジックナンバー
             
             // UIImageViewに画像を設定する.
             compassView.image = imgCompass
@@ -522,11 +527,15 @@ class ViewARCamera: UIViewController, UIGestureRecognizerDelegate, CLLocationMan
             
             // UIImageViewをViewに追加する.
             view.addSubview(imageBox[index]) // 画像表示用
+            view.bringSubviewToFront(backgroundView)
+            view.bringSubviewToFront(detailView)
         }
     }
     
     
     func didClickImageView(recognizer: UIGestureRecognizer) {
+        
+        view.addSubview(cannotTouchView)
         
         if let imageView = recognizer.view as? UIImageView {
             
@@ -536,9 +545,8 @@ class ViewARCamera: UIViewController, UIGestureRecognizerDelegate, CLLocationMan
             } else if imageView.tag < 0 {
                 pinData = warnBox[(-1) + imageView.tag * (-1)]
             }
-            
-            let detail = ViewDetail()
-            self.navigationController?.pushViewController(detail, animated: true)
+
+            ViewDetail().detailViewDisplay(self.view)
         }
     }
     
@@ -568,7 +576,7 @@ class ViewARCamera: UIViewController, UIGestureRecognizerDelegate, CLLocationMan
                 
                 switch orientation {
                 case .Portrait:
-                    updatePreviewLayer(previewLayerConnection, orientation: .LandscapeLeft )
+                    updatePreviewLayer(previewLayerConnection, orientation: .LandscapeLeft)
                     break
                     
                 case .LandscapeRight:
@@ -591,11 +599,17 @@ class ViewARCamera: UIViewController, UIGestureRecognizerDelegate, CLLocationMan
         }
     }
     
-    
     /* ボタンクリックしたときのイベント(ViewMapに遷移する) */
     internal func clickMap(sender: UIButton) {
-        let map = ViewMap()
-        self.navigationController?.pushViewController(map, animated: true)
+        self.navigationController?.popViewControllerAnimated(true)
+    }
+    
+    /* (詳細画面)戻るボタンをクリックした時 */
+    internal func clickBackBut(sender: UIButton) {
+        removeAllSubviews(detailView)
+        backgroundView.removeFromSuperview()
+        detailView.removeFromSuperview()
+        cannotTouchView.removeFromSuperview()
     }
     
 }

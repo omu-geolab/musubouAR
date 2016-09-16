@@ -28,8 +28,8 @@
 		AC2C52FD1D58092B0032B689 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC2C52FC1D58092B0032B689 /* MapKit.framework */; };
 		AC2C52FF1D5809360032B689 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC2C52FE1D5809360032B689 /* CoreLocation.framework */; };
 		AC2C53011D58093C0032B689 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC2C53001D58093C0032B689 /* AVFoundation.framework */; };
-		AC2C530A1D58096F0032B689 /* icon_config.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC2C53051D58096F0032B689 /* icon_config.jpg */; };
 		AC2C530B1D58096F0032B689 /* icon_locate.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC2C53061D58096F0032B689 /* icon_locate.jpg */; };
+		AC4BD0141D8AA0D100157828 /* icon_menu.png in Resources */ = {isa = PBXBuildFile; fileRef = AC4BD0131D8AA0D100157828 /* icon_menu.png */; };
 		AC7B6A841D66A9B20086897D /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC7B6A831D66A9B20086897D /* CoreMotion.framework */; };
 		ACA1C6791D59BB0500AF8CF4 /* icon_airtag.png in Resources */ = {isa = PBXBuildFile; fileRef = ACA1C6781D59BB0500AF8CF4 /* icon_airtag.png */; };
 		ACCD94481D755B2800C717E1 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD94471D755B2800C717E1 /* SwiftyJSON.swift */; };
@@ -67,7 +67,6 @@
 		AC2C52C51D5805F70032B689 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC2C52C71D5805F70032B689 /* ViewMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewMap.swift; sourceTree = "<group>"; };
 		AC2C52CA1D5805F70032B689 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		AC2C52CD1D5805F70032B689 /* CerdAR.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CerdAR.xcdatamodel; sourceTree = "<group>"; };
 		AC2C52CF1D5805F70032B689 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC2C52D21D5805F70032B689 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC2C52D41D5805F70032B689 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -83,8 +82,8 @@
 		AC2C52FC1D58092B0032B689 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		AC2C52FE1D5809360032B689 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		AC2C53001D58093C0032B689 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		AC2C53051D58096F0032B689 /* icon_config.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = icon_config.jpg; path = CerdAR/icon_config.jpg; sourceTree = "<group>"; };
 		AC2C53061D58096F0032B689 /* icon_locate.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = icon_locate.jpg; path = CerdAR/icon_locate.jpg; sourceTree = "<group>"; };
+		AC4BD0131D8AA0D100157828 /* icon_menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_menu.png; path = CerdAR/icon_menu.png; sourceTree = "<group>"; };
 		AC7B6A831D66A9B20086897D /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		ACA1C6781D59BB0500AF8CF4 /* icon_airtag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_airtag.png; path = CerdAR/icon_airtag.png; sourceTree = "<group>"; };
 		ACCD94471D755B2800C717E1 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
@@ -124,11 +123,7 @@
 		AC2C52B91D5805F70032B689 = {
 			isa = PBXGroup;
 			children = (
-				AC7B6A831D66A9B20086897D /* CoreMotion.framework */,
 				AC2C53021D5809610032B689 /* Image */,
-				AC2C53001D58093C0032B689 /* AVFoundation.framework */,
-				AC2C52FE1D5809360032B689 /* CoreLocation.framework */,
-				AC2C52FC1D58092B0032B689 /* MapKit.framework */,
 				AC2C52C41D5805F70032B689 /* CerdAR */,
 				AC2C52DC1D5805F80032B689 /* CerdARTests */,
 				AC2C52E71D5805F80032B689 /* CerdARUITests */,
@@ -152,17 +147,17 @@
 				ACCD94471D755B2800C717E1 /* SwiftyJSON.swift */,
 				AC2C52C51D5805F70032B689 /* AppDelegate.swift */,
 				AC2C52C71D5805F70032B689 /* ViewMap.swift */,
-				AC2C52C91D5805F70032B689 /* Main.storyboard */,
-				AC2C52CF1D5805F70032B689 /* Assets.xcassets */,
-				AC2C52D11D5805F70032B689 /* LaunchScreen.storyboard */,
-				AC2C52D41D5805F70032B689 /* Info.plist */,
-				AC2C52CC1D5805F70032B689 /* CerdAR.xcdatamodeld */,
 				AC2C52F61D5806AC0032B689 /* ViewARCamera.swift */,
 				AC2C52F81D5806DF0032B689 /* ViewDetail.swift */,
 				AC2C52FA1D5807D00032B689 /* ViewConfig.swift */,
 				AC05B9F91D811FDA0082C52A /* DataManager.swift */,
 				ACEE245B1D8235FE00102E10 /* MakeTagImage.swift */,
 				ACEE245F1D8248FA00102E10 /* TermsDisplay.swift */,
+				AC2C52C91D5805F70032B689 /* Main.storyboard */,
+				AC2C52CF1D5805F70032B689 /* Assets.xcassets */,
+				AC2C52D11D5805F70032B689 /* LaunchScreen.storyboard */,
+				AC2C52D41D5805F70032B689 /* Info.plist */,
+				D317AE971D89649D00D4D4FC /* framework */,
 			);
 			path = CerdAR;
 			sourceTree = "<group>";
@@ -188,6 +183,7 @@
 		AC2C53021D5809610032B689 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				AC4BD0131D8AA0D100157828 /* icon_menu.png */,
 				AC05B9FB1D81229D0082C52A /* icon_map.png */,
 				AC05B9ED1D811F830082C52A /* icon_camera.png */,
 				AC05B9EE1D811F830082C52A /* icon_compass.png */,
@@ -196,10 +192,20 @@
 				AC05B9F11D811F830082C52A /* icon_warn2.png */,
 				AC05B9F21D811F830082C52A /* icon_warn3.png */,
 				ACA1C6781D59BB0500AF8CF4 /* icon_airtag.png */,
-				AC2C53051D58096F0032B689 /* icon_config.jpg */,
 				AC2C53061D58096F0032B689 /* icon_locate.jpg */,
 			);
 			name = Image;
+			sourceTree = "<group>";
+		};
+		D317AE971D89649D00D4D4FC /* framework */ = {
+			isa = PBXGroup;
+			children = (
+				AC7B6A831D66A9B20086897D /* CoreMotion.framework */,
+				AC2C53001D58093C0032B689 /* AVFoundation.framework */,
+				AC2C52FE1D5809360032B689 /* CoreLocation.framework */,
+				AC2C52FC1D58092B0032B689 /* MapKit.framework */,
+			);
+			name = framework;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,11 +318,11 @@
 				AC2C52D31D5805F70032B689 /* LaunchScreen.storyboard in Resources */,
 				AC05B9F31D811F830082C52A /* icon_camera.png in Resources */,
 				AC05B9F41D811F830082C52A /* icon_compass.png in Resources */,
-				AC2C530A1D58096F0032B689 /* icon_config.jpg in Resources */,
 				AC05B9FC1D81229D0082C52A /* icon_map.png in Resources */,
 				AC2C52D01D5805F70032B689 /* Assets.xcassets in Resources */,
 				AC05B9F51D811F830082C52A /* icon_warn0.png in Resources */,
 				AC2C52CB1D5805F70032B689 /* Main.storyboard in Resources */,
+				AC4BD0141D8AA0D100157828 /* icon_menu.png in Resources */,
 				AC05B9F71D811F830082C52A /* icon_warn2.png in Resources */,
 				AC05B9F81D811F830082C52A /* icon_warn3.png in Resources */,
 			);
@@ -601,19 +607,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		AC2C52CC1D5805F70032B689 /* CerdAR.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				AC2C52CD1D5805F70032B689 /* CerdAR.xcdatamodel */,
-			);
-			currentVersion = AC2C52CD1D5805F70032B689 /* CerdAR.xcdatamodel */;
-			path = CerdAR.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = AC2C52BA1D5805F70032B689 /* Project object */;
 }
