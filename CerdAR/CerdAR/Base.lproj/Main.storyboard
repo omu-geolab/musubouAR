@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Map-->
+        <!--Map View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="viewMap" id="BYZ-38-t0r" customClass="ViewMap" customModule="CerdAR" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mapViewController" id="BYZ-38-t0r" customClass="mapViewController" customModule="CerdAR" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,33 +16,18 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="xGf-v6-6pu">
-                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
-                            </mapView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="xGf-v6-6pu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="0LO-JJ-hx6"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xGf-v6-6pu" secondAttribute="bottom" id="1eI-sH-cFd"/>
-                            <constraint firstItem="xGf-v6-6pu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="HV7-gf-IPc"/>
-                            <constraint firstAttribute="trailing" secondItem="xGf-v6-6pu" secondAttribute="trailing" id="RtU-IM-xCV"/>
-                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="dt0-V4-f6O"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
-                    <connections>
-                        <outlet property="mapview" destination="xGf-v6-6pu" id="1PV-lu-JlO"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1101.5" y="330.5"/>
         </scene>
-        <!--ViewAR Camera-->
+        <!--Camera View Controller-->
         <scene sceneID="ZMd-IQ-Vix">
             <objects>
-                <viewController id="1ht-Kg-iHd" customClass="ViewARCamera" customModule="CerdAR" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="1ht-Kg-iHd" customClass="cameraViewController" customModule="CerdAR" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7qs-B9-jGz"/>
                         <viewControllerLayoutGuide type="bottom" id="2eC-HF-g1h"/>
@@ -52,32 +37,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="lqJ-gk-nYN"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kTZ-PA-6or" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1670.5" y="322.5"/>
-        </scene>
-        <!--View Detail-->
-        <scene sceneID="Ui7-Ff-ki2">
-            <objects>
-                <viewController storyboardIdentifier="viewDetail" id="KSu-51-xnp" customClass="ViewDetail" customModule="CerdAR" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="YKA-Yu-W1B"/>
-                        <viewControllerLayoutGuide type="bottom" id="fcf-gG-7T1"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="5bZ-zz-oIU">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="hIa-rT-XtQ"/>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="IqH-tV-Dfc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2261.5" y="322.5"/>
+            <point key="canvasLocation" x="1774" y="330"/>
         </scene>
     </scenes>
 </document>

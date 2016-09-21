@@ -1,5 +1,5 @@
 //
-//  ViewARCamera.swift
+//  arCameraViewController.swift
 //  CerdAR
 //
 //  Copyright (c) 2016 BRILLIANTSERVICE CO.,LTD., CERD (Osaka City University)
@@ -10,9 +10,9 @@ import UIKit
 import AVFoundation
 import CoreLocation
 import CoreMotion
-import MapKit
 
-class ViewARCamera: UIViewController, UIGestureRecognizerDelegate, CLLocationManagerDelegate {
+
+class cameraViewController: UIViewController, UIGestureRecognizerDelegate, CLLocationManagerDelegate, detailViewDelegate {
     
     var avSession: AVCaptureSession! // AVキャプチャセッション
     var avDevice: AVCaptureDevice! // AVキャプチャデバイス
@@ -20,10 +20,10 @@ class ViewARCamera: UIViewController, UIGestureRecognizerDelegate, CLLocationMan
     var avOutput: AVCaptureStillImageOutput! // AVキャプチャアウトプット
     var previewLayer: AVCaptureVideoPreviewLayer? // 画面表示用レイヤー
     
+    var detailview: detailView?
+    
     var userLat: CLLocationDegrees = 0   // 緯度
     var userLon: CLLocationDegrees = 0 // 経度
-    
-    var motionManager: CMMotionManager! // 加速度センサ
     
     var locationManager: CLLocationManager! // 現在地の取得
     var compassManager: CLLocationManager! // コンパスの向き測定
@@ -36,10 +36,8 @@ class ViewARCamera: UIViewController, UIGestureRecognizerDelegate, CLLocationMan
     var isExistCom = false // コンパスの表示制御用
     
     // 警告
-    var warningView = UIView(frame: CGRect.init(x: kZero, y: kZero, width: CGFloat(screenWidth), height: CGFloat(screenHeight)))
+    var warningView = UIView(frame: CGRect.init(x: 0.0, y: 0.0, width: CGFloat(screenWidth), height: CGFloat(screenHeight)))
     var warnState = warningState.safe.rawValue
-    
-    
     
     // 災害の発生時刻の取得
     var calendar: NSCalendar!
@@ -50,10 +48,8 @@ class ViewARCamera: UIViewController, UIGestureRecognizerDelegate, CLLocationMan
     
     var camZ = 0.0 // カメラの傾き(保留)
     
-    
     //定数
     let updateLoc = 1.0 // 1.0°動いたら更新する
-    
   
     // MARK: ライフサイクル
     override func viewDidLoad() {
@@ -72,9 +68,6 @@ class ViewARCamera: UIViewController, UIGestureRecognizerDelegate, CLLocationMan
             locationManager.startUpdatingLocation() // 位置情報の更新を開始
         }
         
-        // CMMotionManagerを生成
-        motionManager = CMMotionManager()
-        
         // 磁北測定
         if CLLocationManager.locationServicesEnabled() {
             compassManager = CLLocationManager()
@@ -91,7 +84,6 @@ class ViewARCamera: UIViewController, UIGestureRecognizerDelegate, CLLocationMan
         warnState = warningState.safe.rawValue
     }
     
-    
     /* 画面が表示される直前 */
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
@@ -107,31 +99,27 @@ class ViewARCamera: UIViewController, UIGestureRecognizerDelegate, CLLocationMan
         
         // 画面遷移のためのボタン
         let toMapBut = UIButton()
-        toMapBut.frame = CGRect.init(x: kZero, y: kZero, width: kButSize, height: kButSize)
+        toMapBut.frame = CGRect.init(x: 0.0, y: 0.0, width: 100.0, height: 100.0)
         let buttonImage: UIImage = UIImage(named: "icon_map.png")!
         toMapBut.setImage(buttonImage, forState: .Normal)
-        toMapBut.layer.position = CGPoint(x: kButPos + kButSize, y: self.view.bounds.height - kButPos - kButSize)
+        toMapBut.layer.position = CGPoint(x: 5.0 + 100.0, y: self.view.bounds.height - 5.0 - 100.0)
         view.addSubview(toMapBut)
-        toMapBut.addTarget(self, action: #selector(ViewARCamera.clickMap(_:)), forControlEvents: .TouchUpInside)
+        toMapBut.addTarget(self, action: #selector(cameraViewController.clickMap(_:)), forControlEvents: .TouchUpInside)
         
-        backgroundView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(ViewARCamera.clickBackBut(_:))))
-        backBut.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(ViewARCamera.clickBackBut(_:))))
+//        backgroundView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(cameraViewController.clickBackBut(_:))))
+//        backBut.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(cameraViewController.clickBackBut(_:))))
         
     }
-    
-    
     
     /* 画面が表示された直後 */
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
     }
     
-    
     /* 別の画面に遷移する直前 */
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
     }
-    
     
     /* 別の画面に遷移した直後(破棄) */
     override func viewDidDisappear(animated: Bool) {
@@ -159,9 +147,7 @@ class ViewARCamera: UIViewController, UIGestureRecognizerDelegate, CLLocationMan
         count = 0 // タグのカウントの破棄
     }
     
-    
     // MARK: デリゲート
-    
     // CLLocationManagerDelegate
     /* iPhone の位置情報が更新されるたびに、デリゲートが呼ばれる */
     func locationManager(manager: CLLocationManager, didUpdateToLocation newLocation: CLLocation, fromLocation oldLocation: CLLocation) {
@@ -171,19 +157,11 @@ class ViewARCamera: UIViewController, UIGestureRecognizerDelegate, CLLocationMan
         
     }
     
-    
     /* カメラの向きが変わるたびに呼ばれる */
     func locationManager(manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
         
         //print("磁北:", newHeading.magneticHeading) // 北：0、 東；90、 南：180、 西：270 //こちらが必要？ スマホの向き
         //print("真北:", newHeading.trueHeading) // 北：0、 東；90、 南：180、 西：270
-        
-        //        /* カメラの向きを利用してタグの表示(y軸)の調整(いつかするべき) */
-        //        motionManager.startAccelerometerUpdatesToQueue(NSOperationQueue.mainQueue(), withHandler: {(accelerometerData: CMAccelerometerData?, error: NSError?) -> Void in
-        //            self.camZ = accelerometerData!.acceleration.z * 1000 // 未完成のため、まだ定数の設定はしない
-        //            //print("camZ: \(floor(self.camZ) / 1000)")
-        //        })
-        
         
         var min = 1001
         var idx = -1
@@ -203,7 +181,6 @@ class ViewARCamera: UIViewController, UIGestureRecognizerDelegate, CLLocationMan
             }
         }
         
-        
         for i in 0 ..< warnBox.count {
             
             if warnBox[i].inforType == kWarn {
@@ -220,11 +197,21 @@ class ViewARCamera: UIViewController, UIGestureRecognizerDelegate, CLLocationMan
                     // 警告タグの画像を設定する
                     if warnBox[i].inforType == kWarn {
                         switch warnBox[i].riskType {
-                        case 0: warnImage = UIImage(named: "icon_warn0.png")! // 火災
-                        case 1: warnImage = UIImage(named: "icon_warn1.png")! // 浸水
-                        case 2: warnImage = UIImage(named: "icon_warn2.png")! // 土砂崩れ
-                        case 3: warnImage = UIImage(named: "icon_warn3.png")! // 通行止め
-                        default: warnImage = airtagImage; break
+                        case 0:
+                             // 火災
+                            warnImage = UIImage(named: "icon_warn0.png")!
+                        case 1:
+                             // 浸水
+                            warnImage = UIImage(named: "icon_warn1.png")!
+                        case 2:
+                             // 土砂崩れ
+                            warnImage = UIImage(named: "icon_warn2.png")!
+                        case 3:
+                             // 通行止め
+                            warnImage = UIImage(named: "icon_warn3.png")!
+                        default:
+                            warnImage = UIImage(named: "icon_airtag.png")!
+                            break
                         }
                         
                         if min >= warnBox[i].distance {
@@ -250,13 +237,10 @@ class ViewARCamera: UIViewController, UIGestureRecognizerDelegate, CLLocationMan
         
     }
     
-    
-    
     /* メモリ不足時に呼び出される */
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
     
     // MARK: プライベート関数
     
@@ -265,12 +249,12 @@ class ViewARCamera: UIViewController, UIGestureRecognizerDelegate, CLLocationMan
         
         // 情報タグの初期化
         for _ in 0 ..< infoBox.count {
-            infoImageBox.append(UIImageView(frame: CGRect.init(x: kZero, y: kZero, width: kZero, height: kZero)))
+            infoImageBox.append(UIImageView(frame: CGRect.init(x: 0.0, y: 0.0, width: 0.0, height: 0.0)))
         }
         
         // 警告タグの初期化
         for _ in 0 ..< warnBox.count {
-            warnImageBox.append(UIImageView(frame: CGRect.init(x: kZero, y: kZero, width: kZero, height: kZero)))
+            warnImageBox.append(UIImageView(frame: CGRect.init(x: 0.0, y: 0.0, width: 0.0, height: 0.0)))
         }
     }
     
@@ -331,13 +315,11 @@ class ViewARCamera: UIViewController, UIGestureRecognizerDelegate, CLLocationMan
             }
         }
     }
-    
-    
+
     /* 画面を閉じる */
     func close() {
         self.navigationController?.popViewControllerAnimated(true)
     }
-    
     
     // 災害地範囲内に入ったときに画面の色を変化させる
     func warningDisplay(index: Int, distance: Int, range: Int, inout warnState: String, message1: String, message2: String) {
@@ -349,7 +331,7 @@ class ViewARCamera: UIViewController, UIGestureRecognizerDelegate, CLLocationMan
                 
                 // 災害が「火災」または「土砂崩れ」のとき
                 if warnBox[index].riskType == 0 || warnBox[index].riskType == 3 {
-                    warningView.frame = CGRect.init(x: kZero, y: kZero, width: CGFloat(screenWidth), height: CGFloat(screenHeight))
+                    warningView.frame = CGRect.init(x: 0.0, y: 0.0, width: CGFloat(screenWidth), height: CGFloat(screenHeight))
                     
                     switch warnBox[index].riskType {
                     case 0: warningView.backgroundColor = UIColor(red: 0.545, green: 0.020, blue: 0.220, alpha: 0.5)
@@ -360,7 +342,7 @@ class ViewARCamera: UIViewController, UIGestureRecognizerDelegate, CLLocationMan
                 // 災害が「浸水」または「落橋」のとき
                 } else if warnBox[index].riskType == 1 || warnBox[index].riskType == 2 {
                     
-                    warningView.frame = CGRect.init(x: kZero, y: CGFloat(screenHeight * 3 / 4), width: CGFloat(screenWidth), height: CGFloat(screenHeight / 4))
+                    warningView.frame = CGRect.init(x: 0.0, y: CGFloat(screenHeight * 3 / 4), width: CGFloat(screenWidth), height: CGFloat(screenHeight / 4))
                     
                     switch warnBox[index].riskType {
                     case 1: warningView.backgroundColor = UIColor(red: 0.000, green: 0.400, blue: 1.000, alpha: 0.5)
@@ -408,8 +390,6 @@ class ViewARCamera: UIViewController, UIGestureRecognizerDelegate, CLLocationMan
         
     }
     
-    
-    
     //コンパス
     func compassRotate(compass: Double) {
         
@@ -418,7 +398,7 @@ class ViewARCamera: UIViewController, UIGestureRecognizerDelegate, CLLocationMan
         
         if isExistCom == false {
             
-            compassView = UIImageView(frame: CGRect(x: 50, y: 50, width: kButSize, height: kButSize)) // TODO: マジックナンバー
+            compassView = UIImageView(frame: CGRect(x: 50, y: 50, width: 100.0, height: 100.0))
             
             // UIImageViewに画像を設定する.
             compassView.image = imgCompass
@@ -439,7 +419,6 @@ class ViewARCamera: UIViewController, UIGestureRecognizerDelegate, CLLocationMan
         }
     }
     
-    
     // 方角を測る
     func getGeoDirection(tLat: Double, tLon: Double) -> Double {
         
@@ -455,7 +434,6 @@ class ViewARCamera: UIViewController, UIGestureRecognizerDelegate, CLLocationMan
         
         return (dirE0 + 90) % 360 // (dirE0+90)÷360の余りを出力 北向きが0度の方向
     }
-    
     
     // タグを表示する(タグの表示方法が変わるかもしれないので、定数設定はしないでおく)
     func tagDisplay(index: Int, inout imageBox: [UIImageView], tDir: Double, tDis: Int, compass: Double, inforType: String) {
@@ -480,20 +458,20 @@ class ViewARCamera: UIViewController, UIGestureRecognizerDelegate, CLLocationMan
                 
                 sizeW = Double(screenWidth / 3)
                 sizeH = Double(screenWidth / 3)
-                y = screenHeight * Double(tDis) / 500
+                y = screenHeight * CGFloat(tDis) / 500
                 
             } else if tDis >= 200 && tDis < 800 {
                 
                 sizeW = Double(screenWidth) * (50 / Double(tDis))
                 sizeH = Double(screenWidth) * (50 / Double(tDis))
-                y = screenHeight * Double(tDis) / 1000
+                y = screenHeight * CGFloat(tDis) / 1000
                 
                 
             } else {
                 
                 sizeW = Double(screenWidth / 8)
                 sizeH = Double(screenWidth / 8)
-                y = screenHeight * Double(tDis) / 1200
+                y = screenHeight * CGFloat(tDis) / 1200
                 
             }
             
@@ -501,26 +479,26 @@ class ViewARCamera: UIViewController, UIGestureRecognizerDelegate, CLLocationMan
             
             if inforType == kInfo {
                 labelImg = makeLabel(infoBox[index].pinNum, inforType: inforType) // UILabelをUIImageに変換する
-                imageBox[index] = UIImageView(frame: CGRect.init(x: kZero, y: kZero, width: CGFloat(sizeW), height: CGFloat(sizeH)))
+                imageBox[index] = UIImageView(frame: CGRect.init(x: 0.0, y: 0.0, width: CGFloat(sizeW), height: CGFloat(sizeH)))
                 imageBox[index].image = getPinImage(labelImg, inforType: infoBox[index].inforType)
                 imageBox[index].tag = index // 情報は0以上からで判断
                 
             } else if inforType == kWarn {
                 labelImg = makeLabel(warnBox[index].pinNum, inforType: inforType) // UILabelをUIImageに変換する
-                imageBox[index] = UIImageView(frame: CGRect.init(x: kZero, y: kZero, width: CGFloat(sizeW), height: CGFloat(sizeH)))
+                imageBox[index] = UIImageView(frame: CGRect.init(x: 0.0, y: 0.0, width: CGFloat(sizeW), height: CGFloat(sizeH)))
                 imageBox[index].image = getPinImage(labelImg, inforType: warnBox[index].inforType)
                 imageBox[index].tag = (-1) + index * (-1) // 警告は-1以下からで判断 あとで+1してインデックス番号に合わせる
             }
             
             
             // 画像の表示する座標を指定する.
-            x = screenWidth / 2 + screenWidth * (angle / 36.5)
-            imageBox[index].layer.position = CGPoint(x: x, y: y)
+            x = Double(screenWidth) / 2 + Double(screenWidth) * (angle / 36.5)
+            imageBox[index].layer.position = CGPoint(x: CGFloat(x), y: y)
             
             
             // タグをタップしたときのイベント
             imageBox[index].userInteractionEnabled = true
-            let gesture = UITapGestureRecognizer(target:self, action: #selector(ViewARCamera.didClickImageView(_:)))
+            let gesture = UITapGestureRecognizer(target:self, action: #selector(cameraViewController.didClickImageView(_:)))
             imageBox[index].addGestureRecognizer(gesture)
             
             count = count + 1
@@ -528,10 +506,8 @@ class ViewARCamera: UIViewController, UIGestureRecognizerDelegate, CLLocationMan
             // UIImageViewをViewに追加する.
             view.addSubview(imageBox[index]) // 画像表示用
             view.bringSubviewToFront(backgroundView)
-            view.bringSubviewToFront(detailView)
         }
     }
-    
     
     func didClickImageView(recognizer: UIGestureRecognizer) {
         
@@ -546,20 +522,17 @@ class ViewARCamera: UIViewController, UIGestureRecognizerDelegate, CLLocationMan
                 pinData = warnBox[(-1) + imageView.tag * (-1)]
             }
 
-            ViewDetail().detailViewDisplay(self.view)
+            self.detailview = detailView(frame: CGRect(x: screenWidth * 0.1, y: screenWidth * 0.1, width: screenWidth * 0.8, height: screenHeight * 0.8))
+            self.detailview!.delegate = self
+            self.view.addSubview(self.detailview!)
         }
     }
-    
-    
-    
     
     /* カメラの向きを変える */
     private func updatePreviewLayer(layer: AVCaptureConnection, orientation: AVCaptureVideoOrientation) {
         layer.videoOrientation = orientation
         previewLayer!.frame = self.view.bounds
     }
-    
-    
     
     /* 携帯電話の向きに応じてカメラの向きを変える */
     override func viewDidLayoutSubviews() {
@@ -599,17 +572,23 @@ class ViewARCamera: UIViewController, UIGestureRecognizerDelegate, CLLocationMan
         }
     }
     
-    /* ボタンクリックしたときのイベント(ViewMapに遷移する) */
+    /* ボタンクリックしたときのイベント(mapViewControllerに遷移する) */
     internal func clickMap(sender: UIButton) {
         self.navigationController?.popViewControllerAnimated(true)
     }
     
-    /* (詳細画面)戻るボタンをクリックした時 */
-    internal func clickBackBut(sender: UIButton) {
-        removeAllSubviews(detailView)
-        backgroundView.removeFromSuperview()
-        detailView.removeFromSuperview()
-        cannotTouchView.removeFromSuperview()
+//    /* (詳細画面)戻るボタンをクリックした時 */
+//    internal func clickBackBut(sender: UIButton) {
+////        removeAllSubviews(detailView)
+//        backgroundView.removeFromSuperview()
+////        detailView.removeFromSuperview()
+//        cannotTouchView.removeFromSuperview()
+//    }
+    
+    // MARK: detailViewDelegate
+    func detailViewFinish() {
+        detailview?.delegate = nil
+        detailview?.removeFromSuperview()
     }
     
 }

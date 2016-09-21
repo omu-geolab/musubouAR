@@ -10,7 +10,6 @@ import CoreLocation
 import CoreMotion
 import MapKit
 
-
 /* ユーザの現在地と目的地間の距離を求める */
 func calcDistance(lat: Double, lon: Double, uLat: Double, uLon: Double) -> Int {
     
@@ -21,7 +20,6 @@ func calcDistance(lat: Double, lon: Double, uLat: Double, uLon: Double) -> Int {
     
     return Int(MKMetersBetweenMapPoints(point1, point2))
 }
-
 
 /* ラベルテキスト */
 func getLabelText(num: Int, inforType: String) -> String {
@@ -58,39 +56,39 @@ func getLabelText(num: Int, inforType: String) -> String {
     return text
 }
 
-
 /* ラベル画像を作る */
 func makeLabel(num: Int, inforType: String) -> UIImage {
     
     var label: UILabel! // 情報タグの文字
     var labelImg: UIImage! // ラベル画像
-    
+    let airtagImage = UIImage(named: "icon_airtag.png")! // 情報タグの画像
+
     if inforType == kInfo {
-        label = UILabel(frame: CGRect.init(x: kZero, y: kZero, width: airtagImage.size.width, height: airtagImage.size.height)) //ラベルサイズ
+        label = UILabel(frame: CGRect.init(x: 0.0, y: 0.0, width: airtagImage.size.width, height: airtagImage.size.height)) //ラベルサイズ
         
     } else if inforType == kWarn {
-        label = UILabel(frame: CGRect.init(x: kZero, y: kZero, width: warnImage!.size.width, height: warnImage!.size.height)) //ラベルサイズ
+        label = UILabel(frame: CGRect.init(x: 0.0, y: 0.0, width: warnImage!.size.width, height: warnImage!.size.height)) //ラベルサイズ
     }
     
     label.text = getLabelText(num, inforType: inforType) // テキスト
     label.textColor = UIColor.blackColor() // 文字色
     label.textAlignment = NSTextAlignment.Center // 中央揃え
-    label.font = UIFont.systemFontOfSize(kTagFont) // 初期文字サイズ
+    label.font = UIFont.systemFontOfSize(100) // 初期文字サイズ
     label.adjustsFontSizeToFitWidth = true // 文字の多さによってフォントサイズを調節する
-    label.numberOfLines = kTagLine // ラベル内の行数
+    label.numberOfLines = 3 // ラベル内の行数
     
     labelImg = label.getImage() as UIImage // UILabelをUIImageに変換する
     
     return labelImg
 }
 
-
 /* ピン画像を設定する */
 func getPinImage(img: UIImage, inforType: String) -> UIImage {
-    
+    let airtagImage = UIImage(named: "icon_airtag.png")! // 情報タグの画像
+
     if inforType == kInfo {
         
-        let tagRect = CGRect.init(x: kZero, y: kZero, width: airtagImage.size.width, height: airtagImage.size.height) // タグ画像のサイズと位置
+        let tagRect = CGRect.init(x: 0.0, y: 0.0, width: airtagImage.size.width, height: airtagImage.size.height) // タグ画像のサイズと位置
         UIGraphicsBeginImageContext(airtagImage.size)
         airtagImage.drawInRect(tagRect)
         
@@ -101,13 +99,13 @@ func getPinImage(img: UIImage, inforType: String) -> UIImage {
             
         } else if displayMode == mode.cam.rawValue { // カメラ画面のとき
             
-            let tagRect = CGRect.init(x: kZero, y: kZero, width: warnImage!.size.width, height: warnImage!.size.height) // タグ画像のサイズと位置
+            let tagRect = CGRect.init(x: 0.0, y: 0.0, width: warnImage!.size.width, height: warnImage!.size.height) // タグ画像のサイズと位置
             UIGraphicsBeginImageContext(warnImage!.size)
             warnImage!.drawInRect(tagRect)
         }
     }
     
-    let labelRect = CGRect.init(x: kTagXY, y: kTagXY, width: img.size.width - kTagW, height: img.size.height - kTagH) // ラベル画像のサイズと位置
+    let labelRect = CGRect.init(x: 40.0, y: 40.0, width: img.size.width - 80.0, height: img.size.height - 100.0) // ラベル画像のサイズと位置
     img.drawInRect(labelRect)
     
     // Context に描画された画像を新しく設定
@@ -116,10 +114,8 @@ func getPinImage(img: UIImage, inforType: String) -> UIImage {
     // Context 終了
     UIGraphicsEndImageContext()
     
-    return getResizeImage(newImage, newHeight: kTagSize)
+    return getResizeImage(newImage, newHeight: 500.0)
 }
-
-
 
 /* 画像をリサイズする */
 func getResizeImage(image: UIImage, newHeight: CGFloat) -> UIImage {
@@ -128,20 +124,18 @@ func getResizeImage(image: UIImage, newHeight: CGFloat) -> UIImage {
     let newWidth = image.size.width * scale // 新しい画像の幅
     
     UIGraphicsBeginImageContext(CGSize.init(width: newWidth, height: newHeight)) // 指定された画像の大きさのコンテキストを用意
-    image.drawInRect(CGRect.init(x: kZero, y: kZero, width: newWidth, height: newHeight)) // コンテキストに画像を描画する
+    image.drawInRect(CGRect.init(x: 0.0, y: 0.0, width: newWidth, height: newHeight)) // コンテキストに画像を描画する
     let newImage = UIGraphicsGetImageFromCurrentImageContext() // コンテキストからUIImageを作る
     UIGraphicsEndImageContext() // コンテキストを閉じる
     
     return newImage
 }
 
-
 /* delay秒後に行う処理 */
 func runAfterDelay(delay: NSTimeInterval, block: dispatch_block_t) {
     let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay*Double(NSEC_PER_SEC)))
     dispatch_after(time, dispatch_get_main_queue(), block)
 }
-
 
 /* サブビューを削除する */
 func removeAllSubviews(parentView: UIView){
