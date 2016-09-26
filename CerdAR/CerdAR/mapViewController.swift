@@ -208,7 +208,7 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     /* 情報タグがタップされると、詳細画面に遷移する */
     func mapView(mapView: MKMapView, didSelectAnnotationView view: MKAnnotationView) {
         
-        self.view.addSubview(cannotTouchView)
+//        self.view.addSubview(cannotTouchView)
         
         if mapView.userLocation.coordinate.latitude == view.annotation!.coordinate.latitude && mapView.userLocation.coordinate.latitude == view.annotation!.coordinate.latitude {
             
@@ -229,7 +229,7 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
             pinViewData = view // タップしたピンのデータを保持する
             
             // zoomTime秒でズームインする
-            UIView.animateWithDuration(1.0, delay: 0.0, options: .CurveEaseOut, animations: {
+            UIView.animateWithDuration(0.3, delay: 0.0, options: .CurveEaseOut, animations: {
                 
                 // 拡大用(3.0倍)のアフィン行列を生成する.
                 view.transform = CGAffineTransformMakeScale(3.0, 3.0)
@@ -237,7 +237,7 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
                 }, completion: nil)
             
             
-            runAfterDelay(1.1) { // ズームしてから0.1秒後に遷移する
+            runAfterDelay(0.4) { // ズームしてから0.1秒後に遷移する
                 self.detailview = detailView(frame: CGRect(x: screenWidth * 0.1, y: screenWidth * 0.1, width: screenWidth * 0.8, height: screenHeight * 0.8))
                 self.detailview!.delegate = self
                 self.view.addSubview(self.detailview!)
@@ -462,19 +462,19 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
                 switch riskType {
                     
                 case 0: // 火災のとき：赤色
-                    warningView.backgroundColor = UIColor(red: 0.545, green: 0.020, blue: 0.220, alpha: 1.0)
+                    warningView.backgroundColor = UIColor(red: 1.000, green: 0.000, blue: 0.000, alpha: 0.7)
                     
                 case 1: // 浸水のとき：青色
-                    warningView.backgroundColor = UIColor(red: 0.000, green: 0.400, blue: 1.000, alpha: 1.0)
+                    warningView.backgroundColor = UIColor(red: 0.000, green: 0.400, blue: 1.000, alpha: 0.7)
                     
                 case 2: // 落橋のとき：黄色
-                    warningView.backgroundColor = UIColor(red: 1.000, green: 0.945, blue: 0.024, alpha: 1.0)
+                    warningView.backgroundColor = UIColor(red: 1.000, green: 0.945, blue: 0.024, alpha: 0.7)
                     
                 case 3: // 土砂崩れのとき：茶色
-                    warningView.backgroundColor = UIColor(red: 0.800, green: 0.400, blue: 0.000, alpha: 1.0)
+                    warningView.backgroundColor = UIColor(red: 0.800, green: 0.400, blue: 0.000, alpha: 0.5)
                     
                 default: // その他の災害のとき：緑色
-                    warningView.backgroundColor = UIColor(red: 0.200, green: 1.000, blue: 0.384, alpha: 1.0)
+                    warningView.backgroundColor = UIColor(red: 0.200, green: 1.000, blue: 0.384, alpha: 0.7)
                     break
                 }
                 
@@ -639,7 +639,7 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         view.transform = CGAffineTransformMakeScale(3.0, 3.0)
         
         // zoomTime秒でズームアウトする
-        UIView.animateWithDuration(1.0, delay: 0.0, options: .CurveEaseOut, animations: {
+        UIView.animateWithDuration(0.3, delay: 0.0, options: .CurveEaseOut, animations: {
             
             // 縮小用(1/3倍)のアフィン行列を生成する.
             view.transform = CGAffineTransformMakeScale(1.0, 1.0)
@@ -647,7 +647,7 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
             }, completion: nil)
         
         runAfterDelay(1.0) {
-            cannotTouchView.removeFromSuperview()
+//            cannotTouchView.removeFromSuperview()
         }
     }
     

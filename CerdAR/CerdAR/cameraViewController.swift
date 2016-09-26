@@ -26,7 +26,6 @@ class cameraViewController: UIViewController, UIGestureRecognizerDelegate, CLLoc
     var userLon: CLLocationDegrees = 0 // 経度
     
     var locationManager: CLLocationManager! // 現在地の取得
-    var compassManager: CLLocationManager! // コンパスの向き測定
     
     var count = 0 // タグを表示するときに、はじめはremoveしないためのもの
     
@@ -36,7 +35,7 @@ class cameraViewController: UIViewController, UIGestureRecognizerDelegate, CLLoc
     var isExistCom = false // コンパスの表示制御用
     
     // 警告
-    var warningView = UIView(frame: CGRect.init(x: 0.0, y: 0.0, width: CGFloat(screenWidth), height: CGFloat(screenHeight)))
+    var warningView = UIView(frame: CGRect(x: 0.0, y: 0.0, width: screenWidth, height: screenHeight))
     var warnState = warningState.safe.rawValue
     
     // 災害の発生時刻の取得
@@ -55,8 +54,7 @@ class cameraViewController: UIViewController, UIGestureRecognizerDelegate, CLLoc
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //ページタイトル
-        self.title = "AR"
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
         
         calendar = NSCalendar(identifier: NSCalendarIdentifierGregorian)!
         startDate = calendar.dateWithEra(1, year: 2016, month: 8, day: 10, hour: 14, minute: 39, second: 0, nanosecond: 0)! // 災害発生時刻
@@ -65,91 +63,94 @@ class cameraViewController: UIViewController, UIGestureRecognizerDelegate, CLLoc
         if CLLocationManager.locationServicesEnabled() {
             locationManager = CLLocationManager()
             locationManager.delegate = self
-            locationManager.startUpdatingLocation() // 位置情報の更新を開始
-        }
-        
-        // 磁北測定
-        if CLLocationManager.locationServicesEnabled() {
-            compassManager = CLLocationManager()
-            compassManager.delegate = self
-            
-            // 1°動いたら更新する
-            compassManager.headingFilter = updateLoc
-            
-            // デバイスのどの向きを北とするか（デフォルトは画面上部）
-            compassManager.headingOrientation = .Portrait
-            compassManager.startUpdatingHeading()
+            locationManager.headingFilter = updateLoc
+            locationManager.headingOrientation = .Portrait
+            locationManager.startUpdatingLocation()
+            locationManager.startUpdatingHeading()
         }
         
         warnState = warningState.safe.rawValue
+        
+        //カメラ起動
+        initCamera()
+
+        //地図切替ボタン
+        let toMap_Button = UIButton()
+        let buttonImage: UIImage = UIImage(named: "icon_map.png")!
+        toMap_Button.frame = CGRect(x: 0.0, y: 0.0, width: buttonImage.size.width / 4, height: buttonImage.size.height / 4)
+        toMap_Button.setImage(buttonImage, forState: .Normal)
+        toMap_Button.layer.position = CGPoint(x: 55.0, y: self.view.bounds.height - 55.0)
+        warningView.addSubview(toMap_Button)
+        toMap_Button.addTarget(self, action: #selector(cameraViewController.clickMap(_:)), forControlEvents: .TouchUpInside)
+        
+        //コンパス
+        compassView = UIImageView(frame: CGRect(x: 50.0, y: 50.0, width: imgCompass.size.width / 4, height: imgCompass.size.height / 4))
+        compassView.image = imgCompass
+        warningView.addSubview(compassView)
+        
+        //災害タグ
+        view.addSubview(warningView)
+
     }
     
-    /* 画面が表示される直前 */
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
         displayMode = mode.cam.rawValue
         
-        // NavigationBarを隠す処理
-        self.navigationController?.setNavigationBarHidden(true, animated: true)
-        self.initCamera()
-        self.initBox()
+        // カメラの開始
+        avSession.startRunning()
         
-        view.addSubview(warningView)
+        // 情報タグの初期化
+        for _ in 0 ..< infoBox.count {
+            infoImageBox.append(UIImageView(frame: CGRect(x: 0.0, y: 0.0, width: 0.0, height: 0.0)))
+        }
         
-        // 画面遷移のためのボタン
-        let toMapBut = UIButton()
-        toMapBut.frame = CGRect.init(x: 0.0, y: 0.0, width: 100.0, height: 100.0)
-        let buttonImage: UIImage = UIImage(named: "icon_map.png")!
-        toMapBut.setImage(buttonImage, forState: .Normal)
-        toMapBut.layer.position = CGPoint(x: 5.0 + 100.0, y: self.view.bounds.height - 5.0 - 100.0)
-        view.addSubview(toMapBut)
-        toMapBut.addTarget(self, action: #selector(cameraViewController.clickMap(_:)), forControlEvents: .TouchUpInside)
-        
-//        backgroundView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(cameraViewController.clickBackBut(_:))))
-//        backBut.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(cameraViewController.clickBackBut(_:))))
-        
+        // 警告タグの初期化
+        for _ in 0 ..< warnBox.count {
+            warnImageBox.append(UIImageView(frame: CGRect(x: 0.0, y: 0.0, width: 0.0, height: 0.0)))
+        }
     }
     
-    /* 画面が表示された直後 */
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
     }
     
-    /* 別の画面に遷移する直前 */
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
     }
     
-    /* 別の画面に遷移した直後(破棄) */
     override func viewDidDisappear(animated: Bool) {
         super.viewDidDisappear(animated)
         
-        // カメラの停止とメモリ解放
-        self.avSession.stopRunning()
+        // カメラの停止
+        avSession.stopRunning()
         
-        for output in self.avSession.outputs {
-            self.avSession.removeOutput(output as? AVCaptureOutput)
-        }
-        
-        for input in self.avSession.inputs {
-            self.avSession.removeInput(input as? AVCaptureInput)
-        }
-        
-        self.avOutput = nil
-        self.avInput = nil
-        self.avDevice = nil
-        self.avSession = nil
-        
-        compassView.removeFromSuperview() // コンパスの破棄
+//        for output in self.avSession.outputs {
+//            self.avSession.removeOutput(output as? AVCaptureOutput)
+//        }
+//        
+//        for input in self.avSession.inputs {
+//            self.avSession.removeInput(input as? AVCaptureInput)
+//        }
+//        
+//        self.avOutput = nil
+//        self.avInput = nil
+//        self.avDevice = nil
+//        self.avSession = nil
+//        
+//        compassView.removeFromSuperview() // コンパスの破棄
         
         isExistCom = false // コンパスのカウントの破棄
         count = 0 // タグのカウントの破棄
     }
     
-    // MARK: デリゲート
-    // CLLocationManagerDelegate
-    /* iPhone の位置情報が更新されるたびに、デリゲートが呼ばれる */
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    // MARK: CLLocationManagerDelegate
+    // iPhone の位置情報が更新されるたびに、デリゲートが呼ばれる
     func locationManager(manager: CLLocationManager, didUpdateToLocation newLocation: CLLocation, fromLocation oldLocation: CLLocation) {
         
         userLat = newLocation.coordinate.latitude   // 現在地の緯度
@@ -226,7 +227,6 @@ class cameraViewController: UIViewController, UIGestureRecognizerDelegate, CLLoc
             }
         }
         
-        
         // コンパスの向きを調整する
         compassRotate(newHeading.magneticHeading)
         
@@ -237,27 +237,7 @@ class cameraViewController: UIViewController, UIGestureRecognizerDelegate, CLLoc
         
     }
     
-    /* メモリ不足時に呼び出される */
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
     // MARK: プライベート関数
-    
-    // タグ初期化
-    func initBox() {
-        
-        // 情報タグの初期化
-        for _ in 0 ..< infoBox.count {
-            infoImageBox.append(UIImageView(frame: CGRect.init(x: 0.0, y: 0.0, width: 0.0, height: 0.0)))
-        }
-        
-        // 警告タグの初期化
-        for _ in 0 ..< warnBox.count {
-            warnImageBox.append(UIImageView(frame: CGRect.init(x: 0.0, y: 0.0, width: 0.0, height: 0.0)))
-        }
-    }
-    
     // カメラの初期化
     func initCamera() {
         
@@ -267,9 +247,7 @@ class cameraViewController: UIViewController, UIGestureRecognizerDelegate, CLLoc
         
         if avSession.canSetSessionPreset(AVCaptureSessionPresetPhoto) {
             avSession.beginConfiguration()
-            
-            avSession.sessionPreset = AVCaptureSessionPresetPhoto
-            
+            avSession.sessionPreset = AVCaptureSessionPresetPhoto            
             avSession.commitConfiguration()
         }
         
@@ -285,33 +263,24 @@ class cameraViewController: UIViewController, UIGestureRecognizerDelegate, CLLoc
         if avDevice != nil {
             
             do {
-                avInput = try AVCaptureDeviceInput.init(device: avDevice!)
+                avInput = try AVCaptureDeviceInput(device: avDevice!)
             } catch let error as NSError {
                 print(error)
             }
             
             if avSession.canAddInput(avInput) {
-                
                 avSession.addInput(avInput)
-                
                 avOutput = AVCaptureStillImageOutput()
-                
                 avOutput.outputSettings = [AVVideoCodecKey: AVVideoCodecJPEG]
-                
                 if avSession.canAddOutput(avOutput) {
                     avSession.addOutput(avOutput)
                 }
-                
-                let capVideoLayer: AVCaptureVideoPreviewLayer = AVCaptureVideoPreviewLayer.init(session:avSession)
+                let capVideoLayer: AVCaptureVideoPreviewLayer = AVCaptureVideoPreviewLayer(session:avSession)
                 capVideoLayer.frame = self.view.bounds
                 capVideoLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
-                
                 self.previewLayer = capVideoLayer
-                
                 self.view.layer.addSublayer(capVideoLayer)
-                
-                avSession.startRunning()
-                
+//                avSession.startRunning()
             }
         }
     }
@@ -331,23 +300,31 @@ class cameraViewController: UIViewController, UIGestureRecognizerDelegate, CLLoc
                 
                 // 災害が「火災」または「土砂崩れ」のとき
                 if warnBox[index].riskType == 0 || warnBox[index].riskType == 3 {
-                    warningView.frame = CGRect.init(x: 0.0, y: 0.0, width: CGFloat(screenWidth), height: CGFloat(screenHeight))
+                    warningView.frame = CGRect(x: 0.0, y: 0.0, width: screenWidth, height: screenHeight)
                     
                     switch warnBox[index].riskType {
-                    case 0: warningView.backgroundColor = UIColor(red: 0.545, green: 0.020, blue: 0.220, alpha: 0.5)
-                    case 3: warningView.backgroundColor = UIColor(red: 0.800, green: 0.400, blue: 0.000, alpha: 0.5)
-                    default: warningView.backgroundColor = UIColor(red: 0.200, green: 1.000, blue: 0.384, alpha: 0.5)
+                    case 0:
+                        warningView.backgroundColor = UIColor(red: 1.000, green: 0.000, blue: 0.000, alpha: 0.7)
+                    case 3:
+                        warningView.backgroundColor = UIColor(red: 0.800, green: 0.400, blue: 0.000, alpha: 0.5)
+                    default:
+                        warningView.backgroundColor = UIColor(red: 0.200, green: 1.000, blue: 0.384, alpha: 0.7)
+                        break
                     }
                     
                 // 災害が「浸水」または「落橋」のとき
                 } else if warnBox[index].riskType == 1 || warnBox[index].riskType == 2 {
                     
-                    warningView.frame = CGRect.init(x: 0.0, y: CGFloat(screenHeight * 3 / 4), width: CGFloat(screenWidth), height: CGFloat(screenHeight / 4))
+                    warningView.frame = CGRect(x: 0.0, y: screenHeight * 3 / 4, width: screenWidth, height: screenHeight / 4)
                     
                     switch warnBox[index].riskType {
-                    case 1: warningView.backgroundColor = UIColor(red: 0.000, green: 0.400, blue: 1.000, alpha: 0.5)
-                    case 2: warningView.backgroundColor = UIColor(red: 1.000, green: 0.945, blue: 0.024, alpha: 0.5)
-                    default: warningView.backgroundColor = UIColor(red: 0.200, green: 1.000, blue: 0.384, alpha: 0.5)
+                    case 1:
+                        warningView.backgroundColor = UIColor(red: 0.000, green: 0.400, blue: 1.000, alpha: 0.7)
+                    case 2:
+                        warningView.backgroundColor = UIColor(red: 1.000, green: 0.945, blue: 0.024, alpha: 0.7)
+                    default:
+                        warningView.backgroundColor = UIColor(red: 0.200, green: 1.000, blue: 0.384, alpha: 0.7)
+                        break
                     }
                 }
                 
@@ -398,16 +375,16 @@ class cameraViewController: UIViewController, UIGestureRecognizerDelegate, CLLoc
         
         if isExistCom == false {
             
-            compassView = UIImageView(frame: CGRect(x: 50, y: 50, width: 100.0, height: 100.0))
+//            compassView = UIImageView(frame: CGRect(x: 50.0, y: 50.0, width: imgCompass.size.width / 4, height: imgCompass.size.height / 4))
             
             // UIImageViewに画像を設定する.
-            compassView.image = imgCompass
+//            compassView.image = imgCompass
             
             // 回転用のアフィン行列を生成する.
             compassView.transform = CGAffineTransformMakeRotation(angle)
             
             // Viewに張りつけ.
-            view.addSubview(compassView)
+//            view.addSubview(compassView)
             
             isExistCom = true
             
@@ -475,26 +452,24 @@ class cameraViewController: UIViewController, UIGestureRecognizerDelegate, CLLoc
                 
             }
             
-            y = screenHeight/2
+            y = screenHeight / 2
             
             if inforType == kInfo {
                 labelImg = makeLabel(infoBox[index].pinNum, inforType: inforType) // UILabelをUIImageに変換する
-                imageBox[index] = UIImageView(frame: CGRect.init(x: 0.0, y: 0.0, width: CGFloat(sizeW), height: CGFloat(sizeH)))
+                imageBox[index] = UIImageView(frame: CGRect(x: 0.0, y: 0.0, width: CGFloat(sizeW), height: CGFloat(sizeH)))
                 imageBox[index].image = getPinImage(labelImg, inforType: infoBox[index].inforType)
                 imageBox[index].tag = index // 情報は0以上からで判断
                 
             } else if inforType == kWarn {
                 labelImg = makeLabel(warnBox[index].pinNum, inforType: inforType) // UILabelをUIImageに変換する
-                imageBox[index] = UIImageView(frame: CGRect.init(x: 0.0, y: 0.0, width: CGFloat(sizeW), height: CGFloat(sizeH)))
+                imageBox[index] = UIImageView(frame: CGRect(x: 0.0, y: 0.0, width: CGFloat(sizeW), height: CGFloat(sizeH)))
                 imageBox[index].image = getPinImage(labelImg, inforType: warnBox[index].inforType)
                 imageBox[index].tag = (-1) + index * (-1) // 警告は-1以下からで判断 あとで+1してインデックス番号に合わせる
             }
             
-            
             // 画像の表示する座標を指定する.
             x = Double(screenWidth) / 2 + Double(screenWidth) * (angle / 36.5)
             imageBox[index].layer.position = CGPoint(x: CGFloat(x), y: y)
-            
             
             // タグをタップしたときのイベント
             imageBox[index].userInteractionEnabled = true
@@ -511,7 +486,7 @@ class cameraViewController: UIViewController, UIGestureRecognizerDelegate, CLLoc
     
     func didClickImageView(recognizer: UIGestureRecognizer) {
         
-        view.addSubview(cannotTouchView)
+//        view.addSubview(cannotTouchView)
         
         if let imageView = recognizer.view as? UIImageView {
             
@@ -522,9 +497,9 @@ class cameraViewController: UIViewController, UIGestureRecognizerDelegate, CLLoc
                 pinData = warnBox[(-1) + imageView.tag * (-1)]
             }
 
-            self.detailview = detailView(frame: CGRect(x: screenWidth * 0.1, y: screenWidth * 0.1, width: screenWidth * 0.8, height: screenHeight * 0.8))
-            self.detailview!.delegate = self
-            self.view.addSubview(self.detailview!)
+            detailview = detailView(frame: CGRect(x: screenWidth * 0.1, y: screenWidth * 0.1, width: screenWidth * 0.8, height: screenHeight * 0.8))
+            detailview!.delegate = self
+            view.addSubview(detailview!)
         }
     }
     
@@ -573,17 +548,9 @@ class cameraViewController: UIViewController, UIGestureRecognizerDelegate, CLLoc
     }
     
     /* ボタンクリックしたときのイベント(mapViewControllerに遷移する) */
-    internal func clickMap(sender: UIButton) {
+    func clickMap(sender: UIButton) {
         self.navigationController?.popViewControllerAnimated(true)
     }
-    
-//    /* (詳細画面)戻るボタンをクリックした時 */
-//    internal func clickBackBut(sender: UIButton) {
-////        removeAllSubviews(detailView)
-//        backgroundView.removeFromSuperview()
-////        detailView.removeFromSuperview()
-//        cannotTouchView.removeFromSuperview()
-//    }
     
     // MARK: detailViewDelegate
     func detailViewFinish() {

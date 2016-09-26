@@ -108,7 +108,7 @@ class detailView: UIView {
                 
             }
             
-        } else if /*pinData.inforType == kDidWarn || */pinData.inforType == kWarn { // 警告タグ
+        } else if pinData.inforType == kDidWarn || pinData.inforType == kWarn { // 警告タグ
             let warnImageView = UIImageView(frame: CGRect.init(x: CGFloat(dWid * 0.8 * 0.05), y: CGFloat(dHei * 0.3), width: bounds.height * 0.5, height: bounds.height * 0.5))
             warnImageView.image = pinData.pinImage
             self.addSubview(warnImageView)

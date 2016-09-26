@@ -96,5 +96,5 @@ let changeMapBut = UIButton(frame: CGRect.init(x: 0, y: 0, width: screenWidth * 
 
 //let detailView = UIView(frame: CGRect.init(x: screenWidth * 0.1, y: screenWidth * 0.1, width: screenWidth * 0.8, height: screenHeight * 0.8)) // 詳細画面
 //let configView = UIView(frame: CGRect.init(x: screenWidth * 0.1, y: screenWidth * 0.1, width: screenWidth * 0.8, height: screenHeight * 0.8)) // 設定画面
-let cannotTouchView = UIView(frame: CGRect.init(x: 0.0, y: 0.0, width: CGFloat(screenWidth), height: CGFloat(screenHeight))) // 画面に触れられないようにするためのビュー
+//let cannotTouchView = UIView(frame: CGRect.init(x: 0.0, y: 0.0, width: CGFloat(screenWidth), height: CGFloat(screenHeight))) // 画面に触れられないようにするためのビュー
 
