@@ -46,5 +46,7 @@
         <key>NSAllowsArbitraryLoads</key>
         <true/>
     </dict>
+    <key>MGLMapboxAccessToken</key>
+    <string>pk.eyJ1Ijoic2FicmluYXp1cmFpbWkiLCJhIjoiY2lyaGFmejR4MDAzNWlkbWh2MHd6cXAxYyJ9.Xt80tvw9JWvfvu9Lw9ZoXQ</string>
 </dict>
 </plist>

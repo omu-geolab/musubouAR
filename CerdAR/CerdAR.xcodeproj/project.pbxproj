@@ -33,6 +33,10 @@
 		ACA1C6791D59BB0500AF8CF4 /* icon_airtag.png in Resources */ = {isa = PBXBuildFile; fileRef = ACA1C6781D59BB0500AF8CF4 /* icon_airtag.png */; };
 		ACCD94481D755B2800C717E1 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD94471D755B2800C717E1 /* SwiftyJSON.swift */; };
 		ACEE245C1D8235FE00102E10 /* MakeTagImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEE245B1D8235FE00102E10 /* MakeTagImage.swift */; };
+		ACF399B71D98C25100B0EC47 /* osmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF399B61D98C25100B0EC47 /* osmViewController.swift */; };
+		ACF399BB1D98C5C400B0EC47 /* icon_airtag_red.png in Resources */ = {isa = PBXBuildFile; fileRef = ACF399BA1D98C5C400B0EC47 /* icon_airtag_red.png */; };
+		ACF399C31D98D5AA00B0EC47 /* Mapbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACF399C21D98D5AA00B0EC47 /* Mapbox.framework */; };
+		ACF399C51D98D65A00B0EC47 /* Mapbox.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = ACF399C21D98D5AA00B0EC47 /* Mapbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D3CF68DD1D91187D008B588E /* detailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CF68DB1D91187D008B588E /* detailView.swift */; };
 		D3CF68DE1D91187D008B588E /* termsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CF68DC1D91187D008B588E /* termsView.swift */; };
 /* End PBXBuildFile section */
@@ -53,6 +57,19 @@
 			remoteInfo = CerdAR;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		ACF399C41D98D63800B0EC47 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				ACF399C51D98D65A00B0EC47 /* Mapbox.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		AC05B9ED1D811F830082C52A /* icon_camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_camera.png; path = CerdAR/icon_camera.png; sourceTree = "<group>"; };
@@ -87,6 +104,9 @@
 		ACA1C6781D59BB0500AF8CF4 /* icon_airtag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_airtag.png; path = CerdAR/icon_airtag.png; sourceTree = "<group>"; };
 		ACCD94471D755B2800C717E1 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		ACEE245B1D8235FE00102E10 /* MakeTagImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeTagImage.swift; sourceTree = "<group>"; };
+		ACF399B61D98C25100B0EC47 /* osmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = osmViewController.swift; sourceTree = "<group>"; };
+		ACF399BA1D98C5C400B0EC47 /* icon_airtag_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_airtag_red.png; path = CerdAR/icon_airtag_red.png; sourceTree = "<group>"; };
+		ACF399C21D98D5AA00B0EC47 /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mapbox.framework; path = ../Mapbox.framework; sourceTree = "<group>"; };
 		D3CF68DB1D91187D008B588E /* detailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = detailView.swift; sourceTree = "<group>"; };
 		D3CF68DC1D91187D008B588E /* termsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = termsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -96,6 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACF399C31D98D5AA00B0EC47 /* Mapbox.framework in Frameworks */,
 				AC7B6A841D66A9B20086897D /* CoreMotion.framework in Frameworks */,
 				AC2C53011D58093C0032B689 /* AVFoundation.framework in Frameworks */,
 				AC2C52FF1D5809360032B689 /* CoreLocation.framework in Frameworks */,
@@ -180,6 +201,7 @@
 		AC2C53021D5809610032B689 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				ACF399BA1D98C5C400B0EC47 /* icon_airtag_red.png */,
 				AC4BD0131D8AA0D100157828 /* icon_menu.png */,
 				AC05B9FB1D81229D0082C52A /* icon_map.png */,
 				AC05B9ED1D811F830082C52A /* icon_camera.png */,
@@ -201,6 +223,7 @@
 				AC2C53001D58093C0032B689 /* AVFoundation.framework */,
 				AC2C52FE1D5809360032B689 /* CoreLocation.framework */,
 				AC2C52FC1D58092B0032B689 /* MapKit.framework */,
+				ACF399C21D98D5AA00B0EC47 /* Mapbox.framework */,
 			);
 			name = framework;
 			sourceTree = "<group>";
@@ -211,6 +234,7 @@
 				AC2C52C71D5805F70032B689 /* mapViewController.swift */,
 				AC2C52F61D5806AC0032B689 /* cameraViewController.swift */,
 				AC2C52FA1D5807D00032B689 /* ViewConfig.swift */,
+				ACF399B61D98C25100B0EC47 /* osmViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -234,6 +258,7 @@
 				AC2C52BE1D5805F70032B689 /* Sources */,
 				AC2C52BF1D5805F70032B689 /* Frameworks */,
 				AC2C52C01D5805F70032B689 /* Resources */,
+				ACF399C41D98D63800B0EC47 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -330,6 +355,7 @@
 			files = (
 				ACA1C6791D59BB0500AF8CF4 /* icon_airtag.png in Resources */,
 				AC05B9F61D811F830082C52A /* icon_warn1.png in Resources */,
+				ACF399BB1D98C5C400B0EC47 /* icon_airtag_red.png in Resources */,
 				AC2C530B1D58096F0032B689 /* icon_locate.jpg in Resources */,
 				AC2C52D31D5805F70032B689 /* LaunchScreen.storyboard in Resources */,
 				AC05B9F31D811F830082C52A /* icon_camera.png in Resources */,
@@ -367,6 +393,7 @@
 			files = (
 				AC2C52FB1D5807D00032B689 /* ViewConfig.swift in Sources */,
 				AC2C52F71D5806AC0032B689 /* cameraViewController.swift in Sources */,
+				ACF399B71D98C25100B0EC47 /* osmViewController.swift in Sources */,
 				AC05B9FA1D811FDA0082C52A /* DataManager.swift in Sources */,
 				AC2C52C81D5805F70032B689 /* mapViewController.swift in Sources */,
 				ACCD94481D755B2800C717E1 /* SwiftyJSON.swift in Sources */,
@@ -515,6 +542,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CerdAR",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = CerdAR/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -528,6 +560,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CerdAR",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = CerdAR/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

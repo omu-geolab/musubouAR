@@ -47,8 +47,6 @@ class TagData {
 // 定数
 let kInfo = "info" // 種別(情報)
 let kWarn = "warn" // 種別(警告(今災害が起こっている))
-let kWillWarn = "willWarn" // 種別(警告(災害が今後発生する))
-let kDidWarn = "didWarn" // 種別(警告(災害がおさまった))
 let kPhoto = "photo" // 写真
 let kMovie = "movie" // 動画
 
@@ -60,6 +58,9 @@ let dHei = screenHeight * 0.8
 
 var infoBox = [TagData]() // 情報タグ用
 var warnBox = [TagData]() // 警告タグ用
+
+var osmInfoBox = [MGLTagData]() // OSM情報タグ用
+var osmWarnBox = [MGLTagData]() // OSM情報タグ用
 
 var infoImageBox: [UIImageView] = [] // 画面上での情報タグ画像の表示を管理する
 var warnImageBox: [UIImageView] = [] // 画面上での警告タグ画像の表示を管理する
@@ -73,7 +74,13 @@ enum mode: Int {
 // 現在の画面が、地図かカメラかを保持する変数
 var displayMode = 0
 
+// 現在地から一番近い災害の状況
+enum viewmode: Int {
+    case detail = 0
+    case config = 1
+}
 
+var viewMode = 0
 
 var warnImage = UIImage(named: "icon_warn0.png") // 情報タグの画像
 var warningMessage: UILabel! // 災害範囲内・付近にいるときに表示するメッセージ
@@ -87,14 +94,12 @@ enum warningState: String {
     case safe = "安全"
 }
 
+
 var pinData: TagData! // タップされたタグの情報を保持
 
-let backgroundView = UIView(frame: CGRect.init(x: 0, y: 0, width: screenWidth, height: screenHeight)) // 詳細画面の後ろのビュー
+var backgroundView = UIImageView(frame: CGRect.init(x: 0, y: 0, width: screenWidth, height: screenHeight)) // 詳細画面の後ろのビュー
 
 let backBut = UIButton(frame: CGRect.init(x: 0, y: 0, width: screenWidth * 0.8 * 0.1, height: screenHeight * 0.8 * 0.1))
 let changeMapBut = UIButton(frame: CGRect.init(x: 0, y: 0, width: screenWidth * 0.8 * 0.5, height: screenHeight * 0.8 * 0.2))
 
-//let detailView = UIView(frame: CGRect.init(x: screenWidth * 0.1, y: screenWidth * 0.1, width: screenWidth * 0.8, height: screenHeight * 0.8)) // 詳細画面
-//let configView = UIView(frame: CGRect.init(x: screenWidth * 0.1, y: screenWidth * 0.1, width: screenWidth * 0.8, height: screenHeight * 0.8)) // 設定画面
-//let cannotTouchView = UIView(frame: CGRect.init(x: 0.0, y: 0.0, width: CGFloat(screenWidth), height: CGFloat(screenHeight))) // 画面に触れられないようにするためのビュー
-
+let cannotTouchView = UIView(frame: CGRect.init(x: 0.0, y: 0.0, width: CGFloat(screenWidth), height: CGFloat(screenHeight))) // 画面に触れられないようにするためのビュー

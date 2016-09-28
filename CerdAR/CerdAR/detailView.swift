@@ -35,6 +35,7 @@ class detailView: UIView {
     }
     
     func viewInit() {
+        
         //背景色
         backgroundColor = UIColor.whiteColor()
         
@@ -52,7 +53,7 @@ class detailView: UIView {
         backButton.setTitle("＜ 戻る", forState: UIControlState.Highlighted) // ハイライト
         backButton.setTitleColor(UIColor.blackColor(), forState: UIControlState.Highlighted)
         backButton.layer.position = CGPoint(x: dWid * 0.05, y: dHei * 0.05)
-        backButton.addTarget(self, action: #selector(detailView.tapped(_:)), forControlEvents:.TouchUpInside)
+        backButton.addTarget(self, action: #selector(detailView.onClick_back(_:)), forControlEvents:.TouchUpInside)
         
         self.addSubview(backButton)
         
@@ -62,7 +63,6 @@ class detailView: UIView {
         comment.text = pinData.descript
         comment.numberOfLines = 0
         comment.sizeToFit()
-        //        self.addSubview(comment)
         
         // スクロールビューの生成
         let scrollView = UIScrollView()
@@ -108,28 +108,98 @@ class detailView: UIView {
                 
             }
             
-        } else if pinData.inforType == kDidWarn || pinData.inforType == kWarn { // 警告タグ
+        } else if pinData.inforType == kWarn { // 警告タグ
             let warnImageView = UIImageView(frame: CGRect.init(x: CGFloat(dWid * 0.8 * 0.05), y: CGFloat(dHei * 0.3), width: bounds.height * 0.5, height: bounds.height * 0.5))
-            warnImageView.image = pinData.pinImage
+
+            let warnImg: UIImage!
+            var text: String!
+            
+            switch warnBox[pinData.pinNum].riskType {
+                
+            case 0:
+                text = "火災"
+                warnImg = UIImage(named: "icon_warn0.png")!
+            case 1:
+                text = "浸水"
+                warnImg = UIImage(named: "icon_warn1.png")!
+            case 2:
+                text = "落橋"
+                warnImg = UIImage(named: "icon_warn2.png")!
+            case 3:
+                text = "土砂崩れ"
+                warnImg = UIImage(named: "icon_warn3.png")!
+            default:
+                text = "その他の災害"
+                warnImg = UIImage(named: "icon_airtag.png")!
+            }
+            
+            
+            
+            let label = UILabel(frame: CGRect.init(x: 0.0, y: 0.0, width: warnImage!.size.width, height: warnImage!.size.height)) //ラベルサイズ
+            
+            label.text = text
+            label.textColor = UIColor.blackColor() // 文字色
+            label.textAlignment = NSTextAlignment.Center // 中央揃え
+            label.font = UIFont.systemFontOfSize(100) // 初期文字サイズ
+            label.adjustsFontSizeToFitWidth = true // 文字の多さによってフォントサイズを調節する
+            label.numberOfLines = 3 // ラベル内の行数
+            
+            let labelImg = label.getImage() as UIImage // UILabelをUIImageに変換する
+            
+            let tagRect = CGRect.init(x: 0.0, y: 0.0, width: warnImg!.size.width, height: warnImg!.size.height) // タグ画像のサイズと位置
+            UIGraphicsBeginImageContext(warnImg!.size)
+            warnImg!.drawInRect(tagRect)
+            
+            let labelRect = CGRect.init(x: 40.0, y: 40.0, width: labelImg.size.width - 80.0, height: labelImg.size.height - 100.0) // ラベル画像のサイズと位置
+            labelImg.drawInRect(labelRect)
+            
+            // Context に描画された画像を新しく設定
+            let newImage = UIGraphicsGetImageFromCurrentImageContext()
+            
+            // Context 終了
+            UIGraphicsEndImageContext()
+            
+            warnImageView.image = getResizeImage(newImage, newHeight: 500.0)
+            
             self.addSubview(warnImageView)
+
+            
         }
         
     }
     
-    func tapped(sender: UIButton) {
-        //表示されているパーツを破棄する
+        
+    
+    /*
+     * 「戻る」をタップしたとき
+     * 表示されているパーツを破棄する
+     */
+    func onClick_back(sender: UIButton) {
+        deleteDetailView()
+    }
+    
+    /*
+     * 詳細画面を消去する
+     */
+    func deleteDetailView() {
+        
         for view in self.subviews {
             view.removeFromSuperview()
         }
-        
+        backgroundView.removeFromSuperview()
         delegate?.detailViewFinish()
-        
     }
     
-    static func makebackgroungView() -> UIView {
-        let backgroundView = UIView(frame: CGRect.init(x: 0, y: 0, width: screenWidth, height: screenHeight))
+
+    /*
+     * 詳細画面の背景
+     */
+    static func makebackgroungView() -> UIImageView {
+        let backgroundView = UIImageView(frame: CGRect.init(x: 0, y: 0, width: screenWidth, height: screenHeight))
         backgroundView.alpha = 0.5
         backgroundView.backgroundColor = UIColor.grayColor()
+
+
         return backgroundView
     }   
     
