@@ -38,13 +38,7 @@ class cameraViewController: UIViewController, UIGestureRecognizerDelegate, CLLoc
     var warningView = UIView(frame: CGRect(x: 0.0, y: 0.0, width: screenWidth, height: screenHeight))
     var warnState = warningState.safe.rawValue // 現在ユーザーは災害からどの位置にいるか(安全・付近・侵入)
 
-    
-    // 災害の発生時刻の取得
-    var calendar: NSCalendar!
-    var startDate: NSDate!
-    var time = 0.0
-    var timer: NSTimer!
-    var disa = false // 災害発生 → true
+
     
     var camZ = 0.0 // カメラの傾き(保留)
     
@@ -58,8 +52,6 @@ class cameraViewController: UIViewController, UIGestureRecognizerDelegate, CLLoc
         
         self.navigationController?.setNavigationBarHidden(true, animated: true)
         
-        calendar = NSCalendar(identifier: NSCalendarIdentifierGregorian)!
-        startDate = calendar.dateWithEra(1, year: 2016, month: 8, day: 10, hour: 14, minute: 39, second: 0, nanosecond: 0)! // 災害発生時刻
         
 //        // 現在地の取得を開始
 //        if CLLocationManager.locationServicesEnabled() {
@@ -80,10 +72,10 @@ class cameraViewController: UIViewController, UIGestureRecognizerDelegate, CLLoc
         let toMap_Button = UIButton()
         let buttonImage: UIImage = UIImage(named: "icon_map.png")!
         toMap_Button.frame = CGRect(x: 0.0, y: 0.0, width: buttonImage.size.width / 4, height: buttonImage.size.height / 4)
-        toMap_Button.setImage(buttonImage, forState: .Normal)
+        toMap_Button.setImage(buttonImage, for: UIControlState())
         toMap_Button.layer.position = CGPoint(x: 55.0, y: self.view.bounds.height - 55.0)
         warningView.addSubview(toMap_Button)
-        toMap_Button.addTarget(self, action: #selector(cameraViewController.onClick_map(_:)), forControlEvents: .TouchUpInside)
+        toMap_Button.addTarget(self, action: #selector(cameraViewController.onClick_map(_:)), for: .touchUpInside)
         
         //コンパス
         compassView = UIImageView(frame: CGRect(x: 50.0, y: 50.0, width: imgCompass.size.width / 4, height: imgCompass.size.height / 4))
@@ -96,7 +88,7 @@ class cameraViewController: UIViewController, UIGestureRecognizerDelegate, CLLoc
     }
     
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         print("viewWillAppear")
         
@@ -121,22 +113,22 @@ class cameraViewController: UIViewController, UIGestureRecognizerDelegate, CLLoc
             locationManager = CLLocationManager()
             locationManager.delegate = self
             locationManager.headingFilter = updateLoc
-            locationManager.headingOrientation = .Portrait
+            locationManager.headingOrientation = .portrait
             locationManager.startUpdatingLocation()
             locationManager.startUpdatingHeading()
         }
         
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
     }
     
-    override func viewWillDisappear(animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
     }
     
-    override func viewDidDisappear(animated: Bool) {
+    override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         
         // カメラの停止
@@ -167,10 +159,11 @@ class cameraViewController: UIViewController, UIGestureRecognizerDelegate, CLLoc
     
     // MARK: CLLocationManagerDelegate
     // iPhone の位置情報が更新されるたびに、デリゲートが呼ばれる
-    func locationManager(manager: CLLocationManager, didUpdateToLocation newLocation: CLLocation, fromLocation oldLocation: CLLocation) {
+    //func locationManager(_ manager: CLLocationManager, didUpdateToLocation newLocation: CLLocation, fromLocation oldLocation: CLLocation) {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
-        userLat = newLocation.coordinate.latitude   // 現在地の緯度
-        userLon = newLocation.coordinate.longitude  // 現在地の経度
+        //userLat = locationManager.userLocation.coordinate.latitude   // 現在地の緯度
+        //userLat = locationManager.userLocation.coordinate.longutitude   // 現在地の経度
         
     }
     
@@ -183,7 +176,7 @@ class cameraViewController: UIViewController, UIGestureRecognizerDelegate, CLLoc
      * また、ユーザーが災害範囲に近づいたり、侵入したりしたとき、
      * warningDisplay()を発火させ、警告モードにし、警告メッセージを表示させる
      */
-    func locationManager(manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
+    func locationManager(_ manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
         
         //print("磁北:", newHeading.magneticHeading) // 北：0、 東；90、 南：180、 西：270 //こちらが必要？ スマホの向き
         //print("真北:", newHeading.trueHeading) // 北：0、 東；90、 南：180、 西：270
@@ -208,7 +201,7 @@ class cameraViewController: UIViewController, UIGestureRecognizerDelegate, CLLoc
         
         for i in 0 ..< warnBox.count {
             
-            if dateFromString(warnBox[i].stop, format: "yyyy/MM/dd HH:mm").compare(NSDate()) == NSComparisonResult.OrderedDescending && NSDate().compare(dateFromString(warnBox[i].start, format: "yyyy/MM/dd HH:mm")) == NSComparisonResult.OrderedDescending {
+            if dateFromString(warnBox[i].stop, format: "yyyy/MM/dd HH:mm").compare(Date()) == ComparisonResult.orderedDescending && Date().compare(dateFromString(warnBox[i].start, format: "yyyy/MM/dd HH:mm")) == ComparisonResult.orderedDescending {
                 
                 // 距離を取得する
                 warnBox[i].distance = calcDistance(warnBox[i].lat, lon: warnBox[i].lon, uLat: userLat, uLon: userLon)
@@ -286,8 +279,8 @@ class cameraViewController: UIViewController, UIGestureRecognizerDelegate, CLLoc
         
         let devices = AVCaptureDevice.devices()
         
-        for capDevice in devices {
-            if capDevice.position == AVCaptureDevicePosition.Back {
+        for capDevice in devices! {
+            if (capDevice as AnyObject).position == AVCaptureDevicePosition.back {
                 // 背面カメラを取得
                 avDevice = capDevice as? AVCaptureDevice
             }
@@ -318,12 +311,12 @@ class cameraViewController: UIViewController, UIGestureRecognizerDelegate, CLLoc
         }
     }
 
-    /*
-     * 画面を閉じる
-     */
-    func close() {
-        self.navigationController?.popViewControllerAnimated(true)
-    }
+//    /*
+//     * 画面を閉じる
+//     */
+//    func close() {
+//        self.navigationController?.popViewController(animated: true)
+//    }
     
     /**
      * 災害範囲に近づいたり侵入したりすると、
@@ -336,7 +329,7 @@ class cameraViewController: UIViewController, UIGestureRecognizerDelegate, CLLoc
      * @param message1 ユーザーが災害範囲付近にいるときに出る警告メッセージ
      * @param message2 ユーザーが災害範囲内に侵入したときに出る警告メッセージ
      */
-    func warningDisplay(index: Int, distance: Int, range: Int, inout warnState: String, message1: String, message2: String) {
+    func warningDisplay(_ index: Int, distance: Int, range: Int, warnState: inout String, message1: String, message2: String) {
         
         // 災害範囲内に侵入した時
         if distance - range <= 0 {
@@ -417,7 +410,7 @@ class cameraViewController: UIViewController, UIGestureRecognizerDelegate, CLLoc
      *
      * @param compass 現在の磁北の値
      */
-    func compassRotate(compass: Double) {
+    func compassRotate(_ compass: Double) {
         
         // radianで回転角度を指定する.
         let angle: CGFloat = CGFloat((compass * M_PI) / 180.0)
@@ -430,7 +423,7 @@ class cameraViewController: UIViewController, UIGestureRecognizerDelegate, CLLoc
 //            compassView.image = imgCompass
             
             // 回転用のアフィン行列を生成する.
-            compassView.transform = CGAffineTransformMakeRotation(angle)
+            compassView.transform = CGAffineTransform(rotationAngle: angle)
             
             // Viewに張りつけ.
 //            view.addSubview(compassView)
@@ -440,7 +433,7 @@ class cameraViewController: UIViewController, UIGestureRecognizerDelegate, CLLoc
         } else {
             
             // 回転用のアフィン行列を生成する.
-            compassView.transform = CGAffineTransformMakeRotation(angle)
+            compassView.transform = CGAffineTransform(rotationAngle: angle)
             
         }
     }
@@ -453,7 +446,7 @@ class cameraViewController: UIViewController, UIGestureRecognizerDelegate, CLLoc
      *
      * @return ユーザーが向いている方角を返す(北：0、 東；90、 南：180、 西：270)
      */
-    func getGeoDirection(tLat: Double, tLon: Double) -> Double {
+    func getGeoDirection(_ tLat: Double, tLon: Double) -> Double {
         
         // 緯度経度 lat1, lng1 の点を出発として、緯度経度 lat2, lng2 への方位
         // 北を０度で右回りの角度0～360度
@@ -465,7 +458,7 @@ class cameraViewController: UIViewController, UIGestureRecognizerDelegate, CLLoc
             dirE0 = dirE0 + 360 //0～360 にする
         }
         
-        return (dirE0 + 90) % 360 // (dirE0+90)÷360の余りを出力 北向きが0度の方向
+        return (dirE0 + 90).truncatingRemainder(dividingBy: 360) // (dirE0+90)÷360の余りを出力 北向きが0度の方向
     }
     
     /*
@@ -480,7 +473,7 @@ class cameraViewController: UIViewController, UIGestureRecognizerDelegate, CLLoc
      * @param compass ユーザーが向いている方角
      * @param inforType タグの種別(情報か警告か)
      */
-    func tagDisplay(index: Int, inout imageBox: [UIImageView], tDir: Double, tDis: Int, compass: Double, inforType: String) {
+    func tagDisplay(_ index: Int, imageBox: inout [UIImageView], tDir: Double, tDis: Int, compass: Double, inforType: String) {
         let angle = tDir - compass
         
         var x = 0.0 // タグの表示位置(x軸)
@@ -529,7 +522,7 @@ class cameraViewController: UIViewController, UIGestureRecognizerDelegate, CLLoc
                 imageBox[index].tag = index // 情報は0以上からで判断
                 
             // 警告タグを生成する
-            } else if dateFromString(warnBox[index].stop, format: "yyyy/MM/dd HH:mm").compare(NSDate()) == NSComparisonResult.OrderedDescending && NSDate().compare(dateFromString(warnBox[index].start, format: "yyyy/MM/dd HH:mm")) == NSComparisonResult.OrderedDescending {
+            } else if dateFromString(warnBox[index].stop, format: "yyyy/MM/dd HH:mm").compare(Date()) == ComparisonResult.orderedDescending && Date().compare(dateFromString(warnBox[index].start, format: "yyyy/MM/dd HH:mm")) == ComparisonResult.orderedDescending {
                 labelImg = makeLabel(warnBox[index].pinNum, inforType: inforType) // UILabelをUIImageに変換する
                 imageBox[index] = UIImageView(frame: CGRect(x: 0.0, y: 0.0, width: CGFloat(sizeW), height: CGFloat(sizeH)))
                 imageBox[index].image = getPinImage(labelImg, inforType: warnBox[index].inforType)
@@ -541,7 +534,7 @@ class cameraViewController: UIViewController, UIGestureRecognizerDelegate, CLLoc
             imageBox[index].layer.position = CGPoint(x: CGFloat(x), y: y)
             
             // タグをタップしたときのイベント
-            imageBox[index].userInteractionEnabled = true
+            imageBox[index].isUserInteractionEnabled = true
             let gesture = UITapGestureRecognizer(target:self, action: #selector(cameraViewController.didClickImageView(_:)))
             imageBox[index].addGestureRecognizer(gesture)
             
@@ -549,9 +542,9 @@ class cameraViewController: UIViewController, UIGestureRecognizerDelegate, CLLoc
             
             // UIImageViewをViewに追加する.
             view.addSubview(imageBox[index]) // 画像表示用
-            view.bringSubviewToFront(backgroundView)
+            view.bringSubview(toFront: backgroundView)
             if detailview != nil {
-                view.bringSubviewToFront(detailview!) // 詳細画面を最前面にする
+                view.bringSubview(toFront: detailview!) // 詳細画面を最前面にする
             }
         }
     }
@@ -563,10 +556,10 @@ class cameraViewController: UIViewController, UIGestureRecognizerDelegate, CLLoc
      *
      * @param recognizer
      */
-    func didClickImageView(recognizer: UIGestureRecognizer) {
+    func didClickImageView(_ recognizer: UIGestureRecognizer) {
         
         backgroundView = detailView.makebackgroungView()
-        backgroundView.userInteractionEnabled = true
+        backgroundView.isUserInteractionEnabled = true
         backgroundView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(osmViewController.onClick_detailBackground(_:))))
         
 
@@ -588,7 +581,7 @@ class cameraViewController: UIViewController, UIGestureRecognizerDelegate, CLLoc
     }
     
     /* カメラの向きを変える */
-    private func updatePreviewLayer(layer: AVCaptureConnection, orientation: AVCaptureVideoOrientation) {
+    fileprivate func updatePreviewLayer(_ layer: AVCaptureConnection, orientation: AVCaptureVideoOrientation) {
         layer.videoOrientation = orientation
         previewLayer!.frame = self.view.bounds
     }
@@ -603,33 +596,33 @@ class cameraViewController: UIViewController, UIGestureRecognizerDelegate, CLLoc
         super.viewDidLayoutSubviews()
         
         if let connection = self.previewLayer?.connection {
-            let currentDevice: UIDevice = UIDevice.currentDevice()
+            let currentDevice: UIDevice = UIDevice.current
             
             let orientation: UIDeviceOrientation = currentDevice.orientation
             
             let previewLayerConnection: AVCaptureConnection = connection
             
-            if previewLayerConnection.supportsVideoOrientation {
+            if previewLayerConnection.isVideoOrientationSupported {
                 
                 switch orientation {
-                case .Portrait:
-                    updatePreviewLayer(previewLayerConnection, orientation: .LandscapeLeft)
+                case .portrait:
+                    updatePreviewLayer(previewLayerConnection, orientation: .landscapeLeft)
                     break
                     
-                case .LandscapeRight:
-                    updatePreviewLayer(previewLayerConnection, orientation: .LandscapeLeft)
+                case .landscapeRight:
+                    updatePreviewLayer(previewLayerConnection, orientation: .landscapeLeft)
                     break
                     
-                case .LandscapeLeft:
-                    updatePreviewLayer(previewLayerConnection, orientation: .LandscapeRight)
+                case .landscapeLeft:
+                    updatePreviewLayer(previewLayerConnection, orientation: .landscapeRight)
                     break
                     
-                case .PortraitUpsideDown:
-                    updatePreviewLayer(previewLayerConnection, orientation: .PortraitUpsideDown)
+                case .portraitUpsideDown:
+                    updatePreviewLayer(previewLayerConnection, orientation: .portraitUpsideDown)
                     break
                     
                 default:
-                    updatePreviewLayer(previewLayerConnection, orientation: .LandscapeLeft)
+                    updatePreviewLayer(previewLayerConnection, orientation: .landscapeLeft)
                     break
                 }
             }
@@ -642,8 +635,8 @@ class cameraViewController: UIViewController, UIGestureRecognizerDelegate, CLLoc
      *
      * @param sender
      */
-    func onClick_map(sender: UIButton) {
-        self.dismissViewControllerAnimated(true, completion: nil)
+    func onClick_map(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
     }
 
 
@@ -652,7 +645,7 @@ class cameraViewController: UIViewController, UIGestureRecognizerDelegate, CLLoc
      * 詳細画面を閉じる
      * @param sender
      */
-    func onClick_detailBackground(sender: UITapGestureRecognizer) {
+    func onClick_detailBackground(_ sender: UITapGestureRecognizer) {
         detailview?.removeFromSuperview() // 表示されているものが廃棄される
         detailView().deleteDetailView()
     }

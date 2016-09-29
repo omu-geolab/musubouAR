@@ -15,6 +15,7 @@
 		AC05B9F81D811F830082C52A /* icon_warn3.png in Resources */ = {isa = PBXBuildFile; fileRef = AC05B9F21D811F830082C52A /* icon_warn3.png */; };
 		AC05B9FA1D811FDA0082C52A /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC05B9F91D811FDA0082C52A /* DataManager.swift */; };
 		AC05B9FC1D81229D0082C52A /* icon_map.png in Resources */ = {isa = PBXBuildFile; fileRef = AC05B9FB1D81229D0082C52A /* icon_map.png */; };
+		AC2C03D41D9D1CB9009926E3 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2C03D31D9D1CB9009926E3 /* SwiftyJSON.swift */; };
 		AC2C52C61D5805F70032B689 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2C52C51D5805F70032B689 /* AppDelegate.swift */; };
 		AC2C52C81D5805F70032B689 /* mapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2C52C71D5805F70032B689 /* mapViewController.swift */; };
 		AC2C52CB1D5805F70032B689 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC2C52C91D5805F70032B689 /* Main.storyboard */; };
@@ -23,7 +24,7 @@
 		AC2C52DE1D5805F80032B689 /* CerdARTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2C52DD1D5805F80032B689 /* CerdARTests.swift */; };
 		AC2C52E91D5805F80032B689 /* CerdARUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2C52E81D5805F80032B689 /* CerdARUITests.swift */; };
 		AC2C52F71D5806AC0032B689 /* cameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2C52F61D5806AC0032B689 /* cameraViewController.swift */; };
-		AC2C52FB1D5807D00032B689 /* ViewConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2C52FA1D5807D00032B689 /* ViewConfig.swift */; };
+		AC2C52FB1D5807D00032B689 /* ConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2C52FA1D5807D00032B689 /* ConfigView.swift */; };
 		AC2C52FD1D58092B0032B689 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC2C52FC1D58092B0032B689 /* MapKit.framework */; };
 		AC2C52FF1D5809360032B689 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC2C52FE1D5809360032B689 /* CoreLocation.framework */; };
 		AC2C53011D58093C0032B689 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC2C53001D58093C0032B689 /* AVFoundation.framework */; };
@@ -31,7 +32,6 @@
 		AC4BD0141D8AA0D100157828 /* icon_menu.png in Resources */ = {isa = PBXBuildFile; fileRef = AC4BD0131D8AA0D100157828 /* icon_menu.png */; };
 		AC7B6A841D66A9B20086897D /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC7B6A831D66A9B20086897D /* CoreMotion.framework */; };
 		ACA1C6791D59BB0500AF8CF4 /* icon_airtag.png in Resources */ = {isa = PBXBuildFile; fileRef = ACA1C6781D59BB0500AF8CF4 /* icon_airtag.png */; };
-		ACCD94481D755B2800C717E1 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD94471D755B2800C717E1 /* SwiftyJSON.swift */; };
 		ACEE245C1D8235FE00102E10 /* MakeTagImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEE245B1D8235FE00102E10 /* MakeTagImage.swift */; };
 		ACF399B71D98C25100B0EC47 /* osmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF399B61D98C25100B0EC47 /* osmViewController.swift */; };
 		ACF399BB1D98C5C400B0EC47 /* icon_airtag_red.png in Resources */ = {isa = PBXBuildFile; fileRef = ACF399BA1D98C5C400B0EC47 /* icon_airtag_red.png */; };
@@ -80,6 +80,7 @@
 		AC05B9F21D811F830082C52A /* icon_warn3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_warn3.png; path = CerdAR/icon_warn3.png; sourceTree = "<group>"; };
 		AC05B9F91D811FDA0082C52A /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		AC05B9FB1D81229D0082C52A /* icon_map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_map.png; path = CerdAR/icon_map.png; sourceTree = "<group>"; };
+		AC2C03D31D9D1CB9009926E3 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		AC2C52C21D5805F70032B689 /* CerdAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CerdAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC2C52C51D5805F70032B689 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC2C52C71D5805F70032B689 /* mapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapViewController.swift; sourceTree = "<group>"; };
@@ -94,7 +95,7 @@
 		AC2C52E81D5805F80032B689 /* CerdARUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CerdARUITests.swift; sourceTree = "<group>"; };
 		AC2C52EA1D5805F80032B689 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC2C52F61D5806AC0032B689 /* cameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cameraViewController.swift; sourceTree = "<group>"; };
-		AC2C52FA1D5807D00032B689 /* ViewConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewConfig.swift; sourceTree = "<group>"; };
+		AC2C52FA1D5807D00032B689 /* ConfigView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigView.swift; sourceTree = "<group>"; };
 		AC2C52FC1D58092B0032B689 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		AC2C52FE1D5809360032B689 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		AC2C53001D58093C0032B689 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -102,7 +103,6 @@
 		AC4BD0131D8AA0D100157828 /* icon_menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_menu.png; path = CerdAR/icon_menu.png; sourceTree = "<group>"; };
 		AC7B6A831D66A9B20086897D /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		ACA1C6781D59BB0500AF8CF4 /* icon_airtag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_airtag.png; path = CerdAR/icon_airtag.png; sourceTree = "<group>"; };
-		ACCD94471D755B2800C717E1 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		ACEE245B1D8235FE00102E10 /* MakeTagImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeTagImage.swift; sourceTree = "<group>"; };
 		ACF399B61D98C25100B0EC47 /* osmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = osmViewController.swift; sourceTree = "<group>"; };
 		ACF399BA1D98C5C400B0EC47 /* icon_airtag_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_airtag_red.png; path = CerdAR/icon_airtag_red.png; sourceTree = "<group>"; };
@@ -165,10 +165,10 @@
 		AC2C52C41D5805F70032B689 /* CerdAR */ = {
 			isa = PBXGroup;
 			children = (
+				AC2C03D31D9D1CB9009926E3 /* SwiftyJSON.swift */,
 				AC2C52C51D5805F70032B689 /* AppDelegate.swift */,
 				D360EF551D912DA900A3AFE8 /* ViewController */,
 				D360EF561D912DB200A3AFE8 /* View */,
-				ACCD94471D755B2800C717E1 /* SwiftyJSON.swift */,
 				AC05B9F91D811FDA0082C52A /* DataManager.swift */,
 				ACEE245B1D8235FE00102E10 /* MakeTagImage.swift */,
 				AC2C52CF1D5805F70032B689 /* Assets.xcassets */,
@@ -233,7 +233,6 @@
 			children = (
 				AC2C52C71D5805F70032B689 /* mapViewController.swift */,
 				AC2C52F61D5806AC0032B689 /* cameraViewController.swift */,
-				AC2C52FA1D5807D00032B689 /* ViewConfig.swift */,
 				ACF399B61D98C25100B0EC47 /* osmViewController.swift */,
 			);
 			name = ViewController;
@@ -242,6 +241,7 @@
 		D360EF561D912DB200A3AFE8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AC2C52FA1D5807D00032B689 /* ConfigView.swift */,
 				D3CF68DB1D91187D008B588E /* detailView.swift */,
 				D3CF68DC1D91187D008B588E /* termsView.swift */,
 			);
@@ -317,13 +317,19 @@
 				TargetAttributes = {
 					AC2C52C11D5805F70032B689 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 57NUJ8NN7U;
+						LastSwiftMigration = 0800;
 					};
 					AC2C52D81D5805F80032B689 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 57NUJ8NN7U;
+						LastSwiftMigration = 0800;
 						TestTargetID = AC2C52C11D5805F70032B689;
 					};
 					AC2C52E31D5805F80032B689 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 57NUJ8NN7U;
+						LastSwiftMigration = 0800;
 						TestTargetID = AC2C52C11D5805F70032B689;
 					};
 				};
@@ -391,12 +397,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC2C52FB1D5807D00032B689 /* ViewConfig.swift in Sources */,
+				AC2C52FB1D5807D00032B689 /* ConfigView.swift in Sources */,
 				AC2C52F71D5806AC0032B689 /* cameraViewController.swift in Sources */,
 				ACF399B71D98C25100B0EC47 /* osmViewController.swift in Sources */,
+				AC2C03D41D9D1CB9009926E3 /* SwiftyJSON.swift in Sources */,
 				AC05B9FA1D811FDA0082C52A /* DataManager.swift in Sources */,
 				AC2C52C81D5805F70032B689 /* mapViewController.swift in Sources */,
-				ACCD94481D755B2800C717E1 /* SwiftyJSON.swift in Sources */,
 				D3CF68DE1D91187D008B588E /* termsView.swift in Sources */,
 				ACEE245C1D8235FE00102E10 /* MakeTagImage.swift in Sources */,
 				AC2C52C61D5805F70032B689 /* AppDelegate.swift in Sources */,
@@ -542,6 +548,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 57NUJ8NN7U;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/CerdAR",
@@ -552,6 +559,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ymn.CerdAR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
@@ -560,6 +568,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 57NUJ8NN7U;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/CerdAR",
@@ -570,6 +579,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ymn.CerdAR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
@@ -578,10 +588,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 57NUJ8NN7U;
 				INFOPLIST_FILE = CerdARTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ymn.CerdARTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CerdAR.app/CerdAR";
 			};
 			name = Debug;
@@ -590,10 +602,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 57NUJ8NN7U;
 				INFOPLIST_FILE = CerdARTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ymn.CerdARTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CerdAR.app/CerdAR";
 			};
 			name = Release;
@@ -601,10 +615,12 @@
 		AC2C52F41D5805F80032B689 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 57NUJ8NN7U;
 				INFOPLIST_FILE = CerdARUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ymn.CerdARUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = CerdAR;
 			};
 			name = Debug;
@@ -612,10 +628,12 @@
 		AC2C52F51D5805F80032B689 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 57NUJ8NN7U;
 				INFOPLIST_FILE = CerdARUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ymn.CerdARUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = CerdAR;
 			};
 			name = Release;

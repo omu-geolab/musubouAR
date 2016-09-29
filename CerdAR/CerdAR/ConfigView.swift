@@ -1,5 +1,5 @@
 //
-//  ViewConfig.swift
+//  ConfigView.swift
 //  CerdAR
 //
 //  Copyright (c) 2016 BRILLIANTSERVICE CO.,LTD., CERD (Osaka City University)
@@ -8,13 +8,13 @@
 import Foundation
 import UIKit
 
-@objc protocol configViewDelegate {
+@objc protocol ConfigViewDelegate {
     func configViewFinish()
 }
 
-class ViewConfig: UIView {
+class ConfigView: UIView {
     
-    weak var delegate: configViewDelegate?
+    weak var delegate: ConfigViewDelegate?
     let aboutAppBut = UIButton(frame: CGRect.init(x: 0, y: 0, width: screenWidth * 0.8 * 0.5, height: screenHeight * 0.8 * 0.2))
     let backBut = UIButton(frame: CGRect.init(x: 0, y: 0, width: screenWidth * 0.8 * 0.1, height: screenHeight * 0.8 * 0.1))
     
@@ -39,34 +39,34 @@ class ViewConfig: UIView {
     
     func load() {
 
-        self.backgroundColor = UIColor.whiteColor()
+        self.backgroundColor = UIColor.white
         
         // 「このアプリについて」ボタンの挿入(画面左上側)
-        aboutAppBut.setTitle("このアプリについて", forState: UIControlState.Normal) // 通常
-        aboutAppBut.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
-        aboutAppBut.setTitle("このアプリについて", forState: UIControlState.Highlighted) // ハイライト
-        aboutAppBut.setTitleColor(UIColor.blackColor(), forState: UIControlState.Highlighted)
+        aboutAppBut.setTitle("このアプリについて", for: UIControlState()) // 通常
+        aboutAppBut.setTitleColor(UIColor.white, for: UIControlState())
+        aboutAppBut.setTitle("このアプリについて", for: UIControlState.highlighted) // ハイライト
+        aboutAppBut.setTitleColor(UIColor.black, for: UIControlState.highlighted)
         aboutAppBut.layer.position = CGPoint(x: screenWidth * 0.3, y: screenHeight * 0.3)
-        aboutAppBut.backgroundColor = UIColor.grayColor()
-        aboutAppBut.addTarget(self, action: #selector(ViewConfig.onClick_aboutApp(_:)), forControlEvents: .TouchUpInside)
+        aboutAppBut.backgroundColor = UIColor.gray
+        aboutAppBut.addTarget(self, action: #selector(ConfigView.onClick_aboutApp(_:)), for: .touchUpInside)
         
         // 「地図切り替え」ボタンの挿入(画面左上側)
-        changeMapBut.setTitle("いれかえ", forState: UIControlState.Normal) // 通常
-        changeMapBut.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
-        changeMapBut.setTitle("いれかえ", forState: UIControlState.Highlighted) // ハイライト
-        changeMapBut.setTitleColor(UIColor.blackColor(), forState: UIControlState.Highlighted)
+        changeMapBut.setTitle("いれかえ", for: UIControlState()) // 通常
+        changeMapBut.setTitleColor(UIColor.white, for: UIControlState())
+        changeMapBut.setTitle("いれかえ", for: UIControlState.highlighted) // ハイライト
+        changeMapBut.setTitleColor(UIColor.black, for: UIControlState.highlighted)
         changeMapBut.layer.position = CGPoint(x: screenWidth * 0.3, y: screenHeight * 0.6)
-        changeMapBut.backgroundColor = UIColor.grayColor()
+        changeMapBut.backgroundColor = UIColor.gray
         
 
         // 閉じるボタンの挿入(画面左上側)
-        backBut.setTitle("＜ 閉じる", forState: UIControlState.Normal) // 通常
-        backBut.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
-        backBut.setTitle("＜ 閉じる", forState: UIControlState.Highlighted) // ハイライト
-        backBut.setTitleColor(UIColor.blackColor(), forState: UIControlState.Highlighted)
+        backBut.setTitle("＜ 閉じる", for: UIControlState()) // 通常
+        backBut.setTitleColor(UIColor.white, for: UIControlState())
+        backBut.setTitle("＜ 閉じる", for: UIControlState.highlighted) // ハイライト
+        backBut.setTitleColor(UIColor.black, for: UIControlState.highlighted)
         backBut.layer.position = CGPoint(x: 50, y: 50)
-        backBut.backgroundColor = UIColor.blueColor()
-        backBut.addTarget(self, action: #selector(ViewConfig.onClick_back(_:)), forControlEvents: .TouchUpInside)        
+        backBut.backgroundColor = UIColor.blue
+        backBut.addTarget(self, action: #selector(ConfigView.onClick_back(_:)), for: .touchUpInside)
     }
     
     
@@ -74,7 +74,7 @@ class ViewConfig: UIView {
      * (「戻る」または背景をタップする)
      * 表示されているパーツを破棄する
      */
-    func onClick_back(sender: UIButton) {
+    func onClick_back(_ sender: UIButton) {
         self.removeFromSuperview()
         deleteConfigDisplay()
     }
@@ -83,20 +83,20 @@ class ViewConfig: UIView {
      * (「このアプリについて」をタップする)
      * 表示されているパーツを破棄する
      */
-    func onClick_aboutApp(sender: UIButton) {
+    func onClick_aboutApp(_ sender: UIButton) {
         changeMapBut.removeFromSuperview()
         aboutAppBut.removeFromSuperview()
         
         
         let aboutAppLabel = UILabel(frame: CGRect(x: screenWidth * 0.8 * 0.15, y: screenHeight * 0.8 * 0.2, width: screenWidth * 0.8 * 0.7, height: screenHeight * 0.8 * 0.7))
-        aboutAppLabel.backgroundColor = UIColor.grayColor()
-        aboutAppLabel.font = UIFont.systemFontOfSize(20)
+        aboutAppLabel.backgroundColor = UIColor.gray
+        aboutAppLabel.font = UIFont.systemFont(ofSize: 20)
         aboutAppLabel.text = "このアプリについてこのアプリについてこのアプリについてこのアプリについてこのアプリについてこのアプリについてこのアプリについて" + "\n"
                                 + "このアプリについてこのアプリについてこのアプリについてこのアプリについてこのアプリについてこのアプリについて" + "\n"
                                 + "このアプリについてこのアプリについてこのアプリについてこのアプリについてこのアプリについてこのアプリについてこのアプリについて" + "\n"
                                 + "このアプリについてこのアプリについてこのアプリについて" + "\n"
 
-        aboutAppLabel.textAlignment = NSTextAlignment.Center
+        aboutAppLabel.textAlignment = NSTextAlignment.center
         aboutAppLabel.numberOfLines = 0
         aboutAppLabel.sizeToFit()
         

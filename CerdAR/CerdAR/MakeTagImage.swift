@@ -21,7 +21,7 @@ import MapKit
  *
  * @return ユーザの現在地と目的地間の距離(m)を返す
  **/
-func calcDistance(lat: Double, lon: Double, uLat: Double, uLon: Double) -> Int {
+func calcDistance(_ lat: Double, lon: Double, uLat: Double, uLon: Double) -> Int {
     
     let cLocation1 = CLLocationCoordinate2DMake(lat, lon)
     let point1 = MKMapPointForCoordinate(cLocation1)
@@ -41,7 +41,7 @@ func calcDistance(lat: Double, lon: Double, uLat: Double, uLon: Double) -> Int {
  *
  * @return タグに記載する文を返す
  */
-func getLabelText(num: Int, inforType: String) -> String {
+func getLabelText(_ num: Int, inforType: String) -> String {
     
     var text: String!
     
@@ -69,7 +69,9 @@ func getLabelText(num: Int, inforType: String) -> String {
         default: riskName = "その他の災害"
         }
         
-        text = riskName + "\n" + String(distance) + "m" + "\n" + "範囲: " + String(Int(circleRadius[num])) + "m"
+        text = riskName + "\n"
+        text = text + String(distance) + "m" + "\n"
+        text = text + "範囲: " + String(Int(circleRadius[num])) + "m"
     }
     
     return text
@@ -83,7 +85,7 @@ func getLabelText(num: Int, inforType: String) -> String {
  *
  * @return タグに記載する文の画像を返す
  */
-func makeLabel(num: Int, inforType: String) -> UIImage {
+func makeLabel(_ num: Int, inforType: String) -> UIImage {
     
     var label: UILabel! // 情報タグの文字
     var labelImg: UIImage! // ラベル画像
@@ -97,9 +99,9 @@ func makeLabel(num: Int, inforType: String) -> UIImage {
     }
     
     label.text = getLabelText(num, inforType: inforType) // テキスト
-    label.textColor = UIColor.blackColor() // 文字色
-    label.textAlignment = NSTextAlignment.Center // 中央揃え
-    label.font = UIFont.systemFontOfSize(100) // 初期文字サイズ
+    label.textColor = UIColor.black // 文字色
+    label.textAlignment = NSTextAlignment.center // 中央揃え
+    label.font = UIFont.systemFont(ofSize: 100) // 初期文字サイズ
     label.adjustsFontSizeToFitWidth = true // 文字の多さによってフォントサイズを調節する
     label.numberOfLines = 3 // ラベル内の行数
     
@@ -118,7 +120,7 @@ func makeLabel(num: Int, inforType: String) -> UIImage {
  *
  * @return タグに記載する文の画像を返す
  */
-func makeTappedLabel(num: Int, scale: Double) -> UIImage {
+func makeTappedLabel(_ num: Int, scale: Double) -> UIImage {
     
     var label: UILabel! // 情報タグの文字
     var labelImg: UIImage! // ラベル画像
@@ -127,9 +129,9 @@ func makeTappedLabel(num: Int, scale: Double) -> UIImage {
     
     label = UILabel(frame: CGRect.init(x: 0.0, y: 0.0, width: newsize, height: newsize)) //ラベルサイズ
     label.text = getLabelText(num, inforType: kWarn) // テキスト
-    label.textColor = UIColor.redColor() // 文字色
-    label.textAlignment = NSTextAlignment.Center // 中央揃え
-    label.font = UIFont.systemFontOfSize(100) // 初期文字サイズ
+    label.textColor = UIColor.red // 文字色
+    label.textAlignment = NSTextAlignment.center // 中央揃え
+    label.font = UIFont.systemFont(ofSize: 100) // 初期文字サイズ
     label.adjustsFontSizeToFitWidth = true // 文字の多さによってフォントサイズを調節する
     label.numberOfLines = 3 // ラベル内の行数
     
@@ -151,14 +153,14 @@ func makeTappedLabel(num: Int, scale: Double) -> UIImage {
  *
  * @return 生成したタグ画像を縦幅500のサイズで返す
  */
-func getPinImage(img: UIImage, inforType: String) -> UIImage {
+func getPinImage(_ img: UIImage, inforType: String) -> UIImage {
     let airtagImage = UIImage(named: "icon_airtag.png")! // 情報タグの画像
 
     if inforType == kInfo {
         
         let tagRect = CGRect.init(x: 0.0, y: 0.0, width: airtagImage.size.width, height: airtagImage.size.height) // タグ画像のサイズと位置
         UIGraphicsBeginImageContext(airtagImage.size)
-        airtagImage.drawInRect(tagRect)
+        airtagImage.draw(in: tagRect)
         
     } else if inforType == kWarn {
         
@@ -169,12 +171,12 @@ func getPinImage(img: UIImage, inforType: String) -> UIImage {
             
             let tagRect = CGRect.init(x: 0.0, y: 0.0, width: warnImage!.size.width, height: warnImage!.size.height) // タグ画像のサイズと位置
             UIGraphicsBeginImageContext(warnImage!.size)
-            warnImage!.drawInRect(tagRect)
+            warnImage!.draw(in: tagRect)
         }
     }
     
     let labelRect = CGRect.init(x: 40.0, y: 40.0, width: img.size.width - 80.0, height: img.size.height - 100.0) // ラベル画像のサイズと位置
-    img.drawInRect(labelRect)
+    img.draw(in: labelRect)
     
     // Context に描画された画像を新しく設定
     let newImage = UIGraphicsGetImageFromCurrentImageContext()
@@ -182,7 +184,7 @@ func getPinImage(img: UIImage, inforType: String) -> UIImage {
     // Context 終了
     UIGraphicsEndImageContext()
     
-    return getResizeImage(newImage, newHeight: 500.0)
+    return getResizeImage(newImage!, newHeight: 500.0)
 }
 
 /**
@@ -193,32 +195,32 @@ func getPinImage(img: UIImage, inforType: String) -> UIImage {
  *
  * @return リサイズされた画像を返す
  */
-func getResizeImage(image: UIImage, newHeight: CGFloat) -> UIImage {
+func getResizeImage(_ image: UIImage, newHeight: CGFloat) -> UIImage {
     
     let scale = newHeight / image.size.height // 縮尺度を決める
     let newWidth = image.size.width * scale // 新しい画像の幅
     
     UIGraphicsBeginImageContext(CGSize.init(width: newWidth, height: newHeight)) // 指定された画像の大きさのコンテキストを用意
-    image.drawInRect(CGRect.init(x: 0.0, y: 0.0, width: newWidth, height: newHeight)) // コンテキストに画像を描画する
+    image.draw(in: CGRect.init(x: 0.0, y: 0.0, width: newWidth, height: newHeight)) // コンテキストに画像を描画する
     let newImage = UIGraphicsGetImageFromCurrentImageContext() // コンテキストからUIImageを作る
     UIGraphicsEndImageContext() // コンテキストを閉じる
     
-    return newImage
+    return newImage!
 }
 
 /*
  * delay秒後に行う処理
  */
-func runAfterDelay(delay: NSTimeInterval, block: dispatch_block_t) {
-    let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay*Double(NSEC_PER_SEC)))
-    dispatch_after(time, dispatch_get_main_queue(), block)
+func runAfterDelay(_ delay: TimeInterval, block: @escaping ()->()) {
+    let time = DispatchTime.now() + Double(Int64(delay*Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
+    DispatchQueue.main.asyncAfter(deadline: time, execute: block)
 }
 
 /*
  * サブビューを削除する
  * @param parentView親ビュー
  */
-func removeAllSubviews(parentView: UIView) {
+func removeAllSubviews(_ parentView: UIView) {
     let subviews = parentView.subviews
     for subview in subviews {
         subview.removeFromSuperview()
@@ -231,8 +233,8 @@ func removeAllSubviews(parentView: UIView) {
  * @param string 時間 (format通りに書く)
  * @param format "yyyy/mm/dd HH:mm"
  */
-func dateFromString(string: String, format: String) -> NSDate {
-    let formatter: NSDateFormatter = NSDateFormatter()
+func dateFromString(_ string: String, format: String) -> Date {
+    let formatter: DateFormatter = DateFormatter()
     formatter.dateFormat = format
-    return formatter.dateFromString(string)!
+    return formatter.date(from: string)!
 }

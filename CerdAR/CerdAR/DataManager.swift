@@ -50,8 +50,8 @@ let kWarn = "warn" // 種別(警告(今災害が起こっている))
 let kPhoto = "photo" // 写真
 let kMovie = "movie" // 動画
 
-let screenWidth = UIScreen.mainScreen().bounds.size.width   // 実機の画面の横の長さ
-let screenHeight = UIScreen.mainScreen().bounds.size.height // 実機の画面の縦の長さ
+let screenWidth = UIScreen.main.bounds.size.width   // 実機の画面の横の長さ
+let screenHeight = UIScreen.main.bounds.size.height // 実機の画面の縦の長さ
 
 let dWid = screenWidth * 0.8
 let dHei = screenHeight * 0.8

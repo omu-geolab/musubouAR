@@ -37,29 +37,29 @@ class detailView: UIView {
     func viewInit() {
         
         //背景色
-        backgroundColor = UIColor.whiteColor()
+        backgroundColor = UIColor.white
         
         // タイトルの挿入(画面上側)
         titlelBar.text = pinData.name
-        titlelBar.textAlignment = NSTextAlignment.Center
-        titlelBar.font = UIFont.systemFontOfSize(30)
-        titlelBar.backgroundColor = UIColor.lightGrayColor()
+        titlelBar.textAlignment = NSTextAlignment.center
+        titlelBar.font = UIFont.systemFont(ofSize: 30)
+        titlelBar.backgroundColor = UIColor.lightGray
         self.addSubview(titlelBar)
         
         // 閉じるボタンの挿入(画面左上側)
         let backButton = UIButton(frame: CGRect.init(x: 0, y: 0, width: screenWidth * 0.8 * 0.1, height: screenHeight * 0.8 * 0.1))
-        backButton.setTitle("＜ 戻る", forState: UIControlState.Normal) // 通常
-        backButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
-        backButton.setTitle("＜ 戻る", forState: UIControlState.Highlighted) // ハイライト
-        backButton.setTitleColor(UIColor.blackColor(), forState: UIControlState.Highlighted)
+        backButton.setTitle("＜ 戻る", for: UIControlState()) // 通常
+        backButton.setTitleColor(UIColor.white, for: UIControlState())
+        backButton.setTitle("＜ 戻る", for: UIControlState.highlighted) // ハイライト
+        backButton.setTitleColor(UIColor.black, for: UIControlState.highlighted)
         backButton.layer.position = CGPoint(x: dWid * 0.05, y: dHei * 0.05)
-        backButton.addTarget(self, action: #selector(detailView.onClick_back(_:)), forControlEvents:.TouchUpInside)
+        backButton.addTarget(self, action: #selector(detailView.onClick_back(_:)), for:.touchUpInside)
         
         self.addSubview(backButton)
         
         // コメントの挿入(画面右側)
         let comment = UILabel(frame: CGRect.init(x: 0, y: 0, width: dWid * 0.4 * 0.99, height: dHei * 0.6))
-        comment.font = UIFont.systemFontOfSize(20)
+        comment.font = UIFont.systemFont(ofSize: 20)
         comment.text = pinData.descript
         comment.numberOfLines = 0
         comment.sizeToFit()
@@ -74,19 +74,19 @@ class detailView: UIView {
         // 画像・動画の挿入(画面左側)
         if pinData.inforType == kInfo {
             
-            var url: NSURL!
-            var req: NSURLRequest!
+            var url: URL!
+            var req: URLRequest!
             
             if pinData.picType == kPhoto { // 画像
                 
                 let warnImageView = UIImageView(frame: CGRect.init(x: CGFloat(dWid * 0.05), y: CGFloat(dHei * 0.3), width: CGFloat(dWid * 0.45), height: CGFloat(dHei * 0.5)))
-                url = NSURL(string: pinData.photo)
-                req = NSURLRequest(URL: url!)
+                url = URL(string: pinData.photo)
+                req = URLRequest(url: url!)
                 
-                let configuration = NSURLSessionConfiguration.defaultSessionConfiguration()
-                let session = NSURLSession(configuration: configuration, delegate:nil, delegateQueue:NSOperationQueue.mainQueue())
+                let configuration = URLSessionConfiguration.default
+                let session = URLSession(configuration: configuration, delegate:nil, delegateQueue:OperationQueue.main)
                 
-                let task = session.dataTaskWithRequest(req, completionHandler: {
+                let task = session.dataTask(with: req, completionHandler: {
                     (data, response, error) -> Void in
                     let image = UIImage(data: data!)
                     warnImageView.image = image
@@ -102,8 +102,8 @@ class detailView: UIView {
                 //webview.scrollView.bounces = false
                 self.addSubview(webview)
                 
-                url = NSURL(string : pinData.movie)
-                req = NSURLRequest(URL: url!)
+                url = URL(string : pinData.movie)
+                req = URLRequest(url: url!)
                 webview.loadRequest(req)
                 
             }
@@ -138,9 +138,9 @@ class detailView: UIView {
             let label = UILabel(frame: CGRect.init(x: 0.0, y: 0.0, width: warnImage!.size.width, height: warnImage!.size.height)) //ラベルサイズ
             
             label.text = text
-            label.textColor = UIColor.blackColor() // 文字色
-            label.textAlignment = NSTextAlignment.Center // 中央揃え
-            label.font = UIFont.systemFontOfSize(100) // 初期文字サイズ
+            label.textColor = UIColor.black // 文字色
+            label.textAlignment = NSTextAlignment.center // 中央揃え
+            label.font = UIFont.systemFont(ofSize: 100) // 初期文字サイズ
             label.adjustsFontSizeToFitWidth = true // 文字の多さによってフォントサイズを調節する
             label.numberOfLines = 3 // ラベル内の行数
             
@@ -148,10 +148,10 @@ class detailView: UIView {
             
             let tagRect = CGRect.init(x: 0.0, y: 0.0, width: warnImg!.size.width, height: warnImg!.size.height) // タグ画像のサイズと位置
             UIGraphicsBeginImageContext(warnImg!.size)
-            warnImg!.drawInRect(tagRect)
+            warnImg!.draw(in: tagRect)
             
             let labelRect = CGRect.init(x: 40.0, y: 40.0, width: labelImg.size.width - 80.0, height: labelImg.size.height - 100.0) // ラベル画像のサイズと位置
-            labelImg.drawInRect(labelRect)
+            labelImg.draw(in: labelRect)
             
             // Context に描画された画像を新しく設定
             let newImage = UIGraphicsGetImageFromCurrentImageContext()
@@ -159,7 +159,7 @@ class detailView: UIView {
             // Context 終了
             UIGraphicsEndImageContext()
             
-            warnImageView.image = getResizeImage(newImage, newHeight: 500.0)
+            warnImageView.image = getResizeImage(newImage!, newHeight: 500.0)
             
             self.addSubview(warnImageView)
 
@@ -174,7 +174,7 @@ class detailView: UIView {
      * 「戻る」をタップしたとき
      * 表示されているパーツを破棄する
      */
-    func onClick_back(sender: UIButton) {
+    func onClick_back(_ sender: UIButton) {
         deleteDetailView()
     }
     
@@ -197,7 +197,7 @@ class detailView: UIView {
     static func makebackgroungView() -> UIImageView {
         let backgroundView = UIImageView(frame: CGRect.init(x: 0, y: 0, width: screenWidth, height: screenHeight))
         backgroundView.alpha = 0.5
-        backgroundView.backgroundColor = UIColor.grayColor()
+        backgroundView.backgroundColor = UIColor.gray
 
 
         return backgroundView
