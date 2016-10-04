@@ -476,7 +476,7 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     /* データを格納する */
     func storeData() {
         
-        let file_name = "sample3.json" // data.json
+        let file_name = "data.json" // data.json
         var json: JSON!
         
         
