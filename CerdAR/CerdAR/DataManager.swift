@@ -37,8 +37,8 @@ class TagData {
     
     // 災害の独自タグ
     var range: Int!           // 災害の範囲
-    var start: String!        // 災害の開始時間
-    var stop: String!         // 災害の終了時間
+    var start: Date!        // 災害の開始時間
+    var stop: Date!         // 災害の終了時間
     var message1: String!     // 警告範囲に近づいてきた時のメッセージ
     var message2: String!     // 警告範囲に侵入した時のメッセージ
     var riskType: Int!        // 災害の種類(0:火災,1:浸水,2:落橋,3:土砂崩れ)

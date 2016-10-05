@@ -30,11 +30,16 @@
 		AC2C53011D58093C0032B689 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC2C53001D58093C0032B689 /* AVFoundation.framework */; };
 		AC2C530B1D58096F0032B689 /* icon_locate.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC2C53061D58096F0032B689 /* icon_locate.jpg */; };
 		AC4BD0141D8AA0D100157828 /* icon_menu.png in Resources */ = {isa = PBXBuildFile; fileRef = AC4BD0131D8AA0D100157828 /* icon_menu.png */; };
+		AC5AED8E1DA4A181009443E9 /* hinan-bldg-marker.png in Resources */ = {isa = PBXBuildFile; fileRef = AC5AED871DA4A181009443E9 /* hinan-bldg-marker.png */; };
+		AC5AED8F1DA4A181009443E9 /* hinan-camp-marker.png in Resources */ = {isa = PBXBuildFile; fileRef = AC5AED881DA4A181009443E9 /* hinan-camp-marker.png */; };
+		AC5AED901DA4A181009443E9 /* icon_infoTag_red.png in Resources */ = {isa = PBXBuildFile; fileRef = AC5AED891DA4A181009443E9 /* icon_infoTag_red.png */; };
+		AC5AED911DA4A181009443E9 /* icon_infoTag.png in Resources */ = {isa = PBXBuildFile; fileRef = AC5AED8A1DA4A181009443E9 /* icon_infoTag.png */; };
+		AC5AED921DA4A181009443E9 /* icon_notfound.png in Resources */ = {isa = PBXBuildFile; fileRef = AC5AED8B1DA4A181009443E9 /* icon_notfound.png */; };
+		AC5AED931DA4A181009443E9 /* info-marker.png in Resources */ = {isa = PBXBuildFile; fileRef = AC5AED8C1DA4A181009443E9 /* info-marker.png */; };
+		AC5AED941DA4A181009443E9 /* medicine-marker.png in Resources */ = {isa = PBXBuildFile; fileRef = AC5AED8D1DA4A181009443E9 /* medicine-marker.png */; };
 		AC7B6A841D66A9B20086897D /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC7B6A831D66A9B20086897D /* CoreMotion.framework */; };
-		ACA1C6791D59BB0500AF8CF4 /* icon_airtag.png in Resources */ = {isa = PBXBuildFile; fileRef = ACA1C6781D59BB0500AF8CF4 /* icon_airtag.png */; };
 		ACEE245C1D8235FE00102E10 /* MakeTagImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEE245B1D8235FE00102E10 /* MakeTagImage.swift */; };
 		ACF399B71D98C25100B0EC47 /* osmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF399B61D98C25100B0EC47 /* osmViewController.swift */; };
-		ACF399BB1D98C5C400B0EC47 /* icon_airtag_red.png in Resources */ = {isa = PBXBuildFile; fileRef = ACF399BA1D98C5C400B0EC47 /* icon_airtag_red.png */; };
 		ACF399C31D98D5AA00B0EC47 /* Mapbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACF399C21D98D5AA00B0EC47 /* Mapbox.framework */; };
 		ACF399C51D98D65A00B0EC47 /* Mapbox.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = ACF399C21D98D5AA00B0EC47 /* Mapbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D3CF68DD1D91187D008B588E /* detailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CF68DB1D91187D008B588E /* detailView.swift */; };
@@ -101,11 +106,16 @@
 		AC2C53001D58093C0032B689 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		AC2C53061D58096F0032B689 /* icon_locate.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = icon_locate.jpg; path = CerdAR/icon_locate.jpg; sourceTree = "<group>"; };
 		AC4BD0131D8AA0D100157828 /* icon_menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_menu.png; path = CerdAR/icon_menu.png; sourceTree = "<group>"; };
+		AC5AED871DA4A181009443E9 /* hinan-bldg-marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "hinan-bldg-marker.png"; path = "CerdAR/hinan-bldg-marker.png"; sourceTree = "<group>"; };
+		AC5AED881DA4A181009443E9 /* hinan-camp-marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "hinan-camp-marker.png"; path = "CerdAR/hinan-camp-marker.png"; sourceTree = "<group>"; };
+		AC5AED891DA4A181009443E9 /* icon_infoTag_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_infoTag_red.png; path = CerdAR/icon_infoTag_red.png; sourceTree = "<group>"; };
+		AC5AED8A1DA4A181009443E9 /* icon_infoTag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_infoTag.png; path = CerdAR/icon_infoTag.png; sourceTree = "<group>"; };
+		AC5AED8B1DA4A181009443E9 /* icon_notfound.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_notfound.png; path = CerdAR/icon_notfound.png; sourceTree = "<group>"; };
+		AC5AED8C1DA4A181009443E9 /* info-marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "info-marker.png"; path = "CerdAR/info-marker.png"; sourceTree = "<group>"; };
+		AC5AED8D1DA4A181009443E9 /* medicine-marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "medicine-marker.png"; path = "CerdAR/medicine-marker.png"; sourceTree = "<group>"; };
 		AC7B6A831D66A9B20086897D /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
-		ACA1C6781D59BB0500AF8CF4 /* icon_airtag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_airtag.png; path = CerdAR/icon_airtag.png; sourceTree = "<group>"; };
 		ACEE245B1D8235FE00102E10 /* MakeTagImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeTagImage.swift; sourceTree = "<group>"; };
 		ACF399B61D98C25100B0EC47 /* osmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = osmViewController.swift; sourceTree = "<group>"; };
-		ACF399BA1D98C5C400B0EC47 /* icon_airtag_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_airtag_red.png; path = CerdAR/icon_airtag_red.png; sourceTree = "<group>"; };
 		ACF399C21D98D5AA00B0EC47 /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mapbox.framework; path = ../Mapbox.framework; sourceTree = "<group>"; };
 		D3CF68DB1D91187D008B588E /* detailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = detailView.swift; sourceTree = "<group>"; };
 		D3CF68DC1D91187D008B588E /* termsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = termsView.swift; sourceTree = "<group>"; };
@@ -201,7 +211,13 @@
 		AC2C53021D5809610032B689 /* Image */ = {
 			isa = PBXGroup;
 			children = (
-				ACF399BA1D98C5C400B0EC47 /* icon_airtag_red.png */,
+				AC5AED871DA4A181009443E9 /* hinan-bldg-marker.png */,
+				AC5AED881DA4A181009443E9 /* hinan-camp-marker.png */,
+				AC5AED891DA4A181009443E9 /* icon_infoTag_red.png */,
+				AC5AED8A1DA4A181009443E9 /* icon_infoTag.png */,
+				AC5AED8B1DA4A181009443E9 /* icon_notfound.png */,
+				AC5AED8C1DA4A181009443E9 /* info-marker.png */,
+				AC5AED8D1DA4A181009443E9 /* medicine-marker.png */,
 				AC4BD0131D8AA0D100157828 /* icon_menu.png */,
 				AC05B9FB1D81229D0082C52A /* icon_map.png */,
 				AC05B9ED1D811F830082C52A /* icon_camera.png */,
@@ -210,7 +226,6 @@
 				AC05B9F01D811F830082C52A /* icon_warn1.png */,
 				AC05B9F11D811F830082C52A /* icon_warn2.png */,
 				AC05B9F21D811F830082C52A /* icon_warn3.png */,
-				ACA1C6781D59BB0500AF8CF4 /* icon_airtag.png */,
 				AC2C53061D58096F0032B689 /* icon_locate.jpg */,
 			);
 			name = Image;
@@ -359,20 +374,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACA1C6791D59BB0500AF8CF4 /* icon_airtag.png in Resources */,
+				AC5AED8F1DA4A181009443E9 /* hinan-camp-marker.png in Resources */,
+				AC5AED901DA4A181009443E9 /* icon_infoTag_red.png in Resources */,
 				AC05B9F61D811F830082C52A /* icon_warn1.png in Resources */,
-				ACF399BB1D98C5C400B0EC47 /* icon_airtag_red.png in Resources */,
+				AC5AED931DA4A181009443E9 /* info-marker.png in Resources */,
+				AC5AED921DA4A181009443E9 /* icon_notfound.png in Resources */,
 				AC2C530B1D58096F0032B689 /* icon_locate.jpg in Resources */,
 				AC2C52D31D5805F70032B689 /* LaunchScreen.storyboard in Resources */,
+				AC5AED8E1DA4A181009443E9 /* hinan-bldg-marker.png in Resources */,
 				AC05B9F31D811F830082C52A /* icon_camera.png in Resources */,
 				AC05B9F41D811F830082C52A /* icon_compass.png in Resources */,
 				AC05B9FC1D81229D0082C52A /* icon_map.png in Resources */,
 				AC2C52D01D5805F70032B689 /* Assets.xcassets in Resources */,
+				AC5AED911DA4A181009443E9 /* icon_infoTag.png in Resources */,
 				AC05B9F51D811F830082C52A /* icon_warn0.png in Resources */,
 				AC2C52CB1D5805F70032B689 /* Main.storyboard in Resources */,
 				AC4BD0141D8AA0D100157828 /* icon_menu.png in Resources */,
 				AC05B9F71D811F830082C52A /* icon_warn2.png in Resources */,
 				AC05B9F81D811F830082C52A /* icon_warn3.png in Resources */,
+				AC5AED941DA4A181009443E9 /* medicine-marker.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

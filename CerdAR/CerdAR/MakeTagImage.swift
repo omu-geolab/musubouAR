@@ -64,8 +64,11 @@ func getLabelText(_ num: Int, inforType: String) -> String {
             
         case 0: riskName = "火災"
         case 1: riskName = "浸水"
-        case 2: riskName = "落橋"
-        case 3: riskName = "土砂崩れ"
+        case 2: riskName = "土砂崩れ"
+        case 3: riskName = "道路閉塞(落橋)"
+        case 4: riskName = "道路閉塞(家屋倒壊)"
+        case 5: riskName = "道路閉塞(ブロック塀倒壊)"
+        case 6: riskName = "道路閉塞(コンテナ流入)"
         default: riskName = "その他の災害"
         }
         
@@ -89,8 +92,8 @@ func makeLabel(_ num: Int, inforType: String) -> UIImage {
     
     var label: UILabel! // 情報タグの文字
     var labelImg: UIImage! // ラベル画像
-    let airtagImage = UIImage(named: "icon_airtag.png")! // 情報タグの画像
-
+    let airtagImage = UIImage(named: "icon_infoTag.png")! // 情報タグの画像
+    
     if inforType == kInfo {
         label = UILabel(frame: CGRect.init(x: 0.0, y: 0.0, width: airtagImage.size.width, height: airtagImage.size.height)) //ラベルサイズ
         
@@ -154,12 +157,12 @@ func makeTappedLabel(_ num: Int, scale: Double) -> UIImage {
  * @return 生成したタグ画像を縦幅500のサイズで返す
  */
 func getPinImage(_ img: UIImage, inforType: String) -> UIImage {
-    let airtagImage = UIImage(named: "icon_airtag.png")! // 情報タグの画像
-
+    let airtagImage = UIImage(named: "icon_infoTag.png")! // 情報タグの画像
+    
     if inforType == kInfo {
         
-        let tagRect = CGRect.init(x: 0.0, y: 0.0, width: airtagImage.size.width, height: airtagImage.size.height) // タグ画像のサイズと位置
-        UIGraphicsBeginImageContext(airtagImage.size)
+        let tagRect = CGRect.init(x: 0.0, y: 0.0, width: img.size.width, height: img.size.height) // タグ画像のサイズと位置
+        UIGraphicsBeginImageContext(img.size)
         airtagImage.draw(in: tagRect)
         
     } else if inforType == kWarn {
@@ -225,16 +228,4 @@ func removeAllSubviews(_ parentView: UIView) {
     for subview in subviews {
         subview.removeFromSuperview()
     }
-}
-
-
-/*
- * String型で書かれた時間をNSData型に変換する
- * @param string 時間 (format通りに書く)
- * @param format "yyyy/mm/dd HH:mm"
- */
-func dateFromString(_ string: String, format: String) -> Date {
-    let formatter: DateFormatter = DateFormatter()
-    formatter.dateFormat = format
-    return formatter.date(from: string)!
 }

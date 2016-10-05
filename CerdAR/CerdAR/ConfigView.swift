@@ -38,7 +38,7 @@ class ConfigView: UIView {
     
     
     func load() {
-
+        
         self.backgroundColor = UIColor.white
         
         // 「このアプリについて」ボタンの挿入(画面左上側)
@@ -58,7 +58,7 @@ class ConfigView: UIView {
         changeMapBut.layer.position = CGPoint(x: screenWidth * 0.3, y: screenHeight * 0.6)
         changeMapBut.backgroundColor = UIColor.gray
         
-
+        
         // 閉じるボタンの挿入(画面左上側)
         backBut.setTitle("＜ 閉じる", for: UIControlState()) // 通常
         backBut.setTitleColor(UIColor.white, for: UIControlState())
@@ -92,10 +92,10 @@ class ConfigView: UIView {
         aboutAppLabel.backgroundColor = UIColor.gray
         aboutAppLabel.font = UIFont.systemFont(ofSize: 20)
         aboutAppLabel.text = "このアプリについてこのアプリについてこのアプリについてこのアプリについてこのアプリについてこのアプリについてこのアプリについて" + "\n"
-                                + "このアプリについてこのアプリについてこのアプリについてこのアプリについてこのアプリについてこのアプリについて" + "\n"
-                                + "このアプリについてこのアプリについてこのアプリについてこのアプリについてこのアプリについてこのアプリについてこのアプリについて" + "\n"
-                                + "このアプリについてこのアプリについてこのアプリについて" + "\n"
-
+            + "このアプリについてこのアプリについてこのアプリについてこのアプリについてこのアプリについてこのアプリについて" + "\n"
+            + "このアプリについてこのアプリについてこのアプリについてこのアプリについてこのアプリについてこのアプリについてこのアプリについて" + "\n"
+            + "このアプリについてこのアプリについてこのアプリについて" + "\n"
+        
         aboutAppLabel.textAlignment = NSTextAlignment.center
         aboutAppLabel.numberOfLines = 0
         aboutAppLabel.sizeToFit()

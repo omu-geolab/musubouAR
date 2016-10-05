@@ -18,12 +18,6 @@ class detailView: UIView {
     //タイトル
     let titlelBar = UILabel(frame: CGRect.init(x: 0, y: 0, width: dWid, height: dHei * 0.1))
     
-    //静止画
-    let warnImageView = UIImageView(frame: CGRect.init(x: CGFloat(dWid * 0.05), y: CGFloat(dHei * 0.3), width: CGFloat(dWid * 0.45), height: CGFloat(dHei * 0.5)))
-    
-    //動画
-    let webview = UIWebView(frame: CGRect.init(x: CGFloat(dWid * 0.05), y: CGFloat(dHei * 0.3), width: CGFloat(dWid * 0.45), height: CGFloat(dHei * 0.5)))
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         viewInit()
@@ -74,43 +68,73 @@ class detailView: UIView {
         // 画像・動画の挿入(画面左側)
         if pinData.inforType == kInfo {
             
-            var url: URL!
-            var req: URLRequest!
-            
             if pinData.picType == kPhoto { // 画像
                 
-                let warnImageView = UIImageView(frame: CGRect.init(x: CGFloat(dWid * 0.05), y: CGFloat(dHei * 0.3), width: CGFloat(dWid * 0.45), height: CGFloat(dHei * 0.5)))
-                url = URL(string: pinData.photo)
-                req = URLRequest(url: url!)
+                if pinData.photo.range(of: "jpg") == nil && pinData.photo.range(of: "png") == nil {
+                    notFound()
+                    
+                } else {
+                    let url = URL(string: pinData.photo)
+                    let req = URLRequest(url: url!, cachePolicy: NSURLRequest(url: url!).cachePolicy, timeoutInterval: 3.0)
+                    
+                    let configuration = URLSessionConfiguration.default
+                    let session = URLSession(configuration: configuration, delegate:nil, delegateQueue:OperationQueue.main)
+                    
+                    let task = session.dataTask(with: req, completionHandler: {
+                        (data, response, error) -> Void in
+                        
+                        // urlが見つからない、またはタイムアウトしたとき
+                        if error != nil {
+                            self.notFound()
+                            
+                            // 成功したとき
+                        } else {
+                            let warnImageView = UIImageView(frame: CGRect.init(x: CGFloat(dWid * 0.05), y: CGFloat(dHei * 0.3), width: CGFloat(dWid * 0.45), height: CGFloat(dHei * 0.5)))
+                            let image = UIImage(data: data!)
+                            warnImageView.image = image
+                            self.addSubview(warnImageView)
+                        }
+                    })
+                    task.resume()
+                }
                 
-                let configuration = URLSessionConfiguration.default
-                let session = URLSession(configuration: configuration, delegate:nil, delegateQueue:OperationQueue.main)
-                
-                let task = session.dataTask(with: req, completionHandler: {
-                    (data, response, error) -> Void in
-                    let image = UIImage(data: data!)
-                    warnImageView.image = image
-                    self.addSubview(warnImageView)
-                })
-                task.resume()
                 
             } else if pinData.picType == kMovie { // 動画
                 
-                let webview = UIWebView(frame: CGRect.init(x: CGFloat(dWid * 0.05), y: CGFloat(dHei * 0.3), width: CGFloat(dWid * 0.45), height: CGFloat(dHei * 0.5)))
-                //webview.delegate = self
-                //webview.scalesPageToFit = true
-                //webview.scrollView.bounces = false
-                self.addSubview(webview)
-                
-                url = URL(string : pinData.movie)
-                req = URLRequest(url: url!)
-                webview.loadRequest(req)
-                
+                if pinData.movie.range(of: "http://www.youtube.com/embed/") == nil && pinData.movie.range(of: "https://www.youtube.com/embed/") == nil {
+                    notFound()
+                    
+                } else {
+                    
+                    let url = URL(string : pinData.movie)
+                    let req = URLRequest(url: url!, cachePolicy: NSURLRequest(url: url!).cachePolicy, timeoutInterval: 3.0)
+                    let configuration = URLSessionConfiguration.default
+                    let session = URLSession(configuration: configuration, delegate:nil, delegateQueue:OperationQueue.main)
+                    
+                    let task = session.dataTask(with: req, completionHandler: {
+                        (data, response, error) -> Void in
+                        
+                        // urlが見つからない、またはタイムアウトしたとき
+                        if error != nil {
+                            self.notFound()
+                            
+                            // 成功したとき
+                        } else {
+                            let webview = UIWebView(frame: CGRect.init(x: CGFloat(dWid * 0.05), y: CGFloat(dHei * 0.3), width: CGFloat(dWid * 0.45), height: CGFloat(dHei * 0.5)))
+                            webview.scalesPageToFit = true
+                            webview.scrollView.bounces = false
+                            webview.loadRequest(req)
+                            self.addSubview(webview)
+                            
+                        }
+                    })
+                    task.resume()
+                }
             }
             
         } else if pinData.inforType == kWarn { // 警告タグ
             let warnImageView = UIImageView(frame: CGRect.init(x: CGFloat(dWid * 0.8 * 0.05), y: CGFloat(dHei * 0.3), width: bounds.height * 0.5, height: bounds.height * 0.5))
-
+            
             let warnImg: UIImage!
             var text: String!
             
@@ -123,17 +147,24 @@ class detailView: UIView {
                 text = "浸水"
                 warnImg = UIImage(named: "icon_warn1.png")!
             case 2:
-                text = "落橋"
+                text = "土砂崩れ"
                 warnImg = UIImage(named: "icon_warn2.png")!
             case 3:
-                text = "土砂崩れ"
+                text = "道路閉塞(落橋)"
+                warnImg = UIImage(named: "icon_warn3.png")!
+            case 4:
+                text = "道路閉塞(家屋倒壊)"
+                warnImg = UIImage(named: "icon_warn3.png")!
+            case 5:
+                text = "道路閉塞(ブロック塀倒壊)"
+                warnImg = UIImage(named: "icon_warn3.png")!
+            case 6:
+                text = "道路閉塞(コンテナ流入)"
                 warnImg = UIImage(named: "icon_warn3.png")!
             default:
                 text = "その他の災害"
-                warnImg = UIImage(named: "icon_airtag.png")!
+                warnImg = UIImage(named: "icon_infoTag.png")!
             }
-            
-            
             
             let label = UILabel(frame: CGRect.init(x: 0.0, y: 0.0, width: warnImage!.size.width, height: warnImage!.size.height)) //ラベルサイズ
             
@@ -162,13 +193,21 @@ class detailView: UIView {
             warnImageView.image = getResizeImage(newImage!, newHeight: 500.0)
             
             self.addSubview(warnImageView)
-
             
         }
         
     }
     
-        
+    
+    
+    /*
+     * ⚠︎画像を表示する
+     */
+    func notFound() {
+        let warnImageView = UIImageView(frame: CGRect.init(x: CGFloat(dWid * 0.8 * 0.05), y: CGFloat(dHei * 0.3), width: bounds.height * 0.5, height: bounds.height * 0.5))
+        warnImageView.image = UIImage(named: "icon_notfound.png")
+        self.addSubview(warnImageView)
+    }
     
     /*
      * 「戻る」をタップしたとき
@@ -190,7 +229,7 @@ class detailView: UIView {
         delegate?.detailViewFinish()
     }
     
-
+    
     /*
      * 詳細画面の背景
      */
@@ -198,9 +237,8 @@ class detailView: UIView {
         let backgroundView = UIImageView(frame: CGRect.init(x: 0, y: 0, width: screenWidth, height: screenHeight))
         backgroundView.alpha = 0.5
         backgroundView.backgroundColor = UIColor.gray
-
-
+        
         return backgroundView
-    }   
+    }
     
 }

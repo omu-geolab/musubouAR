@@ -30,7 +30,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
     var mapView = MGLMapView()
     
     var center: CLLocationCoordinate2D! // 中心
-        
+    
     let motionManager = CMMotionManager() // 加速度センサ
     
     var locationManager: CLLocationManager! // 現在地の取得
@@ -54,7 +54,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
     var polyNum = 0
     
     var tapped = false // 情報タグをタップしたか
-
+    
     
     // 定数
     let kWarnX = 0.6 // 警告メッセージのx座標の倍率
@@ -102,11 +102,6 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         
         self.title = "map"
         
-        // 画面の中心をユーザーの現在地にし、ズームレベル15で表示する
-        runAfterDelay(0.5) {
-            self.mapView.setCenter(CLLocationCoordinate2D(latitude: self.mapView.userLocation!.coordinate.latitude, longitude: self.mapView.userLocation!.coordinate.longitude), zoomLevel: 15.0, animated: true)
-        }
-        
         /* 警告ビューの設定 */
         warningView = UIView(frame: CGRect.init(x: kZero, y: kZero, width: CGFloat(screenWidth), height: CGFloat(screenHeight)))
         view.addSubview(warningView) // viewに追加
@@ -152,7 +147,11 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
             osmWarnBox[i].coordinate = CLLocationCoordinate2D(latitude: warnBox[i].lat, longitude: warnBox[i].lon)
             mapView.addAnnotation(osmWarnBox[i])
         }
-
+        
+        // 画面の中心をユーザーの現在地にし、ズームレベル15で表示する
+        runAfterDelay(0.5) {
+            self.mapView.setCenter((self.locationManager.location?.coordinate)!, zoomLevel: 15.0, animated: true)
+        }
     }
     
     
@@ -161,7 +160,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
     /* 画面が表示される直前 */
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-
+        
         displayMode = mode.map.rawValue
         
         
@@ -233,7 +232,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
     
     
     // MARK: デリゲート-MKMapViewDelegate
-
+    
     /*
      * 地図を触った後
      * 拡大縮小に合わせて画像を張り替える
@@ -258,7 +257,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
             } else {
                 
                 if pin.inforType == kInfo {
-
+                    
                     if infoPinView[pin.pinNum] == mapView.dequeueReusableAnnotationImage(withIdentifier: pin.inforType + String(pin.pinNum)) {
                         infoPinView[pin.pinNum].image = infoBox[pin.pinNum].pinImage
                         
@@ -266,11 +265,11 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
                         
                     } else { // 再利用できるアノテーションが無い場合（初回など）は生成する
                         infoPinView[pin.pinNum] = MGLAnnotationImage(image: infoBox[pin.pinNum].pinImage, reuseIdentifier: pin.inforType + String(pin.pinNum))
-
+                        
                         return infoPinView[pin.pinNum]
                     }
                     
-                } else if dateFromString(warnBox[pin.pinNum].stop, format: "yyyy/MM/dd HH:mm").compare(Date()) == ComparisonResult.orderedDescending && Date().compare(dateFromString(warnBox[pin.pinNum].start, format: "yyyy/MM/dd HH:mm")) == ComparisonResult.orderedDescending {
+                } else if warnBox[pin.pinNum].stop.compare(Date()) == ComparisonResult.orderedDescending && Date().compare(warnBox[pin.pinNum].stop) == ComparisonResult.orderedDescending {
                     
                     if warnPinView[pin.pinNum] == mapView.dequeueReusableAnnotationImage(withIdentifier: pin.inforType + String(pin.pinNum)) {
                         warnPinView[pin.pinNum].image = warnBox[pin.pinNum].pinImage
@@ -297,7 +296,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
      * タップされた画像は赤くなり、詳細画面が表示される
      */
     func mapView(_ mapView: MGLMapView, didDeselect annotation: MGLAnnotation) {
-//        self.view.addSubview(cannotTouchView) // 画面をさわれないようにする
+        //        self.view.addSubview(cannotTouchView) // 画面をさわれないようにする
         
         viewMode = viewmode.detail.rawValue
         tapped = true
@@ -308,18 +307,17 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         } else { // タップしたタグを赤くする
             
             for i in 0 ..< infoBox.count {
-                
                 if annotation.coordinate.latitude == infoBox[i].lat && annotation.coordinate.longitude == infoBox[i].lon {
-                    
                     pinData = infoBox[i]
+                    if infoBox[i].picType != nil {
+                        self.makeRedTag(i, img: UIImage(named: "icon_infoTag_red.png")!)
+                        break
+                    }
                     
-                    self.makeRedTag(i, img: UIImage(named: "icon_airtag_red.png")!)
-                    break
                 }
             }
             
             for i in 0 ..< warnBox.count {
-                
                 if annotation.coordinate.latitude == warnBox[i].lat && annotation.coordinate.longitude == warnBox[i].lon {
                     pinData = warnBox[i]
                     break
@@ -327,15 +325,18 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
             }
         }
         
-        self.detailview = detailView(frame: CGRect(x: screenWidth * 0.1, y: screenWidth * 0.1, width: screenWidth * 0.8, height: screenHeight * 0.8))
-        self.detailview!.delegate = self
-        backgroundView = detailView.makebackgroungView()
-        backgroundView.isUserInteractionEnabled = true
-        backgroundView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(osmViewController.onClick_detailBackground(_:))))
         
-        runAfterDelay(2.0) { // タップしてから2.0秒後に遷移する
-            self.view.addSubview(backgroundView)
-            self.view.addSubview(self.detailview!)
+        if pinData.picType != nil {
+            self.detailview = detailView(frame: CGRect(x: screenWidth * 0.1, y: screenWidth * 0.1, width: screenWidth * 0.8, height: screenHeight * 0.8))
+            self.detailview!.delegate = self
+            backgroundView = detailView.makebackgroungView()
+            backgroundView.isUserInteractionEnabled = true
+            backgroundView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(osmViewController.onClick_detailBackground(_:))))
+            
+            runAfterDelay(2.0) { // タップしてから2.0秒後に遷移する
+                self.view.addSubview(backgroundView)
+                self.view.addSubview(self.detailview!)
+            }
         }
     }
     
@@ -400,9 +401,8 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
      * ユーザーの位置情報が更新されるたび
      * 目的地までの距離を計算し、新しくタグ画像を生成・貼り直しをする
      */
-    //func locationManager(_ manager: CLLocationManager, didUpdateToLocation newLocation: CLLocation, fromLocation oldLocation: CLLocation) {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-
+        
         if tapped == false {
             
             var min = 1001  // 現在地から一番近い災害までの距離
@@ -410,17 +410,17 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
             
             // 位置情報が変わるたびに、タグを作り直している
             for i in 0 ..< infoBox.count {
-                infoBox[i].distance = calcDistance(infoBox[i].lat, lon: infoBox[i].lon, uLat: (mapView.userLocation!.coordinate.latitude), uLon: (mapView.userLocation!.coordinate.longitude)) // 距離を求める
-
+                infoBox[i].distance = calcDistance(infoBox[i].lat, lon: infoBox[i].lon, uLat: (locationManager.location?.coordinate.latitude)!, uLon: (locationManager.location?.coordinate.longitude)!) // 距離を求める
+                
                 updatePin(&infoBox[i])
             }
             
             for i in 0 ..< warnBox.count {
                 
-                if dateFromString(warnBox[i].stop, format: "yyyy/MM/dd HH:mm").compare(Date()) == ComparisonResult.orderedDescending && Date().compare(dateFromString(warnBox[i].start, format: "yyyy/MM/dd HH:mm")) == ComparisonResult.orderedDescending {
+                if warnBox[i].stop.compare(Date()) == ComparisonResult.orderedDescending && Date().compare(warnBox[i].start) == ComparisonResult.orderedDescending {
                     
-                    warnBox[i].distance = calcDistance(warnBox[i].lat, lon: warnBox[i].lon, uLat: (mapView.userLocation!.coordinate.latitude), uLon: (mapView.userLocation!.coordinate.longitude)) // 距離を求める
-
+                    warnBox[i].distance = calcDistance(warnBox[i].lat, lon: warnBox[i].lon, uLat: (locationManager.location?.coordinate.latitude)!, uLon: (locationManager.location?.coordinate.longitude)!) // 距離を求める
+                    
                     updatePin(&warnBox[i])
                     
                     if min > warnBox[i].distance {
@@ -445,14 +445,14 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
     func detailViewFinish() {
         
         runAfterDelay(1.0) {
-            self.makeRedTag(pinData.pinNum, img: UIImage(named: "icon_airtag.png")!)
+            self.makeRedTag(pinData.pinNum, img: UIImage(named: "icon_infoTag.png")!)
         }
         
         detailview?.delegate = nil
         detailview?.removeFromSuperview()
-
+        
         tapped = false
-
+        
     }
     
     
@@ -548,7 +548,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
     
     /*
      * タップされたタグを赤色にする
-     * 
+     *
      * @param index タップされたタグが格納される配列のインデックス
      * @param img タグ画像
      */
@@ -594,14 +594,18 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
             // これで、画面の何%で表示すればいいかわかるので、それにscreenWidthをかけると、画面に表示する画像のサイズが決定する
             
             //newsize = CGFloat(screenWidth * (kTagNewSize / (scaleZoom.span.latitudeDelta * kMPerDeg * kMeter)))
-            //changeImage(&infoBox[i], newsize: newsize)
-            changeImage(&infoBox[i], MGLtag: osmInfoBox[i], newsize: 100)
+            if infoBox[i].picType == nil {
+                changeImage(&infoBox[i], MGLtag: osmInfoBox[i], newsize: 50)
+            } else {
+                changeImage(&infoBox[i], MGLtag: osmInfoBox[i], newsize: 100)
+            }
+            
             
         }
         
         for i in 0 ..< warnBox.count {
             
-            if dateFromString(warnBox[i].stop, format: "yyyy/MM/dd HH:mm").compare(Date()) == ComparisonResult.orderedDescending && Date().compare(dateFromString(warnBox[i].start, format: "yyyy/MM/dd HH:mm")) == ComparisonResult.orderedDescending {
+            if warnBox[i].stop.compare(Date()) == ComparisonResult.orderedDescending && Date().compare(warnBox[i].start) == ComparisonResult.orderedDescending {
                 
                 // 情報タグと同じ計算方法
                 // タグのサイズは、災害円の直径
@@ -633,8 +637,6 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         mapView.addAnnotation(MGLtag)
     }
     
-    
-    
     /**
      * ピンのタグ画像を新しいタグ画像に更新する
      * (現在地更新によって距離が変わるときに使用する)
@@ -644,12 +646,21 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
      */
     func updatePin(_ tag: inout TagData) {
         
+        // 詳細画面を表示しないアイコン
+        if tag.inforType == kInfo {
+            if tag.picType == nil {
+                tag.pinImage = UIImage(named: tag.icon)
+                tag.expandImage = UIImage(named: tag.icon)
+                return
+            }
+        }
+        
+        // 詳細画面を表示する情報・警告タグ
         let labelImg = makeLabel(tag.pinNum, inforType: tag.inforType) // UILabelをUIImageに変換する
         tag.pinImage = getPinImage(labelImg, inforType: tag.inforType)
         tag.expandImage = getPinImage(labelImg, inforType: tag.inforType)
         
     }
-    
     
     /**
      * 災害円を描く
@@ -672,17 +683,15 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         
     }
     
-    
     /*
      * 画面左下のボタンをタップしたとき
      * ARカメラ画面に遷移する
      */
     internal func onclick_AR(_ sender: UIButton) {
         self.present(cameraViewController(), animated: true, completion: nil)
-
+        
     }
     
-
     /*
      * 設定ボタンが押されたとき
      * 設定画面を表示する
@@ -693,11 +702,10 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         backgroundView = detailView.makebackgroungView()
         backgroundView.isUserInteractionEnabled = true
         backgroundView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(osmViewController.onClick_configBackground(_:))))
-
+        
         view.addSubview(backgroundView)
         view.addSubview(configview!)
     }
-    
     
     /*
      * 設定画面の「いれかえ」をタップしたとき
@@ -775,39 +783,24 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         
         for i in 0 ..< warnBox.count {
             
-            let start = dateFromString(warnBox[i].start, format: "yyyy/MM/dd HH:mm") // 災害開始時間
-            let stop = dateFromString(warnBox[i].stop, format: "yyyy/MM/dd HH:mm") // 災害終了時間
             
             // 過去の災害
-            if start.compare(nowTime) == ComparisonResult.orderedDescending {
+            if warnBox[i].start.compare(nowTime) == ComparisonResult.orderedDescending {
                 
                 //stopの時刻を過ぎたから、災害の円や文字を消す
                 self.mapView.removeAnnotation(self.polygon[i]) // 円を消す
                 self.mapView.alpha = 1.0
-                //warnBox[i].inforType = kDidWarn // inforTypeを"warn"から"didWarn"に変更
                 self.mapView.removeAnnotation(osmWarnBox[i]) // 災害のピン情報を削除
                 cameraViewController().warningView.backgroundColor = UIColor.clear // AR画面の警告モードをやめる
                 
                 
-            // 現在災害発生中
-            } else if stop.compare(nowTime) == ComparisonResult.orderedDescending && nowTime.compare(start) == ComparisonResult.orderedDescending {
+                // 現在災害発生中
+            } else if warnBox[i].stop.compare(nowTime) == ComparisonResult.orderedDescending && nowTime.compare(warnBox[i].start) == ComparisonResult.orderedDescending {
                 
-                let Sn = Date().timeIntervalSince(start) / 60 // 開始時刻(start)と現在時刻(now)の差
+                let Sn = Date().timeIntervalSince(warnBox[i].start) / 60 // 開始時刻(start)と現在時刻(now)の差
                 makeCircle(i, startNow: Sn)
                 
-//                /* 確認用 */
-//                runAfterDelay(10.0) {
-//                    //stopの時刻を過ぎたから、災害の円や文字を消す
-//                    self.mapView.removeAnnotation(self.polygon[i]) // 円を消す
-//                    self.mapView.alpha = 1.0
-//                    //warnBox[i].inforType = kDidWarn // inforTypeを"warn"から"didWarn"に変更
-//                    self.mapView.removeAnnotation(osmWarnBox[i]) // 災害のピン情報を削除
-//                    cameraViewController().warningView.backgroundColor = UIColor.clearColor() // AR画面の警告モードをやめる
-//                    
-//                }
-                
-                
-            // 今後発生する災害
+                // 今後発生する災害
             } else {
                 //warnBox[i].inforType = kWillWarn
             }

@@ -56,8 +56,8 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     var warnState = warningState.safe.rawValue // 現在ユーザーは災害からどの位置にいるか(安全・付近・侵入)
     
     var tapped = false // 情報タグをタップしたか。情報タグをタップしたときは、位置情報更新によるタグの貼り直しをしないようにする。
-
-
+    
+    
     class appleMapsAnnotation: MKPointAnnotation {
         var tagData: TagData!
     }
@@ -132,7 +132,7 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         mapView!.addSubview(nowLoc_button)
         
         nowLoc_button.addTarget(self, action: #selector(mapViewController.onClick_nowLocate(_:)), for: .touchUpInside)
-
+        
         changeMapBut.addTarget(self, action: #selector(mapViewController.onClick_changeMap(_:)), for: .touchUpInside)
         
         
@@ -154,11 +154,6 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         displayMode = mode.map.rawValue // 現在開いている画面は地図画面であると設定する
         
         
-        update() // 災害円を描く
-        // 10秒に1回update()を発火させる
-        updateTimer = Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(mapViewController.update), userInfo: nil, repeats: true)
-        
-
         // ピンに画像を設定する
         for i in 0 ..< infoBox.count {
             infoPinView.append(MKAnnotationView())
@@ -169,18 +164,23 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
             warnPinView.append(MKAnnotationView())
             
             // 災害発生中のとき
-            if dateFromString(warnBox[i].stop, format: "yyyy/MM/dd HH:mm").compare(Date()) == ComparisonResult.orderedDescending && Date().compare(dateFromString(warnBox[i].start, format: "yyyy/MM/dd HH:mm")) == ComparisonResult.orderedDescending {
-
+            if warnBox[i].stop.compare(Date()) == ComparisonResult.orderedDescending && Date().compare(warnBox[i].start) == ComparisonResult.orderedDescending {
+                
                 updatePin(appleMapsWarnBox[i])
             }
         }
         
+        update() // 災害円を描く
+        // 10秒に1回update()を発火させる
+        updateTimer = Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(mapViewController.update), userInfo: nil, repeats: true)
+        
+        
         // 現在地を中心に画面を表示する(起動してすぐにユーザーの現在地を取ることはできないため、1.5秒待つ)
         runAfterDelay(1.5) {
-            let coordinateRegion = MKCoordinateRegionMakeWithDistance(self.mapView!.userLocation.coordinate, 800, 800)
+            let coordinateRegion = MKCoordinateRegionMakeWithDistance((self.locationManager.location?.coordinate)!, 800, 800)
             self.mapView!.setRegion(coordinateRegion, animated:true)
         }
-
+        
     }
     
     
@@ -202,18 +202,26 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         mapView!.delegate = nil
         locationManager.delegate = nil
     }
-
-
+    
+    
     // MARK: デリゲート-MKMapViewDelegate
-
+    
     /*
      * 地図を触った後
      * 拡大縮小に合わせて画像を張り替える
      */
     func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
         scalingImage()
+        
+        //        let scaleZoom = Int(mapView.region.span.latitudeDelta * 100000000000)
+        //        var move = Double(scaleZoom) / 100000000000
+        //        move = 50 * move / Double(screenHeight) // 50 = 情報タグのサイズの半分
+        //
+        //        for i in 0 ..< infoBox.count {
+        //            appleMapsInfoBox[i].coordinate = CLLocationCoordinate2DMake(appleMapsInfoBox[i].tagData.lat + move, appleMapsInfoBox[i].tagData.lon)
+        //        }
+        
     }
-    
     
     /*
      * addAnnotationされたとき
@@ -232,26 +240,26 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
                     // 情報タグのとき
                     if pin.tagData.inforType == kInfo {
                         infoPinView[pin.tagData.pinNum].image = pin.tagData.pinImage // ピンの画像設定
-                    
-                    // 警告タグのとき(災害発生中)
-                    } else if dateFromString(pin.tagData.stop, format: "yyyy/MM/dd HH:mm").compare(Date()) == ComparisonResult.orderedDescending && Date().compare(dateFromString(pin.tagData.start, format: "yyyy/MM/dd HH:mm")) == ComparisonResult.orderedDescending {
+                        
+                        // 警告タグのとき(災害発生中)
+                    } else if pin.tagData.stop.compare(Date()) == ComparisonResult.orderedDescending && Date().compare(pin.tagData.start) == ComparisonResult.orderedDescending {
                         warnPinView[pin.tagData.pinNum].image = pin.tagData.pinImage // ピンの画像設定
                         
                     }
                     return annotationView
                     
                 } else { // 再利用できるアノテーションが無い場合（初回など）は生成する
-
+                    
                     if pin.tagData.pinImage != nil {
                         
                         let pN = pin.tagData.pinNum //ピン番号をつける
-
+                        
                         if pin.tagData.inforType == kInfo {
                             infoPinView[pN!] = MKAnnotationView(annotation: annotation, reuseIdentifier: pin.tagData.inforType + String(pin.tagData.pinNum))
                             return getPinView(annotation, pinView: infoPinView[pN!], pinImage: pin.tagData.pinImage)
                             
-                        // 警告タグのとき(災害発生中)
-                        } else if dateFromString(pin.tagData.stop, format: "yyyy/MM/dd HH:mm").compare(Date()) == ComparisonResult.orderedDescending && Date().compare(dateFromString(pin.tagData.start, format: "yyyy/MM/dd HH:mm")) == ComparisonResult.orderedDescending {
+                            // 警告タグのとき(災害発生中)
+                        } else if pin.tagData.stop.compare(Date()) == ComparisonResult.orderedDescending && Date().compare(pin.tagData.start) == ComparisonResult.orderedDescending {
                             warnPinView[pN!] = MKAnnotationView(annotation: annotation, reuseIdentifier: pin.tagData.inforType + String(pin.tagData.pinNum))
                             return getPinView(annotation, pinView: warnPinView[pN!], pinImage: pin.tagData.pinImage)
                         }
@@ -265,16 +273,14 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         // ユーザーロケーションのとき
         return nil
     }
-
-
-
+    
+    
+    
     /*
      * タグ画像がタップされたとき、
      * タップされた画像は拡大され、詳細画面が表示される
      */
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
-        
-        self.view.addSubview(cannotTouchView)
         
         if mapView.userLocation.coordinate.latitude == view.annotation!.coordinate.latitude && mapView.userLocation.coordinate.latitude == view.annotation!.coordinate.latitude {
             
@@ -283,13 +289,17 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
             for i in 0 ..< infoBox.count {
                 if view.annotation!.coordinate.latitude == infoBox[i].lat && view.annotation!.coordinate.longitude == infoBox[i].lon {
                     pinData = infoBox[i]
-                    // 0.3秒でズームインする
-                    UIView.animate(withDuration: 0.3, delay: 0.0, options: .curveEaseOut, animations: {
-                        
-                        // 拡大用(3.0倍)のアフィン行列を生成する.
-                        view.transform = CGAffineTransform(scaleX: 3.0, y: 3.0)
-                        
-                        }, completion: nil)
+                    if infoBox[i].picType != nil {
+                        self.view.addSubview(cannotTouchView)
+                        tapped = true
+                        // 0.3秒でズームインする
+                        UIView.animate(withDuration: 0.3, delay: 0.0, options: .curveEaseOut, animations: {
+                            
+                            // 拡大用(3.0倍)のアフィン行列を生成する.
+                            view.transform = CGAffineTransform(scaleX: 3.0, y: 3.0)
+                            
+                            }, completion: nil)
+                    }
                     break
                 }
             }
@@ -297,32 +307,32 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
             for i in 0 ..< warnBox.count {
                 if view.annotation!.coordinate.latitude == warnBox[i].lat && view.annotation!.coordinate.longitude == warnBox[i].lon {
                     pinData = warnBox[i]
-                    
                     tapped = true
-                    
+                    self.view.addSubview(cannotTouchView)
                     let scaleZoom = mapView.region.span.latitudeDelta
                     let tmpAnnotation: appleMapsAnnotation = appleMapsWarnBox[i] // 一旦他の場所にデータを保持させる
                     mapView.removeAnnotation(appleMapsWarnBox[i]) // 古い災害ピンを削除
                     appleMapsWarnBox[i] = tmpAnnotation
                     appleMapsWarnBox[i].tagData.pinImage = makeTappedLabel(i, scale: scaleZoom)
-                    
                     mapView.addAnnotation(appleMapsWarnBox[i])
                     break
                 }
             }
             
-            pinViewData = view // タップしたピンのデータを保持する
-
-            // 詳細画面の表示
-            runAfterDelay(0.4) { // タップしてから0.4秒後に遷移する
-                self.detailview = detailView(frame: CGRect(x: screenWidth * 0.1, y: screenWidth * 0.1, width: screenWidth * 0.8, height: screenHeight * 0.8))
-                self.detailview!.delegate = self
-                backgroundView = detailView.makebackgroungView()
-                backgroundView.isUserInteractionEnabled = true
-                backgroundView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(mapViewController.onClick_detailBackground(_:))))
+            if pinData.picType != nil {
+                pinViewData = view // タップしたピンのデータを保持する
                 
-                self.view.addSubview(backgroundView)
-                self.view.addSubview(self.detailview!)
+                // 詳細画面の表示
+                runAfterDelay(0.4) { // タップしてから0.4秒後に遷移する
+                    self.detailview = detailView(frame: CGRect(x: screenWidth * 0.1, y: screenWidth * 0.1, width: screenWidth * 0.8, height: screenHeight * 0.8))
+                    self.detailview!.delegate = self
+                    backgroundView = detailView.makebackgroungView()
+                    backgroundView.isUserInteractionEnabled = true
+                    backgroundView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(mapViewController.onClick_detailBackground(_:))))
+                    
+                    self.view.addSubview(backgroundView)
+                    self.view.addSubview(self.detailview!)
+                }
             }
         }
     }
@@ -338,26 +348,25 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         
         for i in 0 ..< warnBox.count {
             // addOverLayされた円の緯度経度と、annotationBoxで登録されている緯度経度で同じものを探す
-            //if warnBox[i].inforType == kWarn {
-            if dateFromString(warnBox[i].stop, format: "yyyy/MM/dd HH:mm").compare(Date()) == ComparisonResult.orderedDescending && Date().compare(dateFromString(warnBox[i].start, format: "yyyy/MM/dd HH:mm")) == ComparisonResult.orderedDescending {
+            if warnBox[i].stop.compare(Date()) == ComparisonResult.orderedDescending && Date().compare(warnBox[i].start) == ComparisonResult.orderedDescending {
                 if warnBox[i].lat == circle.circle.coordinate.latitude && warnBox[i].lon == circle.circle.coordinate.longitude {
                     
                     // 災害カラーを設定する
                     switch warnBox[i].riskType {
                         
-                    case 0: // 火災のとき：赤色
+                    case 0: // 火災：赤色
                         color = UIColor(red: 0.545, green: 0.020, blue: 0.220, alpha: 1.0)
                         
-                    case 1: // 浸水のとき：青色
+                    case 1: // 浸水：青色
                         color = UIColor(red: 0.000, green: 0.400, blue: 1.000, alpha: 1.0)
                         
-                    case 2: // 落橋のとき：黄色
-                        color = UIColor(red: 1.000, green: 0.945, blue: 0.024, alpha: 1.0)
-                        
-                    case 3: // 土砂崩れのとき：茶色
+                    case 2: // 土砂崩れ：茶色
                         color = UIColor(red: 0.800, green: 0.400, blue: 0.000, alpha: 1.0)
                         
-                    default: // その他の災害のとき：緑色
+                    case 3, 4, 5, 6: // 道路閉塞：黄色
+                        color = UIColor(red: 1.000, green: 0.945, blue: 0.024, alpha: 1.0)
+                        
+                    default: // その他の災害：緑色
                         color = UIColor(red: 0.200, green: 1.000, blue: 0.384, alpha: 1.0)
                         break
                     }
@@ -407,9 +416,8 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
      * ユーザーの位置情報が更新されるたび
      * 目的地までの距離を計算し、新しくタグ画像を生成・貼り直しをする
      */
-    //func locationManager(_ manager: CLLocationManager, didUpdateToLocation newLocation: CLLocation, fromLocation oldLocation: CLLocation) {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-
+        
         
         if tapped == false {
             
@@ -418,16 +426,15 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
             
             // 位置情報が変わるたびに、タグを作り直している
             for i in 0 ..< infoBox.count {
-                infoBox[i].distance = calcDistance(infoBox[i].lat, lon: infoBox[i].lon, uLat: (mapView?.userLocation.coordinate.latitude)!, uLon: (mapView?.userLocation.coordinate.longitude)!) // 距離を求める
+                infoBox[i].distance = calcDistance(infoBox[i].lat, lon: infoBox[i].lon, uLat: (locationManager.location?.coordinate.latitude)!, uLon: (locationManager.location?.coordinate.longitude)!) // 距離を求める
                 updatePin(appleMapsInfoBox[i])
             }
             
             for i in 0 ..< warnBox.count {
                 
-                //if warnBox[i].inforType == kWarn {
-                if dateFromString(warnBox[i].stop, format: "yyyy/MM/dd HH:mm").compare(Date()) == ComparisonResult.orderedDescending && Date().compare(dateFromString(warnBox[i].start, format: "yyyy/MM/dd HH:mm")) == ComparisonResult.orderedDescending {
+                if warnBox[i].stop.compare(Date()) == ComparisonResult.orderedDescending && Date().compare(warnBox[i].start) == ComparisonResult.orderedDescending {
                     
-                    warnBox[i].distance = calcDistance(warnBox[i].lat, lon: warnBox[i].lon, uLat: (mapView?.userLocation.coordinate.latitude)!, uLon: (mapView?.userLocation.coordinate.longitude)!) // 距離を求める
+                    warnBox[i].distance = calcDistance(warnBox[i].lat, lon: warnBox[i].lon, uLat: (locationManager.location?.coordinate.latitude)!, uLon: (locationManager.location?.coordinate.longitude)!) // 距離を求める
                     updatePin(appleMapsWarnBox[i])
                     
                     if min > warnBox[i].distance {
@@ -452,7 +459,7 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         transFromDetailToMap(pinViewData)
         detailview?.delegate = nil
         detailview?.removeFromSuperview()
-
+        
     }
     
     // MARK: detailViewDelegate
@@ -476,7 +483,7 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     /* データを格納する */
     func storeData() {
         
-        let file_name = "data.json" // data.json
+        let file_name = "data.json"
         var json: JSON!
         
         
@@ -491,33 +498,99 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
                 return
             }
             
+            let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+            print(documentsPath)
+            
+            
             let jsonData = try? Data(contentsOf: URL(fileURLWithPath: path_file_name))
+            
             json = JSON(data:jsonData!)
             
         }
         
+        // jsonの構造の記述ミス・jsonファイルが空のとき
+        // 地図・ARカメラは使用できるがタグは表示されない
+        if json == nil {
+            return
+        }
+        
         var iN = 0 // 情報タグの番号
         var wN = 0 // 警告タグの番号
-        
         for i in 0 ..< json["features"].count {
             // 情報タグ
-            if json["features"][i]["properties"]["infor_type"].string == kInfo {
+            if json["features"][i]["properties"]["info_type"].string == kInfo {
+                
                 infoBox.append(TagData())
                 infoBox[iN].pinNum = iN //ピン番号
-                infoBox[iN].id = json["features"][i]["properties"]["id"].string // id
-                infoBox[iN].name = json["features"][i]["properties"]["Name"].string // タグの名前(施設名？)
-                infoBox[iN].inforType = json["features"][i]["properties"]["infor_type"].string // タグの種類
-                infoBox[iN].icon = json["features"][i]["properties"]["icon"].string // タグ画像
-                infoBox[iN].descript = json["features"][i]["properties"]["description"].string // 内容の解説文
-                infoBox[iN].lon = json["features"][i]["geometry"]["coordinates"][0].double // 経度
-                infoBox[iN].lat = json["features"][i]["geometry"]["coordinates"][1].double // 緯度
-                infoBox[iN].picType = json["features"][i]["properties"]["pic_type"].string // 写真か動画か
                 
-                if infoBox[iN].picType == kPhoto {
-                    infoBox[iN].photo = json["features"][i]["properties"]["photo"].string // 写真のURL
-                } else if infoBox[iN].picType == kMovie {
-                    infoBox[iN].movie = json["features"][i]["properties"]["movie"].string // 動画のURL
+                
+                if let id = json["features"][i]["properties"]["id"].string { // ID
+                    infoBox[iN].id = id
+                } else {
+                    infoBox.removeLast()
+                    continue
                 }
+                
+                if let name = json["features"][i]["properties"]["Name"].string { // 目的地の名前
+                    infoBox[iN].name = name
+                } else {
+                    infoBox.removeLast()
+                    continue
+                }
+                
+                if let iType = json["features"][i]["properties"]["info_type"].string { // タグの種類
+                    infoBox[iN].inforType = iType
+                } else {
+                    infoBox.removeLast()
+                    continue
+                }
+                
+                if let icon = json["features"][i]["properties"]["icon"].string, let _ = UIImage(named: icon) { // タグの画像
+                    infoBox[iN].icon = icon
+                } else {
+                    infoBox.removeLast()
+                    continue
+                }
+                
+                if let descript = json["features"][i]["properties"]["description"].string { // 解説文
+                    infoBox[iN].descript = descript
+                } else {
+                    if json["features"][i]["geometry"]["coordinates"][2].double != 0 { // 標高
+                        infoBox.removeLast()
+                        continue
+                    }
+                }
+                
+                if let lon = json["features"][i]["geometry"]["coordinates"][0].double { // 緯度
+                    infoBox[iN].lon = lon
+                } else {
+                    infoBox.removeLast()
+                    continue
+                }
+                
+                if let lat = json["features"][i]["geometry"]["coordinates"][1].double { // 経度
+                    infoBox[iN].lat = lat
+                } else {
+                    infoBox.removeLast()
+                    continue
+                }
+                
+                if let pType = json["features"][i]["properties"]["pic_type"].string { // 写真か動画か
+                    infoBox[iN].picType = pType
+                    if infoBox[iN].picType == kPhoto {
+                        infoBox[iN].photo = json["features"][i]["properties"]["photo"].string // 写真のURL
+                    } else if infoBox[iN].picType == kMovie {
+                        infoBox[iN].movie = json["features"][i]["properties"]["movie"].string // 動画のURL
+                    }
+                    
+                } else {
+                    
+                    if json["features"][i]["properties"]["photo"].string != nil || json["features"][i]["properties"]["movie"].string != nil {
+                        infoBox.removeLast()
+                        continue
+                    }
+                }
+                
                 
                 appleMapsInfoBox.append(appleMapsAnnotation())
                 appleMapsInfoBox[iN].tagData = infoBox[iN]
@@ -526,14 +599,14 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
                 
                 // OSM用
                 osmInfoBox.append(MGLTagData())
-                osmInfoBox[iN].inforType = json["features"][i]["properties"]["infor_type"].string // タグの種類
+                osmInfoBox[iN].inforType = json["features"][i]["properties"]["info_type"].string // タグの種類
                 osmInfoBox[iN].pinNum = iN //ピン番号
                 
                 
                 iN += 1
                 
                 // 警告タグ
-            } else if json["features"][i]["properties"]["infor_type"].string == kWarn {
+            } else if json["features"][i]["properties"]["info_type"].string == kWarn {
                 
                 circle.append(MKCircle())
                 circleRadius.append(0.0)
@@ -541,18 +614,108 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
                 warnBox.append(TagData())
                 warnBox[wN].pinNum = wN //ピン番号
                 warnBox[wN].id = json["features"][i]["properties"]["id"].string // id
-                warnBox[wN].name = json["features"][i]["properties"]["Name"].string // タグの名前(施設名？)
-                warnBox[wN].inforType = json["features"][i]["properties"]["infor_type"].string // タグの種類
-                warnBox[wN].icon = json["features"][i]["properties"]["icon"].string // タグ画像
-                warnBox[wN].descript = json["features"][i]["properties"]["description"].string // 内容の解説文
-                warnBox[wN].lon = json["features"][i]["geometry"]["coordinates"][0].double // 経度
-                warnBox[wN].lat = json["features"][i]["geometry"]["coordinates"][1].double // 緯度
-                warnBox[wN].range = json["features"][i]["properties"]["range"].int // 災害範囲
-                warnBox[wN].start = json["features"][i]["properties"]["start"].string // 災害開始時刻
-                warnBox[wN].stop = json["features"][i]["properties"]["stop"].string // 災害終了時刻
-                warnBox[wN].message1 = json["features"][i]["properties"]["message1"].string // 警告範囲に近づいた時のメッセージ
-                warnBox[wN].message2 = json["features"][i]["properties"]["message2"].string // 警告範囲に侵入した時のメッセージ
-                warnBox[wN].riskType = json["features"][i]["properties"]["risk_type"].int // 災害の種類
+                
+                
+                if let id = json["features"][i]["properties"]["id"].string { // 目的地の名前
+                    warnBox[wN].id = id
+                } else {
+                    warnBox.removeLast()
+                    continue
+                }
+                
+                
+                if let name = json["features"][i]["properties"]["Name"].string { // 目的地の名前
+                    warnBox[wN].name = name
+                } else {
+                    warnBox.removeLast()
+                    continue
+                }
+                
+                if let iType = json["features"][i]["properties"]["info_type"].string { // タグの種類
+                    warnBox[wN].inforType = iType
+                } else {
+                    warnBox.removeLast()
+                    continue
+                }
+                
+                if let icon = json["features"][i]["properties"]["icon"].string { // タグの画像
+                    warnBox[wN].icon = icon
+                } else {
+                    warnBox.removeLast()
+                    continue
+                }
+                
+                if let descript = json["features"][i]["properties"]["description"].string { // 解説文
+                    warnBox[wN].descript = descript
+                } else {
+                    warnBox.removeLast()
+                    continue
+                }
+                
+                if let lon = json["features"][i]["geometry"]["coordinates"][0].double { // 緯度
+                    warnBox[wN].lon = lon
+                } else {
+                    warnBox.removeLast()
+                    continue
+                }
+                
+                if let lat = json["features"][i]["geometry"]["coordinates"][1].double { // 経度
+                    warnBox[wN].lat = lat
+                } else {
+                    warnBox.removeLast()
+                    continue
+                }
+                
+                if let range = json["features"][i]["properties"]["range"].int { // 災害範囲
+                    warnBox[wN].range = range
+                } else {
+                    warnBox.removeLast()
+                    continue
+                }
+                
+                
+                if let start: Date = dateFromString(json["features"][i]["properties"]["start"].string!, format: "yyyy/MM/dd HH:mm") { // 災害開始時刻
+                    warnBox[wN].start = start
+                } else {
+                    warnBox.removeLast()
+                    continue
+                }
+                
+                if let stop: Date = dateFromString(json["features"][i]["properties"]["stop"].string!, format: "yyyy/MM/dd HH:mm") { // 災害開始時刻
+                    warnBox[wN].stop = stop
+                } else {
+                    warnBox.removeLast()
+                    continue
+                }
+                
+                //                if let stop = json["features"][i]["properties"]["stop"].string { // 災害終了時刻
+                //                    warnBox[wN].stop = stop
+                //                } else {
+                //                    warnBox.removeLast()
+                //                    continue
+                //                }
+                
+                if let message1 = json["features"][i]["properties"]["message1"].string { // 警告範囲に近づいた時のメッセージ
+                    warnBox[wN].message1 = message1
+                } else {
+                    warnBox.removeLast()
+                    continue
+                }
+                
+                if let message2 = json["features"][i]["properties"]["message2"].string { // 警告範囲に侵入した時のメッセージ
+                    warnBox[wN].message2 = message2
+                } else {
+                    warnBox.removeLast()
+                    continue
+                }
+                
+                
+                if let rType = json["features"][i]["properties"]["risk_type"].int { // 災害の種類
+                    warnBox[wN].riskType = rType
+                } else {
+                    warnBox.removeLast()
+                    continue
+                }
                 
                 appleMapsWarnBox.append(appleMapsAnnotation())
                 appleMapsWarnBox[wN].tagData = warnBox[wN]
@@ -561,16 +724,39 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
                 
                 // OSM用
                 osmWarnBox.append(MGLTagData())
-                osmWarnBox[wN].inforType = json["features"][i]["properties"]["infor_type"].string // タグの種類
+                osmWarnBox[wN].inforType = json["features"][i]["properties"]["info_type"].string // タグの種類
                 osmWarnBox[wN].pinNum = wN //ピン番号
-
+                
                 wN += 1
                 
             } else {
-                print("infor_typeの設定を間違えています") /****後でこのときの対策を考える****/
+                print("info_typeの設定を間違えています") /****後でこのときの対策を考える****/
             }
         }
     }
+    
+    
+    /*
+     * String型で書かれた時間をNSData型に変換する
+     * @param string 時間 (format通りに書く)
+     * @param format "yyyy/mm/dd HH:mm"
+     */
+    func dateFromString(_ string: String, format: String) -> Date {
+        let formatter: DateFormatter = DateFormatter()
+        formatter.dateFormat = format
+        
+        if let warnDate: Date = formatter.date(from: string) { // 災害時間を正しいフォーマットで書いているとき
+            return warnDate
+            
+        } else { // // 災害時間を誤ったフォーマットで書いているとき
+            return formatter.date(from: "2100/01/01 00:00")!
+            
+        }
+        
+        //return formatter.date(from: string)!
+    }
+    
+    
     
     /**
      * 災害範囲に近づいたり侵入したりすると、
@@ -591,19 +777,19 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
             if warnState != warningState.inst.rawValue {
                 switch riskType {
                     
-                case 0: // 火災のとき：赤色
+                case 0: // 火災：赤色
                     warningView.backgroundColor = UIColor(red: 1.000, green: 0.000, blue: 0.000, alpha: 0.7)
                     
-                case 1: // 浸水のとき：青色
+                case 1: // 浸水：青色
                     warningView.backgroundColor = UIColor(red: 0.000, green: 0.400, blue: 1.000, alpha: 0.7)
                     
-                case 2: // 落橋のとき：黄色
-                    warningView.backgroundColor = UIColor(red: 1.000, green: 0.945, blue: 0.024, alpha: 0.7)
-                    
-                case 3: // 土砂崩れのとき：茶色
+                case 2: // 土砂崩れ：茶色
                     warningView.backgroundColor = UIColor(red: 0.800, green: 0.400, blue: 0.000, alpha: 0.5)
                     
-                default: // その他の災害のとき：緑色
+                case 3, 4, 5, 6: // 道路閉塞：黄色
+                    warningView.backgroundColor = UIColor(red: 1.000, green: 0.945, blue: 0.024, alpha: 0.7)
+                    
+                default: // その他の災害：緑色
                     warningView.backgroundColor = UIColor(red: 0.200, green: 1.000, blue: 0.384, alpha: 0.7)
                     break
                 }
@@ -669,12 +855,20 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
             // これで、画面の何%で表示すればいいかわかるので、それにscreenWidthをかけると、画面に表示する画像のサイズが決定する
             
             //newsize = screenWidth * CGFloat(100.0 / (scaleZoom.span.latitudeDelta * 111.0 * 1000.0))
-            changeImage(&appleMapsInfoBox[i], newsize: 100)
+            
+            if infoBox[i].picType == nil { // 施設タグのとき
+                changeImage(&appleMapsInfoBox[i], newsize: 50)
+                
+            } else { // 情報タグのとき
+                changeImage(&appleMapsInfoBox[i], newsize: 100)
+            }
+            
+            
         }
         
         for i in 0 ..< warnBox.count {
             
-            if dateFromString(warnBox[i].stop, format: "yyyy/MM/dd HH:mm").compare(Date()) == ComparisonResult.orderedDescending && Date().compare(dateFromString(warnBox[i].start, format: "yyyy/MM/dd HH:mm")) == ComparisonResult.orderedDescending {
+            if warnBox[i].stop.compare(Date()) == ComparisonResult.orderedDescending && Date().compare(warnBox[i].start) == ComparisonResult.orderedDescending {
                 
                 // 情報タグと同じ計算方法
                 // タグのサイズは、災害円の直径
@@ -703,7 +897,7 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         mapView!.addAnnotation(annotation)
     }
     
-
+    
     /**
      * ピンビューの設定
      *
@@ -731,6 +925,19 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
      */
     func updatePin(_ annotation: appleMapsAnnotation) {
         
+        // 詳細画面を表示しないアイコン
+        if annotation.tagData.inforType == kInfo {
+            if annotation.tagData.picType == nil {
+                
+                annotation.tagData.pinImage = UIImage(named: annotation.tagData.icon)
+                annotation.tagData.expandImage = UIImage(named: annotation.tagData.icon)
+                
+                self.mapView!.addAnnotation(annotation) // ピン情報の更新
+                return
+            }
+        }
+        
+        // 詳細画面を表示する情報・警告タグ
         let labelImg = makeLabel(annotation.tagData.pinNum, inforType: annotation.tagData.inforType) // UILabelをUIImageに変換する
         annotation.tagData.pinImage = getPinImage(labelImg, inforType: annotation.tagData.inforType)
         annotation.tagData.expandImage = getPinImage(labelImg, inforType: annotation.tagData.inforType)
@@ -760,7 +967,7 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         self.mapView!.add(circle[index], level: MKOverlayLevel.aboveRoads)
         
     }
-
+    
     /*
      * 詳細画面を閉じたとき
      * タップして拡大されていたタグを元の大きさに戻す
@@ -790,7 +997,6 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
             
         }
         
-
         runAfterDelay(1.0) {
             cannotTouchView.removeFromSuperview()
             self.tapped = false
@@ -819,13 +1025,12 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         }
     }
     
-
+    
     /*
      * 画面左下のボタンをタップしたとき
      * ARカメラ画面に遷移する
      */
     func onClick_AR(_ sender: UIButton) {
-        //self.navigationController?.pushViewController(cameraViewController(), animated: true)
         self.present(cameraViewController(), animated: true, completion: nil)
     }
     
@@ -852,7 +1057,7 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         configview?.removeFromSuperview()
         ConfigView().deleteConfigDisplay()
     }
-
+    
     /*
      * 詳細画面の背景をタップしたとき
      * 表示されているものが廃棄される
@@ -862,7 +1067,7 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         detailview?.removeFromSuperview()
         detailView().deleteDetailView()
     }
-
+    
     
     /*
      * 設定画面の「いれかえ」をタップしたとき
@@ -895,11 +1100,8 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         
         for i in 0 ..< warnBox.count {
             
-            let start = dateFromString(warnBox[i].start, format: "yyyy/MM/dd HH:mm") // 災害開始時間
-            let stop = dateFromString(warnBox[i].stop, format: "yyyy/MM/dd HH:mm") // 災害終了時間
-            
             // 過去の災害
-            if start.compare(nowTime) == ComparisonResult.orderedDescending {
+            if warnBox[i].start.compare(nowTime) == ComparisonResult.orderedDescending {
                 
                 // stopの時刻を過ぎたから、災害の円や文字を消す
                 self.mapView!.remove(circle[i]) // 円を消す
@@ -910,12 +1112,12 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
                     warnImageBox[i].removeFromSuperview()
                 }
                 
-            // 現在災害発生中
-            } else if stop.compare(nowTime) == ComparisonResult.orderedDescending && nowTime.compare(start) == ComparisonResult.orderedDescending {
-                let Sn = Date().timeIntervalSince(start) / 60 // 開始時刻(start)と現在時刻(now)の差
+                // 現在災害発生中
+            } else if warnBox[i].stop.compare(nowTime) == ComparisonResult.orderedDescending && nowTime.compare(warnBox[i].start) == ComparisonResult.orderedDescending {
+                let Sn = Date().timeIntervalSince(warnBox[i].start) / 60 // 開始時刻(start)と現在時刻(now)の差
                 makeCircle(i, startNow: Sn)
                 
-            // 今後発生する災害
+                // 今後発生する災害
             } else {
                 
             }
