@@ -65,10 +65,16 @@ var osmWarnBox = [MGLTagData]() // OSM情報タグ用
 var infoImageBox: [UIImageView] = [] // 画面上での情報タグ画像の表示を管理する
 var warnImageBox: [UIImageView] = [] // 画面上での警告タグ画像の表示を管理する
 
+var userLat: CLLocationDegrees = 0   // 緯度
+var userLon: CLLocationDegrees = 0 // 経度
+
+
+
 /* 現在開いているページは地図画面か、ARカメラ画面か */
 enum mode: Int {
-    case map = 0
-    case cam = 1
+    case applemap = 0
+    case osm = 1
+    case cam = 2
 }
 
 // 現在の画面が、地図かカメラかを保持する変数
@@ -100,6 +106,6 @@ var pinData: TagData! // タップされたタグの情報を保持
 var backgroundView = UIImageView(frame: CGRect.init(x: 0, y: 0, width: screenWidth, height: screenHeight)) // 詳細画面の後ろのビュー
 
 let backBut = UIButton(frame: CGRect.init(x: 0, y: 0, width: screenWidth * 0.8 * 0.1, height: screenHeight * 0.8 * 0.1))
-let changeMapBut = UIButton(frame: CGRect.init(x: 0, y: 0, width: screenWidth * 0.8 * 0.5, height: screenHeight * 0.8 * 0.2))
+let changeMapBut = UIButton(frame: CGRect.init(x: 0, y: 0, width: screenWidth / 4, height: screenHeight / 8))
 
 let cannotTouchView = UIView(frame: CGRect.init(x: 0.0, y: 0.0, width: CGFloat(screenWidth), height: CGFloat(screenHeight))) // 画面に触れられないようにするためのビュー

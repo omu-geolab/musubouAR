@@ -15,13 +15,13 @@ class termsView: UIView {
     weak var delegate: termsViewDelegate?
     
     /*
-    // Only override drawRect: if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func drawRect(rect: CGRect) {
-        // Drawing code
-    }
-    */
-
+     // Only override drawRect: if you perform custom drawing.
+     // An empty implementation adversely affects performance during animation.
+     override func drawRect(rect: CGRect) {
+     // Drawing code
+     }
+     */
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         viewInit()
@@ -31,7 +31,7 @@ class termsView: UIView {
         super.init(coder: aDecoder)
         viewInit()
     }
-
+    
     func viewInit() {
         // OKボタンの生成
         let okButton = UIButton(frame: CGRect(x: 0, y: 0, width: bounds.width * 0.8 * 0.45, height: bounds.height * 0.8 * 0.15))

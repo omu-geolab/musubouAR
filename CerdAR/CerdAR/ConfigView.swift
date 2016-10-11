@@ -15,9 +15,7 @@ import UIKit
 class ConfigView: UIView {
     
     weak var delegate: ConfigViewDelegate?
-    let aboutAppBut = UIButton(frame: CGRect.init(x: 0, y: 0, width: screenWidth * 0.8 * 0.5, height: screenHeight * 0.8 * 0.2))
-    let backBut = UIButton(frame: CGRect.init(x: 0, y: 0, width: screenWidth * 0.8 * 0.1, height: screenHeight * 0.8 * 0.1))
-    
+    let aboutAppBut = UIButton(frame: CGRect.init(x: 0, y: 0, width: screenWidth / 4, height: screenHeight / 8))
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -31,7 +29,6 @@ class ConfigView: UIView {
     
     func setup() {
         self.addSubview(changeMapBut)
-        self.addSubview(backBut)
         self.addSubview(aboutAppBut)
         load()
     }
@@ -46,27 +43,24 @@ class ConfigView: UIView {
         aboutAppBut.setTitleColor(UIColor.white, for: UIControlState())
         aboutAppBut.setTitle("このアプリについて", for: UIControlState.highlighted) // ハイライト
         aboutAppBut.setTitleColor(UIColor.black, for: UIControlState.highlighted)
-        aboutAppBut.layer.position = CGPoint(x: screenWidth * 0.3, y: screenHeight * 0.3)
+        aboutAppBut.layer.position = CGPoint(x: screenWidth / 6, y: screenHeight / 3)
         aboutAppBut.backgroundColor = UIColor.gray
         aboutAppBut.addTarget(self, action: #selector(ConfigView.onClick_aboutApp(_:)), for: .touchUpInside)
         
         // 「地図切り替え」ボタンの挿入(画面左上側)
-        changeMapBut.setTitle("いれかえ", for: UIControlState()) // 通常
+        if displayMode == mode.applemap.rawValue {
+            changeMapBut.setTitle("OpenStreetMapsに切り替え", for: UIControlState()) // 通常
+            changeMapBut.setTitle("OpenStreetMapsに切り替え", for: UIControlState.highlighted) // ハイライト
+        } else if displayMode == mode.osm.rawValue {
+            changeMapBut.setTitle("AppleMapsに切り替え", for: UIControlState()) // 通常
+            changeMapBut.setTitle("AppleMapsに切り替え", for: UIControlState.highlighted) // ハイライト
+        }
+        
         changeMapBut.setTitleColor(UIColor.white, for: UIControlState())
-        changeMapBut.setTitle("いれかえ", for: UIControlState.highlighted) // ハイライト
         changeMapBut.setTitleColor(UIColor.black, for: UIControlState.highlighted)
-        changeMapBut.layer.position = CGPoint(x: screenWidth * 0.3, y: screenHeight * 0.6)
+        changeMapBut.layer.position = CGPoint(x: screenWidth / 6, y: screenHeight / 2)
         changeMapBut.backgroundColor = UIColor.gray
         
-        
-        // 閉じるボタンの挿入(画面左上側)
-        backBut.setTitle("＜ 閉じる", for: UIControlState()) // 通常
-        backBut.setTitleColor(UIColor.white, for: UIControlState())
-        backBut.setTitle("＜ 閉じる", for: UIControlState.highlighted) // ハイライト
-        backBut.setTitleColor(UIColor.black, for: UIControlState.highlighted)
-        backBut.layer.position = CGPoint(x: 50, y: 50)
-        backBut.backgroundColor = UIColor.blue
-        backBut.addTarget(self, action: #selector(ConfigView.onClick_back(_:)), for: .touchUpInside)
     }
     
     
@@ -87,14 +81,11 @@ class ConfigView: UIView {
         changeMapBut.removeFromSuperview()
         aboutAppBut.removeFromSuperview()
         
-        
-        let aboutAppLabel = UILabel(frame: CGRect(x: screenWidth * 0.8 * 0.15, y: screenHeight * 0.8 * 0.2, width: screenWidth * 0.8 * 0.7, height: screenHeight * 0.8 * 0.7))
+        let aboutAppLabel = UILabel(frame: CGRect(x: 0, y: 0, width: screenWidth / 4, height: screenHeight / 8))
         aboutAppLabel.backgroundColor = UIColor.gray
         aboutAppLabel.font = UIFont.systemFont(ofSize: 20)
-        aboutAppLabel.text = "このアプリについてこのアプリについてこのアプリについてこのアプリについてこのアプリについてこのアプリについてこのアプリについて" + "\n"
-            + "このアプリについてこのアプリについてこのアプリについてこのアプリについてこのアプリについてこのアプリについて" + "\n"
-            + "このアプリについてこのアプリについてこのアプリについてこのアプリについてこのアプリについてこのアプリについてこのアプリについて" + "\n"
-            + "このアプリについてこのアプリについてこのアプリについて" + "\n"
+        aboutAppLabel.text = "Copyright (c) 2014 Ruoyu Fu, Pinglin Tang" + "\n"
+            + "© OpenStreetMap contributors"
         
         aboutAppLabel.textAlignment = NSTextAlignment.center
         aboutAppLabel.numberOfLines = 0

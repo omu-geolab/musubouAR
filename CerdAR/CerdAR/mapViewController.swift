@@ -57,6 +57,7 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     
     var tapped = false // 情報タグをタップしたか。情報タグをタップしたときは、位置情報更新によるタグの貼り直しをしないようにする。
     
+    //var frontView = UIView(frame: CGRect(x: 0.0, y: 0.0, width: CGFloat(screenWidth), height: CGFloat(screenHeight)))
     
     class appleMapsAnnotation: MKPointAnnotation {
         var tagData: TagData!
@@ -81,6 +82,7 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         mapView!.delegate = self
         mapView!.mapType = MKMapType.standard  // 地図の種類
         mapView!.showsUserLocation = true      // 現在地の表示を許可する
+        mapView!.showsScale = true // スケールバーを表示する
         mapView!.setCenter(mapView!.userLocation.coordinate, animated: true)
         view.addSubview(mapView!)
         
@@ -94,24 +96,13 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
             locationManager.requestAlwaysAuthorization()
         }
         
-        /* 警告タグメッセージの設定 */
-        warningMessage = UILabel(frame: CGRect(x: screenWidth * 0.6, y: screenHeight * 0.8, width: screenWidth * 0.38, height: screenHeight * 0.13))
-        warningMessage.textColor = UIColor.black // 文字色(黒)
-        warningMessage.backgroundColor = UIColor.white // 背景色(白)
-        warningMessage.textAlignment = NSTextAlignment.center // 中央揃え
-        warningMessage.font = UIFont.systemFont(ofSize: 20.0) // 初期文字サイズ
-        warningMessage.numberOfLines = 2 // ラベル内の行数
-        warningMessage.layer.borderColor = UIColor.black.cgColor // 枠線の色(黒)
-        warningMessage.layer.borderWidth = 5.0 // 枠線の太さ
-        warningMessage.layer.cornerRadius = 20.0 // 枠線を角丸にする
-        
         /* 画面遷移するためのボタンを生成 */
         let toCam_button = UIButton()
         let buttonImage: UIImage = UIImage(named: "icon_camera.png")!
         toCam_button.frame = CGRect(x: 0.0, y: 0.0, width: buttonImage.size.width / 4, height: buttonImage.size.height / 4)
         toCam_button.setImage(buttonImage, for: UIControlState())
         toCam_button.layer.position = CGPoint(x: 55.0, y: self.view.bounds.height - 55.0)
-        view.addSubview(toCam_button)
+        mapView!.addSubview(toCam_button)
         toCam_button.addTarget(self, action: #selector(mapViewController.onClick_AR(_:)), for: .touchUpInside)
         
         /* 設定画面へ遷移するためのボタン生成 */
@@ -119,8 +110,8 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         let conButImage: UIImage = UIImage(named: "icon_menu.png")!
         toCon_button.frame = CGRect(x: 0.0, y: 0.0, width: conButImage.size.width / 4, height: conButImage.size.height / 4)
         toCon_button.setImage(conButImage, for: UIControlState())
-        toCon_button.layer.position = CGPoint(x: self.view.bounds.width - 55.0, y: 55.0)
-        view.addSubview(toCon_button)
+        toCon_button.layer.position = CGPoint(x: self.view.bounds.width - 55.0, y: self.view.bounds.height - 55.0)
+        mapView!.addSubview(toCon_button)
         toCon_button.addTarget(self, action: #selector(mapViewController.onClick_config(_:)), for: .touchUpInside)
         
         /* 画面の中心を現在地にするためのボタン生成 */
@@ -135,6 +126,17 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         
         changeMapBut.addTarget(self, action: #selector(mapViewController.onClick_changeMap(_:)), for: .touchUpInside)
         
+        /* 警告タグメッセージの設定 */
+        warningMessage = UILabel(frame: CGRect(x: self.view.bounds.width - 55.0 - conButImage.size.width / 4 - screenWidth * 0.38, y: self.view.bounds.height - 125.0, width: screenWidth * 0.38, height: screenHeight * 0.13))
+        warningMessage.textColor = UIColor.black // 文字色(黒)
+        warningMessage.backgroundColor = UIColor.white // 背景色(白)
+        warningMessage.textAlignment = NSTextAlignment.center // 中央揃え
+        warningMessage.font = UIFont.systemFont(ofSize: 20.0) // 初期文字サイズ
+        warningMessage.numberOfLines = 2 // ラベル内の行数
+        warningMessage.layer.borderColor = UIColor.black.cgColor // 枠線の色(黒)
+        warningMessage.layer.borderWidth = 5.0 // 枠線の太さ
+        warningMessage.layer.cornerRadius = 20.0 // 枠線を角丸にする
+        
         
         /* 利用規約を表示する */
         termsview = termsView(frame: CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight))
@@ -144,6 +146,7 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         storeData()
     }
     
+    
     /* 画面が表示される直前 */
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -151,8 +154,7 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         mapView?.delegate = self
         locationManager.delegate = self
         
-        displayMode = mode.map.rawValue // 現在開いている画面は地図画面であると設定する
-        
+        displayMode = mode.applemap.rawValue // 現在開いている画面は地図画面であると設定する
         
         // ピンに画像を設定する
         for i in 0 ..< infoBox.count {
@@ -172,15 +174,7 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         
         update() // 災害円を描く
         // 10秒に1回update()を発火させる
-        updateTimer = Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(mapViewController.update), userInfo: nil, repeats: true)
-        
-        
-        // 現在地を中心に画面を表示する(起動してすぐにユーザーの現在地を取ることはできないため、1.5秒待つ)
-        runAfterDelay(1.5) {
-            let coordinateRegion = MKCoordinateRegionMakeWithDistance((self.locationManager.location?.coordinate)!, 800, 800)
-            self.mapView!.setRegion(coordinateRegion, animated:true)
-        }
-        
+        updateTimer = Timer.scheduledTimer(timeInterval: 60, target: self, selector: #selector(mapViewController.update), userInfo: nil, repeats: true)
     }
     
     
@@ -212,15 +206,6 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
      */
     func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
         scalingImage()
-        
-        //        let scaleZoom = Int(mapView.region.span.latitudeDelta * 100000000000)
-        //        var move = Double(scaleZoom) / 100000000000
-        //        move = 50 * move / Double(screenHeight) // 50 = 情報タグのサイズの半分
-        //
-        //        for i in 0 ..< infoBox.count {
-        //            appleMapsInfoBox[i].coordinate = CLLocationCoordinate2DMake(appleMapsInfoBox[i].tagData.lat + move, appleMapsInfoBox[i].tagData.lon)
-        //        }
-        
     }
     
     /*
@@ -289,17 +274,15 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
             for i in 0 ..< infoBox.count {
                 if view.annotation!.coordinate.latitude == infoBox[i].lat && view.annotation!.coordinate.longitude == infoBox[i].lon {
                     pinData = infoBox[i]
-                    if infoBox[i].picType != nil {
-                        self.view.addSubview(cannotTouchView)
-                        tapped = true
-                        // 0.3秒でズームインする
-                        UIView.animate(withDuration: 0.3, delay: 0.0, options: .curveEaseOut, animations: {
-                            
-                            // 拡大用(3.0倍)のアフィン行列を生成する.
-                            view.transform = CGAffineTransform(scaleX: 3.0, y: 3.0)
-                            
-                            }, completion: nil)
-                    }
+                    self.view.addSubview(cannotTouchView)
+                    tapped = true
+                    // 0.3秒でズームインする
+                    UIView.animate(withDuration: 0.3, delay: 0.0, options: .curveEaseOut, animations: {
+                        
+                        // 拡大用(3.0倍)のアフィン行列を生成する.
+                        view.transform = CGAffineTransform(scaleX: 3.0, y: 3.0)
+                        
+                        }, completion: nil)
                     break
                 }
             }
@@ -313,26 +296,25 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
                     let tmpAnnotation: appleMapsAnnotation = appleMapsWarnBox[i] // 一旦他の場所にデータを保持させる
                     mapView.removeAnnotation(appleMapsWarnBox[i]) // 古い災害ピンを削除
                     appleMapsWarnBox[i] = tmpAnnotation
-                    appleMapsWarnBox[i].tagData.pinImage = makeTappedLabel(i, scale: scaleZoom)
+                    let newsize = screenWidth * CGFloat((circleRadius[i] * 2.0 * 0.7) / (scaleZoom * 111.0 * 1000.0))
+                    appleMapsWarnBox[i].tagData.pinImage = makeTappedLabel(i, size: Double(newsize))
                     mapView.addAnnotation(appleMapsWarnBox[i])
                     break
                 }
             }
             
-            if pinData.picType != nil {
-                pinViewData = view // タップしたピンのデータを保持する
+            pinViewData = view // タップしたピンのデータを保持する
+            
+            // 詳細画面の表示
+            runAfterDelay(0.4) { // タップしてから0.4秒後に遷移する
+                self.detailview = detailView(frame: CGRect(x: screenWidth * 0.1, y: screenWidth * 0.1, width: screenWidth * 0.8, height: screenHeight * 0.8))
+                self.detailview!.delegate = self
+                backgroundView = detailView.makebackgroungView()
+                backgroundView.isUserInteractionEnabled = true
+                backgroundView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(mapViewController.onClick_detailBackground(_:))))
                 
-                // 詳細画面の表示
-                runAfterDelay(0.4) { // タップしてから0.4秒後に遷移する
-                    self.detailview = detailView(frame: CGRect(x: screenWidth * 0.1, y: screenWidth * 0.1, width: screenWidth * 0.8, height: screenHeight * 0.8))
-                    self.detailview!.delegate = self
-                    backgroundView = detailView.makebackgroungView()
-                    backgroundView.isUserInteractionEnabled = true
-                    backgroundView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(mapViewController.onClick_detailBackground(_:))))
-                    
-                    self.view.addSubview(backgroundView)
-                    self.view.addSubview(self.detailview!)
-                }
+                self.view.addSubview(backgroundView)
+                self.view.addSubview(self.detailview!)
             }
         }
     }
@@ -406,6 +388,12 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         case .authorizedWhenInUse, .authorizedAlways:
             manager.startUpdatingLocation()
             
+            // 現在地を中心に画面を表示する(起動してすぐにユーザーの現在地を取ることはできないため、1.5秒待つ)
+            runAfterDelay(1.5) {
+                let coordinateRegion = MKCoordinateRegionMakeWithDistance((self.locationManager.location?.coordinate)!, 800, 800)
+                self.mapView!.setRegion(coordinateRegion, animated:true)
+            }
+            
         // 位置情報を取得の可否が決まっていないとき
         case .notDetermined:
             self.locationManager.requestAlwaysAuthorization()
@@ -418,23 +406,19 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
      */
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
+        userLat = (locationManager.location?.coordinate.latitude)!
+        userLon = (locationManager.location?.coordinate.longitude)!
         
         if tapped == false {
             
             var min = 1001 // 現在地から一番近い災害までの距離
             var idx = -1 // その災害を格納している配列のインデックス
             
-            // 位置情報が変わるたびに、タグを作り直している
-            for i in 0 ..< infoBox.count {
-                infoBox[i].distance = calcDistance(infoBox[i].lat, lon: infoBox[i].lon, uLat: (locationManager.location?.coordinate.latitude)!, uLon: (locationManager.location?.coordinate.longitude)!) // 距離を求める
-                updatePin(appleMapsInfoBox[i])
-            }
-            
             for i in 0 ..< warnBox.count {
                 
                 if warnBox[i].stop.compare(Date()) == ComparisonResult.orderedDescending && Date().compare(warnBox[i].start) == ComparisonResult.orderedDescending {
                     
-                    warnBox[i].distance = calcDistance(warnBox[i].lat, lon: warnBox[i].lon, uLat: (locationManager.location?.coordinate.latitude)!, uLon: (locationManager.location?.coordinate.longitude)!) // 距離を求める
+                    warnBox[i].distance = calcDistance(warnBox[i].lat, lon: warnBox[i].lon, uLat: userLat, uLon: userLon) // 距離を求める
                     updatePin(appleMapsWarnBox[i])
                     
                     if min > warnBox[i].distance {
@@ -486,27 +470,31 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         let file_name = "data.json"
         var json: JSON!
         
+//        let path = Bundle.main.path(forResource: "data", ofType: "json")!
+//        let jsonData = NSData(contentsOfFile: path)!
+//        json = JSON(data:jsonData as Data)
         
-        if let dir: NSString = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.allDomainsMask, true).first as NSString? {
-            
-            let path_file_name = dir.appendingPathComponent(file_name)
-            guard (try? Data(contentsOf: URL(fileURLWithPath: path_file_name))) != nil else {
-                let alert = UIAlertController(title: "ERROR!!", message: "JSONファイルが見つかりませんでした。", preferredStyle: UIAlertControllerStyle.alert)
-                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default) { action -> Void in })
-                present(alert, animated: true, completion: nil)
-                
-                return
-            }
-            
-            let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
-            print(documentsPath)
-            
-            
-            let jsonData = try? Data(contentsOf: URL(fileURLWithPath: path_file_name))
-            
-            json = JSON(data:jsonData!)
-            
-        }
+        
+                if let dir: NSString = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.allDomainsMask, true).first as NSString? {
+        
+                    let path_file_name = dir.appendingPathComponent(file_name)
+                    guard (try? Data(contentsOf: URL(fileURLWithPath: path_file_name))) != nil else {
+                        let alert = UIAlertController(title: "ERROR!!", message: "JSONファイルが見つかりませんでした。", preferredStyle: UIAlertControllerStyle.alert)
+                        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default) { action -> Void in })
+                        present(alert, animated: true, completion: nil)
+        
+                        return
+                    }
+        
+                    let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+                    print(documentsPath)
+        
+        
+                    let jsonData = try? Data(contentsOf: URL(fileURLWithPath: path_file_name))
+        
+                    json = JSON(data:jsonData!)
+        
+                }
         
         // jsonの構造の記述ミス・jsonファイルが空のとき
         // 地図・ARカメラは使用できるがタグは表示されない
@@ -577,10 +565,20 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
                 
                 if let pType = json["features"][i]["properties"]["pic_type"].string { // 写真か動画か
                     infoBox[iN].picType = pType
-                    if infoBox[iN].picType == kPhoto {
-                        infoBox[iN].photo = json["features"][i]["properties"]["photo"].string // 写真のURL
-                    } else if infoBox[iN].picType == kMovie {
-                        infoBox[iN].movie = json["features"][i]["properties"]["movie"].string // 動画のURL
+                    
+                    if let pm = json["features"][i]["properties"][pType].string { // 写真・動画のURL
+                        if pType == kPhoto {
+                            infoBox[iN].photo = pm
+                        } else if pType == kMovie {
+                            infoBox[iN].movie = pm
+                        } else {
+                            infoBox.removeLast()
+                            continue
+                        }
+                        
+                    } else {
+                        infoBox.removeLast()
+                        continue
                     }
                     
                 } else {
@@ -674,26 +672,32 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
                 }
                 
                 
-                if let start: Date = dateFromString(json["features"][i]["properties"]["start"].string!, format: "yyyy/MM/dd HH:mm") { // 災害開始時刻
-                    warnBox[wN].start = start
+                if let start = json["features"][i]["properties"]["start"].string { // 災害範囲
+                    if let start2: Date = dateFromString(start, format: "yyyy/MM/dd HH:mm") { // 災害開始時刻
+                        warnBox[wN].start = start2
+                    } else {
+                        warnBox.removeLast()
+                        continue
+                    }
                 } else {
                     warnBox.removeLast()
                     continue
                 }
                 
-                if let stop: Date = dateFromString(json["features"][i]["properties"]["stop"].string!, format: "yyyy/MM/dd HH:mm") { // 災害開始時刻
-                    warnBox[wN].stop = stop
+                
+                
+                if let stop = json["features"][i]["properties"]["stop"].string { // 災害範囲
+                    if let stop2: Date = dateFromString(stop, format: "yyyy/MM/dd HH:mm") { // 災害終了時刻
+                        warnBox[wN].stop = stop2
+                    } else {
+                        warnBox.removeLast()
+                        continue
+                    }
                 } else {
                     warnBox.removeLast()
                     continue
                 }
                 
-                //                if let stop = json["features"][i]["properties"]["stop"].string { // 災害終了時刻
-                //                    warnBox[wN].stop = stop
-                //                } else {
-                //                    warnBox.removeLast()
-                //                    continue
-                //                }
                 
                 if let message1 = json["features"][i]["properties"]["message1"].string { // 警告範囲に近づいた時のメッセージ
                     warnBox[wN].message1 = message1
@@ -841,40 +845,24 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     func scalingImage() {
         
         let scaleZoom = mapView!.region
-        var newsize: CGFloat!
-        
-        for i in 0 ..< infoBox.count {
-            
-            // scaleZoom は表示範囲（縮尺度）で、SCALEZOOM = 1 で画面の縦横が1度ということになる
-            // 1度 = 約111km
-            //
-            //                     タグのサイズ (m)
-            //  画面の横幅 ×  ----------------------------
-            //                 縮尺度 × 111(km) × 1000    ← 画面が表示されている実際の範囲を m で計算している
-            //
-            // これで、画面の何%で表示すればいいかわかるので、それにscreenWidthをかけると、画面に表示する画像のサイズが決定する
-            
-            //newsize = screenWidth * CGFloat(100.0 / (scaleZoom.span.latitudeDelta * 111.0 * 1000.0))
-            
-            if infoBox[i].picType == nil { // 施設タグのとき
-                changeImage(&appleMapsInfoBox[i], newsize: 50)
-                
-            } else { // 情報タグのとき
-                changeImage(&appleMapsInfoBox[i], newsize: 100)
-            }
-            
-            
-        }
         
         for i in 0 ..< warnBox.count {
             
             if warnBox[i].stop.compare(Date()) == ComparisonResult.orderedDescending && Date().compare(warnBox[i].start) == ComparisonResult.orderedDescending {
                 
-                // 情報タグと同じ計算方法
+                // scaleZoom は表示範囲（縮尺度）で、SCALEZOOM = 1 で画面の縦横が1度ということになる
+                // 1度 = 約111km
+                //
+                //                     タグのサイズ (m)
+                //  画面の横幅 ×  ----------------------------
+                //                 縮尺度 × 111(km) × 1000    ← 画面が表示されている実際の範囲を m で計算している
+                //
+                // これで、画面の何%で表示すればいいかわかるので、それにscreenWidthをかけると、画面に表示する画像のサイズが決定する
+                //
                 // タグのサイズは、災害円の直径
                 
                 let han: Double = circleRadius[i] * 2.0
-                newsize = screenWidth * CGFloat((han * 0.7) / (scaleZoom.span.latitudeDelta * 111.0 * 1000.0))
+                let newsize: CGFloat = screenWidth * CGFloat((han * 0.7) / (scaleZoom.span.latitudeDelta * 111.0 * 1000.0))
                 changeImage(&appleMapsWarnBox[i], newsize: newsize)
             }
         }
@@ -925,19 +913,19 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
      */
     func updatePin(_ annotation: appleMapsAnnotation) {
         
-        // 詳細画面を表示しないアイコン
+        // 施設タグ
         if annotation.tagData.inforType == kInfo {
             if annotation.tagData.picType == nil {
                 
-                annotation.tagData.pinImage = UIImage(named: annotation.tagData.icon)
-                annotation.tagData.expandImage = UIImage(named: annotation.tagData.icon)
+                annotation.tagData.pinImage = getResizeImage(UIImage(named: annotation.tagData.icon)!, newHeight: 100)
+                //annotation.tagData.expandImage = getResizeImage(UIImage(named: annotation.tagData.icon)!, newHeight: 500)
                 
                 self.mapView!.addAnnotation(annotation) // ピン情報の更新
                 return
             }
         }
         
-        // 詳細画面を表示する情報・警告タグ
+        // 情報タグ・警告タグ
         let labelImg = makeLabel(annotation.tagData.pinNum, inforType: annotation.tagData.inforType) // UILabelをUIImageに変換する
         annotation.tagData.pinImage = getPinImage(labelImg, inforType: annotation.tagData.inforType)
         annotation.tagData.expandImage = getPinImage(labelImg, inforType: annotation.tagData.inforType)
@@ -1034,28 +1022,49 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         self.present(cameraViewController(), animated: true, completion: nil)
     }
     
-    /*
-     * 画面右上のボタンをタップしたとき
-     * 設定画面を開く
-     */
-    func onClick_config(_ recognizer: UIGestureRecognizer) {
-        configview = ConfigView(frame: CGRect(x: screenWidth * 0.1, y: screenWidth * 0.1, width: screenWidth * 0.8, height: screenHeight * 0.8))
-        viewMode = viewmode.config.rawValue
-        backgroundView = detailView.makebackgroungView()
-        backgroundView.isUserInteractionEnabled = true
-        backgroundView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(mapViewController.onClick_configBackground(_:))))
-        view.addSubview(backgroundView)
-        view.addSubview(configview!)
-    }
+    //    /*
+    //     * 画面右上のボタンをタップしたとき
+    //     * 設定画面を開く
+    //     */
+    //    func onClick_config(_ recognizer: UIGestureRecognizer) {
+    //        configview = ConfigView(frame: CGRect(x: screenWidth * 0.1, y: screenWidth * 0.1, width: screenWidth * 0.8, height: screenHeight * 0.8))
+    //        viewMode = viewmode.config.rawValue
+    //        backgroundView = detailView.makebackgroungView()
+    //        backgroundView.isUserInteractionEnabled = true
+    //        backgroundView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(mapViewController.onClick_configBackground(_:))))
+    //        view.addSubview(backgroundView)
+    //        view.addSubview(configview!)
+    //    }
     
     
     /*
      * 設定画面の背景をタップしたとき
      * 表示されているものが廃棄される
      */
-    func onClick_configBackground(_ sender: UITapGestureRecognizer) {
-        configview?.removeFromSuperview()
-        ConfigView().deleteConfigDisplay()
+    func onClick_configBackground(_ sender: UISwipeGestureRecognizer) {
+        
+        mapView?.isScrollEnabled = true // スクロールできるようにする
+        mapView?.isZoomEnabled = true // 拡大縮小できるようにする
+        
+        var location: CGPoint = mapView!.center
+        location.x = view.center.x
+        
+        UIView.animate(
+            withDuration: 0.2,
+            delay:0.5,
+            options : UIViewAnimationOptions.curveEaseIn,
+            animations : {
+                self.mapView?.center = location
+                self.warningView?.center = location
+            },
+            completion: {
+                (value: Bool) in
+                
+                self.configview?.removeFromSuperview()
+                ConfigView().deleteConfigDisplay()
+            }
+        )
+        
     }
     
     /*
@@ -1074,6 +1083,15 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
      * OpenStreetMapsに切り替える
      */
     internal func onClick_changeMap(_ sender: UIButton) {
+        
+        mapView?.isScrollEnabled = true // スクロールできるようにする
+        mapView?.isZoomEnabled = true // 拡大縮小できるようにする
+        
+        var location: CGPoint = mapView!.center
+        location.x = view.center.x
+        self.mapView?.center = location
+        self.warningView?.center = location
+        
         configview?.removeFromSuperview()
         ConfigView().deleteConfigDisplay()
         self.present(osmViewController(), animated: true, completion: nil)
@@ -1101,12 +1119,12 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         for i in 0 ..< warnBox.count {
             
             // 過去の災害
-            if warnBox[i].start.compare(nowTime) == ComparisonResult.orderedDescending {
-                
+            if nowTime.compare(warnBox[i].stop) == ComparisonResult.orderedDescending {
                 // stopの時刻を過ぎたから、災害の円や文字を消す
                 self.mapView!.remove(circle[i]) // 円を消す
                 self.mapView!.alpha = 1.0
                 self.warnPinView[i].removeFromSuperview() // 災害のピン情報を削除
+                warningMessage.removeFromSuperview()
                 cameraViewController().warningView.backgroundColor = UIColor.clear
                 if warnImageBox.count != 0 {
                     warnImageBox[i].removeFromSuperview()
@@ -1117,10 +1135,42 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
                 let Sn = Date().timeIntervalSince(warnBox[i].start) / 60 // 開始時刻(start)と現在時刻(now)の差
                 makeCircle(i, startNow: Sn)
                 
-                // 今後発生する災害
-            } else {
-                
             }
         }
     }
+    
+    // 設定画面を開く
+    internal func onClick_config(_ sender: UIButton) {
+        
+        mapView?.isScrollEnabled = false // スクロールできないようにする
+        mapView?.isZoomEnabled = false // 拡大縮小できないようにする
+        
+        var location: CGPoint = mapView!.center
+        location.x = view.center.x + screenWidth / 3
+        
+        UIView.animate(
+            withDuration: 0.2,
+            delay:0.5,
+            options : UIViewAnimationOptions.curveEaseIn,
+            animations : {
+                self.mapView?.center = location
+                self.warningView?.center = location
+            },
+            completion: {
+                (value: Bool) in
+                
+                backgroundView = detailView.makebackgroungView()
+                backgroundView.isUserInteractionEnabled = true
+                backgroundView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(mapViewController.onClick_configBackground(_:))))
+                self.mapView?.addSubview(backgroundView)
+                self.view.bringSubview(toFront: backgroundView)
+                
+                self.configview = ConfigView(frame: CGRect(x: 0, y: 0, width: screenWidth / 3, height: screenHeight))
+                self.view.addSubview(self.configview!)
+                self.view.sendSubview(toBack: self.configview!)
+            }
+        )
+    }
+    
+    
 }

@@ -12,8 +12,11 @@ import UIKit
     func detailViewFinish()
 }
 
+
 class detailView: UIView {
     weak var delegate: detailViewDelegate?
+    //    var updateTimer: Timer! // 一定時間ごとにupdate()を発火させる
+    
     
     //タイトル
     let titlelBar = UILabel(frame: CGRect.init(x: 0, y: 0, width: dWid, height: dHei * 0.1))
@@ -21,12 +24,21 @@ class detailView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         viewInit()
+        
+        //        updateTimer = Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(detailView.updateDistance), userInfo: nil, repeats: true)
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         viewInit()
     }
+    
+    
+    
+    //    func updateDistance(label: UILabel, lat: Double, lon: Double) {
+    //        label.text = "あと" + String(calcDistance(lat, lon: lon, uLat: userLat, uLon: userLon)) + "m" // 距離を求める
+    //    }
     
     func viewInit() {
         
@@ -65,17 +77,33 @@ class detailView: UIView {
         scrollView.contentSize = CGSize.init(width: comment.frame.size.width, height: comment.frame.size.height)
         self.addSubview(scrollView)
         
+        // 目的地までの距離の挿入(画面左下側)
+        let distance = UILabel(frame: CGRect.init(x: dWid * 0.05, y: dHei * 0.82, width: dWid * 0.45, height: dHei * 0.1))
+        distance.font = UIFont.systemFont(ofSize: 35)
+        distance.text = "あと" + String(calcDistance(pinData.lat, lon: pinData.lon, uLat: userLat, uLon: userLon)) + "m" // 距離を求める
+        distance.numberOfLines = 0
+        distance.sizeToFit()
+        self.addSubview(distance)
+        
+        
+        
         // 画像・動画の挿入(画面左側)
         if pinData.inforType == kInfo {
             
-            if pinData.picType == kPhoto { // 画像
+            if pinData.picType == nil {
+                let warnImageView = UIImageView(frame: CGRect.init(x: CGFloat(dWid * 0.8 * 0.05), y: CGFloat(dHei * 0.3), width: bounds.height * 0.5, height: bounds.height * 0.5))
+                warnImageView.image = UIImage(named: pinData.icon)
+                self.addSubview(warnImageView)
                 
-                if pinData.photo.range(of: "jpg") == nil && pinData.photo.range(of: "png") == nil {
+            } else if pinData.picType == kPhoto { // 画像
+                
+                if pinData.photo.range(of: "jpg") == nil && pinData.photo.range(of: "png") == nil && pinData.photo.range(of: "JPG") == nil {
                     notFound()
                     
                 } else {
+                    
                     let url = URL(string: pinData.photo)
-                    let req = URLRequest(url: url!, cachePolicy: NSURLRequest(url: url!).cachePolicy, timeoutInterval: 3.0)
+                    let req = URLRequest(url: url!, cachePolicy: NSURLRequest(url: url!).cachePolicy, timeoutInterval: 5.0)
                     
                     let configuration = URLSessionConfiguration.default
                     let session = URLSession(configuration: configuration, delegate:nil, delegateQueue:OperationQueue.main)
@@ -90,8 +118,12 @@ class detailView: UIView {
                             // 成功したとき
                         } else {
                             let warnImageView = UIImageView(frame: CGRect.init(x: CGFloat(dWid * 0.05), y: CGFloat(dHei * 0.3), width: CGFloat(dWid * 0.45), height: CGFloat(dHei * 0.5)))
-                            let image = UIImage(data: data!)
-                            warnImageView.image = image
+                            
+                            if let image = UIImage(data: data!) {
+                                warnImageView.image = image
+                            } else {
+                                warnImageView.image = UIImage(named: "icon_notfound.png")
+                            }
                             self.addSubview(warnImageView)
                         }
                     })
@@ -107,7 +139,7 @@ class detailView: UIView {
                 } else {
                     
                     let url = URL(string : pinData.movie)
-                    let req = URLRequest(url: url!, cachePolicy: NSURLRequest(url: url!).cachePolicy, timeoutInterval: 3.0)
+                    let req = URLRequest(url: url!, cachePolicy: NSURLRequest(url: url!).cachePolicy, timeoutInterval: 5.0)
                     let configuration = URLSessionConfiguration.default
                     let session = URLSession(configuration: configuration, delegate:nil, delegateQueue:OperationQueue.main)
                     
@@ -131,6 +163,8 @@ class detailView: UIView {
                     task.resume()
                 }
             }
+            
+            
             
         } else if pinData.inforType == kWarn { // 警告タグ
             let warnImageView = UIImageView(frame: CGRect.init(x: CGFloat(dWid * 0.8 * 0.05), y: CGFloat(dHei * 0.3), width: bounds.height * 0.5, height: bounds.height * 0.5))
@@ -166,14 +200,14 @@ class detailView: UIView {
                 warnImg = UIImage(named: "icon_infoTag.png")!
             }
             
-            let label = UILabel(frame: CGRect.init(x: 0.0, y: 0.0, width: warnImage!.size.width, height: warnImage!.size.height)) //ラベルサイズ
+            let label = UILabel(frame: CGRect.init(x: 0.0, y: 0.0, width: warnImg!.size.width, height: warnImg!.size.height)) //ラベルサイズ
             
             label.text = text
             label.textColor = UIColor.black // 文字色
             label.textAlignment = NSTextAlignment.center // 中央揃え
-            label.font = UIFont.systemFont(ofSize: 100) // 初期文字サイズ
+            label.font = UIFont.systemFont(ofSize: 80) // 初期文字サイズ
             label.adjustsFontSizeToFitWidth = true // 文字の多さによってフォントサイズを調節する
-            label.numberOfLines = 3 // ラベル内の行数
+            label.numberOfLines = 2 // ラベル内の行数
             
             let labelImg = label.getImage() as UIImage // UILabelをUIImageに変換する
             
@@ -181,7 +215,7 @@ class detailView: UIView {
             UIGraphicsBeginImageContext(warnImg!.size)
             warnImg!.draw(in: tagRect)
             
-            let labelRect = CGRect.init(x: 40.0, y: 40.0, width: labelImg.size.width - 80.0, height: labelImg.size.height - 100.0) // ラベル画像のサイズと位置
+            let labelRect = CGRect.init(x: 40.0, y: 40.0, width: labelImg.size.width - 100, height: labelImg.size.height * 0.75) // ラベル画像のサイズと位置
             labelImg.draw(in: labelRect)
             
             // Context に描画された画像を新しく設定

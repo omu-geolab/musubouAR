@@ -47,18 +47,18 @@ func getLabelText(_ num: Int, inforType: String) -> String {
     
     // 情報タグ
     if inforType == kInfo {
-        text = infoBox[num].name + "\n" + String(infoBox[num].distance) + "m"
+        
+        if displayMode == mode.applemap.rawValue || displayMode == mode.osm.rawValue { // 地図画面の時は名称のみ
+            text = infoBox[num].name
+            
+        } else { // カメラ画面の時は名称と距離
+            text = infoBox[num].name + "\n" + String(infoBox[num].distance) + "m"
+        }
         
         // 警告タグ
     } else if inforType == kWarn {
         
-        var distance = warnBox[num].distance - Int(circleRadius[num])
         var riskName: String!
-        
-        // ユーザが災害範囲内に入ったら、災害までの距離を0mで表示する
-        if distance <= 0 {
-            distance = 0
-        }
         
         switch warnBox[num].riskType {
             
@@ -72,9 +72,25 @@ func getLabelText(_ num: Int, inforType: String) -> String {
         default: riskName = "その他の災害"
         }
         
-        text = riskName + "\n"
-        text = text + String(distance) + "m" + "\n"
-        text = text + "範囲: " + String(Int(circleRadius[num])) + "m"
+        
+        if displayMode == mode.applemap.rawValue || displayMode == mode.osm.rawValue { // 地図画面の時は名称と範囲
+            text = riskName + "\n"
+            text = text + "範囲: " + String(Int(circleRadius[num])) + "m"
+        } else { // カメラ画面の時は名称と距離と範囲
+            
+            var distance = warnBox[num].distance - Int(circleRadius[num])
+            
+            // ユーザが災害範囲内に入ったら、災害までの距離を0mで表示する
+            if distance <= 0 {
+                distance = 0
+            }
+            
+            text = riskName + "\n"
+            text = text + String(distance) + "m" + "\n"
+            text = text + "範囲: " + String(Int(circleRadius[num])) + "m"
+        }
+        
+        
     }
     
     return text
@@ -92,21 +108,27 @@ func makeLabel(_ num: Int, inforType: String) -> UIImage {
     
     var label: UILabel! // 情報タグの文字
     var labelImg: UIImage! // ラベル画像
-    let airtagImage = UIImage(named: "icon_infoTag.png")! // 情報タグの画像
+    let airtagImage = UIImage(named: infoBox[num].icon)! // 情報タグの画像
     
     if inforType == kInfo {
         label = UILabel(frame: CGRect.init(x: 0.0, y: 0.0, width: airtagImage.size.width, height: airtagImage.size.height)) //ラベルサイズ
+        label.numberOfLines = 2 // ラベル内の行数
+        
         
     } else if inforType == kWarn {
         label = UILabel(frame: CGRect.init(x: 0.0, y: 0.0, width: warnImage!.size.width, height: warnImage!.size.height)) //ラベルサイズ
+        if displayMode == mode.cam.rawValue {
+            label.numberOfLines = 3 // ラベル内の行数
+        } else {
+            label.numberOfLines = 2 // ラベル内の行数
+        }
     }
     
     label.text = getLabelText(num, inforType: inforType) // テキスト
     label.textColor = UIColor.black // 文字色
     label.textAlignment = NSTextAlignment.center // 中央揃え
-    label.font = UIFont.systemFont(ofSize: 100) // 初期文字サイズ
+    label.font = UIFont.systemFont(ofSize: 80) // 初期文字サイズ
     label.adjustsFontSizeToFitWidth = true // 文字の多さによってフォントサイズを調節する
-    label.numberOfLines = 3 // ラベル内の行数
     
     labelImg = label.getImage() as UIImage // UILabelをUIImageに変換する
     
@@ -123,22 +145,16 @@ func makeLabel(_ num: Int, inforType: String) -> UIImage {
  *
  * @return タグに記載する文の画像を返す
  */
-func makeTappedLabel(_ num: Int, scale: Double) -> UIImage {
+func makeTappedLabel(_ num: Int, size: Double) -> UIImage {
     
-    var label: UILabel! // 情報タグの文字
-    var labelImg: UIImage! // ラベル画像
-    let han: Double = circleRadius[num] * 2.0
-    let newsize = screenWidth * CGFloat((han * 0.7) / (scale * 111.0 * 1000.0))
-    
-    label = UILabel(frame: CGRect.init(x: 0.0, y: 0.0, width: newsize, height: newsize)) //ラベルサイズ
+    let label = UILabel(frame: CGRect.init(x: 0.0, y: 0.0, width: size, height: size)) //ラベルサイズ
     label.text = getLabelText(num, inforType: kWarn) // テキスト
     label.textColor = UIColor.red // 文字色
     label.textAlignment = NSTextAlignment.center // 中央揃え
     label.font = UIFont.systemFont(ofSize: 100) // 初期文字サイズ
     label.adjustsFontSizeToFitWidth = true // 文字の多さによってフォントサイズを調節する
-    label.numberOfLines = 3 // ラベル内の行数
-    
-    labelImg = label.getImage() as UIImage // UILabelをUIImageに変換する
+    label.numberOfLines = 2 // ラベル内の行数
+    let labelImg = label.getImage() as UIImage // UILabelをUIImageに変換する
     
     return labelImg
 }
@@ -154,10 +170,11 @@ func makeTappedLabel(_ num: Int, scale: Double) -> UIImage {
  * @param img makeLabelで生成した画像
  * @param inforType タグの種別(情報か警告か)
  *
- * @return 生成したタグ画像を縦幅500のサイズで返す
+ * @return 生成したタグ画像を縦幅100のサイズで返す
  */
 func getPinImage(_ img: UIImage, inforType: String) -> UIImage {
     let airtagImage = UIImage(named: "icon_infoTag.png")! // 情報タグの画像
+    var imgsize: CGFloat =  500
     
     if inforType == kInfo {
         
@@ -165,9 +182,13 @@ func getPinImage(_ img: UIImage, inforType: String) -> UIImage {
         UIGraphicsBeginImageContext(img.size)
         airtagImage.draw(in: tagRect)
         
+        if displayMode == mode.applemap.rawValue || displayMode == mode.osm.rawValue { // 地図画面のとき
+            imgsize = 100
+        }
+        
     } else if inforType == kWarn {
         
-        if displayMode == mode.map.rawValue { // 地図画面のとき
+        if displayMode == mode.applemap.rawValue || displayMode == mode.osm.rawValue { // 地図画面のとき
             return img
             
         } else if displayMode == mode.cam.rawValue { // カメラ画面のとき
@@ -178,7 +199,7 @@ func getPinImage(_ img: UIImage, inforType: String) -> UIImage {
         }
     }
     
-    let labelRect = CGRect.init(x: 40.0, y: 40.0, width: img.size.width - 80.0, height: img.size.height - 100.0) // ラベル画像のサイズと位置
+    let labelRect = CGRect.init(x: 30.0, y: 30.0, width: img.size.width - 60.0, height: img.size.height - 120.0) // ラベル画像のサイズと位置
     img.draw(in: labelRect)
     
     // Context に描画された画像を新しく設定
@@ -187,7 +208,7 @@ func getPinImage(_ img: UIImage, inforType: String) -> UIImage {
     // Context 終了
     UIGraphicsEndImageContext()
     
-    return getResizeImage(newImage!, newHeight: 500.0)
+    return getResizeImage(newImage!, newHeight: imgsize)
 }
 
 /**
