@@ -38,8 +38,6 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
     var infoPinView = [MGLAnnotationImage]()
     var warnPinView = [MGLAnnotationImage]()
     
-    //var pinViewData: MKAnnotationView! // タップされたタグの情報を保持
-    //var retentionZoom: MKCoordinateRegion! // タグをタップしたときの表示範囲を保持
     var scaleZoom: MKCoordinateRegion! // タグをタップしたときの表示範囲を保持
     
     var warningView: UIView! // 災害範囲内に侵入した時に画面の色を変える
@@ -54,6 +52,8 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
     var polyNum = 0
     
     var tapped = false // 情報タグをタップしたか
+    
+    let warningMessage = UILabel(frame: CGRect(x: screenWidth - 55.0 - butSize - screenWidth * 0.38, y: screenHeight - 125.0, width: screenWidth * 0.38, height: screenHeight * 0.13))
     
     
     // 定数
@@ -116,17 +116,12 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         // 現在地の取得を開始
         if CLLocationManager.locationServicesEnabled() {
             locationManager = CLLocationManager()
-            locationManager.delegate = self
-            locationManager.startUpdatingLocation() // 位置情報の更新を開始
         }
-        
-        locationManager.requestAlwaysAuthorization()
-        
         
         // 画面遷移するためのボタンを生成
         let toCam_button = UIButton()
         let buttonImage: UIImage = UIImage(named: "icon_camera.png")!
-        toCam_button.frame = CGRect(x: 0.0, y: 0.0, width: buttonImage.size.width / 4, height: buttonImage.size.height / 4)
+        toCam_button.frame = CGRect(x: 0.0, y: 0.0, width: butSize, height: butSize)
         toCam_button.setImage(buttonImage, for: UIControlState())
         toCam_button.layer.position = CGPoint(x: 55.0, y: self.view.bounds.height - 55.0)
         mapView.addSubview(toCam_button)
@@ -135,7 +130,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         // 設定画面へ遷移するためのボタン生成
         let toCon_button = UIButton()
         let conButImage: UIImage = UIImage(named: "icon_menu.png")!
-        toCon_button.frame = CGRect(x: 0.0, y: 0.0, width: conButImage.size.width / 4, height: conButImage.size.height / 4)
+        toCon_button.frame = CGRect(x: 0.0, y: 0.0, width: butSize, height: butSize)
         toCon_button.setImage(conButImage, for: UIControlState())
         toCon_button.layer.position = CGPoint(x: self.view.bounds.width - 55.0, y: self.view.bounds.height - 55.0)
         mapView.addSubview(toCon_button)
@@ -145,7 +140,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         // 画面の中心を現在地にするためのボタン生成
         let nowLoc_button = UIButton()
         let locButImage: UIImage = UIImage(named: "icon_locate.jpg")!
-        nowLoc_button.frame = CGRect.init(x: 0, y: 0, width: locButImage.size.width / 4, height: locButImage.size.height / 4)
+        nowLoc_button.frame = CGRect.init(x: 0, y: 0, width: butSize, height: butSize)
         nowLoc_button.setImage(locButImage, for: UIControlState())
         nowLoc_button.layer.position = CGPoint(x: 55.0, y: 55.0)
         mapView.addSubview(nowLoc_button)
@@ -153,7 +148,6 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         nowLoc_button.addTarget(self, action: #selector(osmViewController.nowLocate(_:)), for: .touchUpInside)
         
         /* 警告メッセージの設定 */
-        warningMessage = UILabel(frame: CGRect(x: self.view.bounds.width - 55.0 - conButImage.size.width / 4 - screenWidth * 0.38, y: self.view.bounds.height - 125.0, width: screenWidth * 0.38, height: screenHeight * 0.13))
         warningMessage.textColor = UIColor.black // 文字色(黒)
         warningMessage.backgroundColor = UIColor.white // 背景色(白)
         warningMessage.textAlignment = NSTextAlignment.center // 中央揃え
@@ -189,17 +183,22 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         displayMode = mode.osm.rawValue
         
         update() // 災害円を描く
-        // 10秒に1回update()を発火させる
-        updateTimer = Timer.scheduledTimer(timeInterval: 60, target: self, selector: #selector(osmViewController.update), userInfo: nil, repeats: true)
+        // 60秒に1回update()を発火させる
+        if updateTimer == nil {
+            updateTimer = Timer.scheduledTimer(timeInterval: 60, target: self, selector: #selector(osmViewController.update), userInfo: nil, repeats: true)
+        }
         
         self.navigationController?.setNavigationBarHidden(true, animated: true)
         
         mapView.delegate = self
         
-        locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.startUpdatingLocation()
-        locationManager.startUpdatingHeading()
+        // 現在地の取得を開始
+        if CLLocationManager.locationServicesEnabled() {
+            //locationManager = CLLocationManager()
+            locationManager.delegate = self
+            locationManager.startUpdatingLocation() //  GPSの更新を開始
+            locationManager.requestAlwaysAuthorization()
+        }
         
         changeMapBut.addTarget(self, action: #selector(osmViewController.changeMap(_:)), for: .touchUpInside)
         
@@ -217,17 +216,18 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         print("viewDidDisappear")
         mapView.delegate = nil
         locationManager.delegate = nil
-        
+        locationManager.stopUpdatingLocation() // GPSの更新を停止する
     }
     
     
     override func viewWillDisappear(_ animated: Bool) {
         print("viewWillDisappear")
-        
-        for annotation in self.mapView.annotations! {
-            self.mapView.removeAnnotation(annotation)
+        if mapView.annotations?.count != nil {
+            print(mapView.annotations?.count)
+            for annotation in self.mapView.annotations! {
+                self.mapView.removeAnnotation(annotation)
+            }
         }
-        updateTimer.invalidate() // update()を止める
     }
     
     
@@ -312,7 +312,6 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
                         self.makeRedTag(i, img: UIImage(named: "icon_infoTag_red.png")!)
                         break
                     }
-                    
                 }
             }
             
@@ -321,8 +320,14 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
                     
                     pinData = warnBox[i]
                     
-                    let newsize: CGFloat = CGFloat(Double(screenWidth) * ((circleRadius[i] * kDia * kWarnNewSize) / (500 * (21 - mapView.zoomLevel))))
+                    let newsize: CGFloat = CGFloat(Double(screenWidth) * ((circleRadius[i] * kDia * kWarnNewSize) / (300 * (21 - mapView.zoomLevel))))
                     warnPinView[i].image = makeTappedLabel(i, size: Double(newsize))
+                    let newImage = makeTappedLabel(i, size: Double(newsize))
+                    
+                    warnBox[i].pinImage = getResizeImage(newImage, newHeight: kTagSize)
+                    warnBox[i].expandImage = getResizeImage(newImage, newHeight: kTagSize)
+                    changeImage(&warnBox[i], MGLtag: osmWarnBox[i], newsize: newsize)
+                    
                     break
                 }
             }
@@ -435,6 +440,8 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
             // 警告モードにしたり、警告メッセージを表示したりする
             if idx != -1 {
                 intrusion(warnBox[idx].riskType, distance: warnBox[idx].distance, range: Int(circleRadius[idx]), warnState: &warnState, message1: warnBox[idx].message1, message2: warnBox[idx].message2)
+            } else {
+                warningMessage.removeFromSuperview()
             }
             
             scalingImage()
@@ -446,15 +453,22 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
     
     func detailViewFinish() {
         
-        runAfterDelay(1.5) {
-            if pinData.inforType == kWarn {
-                let newsize: CGFloat = CGFloat(Double(screenWidth) * ((circleRadius[pinData.pinNum] * self.kDia * self.kWarnNewSize) / (500 * (21 - self.mapView.zoomLevel))))
-                self.warnPinView[pinData.pinNum].image = getResizeImage(makeLabel(pinData.pinNum, inforType: kWarn), newHeight: newsize)
-            } else if pinData.inforType == kInfo {
-                if pinData.picType != nil {
-                    self.makeRedTag(pinData.pinNum, img: UIImage(named: "icon_infoTag.png")!)
-                }
+        if pinData.inforType == kWarn {
+            let newsize: CGFloat = CGFloat(Double(screenWidth) * ((circleRadius[pinData.pinNum] * self.kDia * self.kWarnNewSize) / (300 * (21 - self.mapView.zoomLevel))))
+            
+            warnBox[pinData.pinNum].pinImage = getResizeImage(makeLabel(pinData.pinNum, inforType: kWarn), newHeight: newsize)
+            warnBox[pinData.pinNum].expandImage = getResizeImage(makeLabel(pinData.pinNum, inforType: kWarn), newHeight: newsize)
+            self.changeImage(&warnBox[pinData.pinNum], MGLtag: osmWarnBox[pinData.pinNum], newsize: newsize)
+            
+            
+            
+        } else if pinData.inforType == kInfo {
+            if pinData.picType != nil {
+                self.makeRedTag(pinData.pinNum, img: UIImage(named: "icon_infoTag.png")!)
             }
+        }
+        
+        runAfterDelay(1.5) {
             cannotTouchView.removeFromSuperview()
         }
         detailview?.delegate = nil
@@ -518,7 +532,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
                 
                 // 一定時間後に警告メッセージを消す
                 runAfterDelay(10.0) {
-                    warningMessage.removeFromSuperview()
+                    self.warningMessage.removeFromSuperview()
                 }
                 
                 mapView.addSubview(warningMessage)
@@ -536,7 +550,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
                 
                 // 一定時間後に警告メッセージを消す
                 runAfterDelay(10.0) {
-                    warningMessage.removeFromSuperview()
+                    self.warningMessage.removeFromSuperview()
                 }
                 
                 mapView.addSubview(warningMessage)
@@ -603,8 +617,8 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
                 // これで、画面の何%で表示すればいいかわかるので、それにscreenWidthをかけると、画面に表示する画像のサイズが決定する
                 // タグのサイズは、災害円の直径
                 
-                let han: Double = circleRadius[i] * kDia
-                let newsize: CGFloat = CGFloat(Double(screenWidth) * ((han * kWarnNewSize) / (500 * (21 - mapView.zoomLevel))))
+                let han: Double = circleRadius[i] * kDia + 0.1
+                let newsize: CGFloat = CGFloat(Double(screenWidth) * ((han * kWarnNewSize) / (300 * (21 - mapView.zoomLevel))))
                 
                 changeImage(&warnBox[i], MGLtag: osmWarnBox[i], newsize: newsize)
             }
@@ -690,7 +704,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         mapView.allowsScrolling = false // スクロールできないようにする
         mapView.allowsZooming = false // 拡大縮小できないようにする
         var location: CGPoint = mapView.center
-        location.x = view.center.x + screenWidth / 3
+        location.x = view.center.x - screenWidth / 3
         
         UIView.animate(
             withDuration: 0.2,
@@ -709,7 +723,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
                 self.mapView.addSubview(backgroundView)
                 self.view.bringSubview(toFront: backgroundView)
                 
-                self.configview = ConfigView(frame: CGRect(x: 0, y: 0, width: screenWidth / 3, height: screenHeight))
+                self.configview = ConfigView(frame: CGRect(x: screenWidth / 3 * 2, y: 0, width: screenWidth / 3, height: screenHeight))
                 self.view.addSubview(self.configview!)
                 self.view.sendSubview(toBack: self.configview!)
             }
@@ -732,6 +746,8 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         configview?.removeFromSuperview()
         ConfigView().deleteConfigDisplay()
         self.dismiss(animated: true, completion: nil)
+        
+        updateTimer.invalidate() // update()を発火させていたOpenStreetMapsのタイマーを止める
     }
     
     /*
@@ -770,7 +786,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         tapped = false
         runAfterDelay(1.5) {
             if pinData.inforType == kWarn {
-                let newsize: CGFloat = CGFloat(Double(screenWidth) * ((circleRadius[pinData.pinNum] * self.kDia * self.kWarnNewSize) / (500 * (21 - self.mapView.zoomLevel))))
+                let newsize: CGFloat = CGFloat(Double(screenWidth) * ((circleRadius[pinData.pinNum] * self.kDia * self.kWarnNewSize) / (300 * (21 - self.mapView.zoomLevel))))
                 self.warnPinView[pinData.pinNum].image = getResizeImage(makeLabel(pinData.pinNum, inforType: kWarn), newHeight: newsize)
             } else if pinData.inforType == kInfo {
                 if pinData.picType != nil {
@@ -827,7 +843,6 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
      * 災害円を描く
      */
     func update() {
-        
         let nowTime = Date() // 現在時刻
         
         for i in 0 ..< warnBox.count {

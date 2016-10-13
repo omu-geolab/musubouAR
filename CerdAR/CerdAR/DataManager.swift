@@ -68,6 +68,8 @@ var warnImageBox: [UIImageView] = [] // 画面上での警告タグ画像の表�
 var userLat: CLLocationDegrees = 0   // 緯度
 var userLon: CLLocationDegrees = 0 // 経度
 
+let butSize: CGFloat = 70.0 // ボタンサイズ
+
 
 
 /* 現在開いているページは地図画面か、ARカメラ画面か */
@@ -89,7 +91,7 @@ enum viewmode: Int {
 var viewMode = 0
 
 var warnImage = UIImage(named: "icon_warn0.png") // 情報タグの画像
-var warningMessage: UILabel! // 災害範囲内・付近にいるときに表示するメッセージ
+//var warningMessage: UILabel! // 災害範囲内・付近にいるときに表示するメッセージ
 
 var circleRadius = [CLLocationDistance]() // 災害範囲の円の半径
 

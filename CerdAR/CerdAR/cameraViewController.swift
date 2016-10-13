@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 import AVFoundation
 import CoreLocation
+import CoreMotion
 
 
 class cameraViewController: UIViewController, UIGestureRecognizerDelegate, CLLocationManagerDelegate, detailViewDelegate {
@@ -33,10 +34,12 @@ class cameraViewController: UIViewController, UIGestureRecognizerDelegate, CLLoc
     var warningView = UIView(frame: CGRect(x: 0.0, y: 0.0, width: screenWidth, height: screenHeight))
     var warnState = warningState.safe.rawValue // 現在ユーザーは災害からどの位置にいるか(安全・付近・侵入)
     
-    //定数
-    let updateLoc = 0.1 // 1.0°動いたら更新する
+    let warningMessage = UILabel(frame: CGRect(x: screenWidth - 55.0 - screenWidth * 0.38, y: screenHeight - 125.0, width: screenWidth * 0.38, height: screenHeight * 0.13))
     
-    let heading = UILabel(frame: CGRect(x: 200, y: 50, width: 300, height: 100))
+    
+    // 磁気センサ
+    let motionManager = CMMotionManager()
+    let newheading = UILabel(frame:CGRect(x: 200, y: 100, width: 300, height: 100))
     
     
     // MARK: ライフサイクル
@@ -47,27 +50,54 @@ class cameraViewController: UIViewController, UIGestureRecognizerDelegate, CLLoc
         
         warnState = warningState.safe.rawValue
         
+        
+        // 現在地の取得を開始
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager = CLLocationManager()
+        }
+        
         // カメラ起動
         initCamera()
         
         // 警告モード
         view.addSubview(warningView)
         
+        
+        /* 警告タグメッセージの設定 */
+        warningMessage.textColor = UIColor.black // 文字色(黒)
+        warningMessage.backgroundColor = UIColor.white // 背景色(白)
+        warningMessage.textAlignment = NSTextAlignment.center // 中央揃え
+        warningMessage.font = UIFont.systemFont(ofSize: 20.0) // 初期文字サイズ
+        warningMessage.numberOfLines = 2 // ラベル内の行数
+        warningMessage.layer.borderColor = UIColor.black.cgColor // 枠線の色(黒)
+        warningMessage.layer.borderWidth = 5.0 // 枠線の太さ
+        warningMessage.layer.cornerRadius = 20.0 // 枠線を角丸にする
+        
         // 地図切替ボタン
         let toMap_Button = UIButton()
         let buttonImage: UIImage = UIImage(named: "icon_map.png")!
-        toMap_Button.frame = CGRect(x: 0.0, y: 0.0, width: buttonImage.size.width / 4, height: buttonImage.size.height / 4)
+        toMap_Button.frame = CGRect(x: 0.0, y: 0.0, width: butSize, height: butSize)
         toMap_Button.setImage(buttonImage, for: UIControlState())
         toMap_Button.layer.position = CGPoint(x: 55.0, y: self.view.bounds.height - 55.0)
         view.addSubview(toMap_Button)
         toMap_Button.addTarget(self, action: #selector(cameraViewController.onClick_map(_:)), for: .touchUpInside)
         
         // コンパス
-        compassView = UIImageView(frame: CGRect(x: 50.0, y: 50.0, width: imgCompass.size.width / 4, height: imgCompass.size.height / 4))
+        compassView = UIImageView(frame: CGRect(x: 40.0, y: 40.0, width: imgCompass.size.width / 4, height: imgCompass.size.height / 4))
         compassView.image = imgCompass
         view.addSubview(compassView)
         
-        view.addSubview(heading)
+        view.addSubview(newheading)
+        
+        // 情報タグの初期化
+        for _ in 0 ..< infoBox.count {
+            infoImageBox.append(UIImageView(frame: CGRect(x: 0.0, y: 0.0, width: 0.0, height: 0.0)))
+        }
+        
+        // 警告タグの初期化
+        for _ in 0 ..< warnBox.count {
+            warnImageBox.append(UIImageView(frame: CGRect(x: 0.0, y: 0.0, width: 0.0, height: 0.0)))
+        }
         
     }
     
@@ -80,28 +110,120 @@ class cameraViewController: UIViewController, UIGestureRecognizerDelegate, CLLoc
         // カメラの開始
         avSession.startRunning()
         
-        // 情報タグの初期化
-        for _ in 0 ..< infoBox.count {
-            infoImageBox.append(UIImageView(frame: CGRect(x: 0.0, y: 0.0, width: 0.0, height: 0.0)))
-        }
-        
-        // 警告タグの初期化
-        for _ in 0 ..< warnBox.count {
-            warnImageBox.append(UIImageView(frame: CGRect(x: 0.0, y: 0.0, width: 0.0, height: 0.0)))
-        }
-        
-        
         // 現在地の取得を開始
         if CLLocationManager.locationServicesEnabled() {
-            locationManager = CLLocationManager()
             locationManager.delegate = self
-            locationManager.headingFilter = updateLoc
-            locationManager.headingOrientation = .portrait
-            locationManager.startUpdatingLocation()
+            locationManager.startUpdatingLocation() // GPSの更新を開始する
+            locationManager.headingFilter = 1.0
+            locationManager.headingOrientation = .landscapeRight // ホームボタン左
             locationManager.startUpdatingHeading()
+            
         }
         
+        //        // 更新周期を設定.
+        //        motionManager.deviceMotionUpdateInterval = 0.25 // 早く更新しすぎると、タグをタップしても反応しなくなる
+        //
+        //
+        //
+        //        // 磁気センサによる方位取得
+        //        motionManager.showsDeviceMovementDisplay = true
+        //        motionManager.startDeviceMotionUpdates(using: CMAttitudeReferenceFrame.xMagneticNorthZVertical, to: OperationQueue.current!, withHandler: {_, _ in
+        //
+        //            var min = 1001 // 現在地から一番近い災害までの距離
+        //            var idx = -1 // その災害を格納している配列のインデックス
+        //
+        //            let rpyattitude = self.motionManager.deviceMotion!.attitude
+        //            var yawdegrees = rpyattitude.yaw * 180 / M_PI
+        //            if yawdegrees < 0 {
+        //                yawdegrees = -1 * yawdegrees
+        //            } else {
+        //                yawdegrees = 360 - yawdegrees
+        //            }
+        //
+        //            self.newheading.text = String(format: "Direction:%.0f°", yawdegrees!)
+        //            self.newheading.textColor = UIColor.red
+        //
+        //            self.compassView.transform = CGAffineTransform(rotationAngle: CGFloat(-1 * yawdegrees! * M_PI) / 180)
+        //
+        //
+        //            for i in 0 ..< infoBox.count {
+        //
+        //                // 距離を取得する
+        //                infoBox[i].distance = calcDistance(infoBox[i].lat, lon: infoBox[i].lon, uLat: userLat, uLon: userLon)
+        //
+        //                // 1000m以内の場所のタグは表示する
+        //                if infoBox[i].distance <= 1000 {
+        //
+        //                    // 方角を取得する
+        //                    infoBox[i].direction = self.getGeoDirection(infoBox[i].lat, tLon: infoBox[i].lon)
+        //
+        //                    self.tagDisplay(i, imageBox: &infoImageBox, tDir: infoBox[i].direction, tDis: infoBox[i].distance, compass: yawdegrees!, inforType: infoBox[i].inforType)
+        //
+        //                } else if infoBox[i].distance >= 1000 && infoBox[i].distance <= 1050 {
+        //                    infoImageBox[i].removeFromSuperview()
+        //                }
+        //            }
+        //
+        //            for i in 0 ..< warnBox.count {
+        //
+        //                if warnBox[i].stop.compare(Date()) == ComparisonResult.orderedDescending && Date().compare(warnBox[i].start) == ComparisonResult.orderedDescending {
+        //
+        //                    // 距離を取得する
+        //                    warnBox[i].distance = calcDistance(warnBox[i].lat, lon: warnBox[i].lon, uLat: userLat, uLon: userLon)
+        //
+        //                    // 1000m以内の場所のタグは表示する
+        //                    if warnBox[i].distance <= 1000 {
+        //
+        //                        // 方角を取得する
+        //                        warnBox[i].direction = self.getGeoDirection(warnBox[i].lat, tLon: warnBox[i].lon)
+        //
+        //                        // 警告タグの画像を設定する
+        //                        switch warnBox[i].riskType {
+        //                        case 0: // 火災
+        //                            warnImage = UIImage(named: "icon_warn0.png")!
+        //                        case 1: // 浸水
+        //                            warnImage = UIImage(named: "icon_warn1.png")!
+        //                        case 2: // 土砂崩れ
+        //                            warnImage = UIImage(named: "icon_warn2.png")!
+        //                        case 3, 4, 5, 6: // 道路閉塞
+        //                            warnImage = UIImage(named: "icon_warn3.png")!
+        //                        default: // その他
+        //                            warnImage = UIImage(named: "icon_infoTag.png")!
+        //                            break
+        //                        }
+        //
+        //                        // 現在地から災害までの距離
+        //                        if min >= warnBox[i].distance {
+        //                            min = warnBox[i].distance
+        //                            idx = i
+        //                        }
+        //
+        //                        // 画面にタグを表示する
+        //                        self.tagDisplay(i, imageBox: &warnImageBox, tDir: warnBox[i].direction, tDis: warnBox[i].distance, compass: yawdegrees!, inforType: warnBox[i].inforType)
+        //                    }
+        //
+        //                } else if Date().compare(warnBox[i].stop) == ComparisonResult.orderedDescending {
+        //                    // 方角を取得する
+        //                    warnBox[i].direction = self.getGeoDirection(warnBox[i].lat, tLon: warnBox[i].lon)
+        //                    let angle = warnBox[i].direction - yawdegrees!
+        //                    if (angle >= 0 && angle <= 36.5) || (angle >= -36.5 && angle <= 0) {
+        //                        warnImageBox[i].removeFromSuperview()
+        //                    }
+        //                }
+        //            }
+        //
+        //
+        //            // 災害発生時、警告モードにし、警告メッセージを表示させる
+        //            if idx != -1 {
+        //                self.warningDisplay(idx, distance: warnBox[idx].distance, range: Int(circleRadius[idx]), warnState: &self.warnState, message1: warnBox[idx].message1, message2: warnBox[idx].message2)
+        //            }
+        //
+        //        })
+        
     }
+    
+    
+    
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -117,7 +239,12 @@ class cameraViewController: UIViewController, UIGestureRecognizerDelegate, CLLoc
         // カメラの停止
         avSession.stopRunning()
         
+        
+        
         count = 0 // タグのカウントの破棄
+        locationManager.stopUpdatingHeading() // GPSを停止する
+        locationManager.delegate = nil // デリゲートを止める
+        motionManager.stopDeviceMotionUpdates() // 磁気センサを停止する
     }
     
     override func didReceiveMemoryWarning() {
@@ -143,8 +270,11 @@ class cameraViewController: UIViewController, UIGestureRecognizerDelegate, CLLoc
      */
     func locationManager(_ manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
         
-        heading.text = String(newHeading.magneticHeading)
-        heading.font = UIFont.systemFont(ofSize: 50)
+        self.compassView.transform = CGAffineTransform(rotationAngle: CGFloat(-1 * newHeading.magneticHeading * M_PI) / 180)
+        
+        
+        newheading.text = String(newHeading.magneticHeading)
+        newheading.font = UIFont.systemFont(ofSize: 50)
         
         if newHeading.headingAccuracy < 0 { // PCの磁気の影響を受けている時は処理をしない
             return
@@ -221,16 +351,16 @@ class cameraViewController: UIViewController, UIGestureRecognizerDelegate, CLLoc
             }
         }
         
-        // コンパスの向きを調整する
-        //print("true", newHeading.trueHeading)
-        //print("magne", newHeading.magneticHeading) // 北0 東90 南 180 西270
         
-        compassView.transform = CGAffineTransform(rotationAngle: CGFloat(-1 * newHeading.magneticHeading * M_PI) / 180)
         
         
         // 災害発生時、警告モードにし、警告メッセージを表示させる
         if idx != -1 {
             warningDisplay(idx, distance: warnBox[idx].distance, range: Int(circleRadius[idx]), warnState: &warnState, message1: warnBox[idx].message1, message2: warnBox[idx].message2)
+        } else {
+            warningMessage.removeFromSuperview()
+            warnState = warningState.safe.rawValue
+            warningView.alpha = 0.0
         }
         
     }
@@ -333,17 +463,17 @@ class cameraViewController: UIViewController, UIGestureRecognizerDelegate, CLLoc
                     warningView.frame = CGRect(x: 0.0, y: screenHeight * 0.75, width: screenWidth, height: screenHeight / 4)
                     warningView.backgroundColor = UIColor(red: 1.000, green: 0.945, blue: 0.024, alpha: 0.3)
                     
+                    
                 default: // その他の災害：緑色
                     warningView.frame = CGRect(x: 0.0, y: 0.0, width: screenWidth, height: screenHeight)
                     warningView.backgroundColor = UIColor(red: 0.200, green: 1.000, blue: 0.384, alpha: 0.3)
-                    break
                 }
                 
                 warningMessage.text = message2 // 警告メッセージ
                 
                 // 一定時間後に警告メッセージを消す
                 runAfterDelay(10.0) {
-                    warningMessage.removeFromSuperview()
+                    self.warningMessage.removeFromSuperview()
                 }
                 
                 view.addSubview(warningMessage)
@@ -358,10 +488,11 @@ class cameraViewController: UIViewController, UIGestureRecognizerDelegate, CLLoc
                 
                 // 一定時間後に警告メッセージを消す
                 runAfterDelay(10.0) {
-                    warningMessage.removeFromSuperview()
+                    self.warningMessage.removeFromSuperview()
                 }
                 
-                warningView.alpha = 0 // alphaを直接操作する
+                warningView.backgroundColor = UIColor.clear // 透明にする
+                
                 view.addSubview(warningMessage)
                 warnState = warningState.near.rawValue
             }
@@ -370,7 +501,7 @@ class cameraViewController: UIViewController, UIGestureRecognizerDelegate, CLLoc
         } else {
             
             if warnState != warningState.safe.rawValue {
-                warningView.alpha = 0 // alphaを直接操作する
+                warningView.backgroundColor = UIColor.clear // 透明にする
                 warningMessage.removeFromSuperview()
                 warnState = warningState.safe.rawValue
             }
@@ -481,7 +612,7 @@ class cameraViewController: UIViewController, UIGestureRecognizerDelegate, CLLoc
      *
      * @param recognizer
      */
-    func didClickImageView(_ recognizer: UIGestureRecognizer) {
+    func didClickImageView(_ sender: UITapGestureRecognizer) {
         
         backgroundView = detailView.makebackgroungView()
         backgroundView.isUserInteractionEnabled = true
@@ -490,7 +621,7 @@ class cameraViewController: UIViewController, UIGestureRecognizerDelegate, CLLoc
         
         view.addSubview(backgroundView)
         
-        if let imageView = recognizer.view as? UIImageView {
+        if let imageView = sender.view as? UIImageView {
             
             if imageView.tag >= 0 {
                 pinData = infoBox[imageView.tag]
