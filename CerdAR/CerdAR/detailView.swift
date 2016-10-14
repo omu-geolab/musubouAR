@@ -86,13 +86,13 @@ class detailView: UIView {
         self.addSubview(distance)
         
         
-        
         // 画像・動画の挿入(画面左側)
         if pinData.inforType == kInfo {
             
             if pinData.picType == nil {
-                let warnImageView = UIImageView(frame: CGRect.init(x: CGFloat(dWid * 0.8 * 0.05), y: CGFloat(dHei * 0.3), width: bounds.height * 0.5, height: bounds.height * 0.5))
+                let warnImageView = UIImageView(frame: CGRect.init(x: CGFloat(dWid * 0.8 * 0.15), y: CGFloat(dHei * 0.2), width: dHei * 0.4, height: dHei * 0.55))
                 warnImageView.image = UIImage(named: pinData.icon)
+                print(UIImage(named: pinData.icon)?.size.width, UIImage(named: pinData.icon)?.size.height)
                 self.addSubview(warnImageView)
                 
             } else if pinData.picType == kPhoto { // 画像
@@ -229,7 +229,6 @@ class detailView: UIView {
             self.addSubview(warnImageView)
             
         }
-        
     }
     
     

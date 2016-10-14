@@ -68,6 +68,7 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     
     // MARK: ライフサイクル
     override func viewDidLoad() {
+        print("apple:viewDidLoad")
         super.viewDidLoad()
         self.navigationController?.setNavigationBarHidden(true, animated: true)
         
@@ -165,6 +166,7 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     
     /* 画面が表示される直前 */
     override func viewWillAppear(_ animated: Bool) {
+        print("apple:viewWillAppear")
         super.viewWillAppear(animated)
         
         mapView?.delegate = self
@@ -202,6 +204,7 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     
     
     override func viewWillDisappear(_ animated: Bool) {
+        print("apple:viewWillDisappear")
         super.viewWillDisappear(animated)
         
         for annotation in self.mapView!.annotations {
@@ -212,6 +215,7 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     
     /* 別の画面に遷移した直後(破棄) */
     override func viewDidDisappear(_ animated: Bool) {
+        print("apple:viewDidDisappear")
         super.viewDidDisappear(animated)
         
         mapView!.delegate = nil
@@ -491,34 +495,32 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     /* データを格納する */
     func storeData() {
         
-        let file_name = "data.json"
+        let fileName = "data.json"
         var json: JSON!
         
 //        let path = Bundle.main.path(forResource: "data", ofType: "json")!
 //        let jsonData = NSData(contentsOfFile: path)!
 //        json = JSON(data:jsonData as Data)
         
+                        if let dir: NSString = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.allDomainsMask, true).first as NSString? {
         
-                if let dir: NSString = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.allDomainsMask, true).first as NSString? {
+                            let pathFileName = dir.appendingPathComponent(fileName)
+                            guard (try? Data(contentsOf: URL(fileURLWithPath: pathFileName))) != nil else {
+                                let alert = UIAlertController(title: "ERROR!!", message: "JSONファイルが見つかりませんでした。", preferredStyle: UIAlertControllerStyle.alert)
+                                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default) { action -> Void in })
+                                present(alert, animated: true, completion: nil)
         
-                    let path_file_name = dir.appendingPathComponent(file_name)
-                    guard (try? Data(contentsOf: URL(fileURLWithPath: path_file_name))) != nil else {
-                        let alert = UIAlertController(title: "ERROR!!", message: "JSONファイルが見つかりませんでした。", preferredStyle: UIAlertControllerStyle.alert)
-                        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default) { action -> Void in })
-                        present(alert, animated: true, completion: nil)
+                                return
+                            }
         
-                        return
-                    }
-        
-                    let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
-                    print(documentsPath)
+                            let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+                            print(documentsPath)
         
         
-                    let jsonData = try? Data(contentsOf: URL(fileURLWithPath: path_file_name))
+                            let jsonData = try? Data(contentsOf: URL(fileURLWithPath: pathFileName))
         
-                    json = JSON(data:jsonData!)
-        
-                }
+                            json = JSON(data:jsonData!)
+                        }
         
         // jsonの構造の記述ミス・jsonファイルが空のとき
         // 地図・ARカメラは使用できるがタグは表示されない
@@ -940,7 +942,7 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         if annotation.tagData.inforType == kInfo {
             if annotation.tagData.picType == nil {
                 
-                annotation.tagData.pinImage = getResizeImage(UIImage(named: annotation.tagData.icon)!, newHeight: 100)
+                annotation.tagData.pinImage = getResizeImage(UIImage(named: annotation.tagData.icon)!, newHeight: 60)
                 //annotation.tagData.expandImage = getResizeImage(UIImage(named: annotation.tagData.icon)!, newHeight: 500)
                 
                 self.mapView!.addAnnotation(annotation) // ピン情報の更新
@@ -1128,7 +1130,6 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     func update() {
         
         let nowTime = Date() // 現在時刻
-        print("update")
         for i in 0 ..< warnBox.count {
             
             // 過去の災害
