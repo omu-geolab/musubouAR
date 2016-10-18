@@ -42,6 +42,14 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
     var scaleZoom: MKCoordinateRegion! // タグをタップしたときの表示範囲を保持
     
     var warningView: UIView! // 災害範囲内に侵入した時に画面の色を変える
+    var warnNums: [Int] = [] // 災害番号
+    var msgCount = 0
+    var msgSafeCount = 0
+    var viewCount = 0
+    var viewSafeCount = 0
+    var messageTimer: Timer!
+    var viewTimer: Timer!
+    var box: [Int] = []
     
     var circle = [MKCircle]() // 災害範囲の円
     
@@ -154,6 +162,8 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         warningMessage.layer.borderColor = UIColor.black.cgColor // 枠線の色(黒)
         warningMessage.layer.borderWidth = kWarnBorder // 枠線の太さ
         warningMessage.layer.cornerRadius = kWarnCorner // 枠線を角丸にする
+        warningMessage.clipsToBounds = true
+        mapView.addSubview(warningMessage)
         
         /* ピンの設定 */
         for i in 0 ..< jsonDataManager.sharedInstance.infoBox.count {
@@ -227,6 +237,13 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         mapView.delegate = nil
         locationManager.delegate = nil
         locationManager.stopUpdatingLocation() // GPSの更新を停止する
+        if messageTimer != nil {
+            messageTimer.invalidate()
+        }
+        if viewTimer != nil {
+            viewTimer.invalidate()
+        }
+        updateTimer.invalidate()
     }
     
     
@@ -417,35 +434,6 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         userLat = (locationManager.location?.coordinate.latitude)!
         userLon = (locationManager.location?.coordinate.longitude)!
         
-        if tapped == false {
-            
-            var min = 1001  // 現在地から一番近い災害までの距離
-            var idx = -1 // その災害を格納している配列のインデックス
-            
-            for i in 0 ..< jsonDataManager.sharedInstance.warnBox.count {
-                
-                if jsonDataManager.sharedInstance.warnBox[i].stop.compare(Date()) == ComparisonResult.orderedDescending && Date().compare(jsonDataManager.sharedInstance.warnBox[i].start) == ComparisonResult.orderedDescending {
-                    
-                    jsonDataManager.sharedInstance.warnBox[i].distance = calcDistance(jsonDataManager.sharedInstance.warnBox[i].lat, lon: jsonDataManager.sharedInstance.warnBox[i].lon, uLat: userLat, uLon: userLon) // 距離を求める
-                    
-                    updatePin(i)
-                    
-                    if min > jsonDataManager.sharedInstance.warnBox[i].distance {
-                        min = jsonDataManager.sharedInstance.warnBox[i].distance
-                        idx = i
-                    }
-                }
-            }
-            
-            // 警告モードにしたり、警告メッセージを表示したりする
-            if idx != -1 {
-                intrusion(jsonDataManager.sharedInstance.warnBox[idx].riskType, distance: jsonDataManager.sharedInstance.warnBox[idx].distance, range: Int(circleRadius[idx]), warnState: &warnState, message1: jsonDataManager.sharedInstance.warnBox[idx].message1, message2: jsonDataManager.sharedInstance.warnBox[idx].message2)
-            } else {
-                warningMessage.removeFromSuperview()
-            }
-            
-            scalingImage()
-        }
     }
     
     
@@ -491,83 +479,98 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
     
     // MARK: プライベート関数
     
-    /**
-     * 災害範囲に近づいたり侵入したりすると、
-     * 警告メッセージを出したり、警告モードにしたりする
-     *
-     * @param riskType 災害の種類
-     * @param distance ユーザーの現在地から災害の中心点までの距離(m)
-     * @param range 災害の範囲(半径(m))
-     * @param warnState ユーザーが安全圏にいるか、被災地に近づいているか、侵入しているか
-     * @param message1 ユーザーが災害範囲付近にいるときに出る警告メッセージ
-     * @param message2 ユーザーが災害範囲内に侵入したときに出る警告メッセージ
-     */
-    func intrusion(_ riskType: Int, distance: Int, range: Int, warnState: inout String, message1: String, message2: String) {
+    
+    /* 警告メッセージを表示する */
+    func updateMessage() {
         
-        // 災害範囲内に侵入した時
-        if distance - range <= 0 {
+        if msgCount == box.count {
+            msgCount = 0
+            msgSafeCount = 0
+        }
+        
+        let num = box[msgCount]
+        
+        jsonDataManager.sharedInstance.warnBox[num].distance = calcDistance(jsonDataManager.sharedInstance.warnBox[num].lat, lon: jsonDataManager.sharedInstance.warnBox[num].lon, uLat: userLat, uLon: userLon) // 距離を求める
+        
+        if jsonDataManager.sharedInstance.warnBox[num].distance - Int(circleRadius[num]) < 0 { // 侵入
+            warningMessage.text = jsonDataManager.sharedInstance.warnBox[num].message2 // 警告メッセージ
+            msgCount += 1
             
-            if warnState != warningState.inst.rawValue {
-                switch riskType {
-                    
-                case 0: // 火災のとき：赤色
-                    warningView.backgroundColor = UIColor(red: 0.545, green: 0.020, blue: 0.220, alpha: 1.0)
-                    
-                case 1: // 浸水のとき：青色
-                    warningView.backgroundColor = UIColor(red: 0.000, green: 0.400, blue: 1.000, alpha: 1.0)
-                    
-                case 2: // 落橋のとき：黄色
-                    warningView.backgroundColor = UIColor(red: 1.000, green: 0.945, blue: 0.024, alpha: 1.0)
-                    
-                case 3, 4, 5, 6: // 土砂崩れのとき：茶色
-                    warningView.backgroundColor = UIColor(red: 0.800, green: 0.400, blue: 0.000, alpha: 1.0)
-                    
-                default: // その他の災害のとき：緑色
-                    warningView.backgroundColor = UIColor(red: 0.200, green: 1.000, blue: 0.384, alpha: 1.0)
-                    break
-                }
-                
-                mapView.alpha = kMapAbnormal
-                warningMessage.text = message2 // 警告メッセージ
-                
-                // 一定時間後に警告メッセージを消す
-                runAfterDelay(10.0) {
-                    self.warningMessage.removeFromSuperview()
-                }
-                
-                mapView.addSubview(warningMessage)
-                warnState = warningState.inst.rawValue
-                
+        } else if jsonDataManager.sharedInstance.warnBox[num].distance - Int(circleRadius[num]) < 500 { // 付近
+            warningMessage.text = jsonDataManager.sharedInstance.warnBox[num].message1 // 警告メッセージ
+            msgCount += 1
+            
+        } else { // 安全
+            msgSafeCount += 1
+            if msgSafeCount == box.count {
+                msgSafeCount = 0
+                warningMessage.text = "あんぜん！"
+                return
             }
-            
-            // 災害範囲付近にいる時(範囲から500mとする)
-        } else if distance - range > 0 && distance - range <= 500 {
-            
-            if warnState != warningState.near.rawValue {
-                
-                self.mapView.alpha = kMapNormal
-                warningMessage.text = message1 // 警告メッセージ
-                
-                // 一定時間後に警告メッセージを消す
-                runAfterDelay(10.0) {
-                    self.warningMessage.removeFromSuperview()
-                }
-                
-                mapView.addSubview(warningMessage)
-                warnState = warningState.near.rawValue
-            }
-            
-            // 安全圏にいる時
-        } else {
-            
-            if warnState != warningState.safe.rawValue {
-                self.mapView.alpha = kMapNormal
-                warningMessage.removeFromSuperview()
-                warnState = warningState.safe.rawValue
-            }
+            msgCount += 1
+            messageTimer.invalidate()
+            updateMessage()
+        }
+        
+        if !messageTimer.isValid {
+            messageTimer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(osmViewController.updateMessage), userInfo: nil, repeats: true)
         }
     }
     
+    
+    /*
+     * 警告モードを表示する
+     */
+    func updateView() {
+        
+        if viewCount == box.count {
+            viewCount = 0
+            viewSafeCount = 0
+        }
+        
+        let num = box[viewCount]
+        
+        jsonDataManager.sharedInstance.warnBox[num].distance = calcDistance(jsonDataManager.sharedInstance.warnBox[num].lat, lon: jsonDataManager.sharedInstance.warnBox[num].lon, uLat: userLat, uLon: userLon) // 距離を求める
+        
+        if jsonDataManager.sharedInstance.warnBox[num].distance - Int(circleRadius[num]) < 0 { // 侵入
+            
+            switch jsonDataManager.sharedInstance.warnBox[num].riskType {
+                
+            case 0: // 火災：赤色
+                warningView.backgroundColor = UIColor(red: 1.000, green: 0.000, blue: 0.000, alpha: 0.7)
+                
+            case 1: // 浸水：青色
+                warningView.backgroundColor = UIColor(red: 0.000, green: 0.400, blue: 1.000, alpha: 0.7)
+                
+            case 2: // 土砂崩れ：茶色
+                warningView.backgroundColor = UIColor(red: 0.800, green: 0.400, blue: 0.000, alpha: 0.5)
+                
+            case 3, 4, 5, 6: // 道路閉塞：黄色
+                warningView.backgroundColor = UIColor(red: 1.000, green: 0.945, blue: 0.024, alpha: 0.7)
+                
+            default: // その他の災害：緑色
+                warningView.backgroundColor = UIColor(red: 0.200, green: 1.000, blue: 0.384, alpha: 0.7)
+                break
+            }
+            mapView.alpha = 0.8
+            viewCount += 1
+            
+        } else { // 安全
+            viewSafeCount += 1
+            if viewSafeCount == box.count {
+                viewSafeCount = 0
+                return
+            }
+            viewCount += 1
+            mapView.alpha = 1.0
+            viewTimer.invalidate()
+            updateView()
+        }
+        
+        if !viewTimer.isValid {
+            viewTimer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(osmViewController.updateView), userInfo: nil, repeats: true)
+        }
+    }
     
     /*
      * タップされたタグを赤色にする
@@ -709,7 +712,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
                 
                 backgroundView = detailView.makebackgroungView()
                 backgroundView.isUserInteractionEnabled = true
-                backgroundView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(mapViewController.onClick_configBackground(_:))))
+                backgroundView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(osmViewController.onClick_configBackground(_:))))
                 self.mapView.addSubview(backgroundView)
                 self.view.bringSubview(toFront: backgroundView)
                 
@@ -736,7 +739,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         configview?.removeFromSuperview()
         ConfigView().deleteConfigDisplay()
         self.dismiss(animated: true, completion: nil)
-        //self.present(mapViewController(), animated: true, completion: nil)
+        //self.present(appleMaps, animated: true, completion: nil)
         
         updateTimer.invalidate() // update()を発火させていたOpenStreetMapsのタイマーを止める
     }
@@ -836,6 +839,19 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
     func update() {
         let nowTime = Date() // 現在時刻
         
+        box.removeAll()
+        
+        if messageTimer != nil {
+            messageTimer.invalidate()
+        }
+        
+        if viewTimer != nil {
+            viewTimer.invalidate()
+        }
+        
+        msgCount = 0
+        viewCount = 0
+        
         for i in 0 ..< jsonDataManager.sharedInstance.warnBox.count {
             
             // 過去の災害
@@ -850,13 +866,39 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
                 // 現在災害発生中
             } else if jsonDataManager.sharedInstance.warnBox[i].stop.compare(nowTime) == ComparisonResult.orderedDescending && nowTime.compare(jsonDataManager.sharedInstance.warnBox[i].start) == ComparisonResult.orderedDescending {
                 
-                //self.mapView.addAnnotation(osmWarnBox[i])
                 let Sn = Date().timeIntervalSince(jsonDataManager.sharedInstance.warnBox[i].start) / 60 // 開始時刻(start)と現在時刻(now)の差
                 makeCircle(i, startNow: Sn)
                 
-            } else {
-                //self.mapView.removeAnnotation(osmWarnBox[i])
+                updatePin(i)
                 
+                // 警告タグの範囲を更新
+                let han: Double = circleRadius[i] * kDia + 0.1
+                let newsize: CGFloat = CGFloat(Double(screenWidth) * ((han * kWarnNewSize) / (300 * (21 - mapView.zoomLevel))))
+                changeImage(&jsonDataManager.sharedInstance.warnBox[i], MGLtag: osmWarnBox[i], newsize: newsize)
+                
+                box.append(i)
+                
+                
+            } else {
+                
+            }
+        }
+        
+        // 災害発生していないとき
+        if box.count == 0 {
+            warningMessage.text = "安全1"
+        } else {
+            if messageTimer == nil {
+                messageTimer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(osmViewController.updateMessage), userInfo: nil, repeats: true)
+            } else if !messageTimer.isValid {
+                messageTimer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(osmViewController.updateMessage), userInfo: nil, repeats: true)
+            }
+            
+            if viewTimer == nil {
+                viewTimer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(osmViewController.updateView), userInfo: nil, repeats: true)
+                
+            } else if !viewTimer.isValid {
+                viewTimer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(osmViewController.updateView), userInfo: nil, repeats: true)
             }
         }
     }

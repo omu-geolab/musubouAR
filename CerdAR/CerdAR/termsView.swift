@@ -2,7 +2,7 @@
 //  termsView.swift
 //  CerdAR
 //
-//  Copyright © 2016年 2016 BRILLIANTSERVICE CO.,LTD., CERD (Osaka City University). All rights reserved.
+//  Copyright (c) 2016 BRILLIANTSERVICE CO.,LTD., CERD (Osaka City University)
 //
 
 import UIKit

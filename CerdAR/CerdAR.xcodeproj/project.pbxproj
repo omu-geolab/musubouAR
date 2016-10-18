@@ -14,11 +14,11 @@
 		AC05B9F71D811F830082C52A /* icon_warn2.png in Resources */ = {isa = PBXBuildFile; fileRef = AC05B9F11D811F830082C52A /* icon_warn2.png */; };
 		AC05B9F81D811F830082C52A /* icon_warn3.png in Resources */ = {isa = PBXBuildFile; fileRef = AC05B9F21D811F830082C52A /* icon_warn3.png */; };
 		AC05B9FA1D811FDA0082C52A /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC05B9F91D811FDA0082C52A /* DataManager.swift */; };
-		AC0F69F61DB5A96F000993D5 /* icon_camera.png in Resources */ = {isa = PBXBuildFile; fileRef = AC0F69F11DB5A96F000993D5 /* icon_camera.png */; };
-		AC0F69F81DB5A96F000993D5 /* icon_locate.png in Resources */ = {isa = PBXBuildFile; fileRef = AC0F69F31DB5A96F000993D5 /* icon_locate.png */; };
-		AC0F69F91DB5A96F000993D5 /* icon_map.png in Resources */ = {isa = PBXBuildFile; fileRef = AC0F69F41DB5A96F000993D5 /* icon_map.png */; };
-		AC0F69FA1DB5A96F000993D5 /* icon_menu.png in Resources */ = {isa = PBXBuildFile; fileRef = AC0F69F51DB5A96F000993D5 /* icon_menu.png */; };
-		AC0F69FC1DB5AA37000993D5 /* icon_compass.png in Resources */ = {isa = PBXBuildFile; fileRef = AC0F69FB1DB5AA37000993D5 /* icon_compass.png */; };
+		AC0F6A041DB62BCD000993D5 /* icon_camera.png in Resources */ = {isa = PBXBuildFile; fileRef = AC0F69FF1DB62BCD000993D5 /* icon_camera.png */; };
+		AC0F6A051DB62BCD000993D5 /* icon_compass.png in Resources */ = {isa = PBXBuildFile; fileRef = AC0F6A001DB62BCD000993D5 /* icon_compass.png */; };
+		AC0F6A061DB62BCD000993D5 /* icon_locate.png in Resources */ = {isa = PBXBuildFile; fileRef = AC0F6A011DB62BCD000993D5 /* icon_locate.png */; };
+		AC0F6A071DB62BCD000993D5 /* icon_map.png in Resources */ = {isa = PBXBuildFile; fileRef = AC0F6A021DB62BCD000993D5 /* icon_map.png */; };
+		AC0F6A081DB62BCD000993D5 /* icon_menu.png in Resources */ = {isa = PBXBuildFile; fileRef = AC0F6A031DB62BCD000993D5 /* icon_menu.png */; };
 		AC2C03D41D9D1CB9009926E3 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2C03D31D9D1CB9009926E3 /* SwiftyJSON.swift */; };
 		AC2C52C61D5805F70032B689 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2C52C51D5805F70032B689 /* AppDelegate.swift */; };
 		AC2C52C81D5805F70032B689 /* mapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2C52C71D5805F70032B689 /* mapViewController.swift */; };
@@ -85,11 +85,11 @@
 		AC05B9F11D811F830082C52A /* icon_warn2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_warn2.png; path = CerdAR/icon_warn2.png; sourceTree = "<group>"; };
 		AC05B9F21D811F830082C52A /* icon_warn3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_warn3.png; path = CerdAR/icon_warn3.png; sourceTree = "<group>"; };
 		AC05B9F91D811FDA0082C52A /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
-		AC0F69F11DB5A96F000993D5 /* icon_camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_camera.png; path = CerdAR/icon_camera.png; sourceTree = "<group>"; };
-		AC0F69F31DB5A96F000993D5 /* icon_locate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_locate.png; path = CerdAR/icon_locate.png; sourceTree = "<group>"; };
-		AC0F69F41DB5A96F000993D5 /* icon_map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_map.png; path = CerdAR/icon_map.png; sourceTree = "<group>"; };
-		AC0F69F51DB5A96F000993D5 /* icon_menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_menu.png; path = CerdAR/icon_menu.png; sourceTree = "<group>"; };
-		AC0F69FB1DB5AA37000993D5 /* icon_compass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_compass.png; path = CerdAR/icon_compass.png; sourceTree = "<group>"; };
+		AC0F69FF1DB62BCD000993D5 /* icon_camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_camera.png; path = CerdAR/icon_camera.png; sourceTree = "<group>"; };
+		AC0F6A001DB62BCD000993D5 /* icon_compass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_compass.png; path = CerdAR/icon_compass.png; sourceTree = "<group>"; };
+		AC0F6A011DB62BCD000993D5 /* icon_locate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_locate.png; path = CerdAR/icon_locate.png; sourceTree = "<group>"; };
+		AC0F6A021DB62BCD000993D5 /* icon_map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_map.png; path = CerdAR/icon_map.png; sourceTree = "<group>"; };
+		AC0F6A031DB62BCD000993D5 /* icon_menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_menu.png; path = CerdAR/icon_menu.png; sourceTree = "<group>"; };
 		AC2C03D31D9D1CB9009926E3 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		AC2C52C21D5805F70032B689 /* CerdAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CerdAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC2C52C51D5805F70032B689 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -213,11 +213,11 @@
 		AC2C53021D5809610032B689 /* Image */ = {
 			isa = PBXGroup;
 			children = (
-				AC0F69FB1DB5AA37000993D5 /* icon_compass.png */,
-				AC0F69F11DB5A96F000993D5 /* icon_camera.png */,
-				AC0F69F31DB5A96F000993D5 /* icon_locate.png */,
-				AC0F69F41DB5A96F000993D5 /* icon_map.png */,
-				AC0F69F51DB5A96F000993D5 /* icon_menu.png */,
+				AC0F69FF1DB62BCD000993D5 /* icon_camera.png */,
+				AC0F6A001DB62BCD000993D5 /* icon_compass.png */,
+				AC0F6A011DB62BCD000993D5 /* icon_locate.png */,
+				AC0F6A021DB62BCD000993D5 /* icon_map.png */,
+				AC0F6A031DB62BCD000993D5 /* icon_menu.png */,
 				AC5AED871DA4A181009443E9 /* hinan-bldg-marker.png */,
 				AC5AED881DA4A181009443E9 /* hinan-camp-marker.png */,
 				AC5AED8B1DA4A181009443E9 /* icon_notfound.png */,
@@ -377,12 +377,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC0F69F81DB5A96F000993D5 /* icon_locate.png in Resources */,
-				AC0F69FC1DB5AA37000993D5 /* icon_compass.png in Resources */,
+				AC0F6A061DB62BCD000993D5 /* icon_locate.png in Resources */,
 				AC5AED8F1DA4A181009443E9 /* hinan-camp-marker.png in Resources */,
 				AC05B9F61D811F830082C52A /* icon_warn1.png in Resources */,
 				AC5AED931DA4A181009443E9 /* info-marker.png in Resources */,
-				AC0F69F61DB5A96F000993D5 /* icon_camera.png in Resources */,
+				AC0F6A041DB62BCD000993D5 /* icon_camera.png in Resources */,
 				AC5AED921DA4A181009443E9 /* icon_notfound.png in Resources */,
 				AC2C52D31D5805F70032B689 /* LaunchScreen.storyboard in Resources */,
 				AC5AED8E1DA4A181009443E9 /* hinan-bldg-marker.png in Resources */,
@@ -393,9 +392,10 @@
 				AC2C52CB1D5805F70032B689 /* Main.storyboard in Resources */,
 				AC05B9F71D811F830082C52A /* icon_warn2.png in Resources */,
 				AC05B9F81D811F830082C52A /* icon_warn3.png in Resources */,
-				AC0F69F91DB5A96F000993D5 /* icon_map.png in Resources */,
-				AC0F69FA1DB5A96F000993D5 /* icon_menu.png in Resources */,
+				AC0F6A071DB62BCD000993D5 /* icon_map.png in Resources */,
+				AC0F6A081DB62BCD000993D5 /* icon_menu.png in Resources */,
 				AC5AED941DA4A181009443E9 /* medicine-marker.png in Resources */,
+				AC0F6A051DB62BCD000993D5 /* icon_compass.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -579,7 +579,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = CerdAR/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ymn.CerdAR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -599,7 +599,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = CerdAR/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ymn.CerdAR;
 				PRODUCT_NAME = "$(TARGET_NAME)";

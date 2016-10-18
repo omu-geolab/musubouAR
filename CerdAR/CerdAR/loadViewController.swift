@@ -42,7 +42,7 @@ class loadViewController: UIViewController, termsViewDelegate, CLLocationManager
             // ネットワークに接続されている時
             if CheckReachability(hostname: "www") {
                 // jsonを読み込んでから利用規約を表示する
-                let fileName = "data.json"
+                let fileName = "data.geojson"
                 var json: JSON!
                 
                 //        let path = Bundle.main.path(forResource: "data", ofType: "json")!
