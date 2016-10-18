@@ -33,10 +33,9 @@ extension UIView {
     }
 }
 
-class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate, detailViewDelegate, termsViewDelegate, ConfigViewDelegate {
+class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate, detailViewDelegate, ConfigViewDelegate {
     
     var detailview: detailView? // 詳細画面のビュー
-    var termsview: termsView? // 利用規約のビュー
     var configview: ConfigView? // 設定画面のビュー
     var mapView: MKMapView? // AppleMaps
     
@@ -84,13 +83,10 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         mapView!.mapType = MKMapType.standard  // 地図の種類
         mapView!.showsUserLocation = true      // 現在地の表示を許可する
         mapView!.showsScale = true // スケールバーを表示する
-        mapView!.setCenter(mapView!.userLocation.coordinate, animated: true)
+        //mapView!.setCenter(mapView!.userLocation.coordinate, animated: true)
         view.addSubview(mapView!)
         
-        /* 現在地の取得を開始 */
-        if CLLocationManager.locationServicesEnabled() {
-            locationManager = CLLocationManager()
-        }
+        locationManager = CLLocationManager()
         
         /* 画面遷移するためのボタンを生成 */
         let toCam_button = UIButton()
@@ -112,7 +108,7 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         
         /* 画面の中心を現在地にするためのボタン生成 */
         let nowLoc_button = UIButton()
-        let locButImage: UIImage = UIImage(named: "icon_locate.jpg")!
+        let locButImage: UIImage = UIImage(named: "icon_locate.png")!
         nowLoc_button.frame = CGRect.init(x: 0, y: 0, width: butSize, height: butSize)
         nowLoc_button.setImage(locButImage, for: UIControlState())
         nowLoc_button.layer.position = CGPoint(x: 55.0, y: 90.0)
@@ -132,35 +128,28 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         warningMessage.layer.borderWidth = 5.0 // 枠線の太さ
         warningMessage.layer.cornerRadius = 20.0 // 枠線を角丸にする
         
+        for i in 0 ..< jsonDataManager.sharedInstance.infoBox.count {
+            appleMapsInfoBox.append(appleMapsAnnotation())
+            appleMapsInfoBox[i].tagData = jsonDataManager.sharedInstance.infoBox[i]
+            appleMapsInfoBox[i].coordinate = CLLocationCoordinate2DMake(appleMapsInfoBox[i].tagData.lat, appleMapsInfoBox[i].tagData.lon)
+        }
         
-        /* 利用規約を表示する */
-        termsview = termsView(frame: CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight))
-        termsview!.delegate = self
-        self.view.addSubview(termsview!)
+        for i in 0 ..< jsonDataManager.sharedInstance.warnBox.count {
+            appleMapsWarnBox.append(appleMapsAnnotation())
+            appleMapsWarnBox[i].tagData = jsonDataManager.sharedInstance.warnBox[i]
+            appleMapsWarnBox[i].coordinate = CLLocationCoordinate2DMake(appleMapsWarnBox[i].tagData.lat, appleMapsWarnBox[i].tagData.lon)
+        }
         
-        let status = CLLocationManager.authorizationStatus()
         
-        /* ネットワークに接続でき、位置情報が許可されているときにデータを読み込む */
+        // 現在地を中心に画面を表示する(起動してすぐにユーザーの現在地を取ることはできないため、1.5秒待つ)
         if CheckReachability(hostname: "www") {
-            switch status {
-            case .authorizedWhenInUse, .authorizedAlways:
-                storeData()
-            default:
-                break
+            if CLLocationManager.authorizationStatus() == .authorizedAlways || CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
+                runAfterDelay(1.5) {
+                    let coordinateRegion = MKCoordinateRegionMakeWithDistance((self.locationManager.location?.coordinate)!, 800, 800)
+                    self.mapView!.setRegion(coordinateRegion, animated:true)
+                }
             }
         }
-    }
-    
-    /* ネットワークに接続されているか確認する */
-    func CheckReachability(hostname: String) -> Bool {
-        let reachability = SCNetworkReachabilityCreateWithName(nil, hostname)!
-        var flags = SCNetworkReachabilityFlags.connectionAutomatic
-        if !SCNetworkReachabilityGetFlags(reachability, &flags) {
-            return false
-        }
-        let isReachable = (flags.rawValue & UInt32(kSCNetworkFlagsReachable)) != 0
-        let needsConnection = (flags.rawValue & UInt32(kSCNetworkFlagsConnectionRequired)) != 0
-        return (isReachable && !needsConnection)
     }
     
     
@@ -172,26 +161,29 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         mapView?.delegate = self
         
         /* 現在地の取得を開始 */
-        if CLLocationManager.locationServicesEnabled() {
-            locationManager.delegate = self
-            locationManager.startUpdatingLocation() // GPSの使用を開始する
-            locationManager.desiredAccuracy = kCLLocationAccuracyBest // 精度を最高精度にする
-            locationManager.requestAlwaysAuthorization()
+        if CheckReachability(hostname: "www") {
+            if CLLocationManager.authorizationStatus() == .authorizedAlways || CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
+                locationManager.delegate = self
+                locationManager.startUpdatingLocation() // GPSの使用を開始する
+                locationManager.desiredAccuracy = kCLLocationAccuracyBest // 精度を最高精度にする
+            }
         }
         
         displayMode = mode.applemap.rawValue // 現在開いている画面は地図画面であると設定する
         
         // ピンに画像を設定する
-        for i in 0 ..< infoBox.count {
+        for i in 0 ..< jsonDataManager.sharedInstance.infoBox.count {
             infoPinView.append(MKAnnotationView())
             updatePin(appleMapsInfoBox[i])
         }
         
-        for i in 0 ..< warnBox.count {
+        for i in 0 ..< jsonDataManager.sharedInstance.warnBox.count {
             warnPinView.append(MKAnnotationView())
+            circle.append(MKCircle())
+            circleRadius.append(0.0)
             
             // 災害発生中のとき
-            if warnBox[i].stop.compare(Date()) == ComparisonResult.orderedDescending && Date().compare(warnBox[i].start) == ComparisonResult.orderedDescending {
+            if jsonDataManager.sharedInstance.warnBox[i].stop.compare(Date()) == ComparisonResult.orderedDescending && Date().compare(jsonDataManager.sharedInstance.warnBox[i].start) == ComparisonResult.orderedDescending {
                 
                 updatePin(appleMapsWarnBox[i])
             }
@@ -297,9 +289,9 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
             
         } else {
             
-            for i in 0 ..< infoBox.count {
-                if view.annotation!.coordinate.latitude == infoBox[i].lat && view.annotation!.coordinate.longitude == infoBox[i].lon {
-                    pinData = infoBox[i]
+            for i in 0 ..< jsonDataManager.sharedInstance.infoBox.count {
+                if view.annotation!.coordinate.latitude == jsonDataManager.sharedInstance.infoBox[i].lat && view.annotation!.coordinate.longitude == jsonDataManager.sharedInstance.infoBox[i].lon {
+                    pinData = jsonDataManager.sharedInstance.infoBox[i]
                     self.view.addSubview(cannotTouchView)
                     tapped = true
                     // 0.3秒でズームインする
@@ -314,9 +306,9 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
                 }
             }
             
-            for i in 0 ..< warnBox.count {
-                if view.annotation!.coordinate.latitude == warnBox[i].lat && view.annotation!.coordinate.longitude == warnBox[i].lon {
-                    pinData = warnBox[i]
+            for i in 0 ..< jsonDataManager.sharedInstance.warnBox.count {
+                if view.annotation!.coordinate.latitude == jsonDataManager.sharedInstance.warnBox[i].lat && view.annotation!.coordinate.longitude == jsonDataManager.sharedInstance.warnBox[i].lon {
+                    pinData = jsonDataManager.sharedInstance.warnBox[i]
                     tapped = true
                     self.view.addSubview(cannotTouchView)
                     let scaleZoom = mapView.region.span.latitudeDelta
@@ -355,13 +347,13 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         let circle = MKCircleRenderer(overlay:overlay)
         var color = UIColor()
         
-        for i in 0 ..< warnBox.count {
+        for i in 0 ..< jsonDataManager.sharedInstance.warnBox.count {
             // addOverLayされた円の緯度経度と、annotationBoxで登録されている緯度経度で同じものを探す
-            if warnBox[i].stop.compare(Date()) == ComparisonResult.orderedDescending && Date().compare(warnBox[i].start) == ComparisonResult.orderedDescending {
-                if warnBox[i].lat == circle.circle.coordinate.latitude && warnBox[i].lon == circle.circle.coordinate.longitude {
+            if jsonDataManager.sharedInstance.warnBox[i].stop.compare(Date()) == ComparisonResult.orderedDescending && Date().compare(jsonDataManager.sharedInstance.warnBox[i].start) == ComparisonResult.orderedDescending {
+                if jsonDataManager.sharedInstance.warnBox[i].lat == circle.circle.coordinate.latitude && jsonDataManager.sharedInstance.warnBox[i].lon == circle.circle.coordinate.longitude {
                     
                     // 災害カラーを設定する
-                    switch warnBox[i].riskType {
+                    switch jsonDataManager.sharedInstance.warnBox[i].riskType {
                         
                     case 0: // 火災：赤色
                         color = UIColor(red: 0.545, green: 0.020, blue: 0.220, alpha: 1.0)
@@ -402,28 +394,15 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         
         switch status {
-        // 設定によって制限されているとき
-        case .restricted:
-            print("Error: It is restricted by settings.")
-            
-        // 位置情報取得を拒否しているとき
-        case .denied:
-            print("Error: It is denied Location Service.")
-            manager.stopUpdatingLocation()
+        // 設定によって制限されているとき、位置情報の取得を拒否しているとき
+        case .restricted, .denied:
+            manager.stopUpdatingLocation() // GPSの取得を停止する
             
         // 既に位置情報の取得が許可されているとき
         case .authorizedWhenInUse, .authorizedAlways:
-            manager.startUpdatingLocation()
+            manager.startUpdatingLocation() // GPSの取得を開始する
             
-            // 現在地を中心に画面を表示する(起動してすぐにユーザーの現在地を取ることはできないため、1.5秒待つ)
-            runAfterDelay(1.5) {
-                let coordinateRegion = MKCoordinateRegionMakeWithDistance((self.locationManager.location?.coordinate)!, 800, 800)
-                self.mapView!.setRegion(coordinateRegion, animated:true)
-            }
-            
-        // 位置情報を取得の可否が決まっていないとき
-        case .notDetermined:
-            self.locationManager.requestAlwaysAuthorization()
+        default: break
         }
     }
     
@@ -441,14 +420,14 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
             var min = 1001 // 現在地から一番近い災害までの距離
             var idx = -1 // その災害を格納している配列のインデックス
             
-            for i in 0 ..< warnBox.count {
+            for i in 0 ..< jsonDataManager.sharedInstance.warnBox.count {
                 
-                if warnBox[i].stop.compare(Date()) == ComparisonResult.orderedDescending && Date().compare(warnBox[i].start) == ComparisonResult.orderedDescending {
-                    warnBox[i].distance = calcDistance(warnBox[i].lat, lon: warnBox[i].lon, uLat: userLat, uLon: userLon) // 距離を求める
+                if jsonDataManager.sharedInstance.warnBox[i].stop.compare(Date()) == ComparisonResult.orderedDescending && Date().compare(jsonDataManager.sharedInstance.warnBox[i].start) == ComparisonResult.orderedDescending {
+                    jsonDataManager.sharedInstance.warnBox[i].distance = calcDistance(jsonDataManager.sharedInstance.warnBox[i].lat, lon: jsonDataManager.sharedInstance.warnBox[i].lon, uLat: userLat, uLon: userLon) // 距離を求める
                     updatePin(appleMapsWarnBox[i])
                     
-                    if min > warnBox[i].distance {
-                        min = warnBox[i].distance
+                    if min > jsonDataManager.sharedInstance.warnBox[i].distance {
+                        min = jsonDataManager.sharedInstance.warnBox[i].distance
                         idx = i
                     }
                 }
@@ -456,7 +435,7 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
             
             // 警告モードにしたり、警告メッセージを表示したりする
             if idx != -1 {
-                intrusion(warnBox[idx].riskType, distance: warnBox[idx].distance, range: Int(circleRadius[idx]), warnState: &warnState, message1: warnBox[idx].message1, message2: warnBox[idx].message2)
+                intrusion(jsonDataManager.sharedInstance.warnBox[idx].riskType, distance: jsonDataManager.sharedInstance.warnBox[idx].distance, range: Int(circleRadius[idx]), warnState: &warnState, message1: jsonDataManager.sharedInstance.warnBox[idx].message1, message2: jsonDataManager.sharedInstance.warnBox[idx].message2)
             } else {
                 warningMessage.removeFromSuperview()
             }
@@ -474,317 +453,12 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         
     }
     
-    // MARK: detailViewDelegate
-    func termsViewfinish() {
-        termsview?.delegate = nil
-        termsview?.removeFromSuperview()
-    }
-    
     // MARK: configViewDelegate
     func configViewFinish() {
         transFromDetailToMap(pinViewData)
         configview?.delegate = nil
         configview?.removeFromSuperview()
     }
-    
-    
-    
-    
-    
-    // MARK: プライベート関数
-    /* データを格納する */
-    func storeData() {
-        
-        let fileName = "data.json"
-        var json: JSON!
-        
-//        let path = Bundle.main.path(forResource: "data", ofType: "json")!
-//        let jsonData = NSData(contentsOfFile: path)!
-//        json = JSON(data:jsonData as Data)
-        
-                        if let dir: NSString = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.allDomainsMask, true).first as NSString? {
-        
-                            let pathFileName = dir.appendingPathComponent(fileName)
-                            guard (try? Data(contentsOf: URL(fileURLWithPath: pathFileName))) != nil else {
-                                let alert = UIAlertController(title: "ERROR!!", message: "JSONファイルが見つかりませんでした。", preferredStyle: UIAlertControllerStyle.alert)
-                                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default) { action -> Void in })
-                                present(alert, animated: true, completion: nil)
-        
-                                return
-                            }
-        
-                            let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
-                            print(documentsPath)
-        
-        
-                            let jsonData = try? Data(contentsOf: URL(fileURLWithPath: pathFileName))
-        
-                            json = JSON(data:jsonData!)
-                        }
-        
-        // jsonの構造の記述ミス・jsonファイルが空のとき
-        // 地図・ARカメラは使用できるがタグは表示されない
-        if json == nil {
-            return
-        }
-        
-        var iN = 0 // 情報タグの番号
-        var wN = 0 // 警告タグの番号
-        for i in 0 ..< json["features"].count {
-            // 情報タグ
-            if json["features"][i]["properties"]["info_type"].string == kInfo {
-                
-                infoBox.append(TagData())
-                infoBox[iN].pinNum = iN //ピン番号
-                
-                
-                if let id = json["features"][i]["properties"]["id"].string { // ID
-                    infoBox[iN].id = id
-                } else {
-                    infoBox.removeLast()
-                    continue
-                }
-                
-                if let name = json["features"][i]["properties"]["Name"].string { // 目的地の名前
-                    infoBox[iN].name = name
-                } else {
-                    infoBox.removeLast()
-                    continue
-                }
-                
-                if let iType = json["features"][i]["properties"]["info_type"].string { // タグの種類
-                    infoBox[iN].inforType = iType
-                } else {
-                    infoBox.removeLast()
-                    continue
-                }
-                
-                if let icon = json["features"][i]["properties"]["icon"].string, let _ = UIImage(named: icon) { // タグの画像
-                    infoBox[iN].icon = icon
-                } else {
-                    infoBox.removeLast()
-                    continue
-                }
-                
-                if let descript = json["features"][i]["properties"]["description"].string { // 解説文
-                    infoBox[iN].descript = descript
-                } else {
-                    if json["features"][i]["geometry"]["coordinates"][2].double != 0 { // 標高
-                        infoBox.removeLast()
-                        continue
-                    }
-                }
-                
-                if let lon = json["features"][i]["geometry"]["coordinates"][0].double { // 緯度
-                    infoBox[iN].lon = lon
-                } else {
-                    infoBox.removeLast()
-                    continue
-                }
-                
-                if let lat = json["features"][i]["geometry"]["coordinates"][1].double { // 経度
-                    infoBox[iN].lat = lat
-                } else {
-                    infoBox.removeLast()
-                    continue
-                }
-                
-                if let pType = json["features"][i]["properties"]["pic_type"].string { // 写真か動画か
-                    infoBox[iN].picType = pType
-                    
-                    if let pm = json["features"][i]["properties"][pType].string { // 写真・動画のURL
-                        if pType == kPhoto {
-                            infoBox[iN].photo = pm
-                        } else if pType == kMovie {
-                            infoBox[iN].movie = pm
-                        } else {
-                            infoBox.removeLast()
-                            continue
-                        }
-                        
-                    } else {
-                        infoBox.removeLast()
-                        continue
-                    }
-                    
-                } else {
-                    
-                    if json["features"][i]["properties"]["photo"].string != nil || json["features"][i]["properties"]["movie"].string != nil {
-                        infoBox.removeLast()
-                        continue
-                    }
-                }
-                
-                
-                appleMapsInfoBox.append(appleMapsAnnotation())
-                appleMapsInfoBox[iN].tagData = infoBox[iN]
-                appleMapsInfoBox[iN].coordinate = CLLocationCoordinate2DMake(appleMapsInfoBox[iN].tagData.lat, appleMapsInfoBox[iN].tagData.lon)
-                
-                
-                // OSM用
-                osmInfoBox.append(MGLTagData())
-                osmInfoBox[iN].inforType = json["features"][i]["properties"]["info_type"].string // タグの種類
-                osmInfoBox[iN].pinNum = iN //ピン番号
-                
-                
-                iN += 1
-                
-                // 警告タグ
-            } else if json["features"][i]["properties"]["info_type"].string == kWarn {
-                
-                circle.append(MKCircle())
-                circleRadius.append(0.0)
-                
-                warnBox.append(TagData())
-                warnBox[wN].pinNum = wN //ピン番号
-                warnBox[wN].id = json["features"][i]["properties"]["id"].string // id
-                
-                
-                if let id = json["features"][i]["properties"]["id"].string { // 目的地の名前
-                    warnBox[wN].id = id
-                } else {
-                    warnBox.removeLast()
-                    continue
-                }
-                
-                
-                if let name = json["features"][i]["properties"]["Name"].string { // 目的地の名前
-                    warnBox[wN].name = name
-                } else {
-                    warnBox.removeLast()
-                    continue
-                }
-                
-                if let iType = json["features"][i]["properties"]["info_type"].string { // タグの種類
-                    warnBox[wN].inforType = iType
-                } else {
-                    warnBox.removeLast()
-                    continue
-                }
-                
-                if let icon = json["features"][i]["properties"]["icon"].string { // タグの画像
-                    warnBox[wN].icon = icon
-                } else {
-                    warnBox.removeLast()
-                    continue
-                }
-                
-                if let descript = json["features"][i]["properties"]["description"].string { // 解説文
-                    warnBox[wN].descript = descript
-                } else {
-                    warnBox.removeLast()
-                    continue
-                }
-                
-                if let lon = json["features"][i]["geometry"]["coordinates"][0].double { // 緯度
-                    warnBox[wN].lon = lon
-                } else {
-                    warnBox.removeLast()
-                    continue
-                }
-                
-                if let lat = json["features"][i]["geometry"]["coordinates"][1].double { // 経度
-                    warnBox[wN].lat = lat
-                } else {
-                    warnBox.removeLast()
-                    continue
-                }
-                
-                if let range = json["features"][i]["properties"]["range"].int { // 災害範囲
-                    warnBox[wN].range = range
-                } else {
-                    warnBox.removeLast()
-                    continue
-                }
-                
-                
-                if let start = json["features"][i]["properties"]["start"].string { // 災害範囲
-                    if let start2: Date = dateFromString(start, format: "yyyy/MM/dd HH:mm", num: wN) { // 災害開始時刻
-                        warnBox[wN].start = start2
-                    } else {
-                        warnBox.removeLast()
-                        continue
-                    }
-                } else {
-                    warnBox.removeLast()
-                    continue
-                }
-                
-                
-                
-                if let stop = json["features"][i]["properties"]["stop"].string { // 災害範囲
-                    if let stop2: Date = dateFromString(stop, format: "yyyy/MM/dd HH:mm", num: wN) { // 災害終了時刻
-                        warnBox[wN].stop = stop2
-                    } else {
-                        warnBox.removeLast()
-                        continue
-                    }
-                } else {
-                    warnBox.removeLast()
-                    continue
-                }
-                
-                
-                if let message1 = json["features"][i]["properties"]["message1"].string { // 警告範囲に近づいた時のメッセージ
-                    warnBox[wN].message1 = message1
-                } else {
-                    warnBox.removeLast()
-                    continue
-                }
-                
-                if let message2 = json["features"][i]["properties"]["message2"].string { // 警告範囲に侵入した時のメッセージ
-                    warnBox[wN].message2 = message2
-                } else {
-                    warnBox.removeLast()
-                    continue
-                }
-                
-                
-                if let rType = json["features"][i]["properties"]["risk_type"].int { // 災害の種類
-                    warnBox[wN].riskType = rType
-                } else {
-                    warnBox.removeLast()
-                    continue
-                }
-                
-                appleMapsWarnBox.append(appleMapsAnnotation())
-                appleMapsWarnBox[wN].tagData = warnBox[wN]
-                appleMapsWarnBox[wN].coordinate = CLLocationCoordinate2DMake(appleMapsWarnBox[wN].tagData.lat, appleMapsWarnBox[wN].tagData.lon)
-                
-                
-                // OSM用
-                osmWarnBox.append(MGLTagData())
-                osmWarnBox[wN].inforType = json["features"][i]["properties"]["info_type"].string // タグの種類
-                osmWarnBox[wN].pinNum = wN //ピン番号
-                
-                wN += 1
-                
-            } else {
-                print("info_typeの設定を間違えています") /****後でこのときの対策を考える****/
-            }
-        }
-    }
-    
-    
-    /*
-     * String型で書かれた時間をNSData型に変換する
-     * @param string 時間 (format通りに書く)
-     * @param format "yyyy/mm/dd HH:mm"
-     */
-    func dateFromString(_ string: String, format: String, num: Int) -> Date {
-        let formatter: DateFormatter = DateFormatter()
-        formatter.dateFormat = format
-        
-        if let warnDate: Date = formatter.date(from: string) { // 災害時間を正しいフォーマットで書いているとき
-            return warnDate
-            
-        } else { // // 災害時間を誤ったフォーマットで書いているとき
-            warnBox[num].start = formatter.date(from: "2100/01/01 00:00")!
-            return formatter.date(from: "2100/01/01 00:00")!
-            
-        }
-    }
-    
     
     
     /**
@@ -871,9 +545,9 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         
         let scaleZoom = mapView!.region
         
-        for i in 0 ..< warnBox.count {
+        for i in 0 ..< jsonDataManager.sharedInstance.warnBox.count {
             
-            if warnBox[i].stop.compare(Date()) == ComparisonResult.orderedDescending && Date().compare(warnBox[i].start) == ComparisonResult.orderedDescending {
+            if jsonDataManager.sharedInstance.warnBox[i].stop.compare(Date()) == ComparisonResult.orderedDescending && Date().compare(jsonDataManager.sharedInstance.warnBox[i].start) == ComparisonResult.orderedDescending {
                 
                 // scaleZoom は表示範囲（縮尺度）で、SCALEZOOM = 1 で画面の縦横が1度ということになる
                 // 1度 = 約111km
@@ -962,21 +636,21 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     /**
      * 災害円を描く
      *
-     * @param index warnboxのインデックス
+     * @param index jsonDataManager.sharedInstance.warnBoxのインデックス
      * @param startNow 災害が発生してから現在までの経過時間(分)
      */
     func makeCircle(_ index: Int, startNow: Double) {
         
         // アプリを開いたら災害範囲がすでに最大になっていたとき、最大の半径で円を描く
-        if CLLocationDistance(startNow) > CLLocationDistance(warnBox[index].range) {
-            circleRadius[index] = CLLocationDistance(warnBox[index].range)
+        if CLLocationDistance(startNow) > CLLocationDistance(jsonDataManager.sharedInstance.warnBox[index].range) {
+            circleRadius[index] = CLLocationDistance(jsonDataManager.sharedInstance.warnBox[index].range)
             
         } else { // 経過時間分だけの半径の円を描く
             circleRadius[index] = CLLocationDistance(startNow)
         }
         
         self.mapView!.remove(circle[index])
-        circle[index] = MKCircle(center: CLLocationCoordinate2D(latitude: warnBox[index].lat, longitude: warnBox[index].lon), radius: circleRadius[index])
+        circle[index] = MKCircle(center: CLLocationCoordinate2D(latitude: jsonDataManager.sharedInstance.warnBox[index].lat, longitude: jsonDataManager.sharedInstance.warnBox[index].lon), radius: circleRadius[index])
         self.mapView!.add(circle[index], level: MKOverlayLevel.aboveRoads)
         
     }
@@ -1100,8 +774,6 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         
         updateTimer.invalidate() // update()を発火させていたAppleMapsのタイマーを止める
         
-        
-        
         var location: CGPoint = mapView!.center
         location.x = view.center.x
         self.mapView?.center = location
@@ -1109,6 +781,7 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         
         configview?.removeFromSuperview()
         ConfigView().deleteConfigDisplay()
+        //self.dismiss(animated: false, completion: nil)
         self.present(osmViewController(), animated: true, completion: nil)
     }
     
@@ -1130,10 +803,10 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     func update() {
         
         let nowTime = Date() // 現在時刻
-        for i in 0 ..< warnBox.count {
+        for i in 0 ..< jsonDataManager.sharedInstance.warnBox.count {
             
             // 過去の災害
-            if nowTime.compare(warnBox[i].stop) == ComparisonResult.orderedDescending {
+            if nowTime.compare(jsonDataManager.sharedInstance.warnBox[i].stop) == ComparisonResult.orderedDescending {
                 // stopの時刻を過ぎたから、災害の円や文字を消す
                 self.mapView!.remove(circle[i]) // 円を消す
                 self.mapView!.alpha = 1.0
@@ -1145,8 +818,8 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
                 }
                 
                 // 現在災害発生中
-            } else if warnBox[i].stop.compare(nowTime) == ComparisonResult.orderedDescending && nowTime.compare(warnBox[i].start) == ComparisonResult.orderedDescending {
-                let Sn = Date().timeIntervalSince(warnBox[i].start) / 60 // 開始時刻(start)と現在時刻(now)の差
+            } else if jsonDataManager.sharedInstance.warnBox[i].stop.compare(nowTime) == ComparisonResult.orderedDescending && nowTime.compare(jsonDataManager.sharedInstance.warnBox[i].start) == ComparisonResult.orderedDescending {
+                let Sn = Date().timeIntervalSince(jsonDataManager.sharedInstance.warnBox[i].start) / 60 // 開始時刻(start)と現在時刻(now)の差
                 makeCircle(i, startNow: Sn)
                 
             }
@@ -1186,5 +859,15 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         )
     }
     
-    
+    /* ネットワークに接続されているか確認する */
+    func CheckReachability(hostname: String) -> Bool {
+        let reachability = SCNetworkReachabilityCreateWithName(nil, hostname)!
+        var flags = SCNetworkReachabilityFlags.connectionAutomatic
+        if !SCNetworkReachabilityGetFlags(reachability, &flags) {
+            return false
+        }
+        let isReachable = (flags.rawValue & UInt32(kSCNetworkFlagsReachable)) != 0
+        let needsConnection = (flags.rawValue & UInt32(kSCNetworkFlagsConnectionRequired)) != 0
+        return (isReachable && !needsConnection)
+    }
 }

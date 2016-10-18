@@ -49,10 +49,10 @@ func getLabelText(_ num: Int, inforType: String) -> String {
     if inforType == kInfo {
         
         if displayMode == mode.applemap.rawValue || displayMode == mode.osm.rawValue { // 地図画面の時は名称のみ
-            text = infoBox[num].name
+            text = jsonDataManager.sharedInstance.infoBox[num].name
             
         } else { // カメラ画面の時は名称と距離
-            text = infoBox[num].name + "\n" + String(infoBox[num].distance) + "m"
+            text = jsonDataManager.sharedInstance.infoBox[num].name + "\n" + String(jsonDataManager.sharedInstance.infoBox[num].distance) + "m"
         }
         
         // 警告タグ
@@ -60,7 +60,7 @@ func getLabelText(_ num: Int, inforType: String) -> String {
         
         var riskName: String!
         
-        switch warnBox[num].riskType {
+        switch jsonDataManager.sharedInstance.warnBox[num].riskType {
             
         case 0: riskName = "火災"
         case 1: riskName = "浸水"
@@ -78,7 +78,7 @@ func getLabelText(_ num: Int, inforType: String) -> String {
             text = text + "範囲: " + String(Int(circleRadius[num])) + "m"
         } else { // カメラ画面の時は名称と距離と範囲
             
-            var distance = warnBox[num].distance - Int(circleRadius[num])
+            var distance = jsonDataManager.sharedInstance.warnBox[num].distance - Int(circleRadius[num])
             
             // ユーザが災害範囲内に入ったら、災害までの距離を0mで表示する
             if distance <= 0 {
@@ -108,7 +108,7 @@ func makeLabel(_ num: Int, inforType: String) -> UIImage {
     
     var label: UILabel! // 情報タグの文字
     var labelImg: UIImage! // ラベル画像
-    let airtagImage = UIImage(named: infoBox[num].icon)! // 情報タグの画像
+    let airtagImage = UIImage(named: jsonDataManager.sharedInstance.infoBox[num].icon)! // 情報タグの画像
     
     if inforType == kInfo {
         label = UILabel(frame: CGRect.init(x: 0.0, y: 0.0, width: airtagImage.size.width, height: airtagImage.size.height)) //ラベルサイズ

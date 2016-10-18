@@ -171,8 +171,7 @@ class detailView: UIView {
             
             let warnImg: UIImage!
             var text: String!
-            
-            switch warnBox[pinData.pinNum].riskType {
+            switch jsonDataManager.sharedInstance.warnBox[pinData.pinNum].riskType {
                 
             case 0:
                 text = "火災"
