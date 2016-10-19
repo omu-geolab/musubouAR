@@ -18,6 +18,7 @@ class cameraViewController: UIViewController, UIGestureRecognizerDelegate, CLLoc
     var avDevice: AVCaptureDevice! // AVキャプチャデバイス
     var avInput: AVCaptureInput! // AVキャプチャデバイスインプット
     var avOutput: AVCaptureStillImageOutput! // AVキャプチャアウトプット
+    //var avOutput: AVCapturePhotoOutput!
     var previewLayer: AVCaptureVideoPreviewLayer? // 画面表示用レイヤー
     
     var detailview: detailView?
@@ -46,12 +47,9 @@ class cameraViewController: UIViewController, UIGestureRecognizerDelegate, CLLoc
     var box: [Int] = []
     var updateTimer: Timer! // 一定時間ごとにupdate()を発火させる
     
-    
     // 磁気センサ
     let motionManager = CMMotionManager()
     let newheading = UILabel(frame:CGRect(x: 200, y: 100, width: 300, height: 100))
-    
-    let kCamDis = 500 // 現在地からkCamDis(m)までのタグを表示する
     
     
     // MARK: ライフサイクル
@@ -87,6 +85,7 @@ class cameraViewController: UIViewController, UIGestureRecognizerDelegate, CLLoc
         warningMessage.layer.cornerRadius = 20.0 // 枠線を角丸にする
         warningMessage.clipsToBounds = true
         view.addSubview(warningMessage)
+        warningMessage.isHidden = true
         
         
         // 地図切替ボタン
@@ -140,109 +139,6 @@ class cameraViewController: UIViewController, UIGestureRecognizerDelegate, CLLoc
         update() // 災害円を描く
         // 60秒に1回update()を発火させる
         updateTimer = Timer.scheduledTimer(timeInterval: 60, target: self, selector: #selector(cameraViewController.update), userInfo: nil, repeats: true)
-        
-        
-        
-        
-        //        // 更新周期を設定.
-        //        motionManager.deviceMotionUpdateInterval = 0.25 // 早く更新しすぎると、タグをタップしても反応しなくなる
-        //
-        //
-        //
-        //        // 磁気センサによる方位取得
-        //        motionManager.showsDeviceMovementDisplay = true
-        //        motionManager.startDeviceMotionUpdates(using: CMAttitudeReferenceFrame.xMagneticNorthZVertical, to: OperationQueue.current!, withHandler: {_, _ in
-        //
-        //            var min = 1001 // 現在地から一番近い災害までの距離
-        //            var idx = -1 // その災害を格納している配列のインデックス
-        //
-        //            let rpyattitude = self.motionManager.deviceMotion!.attitude
-        //            var yawdegrees = rpyattitude.yaw * 180 / M_PI
-        //            if yawdegrees < 0 {
-        //                yawdegrees = -1 * yawdegrees
-        //            } else {
-        //                yawdegrees = 360 - yawdegrees
-        //            }
-        //
-        //            self.newheading.text = String(format: "Direction:%.0f°", yawdegrees!)
-        //            self.newheading.textColor = UIColor.red
-        //
-        //            self.compassView.transform = CGAffineTransform(rotationAngle: CGFloat(-1 * yawdegrees! * M_PI) / 180)
-        //
-        //
-        //            for i in 0 ..< jsonDataManager.sharedInstance.infoBox.count {
-        //
-        //                // 距離を取得する
-        //                jsonDataManager.sharedInstance.infoBox[i].distance = calcDistance(jsonDataManager.sharedInstance.jsonDataManager.sharedInstance.infoBox[i].lat, lon: jsonDataManager.sharedInstance.infoBox[i].lon, uLat: userLat, uLon: userLon)
-        //
-        //                // 1000m以内の場所のタグは表示する
-        //                if jsonDataManager.sharedInstance.infoBox[i].distance <= 1000 {
-        //
-        //                    // 方角を取得する
-        //                    jsonDataManager.sharedInstance.infoBox[i].direction = self.getGeoDirection(jsonDataManager.sharedInstance.infoBox[i].lat, tLon: jsonDataManager.sharedInstance.infoBox[i].lon)
-        //
-        //                    self.tagDisplay(i, imageBox: &infoImageBox, tDir: jsonDataManager.sharedInstance.infoBox[i].direction, tDis: jsonDataManager.sharedInstance.infoBox[i].distance, compass: yawdegrees!, inforType: jsonDataManager.sharedInstance.infoBox[i].inforType)
-        //
-        //                } else if jsonDataManager.sharedInstance.infoBox[i].distance >= 1000 && jsonDataManager.sharedInstance.infoBox[i].distance <= 1050 {
-        //                    infoImageBox[i].removeFromSuperview()
-        //                }
-        //            }
-        //
-        //            for i in 0 ..< jsonDataManager.sharedInstance.warnBox.count {
-        //
-        //                if jsonDataManager.sharedInstance.warnBox[i].stop.compare(Date()) == ComparisonResult.orderedDescending && Date().compare(jsonDataManager.sharedInstance.warnBox[i].start) == ComparisonResult.orderedDescending {
-        //
-        //                    // 距離を取得する
-        //                    jsonDataManager.sharedInstance.warnBox[i].distance = calcDistance(jsonDataManager.sharedInstance.warnBox[i].lat, lon: jsonDataManager.sharedInstance.warnBox[i].lon, uLat: userLat, uLon: userLon)
-        //
-        //                    // 1000m以内の場所のタグは表示する
-        //                    if jsonDataManager.sharedInstance.warnBox[i].distance <= 1000 {
-        //
-        //                        // 方角を取得する
-        //                        jsonDataManager.sharedInstance.warnBox[i].direction = self.getGeoDirection(jsonDataManager.sharedInstance.warnBox[i].lat, tLon: jsonDataManager.sharedInstance.warnBox[i].lon)
-        //
-        //                        // 警告タグの画像を設定する
-        //                        switch jsonDataManager.sharedInstance.warnBox[i].riskType {
-        //                        case 0: // 火災
-        //                            warnImage = UIImage(named: "icon_warn0.png")!
-        //                        case 1: // 浸水
-        //                            warnImage = UIImage(named: "icon_warn1.png")!
-        //                        case 2: // 土砂崩れ
-        //                            warnImage = UIImage(named: "icon_warn2.png")!
-        //                        case 3, 4, 5, 6: // 道路閉塞
-        //                            warnImage = UIImage(named: "icon_warn3.png")!
-        //                        default: // その他
-        //                            warnImage = UIImage(named: "icon_infoTag.png")!
-        //                            break
-        //                        }
-        //
-        //                        // 現在地から災害までの距離
-        //                        if min >= jsonDataManager.sharedInstance.warnBox[i].distance {
-        //                            min = jsonDataManager.sharedInstance.warnBox[i].distance
-        //                            idx = i
-        //                        }
-        //
-        //                        // 画面にタグを表示する
-        //                        self.tagDisplay(i, imageBox: &warnImageBox, tDir: jsonDataManager.sharedInstance.warnBox[i].direction, tDis: jsonDataManager.sharedInstance.warnBox[i].distance, compass: yawdegrees!, inforType: jsonDataManager.sharedInstance.warnBox[i].inforType)
-        //                    }
-        //
-        //                } else if Date().compare(jsonDataManager.sharedInstance.warnBox[i].stop) == ComparisonResult.orderedDescending {
-        //                    // 方角を取得する
-        //                    jsonDataManager.sharedInstance.warnBox[i].direction = self.getGeoDirection(jsonDataManager.sharedInstance.warnBox[i].lat, tLon: jsonDataManager.sharedInstance.warnBox[i].lon)
-        //                    let angle = jsonDataManager.sharedInstance.warnBox[i].direction - yawdegrees!
-        //                    if (angle >= 0 && angle <= 36.5) || (angle >= -36.5 && angle <= 0) {
-        //                        warnImageBox[i].removeFromSuperview()
-        //                    }
-        //                }
-        //            }
-        //
-        //
-        //            // 災害発生時、警告モードにし、警告メッセージを表示させる
-        //            if idx != -1 {
-        //                self.warningDisplay(idx, distance: jsonDataManager.sharedInstance.warnBox[idx].distance, range: Int(circleRadius[idx]), warnState: &self.warnState, message1: jsonDataManager.sharedInstance.warnBox[idx].message1, message2: jsonDataManager.sharedInstance.warnBox[idx].message2)
-        //            }
-        //
-        //        })
         
     }
     
@@ -480,7 +376,8 @@ class cameraViewController: UIViewController, UIGestureRecognizerDelegate, CLLoc
         
         // 災害発生していないとき
         if box.count == 0 {
-            warningMessage.text = "安全1"
+            warningMessage.isHidden = true
+            warningView.backgroundColor = UIColor.clear // 透明にする
         } else {
             if messageTimer == nil {
                 messageTimer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(cameraViewController.updateMessage), userInfo: nil, repeats: true)
@@ -514,10 +411,18 @@ class cameraViewController: UIViewController, UIGestureRecognizerDelegate, CLLoc
         jsonDataManager.sharedInstance.warnBox[num].distance = calcDistance(jsonDataManager.sharedInstance.warnBox[num].lat, lon: jsonDataManager.sharedInstance.warnBox[num].lon, uLat: userLat, uLon: userLon) // 距離を求める
         
         if jsonDataManager.sharedInstance.warnBox[num].distance - Int(circleRadius[num]) < 0 { // 侵入
+            if audioPlayerIntr != nil {
+                audioPlayerIntr.play()
+            }
+            warningMessage.isHidden = false
             warningMessage.text = jsonDataManager.sharedInstance.warnBox[num].message2 // 警告メッセージ
             msgCount += 1
             
         } else if jsonDataManager.sharedInstance.warnBox[num].distance - Int(circleRadius[num]) < 500 { // 付近
+            if audioPlayerNear != nil {
+                audioPlayerNear.play()
+            }
+            warningMessage.isHidden = false
             warningMessage.text = jsonDataManager.sharedInstance.warnBox[num].message1 // 警告メッセージ
             msgCount += 1
             
@@ -525,7 +430,7 @@ class cameraViewController: UIViewController, UIGestureRecognizerDelegate, CLLoc
             msgSafeCount += 1
             if msgSafeCount == box.count {
                 msgSafeCount = 0
-                warningMessage.text = "あんぜん！"
+                warningMessage.isHidden = true
                 return
             }
             msgCount += 1
@@ -585,6 +490,7 @@ class cameraViewController: UIViewController, UIGestureRecognizerDelegate, CLLoc
             viewSafeCount += 1
             if viewSafeCount == box.count {
                 viewSafeCount = 0
+                warningView.backgroundColor = UIColor.clear // 透明にする
                 return
             }
             viewCount += 1
@@ -597,8 +503,8 @@ class cameraViewController: UIViewController, UIGestureRecognizerDelegate, CLLoc
             viewTimer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(mapViewController.updateView), userInfo: nil, repeats: true)
         }
     }
-
-
+    
+    
     /*
      * ユーザーが向いている方角を測る
      *
@@ -651,9 +557,14 @@ class cameraViewController: UIViewController, UIGestureRecognizerDelegate, CLLoc
         // カメラの視野に対象が入ったら、タグを表示させる
         if (angle >= 0 && angle <= 36.5) || (angle >= -36.5 && angle <= 0) {
             
-            size = Double(screenHeight / 8) + Double(screenHeight / 4) * Double(1000 - tDis) / 1000
+            // 現在地〜目的地までの距離が
+            //    0mのとき・・・画面縦幅の1/8の大きさ
+            //    kCamDis(m)のとき・・・画面縦幅の3/8の大きさ
+            // タグのサイズ = 0mのときの大きさ + 画面縦幅1/4の大きさ * 距離による倍率
+            size = Double(screenHeight / 8) + Double(screenHeight / 4) * Double(kCamDis - tDis) /  Double(kCamDis)
             
-            y = screenHeight / 2
+            // 画面の表示位置(縦) = タグの最小サイズの半分 + 画面縦幅3/4の大きさ * 距離による倍率
+            y = CGFloat(screenHeight / (8 * 2)) + CGFloat(screenHeight * 3 / 4) * CGFloat(kCamDis - tDis) / CGFloat(kCamDis)
             
             // 情報タグを生成する
             if inforType == kInfo {

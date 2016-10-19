@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 import MapKit
+import AVFoundation
 
 
 /* タグに持たせるデータ群 */
@@ -339,6 +340,9 @@ var userLon: CLLocationDegrees = 0 // 経度
 
 let butSize: CGFloat = 70.0 // ボタンサイズ
 
+var audioPlayerNear: AVAudioPlayer! // 通知音(付近)
+var audioPlayerIntr: AVAudioPlayer! // 通知音(侵入)
+
 
 
 /* 現在開いているページは地図画面か、ARカメラ画面か */
@@ -360,7 +364,6 @@ enum viewmode: Int {
 var viewMode = 0
 
 var warnImage = UIImage(named: "icon_warn0.png") // 情報タグの画像
-//var warningMessage: UILabel! // 災害範囲内・付近にいるときに表示するメッセージ
 
 var circleRadius = [CLLocationDistance]() // 災害範囲の円の半径
 

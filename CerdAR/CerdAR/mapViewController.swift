@@ -11,6 +11,7 @@ import CoreLocation
 import CoreImage
 import SystemConfiguration
 
+
 /* UIImageに変換する */
 extension UIView {
     
@@ -48,14 +49,13 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     
     var warningView: UIView! // 災害範囲内に侵入した時に画面の色を変える
     var warnNums: [Int] = [] // 災害番号
-    var msgCount = 0
-    var msgSafeCount = 0
-    var viewCount = 0
-    var viewSafeCount = 0
-    var messageTimer: Timer!
-    var viewTimer: Timer!
-    var box: [Int] = []
-    
+    var msgCount = 0 // 警告メッセージを表示する災害の配列番号を管理する
+    var msgSafeCount = 0 // ユーザーは現在安全圏にいるかを確認するための変数
+    var viewCount = 0 // 警告モードを表示する災害の配列番号を管理する
+    var viewSafeCount = 0 // ユーザーは現在付近または安全圏にいるかを確認するための変数
+    var messageTimer: Timer! // 警告メッセージを表示するためのタイマー
+    var viewTimer: Timer! // 警告モードを表示するためのタイマー
+    var box: [Int] = [] // 現在発生している災害の番号を管理する配列
     
     var updateTimer: Timer! // update()を一定時間ごとに発火させる
     
@@ -138,6 +138,7 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         warningMessage.layer.cornerRadius = 20.0 // 枠線を角丸にする
         warningMessage.clipsToBounds = true
         mapView!.addSubview(warningMessage)
+        warningMessage.isHidden = true
         
         for i in 0 ..< jsonDataManager.sharedInstance.infoBox.count {
             appleMapsInfoBox.append(appleMapsAnnotation())
@@ -450,10 +451,22 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         jsonDataManager.sharedInstance.warnBox[num].distance = calcDistance(jsonDataManager.sharedInstance.warnBox[num].lat, lon: jsonDataManager.sharedInstance.warnBox[num].lon, uLat: userLat, uLon: userLon) // 距離を求める
         
         if jsonDataManager.sharedInstance.warnBox[num].distance - Int(circleRadius[num]) < 0 { // 侵入
+            warningMessage.isHidden = false
+            
+            if audioPlayerIntr != nil {
+                audioPlayerIntr.play()
+            }
+            
             warningMessage.text = jsonDataManager.sharedInstance.warnBox[num].message2 // 警告メッセージ
             msgCount += 1
             
         } else if jsonDataManager.sharedInstance.warnBox[num].distance - Int(circleRadius[num]) < 500 { // 付近
+            warningMessage.isHidden = false
+            
+            if audioPlayerNear != nil {
+                audioPlayerNear.play()
+            }
+            
             warningMessage.text = jsonDataManager.sharedInstance.warnBox[num].message1 // 警告メッセージ
             msgCount += 1
             
@@ -461,7 +474,7 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
             msgSafeCount += 1
             if msgSafeCount == box.count {
                 msgSafeCount = 0
-                warningMessage.text = "あんぜん！"
+                warningMessage.isHidden = true
                 return
             }
             msgCount += 1
@@ -575,7 +588,9 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
                 
                 let han: Double = circleRadius[i] * 2.0 + 0.1
                 let newsize: CGFloat = screenWidth * CGFloat((han * 0.7) / (scaleZoom.span.latitudeDelta * 111.0 * 1000.0))
-                changeImage(&appleMapsWarnBox[i], newsize: newsize)
+                if jsonDataManager.sharedInstance.warnBox[i].expandImage != nil {
+                    changeImage(&appleMapsWarnBox[i], newsize: newsize)
+                }
             }
         }
     }
@@ -703,27 +718,27 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         }
     }
     
-    /*
-     * 現在地情報の表示を許可する
-     */
-    func alertLocationServicesDisabled() {
-        let title = "Location Services Disabled"
-        let message = "You must enable Location Services to track your run."
-        
-        if NSClassFromString("UIAlertController") != nil {
-            let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-            
-            alert.addAction(UIAlertAction(title: "Settings", style: .default, handler: { action in
-                let url = URL(string: UIApplicationOpenSettingsURLString)
-                UIApplication.shared.openURL(url!)
-            }))
-            alert.addAction(UIAlertAction(title: "Close", style: .cancel, handler: nil))
-            
-            present(alert, animated: true, completion: nil)
-        } else {
-            UIAlertController.self
-        }
-    }
+    //    /*
+    //     * 現在地情報の表示を許可する
+    //     */
+    //    func alertLocationServicesDisabled() {
+    //        let title = "Location Services Disabled"
+    //        let message = "You must enable Location Services to track your run."
+    //
+    //        if NSClassFromString("UIAlertController") != nil {
+    //            let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+    //
+    //            alert.addAction(UIAlertAction(title: "Settings", style: .default, handler: { action in
+    //                let url = URL(string: UIApplicationOpenSettingsURLString)
+    //                UIApplication.shared.openURL(url!)
+    //            }))
+    //            alert.addAction(UIAlertAction(title: "Close", style: .cancel, handler: nil))
+    //
+    //            present(alert, animated: true, completion: nil)
+    //        } else {
+    //            UIAlertController.self
+    //        }
+    //    }
     
     
     /*
@@ -801,8 +816,12 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
      * 現在地を中心に画面表示する
      */
     internal func onClick_nowLocate(_ sender: UIButton) {
-        let coordinateRegion = MKCoordinateRegionMakeWithDistance(self.mapView!.userLocation.coordinate, 800, 800)
-        self.mapView!.setRegion(coordinateRegion, animated:true)
+        if mapView?.isUserLocationVisible == true {
+            let coordinateRegion = MKCoordinateRegionMakeWithDistance(self.mapView!.userLocation.coordinate, 800, 800)
+            self.mapView!.setRegion(coordinateRegion, animated:true)
+        } else {
+            print("cannot")
+        }
     }
     
     
@@ -864,7 +883,7 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         
         // 災害発生していないとき
         if box.count == 0 {
-            warningMessage.text = "安全"
+            warningMessage.isHidden = true
         } else {
             if messageTimer == nil {
                 messageTimer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(mapViewController.updateMessage), userInfo: nil, repeats: true)

@@ -19,6 +19,9 @@
 		AC0F6A061DB62BCD000993D5 /* icon_locate.png in Resources */ = {isa = PBXBuildFile; fileRef = AC0F6A011DB62BCD000993D5 /* icon_locate.png */; };
 		AC0F6A071DB62BCD000993D5 /* icon_map.png in Resources */ = {isa = PBXBuildFile; fileRef = AC0F6A021DB62BCD000993D5 /* icon_map.png */; };
 		AC0F6A081DB62BCD000993D5 /* icon_menu.png in Resources */ = {isa = PBXBuildFile; fileRef = AC0F6A031DB62BCD000993D5 /* icon_menu.png */; };
+		AC2AB8F61DB778A10048931C /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2AB8F51DB778A10048931C /* Constant.swift */; };
+		AC2AB8F91DB7790A0048931C /* sound_intrusion.wav in Resources */ = {isa = PBXBuildFile; fileRef = AC2AB8F71DB7790A0048931C /* sound_intrusion.wav */; };
+		AC2AB8FA1DB7790A0048931C /* sound_near.wav in Resources */ = {isa = PBXBuildFile; fileRef = AC2AB8F81DB7790A0048931C /* sound_near.wav */; };
 		AC2C03D41D9D1CB9009926E3 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2C03D31D9D1CB9009926E3 /* SwiftyJSON.swift */; };
 		AC2C52C61D5805F70032B689 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2C52C51D5805F70032B689 /* AppDelegate.swift */; };
 		AC2C52C81D5805F70032B689 /* mapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2C52C71D5805F70032B689 /* mapViewController.swift */; };
@@ -90,6 +93,9 @@
 		AC0F6A011DB62BCD000993D5 /* icon_locate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_locate.png; path = CerdAR/icon_locate.png; sourceTree = "<group>"; };
 		AC0F6A021DB62BCD000993D5 /* icon_map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_map.png; path = CerdAR/icon_map.png; sourceTree = "<group>"; };
 		AC0F6A031DB62BCD000993D5 /* icon_menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_menu.png; path = CerdAR/icon_menu.png; sourceTree = "<group>"; };
+		AC2AB8F51DB778A10048931C /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		AC2AB8F71DB7790A0048931C /* sound_intrusion.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = sound_intrusion.wav; path = CerdAR/sound_intrusion.wav; sourceTree = "<group>"; };
+		AC2AB8F81DB7790A0048931C /* sound_near.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = sound_near.wav; path = CerdAR/sound_near.wav; sourceTree = "<group>"; };
 		AC2C03D31D9D1CB9009926E3 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		AC2C52C21D5805F70032B689 /* CerdAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CerdAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC2C52C51D5805F70032B689 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -153,9 +159,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AC2AB8F41DB778420048931C /* sound */ = {
+			isa = PBXGroup;
+			children = (
+				AC2AB8F71DB7790A0048931C /* sound_intrusion.wav */,
+				AC2AB8F81DB7790A0048931C /* sound_near.wav */,
+			);
+			name = sound;
+			sourceTree = "<group>";
+		};
 		AC2C52B91D5805F70032B689 = {
 			isa = PBXGroup;
 			children = (
+				AC2AB8F41DB778420048931C /* sound */,
 				AC2C53021D5809610032B689 /* Image */,
 				AC2C52C41D5805F70032B689 /* CerdAR */,
 				AC2C52DC1D5805F80032B689 /* CerdARTests */,
@@ -188,6 +204,7 @@
 				AC2C52D11D5805F70032B689 /* LaunchScreen.storyboard */,
 				AC2C52D41D5805F70032B689 /* Info.plist */,
 				D317AE971D89649D00D4D4FC /* framework */,
+				AC2AB8F51DB778A10048931C /* Constant.swift */,
 			);
 			path = CerdAR;
 			sourceTree = "<group>";
@@ -382,6 +399,7 @@
 				AC05B9F61D811F830082C52A /* icon_warn1.png in Resources */,
 				AC5AED931DA4A181009443E9 /* info-marker.png in Resources */,
 				AC0F6A041DB62BCD000993D5 /* icon_camera.png in Resources */,
+				AC2AB8F91DB7790A0048931C /* sound_intrusion.wav in Resources */,
 				AC5AED921DA4A181009443E9 /* icon_notfound.png in Resources */,
 				AC2C52D31D5805F70032B689 /* LaunchScreen.storyboard in Resources */,
 				AC5AED8E1DA4A181009443E9 /* hinan-bldg-marker.png in Resources */,
@@ -395,6 +413,7 @@
 				AC0F6A071DB62BCD000993D5 /* icon_map.png in Resources */,
 				AC0F6A081DB62BCD000993D5 /* icon_menu.png in Resources */,
 				AC5AED941DA4A181009443E9 /* medicine-marker.png in Resources */,
+				AC2AB8FA1DB7790A0048931C /* sound_near.wav in Resources */,
 				AC0F6A051DB62BCD000993D5 /* icon_compass.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -431,6 +450,7 @@
 				ACFD6E0C1DB474680006A765 /* loadViewController.swift in Sources */,
 				AC2C52C61D5805F70032B689 /* AppDelegate.swift in Sources */,
 				D3CF68DD1D91187D008B588E /* detailView.swift in Sources */,
+				AC2AB8F61DB778A10048931C /* Constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

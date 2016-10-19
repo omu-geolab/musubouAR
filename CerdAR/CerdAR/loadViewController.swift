@@ -8,7 +8,7 @@
 import UIKit
 import CoreLocation
 import SystemConfiguration
-
+import AVFoundation
 
 class loadViewController: UIViewController, termsViewDelegate, CLLocationManagerDelegate {
     
@@ -16,13 +16,15 @@ class loadViewController: UIViewController, termsViewDelegate, CLLocationManager
     var termsview: termsView? // 利用規約のビュー
     var locationManager: CLLocationManager!
     
+    var json: JSON!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = UIColor.white
         self.showIndicator()
         
-
+        notificationSound()
         
         locationManager = CLLocationManager()
         locationManager?.delegate = self
@@ -41,42 +43,54 @@ class loadViewController: UIViewController, termsViewDelegate, CLLocationManager
         case .authorizedWhenInUse, .authorizedAlways: // 位置情報の取得が許可されているとき
             // ネットワークに接続されている時
             if CheckReachability(hostname: "www") {
+                
+//                let path = Bundle.main.path(forResource: "data", ofType: "geojson")!
+//                let jsonData = NSData(contentsOfFile: path)!
+//                json = JSON(data:jsonData as Data)
+//                jsonDataManager.sharedInstance.storeData(json: self.json, callback: { _ in
+//                    self.showTermsView()
+//                })
+                
                 // jsonを読み込んでから利用規約を表示する
                 let fileName = "data.geojson"
-                var json: JSON!
-                
-                //        let path = Bundle.main.path(forResource: "data", ofType: "json")!
-                //        let jsonData = NSData(contentsOfFile: path)!
-                //        json = JSON(data:jsonData as Data)
-                
+
                 if let dir: NSString = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.allDomainsMask, true).first as NSString? {
-                    
+                
                     let pathFileName = dir.appendingPathComponent(fileName)
                     guard (try? Data(contentsOf: URL(fileURLWithPath: pathFileName))) != nil else {
-                        let alert = UIAlertController(title: "ERROR!!", message: "JSONファイルが見つかりませんでした。", preferredStyle: UIAlertControllerStyle.alert)
-                        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default) { action -> Void in })
-                        present(alert, animated: true, completion: nil)
-                        
-                        showTermsView()
-                        
+                
+                        // ローカルにdata.json(geojson)が存在しない場合，サーバーからデータを取得する．
+                        jsondata(callback: { _ in
+                
+                            // サーバーにもないとき
+                            if self.json == nil {
+                
+                                let alert: UIAlertController = UIAlertController(title: "ERROR!!", message: "JSONファイルが見つかりませんでした", preferredStyle:  UIAlertControllerStyle.alert)
+                
+                                let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: {
+                                    (action: UIAlertAction!) -> Void in
+                                    print("OK")
+                                })
+                
+                                alert.addAction(defaultAction)
+                                self.present(alert, animated: true, completion: nil)
+                                self.showTermsView()
+            
+                            // サーバーにあったとき
+                            } else {
+                                jsonDataManager.sharedInstance.storeData(json: self.json, callback: { _ in
+                                    self.showTermsView()
+                                })
+                            }
+                        })
+    
                         return
                     }
-                    
-                    let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
-                    print(documentsPath)
-                    
-                    
+
                     let jsonData = try? Data(contentsOf: URL(fileURLWithPath: pathFileName))
-                    
                     json = JSON(data:jsonData!)
                 }
                 
-                // jsonの構造の記述ミス・jsonファイルが空のとき
-                // 地図・ARカメラは使用できるがタグは表示されない
-                if json == nil {
-                    showTermsView()
-                    return
-                }
                 
                 jsonDataManager.sharedInstance.storeData(json: json, callback: { _ in
                     showTermsView()
@@ -130,10 +144,58 @@ class loadViewController: UIViewController, termsViewDelegate, CLLocationManager
         self.view.addSubview(activityIndicator)
     }
     
-    //    //Indicatorを止めるときは、こちらを呼び出してあげます。
-    //    func hideIndicator() {
-    //        activityIndicator.stopAnimating()
-    //    }
+    
+    /*
+     * 侵入・付近の通知音の設定
+     */
+    func notificationSound() {
+        
+        do {
+            let filePath = Bundle.main.path(forResource: "sound_intrusion", ofType: "wav")
+            let audioPath = NSURL(fileURLWithPath: filePath!)
+            audioPlayerIntr = try AVAudioPlayer(contentsOf: audioPath as URL)
+            audioPlayerIntr.prepareToPlay()
+        } catch {
+            print("Error")
+        }
+        
+        do {
+            let filePath = Bundle.main.path(forResource: "sound_near", ofType: "wav")
+            let audioPath = NSURL(fileURLWithPath: filePath!)
+            audioPlayerNear = try AVAudioPlayer(contentsOf: audioPath as URL)
+            audioPlayerNear.prepareToPlay()
+        } catch {
+            print("Error")
+        }
+    }
+    
+    
+    /*
+     * サーバーからJSONファイルを探す
+     */
+    func jsondata(callback: @escaping (String) -> Void) -> Void {
+        
+        let url = URL(string: "https://www.cerd.osaka-cu.ac.jp/cerdar_pics/data2.json")
+        let req = URLRequest(url: url!, cachePolicy: NSURLRequest(url: url!).cachePolicy, timeoutInterval: 5.0)
+        
+        let configuration = URLSessionConfiguration.default
+        let session = URLSession(configuration: configuration, delegate:nil, delegateQueue:OperationQueue.main)
+        
+        let task = session.dataTask(with: req, completionHandler: {
+            (data, response, error) -> Void in
+            
+            // urlが見つからない、またはタイムアウトしたとき
+            if error != nil {
+                callback("finished")
+                // 成功したとき
+            } else {
+                print(data)
+                self.json = JSON(data: data!)
+                callback("finished")
+            }
+        })
+        task.resume()
+    }
     
     
     func showTermsView() {

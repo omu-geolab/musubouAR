@@ -164,6 +164,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         warningMessage.layer.cornerRadius = kWarnCorner // 枠線を角丸にする
         warningMessage.clipsToBounds = true
         mapView.addSubview(warningMessage)
+        warningMessage.isHidden = true
         
         /* ピンの設定 */
         for i in 0 ..< jsonDataManager.sharedInstance.infoBox.count {
@@ -176,16 +177,15 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
             warnPinView.append(MGLAnnotationImage())
             polygon.append(MGLPolygon())
             osmWarnBox[i].coordinate = CLLocationCoordinate2D(latitude: jsonDataManager.sharedInstance.warnBox[i].lat, longitude: jsonDataManager.sharedInstance.warnBox[i].lon)
-            mapView.addAnnotation(osmWarnBox[i])
         }
-        
-        
         
         // 画面の中心をユーザーの現在地にし、ズームレベル15で表示する
         if CheckReachability(hostname: "www") {
             if CLLocationManager.authorizationStatus() == .authorizedAlways || CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
-                runAfterDelay(1.5) {
-                    self.mapView.setCenter((self.locationManager.location?.coordinate)!, zoomLevel: 15.0, animated: true)
+                if mapView.isUserLocationVisible == true {
+                    runAfterDelay(1.5) {
+                        self.mapView.setCenter((self.locationManager.location?.coordinate)!, zoomLevel: 15.0, animated: true)
+                    }
                 }
             }
         }
@@ -200,12 +200,6 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         print("osm:viewWillAppear")
         
         displayMode = mode.osm.rawValue
-        
-        update() // 災害円を描く
-        // 60秒に1回update()を発火させる
-        if updateTimer == nil {
-            updateTimer = Timer.scheduledTimer(timeInterval: 60, target: self, selector: #selector(osmViewController.update), userInfo: nil, repeats: true)
-        }
         
         self.navigationController?.setNavigationBarHidden(true, animated: true)
         
@@ -226,6 +220,12 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         for i in 0 ..< jsonDataManager.sharedInstance.infoBox.count {
             infoPinView[i].image = jsonDataManager.sharedInstance.infoBox[i].pinImage
             mapView.addAnnotation(osmInfoBox[i])
+        }
+        
+        update() // 災害円を描く
+        // 60秒に1回update()を発火させる
+        if updateTimer == nil {
+            updateTimer = Timer.scheduledTimer(timeInterval: 60, target: self, selector: #selector(osmViewController.update), userInfo: nil, repeats: true)
         }
     }
     
@@ -441,22 +441,21 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
     
     func detailViewFinish() {
         
-        if pinData.inforType == kWarn {
-            let newsize: CGFloat = CGFloat(Double(screenWidth) * ((circleRadius[pinData.pinNum] * self.kDia * self.kWarnNewSize) / (300 * (21 - self.mapView.zoomLevel))))
-            
-            jsonDataManager.sharedInstance.warnBox[pinData.pinNum].pinImage = getResizeImage(makeLabel(pinData.pinNum, inforType: kWarn), newHeight: newsize)
-            jsonDataManager.sharedInstance.warnBox[pinData.pinNum].expandImage = getResizeImage(makeLabel(pinData.pinNum, inforType: kWarn), newHeight: newsize)
-            self.changeImage(&jsonDataManager.sharedInstance.warnBox[pinData.pinNum], MGLtag: osmWarnBox[pinData.pinNum], newsize: newsize)
-            
-            
-            
-        } else if pinData.inforType == kInfo {
-            if pinData.picType != nil {
-                self.makeRedTag(pinData.pinNum, img: UIImage(named: "icon_infoTag.png")!)
-            }
-        }
-        
         runAfterDelay(1.5) {
+            if pinData.inforType == kWarn {
+                let newsize: CGFloat = CGFloat(Double(screenWidth) * ((circleRadius[pinData.pinNum] * self.kDia * self.kWarnNewSize) / (300 * (21 - self.mapView.zoomLevel))))
+                
+                jsonDataManager.sharedInstance.warnBox[pinData.pinNum].pinImage = getResizeImage(makeLabel(pinData.pinNum, inforType: kWarn), newHeight: newsize)
+                jsonDataManager.sharedInstance.warnBox[pinData.pinNum].expandImage = getResizeImage(makeLabel(pinData.pinNum, inforType: kWarn), newHeight: newsize)
+                self.changeImage(&jsonDataManager.sharedInstance.warnBox[pinData.pinNum], MGLtag: osmWarnBox[pinData.pinNum], newsize: newsize)
+                
+                
+                
+            } else if pinData.inforType == kInfo {
+                if pinData.picType != nil {
+                    self.makeRedTag(pinData.pinNum, img: UIImage(named: "icon_infoTag.png")!)
+                }
+            }
             cannotTouchView.removeFromSuperview()
         }
         detailview?.delegate = nil
@@ -493,10 +492,18 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         jsonDataManager.sharedInstance.warnBox[num].distance = calcDistance(jsonDataManager.sharedInstance.warnBox[num].lat, lon: jsonDataManager.sharedInstance.warnBox[num].lon, uLat: userLat, uLon: userLon) // 距離を求める
         
         if jsonDataManager.sharedInstance.warnBox[num].distance - Int(circleRadius[num]) < 0 { // 侵入
+            if audioPlayerIntr != nil {
+                audioPlayerIntr.play()
+            }
+            warningMessage.isHidden = false
             warningMessage.text = jsonDataManager.sharedInstance.warnBox[num].message2 // 警告メッセージ
             msgCount += 1
             
         } else if jsonDataManager.sharedInstance.warnBox[num].distance - Int(circleRadius[num]) < 500 { // 付近
+            if audioPlayerNear != nil {
+                audioPlayerNear.play()
+            }
+            warningMessage.isHidden = false
             warningMessage.text = jsonDataManager.sharedInstance.warnBox[num].message1 // 警告メッセージ
             msgCount += 1
             
@@ -504,7 +511,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
             msgSafeCount += 1
             if msgSafeCount == box.count {
                 msgSafeCount = 0
-                warningMessage.text = "あんぜん！"
+                warningMessage.isHidden = true
                 return
             }
             msgCount += 1
@@ -622,8 +629,9 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
                 
                 let han: Double = circleRadius[i] * kDia + 0.1
                 let newsize: CGFloat = CGFloat(Double(screenWidth) * ((han * kWarnNewSize) / (300 * (21 - mapView.zoomLevel))))
-                
-                changeImage(&jsonDataManager.sharedInstance.warnBox[i], MGLtag: osmWarnBox[i], newsize: newsize)
+                if jsonDataManager.sharedInstance.warnBox[i].expandImage != nil {
+                    changeImage(&jsonDataManager.sharedInstance.warnBox[i], MGLtag: osmWarnBox[i], newsize: newsize)
+                }
             }
         }
     }
@@ -781,7 +789,11 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         runAfterDelay(1.5) {
             if pinData.inforType == kWarn {
                 let newsize: CGFloat = CGFloat(Double(screenWidth) * ((circleRadius[pinData.pinNum] * self.kDia * self.kWarnNewSize) / (300 * (21 - self.mapView.zoomLevel))))
-                self.warnPinView[pinData.pinNum].image = getResizeImage(makeLabel(pinData.pinNum, inforType: kWarn), newHeight: newsize)
+                
+                jsonDataManager.sharedInstance.warnBox[pinData.pinNum].pinImage = getResizeImage(makeLabel(pinData.pinNum, inforType: kWarn), newHeight: newsize)
+                jsonDataManager.sharedInstance.warnBox[pinData.pinNum].expandImage = getResizeImage(makeLabel(pinData.pinNum, inforType: kWarn), newHeight: newsize)
+                self.changeImage(&jsonDataManager.sharedInstance.warnBox[pinData.pinNum], MGLtag: osmWarnBox[pinData.pinNum], newsize: newsize)
+                
             } else if pinData.inforType == kInfo {
                 if pinData.picType != nil {
                     self.makeRedTag(pinData.pinNum, img: UIImage(named: "icon_infoTag.png")!)
@@ -866,10 +878,10 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
                 // 現在災害発生中
             } else if jsonDataManager.sharedInstance.warnBox[i].stop.compare(nowTime) == ComparisonResult.orderedDescending && nowTime.compare(jsonDataManager.sharedInstance.warnBox[i].start) == ComparisonResult.orderedDescending {
                 
+                updatePin(i)
+                
                 let Sn = Date().timeIntervalSince(jsonDataManager.sharedInstance.warnBox[i].start) / 60 // 開始時刻(start)と現在時刻(now)の差
                 makeCircle(i, startNow: Sn)
-                
-                updatePin(i)
                 
                 // 警告タグの範囲を更新
                 let han: Double = circleRadius[i] * kDia + 0.1
@@ -886,7 +898,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         
         // 災害発生していないとき
         if box.count == 0 {
-            warningMessage.text = "安全1"
+            warningMessage.isHidden = true
         } else {
             if messageTimer == nil {
                 messageTimer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(osmViewController.updateMessage), userInfo: nil, repeats: true)
