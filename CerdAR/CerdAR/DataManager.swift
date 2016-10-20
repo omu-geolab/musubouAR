@@ -15,7 +15,7 @@ import AVFoundation
 class TagData {
     
     // 共通タグ
-    var id: String!           // 共通ID(必要なのか？)
+    var commonId: String!           // 共通ID(必要なのか？)
     var name: String!         // タグの名前
     var inforType: String!    // 種別(info or warn)
     var icon: String!         // 使用する画像
@@ -55,6 +55,7 @@ class jsonDataManager: NSObject {
         
         var iN = 0 // 情報タグの番号
         var wN = 0 // 警告タグの番号
+        
         for i in 0 ..< json["features"].count {
             // 情報タグ
             if json["features"][i]["properties"]["info_type"].string == kInfo {
@@ -64,7 +65,7 @@ class jsonDataManager: NSObject {
                 
                 
                 if let id = json["features"][i]["properties"]["id"].string { // ID
-                    infoBox[iN].id = id
+                    infoBox[iN].commonId = id
                 } else {
                     infoBox.removeLast()
                     continue
@@ -115,29 +116,30 @@ class jsonDataManager: NSObject {
                 }
                 
                 if let pType = json["features"][i]["properties"]["pic_type"].string { // 写真か動画か
-                    infoBox[iN].picType = pType
-                    
-                    if let pm = json["features"][i]["properties"][pType].string { // 写真・動画のURL
-                        if pType == kPhoto {
+                    if pType == kPhoto {
+                        infoBox[iN].picType = kPhoto
+                        if let pm = json["features"][i]["properties"][kPhoto].string { // 写真のURL
                             infoBox[iN].photo = pm
-                        } else if pType == kMovie {
+                        } else {
+                            infoBox[iN].photo = ""
+                        }
+                        
+                    } else if pType == kMovie {
+                        infoBox[iN].picType = kMovie
+                        if let pm = json["features"][i]["properties"][kPhoto].string { // 動画のURL
                             infoBox[iN].movie = pm
                         } else {
-                            infoBox.removeLast()
-                            continue
+                            infoBox[iN].movie = ""
                         }
                         
                     } else {
-                        infoBox.removeLast()
-                        continue
+                        infoBox[iN].picType = ""
+                        infoBox[iN].photo = ""
                     }
                     
                 } else {
-                    
-                    if json["features"][i]["properties"]["photo"].string != nil || json["features"][i]["properties"]["movie"].string != nil {
-                        infoBox.removeLast()
-                        continue
-                    }
+                    infoBox[iN].picType = ""
+                    infoBox[iN].photo = ""
                 }
                 
                 
@@ -154,11 +156,11 @@ class jsonDataManager: NSObject {
                 
                 warnBox.append(TagData())
                 warnBox[wN].pinNum = wN //ピン番号
-                warnBox[wN].id = json["features"][i]["properties"]["id"].string // id
+                warnBox[wN].commonId = json["features"][i]["properties"]["id"].string // id
                 
                 
                 if let id = json["features"][i]["properties"]["id"].string { // 目的地の名前
-                    warnBox[wN].id = id
+                    warnBox[wN].commonId = id
                 } else {
                     warnBox.removeLast()
                     continue

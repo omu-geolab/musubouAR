@@ -642,7 +642,7 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         
         // 施設タグ
         if annotation.tagData.inforType == kInfo {
-            if annotation.tagData.picType == nil {
+            if annotation.tagData.icon != "icon_infoTag.png" { // iconがicon_infoTags.png以外のとき
                 
                 annotation.tagData.pinImage = getResizeImage(UIImage(named: annotation.tagData.icon)!, newHeight: 60)
                 //annotation.tagData.expandImage = getResizeImage(UIImage(named: annotation.tagData.icon)!, newHeight: 500)

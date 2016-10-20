@@ -89,45 +89,53 @@ class detailView: UIView {
         // 画像・動画の挿入(画面左側)
         if pinData.inforType == kInfo {
             
-            if pinData.picType == nil {
-                let warnImageView = UIImageView(frame: CGRect.init(x: CGFloat(dWid * 0.8 * 0.15), y: CGFloat(dHei * 0.2), width: dHei * 0.4, height: dHei * 0.55))
-                warnImageView.image = UIImage(named: pinData.icon)
-                print(UIImage(named: pinData.icon)?.size.width, UIImage(named: pinData.icon)?.size.height)
-                self.addSubview(warnImageView)
+            if pinData.picType == kPhoto { // 画像
                 
-            } else if pinData.picType == kPhoto { // 画像
-                
-                if pinData.photo.range(of: "jpg") == nil && pinData.photo.range(of: "png") == nil && pinData.photo.range(of: "JPG") == nil {
-                    notFound()
+                if pinData.photo != nil {
+                    if pinData.photo.range(of: "jpg") == nil && pinData.photo.range(of: "png") == nil && pinData.photo.range(of: "JPG") == nil {
+                        notFound()
+                        
+                    } else {
+                        
+                        let url = URL(string: pinData.photo)
+                        let req = URLRequest(url: url!, cachePolicy: NSURLRequest(url: url!).cachePolicy, timeoutInterval: 5.0)
+                        
+                        let configuration = URLSessionConfiguration.default
+                        let session = URLSession(configuration: configuration, delegate:nil, delegateQueue:OperationQueue.main)
+                        
+                        let task = session.dataTask(with: req, completionHandler: {
+                            (data, response, error) -> Void in
+                            
+                            // urlが見つからない、またはタイムアウトしたとき
+                            if error != nil {
+                                self.notFound()
+                                
+                                // 成功したとき
+                            } else {
+                                let warnImageView = UIImageView(frame: CGRect.init(x: CGFloat(dWid * 0.05), y: CGFloat(dHei * 0.3), width: CGFloat(dWid * 0.45), height: CGFloat(dHei * 0.5)))
+                                
+                                if let image = UIImage(data: data!) {
+                                    warnImageView.image = image
+                                } else {
+                                    warnImageView.image = UIImage(named: "icon_notfound.png")
+                                }
+                                self.addSubview(warnImageView)
+                            }
+                        })
+                        task.resume()
+                    }
                     
                 } else {
                     
-                    let url = URL(string: pinData.photo)
-                    let req = URLRequest(url: url!, cachePolicy: NSURLRequest(url: url!).cachePolicy, timeoutInterval: 5.0)
-                    
-                    let configuration = URLSessionConfiguration.default
-                    let session = URLSession(configuration: configuration, delegate:nil, delegateQueue:OperationQueue.main)
-                    
-                    let task = session.dataTask(with: req, completionHandler: {
-                        (data, response, error) -> Void in
+                    let warnImageView = UIImageView(frame: CGRect.init(x: CGFloat(dWid * 0.8 * 0.15), y: CGFloat(dHei * 0.2), width: dHei * 0.4, height: dHei * 0.55))
+                    if pinData.icon != "icon_infoTag.png" {
+                        warnImageView.image = UIImage(named: pinData.icon)
+                        self.addSubview(warnImageView)
                         
-                        // urlが見つからない、またはタイムアウトしたとき
-                        if error != nil {
-                            self.notFound()
-                            
-                            // 成功したとき
-                        } else {
-                            let warnImageView = UIImageView(frame: CGRect.init(x: CGFloat(dWid * 0.05), y: CGFloat(dHei * 0.3), width: CGFloat(dWid * 0.45), height: CGFloat(dHei * 0.5)))
-                            
-                            if let image = UIImage(data: data!) {
-                                warnImageView.image = image
-                            } else {
-                                warnImageView.image = UIImage(named: "icon_notfound.png")
-                            }
-                            self.addSubview(warnImageView)
-                        }
-                    })
-                    task.resume()
+                    } else {
+                        warnImageView.image = pinData.expandImage
+                        self.addSubview(warnImageView)
+                    }
                 }
                 
                 
@@ -161,6 +169,16 @@ class detailView: UIView {
                         }
                     })
                     task.resume()
+                }
+            } else {
+                let warnImageView = UIImageView(frame: CGRect.init(x: CGFloat(dWid * 0.8 * 0.15), y: CGFloat(dHei * 0.2), width: dHei * 0.4, height: dHei * 0.55))
+                if pinData.icon != "icon_infoTag.png" {
+                    warnImageView.image = UIImage(named: pinData.icon)
+                    self.addSubview(warnImageView)
+                    
+                } else {
+                    warnImageView.image = pinData.expandImage
+                    self.addSubview(warnImageView)
                 }
             }
             

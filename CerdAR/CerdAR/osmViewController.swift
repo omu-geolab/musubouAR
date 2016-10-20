@@ -335,7 +335,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
             for i in 0 ..< jsonDataManager.sharedInstance.infoBox.count {
                 if annotation.coordinate.latitude == jsonDataManager.sharedInstance.infoBox[i].lat && annotation.coordinate.longitude == jsonDataManager.sharedInstance.infoBox[i].lon {
                     pinData = jsonDataManager.sharedInstance.infoBox[i]
-                    if jsonDataManager.sharedInstance.infoBox[i].picType != nil {
+                    if jsonDataManager.sharedInstance.infoBox[i].icon == "icon_infoTag.png" {
                         self.makeRedTag(i, img: UIImage(named: "icon_infoTag_red.png")!)
                         break
                     }
@@ -452,7 +452,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
                 
                 
             } else if pinData.inforType == kInfo {
-                if pinData.picType != nil {
+                if pinData.icon == "icon_infoTag.png" {
                     self.makeRedTag(pinData.pinNum, img: UIImage(named: "icon_infoTag.png")!)
                 }
             }
@@ -795,7 +795,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
                 self.changeImage(&jsonDataManager.sharedInstance.warnBox[pinData.pinNum], MGLtag: osmWarnBox[pinData.pinNum], newsize: newsize)
                 
             } else if pinData.inforType == kInfo {
-                if pinData.picType != nil {
+                if pinData.icon == "icon_infoTag.png" {
                     self.makeRedTag(pinData.pinNum, img: UIImage(named: "icon_infoTag.png")!)
                 }
             }

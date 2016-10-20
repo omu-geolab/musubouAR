@@ -18,7 +18,6 @@ class cameraViewController: UIViewController, UIGestureRecognizerDelegate, CLLoc
     var avDevice: AVCaptureDevice! // AVキャプチャデバイス
     var avInput: AVCaptureInput! // AVキャプチャデバイスインプット
     var avOutput: AVCaptureStillImageOutput! // AVキャプチャアウトプット
-    //var avOutput: AVCapturePhotoOutput!
     var previewLayer: AVCaptureVideoPreviewLayer? // 画面表示用レイヤー
     
     var detailview: detailView?
@@ -570,7 +569,7 @@ class cameraViewController: UIViewController, UIGestureRecognizerDelegate, CLLoc
             if inforType == kInfo {
                 
                 imageBox[index] = UIImageView(frame: CGRect(x: 0.0, y: 0.0, width: CGFloat(size * 0.75), height: CGFloat(size)))
-                if jsonDataManager.sharedInstance.infoBox[index].picType != nil {
+                if jsonDataManager.sharedInstance.infoBox[index].icon == "icon_infoTag.png" {
                     labelImg = makeLabel(jsonDataManager.sharedInstance.infoBox[index].pinNum, inforType: inforType) // UILabelをUIImageに変換する
                     imageBox[index].image = getPinImage(labelImg, inforType: jsonDataManager.sharedInstance.infoBox[index].inforType)
                 } else {
