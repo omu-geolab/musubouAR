@@ -14,14 +14,6 @@ import UIKit
 class termsView: UIView {
     weak var delegate: termsViewDelegate?
     
-    /*
-     // Only override drawRect: if you perform custom drawing.
-     // An empty implementation adversely affects performance during animation.
-     override func drawRect(rect: CGRect) {
-     // Drawing code
-     }
-     */
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         viewInit()
@@ -33,6 +25,7 @@ class termsView: UIView {
     }
     
     func viewInit() {
+        
         // OKボタンの生成
         let okButton = UIButton(frame: CGRect(x: 0, y: 0, width: bounds.width * 0.8 * 0.45, height: bounds.height * 0.8 * 0.15))
         okButton.backgroundColor = UIColor.yellow
@@ -60,7 +53,7 @@ class termsView: UIView {
         alertView.backgroundColor = UIColor.white
         
         // 利用規約ラベルの生成
-        let termsLabel = UILabel(frame: CGRect(x: bounds.width * 0.8 * 0.2, y: bounds.height * 0.8 * 0.02, width: 300, height: 100))
+        let termsLabel = UILabel(frame: CGRect(x: bounds.width * 0.8 * 0.05, y: bounds.height * 0.8 * 0.02, width: 250, height: 100))
         termsLabel.font = UIFont.systemFont(ofSize: 60)
         termsLabel.text = "利用規約"
         
@@ -95,6 +88,7 @@ class termsView: UIView {
         alertView.addSubview(scrollView)
         alertView.addSubview(okButton)
         alertView.addSubview(cancelButton)
+        logo(view: alertView)
         addSubview(alertView)
     }
     
@@ -106,6 +100,23 @@ class termsView: UIView {
     /* (利用規約)キャンセルボタンをクリックした時 */
     func onClick_Cancel(_ sender: UIButton) {
         exit(0) // アプリを終了する
+    }
+    
+    
+    func logo(view: UIView) {
+        
+        // ロゴ画像(CERD)
+        let logoCerdView: UIImageView = UIImageView(image:UIImage(named: "logo_CERD.jpg"))
+        logoCerdView.frame = CGRect.init(x: bounds.width * 0.8 * 0.05 + 250, y: bounds.height * 0.8 * 0.02, width: 200, height: 100)
+        
+        // ロゴ画像(BRIL)
+        let brilImage = UIImage(named: "logo_BRIL.jpg")
+        let logoBrilView: UIImageView = UIImageView(image: brilImage)
+        logoBrilView.frame = CGRect.init(x: bounds.width * 0.8 * 0.05 + 450, y: bounds.height * 0.8 * 0.02, width: (brilImage?.size.width)! * 0.5, height: (brilImage?.size.height)! * 0.5)
+        
+        view.addSubview(logoCerdView)
+        view.addSubview(logoBrilView)
+        
     }
     
 }

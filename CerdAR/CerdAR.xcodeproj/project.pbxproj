@@ -35,6 +35,8 @@
 		AC2C52FD1D58092B0032B689 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC2C52FC1D58092B0032B689 /* MapKit.framework */; };
 		AC2C52FF1D5809360032B689 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC2C52FE1D5809360032B689 /* CoreLocation.framework */; };
 		AC2C53011D58093C0032B689 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC2C53001D58093C0032B689 /* AVFoundation.framework */; };
+		AC5754321DB89B45003271F1 /* logo_CERD.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC5754301DB89B45003271F1 /* logo_CERD.jpg */; };
+		AC57543A1DB8B8BA003271F1 /* logo_BRIL.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC5754391DB8B8BA003271F1 /* logo_BRIL.jpg */; };
 		AC5AED8E1DA4A181009443E9 /* hinan-bldg-marker.png in Resources */ = {isa = PBXBuildFile; fileRef = AC5AED871DA4A181009443E9 /* hinan-bldg-marker.png */; };
 		AC5AED8F1DA4A181009443E9 /* hinan-camp-marker.png in Resources */ = {isa = PBXBuildFile; fileRef = AC5AED881DA4A181009443E9 /* hinan-camp-marker.png */; };
 		AC5AED921DA4A181009443E9 /* icon_notfound.png in Resources */ = {isa = PBXBuildFile; fileRef = AC5AED8B1DA4A181009443E9 /* icon_notfound.png */; };
@@ -115,6 +117,8 @@
 		AC2C52FC1D58092B0032B689 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		AC2C52FE1D5809360032B689 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		AC2C53001D58093C0032B689 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		AC5754301DB89B45003271F1 /* logo_CERD.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = logo_CERD.jpg; path = CerdAR/logo_CERD.jpg; sourceTree = "<group>"; };
+		AC5754391DB8B8BA003271F1 /* logo_BRIL.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = logo_BRIL.jpg; path = CerdAR/logo_BRIL.jpg; sourceTree = "<group>"; };
 		AC5AED871DA4A181009443E9 /* hinan-bldg-marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "hinan-bldg-marker.png"; path = "CerdAR/hinan-bldg-marker.png"; sourceTree = "<group>"; };
 		AC5AED881DA4A181009443E9 /* hinan-camp-marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "hinan-camp-marker.png"; path = "CerdAR/hinan-camp-marker.png"; sourceTree = "<group>"; };
 		AC5AED8B1DA4A181009443E9 /* icon_notfound.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_notfound.png; path = CerdAR/icon_notfound.png; sourceTree = "<group>"; };
@@ -230,6 +234,8 @@
 		AC2C53021D5809610032B689 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				AC5754391DB8B8BA003271F1 /* logo_BRIL.jpg */,
+				AC5754301DB89B45003271F1 /* logo_CERD.jpg */,
 				AC0F69FF1DB62BCD000993D5 /* icon_camera.png */,
 				AC0F6A001DB62BCD000993D5 /* icon_compass.png */,
 				AC0F6A011DB62BCD000993D5 /* icon_locate.png */,
@@ -407,9 +413,11 @@
 				AC2C52D01D5805F70032B689 /* Assets.xcassets in Resources */,
 				AC05B9F51D811F830082C52A /* icon_warn0.png in Resources */,
 				AC0550551DACEEF80038C8D5 /* icon_infoTag_red.png in Resources */,
+				AC57543A1DB8B8BA003271F1 /* logo_BRIL.jpg in Resources */,
 				AC2C52CB1D5805F70032B689 /* Main.storyboard in Resources */,
 				AC05B9F71D811F830082C52A /* icon_warn2.png in Resources */,
 				AC05B9F81D811F830082C52A /* icon_warn3.png in Resources */,
+				AC5754321DB89B45003271F1 /* logo_CERD.jpg in Resources */,
 				AC0F6A071DB62BCD000993D5 /* icon_map.png in Resources */,
 				AC0F6A081DB62BCD000993D5 /* icon_menu.png in Resources */,
 				AC5AED941DA4A181009443E9 /* medicine-marker.png in Resources */,

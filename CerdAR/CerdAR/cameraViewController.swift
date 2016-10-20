@@ -17,7 +17,7 @@ class cameraViewController: UIViewController, UIGestureRecognizerDelegate, CLLoc
     var avSession: AVCaptureSession! // AVキャプチャセッション
     var avDevice: AVCaptureDevice! // AVキャプチャデバイス
     var avInput: AVCaptureInput! // AVキャプチャデバイスインプット
-    var avOutput: AVCaptureStillImageOutput! // AVキャプチャアウトプット
+    var avOutput: AVCapturePhotoOutput! // AVキャプチャアウトプット
     var previewLayer: AVCaptureVideoPreviewLayer? // 画面表示用レイヤー
     
     var detailview: detailView?
@@ -53,7 +53,7 @@ class cameraViewController: UIViewController, UIGestureRecognizerDelegate, CLLoc
     
     // MARK: ライフサイクル
     override func viewDidLoad() {
-        print("camera:viewDidLoad")
+        
         super.viewDidLoad()
         
         self.navigationController?.setNavigationBarHidden(true, animated: true)
@@ -117,7 +117,6 @@ class cameraViewController: UIViewController, UIGestureRecognizerDelegate, CLLoc
     
     
     override func viewWillAppear(_ animated: Bool) {
-        print("camera:viewWillAppear")
         
         super.viewWillAppear(animated)
         
@@ -158,7 +157,7 @@ class cameraViewController: UIViewController, UIGestureRecognizerDelegate, CLLoc
     }
     
     override func viewDidDisappear(_ animated: Bool) {
-        print("camera:viewDidDisappear")
+        
         super.viewDidDisappear(animated)
         
         // カメラの停止
@@ -300,37 +299,25 @@ class cameraViewController: UIViewController, UIGestureRecognizerDelegate, CLLoc
             avSession.commitConfiguration()
         }
         
-        let devices = AVCaptureDevice.devices()
+        let devices = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo)
         
-        for capDevice in devices! {
-            if (capDevice as AnyObject).position == AVCaptureDevicePosition.back {
-                // 背面カメラを取得
-                avDevice = capDevice as? AVCaptureDevice
-            }
+        do {
+            avInput = try AVCaptureDeviceInput(device: devices!)
+        } catch let error as NSError {
+            print(error)
         }
         
-        if avDevice != nil {
-            
-            do {
-                avInput = try AVCaptureDeviceInput(device: avDevice!)
-            } catch let error as NSError {
-                print(error)
+        if avSession.canAddInput(avInput) {
+            avSession.addInput(avInput)
+            avOutput = AVCapturePhotoOutput()
+            if avSession.canAddOutput(avOutput) {
+                avSession.addOutput(avOutput)
             }
-            
-            if avSession.canAddInput(avInput) {
-                avSession.addInput(avInput)
-                avOutput = AVCaptureStillImageOutput()
-                avOutput.outputSettings = [AVVideoCodecKey: AVVideoCodecJPEG]
-                if avSession.canAddOutput(avOutput) {
-                    avSession.addOutput(avOutput)
-                }
-                let capVideoLayer: AVCaptureVideoPreviewLayer = AVCaptureVideoPreviewLayer(session:avSession)
-                capVideoLayer.frame = self.view.bounds
-                capVideoLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
-                self.previewLayer = capVideoLayer
-                self.view.layer.addSublayer(capVideoLayer)
-                //                avSession.startRunning()
-            }
+            let capVideoLayer: AVCaptureVideoPreviewLayer = AVCaptureVideoPreviewLayer(session:avSession)
+            capVideoLayer.frame = self.view.bounds
+            capVideoLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
+            self.previewLayer = capVideoLayer
+            self.view.layer.addSublayer(capVideoLayer)
         }
     }
     
@@ -356,7 +343,6 @@ class cameraViewController: UIViewController, UIGestureRecognizerDelegate, CLLoc
             
             // 現在発生中
             if jsonDataManager.sharedInstance.warnBox[i].stop.compare(nowTime) == ComparisonResult.orderedDescending && nowTime.compare(jsonDataManager.sharedInstance.warnBox[i].start) == ComparisonResult.orderedDescending {
-                
                 
                 let startNow = Date().timeIntervalSince(jsonDataManager.sharedInstance.warnBox[i].start) / 60 // 開始時刻(start)と現在時刻(now)の差
                 

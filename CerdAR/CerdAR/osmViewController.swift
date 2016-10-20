@@ -108,7 +108,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
     // MARK: ライフサイクル
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("osm:viewdidload")
+        
         self.title = "map"
         
         /* 警告ビューの設定 */
@@ -183,8 +183,11 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         if CheckReachability(hostname: "www") {
             if CLLocationManager.authorizationStatus() == .authorizedAlways || CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
                 if mapView.isUserLocationVisible == true {
-                    runAfterDelay(1.5) {
-                        self.mapView.setCenter((self.locationManager.location?.coordinate)!, zoomLevel: 15.0, animated: true)
+                    
+                    if self.locationManager.location?.coordinate == nil {
+                        runAfterDelay(1.5) {
+                            self.mapView.setCenter((self.locationManager.location?.coordinate)!, zoomLevel: 15.0, animated: true)
+                        }
                     }
                 }
             }
@@ -197,7 +200,6 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
     /* 画面が表示される直前 */
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        print("osm:viewWillAppear")
         
         displayMode = mode.osm.rawValue
         
@@ -233,7 +235,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
     /* 別の画面に遷移した直後(破棄) */
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        print("osm:viewDidDisappear")
+        
         mapView.delegate = nil
         locationManager.delegate = nil
         locationManager.stopUpdatingLocation() // GPSの更新を停止する
@@ -248,7 +250,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
     
     
     override func viewWillDisappear(_ animated: Bool) {
-        print("osm:viewWillDisappear")
+        
         if mapView.annotations?.count != nil {
             print(mapView.annotations?.count)
             for annotation in self.mapView.annotations! {
@@ -559,7 +561,8 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
                 warningView.backgroundColor = UIColor(red: 0.200, green: 1.000, blue: 0.384, alpha: 0.7)
                 break
             }
-            mapView.alpha = 0.8
+            mapView.alpha = 0.6 // 画面の色の濃さを設定する((濃)0<-->1.0(薄))
+            
             viewCount += 1
             
         } else { // 安全
@@ -747,7 +750,6 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         configview?.removeFromSuperview()
         ConfigView().deleteConfigDisplay()
         self.dismiss(animated: true, completion: nil)
-        //self.present(appleMaps, animated: true, completion: nil)
         
         updateTimer.invalidate() // update()を発火させていたOpenStreetMapsのタイマーを止める
     }

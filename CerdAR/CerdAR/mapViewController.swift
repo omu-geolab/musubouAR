@@ -77,7 +77,6 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     
     // MARK: ライフサイクル
     override func viewDidLoad() {
-        print("apple:viewDidLoad")
         
         super.viewDidLoad()
         self.navigationController?.setNavigationBarHidden(true, animated: true)
@@ -167,7 +166,7 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     
     /* 画面が表示される直前 */
     override func viewWillAppear(_ animated: Bool) {
-        print("apple:viewWillAppear")
+        
         super.viewWillAppear(animated)
         
         mapView?.delegate = self
@@ -210,7 +209,7 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     
     
     override func viewWillDisappear(_ animated: Bool) {
-        print("apple:viewWillDisappear")
+        
         super.viewWillDisappear(animated)
         
         for annotation in self.mapView!.annotations {
@@ -221,7 +220,7 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     
     /* 別の画面に遷移した直後(破棄) */
     override func viewDidDisappear(_ animated: Bool) {
-        print("apple:viewDidDisappear")
+        
         super.viewDidDisappear(animated)
         
         mapView!.delegate = nil
@@ -244,6 +243,7 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
      * 拡大縮小に合わせて画像を張り替える
      */
     func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
+        
         scalingImage()
     }
     
@@ -524,7 +524,9 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
                 warningView.backgroundColor = UIColor(red: 0.200, green: 1.000, blue: 0.384, alpha: 0.7)
                 break
             }
-            mapView!.alpha = 0.8
+            
+            mapView!.alpha = 0.6 // 画面の色の濃さを設定する((濃)0<-->1.0(薄))
+            
             viewCount += 1
             
         } else { // 安全
@@ -718,28 +720,6 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         }
     }
     
-    //    /*
-    //     * 現在地情報の表示を許可する
-    //     */
-    //    func alertLocationServicesDisabled() {
-    //        let title = "Location Services Disabled"
-    //        let message = "You must enable Location Services to track your run."
-    //
-    //        if NSClassFromString("UIAlertController") != nil {
-    //            let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-    //
-    //            alert.addAction(UIAlertAction(title: "Settings", style: .default, handler: { action in
-    //                let url = URL(string: UIApplicationOpenSettingsURLString)
-    //                UIApplication.shared.openURL(url!)
-    //            }))
-    //            alert.addAction(UIAlertAction(title: "Close", style: .cancel, handler: nil))
-    //
-    //            present(alert, animated: true, completion: nil)
-    //        } else {
-    //            UIAlertController.self
-    //        }
-    //    }
-    
     
     /*
      * 画面左下のボタンをタップしたとき
@@ -819,8 +799,6 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         if mapView?.isUserLocationVisible == true {
             let coordinateRegion = MKCoordinateRegionMakeWithDistance(self.mapView!.userLocation.coordinate, 800, 800)
             self.mapView!.setRegion(coordinateRegion, animated:true)
-        } else {
-            print("cannot")
         }
     }
     
