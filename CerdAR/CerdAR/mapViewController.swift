@@ -73,6 +73,8 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     var appleMapsInfoBox = [appleMapsAnnotation]() // ピンの情報を持つ(情報)
     var appleMapsWarnBox = [appleMapsAnnotation]() // ピンの情報を持つ(警告)
     
+    var beforeZoomLv = 0.0
+        
     
     // MARK: ライフサイクル
     override func viewDidLoad() {
@@ -242,7 +244,10 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
      * 拡大縮小に合わせて画像を張り替える
      */
     func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
-        scalingImage()
+        // キューを生成してサブスレッドで実行
+        DispatchQueue(label: "scalingimage").async {
+            self.scalingImage()
+        }
     }
     
     /*
@@ -485,7 +490,7 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         }
         
         if !messageTimer.isValid {
-            messageTimer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(mapViewController.updateMessage), userInfo: nil, repeats: true)
+            messageTimer = Timer.scheduledTimer(timeInterval: kUpdateMM, target: self, selector: #selector(mapViewController.updateMessage), userInfo: nil, repeats: true)
         }
         
         
@@ -557,7 +562,7 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         }
         
         if !viewTimer.isValid {
-            viewTimer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(mapViewController.updateView), userInfo: nil, repeats: true)
+            viewTimer = Timer.scheduledTimer(timeInterval: kUpdateMM, target: self, selector: #selector(mapViewController.updateView), userInfo: nil, repeats: true)
         }
     }
     
@@ -584,32 +589,30 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
      */
     func scalingImage() {
         
-        let scaleZoom = mapView!.region
+        let scaleZoom = mapView!.region.span.latitudeDelta
         
-        let start = NSDate()
-        for i in 0 ..< jsonDataManager.sharedInstance.warnBox.count {
-            
-            if jsonDataManager.sharedInstance.warnBox[i].stop.compare(Date()) == ComparisonResult.orderedDescending && Date().compare(jsonDataManager.sharedInstance.warnBox[i].start) == ComparisonResult.orderedDescending {
+        if scaleZoom - beforeZoomLv >= 0.00001 || scaleZoom - beforeZoomLv <= -0.00001 {
+        
+            for i in 0 ..< jsonDataManager.sharedInstance.warnBox.count {
                 
-                // scaleZoom は表示範囲（縮尺度）で、SCALEZOOM = 1 で画面の縦横が1度ということになる
-                // 1度 = 約111km
-                //
-                //                     タグのサイズ (m)
-                //  画面の横幅 ×  ----------------------------
-                //                 縮尺度 × 111(km) × 1000    ← 画面が表示されている実際の範囲を m で計算している
-                //
-                // これで、画面の何%で表示すればいいかわかるので、それにscreenWidthをかけると、画面に表示する画像のサイズが決定する
-                //
-                // タグのサイズは、災害円の直径
-                
-                
-                // キューを生成してサブスレッドで実行
-                DispatchQueue(label: "scalingimage").async {
+                if jsonDataManager.sharedInstance.warnBox[i].stop.compare(Date()) == ComparisonResult.orderedDescending && Date().compare(jsonDataManager.sharedInstance.warnBox[i].start) == ComparisonResult.orderedDescending {
+                    
+                    
+                    // scaleZoom は表示範囲（縮尺度）で、SCALEZOOM = 1 で画面の縦横が1度ということになる
+                    // 1度 = 約111km
+                    //
+                    //                     タグのサイズ (m)
+                    //  画面の横幅 ×  ----------------------------
+                    //                 縮尺度 × 111(km) × 1000    ← 画面が表示されている実際の範囲を m で計算している
+                    //
+                    // これで、画面の何%で表示すればいいかわかるので、それにscreenWidthをかけると、画面に表示する画像のサイズが決定する
+                    //
+                    // タグのサイズは、災害円の直径
                     
                     if jsonDataManager.sharedInstance.warnBox[i].expandImage != nil {
                         
                         let han: Double = circleRadius[i] * 2.0 + 0.1
-                        let newsize: CGFloat = screenWidth * CGFloat((han * 0.7) / (scaleZoom.span.latitudeDelta * 111.0 * 1000.0))
+                        let newsize: CGFloat = screenWidth * CGFloat((han * 0.7) / (scaleZoom * 111.0 * 1000.0))
                         
                         // メインスレッドで実行
                         DispatchQueue.main.async {
@@ -619,10 +622,7 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
                 }
             }
         }
-        let elapsed = NSDate().timeIntervalSince(start as Date)
-        print(elapsed)
-        
-        
+        beforeZoomLv = scaleZoom
     }
     
     
@@ -912,17 +912,17 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
             
             // 警告メッセージのタイマーを開始させる
             if messageTimer == nil {
-                messageTimer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(mapViewController.updateMessage), userInfo: nil, repeats: true)
+                messageTimer = Timer.scheduledTimer(timeInterval: kUpdateMM, target: self, selector: #selector(mapViewController.updateMessage), userInfo: nil, repeats: true)
             } else if !messageTimer.isValid {
-                messageTimer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(mapViewController.updateMessage), userInfo: nil, repeats: true)
+                messageTimer = Timer.scheduledTimer(timeInterval: kUpdateMM, target: self, selector: #selector(mapViewController.updateMessage), userInfo: nil, repeats: true)
             }
             
             // 警告モードのタイマーを開始させる
             if viewTimer == nil {
-                viewTimer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(mapViewController.updateView), userInfo: nil, repeats: true)
+                viewTimer = Timer.scheduledTimer(timeInterval: kUpdateMM, target: self, selector: #selector(mapViewController.updateView), userInfo: nil, repeats: true)
                 
             } else if !viewTimer.isValid {
-                viewTimer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(mapViewController.updateView), userInfo: nil, repeats: true)
+                viewTimer = Timer.scheduledTimer(timeInterval: kUpdateMM, target: self, selector: #selector(mapViewController.updateView), userInfo: nil, repeats: true)
             }
             
         }

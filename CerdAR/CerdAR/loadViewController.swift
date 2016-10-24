@@ -44,13 +44,6 @@ class loadViewController: UIViewController, termsViewDelegate, CLLocationManager
             // ネットワークに接続されている時
             if CheckReachability(hostname: "www") {
                 
-                //                let path = Bundle.main.path(forResource: "data", ofType: "geojson")!
-                //                let jsonData = NSData(contentsOfFile: path)!
-                //                json = JSON(data:jsonData as Data)
-                //                jsonDataManager.sharedInstance.storeData(json: self.json, callback: { _ in
-                //                    self.showTermsView()
-                //                })
-                
                 // jsonを読み込んでから利用規約を表示する
                 let fileName = "data.geojson"
                 

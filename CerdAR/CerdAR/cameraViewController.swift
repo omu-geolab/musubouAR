@@ -392,7 +392,6 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
                 
                 // 現在発生している災害の番号を格納する
                 box.append(i)
-                
             }
         }
         
@@ -406,17 +405,17 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
             
             // 警告メッセージのタイマーを開始させる
             if messageTimer == nil {
-                messageTimer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(cameraViewController.updateMessage), userInfo: nil, repeats: true)
+                messageTimer = Timer.scheduledTimer(timeInterval: kUpdateMM, target: self, selector: #selector(cameraViewController.updateMessage), userInfo: nil, repeats: true)
             } else if !messageTimer.isValid {
-                messageTimer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(cameraViewController.updateMessage), userInfo: nil, repeats: true)
+                messageTimer = Timer.scheduledTimer(timeInterval: kUpdateMM, target: self, selector: #selector(cameraViewController.updateMessage), userInfo: nil, repeats: true)
             }
             
             // 警告モードのタイマーを開始させる
             if viewTimer == nil {
-                viewTimer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(cameraViewController.updateView), userInfo: nil, repeats: true)
+                viewTimer = Timer.scheduledTimer(timeInterval: kUpdateMM, target: self, selector: #selector(cameraViewController.updateView), userInfo: nil, repeats: true)
                 
             } else if !viewTimer.isValid {
-                viewTimer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(cameraViewController.updateView), userInfo: nil, repeats: true)
+                viewTimer = Timer.scheduledTimer(timeInterval: kUpdateMM, target: self, selector: #selector(cameraViewController.updateView), userInfo: nil, repeats: true)
             }
         }
     }
@@ -473,7 +472,7 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
         }
         
         if !messageTimer.isValid {
-            messageTimer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(mapViewController.updateMessage), userInfo: nil, repeats: true)
+            messageTimer = Timer.scheduledTimer(timeInterval: kUpdateMM, target: self, selector: #selector(mapViewController.updateMessage), userInfo: nil, repeats: true)
         }
     }
     
@@ -537,7 +536,7 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
         }
         
         if !viewTimer.isValid {
-            viewTimer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(mapViewController.updateView), userInfo: nil, repeats: true)
+            viewTimer = Timer.scheduledTimer(timeInterval: kUpdateMM, target: self, selector: #selector(mapViewController.updateView), userInfo: nil, repeats: true)
         }
     }
     
