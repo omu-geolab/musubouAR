@@ -24,6 +24,10 @@ class termsView: UIView {
         viewInit()
     }
     
+    
+    /*
+     * 利用規約の表示
+     */
     func viewInit() {
         
         // OKボタンの生成
@@ -54,7 +58,7 @@ class termsView: UIView {
         
         // 利用規約ラベルの生成
         let termsLabel = UILabel(frame: CGRect(x: bounds.width * 0.8 * 0.05, y: bounds.height * 0.8 * 0.02, width: 250, height: 100))
-        termsLabel.font = UIFont.systemFont(ofSize: 60)
+        termsLabel.font = UIFont.systemFont(ofSize: 40)
         termsLabel.text = "利用規約"
         
         // スクロールビューの生成
@@ -92,27 +96,38 @@ class termsView: UIView {
         addSubview(alertView)
     }
     
-    /* (利用規約)OKボタンをクリックした時 */
+    /*
+     * (利用規約)OKボタンをクリックした時
+     */
     func onClick_Ok(_ sender: UIButton) {
         delegate?.termsViewfinish()
     }
     
-    /* (利用規約)キャンセルボタンをクリックした時 */
+    
+    /*
+     * (利用規約)キャンセルボタンをクリックした時
+     */
     func onClick_Cancel(_ sender: UIButton) {
         exit(0) // アプリを終了する
     }
     
     
+    /*
+     * ロゴ表示
+     * @param view ロゴを貼り付けるUIView
+     */
     func logo(view: UIView) {
         
         // ロゴ画像(CERD)
-        let logoCerdView: UIImageView = UIImageView(image:UIImage(named: "logo_CERD.jpg"))
-        logoCerdView.frame = CGRect.init(x: bounds.width * 0.8 * 0.05 + 250, y: bounds.height * 0.8 * 0.02, width: 200, height: 100)
+        let cerdImage = UIImage(named: "logo_CERD.jpg")
+        let logoCerdView = UIImageView(image: cerdImage)
+        logoCerdView.frame = CGRect.init(x: bounds.width * 0.8 * 0.05 + 200, y: bounds.height * 0.8 * 0.02 + 20, width: (cerdImage?.size.width)! * 0.1, height: (cerdImage?.size.height)! * 0.1)
+        
         
         // ロゴ画像(BRIL)
         let brilImage = UIImage(named: "logo_BRIL.jpg")
-        let logoBrilView: UIImageView = UIImageView(image: brilImage)
-        logoBrilView.frame = CGRect.init(x: bounds.width * 0.8 * 0.05 + 450, y: bounds.height * 0.8 * 0.02, width: (brilImage?.size.width)! * 0.5, height: (brilImage?.size.height)! * 0.5)
+        let logoBrilView = UIImageView(image: brilImage)
+        logoBrilView.frame = CGRect.init(x: bounds.width * 0.8 * 0.05 + 350, y: bounds.height * 0.8 * 0.02 + 10, width: (brilImage?.size.width)! * 0.4, height: (brilImage?.size.height)! * 0.4)
         
         view.addSubview(logoCerdView)
         view.addSubview(logoBrilView)

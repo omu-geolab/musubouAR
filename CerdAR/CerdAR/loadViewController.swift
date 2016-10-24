@@ -44,49 +44,49 @@ class loadViewController: UIViewController, termsViewDelegate, CLLocationManager
             // ネットワークに接続されている時
             if CheckReachability(hostname: "www") {
                 
-//                let path = Bundle.main.path(forResource: "data", ofType: "geojson")!
-//                let jsonData = NSData(contentsOfFile: path)!
-//                json = JSON(data:jsonData as Data)
-//                jsonDataManager.sharedInstance.storeData(json: self.json, callback: { _ in
-//                    self.showTermsView()
-//                })
+                //                let path = Bundle.main.path(forResource: "data", ofType: "geojson")!
+                //                let jsonData = NSData(contentsOfFile: path)!
+                //                json = JSON(data:jsonData as Data)
+                //                jsonDataManager.sharedInstance.storeData(json: self.json, callback: { _ in
+                //                    self.showTermsView()
+                //                })
                 
                 // jsonを読み込んでから利用規約を表示する
                 let fileName = "data.geojson"
-
-                if let dir: NSString = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.allDomainsMask, true).first as NSString? {
                 
+                if let dir: NSString = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.allDomainsMask, true).first as NSString? {
+                    
                     let pathFileName = dir.appendingPathComponent(fileName)
                     guard (try? Data(contentsOf: URL(fileURLWithPath: pathFileName))) != nil else {
-                
+                        
                         // ローカルにdata.json(geojson)が存在しない場合，サーバーからデータを取得する．
                         jsondata(callback: { _ in
-                
+                            
                             // サーバーにもないとき
                             if self.json == nil {
-                
+                                
                                 let alert: UIAlertController = UIAlertController(title: "ERROR!!", message: "JSONファイルが見つかりませんでした", preferredStyle:  UIAlertControllerStyle.alert)
-                
+                                
                                 let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: {
                                     (action: UIAlertAction!) -> Void in
                                     print("OK")
                                 })
-                
+                                
                                 alert.addAction(defaultAction)
                                 self.present(alert, animated: true, completion: nil)
                                 self.showTermsView()
-            
-                            // サーバーにあったとき
+                                
+                                // サーバーにあったとき
                             } else {
                                 jsonDataManager.sharedInstance.storeData(json: self.json, callback: { _ in
                                     self.showTermsView()
                                 })
                             }
                         })
-    
+                        
                         return
                     }
-
+                    
                     let jsonData = try? Data(contentsOf: URL(fileURLWithPath: pathFileName))
                     json = JSON(data:jsonData!)
                 }

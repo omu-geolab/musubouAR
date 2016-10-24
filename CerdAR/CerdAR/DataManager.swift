@@ -142,13 +142,6 @@ class jsonDataManager: NSObject {
                     infoBox[iN].photo = ""
                 }
                 
-                
-                // OSM用
-                osmInfoBox.append(MGLTagData())
-                osmInfoBox[iN].inforType = json["features"][i]["properties"]["info_type"].string // タグの種類
-                osmInfoBox[iN].pinNum = iN //ピン番号
-                
-                
                 iN += 1
                 
                 // 警告タグ
@@ -176,13 +169,6 @@ class jsonDataManager: NSObject {
                 
                 if let iType = json["features"][i]["properties"]["info_type"].string { // タグの種類
                     warnBox[wN].inforType = iType
-                } else {
-                    warnBox.removeLast()
-                    continue
-                }
-                
-                if let icon = json["features"][i]["properties"]["icon"].string { // タグの画像
-                    warnBox[wN].icon = icon
                 } else {
                     warnBox.removeLast()
                     continue
@@ -218,26 +204,17 @@ class jsonDataManager: NSObject {
                 
                 
                 if let start = json["features"][i]["properties"]["start"].string { // 災害範囲
-                    if let start2: Date = dateFromString(start, format: "yyyy/MM/dd HH:mm", num: wN) { // 災害開始時刻
-                        warnBox[wN].start = start2
-                    } else {
-                        warnBox.removeLast()
-                        continue
-                    }
+                    warnBox[wN].start = dateFromString(start, format: "yyyy/MM/dd HH:mm", num: wN)
+                    
                 } else {
                     warnBox.removeLast()
                     continue
                 }
                 
                 
-                
                 if let stop = json["features"][i]["properties"]["stop"].string { // 災害範囲
-                    if let stop2: Date = dateFromString(stop, format: "yyyy/MM/dd HH:mm", num: wN) { // 災害終了時刻
-                        warnBox[wN].stop = stop2
-                    } else {
-                        warnBox.removeLast()
-                        continue
-                    }
+                    warnBox[wN].stop = dateFromString(stop, format: "yyyy/MM/dd HH:mm", num: wN)
+                    
                 } else {
                     warnBox.removeLast()
                     continue
@@ -266,12 +243,6 @@ class jsonDataManager: NSObject {
                     continue
                 }
                 
-                
-                // OSM用
-                osmWarnBox.append(MGLTagData())
-                osmWarnBox[wN].inforType = json["features"][i]["properties"]["info_type"].string // タグの種類
-                osmWarnBox[wN].pinNum = wN //ピン番号
-                
                 wN += 1
                 
             } else {
@@ -298,7 +269,6 @@ class jsonDataManager: NSObject {
         } else { // // 災害時間を誤ったフォーマットで書いているとき
             warnBox[num].start = formatter.date(from: "2100/01/01 00:00")!
             return formatter.date(from: "2100/01/01 00:00")!
-            
         }
     }
     
@@ -330,10 +300,6 @@ let screenHeight = UIScreen.main.bounds.size.height // 実機の画面の縦の�
 let dWid = screenWidth * 0.8
 let dHei = screenHeight * 0.8
 
-
-var osmInfoBox = [MGLTagData]() // OSM情報タグ用
-var osmWarnBox = [MGLTagData]() // OSM情報タグ用
-
 var infoImageBox: [UIImageView] = [] // 画面上での情報タグ画像の表示を管理する
 var warnImageBox: [UIImageView] = [] // 画面上での警告タグ画像の表示を管理する
 
@@ -355,17 +321,9 @@ enum mode: Int {
 }
 
 // 現在の画面が、地図かカメラかを保持する変数
-var displayMode = 0
+var displayMode = mode.applemap.rawValue
 
-// 現在地から一番近い災害の状況
-enum viewmode: Int {
-    case detail = 0
-    case config = 1
-}
-
-var viewMode = 0
-
-var warnImage = UIImage(named: "icon_warn0.png") // 情報タグの画像
+var warnImage = UIImage(named: "icon_infoTagAR.png") // 情報タグの画像
 
 var circleRadius = [CLLocationDistance]() // 災害範囲の円の半径
 

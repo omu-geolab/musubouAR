@@ -7,12 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AC0550551DACEEF80038C8D5 /* icon_infoTag_red.png in Resources */ = {isa = PBXBuildFile; fileRef = AC0550521DACEEF80038C8D5 /* icon_infoTag_red.png */; };
-		AC0550561DACEEF80038C8D5 /* icon_infoTag.png in Resources */ = {isa = PBXBuildFile; fileRef = AC0550531DACEEF80038C8D5 /* icon_infoTag.png */; };
-		AC05B9F51D811F830082C52A /* icon_warn0.png in Resources */ = {isa = PBXBuildFile; fileRef = AC05B9EF1D811F830082C52A /* icon_warn0.png */; };
-		AC05B9F61D811F830082C52A /* icon_warn1.png in Resources */ = {isa = PBXBuildFile; fileRef = AC05B9F01D811F830082C52A /* icon_warn1.png */; };
-		AC05B9F71D811F830082C52A /* icon_warn2.png in Resources */ = {isa = PBXBuildFile; fileRef = AC05B9F11D811F830082C52A /* icon_warn2.png */; };
-		AC05B9F81D811F830082C52A /* icon_warn3.png in Resources */ = {isa = PBXBuildFile; fileRef = AC05B9F21D811F830082C52A /* icon_warn3.png */; };
 		AC05B9FA1D811FDA0082C52A /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC05B9F91D811FDA0082C52A /* DataManager.swift */; };
 		AC0F6A041DB62BCD000993D5 /* icon_camera.png in Resources */ = {isa = PBXBuildFile; fileRef = AC0F69FF1DB62BCD000993D5 /* icon_camera.png */; };
 		AC0F6A051DB62BCD000993D5 /* icon_compass.png in Resources */ = {isa = PBXBuildFile; fileRef = AC0F6A001DB62BCD000993D5 /* icon_compass.png */; };
@@ -35,13 +29,22 @@
 		AC2C52FD1D58092B0032B689 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC2C52FC1D58092B0032B689 /* MapKit.framework */; };
 		AC2C52FF1D5809360032B689 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC2C52FE1D5809360032B689 /* CoreLocation.framework */; };
 		AC2C53011D58093C0032B689 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC2C53001D58093C0032B689 /* AVFoundation.framework */; };
+		AC4691151DBD8B71009655C0 /* icon_infoTag_red.png in Resources */ = {isa = PBXBuildFile; fileRef = AC46910C1DBD8B71009655C0 /* icon_infoTag_red.png */; };
+		AC4691161DBD8B71009655C0 /* icon_infoTag.png in Resources */ = {isa = PBXBuildFile; fileRef = AC46910D1DBD8B71009655C0 /* icon_infoTag.png */; };
+		AC4691171DBD8B71009655C0 /* icon_infoTagAR.png in Resources */ = {isa = PBXBuildFile; fileRef = AC46910E1DBD8B71009655C0 /* icon_infoTagAR.png */; };
+		AC4691181DBD8B71009655C0 /* icon_warn0.png in Resources */ = {isa = PBXBuildFile; fileRef = AC46910F1DBD8B71009655C0 /* icon_warn0.png */; };
+		AC4691191DBD8B71009655C0 /* icon_warn1.png in Resources */ = {isa = PBXBuildFile; fileRef = AC4691101DBD8B71009655C0 /* icon_warn1.png */; };
+		AC46911A1DBD8B71009655C0 /* icon_warn2.png in Resources */ = {isa = PBXBuildFile; fileRef = AC4691111DBD8B71009655C0 /* icon_warn2.png */; };
+		AC46911B1DBD8B71009655C0 /* icon_warn3.png in Resources */ = {isa = PBXBuildFile; fileRef = AC4691121DBD8B71009655C0 /* icon_warn3.png */; };
+		AC46911C1DBD8B71009655C0 /* medicine-marker.png in Resources */ = {isa = PBXBuildFile; fileRef = AC4691131DBD8B71009655C0 /* medicine-marker.png */; };
+		AC46911D1DBD8B71009655C0 /* medicine-markerMap.png in Resources */ = {isa = PBXBuildFile; fileRef = AC4691141DBD8B71009655C0 /* medicine-markerMap.png */; };
+		AC4691221DBD8D80009655C0 /* hinan-bldg-marker.png in Resources */ = {isa = PBXBuildFile; fileRef = AC46911E1DBD8D80009655C0 /* hinan-bldg-marker.png */; };
+		AC4691231DBD8D80009655C0 /* hinan-bldg-markerMap.png in Resources */ = {isa = PBXBuildFile; fileRef = AC46911F1DBD8D80009655C0 /* hinan-bldg-markerMap.png */; };
+		AC4691241DBD8D80009655C0 /* hinan-camp-marker.png in Resources */ = {isa = PBXBuildFile; fileRef = AC4691201DBD8D80009655C0 /* hinan-camp-marker.png */; };
+		AC4691251DBD8D80009655C0 /* hinan-camp-markerMap.png in Resources */ = {isa = PBXBuildFile; fileRef = AC4691211DBD8D80009655C0 /* hinan-camp-markerMap.png */; };
 		AC5754321DB89B45003271F1 /* logo_CERD.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC5754301DB89B45003271F1 /* logo_CERD.jpg */; };
 		AC57543A1DB8B8BA003271F1 /* logo_BRIL.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC5754391DB8B8BA003271F1 /* logo_BRIL.jpg */; };
-		AC5AED8E1DA4A181009443E9 /* hinan-bldg-marker.png in Resources */ = {isa = PBXBuildFile; fileRef = AC5AED871DA4A181009443E9 /* hinan-bldg-marker.png */; };
-		AC5AED8F1DA4A181009443E9 /* hinan-camp-marker.png in Resources */ = {isa = PBXBuildFile; fileRef = AC5AED881DA4A181009443E9 /* hinan-camp-marker.png */; };
 		AC5AED921DA4A181009443E9 /* icon_notfound.png in Resources */ = {isa = PBXBuildFile; fileRef = AC5AED8B1DA4A181009443E9 /* icon_notfound.png */; };
-		AC5AED931DA4A181009443E9 /* info-marker.png in Resources */ = {isa = PBXBuildFile; fileRef = AC5AED8C1DA4A181009443E9 /* info-marker.png */; };
-		AC5AED941DA4A181009443E9 /* medicine-marker.png in Resources */ = {isa = PBXBuildFile; fileRef = AC5AED8D1DA4A181009443E9 /* medicine-marker.png */; };
 		AC7B6A841D66A9B20086897D /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC7B6A831D66A9B20086897D /* CoreMotion.framework */; };
 		ACEE245C1D8235FE00102E10 /* MakeTagImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEE245B1D8235FE00102E10 /* MakeTagImage.swift */; };
 		ACF399B71D98C25100B0EC47 /* osmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF399B61D98C25100B0EC47 /* osmViewController.swift */; };
@@ -83,12 +86,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		AC0550521DACEEF80038C8D5 /* icon_infoTag_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_infoTag_red.png; path = CerdAR/icon_infoTag_red.png; sourceTree = "<group>"; };
-		AC0550531DACEEF80038C8D5 /* icon_infoTag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_infoTag.png; path = CerdAR/icon_infoTag.png; sourceTree = "<group>"; };
-		AC05B9EF1D811F830082C52A /* icon_warn0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_warn0.png; path = CerdAR/icon_warn0.png; sourceTree = "<group>"; };
-		AC05B9F01D811F830082C52A /* icon_warn1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_warn1.png; path = CerdAR/icon_warn1.png; sourceTree = "<group>"; };
-		AC05B9F11D811F830082C52A /* icon_warn2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_warn2.png; path = CerdAR/icon_warn2.png; sourceTree = "<group>"; };
-		AC05B9F21D811F830082C52A /* icon_warn3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_warn3.png; path = CerdAR/icon_warn3.png; sourceTree = "<group>"; };
 		AC05B9F91D811FDA0082C52A /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		AC0F69FF1DB62BCD000993D5 /* icon_camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_camera.png; path = CerdAR/icon_camera.png; sourceTree = "<group>"; };
 		AC0F6A001DB62BCD000993D5 /* icon_compass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_compass.png; path = CerdAR/icon_compass.png; sourceTree = "<group>"; };
@@ -117,13 +114,22 @@
 		AC2C52FC1D58092B0032B689 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		AC2C52FE1D5809360032B689 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		AC2C53001D58093C0032B689 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		AC46910C1DBD8B71009655C0 /* icon_infoTag_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_infoTag_red.png; path = CerdAR/icon_infoTag_red.png; sourceTree = "<group>"; };
+		AC46910D1DBD8B71009655C0 /* icon_infoTag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_infoTag.png; path = CerdAR/icon_infoTag.png; sourceTree = "<group>"; };
+		AC46910E1DBD8B71009655C0 /* icon_infoTagAR.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_infoTagAR.png; path = CerdAR/icon_infoTagAR.png; sourceTree = "<group>"; };
+		AC46910F1DBD8B71009655C0 /* icon_warn0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_warn0.png; path = CerdAR/icon_warn0.png; sourceTree = "<group>"; };
+		AC4691101DBD8B71009655C0 /* icon_warn1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_warn1.png; path = CerdAR/icon_warn1.png; sourceTree = "<group>"; };
+		AC4691111DBD8B71009655C0 /* icon_warn2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_warn2.png; path = CerdAR/icon_warn2.png; sourceTree = "<group>"; };
+		AC4691121DBD8B71009655C0 /* icon_warn3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_warn3.png; path = CerdAR/icon_warn3.png; sourceTree = "<group>"; };
+		AC4691131DBD8B71009655C0 /* medicine-marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "medicine-marker.png"; path = "CerdAR/medicine-marker.png"; sourceTree = "<group>"; };
+		AC4691141DBD8B71009655C0 /* medicine-markerMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "medicine-markerMap.png"; path = "CerdAR/medicine-markerMap.png"; sourceTree = "<group>"; };
+		AC46911E1DBD8D80009655C0 /* hinan-bldg-marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "hinan-bldg-marker.png"; path = "CerdAR/hinan-bldg-marker.png"; sourceTree = "<group>"; };
+		AC46911F1DBD8D80009655C0 /* hinan-bldg-markerMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "hinan-bldg-markerMap.png"; path = "CerdAR/hinan-bldg-markerMap.png"; sourceTree = "<group>"; };
+		AC4691201DBD8D80009655C0 /* hinan-camp-marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "hinan-camp-marker.png"; path = "CerdAR/hinan-camp-marker.png"; sourceTree = "<group>"; };
+		AC4691211DBD8D80009655C0 /* hinan-camp-markerMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "hinan-camp-markerMap.png"; path = "CerdAR/hinan-camp-markerMap.png"; sourceTree = "<group>"; };
 		AC5754301DB89B45003271F1 /* logo_CERD.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = logo_CERD.jpg; path = CerdAR/logo_CERD.jpg; sourceTree = "<group>"; };
 		AC5754391DB8B8BA003271F1 /* logo_BRIL.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = logo_BRIL.jpg; path = CerdAR/logo_BRIL.jpg; sourceTree = "<group>"; };
-		AC5AED871DA4A181009443E9 /* hinan-bldg-marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "hinan-bldg-marker.png"; path = "CerdAR/hinan-bldg-marker.png"; sourceTree = "<group>"; };
-		AC5AED881DA4A181009443E9 /* hinan-camp-marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "hinan-camp-marker.png"; path = "CerdAR/hinan-camp-marker.png"; sourceTree = "<group>"; };
 		AC5AED8B1DA4A181009443E9 /* icon_notfound.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_notfound.png; path = CerdAR/icon_notfound.png; sourceTree = "<group>"; };
-		AC5AED8C1DA4A181009443E9 /* info-marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "info-marker.png"; path = "CerdAR/info-marker.png"; sourceTree = "<group>"; };
-		AC5AED8D1DA4A181009443E9 /* medicine-marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "medicine-marker.png"; path = "CerdAR/medicine-marker.png"; sourceTree = "<group>"; };
 		AC7B6A831D66A9B20086897D /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		ACEE245B1D8235FE00102E10 /* MakeTagImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeTagImage.swift; sourceTree = "<group>"; };
 		ACF399B61D98C25100B0EC47 /* osmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = osmViewController.swift; sourceTree = "<group>"; };
@@ -234,6 +240,19 @@
 		AC2C53021D5809610032B689 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				AC46911E1DBD8D80009655C0 /* hinan-bldg-marker.png */,
+				AC46911F1DBD8D80009655C0 /* hinan-bldg-markerMap.png */,
+				AC4691201DBD8D80009655C0 /* hinan-camp-marker.png */,
+				AC4691211DBD8D80009655C0 /* hinan-camp-markerMap.png */,
+				AC46910C1DBD8B71009655C0 /* icon_infoTag_red.png */,
+				AC46910D1DBD8B71009655C0 /* icon_infoTag.png */,
+				AC46910E1DBD8B71009655C0 /* icon_infoTagAR.png */,
+				AC46910F1DBD8B71009655C0 /* icon_warn0.png */,
+				AC4691101DBD8B71009655C0 /* icon_warn1.png */,
+				AC4691111DBD8B71009655C0 /* icon_warn2.png */,
+				AC4691121DBD8B71009655C0 /* icon_warn3.png */,
+				AC4691131DBD8B71009655C0 /* medicine-marker.png */,
+				AC4691141DBD8B71009655C0 /* medicine-markerMap.png */,
 				AC5754391DB8B8BA003271F1 /* logo_BRIL.jpg */,
 				AC5754301DB89B45003271F1 /* logo_CERD.jpg */,
 				AC0F69FF1DB62BCD000993D5 /* icon_camera.png */,
@@ -241,17 +260,7 @@
 				AC0F6A011DB62BCD000993D5 /* icon_locate.png */,
 				AC0F6A021DB62BCD000993D5 /* icon_map.png */,
 				AC0F6A031DB62BCD000993D5 /* icon_menu.png */,
-				AC5AED871DA4A181009443E9 /* hinan-bldg-marker.png */,
-				AC5AED881DA4A181009443E9 /* hinan-camp-marker.png */,
 				AC5AED8B1DA4A181009443E9 /* icon_notfound.png */,
-				AC5AED8C1DA4A181009443E9 /* info-marker.png */,
-				AC5AED8D1DA4A181009443E9 /* medicine-marker.png */,
-				AC0550521DACEEF80038C8D5 /* icon_infoTag_red.png */,
-				AC0550531DACEEF80038C8D5 /* icon_infoTag.png */,
-				AC05B9EF1D811F830082C52A /* icon_warn0.png */,
-				AC05B9F01D811F830082C52A /* icon_warn1.png */,
-				AC05B9F11D811F830082C52A /* icon_warn2.png */,
-				AC05B9F21D811F830082C52A /* icon_warn3.png */,
 			);
 			name = Image;
 			sourceTree = "<group>";
@@ -353,7 +362,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "2016 BRILLIANTSERVICE CO.,LTD., CERD (Osaka City University)";
 				TargetAttributes = {
 					AC2C52C11D5805F70032B689 = {
@@ -401,26 +410,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC0F6A061DB62BCD000993D5 /* icon_locate.png in Resources */,
-				AC5AED8F1DA4A181009443E9 /* hinan-camp-marker.png in Resources */,
-				AC05B9F61D811F830082C52A /* icon_warn1.png in Resources */,
-				AC5AED931DA4A181009443E9 /* info-marker.png in Resources */,
+				AC4691191DBD8B71009655C0 /* icon_warn1.png in Resources */,
 				AC0F6A041DB62BCD000993D5 /* icon_camera.png in Resources */,
+				AC4691221DBD8D80009655C0 /* hinan-bldg-marker.png in Resources */,
 				AC2AB8F91DB7790A0048931C /* sound_intrusion.wav in Resources */,
+				AC4691161DBD8B71009655C0 /* icon_infoTag.png in Resources */,
 				AC5AED921DA4A181009443E9 /* icon_notfound.png in Resources */,
 				AC2C52D31D5805F70032B689 /* LaunchScreen.storyboard in Resources */,
-				AC5AED8E1DA4A181009443E9 /* hinan-bldg-marker.png in Resources */,
-				AC0550561DACEEF80038C8D5 /* icon_infoTag.png in Resources */,
+				AC46911B1DBD8B71009655C0 /* icon_warn3.png in Resources */,
+				AC4691241DBD8D80009655C0 /* hinan-camp-marker.png in Resources */,
+				AC46911D1DBD8B71009655C0 /* medicine-markerMap.png in Resources */,
+				AC4691231DBD8D80009655C0 /* hinan-bldg-markerMap.png in Resources */,
+				AC46911A1DBD8B71009655C0 /* icon_warn2.png in Resources */,
 				AC2C52D01D5805F70032B689 /* Assets.xcassets in Resources */,
-				AC05B9F51D811F830082C52A /* icon_warn0.png in Resources */,
-				AC0550551DACEEF80038C8D5 /* icon_infoTag_red.png in Resources */,
+				AC4691181DBD8B71009655C0 /* icon_warn0.png in Resources */,
+				AC4691251DBD8D80009655C0 /* hinan-camp-markerMap.png in Resources */,
 				AC57543A1DB8B8BA003271F1 /* logo_BRIL.jpg in Resources */,
+				AC4691171DBD8B71009655C0 /* icon_infoTagAR.png in Resources */,
 				AC2C52CB1D5805F70032B689 /* Main.storyboard in Resources */,
-				AC05B9F71D811F830082C52A /* icon_warn2.png in Resources */,
-				AC05B9F81D811F830082C52A /* icon_warn3.png in Resources */,
+				AC4691151DBD8B71009655C0 /* icon_infoTag_red.png in Resources */,
+				AC46911C1DBD8B71009655C0 /* medicine-marker.png in Resources */,
 				AC5754321DB89B45003271F1 /* logo_CERD.jpg in Resources */,
 				AC0F6A071DB62BCD000993D5 /* icon_map.png in Resources */,
 				AC0F6A081DB62BCD000993D5 /* icon_menu.png in Resources */,
-				AC5AED941DA4A181009443E9 /* medicine-marker.png in Resources */,
 				AC2AB8FA1DB7790A0048931C /* sound_near.wav in Resources */,
 				AC0F6A051DB62BCD000993D5 /* icon_compass.png in Resources */,
 			);
@@ -527,8 +539,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -550,7 +564,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -572,8 +586,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -589,9 +605,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

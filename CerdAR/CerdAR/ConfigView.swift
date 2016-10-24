@@ -26,7 +26,9 @@ class ConfigView: UIView {
         super.init(coder: aDecoder)
     }
     
-    
+    /*
+     * 設定画面の表示
+     */
     func setup() {
         self.addSubview(changeMapBut)
         self.addSubview(aboutAppBut)
@@ -34,6 +36,10 @@ class ConfigView: UIView {
     }
     
     
+    
+    /*
+     * 設定画面のパーツの準備
+     */
     func load() {
         
         self.backgroundColor = UIColor.white
@@ -75,7 +81,7 @@ class ConfigView: UIView {
     
     /*
      * (「このアプリについて」をタップする)
-     * 表示されているパーツを破棄する
+     * OSSのライセンス表記
      */
     func onClick_aboutApp(_ sender: UIButton) {
         changeMapBut.removeFromSuperview()

@@ -15,17 +15,10 @@ import UIKit
 
 class detailView: UIView {
     weak var delegate: detailViewDelegate?
-    //    var updateTimer: Timer! // 一定時間ごとにupdate()を発火させる
-    
-    
-    //タイトル
-    let titlelBar = UILabel(frame: CGRect.init(x: 0, y: 0, width: dWid, height: dHei * 0.1))
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         viewInit()
-        
-        //        updateTimer = Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(detailView.updateDistance), userInfo: nil, repeats: true)
         
     }
     
@@ -34,18 +27,16 @@ class detailView: UIView {
         viewInit()
     }
     
-    
-    
-    //    func updateDistance(label: UILabel, lat: Double, lon: Double) {
-    //        label.text = "あと" + String(calcDistance(lat, lon: lon, uLat: userLat, uLon: userLon)) + "m" // 距離を求める
-    //    }
-    
+    /*
+     * 詳細画面の表示
+     */
     func viewInit() {
         
         //背景色
         backgroundColor = UIColor.white
         
         // タイトルの挿入(画面上側)
+        let titlelBar = UILabel(frame: CGRect.init(x: 0, y: 0, width: dWid, height: dHei * 0.1))
         titlelBar.text = pinData.name
         titlelBar.textAlignment = NSTextAlignment.center
         titlelBar.font = UIFont.systemFont(ofSize: 30)
@@ -80,7 +71,14 @@ class detailView: UIView {
         // 目的地までの距離の挿入(画面左下側)
         let distance = UILabel(frame: CGRect.init(x: dWid * 0.05, y: dHei * 0.82, width: dWid * 0.45, height: dHei * 0.1))
         distance.font = UIFont.systemFont(ofSize: 35)
-        distance.text = "あと" + String(calcDistance(pinData.lat, lon: pinData.lon, uLat: userLat, uLon: userLon)) + "m" // 距離を求める
+        
+        if pinData.inforType == kInfo {
+            distance.text = "あと" + String(calcDistance(pinData.lat, lon: pinData.lon, uLat: userLat, uLon: userLon)) + "m"
+            
+        } else {
+            distance.text = "あと" + String(calcDistance(pinData.lat, lon: pinData.lon, uLat: userLat, uLon: userLon) - Int(circleRadius[pinData.pinNum])) + "m"
+        }
+        
         distance.numberOfLines = 0
         distance.sizeToFit()
         self.addSubview(distance)
@@ -171,7 +169,7 @@ class detailView: UIView {
                     task.resume()
                 }
             } else {
-                let warnImageView = UIImageView(frame: CGRect.init(x: CGFloat(dWid * 0.8 * 0.15), y: CGFloat(dHei * 0.2), width: dHei * 0.4, height: dHei * 0.55))
+                let warnImageView = UIImageView(frame: CGRect.init(x: CGFloat(dWid * 0.8 * 0.08), y: CGFloat(dHei * 0.2), width: dHei * 0.55, height: dHei * 0.55))
                 if pinData.icon != "icon_infoTag.png" {
                     warnImageView.image = UIImage(named: pinData.icon)
                     self.addSubview(warnImageView)
@@ -201,20 +199,20 @@ class detailView: UIView {
                 text = "土砂崩れ"
                 warnImg = UIImage(named: "icon_warn2.png")!
             case 3:
-                text = "道路閉塞(落橋)"
+                text = "道路閉塞\n(落橋)"
                 warnImg = UIImage(named: "icon_warn3.png")!
             case 4:
-                text = "道路閉塞(家屋倒壊)"
+                text = "道路閉塞\n(家屋倒壊)"
                 warnImg = UIImage(named: "icon_warn3.png")!
             case 5:
-                text = "道路閉塞(ブロック塀倒壊)"
+                text = "道路閉塞\n(ブロック塀倒壊)"
                 warnImg = UIImage(named: "icon_warn3.png")!
             case 6:
-                text = "道路閉塞(コンテナ流入)"
+                text = "道路閉塞\n(コンテナ流入)"
                 warnImg = UIImage(named: "icon_warn3.png")!
             default:
                 text = "その他の災害"
-                warnImg = UIImage(named: "icon_infoTag.png")!
+                warnImg = UIImage(named: "icon_infoTagAR.png")!
             }
             
             let label = UILabel(frame: CGRect.init(x: 0.0, y: 0.0, width: warnImg!.size.width, height: warnImg!.size.height)) //ラベルサイズ

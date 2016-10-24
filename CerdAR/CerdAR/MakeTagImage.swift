@@ -108,11 +108,20 @@ func makeLabel(_ num: Int, inforType: String) -> UIImage {
     
     var label: UILabel! // 情報タグの文字
     var labelImg: UIImage! // ラベル画像
-    let airtagImage = UIImage(named: jsonDataManager.sharedInstance.infoBox[num].icon)! // 情報タグの画像
     
     if inforType == kInfo {
-        label = UILabel(frame: CGRect.init(x: 0.0, y: 0.0, width: airtagImage.size.width, height: airtagImage.size.height)) //ラベルサイズ
-        label.numberOfLines = 2 // ラベル内の行数
+        
+        if displayMode == mode.applemap.rawValue || displayMode == mode.osm.rawValue { // 地図画面のとき
+            let tagImg = UIImage(named: jsonDataManager.sharedInstance.infoBox[num].icon)! // 情報タグの画像
+            label = UILabel(frame: CGRect.init(x: 0.0, y: 0.0, width: tagImg.size.width, height: tagImg.size.height)) //ラベルサイズ
+            label.numberOfLines = 2 // ラベル内の行数
+            
+            
+        } else if displayMode == mode.cam.rawValue { // カメラ画面のとき
+            let tagImg = UIImage(named: "icon_infoTagAR.png")! // 情報タグの画像
+            label = UILabel(frame: CGRect.init(x: 0.0, y: 0.0, width: tagImg.size.width, height: tagImg.size.height)) //ラベルサイズ
+            label.numberOfLines = 3 // ラベル内の行数
+        }
         
         
     } else if inforType == kWarn {
@@ -173,17 +182,28 @@ func makeTappedLabel(_ num: Int, size: Double) -> UIImage {
  * @return 生成したタグ画像を縦幅100のサイズで返す
  */
 func getPinImage(_ img: UIImage, inforType: String) -> UIImage {
-    let airtagImage = UIImage(named: "icon_infoTag.png")! // 情報タグの画像
+    
     var imgsize: CGFloat =  500
+    var labelRect = CGRect.init()
     
     if inforType == kInfo {
         
-        let tagRect = CGRect.init(x: 0.0, y: 0.0, width: img.size.width, height: img.size.height) // タグ画像のサイズと位置
-        UIGraphicsBeginImageContext(img.size)
-        airtagImage.draw(in: tagRect)
-        
         if displayMode == mode.applemap.rawValue || displayMode == mode.osm.rawValue { // 地図画面のとき
+            
+            let tagImg = UIImage(named: "icon_infoTag.png")! // 情報タグの画像
+            let tagRect = CGRect.init(x: 0.0, y: 0.0, width: img.size.width, height: img.size.height) // タグ画像のサイズと位置
+            UIGraphicsBeginImageContext(img.size)
+            tagImg.draw(in: tagRect)
             imgsize = 100
+            labelRect = CGRect.init(x: 30.0, y: 30.0, width: img.size.width - 60.0, height: img.size.height - 120.0) // ラベル画像のサイズと位置
+            
+        } else if displayMode == mode.cam.rawValue { // カメラ画面のとき
+            
+            let tagImg = UIImage(named: "icon_infoTagAR.png")! // 情報タグの画像
+            let tagRect = CGRect.init(x: 0.0, y: 0.0, width: img.size.width, height: img.size.height) // タグ画像のサイズと位置
+            UIGraphicsBeginImageContext(img.size)
+            tagImg.draw(in: tagRect)
+            labelRect = CGRect.init(x: 50.0, y: 70.0, width: img.size.width - 100.0, height: img.size.height - 135.0) // ラベル画像のサイズと位置
         }
         
     } else if inforType == kWarn {
@@ -196,10 +216,11 @@ func getPinImage(_ img: UIImage, inforType: String) -> UIImage {
             let tagRect = CGRect.init(x: 0.0, y: 0.0, width: warnImage!.size.width, height: warnImage!.size.height) // タグ画像のサイズと位置
             UIGraphicsBeginImageContext(warnImage!.size)
             warnImage!.draw(in: tagRect)
+            labelRect = CGRect.init(x: 30.0, y: 30.0, width: img.size.width - 60.0, height: img.size.height - 120.0) // ラベル画像のサイズと位置
         }
     }
     
-    let labelRect = CGRect.init(x: 30.0, y: 30.0, width: img.size.width - 60.0, height: img.size.height - 120.0) // ラベル画像のサイズと位置
+    
     img.draw(in: labelRect)
     
     // Context に描画された画像を新しく設定
