@@ -43,6 +43,11 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
     var box: [Int] = [] // 現在発生している災害の番号を管理する配列
     var updateTimer: Timer! // 一定時間ごとにupdate()を発火させる
     
+    var tagTimer: Timer! // タグを表示するためのタイマー
+    var heading = 0.0 // 現在のユーザーの方位を保持する
+    var beforeHeading = 0.0 // kTagUpdateTime秒前のユーザーの方位を保持する
+    
+    
     // アラート
     let alert: UIAlertController = UIAlertController(title: "⚠︎", message: "iPadを垂直に，ホームボタンを左側に向けた状態にiPadを持ち直してください", preferredStyle:  UIAlertControllerStyle.alert)
     
@@ -118,16 +123,20 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
         if CLLocationManager.locationServicesEnabled() {
             locationManager.delegate = self
             locationManager.startUpdatingLocation() // GPSの更新を開始する
-            locationManager.headingFilter = 1.0
-            locationManager.headingOrientation = .landscapeLeft // ホームボタン左
-            locationManager.startUpdatingHeading()
+            locationManager.headingFilter = 0.5 // ユーザーの向きが0.5度変わるたびに変数"heading"の値を更新する
+            locationManager.headingOrientation = .landscapeLeft // ホームボタン右向きに実機を持った時の画面上側が北になる
+            locationManager.startUpdatingHeading() // 電子コンパスの更新を開始する
         }
         
         update() // 災害情報を更新する
         // kUpdateWarn秒に1回update()を発火させる
         updateTimer = Timer.scheduledTimer(timeInterval: kUpdateWarn, target: self, selector: #selector(cameraViewController.update), userInfo: nil, repeats: true)
         
+        // kTagUpdateTime秒に1回locateUpdate()を発火させる
+        tagTimer = Timer.scheduledTimer(timeInterval: kTagUpdateTime, target: self, selector: #selector(cameraViewController.locateUpdate), userInfo: nil, repeats: true)
+        
     }
+    
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -158,6 +167,7 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
             viewTimer.invalidate() // 警告モードのタイマーを止める
         }
         updateTimer.invalidate() // 災害情報の更新をするタイマーを止める
+        tagTimer.invalidate() // タグ表示を更新するタイマーを止める
     }
     
     override func didReceiveMemoryWarning() {
@@ -177,84 +187,10 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
      * カメラの向きが変わるたび
      * ユーザーから目的地までの距離を計算する
      * kCamDis(m)以内のものの方角を取得し、tagDisplay()を発火させ、画面にタグ画像を表示させる
-     * また、ユーザーが災害範囲に近づいたり、侵入したりしたとき、
-     * warningDisplay()を発火させ、警告モードにし、警告メッセージを表示させる
      */
     func locationManager(_ manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
         
-        // コンパスを北の方向を指すように画像を回転させる
-        self.compassView.transform = CGAffineTransform(rotationAngle: CGFloat(-1 * newHeading.magneticHeading * M_PI) / 180)
-        
-        // PCの磁気の影響を受けている時は処理をしない
-        if newHeading.headingAccuracy < 0 {
-            return
-        }
-        
-        // 情報タグのとき
-        for i in 0 ..< jsonDataManager.sharedInstance.infoBox.count {
-            
-            // 距離を取得する
-            jsonDataManager.sharedInstance.infoBox[i].distance = calcDistance(jsonDataManager.sharedInstance.infoBox[i].lat, lon: jsonDataManager.sharedInstance.infoBox[i].lon, uLat: userLat, uLon: userLon)
-            
-            // kCamDis(m)以内の場所のタグは表示する
-            if jsonDataManager.sharedInstance.infoBox[i].distance <= kCamDis {
-                
-                // 方角を取得する
-                jsonDataManager.sharedInstance.infoBox[i].direction = getGeoDirection(jsonDataManager.sharedInstance.infoBox[i].lat, tLon: jsonDataManager.sharedInstance.infoBox[i].lon)
-                
-                // タグを画面に表示させる
-                tagDisplay(i, imageBox: &infoImageBox, tDir: jsonDataManager.sharedInstance.infoBox[i].direction, tDis: jsonDataManager.sharedInstance.infoBox[i].distance, compass: newHeading.magneticHeading, inforType: jsonDataManager.sharedInstance.infoBox[i].inforType)
-                
-            } else if jsonDataManager.sharedInstance.infoBox[i].distance >= kCamDis && jsonDataManager.sharedInstance.infoBox[i].distance <= kCamDis + 50 {
-                infoImageBox[i].removeFromSuperview()
-            }
-        }
-        
-        
-        // 警告タグのとき
-        for i in 0 ..< jsonDataManager.sharedInstance.warnBox.count {
-            
-            // 災害が発生しているとき
-            if jsonDataManager.sharedInstance.warnBox[i].stop.compare(Date()) == ComparisonResult.orderedDescending && Date().compare(jsonDataManager.sharedInstance.warnBox[i].start) == ComparisonResult.orderedDescending {
-                
-                // 距離を取得する
-                jsonDataManager.sharedInstance.warnBox[i].distance = calcDistance(jsonDataManager.sharedInstance.warnBox[i].lat, lon: jsonDataManager.sharedInstance.warnBox[i].lon, uLat: userLat, uLon: userLon)
-                
-                // 1000m以内の場所のタグは表示する
-                if jsonDataManager.sharedInstance.warnBox[i].distance <= kCamDis {
-                    
-                    // 方角を取得する
-                    jsonDataManager.sharedInstance.warnBox[i].direction = getGeoDirection(jsonDataManager.sharedInstance.warnBox[i].lat, tLon: jsonDataManager.sharedInstance.warnBox[i].lon)
-                    
-                    // 警告タグの画像を設定する
-                    switch jsonDataManager.sharedInstance.warnBox[i].riskType {
-                    case 0: // 火災
-                        warnImage = UIImage(named: "icon_warn0.png")!
-                    case 1: // 浸水
-                        warnImage = UIImage(named: "icon_warn1.png")!
-                    case 2: // 土砂崩れ
-                        warnImage = UIImage(named: "icon_warn2.png")!
-                    case 3, 4, 5, 6: // 道路閉塞
-                        warnImage = UIImage(named: "icon_warn3.png")!
-                    default: // その他
-                        warnImage = UIImage(named: "icon_infoTagAR.png")!
-                        break
-                    }
-                    
-                    // タグを画面に表示させる
-                    tagDisplay(i, imageBox: &warnImageBox, tDir: jsonDataManager.sharedInstance.warnBox[i].direction, tDis: jsonDataManager.sharedInstance.warnBox[i].distance, compass: newHeading.magneticHeading, inforType: jsonDataManager.sharedInstance.warnBox[i].inforType)
-                }
-                
-            } else if Date().compare(jsonDataManager.sharedInstance.warnBox[i].stop) == ComparisonResult.orderedDescending {
-                
-                // 方角を取得する
-                jsonDataManager.sharedInstance.warnBox[i].direction = getGeoDirection(jsonDataManager.sharedInstance.warnBox[i].lat, tLon: jsonDataManager.sharedInstance.warnBox[i].lon)
-                let angle = jsonDataManager.sharedInstance.warnBox[i].direction - newHeading.magneticHeading
-                if (angle >= 0 && angle <= 36.5) || (angle >= -36.5 && angle <= 0) {
-                    warnImageBox[i].removeFromSuperview()
-                }
-            }
-        }
+        heading = newHeading.magneticHeading
     }
     
     
@@ -539,6 +475,100 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
             viewTimer = Timer.scheduledTimer(timeInterval: kUpdateMM, target: self, selector: #selector(mapViewController.updateView), userInfo: nil, repeats: true)
         }
     }
+
+
+    /*
+     * ユーザーから目的地までの距離を計算する
+     * kCamDis(m)以内のものの方角を取得し、tagDisplay()を発火させ、画面にタグ画像を表示させる
+     */
+    func locateUpdate() {
+        
+        // kTagUpdateTime秒前と比較して -kDiff ~ kDiff度の変化があるときのみ処理をする(手ぶれ補正)
+        if beforeHeading - heading > kDiff || beforeHeading - heading < -kDiff {
+            
+            // コンパスを北の方向を指すように画像を回転させる
+            self.compassView.transform = CGAffineTransform(rotationAngle: CGFloat(-1 * heading * M_PI) / 180)
+            
+            // PCの磁気の影響を受けている時は処理をしない
+            if heading < 0 {
+                return
+            }
+            
+            DispatchQueue(label: "showInfoTag").async {
+                
+                // 情報タグのとき
+                for i in 0 ..< jsonDataManager.sharedInstance.infoBox.count {
+                    
+                    // 距離を取得する
+                    jsonDataManager.sharedInstance.infoBox[i].distance = calcDistance(jsonDataManager.sharedInstance.infoBox[i].lat, lon: jsonDataManager.sharedInstance.infoBox[i].lon, uLat: userLat, uLon: userLon)
+                    
+                    // kCamDis(m)以内の場所のタグは表示する
+                    if jsonDataManager.sharedInstance.infoBox[i].distance <= kCamDis {
+                        
+                        // 方角を取得する
+                        jsonDataManager.sharedInstance.infoBox[i].direction = self.getGeoDirection(jsonDataManager.sharedInstance.infoBox[i].lat, tLon: jsonDataManager.sharedInstance.infoBox[i].lon)
+                        
+                        DispatchQueue.main.async {
+                            
+                            // タグを画面に表示させる
+                            self.tagDisplay(i, imageBox: &infoImageBox, tDir: jsonDataManager.sharedInstance.infoBox[i].direction, tDis: jsonDataManager.sharedInstance.infoBox[i].distance, compass: self.heading, inforType: jsonDataManager.sharedInstance.infoBox[i].inforType)
+                        }
+                        
+                    } else if jsonDataManager.sharedInstance.infoBox[i].distance >= kCamDis && jsonDataManager.sharedInstance.infoBox[i].distance <= kCamDis + 50 {
+                        infoImageBox[i].removeFromSuperview()
+                    }
+                }
+            }
+            
+            
+            // 警告タグのとき
+            for i in 0 ..< jsonDataManager.sharedInstance.warnBox.count {
+                
+                // 災害が発生しているとき
+                if jsonDataManager.sharedInstance.warnBox[i].stop.compare(Date()) == ComparisonResult.orderedDescending && Date().compare(jsonDataManager.sharedInstance.warnBox[i].start) == ComparisonResult.orderedDescending {
+                    
+                    // 距離を取得する
+                    jsonDataManager.sharedInstance.warnBox[i].distance = calcDistance(jsonDataManager.sharedInstance.warnBox[i].lat, lon: jsonDataManager.sharedInstance.warnBox[i].lon, uLat: userLat, uLon: userLon)
+                    
+                    // kCamDis(m)以内の場所のタグは表示する
+                    if jsonDataManager.sharedInstance.warnBox[i].distance <= kCamDis {
+                        
+                        // 方角を取得する
+                        jsonDataManager.sharedInstance.warnBox[i].direction = getGeoDirection(jsonDataManager.sharedInstance.warnBox[i].lat, tLon: jsonDataManager.sharedInstance.warnBox[i].lon)
+                        
+                        // 警告タグの画像を設定する
+                        switch jsonDataManager.sharedInstance.warnBox[i].riskType {
+                        case 0: // 火災
+                            warnImage = UIImage(named: "icon_warn0.png")!
+                        case 1: // 浸水
+                            warnImage = UIImage(named: "icon_warn1.png")!
+                        case 2: // 土砂崩れ
+                            warnImage = UIImage(named: "icon_warn2.png")!
+                        case 3, 4, 5, 6: // 道路閉塞
+                            warnImage = UIImage(named: "icon_warn3.png")!
+                        default: // その他
+                            warnImage = UIImage(named: "icon_infoTagAR.png")!
+                            break
+                        }
+                        
+                        // タグを画面に表示させる
+                        tagDisplay(i, imageBox: &warnImageBox, tDir: jsonDataManager.sharedInstance.warnBox[i].direction, tDis: jsonDataManager.sharedInstance.warnBox[i].distance, compass: heading, inforType: jsonDataManager.sharedInstance.warnBox[i].inforType)
+                    }
+                    
+                } else if Date().compare(jsonDataManager.sharedInstance.warnBox[i].stop) == ComparisonResult.orderedDescending {
+                    
+                    // 方角を取得する
+                    jsonDataManager.sharedInstance.warnBox[i].direction = getGeoDirection(jsonDataManager.sharedInstance.warnBox[i].lat, tLon: jsonDataManager.sharedInstance.warnBox[i].lon)
+                    let angle = jsonDataManager.sharedInstance.warnBox[i].direction - heading
+                    if (angle >= 0 && angle <= 36.5) || (angle >= -36.5 && angle <= 0) {
+                        warnImageBox[i].removeFromSuperview()
+                    }
+                }
+            }
+        }
+        
+        beforeHeading = heading
+    }
     
     
     /*
@@ -577,12 +607,21 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
      * @param inforType タグの種別(情報か警告か)
      */
     func tagDisplay(_ index: Int, imageBox: inout [UIImageView], tDir: Double, tDis: Int, compass: Double, inforType: String) {
-        let angle = tDir - compass
+        var angle = tDir - compass
+        
+        // 目的地が真北から見て西側にあり、ユーザーが向いている方向が真北から見て東側であるとき
+        if angle >= 323.5 && angle <= 360 {
+            angle = angle - 360
+            
+        // 目的地が真北から見て東側にあり、ユーザーが向いている方向が真北から見て西側であるとき
+        } else if angle >= -360 && angle <= -325.5 {
+            angle = 360 + angle
+        }
         
         var x = 0.0 // タグの表示位置(x軸)
-        var y = screenHeight / 2 // タグの表示位置(y軸)
+        var y: CGFloat = 0.0 // タグの表示位置(y軸)
         
-        var size = 0.0
+        var size = 0.0 // タグサイズ
         
         var labelImg: UIImage!
         
@@ -602,10 +641,11 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
             // 画面の表示位置(縦) = タグの最小サイズの半分 + 画面縦幅3/4の大きさ * 距離による倍率
             y = CGFloat(screenHeight / (8 * 2)) + CGFloat(screenHeight * 3 / 4) * CGFloat(kCamDis - tDis) / CGFloat(kCamDis)
             
+            
+            imageBox[index] = UIImageView(frame: CGRect(x: 0.0, y: 0.0, width: CGFloat(size), height: CGFloat(size)))
+            
             // 情報タグを生成する
             if inforType == kInfo {
-                
-                imageBox[index] = UIImageView(frame: CGRect(x: 0.0, y: 0.0, width: CGFloat(size), height: CGFloat(size)))
                 
                 if jsonDataManager.sharedInstance.infoBox[index].icon == "icon_infoTag.png" {
                     labelImg = makeLabel(jsonDataManager.sharedInstance.infoBox[index].pinNum, inforType: inforType) // UILabelをUIImageに変換する
@@ -616,10 +656,9 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
                 }
                 imageBox[index].tag = index // 情報は0以上からで判断
                 
-                // 警告タグを生成する
+            // 警告タグを生成する
             } else if inforType == kWarn {
                 labelImg = makeLabel(jsonDataManager.sharedInstance.warnBox[index].pinNum, inforType: inforType) // UILabelをUIImageに変換する
-                imageBox[index] = UIImageView(frame: CGRect(x: 0.0, y: 0.0, width: CGFloat(size), height: CGFloat(size)))
                 imageBox[index].image = getPinImage(labelImg, inforType: jsonDataManager.sharedInstance.warnBox[index].inforType)
                 imageBox[index].tag = (-1) + index * (-1) // 警告は-1以下からで判断 あとで+1してインデックス番号に合わせる
             }
