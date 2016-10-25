@@ -94,7 +94,7 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
         toMap_Button.addTarget(self, action: #selector(cameraViewController.onClick_map(_:)), for: .touchUpInside)
         
         // コンパス
-        compassView = UIImageView(frame: CGRect(x: 40.0, y: 40.0, width: imgCompass.size.width / 2, height: imgCompass.size.height / 2))
+        compassView = UIImageView(frame: CGRect(x: 40.0, y: 40.0, width: imgCompass.size.width / 4, height: imgCompass.size.height / 4))
         compassView.image = imgCompass
         view.addSubview(compassView)
         
