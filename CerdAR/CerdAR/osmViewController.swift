@@ -220,7 +220,6 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
     override func viewWillDisappear(_ animated: Bool) {
         
         if mapView.annotations?.count != nil {
-            print(mapView.annotations?.count)
             for annotation in self.mapView.annotations! {
                 self.mapView.removeAnnotation(annotation)
             }

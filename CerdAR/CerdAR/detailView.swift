@@ -138,10 +138,10 @@ class detailView: UIView {
                 
                 
             } else if pinData.picType == kMovie { // 動画
-                
-                if pinData.movie.range(of: "http://www.youtube.com/embed/") == nil && pinData.movie.range(of: "https://www.youtube.com/embed/") == nil {
+
+                if !pinData.movie.hasPrefix("http://www.youtube.com/embed/") && !pinData.movie.hasPrefix("https://www.youtube.com/embed/") {
                     notFound()
-                    
+                
                 } else {
                     
                     let url = URL(string : pinData.movie)

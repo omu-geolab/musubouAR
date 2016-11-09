@@ -126,7 +126,7 @@ class jsonDataManager: NSObject {
                         
                     } else if pType == kMovie {
                         infoBox[iN].picType = kMovie
-                        if let pm = json["features"][i]["properties"][kPhoto].string { // 動画のURL
+                        if let pm = json["features"][i]["properties"][kMovie].string { // 動画のURL
                             infoBox[iN].movie = pm
                         } else {
                             infoBox[iN].movie = ""

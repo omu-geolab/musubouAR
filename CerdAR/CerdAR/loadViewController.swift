@@ -182,7 +182,6 @@ class loadViewController: UIViewController, termsViewDelegate, CLLocationManager
                 callback("finished")
                 // 成功したとき
             } else {
-                print(data)
                 self.json = JSON(data: data!)
                 callback("finished")
             }
