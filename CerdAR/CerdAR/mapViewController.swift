@@ -688,7 +688,7 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
                         iconstr = "bouka-markerMap.png"
                 }
                                 
-                annotation.tagData.pinImage = getResizeImage(UIImage(named: iconstr)!, newHeight: 60)
+                annotation.tagData.pinImage = getResizeImage(UIImage(named: iconstr)!, newHeight: 50)
                 //annotation.tagData.expandImage = getResizeImage(UIImage(named: annotation.tagData.icon)!, newHeight: 500)
                 
                 self.mapView!.addAnnotation(annotation) // ピン情報の更新
