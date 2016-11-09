@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7EED1C2E1DD3665600E46E39 /* bouka-marker.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EED1C2D1DD3665600E46E39 /* bouka-marker.png */; };
+		7EED1C301DD3666000E46E39 /* bouka-markerMap.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EED1C2F1DD3666000E46E39 /* bouka-markerMap.png */; };
 		AC05B9FA1D811FDA0082C52A /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC05B9F91D811FDA0082C52A /* DataManager.swift */; };
 		AC0F6A041DB62BCD000993D5 /* icon_camera.png in Resources */ = {isa = PBXBuildFile; fileRef = AC0F69FF1DB62BCD000993D5 /* icon_camera.png */; };
 		AC0F6A061DB62BCD000993D5 /* icon_locate.png in Resources */ = {isa = PBXBuildFile; fileRef = AC0F6A011DB62BCD000993D5 /* icon_locate.png */; };
@@ -86,6 +88,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7EED1C2D1DD3665600E46E39 /* bouka-marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bouka-marker.png"; sourceTree = "<group>"; };
+		7EED1C2F1DD3666000E46E39 /* bouka-markerMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bouka-markerMap.png"; sourceTree = "<group>"; };
 		AC05B9F91D811FDA0082C52A /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		AC0F69FF1DB62BCD000993D5 /* icon_camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_camera.png; path = CerdAR/icon_camera.png; sourceTree = "<group>"; };
 		AC0F6A011DB62BCD000993D5 /* icon_locate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_locate.png; path = CerdAR/icon_locate.png; sourceTree = "<group>"; };
@@ -242,6 +246,8 @@
 			children = (
 				AC7D0BFF1DBF292500D76DC6 /* icon_compass.png */,
 				AC46911E1DBD8D80009655C0 /* hinan-bldg-marker.png */,
+				7EED1C2F1DD3666000E46E39 /* bouka-markerMap.png */,
+				7EED1C2D1DD3665600E46E39 /* bouka-marker.png */,
 				AC46911F1DBD8D80009655C0 /* hinan-bldg-markerMap.png */,
 				AC4691201DBD8D80009655C0 /* hinan-camp-marker.png */,
 				AC4691211DBD8D80009655C0 /* hinan-camp-markerMap.png */,
@@ -414,6 +420,7 @@
 				AC0F6A041DB62BCD000993D5 /* icon_camera.png in Resources */,
 				AC4691221DBD8D80009655C0 /* hinan-bldg-marker.png in Resources */,
 				AC7D0C001DBF292500D76DC6 /* icon_compass.png in Resources */,
+				7EED1C301DD3666000E46E39 /* bouka-markerMap.png in Resources */,
 				AC2AB8F91DB7790A0048931C /* sound_intrusion.wav in Resources */,
 				AC4691161DBD8B71009655C0 /* icon_infoTag.png in Resources */,
 				AC5AED921DA4A181009443E9 /* icon_notfound.png in Resources */,
@@ -428,6 +435,7 @@
 				AC4691251DBD8D80009655C0 /* hinan-camp-markerMap.png in Resources */,
 				AC57543A1DB8B8BA003271F1 /* logo_BRIL.jpg in Resources */,
 				AC4691171DBD8B71009655C0 /* icon_infoTagAR.png in Resources */,
+				7EED1C2E1DD3665600E46E39 /* bouka-marker.png in Resources */,
 				AC2C52CB1D5805F70032B689 /* Main.storyboard in Resources */,
 				AC4691151DBD8B71009655C0 /* icon_infoTag_red.png in Resources */,
 				AC46911C1DBD8B71009655C0 /* medicine-marker.png in Resources */,
