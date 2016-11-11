@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7E4FEC091DD5C94000572911 /* bouka-marker.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E4FEC081DD5C94000572911 /* bouka-marker.png */; };
 		7E80CB221DD5C6D300B6B281 /* aed-marker.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E80CB211DD5C6D300B6B281 /* aed-marker.png */; };
 		7E80CB241DD5C77F00B6B281 /* aed-markerMap.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E80CB231DD5C77F00B6B281 /* aed-markerMap.png */; };
 		7EED1C301DD3666000E46E39 /* bouka-markerMap.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EED1C2F1DD3666000E46E39 /* bouka-markerMap.png */; };
@@ -91,7 +90,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		7E4FEC081DD5C94000572911 /* bouka-marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bouka-marker.png"; path = "../../Downloads/bouka-marker.png"; sourceTree = "<group>"; };
 		7E80CB211DD5C6D300B6B281 /* aed-marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "aed-marker.png"; sourceTree = "<group>"; };
 		7E80CB231DD5C77F00B6B281 /* aed-markerMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "aed-markerMap.png"; sourceTree = "<group>"; };
 		7EED1C2F1DD3666000E46E39 /* bouka-markerMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bouka-markerMap.png"; sourceTree = "<group>"; };
@@ -256,7 +254,6 @@
 				AC46911F1DBD8D80009655C0 /* hinan-bldg-markerMap.png */,
 				AC4691201DBD8D80009655C0 /* hinan-camp-marker.png */,
 				AC4691211DBD8D80009655C0 /* hinan-camp-markerMap.png */,
-				7E4FEC081DD5C94000572911 /* bouka-marker.png */,
 				AC46910C1DBD8B71009655C0 /* icon_infoTag_red.png */,
 				94889CAD1DD5CB62009C2458 /* bouka-marker.png */,
 				AC46910D1DBD8B71009655C0 /* icon_infoTag.png */,
@@ -443,7 +440,6 @@
 				AC2C52D01D5805F70032B689 /* Assets.xcassets in Resources */,
 				AC4691181DBD8B71009655C0 /* icon_warn0.png in Resources */,
 				94889CAE1DD5CB62009C2458 /* bouka-marker.png in Resources */,
-				7E4FEC091DD5C94000572911 /* bouka-marker.png in Resources */,
 				AC4691251DBD8D80009655C0 /* hinan-camp-markerMap.png in Resources */,
 				AC57543A1DB8B8BA003271F1 /* logo_BRIL.jpg in Resources */,
 				7E80CB221DD5C6D300B6B281 /* aed-marker.png in Resources */,
