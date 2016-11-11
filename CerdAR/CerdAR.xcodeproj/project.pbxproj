@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E80CB221DD5C6D300B6B281 /* aed-marker.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E80CB211DD5C6D300B6B281 /* aed-marker.png */; };
+		7E80CB241DD5C77F00B6B281 /* aed-markerMap.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E80CB231DD5C77F00B6B281 /* aed-markerMap.png */; };
 		7EED1C301DD3666000E46E39 /* bouka-markerMap.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EED1C2F1DD3666000E46E39 /* bouka-markerMap.png */; };
 		7EED1C321DD4A9C400E46E39 /* bouka-marker.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EED1C311DD4A9C400E46E39 /* bouka-marker.png */; };
 		AC05B9FA1D811FDA0082C52A /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC05B9F91D811FDA0082C52A /* DataManager.swift */; };
@@ -88,6 +90,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7E80CB211DD5C6D300B6B281 /* aed-marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "aed-marker.png"; sourceTree = "<group>"; };
+		7E80CB231DD5C77F00B6B281 /* aed-markerMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "aed-markerMap.png"; sourceTree = "<group>"; };
 		7EED1C2F1DD3666000E46E39 /* bouka-markerMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bouka-markerMap.png"; sourceTree = "<group>"; };
 		7EED1C311DD4A9C400E46E39 /* bouka-marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bouka-marker.png"; path = "../../Dropbox/AL災害訓練関係/画像/アイコン画像/Alpha画像/bouka-marker.png"; sourceTree = "<group>"; };
 		AC05B9F91D811FDA0082C52A /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
@@ -253,7 +257,9 @@
 				AC46910C1DBD8B71009655C0 /* icon_infoTag_red.png */,
 				7EED1C311DD4A9C400E46E39 /* bouka-marker.png */,
 				AC46910D1DBD8B71009655C0 /* icon_infoTag.png */,
+				7E80CB231DD5C77F00B6B281 /* aed-markerMap.png */,
 				AC46910E1DBD8B71009655C0 /* icon_infoTagAR.png */,
+				7E80CB211DD5C6D300B6B281 /* aed-marker.png */,
 				AC46910F1DBD8B71009655C0 /* icon_warn0.png */,
 				AC4691101DBD8B71009655C0 /* icon_warn1.png */,
 				AC4691111DBD8B71009655C0 /* icon_warn2.png */,
@@ -418,6 +424,7 @@
 				AC0F6A061DB62BCD000993D5 /* icon_locate.png in Resources */,
 				AC4691191DBD8B71009655C0 /* icon_warn1.png in Resources */,
 				AC0F6A041DB62BCD000993D5 /* icon_camera.png in Resources */,
+				7E80CB241DD5C77F00B6B281 /* aed-markerMap.png in Resources */,
 				AC4691221DBD8D80009655C0 /* hinan-bldg-marker.png in Resources */,
 				AC7D0C001DBF292500D76DC6 /* icon_compass.png in Resources */,
 				7EED1C301DD3666000E46E39 /* bouka-markerMap.png in Resources */,
@@ -434,6 +441,7 @@
 				AC4691181DBD8B71009655C0 /* icon_warn0.png in Resources */,
 				AC4691251DBD8D80009655C0 /* hinan-camp-markerMap.png in Resources */,
 				AC57543A1DB8B8BA003271F1 /* logo_BRIL.jpg in Resources */,
+				7E80CB221DD5C6D300B6B281 /* aed-marker.png in Resources */,
 				AC4691171DBD8B71009655C0 /* icon_infoTagAR.png in Resources */,
 				7EED1C321DD4A9C400E46E39 /* bouka-marker.png in Resources */,
 				AC2C52CB1D5805F70032B689 /* Main.storyboard in Resources */,
