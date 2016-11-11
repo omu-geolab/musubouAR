@@ -686,6 +686,8 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
                     iconstr = "medicine-markerMap.png"
                 } else if annotation.tagData.icon == "bouka-marker.png" {
                         iconstr = "bouka-markerMap.png"
+                } else if annotation.tagData.icon == "aed-marker.png" {
+                    iconstr = "aed-markerMap.png"
                 }
                                 
                 annotation.tagData.pinImage = getResizeImage(UIImage(named: iconstr)!, newHeight: 50)
