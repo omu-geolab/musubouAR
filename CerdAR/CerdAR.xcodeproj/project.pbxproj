@@ -18,10 +18,10 @@
 		944FC9A81DE2DC3D0063261D /* roujinhome-marker.png in Resources */ = {isa = PBXBuildFile; fileRef = 944FC9A61DE2DC3D0063261D /* roujinhome-marker.png */; };
 		944FC9A91DE2DC3D0063261D /* roujinhome-markerMap.png in Resources */ = {isa = PBXBuildFile; fileRef = 944FC9A71DE2DC3D0063261D /* roujinhome-markerMap.png */; };
 		94889CAE1DD5CB62009C2458 /* bouka-marker.png in Resources */ = {isa = PBXBuildFile; fileRef = 94889CAD1DD5CB62009C2458 /* bouka-marker.png */; };
+		94B0D2C61DE2EC7F005ECC23 /* icon_menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 94B0D2C51DE2EC7F005ECC23 /* icon_menu.png */; };
 		AC05B9FA1D811FDA0082C52A /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC05B9F91D811FDA0082C52A /* DataManager.swift */; };
 		AC0F6A061DB62BCD000993D5 /* icon_locate.png in Resources */ = {isa = PBXBuildFile; fileRef = AC0F6A011DB62BCD000993D5 /* icon_locate.png */; };
 		AC0F6A071DB62BCD000993D5 /* icon_map.png in Resources */ = {isa = PBXBuildFile; fileRef = AC0F6A021DB62BCD000993D5 /* icon_map.png */; };
-		AC0F6A081DB62BCD000993D5 /* icon_menu.png in Resources */ = {isa = PBXBuildFile; fileRef = AC0F6A031DB62BCD000993D5 /* icon_menu.png */; };
 		AC2AB8F61DB778A10048931C /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2AB8F51DB778A10048931C /* Constant.swift */; };
 		AC2AB8F91DB7790A0048931C /* sound_intrusion.wav in Resources */ = {isa = PBXBuildFile; fileRef = AC2AB8F71DB7790A0048931C /* sound_intrusion.wav */; };
 		AC2AB8FA1DB7790A0048931C /* sound_near.wav in Resources */ = {isa = PBXBuildFile; fileRef = AC2AB8F81DB7790A0048931C /* sound_near.wav */; };
@@ -107,10 +107,10 @@
 		944FC9A61DE2DC3D0063261D /* roujinhome-marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "roujinhome-marker.png"; sourceTree = "<group>"; };
 		944FC9A71DE2DC3D0063261D /* roujinhome-markerMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "roujinhome-markerMap.png"; sourceTree = "<group>"; };
 		94889CAD1DD5CB62009C2458 /* bouka-marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bouka-marker.png"; sourceTree = "<group>"; };
+		94B0D2C51DE2EC7F005ECC23 /* icon_menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_menu.png; path = ../../Desktop/icon_menu.png; sourceTree = "<group>"; };
 		AC05B9F91D811FDA0082C52A /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		AC0F6A011DB62BCD000993D5 /* icon_locate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_locate.png; path = CerdAR/icon_locate.png; sourceTree = "<group>"; };
 		AC0F6A021DB62BCD000993D5 /* icon_map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_map.png; path = CerdAR/icon_map.png; sourceTree = "<group>"; };
-		AC0F6A031DB62BCD000993D5 /* icon_menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_menu.png; path = CerdAR/icon_menu.png; sourceTree = "<group>"; };
 		AC2AB8F51DB778A10048931C /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		AC2AB8F71DB7790A0048931C /* sound_intrusion.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = sound_intrusion.wav; path = CerdAR/sound_intrusion.wav; sourceTree = "<group>"; };
 		AC2AB8F81DB7790A0048931C /* sound_near.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = sound_near.wav; path = CerdAR/sound_near.wav; sourceTree = "<group>"; };
@@ -266,6 +266,7 @@
 				944FC9A31DE2DBB60063261D /* keisatu-markerMap.png */,
 				944FC99C1DE2D6CD0063261D /* shoubo-marker.png */,
 				944FC99E1DE2D6D40063261D /* shoubo-markerMap.png */,
+				94B0D2C51DE2EC7F005ECC23 /* icon_menu.png */,
 				AC7D0BFF1DBF292500D76DC6 /* icon_compass.png */,
 				AC46911E1DBD8D80009655C0 /* hinan-bldg-marker.png */,
 				7EED1C2F1DD3666000E46E39 /* bouka-markerMap.png */,
@@ -289,7 +290,6 @@
 				AC5754301DB89B45003271F1 /* logo_CERD.jpg */,
 				AC0F6A011DB62BCD000993D5 /* icon_locate.png */,
 				AC0F6A021DB62BCD000993D5 /* icon_map.png */,
-				AC0F6A031DB62BCD000993D5 /* icon_menu.png */,
 				AC5AED8B1DA4A181009443E9 /* icon_notfound.png */,
 			);
 			name = Image;
@@ -448,6 +448,7 @@
 				AC7D0C001DBF292500D76DC6 /* icon_compass.png in Resources */,
 				7EED1C301DD3666000E46E39 /* bouka-markerMap.png in Resources */,
 				944FC9A91DE2DC3D0063261D /* roujinhome-markerMap.png in Resources */,
+				94B0D2C61DE2EC7F005ECC23 /* icon_menu.png in Resources */,
 				AC2AB8F91DB7790A0048931C /* sound_intrusion.wav in Resources */,
 				AC4691161DBD8B71009655C0 /* icon_infoTag.png in Resources */,
 				AC5AED921DA4A181009443E9 /* icon_notfound.png in Resources */,
@@ -473,7 +474,6 @@
 				AC46911C1DBD8B71009655C0 /* medicine-marker.png in Resources */,
 				AC5754321DB89B45003271F1 /* logo_CERD.jpg in Resources */,
 				AC0F6A071DB62BCD000993D5 /* icon_map.png in Resources */,
-				AC0F6A081DB62BCD000993D5 /* icon_menu.png in Resources */,
 				AC2AB8FA1DB7790A0048931C /* sound_near.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
