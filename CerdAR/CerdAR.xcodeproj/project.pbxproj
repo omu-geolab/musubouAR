@@ -13,6 +13,10 @@
 		944FC99D1DE2D6CD0063261D /* shoubo-marker.png in Resources */ = {isa = PBXBuildFile; fileRef = 944FC99C1DE2D6CD0063261D /* shoubo-marker.png */; };
 		944FC99F1DE2D6D40063261D /* shoubo-markerMap.png in Resources */ = {isa = PBXBuildFile; fileRef = 944FC99E1DE2D6D40063261D /* shoubo-markerMap.png */; };
 		944FC9A11DE2D74A0063261D /* icon_camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 944FC9A01DE2D74A0063261D /* icon_camera.png */; };
+		944FC9A41DE2DBB60063261D /* keisatu-marker.png in Resources */ = {isa = PBXBuildFile; fileRef = 944FC9A21DE2DBB60063261D /* keisatu-marker.png */; };
+		944FC9A51DE2DBB60063261D /* keisatu-markerMap.png in Resources */ = {isa = PBXBuildFile; fileRef = 944FC9A31DE2DBB60063261D /* keisatu-markerMap.png */; };
+		944FC9A81DE2DC3D0063261D /* roujinhome-marker.png in Resources */ = {isa = PBXBuildFile; fileRef = 944FC9A61DE2DC3D0063261D /* roujinhome-marker.png */; };
+		944FC9A91DE2DC3D0063261D /* roujinhome-markerMap.png in Resources */ = {isa = PBXBuildFile; fileRef = 944FC9A71DE2DC3D0063261D /* roujinhome-markerMap.png */; };
 		94889CAE1DD5CB62009C2458 /* bouka-marker.png in Resources */ = {isa = PBXBuildFile; fileRef = 94889CAD1DD5CB62009C2458 /* bouka-marker.png */; };
 		AC05B9FA1D811FDA0082C52A /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC05B9F91D811FDA0082C52A /* DataManager.swift */; };
 		AC0F6A061DB62BCD000993D5 /* icon_locate.png in Resources */ = {isa = PBXBuildFile; fileRef = AC0F6A011DB62BCD000993D5 /* icon_locate.png */; };
@@ -98,6 +102,10 @@
 		944FC99C1DE2D6CD0063261D /* shoubo-marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shoubo-marker.png"; sourceTree = "<group>"; };
 		944FC99E1DE2D6D40063261D /* shoubo-markerMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shoubo-markerMap.png"; sourceTree = "<group>"; };
 		944FC9A01DE2D74A0063261D /* icon_camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_camera.png; sourceTree = "<group>"; };
+		944FC9A21DE2DBB60063261D /* keisatu-marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "keisatu-marker.png"; sourceTree = "<group>"; };
+		944FC9A31DE2DBB60063261D /* keisatu-markerMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "keisatu-markerMap.png"; sourceTree = "<group>"; };
+		944FC9A61DE2DC3D0063261D /* roujinhome-marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "roujinhome-marker.png"; sourceTree = "<group>"; };
+		944FC9A71DE2DC3D0063261D /* roujinhome-markerMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "roujinhome-markerMap.png"; sourceTree = "<group>"; };
 		94889CAD1DD5CB62009C2458 /* bouka-marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bouka-marker.png"; sourceTree = "<group>"; };
 		AC05B9F91D811FDA0082C52A /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		AC0F6A011DB62BCD000993D5 /* icon_locate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_locate.png; path = CerdAR/icon_locate.png; sourceTree = "<group>"; };
@@ -252,6 +260,10 @@
 		AC2C53021D5809610032B689 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				944FC9A61DE2DC3D0063261D /* roujinhome-marker.png */,
+				944FC9A71DE2DC3D0063261D /* roujinhome-markerMap.png */,
+				944FC9A21DE2DBB60063261D /* keisatu-marker.png */,
+				944FC9A31DE2DBB60063261D /* keisatu-markerMap.png */,
 				944FC99C1DE2D6CD0063261D /* shoubo-marker.png */,
 				944FC99E1DE2D6D40063261D /* shoubo-markerMap.png */,
 				AC7D0BFF1DBF292500D76DC6 /* icon_compass.png */,
@@ -428,16 +440,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC0F6A061DB62BCD000993D5 /* icon_locate.png in Resources */,
+				944FC9A51DE2DBB60063261D /* keisatu-markerMap.png in Resources */,
 				AC4691191DBD8B71009655C0 /* icon_warn1.png in Resources */,
 				7E80CB241DD5C77F00B6B281 /* aed-markerMap.png in Resources */,
 				944FC99F1DE2D6D40063261D /* shoubo-markerMap.png in Resources */,
 				AC4691221DBD8D80009655C0 /* hinan-bldg-marker.png in Resources */,
 				AC7D0C001DBF292500D76DC6 /* icon_compass.png in Resources */,
 				7EED1C301DD3666000E46E39 /* bouka-markerMap.png in Resources */,
+				944FC9A91DE2DC3D0063261D /* roujinhome-markerMap.png in Resources */,
 				AC2AB8F91DB7790A0048931C /* sound_intrusion.wav in Resources */,
 				AC4691161DBD8B71009655C0 /* icon_infoTag.png in Resources */,
 				AC5AED921DA4A181009443E9 /* icon_notfound.png in Resources */,
 				AC2C52D31D5805F70032B689 /* LaunchScreen.storyboard in Resources */,
+				944FC9A81DE2DC3D0063261D /* roujinhome-marker.png in Resources */,
+				944FC9A41DE2DBB60063261D /* keisatu-marker.png in Resources */,
 				AC46911B1DBD8B71009655C0 /* icon_warn3.png in Resources */,
 				AC4691241DBD8D80009655C0 /* hinan-camp-marker.png in Resources */,
 				AC46911D1DBD8B71009655C0 /* medicine-markerMap.png in Resources */,

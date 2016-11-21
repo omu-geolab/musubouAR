@@ -686,9 +686,15 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
                 } else if annotation.tagData.icon == "medicine-marker.png" {
                     iconstr = "medicine-markerMap.png"
                 } else if annotation.tagData.icon == "bouka-marker.png" {
-                        iconstr = "bouka-markerMap.png"
+                    iconstr = "bouka-markerMap.png"
                 } else if annotation.tagData.icon == "aed-marker.png" {
                     iconstr = "aed-markerMap.png"
+                } else if annotation.tagData.icon == "roujinhome-marker.png" {
+                    iconstr = "roujinhome-markerMap.png"
+                } else if annotation.tagData.icon == "shoubo-marker.png" {
+                    iconstr = "shoubo-markerMap.png"
+                } else if annotation.tagData.icon == "keisatu-marker.png" {
+                    iconstr = "keisatu-markerMap.png"
                 }
                                 
                 annotation.tagData.pinImage = getResizeImage(UIImage(named: iconstr)!, newHeight: 35)  // 情報タグのサイズ
