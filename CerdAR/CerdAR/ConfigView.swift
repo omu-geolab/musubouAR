@@ -55,11 +55,11 @@ class ConfigView: UIView {
         
         // 「地図切り替え」ボタンの挿入(画面左上側)
         if displayMode == mode.applemap.rawValue {
-            changeMapBut.setTitle("OpenStreetMapsに切り替え", for: UIControlState()) // 通常
-            changeMapBut.setTitle("OpenStreetMapsに切り替え", for: UIControlState.highlighted) // ハイライト
+            changeMapBut.setTitle("OpenStreetMapに切り替え", for: UIControlState()) // 通常
+            changeMapBut.setTitle("OpenStreetMapに切り替え", for: UIControlState.highlighted) // ハイライト
         } else if displayMode == mode.osm.rawValue {
-            changeMapBut.setTitle("AppleMapsに切り替え", for: UIControlState()) // 通常
-            changeMapBut.setTitle("AppleMapsに切り替え", for: UIControlState.highlighted) // ハイライト
+            changeMapBut.setTitle("Appleマップに切り替え", for: UIControlState()) // 通常
+            changeMapBut.setTitle("Appleマップに切り替え", for: UIControlState.highlighted) // ハイライト
         }
         
         changeMapBut.setTitleColor(UIColor.white, for: UIControlState())
