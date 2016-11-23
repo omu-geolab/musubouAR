@@ -168,8 +168,8 @@ class detailView: UIView {
                     })
                     task.resume()
                 }
-            } else {
-                let warnImageView = UIImageView(frame: CGRect.init(x: CGFloat(dWid * 0.8 * 0.08), y: CGFloat(dHei * 0.2), width: dHei * 0.55, height: dHei * 0.55))
+            } else {   // その他の情報タグ画像
+                let warnImageView = UIImageView(frame: CGRect.init(x: CGFloat(dWid * 0.8 * 0.08), y: CGFloat(dHei * 0.3), width: dHei * 0.35, height: dHei * 0.35))
                 if pinData.icon != "icon_infoTag.png" {
                     warnImageView.image = UIImage(named: pinData.icon)
                     self.addSubview(warnImageView)
