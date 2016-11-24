@@ -748,8 +748,8 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
     
     
     /*
-     * 設定画面の「いれかえ」をタップしたとき
-     * AppleMapsに切り替える
+     * 設定画面の「Appleマップ」を
+     * タップした際に，地図データを切り替える
      */
     internal func changeMap(_ sender: UIButton) {
         mapView.allowsScrolling = true // スクロールできるにする
@@ -761,8 +761,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         
         configview?.removeFromSuperview()
         ConfigView().deleteConfigDisplay()
-        self.dismiss(animated: true, completion: nil)
-        
+        self.present(mapViewController(), animated: true, completion: nil)
         updateTimer.invalidate() // update()を発火させていたOpenStreetMapsのタイマーを止める
     }
     

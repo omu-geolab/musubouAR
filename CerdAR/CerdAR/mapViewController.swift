@@ -180,7 +180,6 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         for i in 0 ..< jsonDataManager.sharedInstance.warnBox.count {
             warnPinView.append(MKAnnotationView())
             circle.append(MKCircle())
-            circleRadius.append(0.0)
             
             // 災害発生中のとき
             if jsonDataManager.sharedInstance.warnBox[i].stop.compare(Date()) == ComparisonResult.orderedDescending && Date().compare(jsonDataManager.sharedInstance.warnBox[i].start) == ComparisonResult.orderedDescending {
@@ -672,44 +671,7 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
      * @param annotation 更新するピン
      */
     func updatePin(_ annotation: appleMapsAnnotation) {
-        
-        // 施設タグ
-        if annotation.tagData.inforType == kInfo {
-            if annotation.tagData.icon != "icon_infoTag.png" { // iconがicon_infoTags.png以外のとき
                 
-                var iconstr: String!
-
-                if annotation.tagData.icon == "hinan-bldg-marker.png" {
-                    iconstr = "hinan-bldg-markerMap.png"
-                } else if annotation.tagData.icon == "hinan-camp-marker.png" {
-                    iconstr = "hinan-camp-markerMap.png"
-                } else if annotation.tagData.icon == "medicine-marker.png" {
-                    iconstr = "medicine-markerMap.png"
-                } else if annotation.tagData.icon == "bouka-marker.png" {
-                    iconstr = "bouka-markerMap.png"
-                } else if annotation.tagData.icon == "aed-marker.png" {
-                    iconstr = "aed-markerMap.png"
-                } else if annotation.tagData.icon == "roujinhome-marker.png" {
-                    iconstr = "roujinhome-markerMap.png"
-                } else if annotation.tagData.icon == "shoubo-marker.png" {
-                    iconstr = "shoubo-markerMap.png"
-                } else if annotation.tagData.icon == "keisatu-marker.png" {
-                    iconstr = "keisatu-markerMap.png"
-                }
-                                
-                annotation.tagData.pinImage = getResizeImage(UIImage(named: iconstr)!, newHeight: 35)  // 情報タグのサイズ
-                //annotation.tagData.expandImage = getResizeImage(UIImage(named: annotation.tagData.icon)!, newHeight: 500)
-                
-                self.mapView!.addAnnotation(annotation) // ピン情報の更新
-                return
-            }
-        }
-        
-        // 情報タグ・警告タグ
-        let labelImg = makeLabel(annotation.tagData.pinNum, inforType: annotation.tagData.inforType) // UILabelをUIImageに変換する
-        annotation.tagData.pinImage = getPinImage(labelImg, inforType: annotation.tagData.inforType)
-        annotation.tagData.expandImage = getPinImage(labelImg, inforType: annotation.tagData.inforType)
-        
         self.mapView!.addAnnotation(annotation) // ピン情報の更新
     }
     
@@ -826,8 +788,8 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     
     
     /*
-     * 設定画面の「いれかえ」をタップしたとき
-     * OpenStreetMapsに切り替える
+     * 設定画面の「OpenStreetMap」を
+     * タップしたときに，地図データを切り替える
      */
     internal func onClick_changeMap(_ sender: UIButton) {
         

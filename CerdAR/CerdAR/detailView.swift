@@ -76,7 +76,11 @@ class detailView: UIView {
             distance.text = "あと" + String(calcDistance(pinData.lat, lon: pinData.lon, uLat: userLat, uLon: userLon)) + "m"
             
         } else {
-            distance.text = "あと" + String(calcDistance(pinData.lat, lon: pinData.lon, uLat: userLat, uLon: userLon) - Int(circleRadius[pinData.pinNum])) + "m"
+            var dst = calcDistance(pinData.lat, lon: pinData.lon, uLat: userLat, uLon: userLon) - Int(circleRadius[pinData.pinNum])
+            if dst < 0 {
+                dst = 0
+            }
+            distance.text = "あと" + String(dst) + "m"
         }
         
         distance.numberOfLines = 0

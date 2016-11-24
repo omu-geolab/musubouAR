@@ -142,6 +142,41 @@ class jsonDataManager: NSObject {
                     infoBox[iN].photo = ""
                 }
                 
+                
+                if infoBox[iN].icon == "icon_infoTag.png" {
+                    
+                    // 情報タグ・警告タグ
+                    let labelImg = makeLabel(infoBox[iN].pinNum, inforType: infoBox[iN].inforType) // UILabelをUIImageに変換する
+                    infoBox[iN].pinImage = getPinImage(labelImg, inforType: infoBox[iN].inforType)
+                    infoBox[iN].expandImage = getPinImage(labelImg, inforType: infoBox[iN].inforType)
+                    
+                } else { // iconがicon_infoTags.png以外のとき
+                    
+                    var iconstr: String!
+                    
+                    if infoBox[iN].icon == "hinan-bldg-marker.png" {
+                        iconstr = "hinan-bldg-markerMap.png"
+                    } else if infoBox[iN].icon == "hinan-camp-marker.png" {
+                        iconstr = "hinan-camp-markerMap.png"
+                    } else if infoBox[iN].icon == "medicine-marker.png" {
+                        iconstr = "medicine-markerMap.png"
+                    } else if infoBox[iN].icon == "bouka-marker.png" {
+                        iconstr = "bouka-markerMap.png"
+                    } else if infoBox[iN].icon == "aed-marker.png" {
+                        iconstr = "aed-markerMap.png"
+                    } else if infoBox[iN].icon == "roujinhome-marker.png" {
+                        iconstr = "roujinhome-markerMap.png"
+                    } else if infoBox[iN].icon == "shoubo-marker.png" {
+                        iconstr = "shoubo-markerMap.png"
+                    } else if infoBox[iN].icon == "keisatu-marker.png" {
+                        iconstr = "keisatu-markerMap.png"
+                    }
+                    
+                    infoBox[iN].pinImage = getResizeImage(UIImage(named: iconstr)!, newHeight: 60)
+                }
+               
+
+                
                 iN += 1
                 
                 // 警告タグ
@@ -242,6 +277,8 @@ class jsonDataManager: NSObject {
                     warnBox.removeLast()
                     continue
                 }
+                
+                circleRadius.append(0.0)
                 
                 wN += 1
                 
