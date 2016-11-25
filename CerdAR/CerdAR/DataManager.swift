@@ -153,24 +153,29 @@ class jsonDataManager: NSObject {
                 } else { // iconがicon_infoTags.png以外のとき
                     
                     var iconstr: String!
+
+//                    if infoBox[iN].icon == "hinan-bldg-marker.png" {
+//                        iconstr = "hinan-bldg-markerMap.png"
+//                    } else if infoBox[iN].icon == "hinan-camp-marker.png" {
+//                        iconstr = "hinan-camp-markerMap.png"
+//                    } else if infoBox[iN].icon == "medicine-marker.png" {
+//                        iconstr = "medicine-markerMap.png"
+//                    } else if infoBox[iN].icon == "bouka-marker.png" {
+//                        iconstr = "bouka-markerMap.png"
+//                    } else if infoBox[iN].icon == "aed-marker.png" {
+//                        iconstr = "aed-markerMap.png"
+//                    } else if infoBox[iN].icon == "roujinhome-marker.png" {
+//                        iconstr = "roujinhome-markerMap.png"
+//                    } else if infoBox[iN].icon == "shoubo-marker.png" {
+//                        iconstr = "shoubo-markerMap.png"
+//                    } else if infoBox[iN].icon == "keisatu-marker.png" {
+//                        iconstr = "keisatu-markerMap.png"
+//                    }
                     
-                    if infoBox[iN].icon == "hinan-bldg-marker.png" {
-                        iconstr = "hinan-bldg-markerMap.png"
-                    } else if infoBox[iN].icon == "hinan-camp-marker.png" {
-                        iconstr = "hinan-camp-markerMap.png"
-                    } else if infoBox[iN].icon == "medicine-marker.png" {
-                        iconstr = "medicine-markerMap.png"
-                    } else if infoBox[iN].icon == "bouka-marker.png" {
-                        iconstr = "bouka-markerMap.png"
-                    } else if infoBox[iN].icon == "aed-marker.png" {
-                        iconstr = "aed-markerMap.png"
-                    } else if infoBox[iN].icon == "roujinhome-marker.png" {
-                        iconstr = "roujinhome-markerMap.png"
-                    } else if infoBox[iN].icon == "shoubo-marker.png" {
-                        iconstr = "shoubo-markerMap.png"
-                    } else if infoBox[iN].icon == "keisatu-marker.png" {
-                        iconstr = "keisatu-markerMap.png"
-                    }
+                    //アイコンを増やした場合、コードを書き換えなくてもいいように修正
+                    iconstr = infoBox[iN].icon
+                    iconstr = (iconstr as NSString).substring(to: iconstr.characters.count - 4)
+                    iconstr = iconstr + "Map.png"
                     
                     infoBox[iN].pinImage = getResizeImage(UIImage(named: iconstr)!, newHeight: 60)
                 }

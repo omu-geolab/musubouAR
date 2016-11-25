@@ -49,7 +49,7 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
     
     
     // アラート
-    let alert: UIAlertController = UIAlertController(title: "⚠︎", message: "iPadを垂直に，ホームボタンを左側に向けた状態にiPadを持ち直してください", preferredStyle:  UIAlertControllerStyle.alert)
+    let alert: UIAlertController = UIAlertController(title: "⚠︎", message: "iPadを垂直に，ホームボタンを右側に向けた状態にiPadを持ち直してください", preferredStyle:  UIAlertControllerStyle.alert)
     
     
     // MARK: ライフサイクル
