@@ -31,7 +31,8 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
     var warningView = UIView(frame: CGRect(x: 0.0, y: 0.0, width: screenWidth, height: screenHeight)) // 警告モード
     var warnState = warningState.safe.rawValue // 現在ユーザーは災害からどの位置にいるか(安全・付近・侵入)
     
-    let warningMessage = UILabel(frame: CGRect(x: screenWidth - 55.0 - screenWidth * 0.38, y: screenHeight - 125.0, width: screenWidth * 0.38, height: screenHeight * 0.13)) // 警告メッセージ
+    let warningMessage = UILabel(frame: CGRect(x: screenWidth * 0.35, y: screenHeight - 125.0, width: screenWidth * 0.6, height: screenHeight * 0.13)) // 警告メッセージ
+    
     
     var warnNums: [Int] = [] // 災害番号
     var msgCount = 0 // 警告メッセージを表示する災害の配列番号を管理する
@@ -75,9 +76,9 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
         warningMessage.backgroundColor = UIColor.white.withAlphaComponent(CGFloat(kMsgAlpha)) // 背景色(白)
         warningMessage.textAlignment = NSTextAlignment.center // 中央揃え
         warningMessage.font = UIFont.systemFont(ofSize: 20.0) // 初期文字サイズ
-        warningMessage.numberOfLines = 2 // ラベル内の行数
-        warningMessage.layer.borderColor = UIColor.black.cgColor // 枠線の色(黒)
-        warningMessage.layer.borderWidth = 5.0 // 枠線の太さ
+        warningMessage.numberOfLines = 3 // ラベル内の行数
+//        warningMessage.layer.borderColor = UIColor.black.cgColor // 枠線の色(黒)
+//        warningMessage.layer.borderWidth = 5.0 // 枠線の太さ
         warningMessage.layer.cornerRadius = 20.0 // 枠線を角丸にする
         warningMessage.clipsToBounds = true // 角を取る
         view.addSubview(warningMessage)

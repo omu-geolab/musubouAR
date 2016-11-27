@@ -57,14 +57,14 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
     var polygon = [MGLPolygon]() // 災害円
     var polyNum = 0 // 災害円のインデックス
     
-    let warningMessage = UILabel(frame: CGRect(x: screenWidth - 55.0 - butSize - screenWidth * 0.38, y: screenHeight - 125.0, width: screenWidth * 0.38, height: screenHeight * 0.13)) // 警告メッセージ
+    let warningMessage = UILabel(frame: CGRect(x: screenWidth * 0.2, y: screenHeight - 125.0, width: screenWidth * 0.6, height: screenHeight * 0.13)) // 警告メッセージ
     
     var beforeZoomLv = 0.0
     
     
     // 定数
     let kWarnFont: CGFloat = 20 // 警告メッセージのフォントサイズ
-    let kWarnLine = 2 // 警告メッセージの行数
+    let kWarnLine = 3 // 警告メッセージの行数
     let kWarnBorder: CGFloat = 5 // 警告メッセージの枠線の太さ
     let kWarnCorner: CGFloat = 20 // 警告メッセージの枠線の角丸
     let kMapNormalAlpha: CGFloat = 1.0 // 地図の透明度
@@ -127,8 +127,8 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         warningMessage.textAlignment = NSTextAlignment.center // 中央揃え
         warningMessage.font = UIFont.systemFont(ofSize: kWarnFont) // 初期文字サイズ
         warningMessage.numberOfLines = kWarnLine // ラベル内の行数
-        warningMessage.layer.borderColor = UIColor.black.cgColor // 枠線の色(黒)
-        warningMessage.layer.borderWidth = kWarnBorder // 枠線の太さ
+        //warningMessage.layer.borderColor = UIColor.black.cgColor // 枠線の色(黒)
+        //warningMessage.layer.borderWidth = kWarnBorder // 枠線の太さ
         warningMessage.layer.cornerRadius = kWarnCorner // 枠線を角丸にする
         warningMessage.clipsToBounds = true // 角を取る
         mapView.addSubview(warningMessage)
