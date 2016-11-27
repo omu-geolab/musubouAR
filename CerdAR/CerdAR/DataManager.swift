@@ -159,7 +159,7 @@ class jsonDataManager: NSObject {
                     iconstr = (iconstr as NSString).substring(to: iconstr.characters.count - 4)
                     iconstr = iconstr + "Map.png"
                     
-                    infoBox[iN].pinImage = getResizeImage(UIImage(named: iconstr)!, newHeight: 60)
+                    infoBox[iN].pinImage = getResizeImage(UIImage(named: iconstr)!, newHeight: 40)
                 }
                
 
