@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
  
  @warning The value of this constant may change in a future release of the SDK.
     If you use any feature that depends on a specific aspect of a default style
-    – for instance, the minimum zoom level that includes CLLocationCoordinate2Droads – you may use the
+    – for instance, the minimum zoom level that includes roads – you may use the
     current value of this constant or the underlying style URL, but do not use
     the constant itself. Such details may change significantly from version to
     version.

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		7E80CB221DD5C6D300B6B281 /* aed-marker.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E80CB211DD5C6D300B6B281 /* aed-marker.png */; };
 		7E80CB241DD5C77F00B6B281 /* aed-markerMap.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E80CB231DD5C77F00B6B281 /* aed-markerMap.png */; };
+		7E943C641DEAC0D4007E08E1 /* Mapbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E943C631DEAC0D4007E08E1 /* Mapbox.framework */; };
+		7E943C651DEAC0D4007E08E1 /* Mapbox.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7E943C631DEAC0D4007E08E1 /* Mapbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7EE70DFB1DE930C4000FB537 /* icon_camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EE70DFA1DE930C4000FB537 /* icon_camera.png */; };
 		7EE70E071DEA68E5000FB537 /* icon_warn0.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EE70E061DEA68E5000FB537 /* icon_warn0.png */; };
 		7EE70E091DEA68F8000FB537 /* icon_warn3.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EE70E081DEA68F8000FB537 /* icon_warn3.png */; };
@@ -59,8 +61,6 @@
 		AC7D0C001DBF292500D76DC6 /* icon_compass.png in Resources */ = {isa = PBXBuildFile; fileRef = AC7D0BFF1DBF292500D76DC6 /* icon_compass.png */; };
 		ACEE245C1D8235FE00102E10 /* MakeTagImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEE245B1D8235FE00102E10 /* MakeTagImage.swift */; };
 		ACF399B71D98C25100B0EC47 /* osmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF399B61D98C25100B0EC47 /* osmViewController.swift */; };
-		ACF399C31D98D5AA00B0EC47 /* Mapbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACF399C21D98D5AA00B0EC47 /* Mapbox.framework */; };
-		ACF399C51D98D65A00B0EC47 /* Mapbox.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = ACF399C21D98D5AA00B0EC47 /* Mapbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		ACFD6E0C1DB474680006A765 /* loadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFD6E0B1DB474680006A765 /* loadViewController.swift */; };
 		D3CF68DD1D91187D008B588E /* detailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CF68DB1D91187D008B588E /* detailView.swift */; };
 		D3CF68DE1D91187D008B588E /* termsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CF68DC1D91187D008B588E /* termsView.swift */; };
@@ -90,7 +90,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				ACF399C51D98D65A00B0EC47 /* Mapbox.framework in CopyFiles */,
+				7E943C651DEAC0D4007E08E1 /* Mapbox.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +99,8 @@
 /* Begin PBXFileReference section */
 		7E80CB211DD5C6D300B6B281 /* aed-marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "aed-marker.png"; sourceTree = "<group>"; };
 		7E80CB231DD5C77F00B6B281 /* aed-markerMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "aed-markerMap.png"; sourceTree = "<group>"; };
+		7E943C601DEABFAC007E08E1 /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mapbox.framework; path = "../../Desktop/mapbox-ios-sdk-3.3.7-dynamic.zip フォルダ/dynamic/Mapbox.framework"; sourceTree = "<group>"; };
+		7E943C631DEAC0D4007E08E1 /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mapbox.framework; path = ../Mapbox.framework; sourceTree = "<group>"; };
 		7EE70DFA1DE930C4000FB537 /* icon_camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_camera.png; sourceTree = "<group>"; };
 		7EE70E061DEA68E5000FB537 /* icon_warn0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_warn0.png; sourceTree = "<group>"; };
 		7EE70E081DEA68F8000FB537 /* icon_warn3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_warn3.png; sourceTree = "<group>"; };
@@ -155,7 +157,6 @@
 		AC7D0BFF1DBF292500D76DC6 /* icon_compass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_compass.png; path = CerdAR/icon_compass.png; sourceTree = "<group>"; };
 		ACEE245B1D8235FE00102E10 /* MakeTagImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeTagImage.swift; sourceTree = "<group>"; };
 		ACF399B61D98C25100B0EC47 /* osmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = osmViewController.swift; sourceTree = "<group>"; };
-		ACF399C21D98D5AA00B0EC47 /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mapbox.framework; path = ../Mapbox.framework; sourceTree = "<group>"; };
 		ACFD6E0B1DB474680006A765 /* loadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loadViewController.swift; sourceTree = "<group>"; };
 		D3CF68DB1D91187D008B588E /* detailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = detailView.swift; sourceTree = "<group>"; };
 		D3CF68DC1D91187D008B588E /* termsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = termsView.swift; sourceTree = "<group>"; };
@@ -166,11 +167,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACF399C31D98D5AA00B0EC47 /* Mapbox.framework in Frameworks */,
 				AC7B6A841D66A9B20086897D /* CoreMotion.framework in Frameworks */,
 				AC2C53011D58093C0032B689 /* AVFoundation.framework in Frameworks */,
 				AC2C52FF1D5809360032B689 /* CoreLocation.framework in Frameworks */,
 				AC2C52FD1D58092B0032B689 /* MapKit.framework in Frameworks */,
+				7E943C641DEAC0D4007E08E1 /* Mapbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,6 +192,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7E943C5F1DEABFAC007E08E1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7E943C601DEABFAC007E08E1 /* Mapbox.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AC2AB8F41DB778420048931C /* sound */ = {
 			isa = PBXGroup;
 			children = (
@@ -209,6 +218,7 @@
 				AC2C52DC1D5805F80032B689 /* CerdARTests */,
 				AC2C52E71D5805F80032B689 /* CerdARUITests */,
 				AC2C52C31D5805F70032B689 /* Products */,
+				7E943C5F1DEABFAC007E08E1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -301,11 +311,11 @@
 		D317AE971D89649D00D4D4FC /* framework */ = {
 			isa = PBXGroup;
 			children = (
+				7E943C631DEAC0D4007E08E1 /* Mapbox.framework */,
 				AC7B6A831D66A9B20086897D /* CoreMotion.framework */,
 				AC2C53001D58093C0032B689 /* AVFoundation.framework */,
 				AC2C52FE1D5809360032B689 /* CoreLocation.framework */,
 				AC2C52FC1D58092B0032B689 /* MapKit.framework */,
-				ACF399C21D98D5AA00B0EC47 /* Mapbox.framework */,
 			);
 			name = framework;
 			sourceTree = "<group>";
