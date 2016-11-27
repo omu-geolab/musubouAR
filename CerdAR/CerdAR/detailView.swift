@@ -197,22 +197,22 @@ class detailView: UIView {
                 text = "火災"
                 warnImg = UIImage(named: "icon_warn0.png")!
             case 1:
-                text = "浸水"
+                text = "水が流れています"
                 warnImg = UIImage(named: "icon_warn1.png")!
             case 2:
                 text = "土砂くずれ"
                 warnImg = UIImage(named: "icon_warn2.png")!
             case 3:
-                text = "通行禁止\n(落橋)"
+                text = "橋がこわれています"
                 warnImg = UIImage(named: "icon_warn3.png")!
             case 4:
-                text = "通行禁止\n(家屋とうかい)"
+                text = "家がこわれています"
                 warnImg = UIImage(named: "icon_warn3.png")!
             case 5:
-                text = "通行注意\n(ブロックへいとうかい)"
+                text = "へいがこわれています"
                 warnImg = UIImage(named: "icon_warn3.png")!
             case 6:
-                text = "通行禁止\n(道路かんぼつ)"
+                text = "道路にあながあいています"
                 //text = "通行禁止\n(コンテナ流入)"
                 warnImg = UIImage(named: "icon_warn3.png")!
             default:
