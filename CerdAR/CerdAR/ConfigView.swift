@@ -90,7 +90,7 @@ class ConfigView: UIView {
         // コメントの挿入(画面右側)
         let comment = UILabel(frame: CGRect.init(x: 0, y: 0, width: screenWidth / 3 - 60, height: dHei * 0.6))
         comment.font = UIFont.systemFont(ofSize: 15)
-        comment.text = "[SWIFTY JSON]" + "\n\n"
+        comment.text = "[SWIFTY JSON]" + "\n"
         comment.text = comment.text! + "The MIT License (MIT)" + "\n"
             + "\n"
             + "Copyright (c) 2016 Ruoyu Fu" + "\n"
@@ -110,11 +110,9 @@ class ConfigView: UIView {
             + "FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE" + "\n"
             + "AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER" + "\n"
             + "LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM," + "\n"
-            + "OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN" + "\n"
-            + "THE SOFTWARE."
+            + "OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE." + "\n\n"
         
-        
-        comment.text = comment.text! + "[mapbox]" + "\n\n"
+        comment.text = comment.text! + "[Mapbox]" + "\n"
         comment.text = comment.text! + "mapbox-gl-native copyright (c) 2014-2016 Mapbox." + "\n"
             + "\n"
             + "Redistribution and use in source and binary forms, with or without" + "\n"
@@ -138,7 +136,14 @@ class ConfigView: UIView {
             + "PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF" + "\n"
             + "LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING" + "\n"
             + "NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS" + "\n"
-            + "SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE."
+            + "SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE." + "\n\n"
+        
+        comment.text = comment.text! + "[Music is VFR]" + "\n"
+            + "アプリの中で使用されている効果音素材はクリエイティブ・コモンズライセンス " + "\n"
+            + "（CC BY 4.0）の下に提供されています。" + "\n"
+            + "詳細および適用される最新のバージョンは Web サイト上にてご確認ください。 " + "\n"
+            + "(http://musicisvfr.com/free/license.html)"
+        
         
         comment.text = comment.text! + "\n\n"
         comment.numberOfLines = 0

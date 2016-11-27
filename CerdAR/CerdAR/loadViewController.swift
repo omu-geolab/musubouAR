@@ -144,7 +144,7 @@ class loadViewController: UIViewController, termsViewDelegate, CLLocationManager
     func notificationSound() {
         
         do {
-            let filePath = Bundle.main.path(forResource: "sound_intrusion", ofType: "wav")
+            let filePath = Bundle.main.path(forResource: "sound_intrusion", ofType: "mp3")
             let audioPath = NSURL(fileURLWithPath: filePath!)
             audioPlayerIntr = try AVAudioPlayer(contentsOf: audioPath as URL)
             audioPlayerIntr.prepareToPlay()
@@ -153,7 +153,7 @@ class loadViewController: UIViewController, termsViewDelegate, CLLocationManager
         }
         
         do {
-            let filePath = Bundle.main.path(forResource: "sound_near", ofType: "wav")
+            let filePath = Bundle.main.path(forResource: "sound_near", ofType: "mp3")
             let audioPath = NSURL(fileURLWithPath: filePath!)
             audioPlayerNear = try AVAudioPlayer(contentsOf: audioPath as URL)
             audioPlayerNear.prepareToPlay()
