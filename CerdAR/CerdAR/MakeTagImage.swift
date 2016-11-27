@@ -128,9 +128,9 @@ func makeLabel(_ num: Int, inforType: String) -> UIImage {
     } else if inforType == kWarn {
         label = UILabel(frame: CGRect.init(x: 0.0, y: 0.0, width: warnImage!.size.width, height: warnImage!.size.height)) //ラベルサイズ
         if displayMode == mode.cam.rawValue {
-            label.numberOfLines = 3 // ラベル内の行数
+            label.numberOfLines = 4 // ラベル内の行数
         } else {
-            label.numberOfLines = 2 // ラベル内の行数
+            label.numberOfLines = 3 // ラベル内の行数
         }
     }
     
