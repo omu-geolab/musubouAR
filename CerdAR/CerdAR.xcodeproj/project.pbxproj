@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7E7A1E301DE66E7900CC1987 /* icon_menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E7A1E2F1DE66E7900CC1987 /* icon_menu.png */; };
 		7E80CB221DD5C6D300B6B281 /* aed-marker.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E80CB211DD5C6D300B6B281 /* aed-marker.png */; };
 		7E80CB241DD5C77F00B6B281 /* aed-markerMap.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E80CB231DD5C77F00B6B281 /* aed-markerMap.png */; };
 		7EE70DFB1DE930C4000FB537 /* icon_camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EE70DFA1DE930C4000FB537 /* icon_camera.png */; };
 		7EE70E071DEA68E5000FB537 /* icon_warn0.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EE70E061DEA68E5000FB537 /* icon_warn0.png */; };
 		7EE70E091DEA68F8000FB537 /* icon_warn3.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EE70E081DEA68F8000FB537 /* icon_warn3.png */; };
+		7EE70E0D1DEA6B39000FB537 /* icon_locate.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EE70E0C1DEA6B39000FB537 /* icon_locate.png */; };
+		7EE70E131DEA6CA8000FB537 /* icon_menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EE70E121DEA6CA8000FB537 /* icon_menu.png */; };
+		7EE70E1D1DEA6F9B000FB537 /* icon_map.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EE70E1C1DEA6F9B000FB537 /* icon_map.png */; };
 		7EED1C301DD3666000E46E39 /* bouka-markerMap.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EED1C2F1DD3666000E46E39 /* bouka-markerMap.png */; };
 		944FC99D1DE2D6CD0063261D /* shoubo-marker.png in Resources */ = {isa = PBXBuildFile; fileRef = 944FC99C1DE2D6CD0063261D /* shoubo-marker.png */; };
 		944FC99F1DE2D6D40063261D /* shoubo-markerMap.png in Resources */ = {isa = PBXBuildFile; fileRef = 944FC99E1DE2D6D40063261D /* shoubo-markerMap.png */; };
@@ -22,8 +24,6 @@
 		944FC9A91DE2DC3D0063261D /* roujinhome-markerMap.png in Resources */ = {isa = PBXBuildFile; fileRef = 944FC9A71DE2DC3D0063261D /* roujinhome-markerMap.png */; };
 		94889CAE1DD5CB62009C2458 /* bouka-marker.png in Resources */ = {isa = PBXBuildFile; fileRef = 94889CAD1DD5CB62009C2458 /* bouka-marker.png */; };
 		AC05B9FA1D811FDA0082C52A /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC05B9F91D811FDA0082C52A /* DataManager.swift */; };
-		AC0F6A061DB62BCD000993D5 /* icon_locate.png in Resources */ = {isa = PBXBuildFile; fileRef = AC0F6A011DB62BCD000993D5 /* icon_locate.png */; };
-		AC0F6A071DB62BCD000993D5 /* icon_map.png in Resources */ = {isa = PBXBuildFile; fileRef = AC0F6A021DB62BCD000993D5 /* icon_map.png */; };
 		AC2AB8F61DB778A10048931C /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2AB8F51DB778A10048931C /* Constant.swift */; };
 		AC2AB8F91DB7790A0048931C /* sound_intrusion.wav in Resources */ = {isa = PBXBuildFile; fileRef = AC2AB8F71DB7790A0048931C /* sound_intrusion.wav */; };
 		AC2AB8FA1DB7790A0048931C /* sound_near.wav in Resources */ = {isa = PBXBuildFile; fileRef = AC2AB8F81DB7790A0048931C /* sound_near.wav */; };
@@ -96,12 +96,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		7E7A1E2F1DE66E7900CC1987 /* icon_menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_menu.png; sourceTree = "<group>"; };
 		7E80CB211DD5C6D300B6B281 /* aed-marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "aed-marker.png"; sourceTree = "<group>"; };
 		7E80CB231DD5C77F00B6B281 /* aed-markerMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "aed-markerMap.png"; sourceTree = "<group>"; };
 		7EE70DFA1DE930C4000FB537 /* icon_camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_camera.png; sourceTree = "<group>"; };
 		7EE70E061DEA68E5000FB537 /* icon_warn0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_warn0.png; sourceTree = "<group>"; };
 		7EE70E081DEA68F8000FB537 /* icon_warn3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_warn3.png; sourceTree = "<group>"; };
+		7EE70E0C1DEA6B39000FB537 /* icon_locate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_locate.png; sourceTree = "<group>"; };
+		7EE70E121DEA6CA8000FB537 /* icon_menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_menu.png; sourceTree = "<group>"; };
+		7EE70E1C1DEA6F9B000FB537 /* icon_map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_map.png; sourceTree = "<group>"; };
 		7EED1C2F1DD3666000E46E39 /* bouka-markerMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bouka-markerMap.png"; sourceTree = "<group>"; };
 		944FC99C1DE2D6CD0063261D /* shoubo-marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shoubo-marker.png"; sourceTree = "<group>"; };
 		944FC99E1DE2D6D40063261D /* shoubo-markerMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shoubo-markerMap.png"; sourceTree = "<group>"; };
@@ -111,8 +113,6 @@
 		944FC9A71DE2DC3D0063261D /* roujinhome-markerMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "roujinhome-markerMap.png"; sourceTree = "<group>"; };
 		94889CAD1DD5CB62009C2458 /* bouka-marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bouka-marker.png"; sourceTree = "<group>"; };
 		AC05B9F91D811FDA0082C52A /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
-		AC0F6A011DB62BCD000993D5 /* icon_locate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_locate.png; path = CerdAR/icon_locate.png; sourceTree = "<group>"; };
-		AC0F6A021DB62BCD000993D5 /* icon_map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_map.png; path = CerdAR/icon_map.png; sourceTree = "<group>"; };
 		AC2AB8F51DB778A10048931C /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		AC2AB8F71DB7790A0048931C /* sound_intrusion.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = sound_intrusion.wav; path = CerdAR/sound_intrusion.wav; sourceTree = "<group>"; };
 		AC2AB8F81DB7790A0048931C /* sound_near.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = sound_near.wav; path = CerdAR/sound_near.wav; sourceTree = "<group>"; };
@@ -269,13 +269,14 @@
 				944FC99C1DE2D6CD0063261D /* shoubo-marker.png */,
 				944FC99E1DE2D6D40063261D /* shoubo-markerMap.png */,
 				7EE70DFA1DE930C4000FB537 /* icon_camera.png */,
-				7E7A1E2F1DE66E7900CC1987 /* icon_menu.png */,
+				7EE70E121DEA6CA8000FB537 /* icon_menu.png */,
 				AC7D0BFF1DBF292500D76DC6 /* icon_compass.png */,
 				AC46911E1DBD8D80009655C0 /* hinan-bldg-marker.png */,
 				7EED1C2F1DD3666000E46E39 /* bouka-markerMap.png */,
 				AC46911F1DBD8D80009655C0 /* hinan-bldg-markerMap.png */,
 				AC4691201DBD8D80009655C0 /* hinan-camp-marker.png */,
 				AC4691211DBD8D80009655C0 /* hinan-camp-markerMap.png */,
+				7EE70E1C1DEA6F9B000FB537 /* icon_map.png */,
 				AC46910C1DBD8B71009655C0 /* icon_infoTag_red.png */,
 				94889CAD1DD5CB62009C2458 /* bouka-marker.png */,
 				AC46910D1DBD8B71009655C0 /* icon_infoTag.png */,
@@ -287,9 +288,8 @@
 				AC4691131DBD8B71009655C0 /* medicine-marker.png */,
 				AC4691141DBD8B71009655C0 /* medicine-markerMap.png */,
 				AC5754391DB8B8BA003271F1 /* logo_BRIL.jpg */,
+				7EE70E0C1DEA6B39000FB537 /* icon_locate.png */,
 				AC5754301DB89B45003271F1 /* logo_CERD.jpg */,
-				AC0F6A011DB62BCD000993D5 /* icon_locate.png */,
-				AC0F6A021DB62BCD000993D5 /* icon_map.png */,
 				AC5AED8B1DA4A181009443E9 /* icon_notfound.png */,
 			);
 			name = Image;
@@ -439,8 +439,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC0F6A061DB62BCD000993D5 /* icon_locate.png in Resources */,
 				944FC9A51DE2DBB60063261D /* keisatu-markerMap.png in Resources */,
+				7EE70E1D1DEA6F9B000FB537 /* icon_map.png in Resources */,
 				AC4691191DBD8B71009655C0 /* icon_warn1.png in Resources */,
 				7E80CB241DD5C77F00B6B281 /* aed-markerMap.png in Resources */,
 				7EE70E091DEA68F8000FB537 /* icon_warn3.png in Resources */,
@@ -449,6 +449,7 @@
 				AC7D0C001DBF292500D76DC6 /* icon_compass.png in Resources */,
 				7EED1C301DD3666000E46E39 /* bouka-markerMap.png in Resources */,
 				944FC9A91DE2DC3D0063261D /* roujinhome-markerMap.png in Resources */,
+				7EE70E131DEA6CA8000FB537 /* icon_menu.png in Resources */,
 				AC2AB8F91DB7790A0048931C /* sound_intrusion.wav in Resources */,
 				AC4691161DBD8B71009655C0 /* icon_infoTag.png in Resources */,
 				AC5AED921DA4A181009443E9 /* icon_notfound.png in Resources */,
@@ -457,8 +458,8 @@
 				944FC9A81DE2DC3D0063261D /* roujinhome-marker.png in Resources */,
 				944FC9A41DE2DBB60063261D /* keisatu-marker.png in Resources */,
 				AC4691241DBD8D80009655C0 /* hinan-camp-marker.png in Resources */,
+				7EE70E0D1DEA6B39000FB537 /* icon_locate.png in Resources */,
 				AC46911D1DBD8B71009655C0 /* medicine-markerMap.png in Resources */,
-				7E7A1E301DE66E7900CC1987 /* icon_menu.png in Resources */,
 				AC4691231DBD8D80009655C0 /* hinan-bldg-markerMap.png in Resources */,
 				AC46911A1DBD8B71009655C0 /* icon_warn2.png in Resources */,
 				944FC99D1DE2D6CD0063261D /* shoubo-marker.png in Resources */,
@@ -472,7 +473,6 @@
 				AC4691151DBD8B71009655C0 /* icon_infoTag_red.png in Resources */,
 				AC46911C1DBD8B71009655C0 /* medicine-marker.png in Resources */,
 				AC5754321DB89B45003271F1 /* logo_CERD.jpg in Resources */,
-				AC0F6A071DB62BCD000993D5 /* icon_map.png in Resources */,
 				AC2AB8FA1DB7790A0048931C /* sound_near.wav in Resources */,
 				7EE70DFB1DE930C4000FB537 /* icon_camera.png in Resources */,
 			);
