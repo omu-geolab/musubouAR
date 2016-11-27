@@ -38,8 +38,10 @@ class termsView: UIView {
         okButton.setTitleColor(UIColor.black, for: UIControlState())
         okButton.titleLabel!.font = UIFont.systemFont(ofSize: 27)
         okButton.layer.borderColor = UIColor.black.cgColor
-        okButton.layer.borderWidth = 5
+        okButton.layer.borderWidth = 3
         okButton.layer.position = CGPoint(x: screenWidth * 0.58, y: screenHeight * 0.8 * 0.85)
+        okButton.layer.cornerRadius = 20.0 // 枠線を角丸にする
+
         okButton.addTarget(self, action: #selector(termsView.onClick_Ok(_:)), for: .touchUpInside)
         
         // キャンセルボタンの生成
@@ -51,18 +53,19 @@ class termsView: UIView {
         cancelButton.titleLabel!.font = UIFont.systemFont(ofSize: 25)
         cancelButton.layer.position = CGPoint(x: screenWidth * 0.2, y: screenHeight * 0.8 * 0.85)
         cancelButton.addTarget(self, action: #selector(termsView.onClick_Cancel(_:)), for: .touchUpInside)
+        cancelButton.layer.cornerRadius = 20.0 // 枠線を角丸にする
         
         // アラートビューの生成
         let alertView = UIView(frame: CGRect(x: bounds.width * 0.1, y: bounds.height * 0.1, width: bounds.width * 0.8, height: bounds.height * 0.8))
         alertView.backgroundColor = UIColor.white
         
         // 利用規約ラベルの生成
-        let termsLabel = UILabel(frame: CGRect(x: bounds.width * 0.8 * 0.05, y: bounds.height * 0.8 * 0.02, width: 250, height: 100))
-        termsLabel.font = UIFont.systemFont(ofSize: 40)
+        let termsLabel = UILabel(frame: CGRect(x: bounds.width * 0.8 * 0.05, y: bounds.height * 0.8 * 0.06, width: 250, height: 100))
+        termsLabel.font = UIFont.systemFont(ofSize: 30)
         termsLabel.text = "利用規約"
         
         // スクロールビューの生成
-        let scrollView = UIScrollView(frame: CGRect(x: bounds.width * 0.8 * 0.05, y: bounds.height * 0.8 * 0.2, width: bounds.width * 0.8 * 0.9, height: bounds.height * 0.8 * 0.5))
+        let scrollView = UIScrollView(frame: CGRect(x: bounds.width * 0.8 * 0.05, y: bounds.height * 0.8 * 0.2, width: bounds.width * 0.8 * 0.9, height: bounds.height * 0.8 * 0.55))
         scrollView.backgroundColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0)
         
         // アラートラベルの生成
@@ -118,17 +121,23 @@ class termsView: UIView {
      */
     func logo(view: UIView) {
         
+        // ロゴ画像(OCU)
+        let ocuImage = UIImage(named: "logo_OCU.jpg")
+        let logoOcuView = UIImageView(image: ocuImage)
+        logoOcuView.frame = CGRect.init(x: bounds.width * 0.8 * 0.05 + 200, y: bounds.height * 0.8 * 0.02 + 19, width: (ocuImage?.size.width)! * 0.14, height: (ocuImage?.size.height)! * 0.14)
+        
         // ロゴ画像(CERD)
         let cerdImage = UIImage(named: "logo_CERD.jpg")
         let logoCerdView = UIImageView(image: cerdImage)
-        logoCerdView.frame = CGRect.init(x: bounds.width * 0.8 * 0.05 + 200, y: bounds.height * 0.8 * 0.02 + 20, width: (cerdImage?.size.width)! * 0.1, height: (cerdImage?.size.height)! * 0.1)
+        logoCerdView.frame = CGRect.init(x: bounds.width * 0.8 * 0.05 + 300, y: bounds.height * 0.8 * 0.02 + 17, width: (cerdImage?.size.width)! * 0.13, height: (cerdImage?.size.height)! * 0.13)
         
         
         // ロゴ画像(BRIL)
         let brilImage = UIImage(named: "logo_BRIL.jpg")
         let logoBrilView = UIImageView(image: brilImage)
-        logoBrilView.frame = CGRect.init(x: bounds.width * 0.8 * 0.05 + 350, y: bounds.height * 0.8 * 0.02 + 10, width: (brilImage?.size.width)! * 0.4, height: (brilImage?.size.height)! * 0.4)
+        logoBrilView.frame = CGRect.init(x: bounds.width * 0.8 * 0.05 + 480, y: bounds.height * 0.8 * 0.02 + 12, width: (brilImage?.size.width)! * 0.42, height: (brilImage?.size.height)! * 0.42)
         
+        view.addSubview(logoOcuView)
         view.addSubview(logoCerdView)
         view.addSubview(logoBrilView)
         
