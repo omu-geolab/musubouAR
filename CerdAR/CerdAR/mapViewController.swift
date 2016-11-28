@@ -64,7 +64,8 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     
     var warnState = warningState.safe.rawValue // 現在ユーザーは災害からどの位置にいるか(安全・付近・侵入)
     
-    let warningMessage = UILabel(frame: CGRect(x: screenWidth * 0.2, y: screenHeight - 125.0, width: screenWidth * 0.6, height: screenHeight * 0.13)) // 警告メッセージ
+//    let warningMessage = UILabel(frame: CGRect(x: screenWidth * 0.2, y: screenHeight - 125.0, width: screenWidth * 0.6, height: screenHeight * 0.13)) // 警告メッセージ
+    let warningMessage = UILabel(frame: CGRect(x: screenWidth - 55.0 - butSize - screenWidth * 0.38, y: screenHeight - 125.0, width: screenWidth * 0.37, height: screenHeight * 0.13)) // 警告メッセージ
     
     class appleMapsAnnotation: MKPointAnnotation {
         var tagData: TagData!
@@ -136,6 +137,7 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
 //        warningMessage.layer.borderWidth = 5.0 // 枠線の太さ
         warningMessage.layer.cornerRadius = 20.0 // 枠線を角丸にする
         warningMessage.clipsToBounds = true // 角を取る
+        warningMessage.adjustsFontSizeToFitWidth = true // 文字の多さによってフォントサイズを調節する
         mapView!.addSubview(warningMessage)
         warningMessage.isHidden = true
         
@@ -812,10 +814,10 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
      * 現在地を中心に画面表示する
      */
     internal func onClick_nowLocate(_ sender: UIButton) {
-        if mapView?.isUserLocationVisible == true {
+//        if mapView?.isUserLocationVisible == true {
             let coordinateRegion = MKCoordinateRegionMakeWithDistance(self.mapView!.userLocation.coordinate, 800, 800)
             self.mapView!.setRegion(coordinateRegion, animated:true)
-        }
+//        }
     }
     
     
