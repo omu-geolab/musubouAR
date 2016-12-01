@@ -637,10 +637,17 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
             //    0mのとき・・・画面縦幅の1/8の大きさ
             //    kCamDis(m)のとき・・・画面縦幅の3/8の大きさ
             // タグのサイズ = 0mのときの大きさ + 画面縦幅1/4の大きさ * 距離による倍率
-            size = Double(screenHeight / 8) + Double(screenHeight / 4) * Double(kCamDis - tDis) /  Double(kCamDis)
+            //size = Double(screenHeight / 7) + Double(screenHeight / 3) * Double(kCamDis - tDis) /  Double(kCamDis)
+            
+            // タグの最大最小サイズの強調（kCamDisは200mを前提）
+            size = Double(screenHeight) / 1.5 * Double(kCamDis - tDis) /  Double(kCamDis)
             
             // 画面の表示位置(縦) = タグの最小サイズの半分 + 画面縦幅3/4の大きさ * 距離による倍率
             y = CGFloat(screenHeight / (8 * 2)) + CGFloat(screenHeight * 3 / 4) * CGFloat(kCamDis - tDis) / CGFloat(kCamDis)
+            
+            // 遠近感の調整（kCamDisは200mを前提）
+            // 画面の表示位置(縦) = 最大最小範囲の調整 +　全体的な位置の微調整
+            y = y * 0.8 + 200
             
             
             imageBox[index] = UIImageView(frame: CGRect(x: 0.0, y: 0.0, width: CGFloat(size), height: CGFloat(size)))
