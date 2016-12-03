@@ -544,7 +544,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
                 warningView.backgroundColor = UIColor(red: 0.000, green: 0.000, blue: 0.900, alpha: 1.0)
                 
             case 2: // 土砂崩れ：茶色
-                warningView.frame = CGRect(x: 0.0, y: 0.0, width: CGFloat(screenWidth), height: CGFloat(screenHeight))
+                warningView.frame = CGRect(x: 0.0, y: CGFloat(screenHeight * 0.75), width: CGFloat(screenWidth), height: CGFloat(screenHeight / 4))
                 warningView.backgroundColor = UIColor(red: 0.800, green: 0.400, blue: 0.000, alpha: 1.0)
                 
             case 3, 4, 5, 6: // 道路閉塞：黄色
