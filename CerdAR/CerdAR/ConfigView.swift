@@ -142,8 +142,12 @@ class ConfigView: UIView {
             + "アプリの中で使用されている効果音素材はクリエイティブ・コモンズライセンス " + "\n"
             + "（CC BY 4.0）の下に提供されています。" + "\n"
             + "詳細および適用される最新のバージョンは Web サイト上にてご確認ください。 " + "\n"
-            + "(http://musicisvfr.com/free/license.html)"
+            + "(http://musicisvfr.com/free/license.html)" + "\n\n"
         
+        comment.text = comment.text!
+            + "アプリで使用しているアイコン画像は" + "\n"
+            + "はやし ひろふみ氏により作成され" + "\n"
+            + "クリエイティブ・コモンズライセンス（CC BY 4.0）の下に提供されています。" + "\n\n"
         
         comment.text = comment.text! + "\n\n"
         comment.numberOfLines = 0
