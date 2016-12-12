@@ -191,7 +191,8 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
      */
     func locationManager(_ manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
         
-        heading = newHeading.magneticHeading
+        //heading = newHeading.magneticHeading //磁北基準
+        heading = newHeading.trueHeading //真北基準
     }
     
     
