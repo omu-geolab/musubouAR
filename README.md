@@ -18,6 +18,11 @@ CERD-ARは、身のまわりの防災関連情報や仮想的な災害情報を�
 * **タイマーによる災害発生・範囲拡大の機能**：災害の日時、災害範囲、災害の種類（現状では、火災・浸水・土砂くずれ・道路閉塞を用意）を設定することができます。これにより、火災や浸水などの災害を指定の時間に発災させ、一定の速度で災害範囲を拡大させることができます。
 
 * **災害範囲に近接・侵入時の視聴覚的な警告機能**：タイマーにより発災させた災害範囲に、アプリ利用者が近づく・侵入することで、警告メッセージや効果音、アプリ画面の色により、視聴覚的に警告をおこないます。
+![6.png](https://bitbucket.org/repo/yEpMMp/images/182153318-6.png)
+
+![IMG_0093.PNG](https://bitbucket.org/repo/yEpMMp/images/3265366701-IMG_0093.PNG)
+![IMG_0091.PNG](https://bitbucket.org/repo/yEpMMp/images/2932532370-IMG_0091.PNG)
+![IMG_0087.JPG](https://bitbucket.org/repo/yEpMMp/images/2570443320-IMG_0087.JPG)
 
 ### CERD-ARの使い方 ###
 
