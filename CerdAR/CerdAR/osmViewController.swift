@@ -801,7 +801,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
      */
     func onClick_detailBackground(_ sender: UITapGestureRecognizer) {
         
-        runAfterDelay(1.5) {
+        runAfterDelay(kTouchView) {
             if pinData.inforType == kWarn {
                 let beki: Int = Int(27 - self.mapView.zoomLevel)
                 let zoomlv: CGFloat = pow(2, CGFloat(beki))

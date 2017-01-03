@@ -26,6 +26,6 @@ let kMsgAlpha = 0.6 // 警告メッセージのalpha値( 0(薄)<-->(濃)1 )
 
 
 /* 共通(map,osm) */
-let kTouchView = 0.5 // 詳細画面が閉じられてからkTouchView後に地図画面を触れるようになる
-let kShowDetail = 0.4 // タグをタップしてからkShowDetail秒後に詳細画面を表示する
+let kTouchView = 0.1 // 詳細画面が閉じられてからkTouchView後に地図画面を触れるようになる
+let kShowDetail = 0.1 // タグをタップしてからkShowDetail秒後に詳細画面を表示する
 let kMapAlpha = 0.8 // 警告モードのalpha値( 0(濃)<-->(薄)1 ) ※地図画面を薄くしているため、薄すぎると地図が見えづらくなる
