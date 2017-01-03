@@ -17,7 +17,7 @@ CERD-ARは、身のまわりの防災関連情報や仮想的な災害情報を�
 
 * **タイマーによる災害発生・範囲拡大の機能**：災害の日時、災害範囲、災害の種類（現状では、火災・浸水・土砂くずれ・道路閉塞を用意）を設定することができます。これにより、火災や浸水などの災害を指定の時間に発災させ、一定の速度で災害範囲を拡大させることができます。
 
-* **災害範囲に近接・侵入時の視聴覚的な警告機能**：タイマーにより発災させた災害範囲に、アプリ利用者が近づく・侵入することで、警告メッセージや効果音、アプリ画面の色により、視聴覚的に警告をおこないます。 
+* **災害範囲に近接・侵入時の視聴覚的な警告機能**：タイマーにより発災させた災害範囲に、アプリ利用者が近づく・侵入することで、警告メッセージや効果音、アプリ画面の色により、視聴覚的に警告をおこないます。  
 ![6.png](https://bitbucket.org/repo/yEpMMp/images/182153318-6.png)  
 ![IMG_0093.PNG](https://bitbucket.org/repo/yEpMMp/images/3265366701-IMG_0093.PNG)
 ![IMG_0091.PNG](https://bitbucket.org/repo/yEpMMp/images/2932532370-IMG_0091.PNG)
@@ -26,10 +26,12 @@ CERD-ARは、身のまわりの防災関連情報や仮想的な災害情報を�
 ### CERD-ARの使い方 ###
 
 * [アプリのインストール方法について](https://bitbucket.org/nro2dai/cerd-ar/wiki/Home)（現在準備中）
-* [データのインポート方法について](https://bitbucket.org/nro2dai/cerd-ar/wiki/DataImport)（現在準備中）
+* [データのインポート方法について](https://bitbucket.org/nro2dai/cerd-ar/wiki/Data%20Import)（現在準備中）
 * [データファイル(GeoJSON)の詳細について](https://bitbucket.org/nro2dai/cerd-ar/wiki/Tag)（現在準備中）
 
-### 開発者 ###
+### 開発者 & 協力者 ###
 
-* [大阪市立大学都市防災教育研究センター（CERD）](https://www.cerd.osaka-cu.ac.jp/)
+* [大阪市立大学都市防災教育研究センター(CERD)](https://www.cerd.osaka-cu.ac.jp/)
 * [株式会社ブリリアントサービス](http://www.brilliantservice.co.jp/)
+* はやし ひろふみ氏
+* レジェンダリマッパー
