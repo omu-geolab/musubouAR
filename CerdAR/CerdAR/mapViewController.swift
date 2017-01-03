@@ -93,6 +93,7 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         mapView!.mapType = MKMapType.standard  // 地図の種類
         mapView!.showsUserLocation = true      // 現在地の表示を許可する
         mapView!.showsScale = true // スケールバーを表示する
+        mapView!.isPitchEnabled = false  // ジェスチャでの視点変更を許可しない
         view.addSubview(mapView!)
         
         locationManager = CLLocationManager()
