@@ -58,7 +58,7 @@ class loadViewController: UIViewController, termsViewDelegate, CLLocationManager
                             // サーバーにもないとき
                             if self.json == nil {
                                 
-                                let alert: UIAlertController = UIAlertController(title: "ERROR!!", message: "JSONファイルが見つかりませんでした", preferredStyle:  UIAlertControllerStyle.alert)
+                                let alert: UIAlertController = UIAlertController(title: "ERROR!!", message: "GeoJSONファイルが見つかりませんでした", preferredStyle:  UIAlertControllerStyle.alert)
                                 
                                 let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: {
                                     (action: UIAlertAction!) -> Void in
@@ -168,7 +168,7 @@ class loadViewController: UIViewController, termsViewDelegate, CLLocationManager
      */
     func jsondata(callback: @escaping (String) -> Void) -> Void {
         
-        let url = URL(string: "https://www.cerd.osaka-cu.ac.jp/cerdar_pics/Miike/data.geojson")
+        let url = URL(string: "https://www.cerd.osaka-cu.ac.jp/cerdar_pics/Sugimoto/data.geojson")
         let req = URLRequest(url: url!, cachePolicy: NSURLRequest(url: url!).cachePolicy, timeoutInterval: 5.0)
         
         let configuration = URLSessionConfiguration.default
