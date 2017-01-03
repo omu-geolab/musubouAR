@@ -26,7 +26,7 @@ CERD-ARは、身のまわりの防災関連情報や仮想的な災害情報を�
 ### CERD-ARの使い方 ###
 
 * [アプリのインストール方法について](https://bitbucket.org/nro2dai/cerd-ar/wiki/Home)（現在準備中）
-* [データのインポート方法について](https://bitbucket.org/nro2dai/cerd-ar/wiki/DataImport)（現在準備中）
+* [データのインポート方法について](https://bitbucket.org/nro2dai/cerd-ar/wiki/Data%20Import)（現在準備中）
 * [データファイル(GeoJSON)の詳細について](https://bitbucket.org/nro2dai/cerd-ar/wiki/Tag)（現在準備中）
 
 ### 開発者 & 協力者 ###
