@@ -33,6 +33,11 @@ CERD-ARは、身のまわりの防災関連情報や仮想的な災害情報を�
 * [データのインポート方法について](https://bitbucket.org/nro2dai/cerd-ar/wiki/Data%20Import)（現在準備中）
 * [データファイル(GeoJSON)の詳細について](https://bitbucket.org/nro2dai/cerd-ar/wiki/GeoJSON)（現在準備中）
 
+### サンプルデータファイル（data.geojson） ###
+
+* [大阪市立大学周辺](https://www.cerd.osaka-cu.ac.jp/cerdar_pics/Sugimoto/data.geojson)
+* [堺市御池台地域](https://www.cerd.osaka-cu.ac.jp/cerdar_pics/Miike/data.geojson)
+
 ### 開発者 & 協力者 ###
 
 * [大阪市立大学都市防災教育研究センター(CERD)](https://www.cerd.osaka-cu.ac.jp/)
