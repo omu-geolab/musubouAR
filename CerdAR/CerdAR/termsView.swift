@@ -132,14 +132,8 @@ class termsView: UIView {
         logoCerdView.frame = CGRect.init(x: bounds.width * 0.8 * 0.05 + 300, y: bounds.height * 0.8 * 0.02 + 17, width: (cerdImage?.size.width)! * 0.13, height: (cerdImage?.size.height)! * 0.13)
         
         
-        // ロゴ画像(BRIL)
-        let brilImage = UIImage(named: "logo_BRIL.jpg")
-        let logoBrilView = UIImageView(image: brilImage)
-        logoBrilView.frame = CGRect.init(x: bounds.width * 0.8 * 0.05 + 480, y: bounds.height * 0.8 * 0.02 + 12, width: (brilImage?.size.width)! * 0.42, height: (brilImage?.size.height)! * 0.42)
-        
-        view.addSubview(logoOcuView)
+        //view.addSubview(logoOcuView)
         view.addSubview(logoCerdView)
-        view.addSubview(logoBrilView)
         
     }
     
