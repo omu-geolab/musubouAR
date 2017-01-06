@@ -24,8 +24,12 @@ CERD-ARは、身のまわりの防災関連情報や仮想的な災害情報を�
 * **災害範囲に近接・侵入時の視聴覚的な警告機能**：タイマーにより発災させた災害範囲に、アプリ利用者が近づく・侵入することで、警告メッセージや効果音、アプリ画面の色により、視聴覚的に警告をおこないます。  
 ![6.png](https://bitbucket.org/repo/yEpMMp/images/182153318-6.png)  
 ![IMG_0093.PNG](https://bitbucket.org/repo/yEpMMp/images/3265366701-IMG_0093.PNG)
+![IMG_0046.PNG](https://bitbucket.org/repo/yEpMMp/images/1908220523-IMG_0046.PNG)
 ![IMG_0091.PNG](https://bitbucket.org/repo/yEpMMp/images/2932532370-IMG_0091.PNG)
-![IMG_0087.JPG](https://bitbucket.org/repo/yEpMMp/images/2570443320-IMG_0087.JPG)
+![IMG_0014.PNG](https://bitbucket.org/repo/yEpMMp/images/1109834428-IMG_0014.PNG)
+![IMG_0060.PNG](https://bitbucket.org/repo/yEpMMp/images/1220295479-IMG_0060.PNG)
+![1.JPG](https://bitbucket.org/repo/yEpMMp/images/3080560709-1.JPG)
+
 
 ### CERD-ARの使い方 ###
 
