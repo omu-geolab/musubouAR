@@ -10,6 +10,10 @@ CERD-ARは、身のまわりの防災関連情報や仮想的な災害情報を�
 * [ライセンスについて](https://bitbucket.org/nro2dai/cerd-ar/src/a30a858468e8554325dc7e79d2ebd7a112c019f9/LICENSE.md?fileviewer=file-view-default)
 * 現行バージョン：　0.1
 
+### 紹介動画 ###
+
+[![](http://img.youtube.com/vi/8AHcJXs5R0Q/0.jpg)](https://www.youtube.com/watch?v=8AHcJXs5R0Q) 
+
 ### CERD-ARの機能 ###
 * **地図表示機能**：従来の地図アプリと同様に、現在地表示や地図の拡大縮小がおこなえます。データをインポートすることで、様々な災害・防災関連情報を、地図画面上に表示することができます。また、背景地図にオープンデータのOpenStreetMapを採用しています。これにより、GoogleやAppleマップ等で地図データが乏しい地域でも、自分達で地図データを作成し、本アプリにて活用することができます。また、地図表示画面やAR表示画面上のアイコン画像をクリックすることで、詳細情報（写真や動画、現在地からの距離）を確認することができます。
 
@@ -20,14 +24,23 @@ CERD-ARは、身のまわりの防災関連情報や仮想的な災害情報を�
 * **災害範囲に近接・侵入時の視聴覚的な警告機能**：タイマーにより発災させた災害範囲に、アプリ利用者が近づく・侵入することで、警告メッセージや効果音、アプリ画面の色により、視聴覚的に警告をおこないます。  
 ![6.png](https://bitbucket.org/repo/yEpMMp/images/182153318-6.png)  
 ![IMG_0093.PNG](https://bitbucket.org/repo/yEpMMp/images/3265366701-IMG_0093.PNG)
+![IMG_0046.PNG](https://bitbucket.org/repo/yEpMMp/images/1908220523-IMG_0046.PNG)
 ![IMG_0091.PNG](https://bitbucket.org/repo/yEpMMp/images/2932532370-IMG_0091.PNG)
-![IMG_0087.JPG](https://bitbucket.org/repo/yEpMMp/images/2570443320-IMG_0087.JPG)
+![IMG_0014.PNG](https://bitbucket.org/repo/yEpMMp/images/1109834428-IMG_0014.PNG)
+![IMG_0060.PNG](https://bitbucket.org/repo/yEpMMp/images/1220295479-IMG_0060.PNG)
+![1.JPG](https://bitbucket.org/repo/yEpMMp/images/3080560709-1.JPG)
+
 
 ### CERD-ARの使い方 ###
 
 * [アプリのインストール方法について](https://bitbucket.org/nro2dai/cerd-ar/wiki/Home)（現在準備中）
 * [データのインポート方法について](https://bitbucket.org/nro2dai/cerd-ar/wiki/Data%20Import)（現在準備中）
 * [データファイル(GeoJSON)の詳細について](https://bitbucket.org/nro2dai/cerd-ar/wiki/GeoJSON)（現在準備中）
+
+### サンプルデータファイル（data.geojson） ###
+
+* [大阪市立大学周辺](https://www.cerd.osaka-cu.ac.jp/cerdar_pics/Sugimoto/data.geojson)
+* [堺市御池台地域](https://www.cerd.osaka-cu.ac.jp/cerdar_pics/Miike/data.geojson)
 
 ### 開発者 & 協力者 ###
 
