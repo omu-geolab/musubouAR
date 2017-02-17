@@ -81,7 +81,17 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)mapViewDidFinishLoadingMap:(MGLMapView *)mapView;
 
-// TODO
+/**
+ Tells the delegate that the map view was unable to load data needed for
+ displaying the map.
+ 
+ This method may be called for a variety of reasons, including a network
+ connection failure or a failure to fetch the style from the server. You can use
+ the given error message to notify the user that map data is unavailable.
+ 
+ @param mapView The map view that is unable to load the data.
+ @param error The reason the data could not be loaded.
+ */
 - (void)mapViewDidFailLoadingMap:(MGLMapView *)mapView withError:(NSError *)error;
 
 // TODO
@@ -115,6 +125,23 @@ NS_ASSUME_NONNULL_BEGIN
  @param mapView The map view that has just redrawn.
  */
 - (void)mapViewDidFinishRenderingFrame:(MGLMapView *)mapView fullyRendered:(BOOL)fullyRendered;
+
+/**
+ Tells the delegate that the map has just finished loading a style.
+ 
+ This method is called during the initialization of the map view and after any
+ subsequent loading of a new style. This method is called between the
+ `-mapViewWillStartRenderingMap:` and `-mapViewDidFinishRenderingMap:` delegate
+ methods. Changes to sources or layers of the current style do not cause this
+ method to be called.
+ 
+ This method is the earliest opportunity to modify the layout or appearance of
+ the current style before the map view is displayed to the user.
+
+ @param mapView The map view that has just loaded a style.
+ @param style The style that was loaded.
+ */
+- (void)mapView:(MGLMapView *)mapView didFinishLoadingStyle:(MGLStyle *)style;
 
 #pragma mark Tracking User Location
 
@@ -203,13 +230,18 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Returns the alpha value to use when rendering a shape annotation.
+
+ A value of `0.0` results in a completely transparent shape. A value of `1.0`,
+ the default, results in a completely opaque shape.
  
- A value of 0.0 results in a completely transparent shape. A value of 1.0, the
- default, results in a completely opaque shape.
- 
+ This method sets the opacity of an entire shape, inclusive of its stroke and
+ fill. To independently set the values for stroke or fill, specify an alpha
+ component in the color returned by `-mapView:strokeColorForShapeAnnotation:` or
+ `-mapView:fillColorForPolygonAnnotation:`.
+
  @param mapView The map view rendering the shape annotation.
  @param annotation The annotation being rendered.
- @return An alpha value between 0 and 1.0.
+ @return An alpha value between `0` and `1.0`.
  */
 - (CGFloat)mapView:(MGLMapView *)mapView alphaForShapeAnnotation:(MGLShape *)annotation;
 
@@ -218,6 +250,9 @@ NS_ASSUME_NONNULL_BEGIN
  
  The default stroke color is the map view’s tint color. If a pattern color is
  specified, the result is undefined.
+ 
+ Opacity may be set by specifying an alpha component. The default alpha value is
+ `1.0` and results in a completely opaque stroke.
  
  @param mapView The map view rendering the shape annotation.
  @param annotation The annotation being rendered.
@@ -231,6 +266,9 @@ NS_ASSUME_NONNULL_BEGIN
  The default fill color is the map view’s tint color. If a pattern color is
  specified, the result is undefined.
  
+ Opacity may be set by specifying an alpha component. The default alpha value is
+ `1.0` and results in a completely opaque shape.
+ 
  @param mapView The map view rendering the polygon annotation.
  @param annotation The annotation being rendered.
  @return The polygon’s interior fill color.
@@ -241,7 +279,7 @@ NS_ASSUME_NONNULL_BEGIN
  Returns the line width in points to use when rendering the outline of a
  polyline annotation.
  
- By default, the polyline is outlined with a line 3.0 points wide.
+ By default, the polyline is outlined with a line `3.0` points wide.
  
  @param mapView The map view rendering the polygon annotation.
  @param annotation The annotation being rendered.
@@ -263,6 +301,11 @@ NS_ASSUME_NONNULL_BEGIN
  Touch frameworks. On the other hand, static annotation images use less memory
  and draw more quickly than annotation views.
  
+ The user location annotation view can also be customized via this method. When
+ `annotation` is an instance of `MGLUserLocation` (or equal to the map view’s
+ `userLocation` property), return an instance of `MGLUserLocationAnnotationView`
+ (or a subclass thereof).
+
  @param mapView The map view that requested the annotation view.
  @param annotation The object representing the annotation that is about to be
     displayed.

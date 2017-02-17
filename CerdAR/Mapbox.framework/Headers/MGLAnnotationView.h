@@ -1,7 +1,5 @@
 #import <UIKit/UIKit.h>
 
-#import "MGLTypes.h"
-
 NS_ASSUME_NONNULL_BEGIN
 
 @protocol MGLAnnotation;
@@ -52,7 +50,7 @@ typedef NS_ENUM(NSUInteger, MGLAnnotationViewDragState) {
  interactivity such as dragging, you can use an `MGLAnnotationImage` instead to
  conserve memory and optimize drawing performance.
  */
-@interface MGLAnnotationView : UIView
+@interface MGLAnnotationView : UIView <NSSecureCoding>
 
 #pragma mark Initializing and Preparing the View
 
