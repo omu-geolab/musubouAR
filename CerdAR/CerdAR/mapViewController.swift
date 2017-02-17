@@ -861,7 +861,7 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
                 // 現在災害発生中
             } else if jsonDataManager.sharedInstance.warnBox[i].stop.compare(nowTime) == ComparisonResult.orderedDescending && nowTime.compare(jsonDataManager.sharedInstance.warnBox[i].start) == ComparisonResult.orderedDescending {
                 
-                let Sn = Date().timeIntervalSince(jsonDataManager.sharedInstance.warnBox[i].start) / 60 // 開始時刻(start)と現在時刻(now)の差
+                let Sn = Date().timeIntervalSince(jsonDataManager.sharedInstance.warnBox[i].start) / 60 * kUpdateWarn // 開始時刻(start)と現在時刻(now)の差
                 makeCircle(i, startNow: Sn)
                 
                 updatePin(appleMapsWarnBox[i])

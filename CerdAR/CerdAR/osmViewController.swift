@@ -904,7 +904,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
                 
                 updatePin(i)
                 
-                let Sn = Date().timeIntervalSince(jsonDataManager.sharedInstance.warnBox[i].start) / 60 // 開始時刻(start)と現在時刻(now)の差
+                let Sn = Date().timeIntervalSince(jsonDataManager.sharedInstance.warnBox[i].start) / 60 * kUpdateWarn // 開始時刻(start)と現在時刻(now)の差
                 makeCircle(i, startNow: Sn)
                 
                 // 警告タグの範囲を更新
