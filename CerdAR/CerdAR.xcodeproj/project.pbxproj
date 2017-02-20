@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E01AA091E56A39400E6F5B1 /* Mapbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E01AA081E56A39400E6F5B1 /* Mapbox.framework */; };
+		7E01AA0A1E56A39400E6F5B1 /* Mapbox.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7E01AA081E56A39400E6F5B1 /* Mapbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7E34F6501E1A58BF007FA7B7 /* medicine-marker.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E34F64F1E1A58BF007FA7B7 /* medicine-marker.png */; };
 		7E34F6521E1A58CA007FA7B7 /* medicine-markerMap.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E34F6511E1A58CA007FA7B7 /* medicine-markerMap.png */; };
 		7E80CB221DD5C6D300B6B281 /* aed-marker.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E80CB211DD5C6D300B6B281 /* aed-marker.png */; };
 		7E80CB241DD5C77F00B6B281 /* aed-markerMap.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E80CB231DD5C77F00B6B281 /* aed-markerMap.png */; };
-		7E943C641DEAC0D4007E08E1 /* Mapbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E943C631DEAC0D4007E08E1 /* Mapbox.framework */; };
-		7E943C651DEAC0D4007E08E1 /* Mapbox.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7E943C631DEAC0D4007E08E1 /* Mapbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7E943C691DEB1A16007E08E1 /* icon_menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E943C681DEB1A16007E08E1 /* icon_menu.png */; };
 		7EE70DFB1DE930C4000FB537 /* icon_camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EE70DFA1DE930C4000FB537 /* icon_camera.png */; };
 		7EE70E071DEA68E5000FB537 /* icon_warn0.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EE70E061DEA68E5000FB537 /* icon_warn0.png */; };
@@ -83,25 +83,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		ACF399C41D98D63800B0EC47 /* CopyFiles */ = {
+		7E01AA0B1E56A39400E6F5B1 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				7E943C651DEAC0D4007E08E1 /* Mapbox.framework in CopyFiles */,
+				7E01AA0A1E56A39400E6F5B1 /* Mapbox.framework in Embed Frameworks */,
 			);
+			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7E01AA081E56A39400E6F5B1 /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mapbox.framework; path = ../Mapbox.framework; sourceTree = "<group>"; };
 		7E34F64F1E1A58BF007FA7B7 /* medicine-marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "medicine-marker.png"; sourceTree = "<group>"; };
 		7E34F6511E1A58CA007FA7B7 /* medicine-markerMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "medicine-markerMap.png"; sourceTree = "<group>"; };
 		7E80CB211DD5C6D300B6B281 /* aed-marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "aed-marker.png"; sourceTree = "<group>"; };
 		7E80CB231DD5C77F00B6B281 /* aed-markerMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "aed-markerMap.png"; sourceTree = "<group>"; };
 		7E943C601DEABFAC007E08E1 /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mapbox.framework; path = "../../Desktop/mapbox-ios-sdk-3.3.7-dynamic.zip フォルダ/dynamic/Mapbox.framework"; sourceTree = "<group>"; };
-		7E943C631DEAC0D4007E08E1 /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mapbox.framework; path = ../Mapbox.framework; sourceTree = "<group>"; };
 		7E943C681DEB1A16007E08E1 /* icon_menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_menu.png; sourceTree = "<group>"; };
 		7EE70DFA1DE930C4000FB537 /* icon_camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_camera.png; sourceTree = "<group>"; };
 		7EE70E061DEA68E5000FB537 /* icon_warn0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_warn0.png; sourceTree = "<group>"; };
@@ -169,7 +170,7 @@
 				AC2C53011D58093C0032B689 /* AVFoundation.framework in Frameworks */,
 				AC2C52FF1D5809360032B689 /* CoreLocation.framework in Frameworks */,
 				AC2C52FD1D58092B0032B689 /* MapKit.framework in Frameworks */,
-				7E943C641DEAC0D4007E08E1 /* Mapbox.framework in Frameworks */,
+				7E01AA091E56A39400E6F5B1 /* Mapbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,7 +309,7 @@
 		D317AE971D89649D00D4D4FC /* framework */ = {
 			isa = PBXGroup;
 			children = (
-				7E943C631DEAC0D4007E08E1 /* Mapbox.framework */,
+				7E01AA081E56A39400E6F5B1 /* Mapbox.framework */,
 				AC7B6A831D66A9B20086897D /* CoreMotion.framework */,
 				AC2C53001D58093C0032B689 /* AVFoundation.framework */,
 				AC2C52FE1D5809360032B689 /* CoreLocation.framework */,
@@ -348,7 +349,7 @@
 				AC2C52BE1D5805F70032B689 /* Sources */,
 				AC2C52BF1D5805F70032B689 /* Frameworks */,
 				AC2C52C01D5805F70032B689 /* Resources */,
-				ACF399C41D98D63800B0EC47 /* CopyFiles */,
+				7E01AA0B1E56A39400E6F5B1 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

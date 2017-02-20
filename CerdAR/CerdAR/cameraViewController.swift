@@ -318,7 +318,7 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
             // 現在発生中
             if jsonDataManager.sharedInstance.warnBox[i].stop.compare(nowTime) == ComparisonResult.orderedDescending && nowTime.compare(jsonDataManager.sharedInstance.warnBox[i].start) == ComparisonResult.orderedDescending {
                 
-                let startNow = Date().timeIntervalSince(jsonDataManager.sharedInstance.warnBox[i].start) / 60 // 開始時刻(start)と現在時刻(now)の差
+                let startNow = Date().timeIntervalSince(jsonDataManager.sharedInstance.warnBox[i].start) / 60 * kUpdateWarn // 開始時刻(start)と現在時刻(now)の差
                 
                 // アプリを開いたら災害範囲がすでに最大になっていたとき、最大の半径で円を描く
                 if CLLocationDistance(startNow) > CLLocationDistance(jsonDataManager.sharedInstance.warnBox[i].range) {
