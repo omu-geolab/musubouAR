@@ -143,6 +143,8 @@ class loadViewController: UIViewController, termsViewDelegate, CLLocationManager
      */
     func notificationSound() {
         
+        //TODO:バイブを入れる
+        
         do {
             let filePath = Bundle.main.path(forResource: "sound_intrusion", ofType: "mp3")
             let audioPath = NSURL(fileURLWithPath: filePath!)
