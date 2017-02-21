@@ -407,7 +407,7 @@
 				TargetAttributes = {
 					AC2C52C11D5805F70032B689 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 9F4BD2UBE2;
+						DevelopmentTeam = 57NUJ8NN7U;
 						LastSwiftMigration = 0800;
 					};
 					AC2C52D81D5805F80032B689 = {
@@ -667,7 +667,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 9F4BD2UBE2;
+				DEVELOPMENT_TEAM = 57NUJ8NN7U;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/CerdAR",
@@ -679,7 +679,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ymn.CerdAR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -687,7 +687,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 9F4BD2UBE2;
+				DEVELOPMENT_TEAM = 57NUJ8NN7U;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/CerdAR",
@@ -699,7 +699,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ymn.CerdAR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

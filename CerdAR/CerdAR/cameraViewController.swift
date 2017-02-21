@@ -50,13 +50,19 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
     
     
     // アラート
-    let alert: UIAlertController = UIAlertController(title: "⚠︎", message: "iPadを垂直に，ホームボタンを右側に向けた状態にiPadを持ち直してください", preferredStyle:  UIAlertControllerStyle.alert)
+    var alert: UIAlertController? = nil
     
     
     // MARK: ライフサイクル
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        
+        if UIDevice.current.userInterfaceIdiom == .phone {
+            alert = UIAlertController(title: "⚠︎", message: "iPhoneを垂直に，ホームボタンを右側に向けた状態にiPhoneを持ち直してください", preferredStyle:  UIAlertControllerStyle.alert)
+        } else if UIDevice.current.userInterfaceIdiom == .pad {
+            alert = UIAlertController(title: "⚠︎", message: "iPadを垂直に，ホームボタンを右側に向けた状態にiPadを持ち直してください", preferredStyle:  UIAlertControllerStyle.alert)
+        }
         
         warnState = warningState.safe.rawValue
         
@@ -95,7 +101,13 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
         toMap_Button.addTarget(self, action: #selector(cameraViewController.onClick_map(_:)), for: .touchUpInside)
         
         // コンパス
-        compassView = UIImageView(frame: CGRect(x: 40.0, y: 40.0, width: imgCompass.size.width / 4, height: imgCompass.size.height / 4))
+        var compassWidth = imgCompass.size.width
+        var compassHeight = imgCompass.size.height
+        if UIDevice.current.userInterfaceIdiom == .phone {
+            compassWidth /= 2
+            compassHeight /= 2
+        }
+        compassView = UIImageView(frame: CGRect(x: 55.0, y: 55.0, width: compassWidth / 4, height: compassHeight / 4))
         compassView.image = imgCompass
         view.addSubview(compassView)
         
@@ -709,12 +721,12 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
         
         // 画面が間違えた向きのとき・・・アラートで知らせる
         if deviceOrientation == UIDeviceOrientation.landscapeRight {
-            alert.dismiss(animated: true, completion: nil)
-            present(alert, animated: true, completion: nil)
+            alert?.dismiss(animated: true, completion: nil)
+            present(alert!, animated: true, completion: nil)
             
             // 画面が正しい向きのとき・・・アラートを消す
         } else if deviceOrientation == UIDeviceOrientation.landscapeLeft {
-            alert.dismiss(animated: true, completion: nil)
+            alert?.dismiss(animated: true, completion: nil)
         }
     }
     
