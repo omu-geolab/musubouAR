@@ -49,6 +49,7 @@ class ConfigView: UIView {
         aboutAppBut.setTitleColor(UIColor.white, for: UIControlState())
         aboutAppBut.setTitle("このアプリについて", for: UIControlState.highlighted) // ハイライト
         aboutAppBut.setTitleColor(UIColor.black, for: UIControlState.highlighted)
+        aboutAppBut.titleLabel?.adjustsFontSizeToFitWidth = true
         aboutAppBut.layer.position = CGPoint(x: screenWidth / 6, y: screenHeight / 3)
         aboutAppBut.backgroundColor = UIColor.gray
         aboutAppBut.addTarget(self, action: #selector(ConfigView.onClick_aboutApp(_:)), for: .touchUpInside)
@@ -62,6 +63,7 @@ class ConfigView: UIView {
             changeMapBut.setTitle("Appleマップに切り替え", for: UIControlState.highlighted) // ハイライト
         }
         
+        changeMapBut.titleLabel?.adjustsFontSizeToFitWidth = true
         changeMapBut.setTitleColor(UIColor.white, for: UIControlState())
         changeMapBut.setTitleColor(UIColor.black, for: UIControlState.highlighted)
         changeMapBut.layer.position = CGPoint(x: screenWidth / 6, y: screenHeight / 2)
