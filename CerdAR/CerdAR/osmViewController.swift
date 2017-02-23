@@ -683,6 +683,17 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         let labelImg = makeLabel(index, inforType: kWarn) // UILabelをUIImageに変換する
         jsonDataManager.sharedInstance.warnBox[index].pinImage = getPinImage(labelImg, inforType: kWarn)
         jsonDataManager.sharedInstance.warnBox[index].expandImage = getPinImage(labelImg, inforType: kWarn)
+        
+        let beki: Int = Int(27 - self.mapView.zoomLevel)
+        let zoomlv: CGFloat = pow(2, CGFloat(beki))
+        let han: Double = circleRadius[index] * self.kDia + 0.1
+        var newsize: Double = Double(screenWidth) * han / Double(zoomlv)
+        if newsize > Double(screenWidth) / 2 {
+            newsize = Double(screenWidth) / 2
+        }
+        
+        self.changeImage(&jsonDataManager.sharedInstance.warnBox[index], MGLtag: self.osmWarnBox[index], newsize: CGFloat(newsize))
+        
     }
     
     /**
