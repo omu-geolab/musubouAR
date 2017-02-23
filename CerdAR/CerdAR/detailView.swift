@@ -48,6 +48,7 @@ class detailView: UIView {
         backButton.setTitle("＜ 戻る", for: UIControlState()) // 通常
         backButton.setTitleColor(UIColor.white, for: UIControlState())
         backButton.setTitle("＜ 戻る", for: UIControlState.highlighted) // ハイライト
+        backButton.titleLabel?.adjustsFontSizeToFitWidth = true
         backButton.setTitleColor(UIColor.black, for: UIControlState.highlighted)
         backButton.layer.position = CGPoint(x: dWid * 0.05, y: dHei * 0.05)
         backButton.addTarget(self, action: #selector(detailView.onClick_back(_:)), for:.touchUpInside)
