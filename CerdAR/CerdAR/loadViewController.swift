@@ -123,7 +123,7 @@ class loadViewController: UIViewController, termsViewDelegate, CLLocationManager
         activityIndicator = UIActivityIndicatorView()
         activityIndicator.frame = CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight)
         activityIndicator.backgroundColor = UIColor(red: 0/2555, green: 0/255, blue: 0/255, alpha: 0.7)
-        activityIndicator.layer.cornerRadius = 8
+//        activityIndicator.layer.cornerRadius = 8
         activityIndicator.center = self.view.center
         
         //Indicatorの状態を管理
