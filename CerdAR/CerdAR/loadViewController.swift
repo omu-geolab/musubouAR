@@ -169,9 +169,10 @@ class loadViewController: UIViewController, termsViewDelegate, CLLocationManager
     func jsondata(callback: @escaping (String) -> Void) -> Void {
         
         let url = URL(string: "https://www.cerd.osaka-cu.ac.jp/cerdar_pics/Sugimoto/data.geojson")
-        let req = URLRequest(url: url!, cachePolicy: NSURLRequest(url: url!).cachePolicy, timeoutInterval: 5.0)
+        let req = URLRequest(url: url!, timeoutInterval: 5.0)
         
         let configuration = URLSessionConfiguration.default
+        configuration.requestCachePolicy = NSURLRequest.CachePolicy.reloadIgnoringLocalCacheData
         let session = URLSession(configuration: configuration, delegate:nil, delegateQueue:OperationQueue.main)
         
         let task = session.dataTask(with: req, completionHandler: {
