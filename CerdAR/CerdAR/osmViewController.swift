@@ -84,6 +84,17 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         warningView = UIView(frame: CGRect.init(x: kZero, y: kZero, width: CGFloat(screenWidth), height: CGFloat(screenHeight)))
         view.addSubview(warningView) // viewに追加
         
+        /* 背景地図の変更 */
+        mapView = MGLMapView(frame: view.bounds,
+                             styleURL: MGLStyle.streetsStyleURL(withVersion:9))
+        
+        //streetsStyleURL : 標準地図
+        //lightStyleURL : シンプルな地図
+        //satelliteStyleURL :　衛星画像
+        //satelliteStreetsStyleURL : 衛星画像+標準地図
+        //darkStyleURL : 黒ベースの地図
+        //outdoorsStyleURL : 等高線付き地図
+        
         /* マップビューの設定 */
         mapView.frame = self.view.frame
         mapView.showsUserLocation = true // 現在地を表示する
