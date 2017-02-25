@@ -31,6 +31,7 @@ class ConfigView: UIView {
      */
     func setup() {
         self.addSubview(changeMapBut)
+        self.addSubview(changeMapBut2)
         self.addSubview(aboutAppBut)
         load()
     }
@@ -57,6 +58,7 @@ class ConfigView: UIView {
         if displayMode == mode.applemap.rawValue {
             changeMapBut.setTitle("OpenStreetMapに切り替え", for: UIControlState()) // 通常
             changeMapBut.setTitle("OpenStreetMapに切り替え", for: UIControlState.highlighted) // ハイライト
+           
         } else if displayMode == mode.osm.rawValue {
             changeMapBut.setTitle("Appleマップに切り替え", for: UIControlState()) // 通常
             changeMapBut.setTitle("Appleマップに切り替え", for: UIControlState.highlighted) // ハイライト
@@ -66,6 +68,17 @@ class ConfigView: UIView {
         changeMapBut.setTitleColor(UIColor.black, for: UIControlState.highlighted)
         changeMapBut.layer.position = CGPoint(x: screenWidth / 6, y: screenHeight / 2)
         changeMapBut.backgroundColor = UIColor.gray
+ 
+        
+        changeMapBut2.setTitle("衛星画像に切り替え", for: UIControlState()) // 通常
+        changeMapBut2.setTitle("衛星画像に切り替え", for: UIControlState.highlighted) // ハイライト
+        
+        changeMapBut2.setTitleColor(UIColor.white, for: UIControlState())
+        changeMapBut2.setTitleColor(UIColor.black, for: UIControlState.highlighted)
+        changeMapBut2.layer.position = CGPoint(x: screenWidth / 6, y: screenHeight / 1.5)
+        changeMapBut2.backgroundColor = UIColor.gray
+
+
         
     }
     

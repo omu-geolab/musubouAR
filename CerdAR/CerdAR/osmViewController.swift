@@ -84,7 +84,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         warningView = UIView(frame: CGRect.init(x: kZero, y: kZero, width: CGFloat(screenWidth), height: CGFloat(screenHeight)))
         view.addSubview(warningView) // viewに追加
         
-        /* 背景地図の変更 */
+        /* 背景地図の設定 */
         mapView = MGLMapView(frame: view.bounds,
                              styleURL: MGLStyle.streetsStyleURL(withVersion:9))
         
@@ -188,6 +188,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         }
         
         changeMapBut.addTarget(self, action: #selector(osmViewController.changeMap(_:)), for: .touchUpInside)
+        changeMapBut2.addTarget(self, action: #selector(self.changeMB(_:)), for: .touchUpInside)
         
         motionManager.magnetometerUpdateInterval = 0.1 // 加速度センサを取得する間隔
         
@@ -787,6 +788,31 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         ConfigView().deleteConfigDisplay()
         self.present(mapViewController(), animated: true, completion: nil)
         updateTimer.invalidate() // update()を発火させていたOpenStreetMapsのタイマーを止める
+    }
+    
+    /*
+     * 設定画面の「衛星画像」を
+     * タップした際に，地図データを切り替える
+     */
+    internal func changeMB(_ sender: UIButton) {
+        mapView.allowsScrolling = true // スクロールできるにする
+        mapView.allowsZooming = true // 拡大縮小できるようにする
+        var location: CGPoint = mapView.center
+        location.x = view.center.x
+        self.warningView?.center = location
+        self.mapView.center = location
+        
+        
+        self.warningView.backgroundColor = UIColor.clear
+        self.configview?.removeFromSuperview()
+        ConfigView().deleteConfigDisplay()
+        
+        mapView.frame = self.view.frame
+        mapView.showsUserLocation = true // 現在地を表示する
+        mapView.isPitchEnabled = false  // ジェスチャでの視点変更を許可しない
+        mapView.delegate = self
+        mapView.styleURL = MGLStyle.satelliteStyleURL(withVersion:9)
+    
     }
     
     /*
