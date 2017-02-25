@@ -189,7 +189,7 @@ func getPinImage(_ img: UIImage, inforType: String) -> UIImage {
     
     if inforType == kInfo {
         
-        if displayMode == mode.applemap.rawValue || displayMode == mode.osm.rawValue { // 地図画面のとき
+        if displayMode == mode.applemap.rawValue || displayMode == mode.osm.rawValue || displayMode == mode.osmsat.rawValue { // 地図画面のとき
             
             let tagImg = UIImage(named: "icon_infoTag.png")! // 情報タグの画像
             let tagRect = CGRect.init(x: 0.0, y: 0.0, width: img.size.width, height: img.size.height) // タグ画像のサイズと位置
@@ -209,7 +209,7 @@ func getPinImage(_ img: UIImage, inforType: String) -> UIImage {
         
     } else if inforType == kWarn {
         
-        if displayMode == mode.applemap.rawValue || displayMode == mode.osm.rawValue { // 地図画面のとき
+        if displayMode == mode.applemap.rawValue || displayMode == mode.osm.rawValue || displayMode == mode.osmsat.rawValue { // 地図画面のとき
             return img
             
         } else if displayMode == mode.cam.rawValue { // カメラ画面のとき

@@ -55,29 +55,43 @@ class ConfigView: UIView {
         aboutAppBut.addTarget(self, action: #selector(ConfigView.onClick_aboutApp(_:)), for: .touchUpInside)
         
         // 「地図切り替え」ボタンの挿入(画面左上側)
+        print("displayMode : \(displayMode)")
+        
         if displayMode == mode.applemap.rawValue {
             changeMapBut.setTitle("OpenStreetMapに切り替え", for: UIControlState()) // 通常
             changeMapBut.setTitle("OpenStreetMapに切り替え", for: UIControlState.highlighted) // ハイライト
+            
+            changeMapBut2.setTitle("", for: UIControlState()) // 通常
+            changeMapBut2.setTitle("", for: UIControlState.highlighted) // ハイライト
            
-        } else if displayMode == mode.osm.rawValue {
+        } else if displayMode == mode.osm.rawValue  {
+
             changeMapBut.setTitle("Appleマップに切り替え", for: UIControlState()) // 通常
             changeMapBut.setTitle("Appleマップに切り替え", for: UIControlState.highlighted) // ハイライト
+            
+            changeMapBut2.setTitle("衛星画像に切り替え", for: UIControlState()) // 通常
+            changeMapBut2.setTitle("衛星画像に切り替え", for: UIControlState.highlighted) // ハイライト
+
+            
+        } else if displayMode == mode.osmsat.rawValue {
+            
+            changeMapBut.setTitle("Appleマップに切り替え", for: UIControlState()) // 通常
+            changeMapBut.setTitle("Appleマップに切り替え", for: UIControlState.highlighted) // ハイライト
+            
+            changeMapBut2.setTitle("標準地図に切り替え", for: UIControlState()) // 通常
+            changeMapBut2.setTitle("標準地図に切り替え", for: UIControlState.highlighted) // ハイライト
+            
         }
         
         changeMapBut.setTitleColor(UIColor.white, for: UIControlState())
         changeMapBut.setTitleColor(UIColor.black, for: UIControlState.highlighted)
         changeMapBut.layer.position = CGPoint(x: screenWidth / 6, y: screenHeight / 2)
         changeMapBut.backgroundColor = UIColor.gray
- 
-        
-        changeMapBut2.setTitle("衛星画像に切り替え", for: UIControlState()) // 通常
-        changeMapBut2.setTitle("衛星画像に切り替え", for: UIControlState.highlighted) // ハイライト
-        
+
         changeMapBut2.setTitleColor(UIColor.white, for: UIControlState())
         changeMapBut2.setTitleColor(UIColor.black, for: UIControlState.highlighted)
         changeMapBut2.layer.position = CGPoint(x: screenWidth / 6, y: screenHeight / 1.5)
         changeMapBut2.backgroundColor = UIColor.gray
-
 
         
     }

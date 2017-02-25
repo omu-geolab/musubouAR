@@ -342,10 +342,12 @@ enum mode: Int {
     case applemap = 0
     case osm = 1
     case cam = 2
+    case osmsat = 3
 }
 
 // 現在の画面が、地図かカメラかを保持する変数
-var displayMode = mode.applemap.rawValue
+//var displayMode = mode.applemap.rawValue
+var displayMode = mode.osm.rawValue
 
 var warnImage = UIImage(named: "icon_infoTagAR.png") // 情報タグの画像
 

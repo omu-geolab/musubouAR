@@ -174,7 +174,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        displayMode = mode.osm.rawValue
+        //displayMode = mode.osm.rawValue
         
         mapView.delegate = self
         
@@ -189,6 +189,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         
         changeMapBut.addTarget(self, action: #selector(osmViewController.changeMap(_:)), for: .touchUpInside)
         changeMapBut2.addTarget(self, action: #selector(self.changeMB(_:)), for: .touchUpInside)
+        
         
         motionManager.magnetometerUpdateInterval = 0.1 // 加速度センサを取得する間隔
         
@@ -788,6 +789,9 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         ConfigView().deleteConfigDisplay()
         self.present(mapViewController(), animated: true, completion: nil)
         updateTimer.invalidate() // update()を発火させていたOpenStreetMapsのタイマーを止める
+        
+        displayMode = mode.applemap.rawValue
+        
     }
     
     /*
@@ -812,6 +816,8 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         mapView.isPitchEnabled = false  // ジェスチャでの視点変更を許可しない
         mapView.delegate = self
         mapView.styleURL = MGLStyle.satelliteStyleURL(withVersion:9)
+        
+        displayMode = mode.osmsat.rawValue
     
     }
     
