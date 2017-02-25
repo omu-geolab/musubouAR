@@ -337,7 +337,11 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         }
         
         
-        self.detailview = detailView(frame: CGRect(x: screenWidth * 0.1, y: screenWidth * 0.1, width: screenWidth * 0.8, height: screenHeight * 0.8))
+        if UIDevice.current.userInterfaceIdiom == .phone {
+            self.detailview = detailView(frame: CGRect(x: screenWidth * 0.1, y: screenWidth * 0.02, width: screenWidth * 0.8, height: screenHeight * 0.9))
+        } else if UIDevice.current.userInterfaceIdiom == .pad {
+            self.detailview = detailView(frame: CGRect(x: screenWidth * 0.1, y: screenWidth * 0.1, width: screenWidth * 0.8, height: screenHeight * 0.8))
+        }        
         self.detailview!.delegate = self
         backgroundView = detailView.makebackgroungView()
         backgroundView.isUserInteractionEnabled = true
@@ -931,6 +935,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
             // 災害が発生しているとき
         } else {
             
+            //TODO:いちいちif文で分ける必要なし？確認の必要あり。
             // 警告メッセージのタイマーを開始させる
             if messageTimer == nil {
                 messageTimer = Timer.scheduledTimer(timeInterval: kUpdateMM, target: self, selector: #selector(osmViewController.updateMessage), userInfo: nil, repeats: true)

@@ -753,7 +753,11 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
                 pinData = jsonDataManager.sharedInstance.warnBox[(-1) + imageView.tag * (-1)]
             }
             
-            detailview = detailView(frame: CGRect(x: screenWidth * 0.1, y: screenWidth * 0.1, width: screenWidth * 0.8, height: screenHeight * 0.8))
+            if UIDevice.current.userInterfaceIdiom == .phone {
+                detailview = detailView(frame: CGRect(x: screenWidth * 0.1, y: screenWidth * 0.02, width: screenWidth * 0.8, height: screenHeight * 0.9))
+            } else if UIDevice.current.userInterfaceIdiom == .pad {
+                detailview = detailView(frame: CGRect(x: screenWidth * 0.1, y: screenWidth * 0.1, width: screenWidth * 0.8, height: screenHeight * 0.8))
+            }
             detailview!.delegate = self
             view.addSubview(detailview!)
         }

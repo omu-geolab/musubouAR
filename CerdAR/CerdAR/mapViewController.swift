@@ -352,7 +352,11 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
             
             // タグをタップしてからkShowDetail秒後に詳細画面を表示する
             runAfterDelay(kShowDetail) {
-                self.detailview = detailView(frame: CGRect(x: screenWidth * 0.1, y: screenWidth * 0.1, width: screenWidth * 0.8, height: screenHeight * 0.8))
+                if UIDevice.current.userInterfaceIdiom == .phone {
+                    self.detailview = detailView(frame: CGRect(x: screenWidth * 0.1, y: screenWidth * 0.02, width: screenWidth * 0.8, height: screenHeight * 0.9))
+                } else if UIDevice.current.userInterfaceIdiom == .pad {
+                    self.detailview = detailView(frame: CGRect(x: screenWidth * 0.1, y: screenWidth * 0.1, width: screenWidth * 0.8, height: screenHeight * 0.8))
+                }
                 self.detailview!.delegate = self
                 backgroundView = detailView.makebackgroungView()
                 backgroundView.isUserInteractionEnabled = true
