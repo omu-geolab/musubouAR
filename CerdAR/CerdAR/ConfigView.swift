@@ -53,33 +53,41 @@ class ConfigView: UIView {
         aboutAppBut.layer.position = CGPoint(x: screenWidth / 6, y: screenHeight / 3)
         aboutAppBut.backgroundColor = UIColor.gray
         aboutAppBut.addTarget(self, action: #selector(ConfigView.onClick_aboutApp(_:)), for: .touchUpInside)
+        aboutAppBut.layer.cornerRadius = 10
         
-        // 「地図切り替え」ボタンの挿入(画面左上側)
+        
         print("displayMode : \(displayMode)")
-        
+        // 「地図切り替え」ボタンの挿入(画面左上側)
         if displayMode == mode.applemap.rawValue {
             changeMapBut.setTitle("OpenStreetMapに切り替え", for: UIControlState()) // 通常
             changeMapBut.setTitle("OpenStreetMapに切り替え", for: UIControlState.highlighted) // ハイライト
+            changeMapBut.layer.cornerRadius = 10
             
-            changeMapBut2.setTitle("", for: UIControlState()) // 通常
-            changeMapBut2.setTitle("", for: UIControlState.highlighted) // ハイライト
+            changeMapBut2.isHidden = true
+
            
         } else if displayMode == mode.osm.rawValue  {
 
             changeMapBut.setTitle("Appleマップに切り替え", for: UIControlState()) // 通常
             changeMapBut.setTitle("Appleマップに切り替え", for: UIControlState.highlighted) // ハイライト
+            changeMapBut.layer.cornerRadius = 10
             
+            changeMapBut2.isHidden = false
             changeMapBut2.setTitle("衛星画像に切り替え", for: UIControlState()) // 通常
             changeMapBut2.setTitle("衛星画像に切り替え", for: UIControlState.highlighted) // ハイライト
+            changeMapBut2.layer.cornerRadius = 10
 
             
         } else if displayMode == mode.osmsat.rawValue {
             
             changeMapBut.setTitle("Appleマップに切り替え", for: UIControlState()) // 通常
             changeMapBut.setTitle("Appleマップに切り替え", for: UIControlState.highlighted) // ハイライト
+            changeMapBut.layer.cornerRadius = 10
             
+            changeMapBut2.isHidden = false
             changeMapBut2.setTitle("標準地図に切り替え", for: UIControlState()) // 通常
             changeMapBut2.setTitle("標準地図に切り替え", for: UIControlState.highlighted) // ハイライト
+            changeMapBut2.layer.cornerRadius = 10
             
         }
         
@@ -113,6 +121,8 @@ class ConfigView: UIView {
     func onClick_aboutApp(_ sender: UIButton) {
         changeMapBut.removeFromSuperview()
         aboutAppBut.removeFromSuperview()
+        changeMapBut2.isHidden = true
+        
         
         // コメントの挿入(画面右側)
         let comment = UILabel(frame: CGRect.init(x: 0, y: 0, width: screenWidth / 3 - 60, height: dHei * 0.6))

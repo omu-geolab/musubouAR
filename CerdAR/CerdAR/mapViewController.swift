@@ -804,9 +804,13 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         self.warningView?.center = location
         self.mapView?.center = location
         
+        displayMode = mode.osm.rawValue
+        
         configview?.removeFromSuperview()
         ConfigView().deleteConfigDisplay()
         self.present(osmViewController(), animated: true, completion: nil)
+
+        
     }
     
     
