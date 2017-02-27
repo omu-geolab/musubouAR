@@ -808,8 +808,8 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         
         configview?.removeFromSuperview()
         ConfigView().deleteConfigDisplay()
-        self.present(osmViewController(), animated: true, completion: nil)
-
+        //        self.present(osmViewController(), animated: true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
         
     }
     
