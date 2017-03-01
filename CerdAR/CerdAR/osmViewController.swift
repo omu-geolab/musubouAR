@@ -944,13 +944,14 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
             }
             
             // 警告モードのタイマーを開始させる
+            // updateView()は初回発火がtimeIntervalで設定した値の後となるため、0秒目のメソッド呼び出しで使用。
             if viewTimer == nil {
                 viewTimer = Timer.scheduledTimer(timeInterval: kUpdateMM, target: self, selector: #selector(osmViewController.updateView), userInfo: nil, repeats: true)
                 updateView()
                 
             } else if !viewTimer.isValid {
-                updateView()
                 viewTimer = Timer.scheduledTimer(timeInterval: kUpdateMM, target: self, selector: #selector(osmViewController.updateView), userInfo: nil, repeats: true)
+                updateView()
             }
         }
     }
