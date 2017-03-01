@@ -660,7 +660,7 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
             
             // 遠近感の調整（kCamDisは150mを前提）
             // 画面の表示位置(縦) = 最大最小範囲の調整 +　全体的な位置の微調整
-            y = y * 0.8 + 200
+//            y = y * 0.8 + 200
             
             
             imageBox[index] = UIImageView(frame: CGRect(x: 0.0, y: 0.0, width: CGFloat(size), height: CGFloat(size)))
