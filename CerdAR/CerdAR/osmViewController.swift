@@ -214,53 +214,14 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         // kUpdateWarn秒に1回update()を発火させる
         if updateTimer == nil {
             updateTimer = Timer.scheduledTimer(timeInterval: kUpdateWarn, target: self, selector: #selector(osmViewController.update), userInfo: nil, repeats: true)
-            dataUpdateTimer = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(osmViewController.dataUpdateManager), userInfo: nil, repeats: true)
         }
-    }
-    
-    /* ネットワーク経由のデータアップデート処理 */
-    func dataUpdateManager() {
-        if CheckReachability(hostname: "www") {
         
-            let url = URL(string: "https://www.cerd.osaka-cu.ac.jp/cerdar_pics/Sugimoto/data.geojson")
-            let req = URLRequest(url: url!, timeoutInterval: 5.0)
-            
-            let configuration = URLSessionConfiguration.default
-            configuration.requestCachePolicy = NSURLRequest.CachePolicy.reloadIgnoringLocalCacheData
-            let session = URLSession(configuration: configuration, delegate:nil, delegateQueue:OperationQueue.main)
-            
-            let task = session.dataTask(with: req, completionHandler: {
-                (data, response, error) -> Void in
-                
-                // urlが見つからない、またはタイムアウトしたとき
-                if error != nil {
-                  //  callback("finished")
-                    print("テスト１")
-
-                    // 成功したとき
-                } else {
-                    self.json = JSON(data: data!)
-                    print("テスト２")
-
-               //     callback("finished")
-                }
-            })
-            task.resume()
- 
-            
-        } else { // 接続されていないとき
-            // エラーを表示する
-            let alert: UIAlertController = UIAlertController(title: "エラー!", message: "ネットワークに接続されていません", preferredStyle:  UIAlertControllerStyle.alert)
-            let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: {
-                (action: UIAlertAction!) -> Void in
-                print("OK")
-            })
-            alert.addAction(defaultAction)
+        // データを定期的に更新する
+        if dataUpdateTimer == nil {
+            dataUpdateTimer = Timer.scheduledTimer(timeInterval: 3, target: loadViewController(), selector: Selector(("dataUpdateManager")), userInfo: nil, repeats: true)
         }
-
         
     }
-    
     
     /* 別の画面に遷移した直後(破棄) */
     override func viewDidDisappear(_ animated: Bool) {
