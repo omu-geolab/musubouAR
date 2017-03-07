@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import MapKit
 import AVFoundation
-
+import AudioToolbox
 
 /* タグに持たせるデータ群 */
 class TagData {
@@ -335,7 +335,43 @@ let butSize: CGFloat = 70.0 // ボタンサイズ
 var audioPlayerNear: AVAudioPlayer! // 通知音(付近)
 var audioPlayerIntr: AVAudioPlayer! // 通知音(侵入)
 
-
+class vibration: NSObject {
+    
+    var timer = Timer()
+    
+    func vibNearStart() {
+        vibStart(timeInterval:1.0)
+    }
+    
+    func vibIntrusionStart() {
+        vibStart(timeInterval:3.0)
+    }
+    
+    private func vibStart(timeInterval:TimeInterval) {
+        timer = Timer.scheduledTimer(timeInterval: timeInterval, target: self, selector: Selector(("vibrate:")), userInfo: nil, repeats: true)
+        timer.fire()
+    }
+    
+    func vibrate(timer: Timer) {
+        AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
+    }
+    
+    func vibStop() {
+        timer.invalidate()
+    }
+    /** シングルトンでインスタンスを返す */
+    class var sharedInstance: vibration {
+        struct Static {
+            static let instance: vibration = vibration()
+        }
+        return Static.instance
+    }
+    
+    // initのプライベート化。インスタンスの作成・取得はsharedInstanceを利用する。
+    override private init() {
+        super.init()
+    }
+}
 
 /* 現在開いているページは地図画面か、ARカメラ画面か */
 enum mode: Int {
