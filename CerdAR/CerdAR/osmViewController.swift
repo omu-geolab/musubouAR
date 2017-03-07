@@ -76,7 +76,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
     let kZero: CGFloat = 0 // 初期値0
     let kTagSize: CGFloat = 500 // タグ画像のサイズ
     
-    // MARK: ライフサイクル
+    // MARK:- ライフサイクル
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -254,7 +254,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
     }
     
     
-    // MARK: デリゲート-MKMapViewDelegate
+    // MARK:- デリゲート-MKMapViewDelegate
     
     /*
      * 地図を触った後
@@ -405,7 +405,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
     }
     
     
-    // MARK: デリゲート-CLLocationManagerDelegate
+    // MARK:- デリゲート-CLLocationManagerDelegate
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("didFailWithError: \(error)")
     }
@@ -442,7 +442,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
     }
     
     
-    // MARK: detailViewDelegate
+    // MARK:- detailViewDelegate
     
     func detailViewFinish() {
         
@@ -477,7 +477,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
     }
     
     
-    // MARK: configViewDelegate
+    // MARK:- configViewDelegate
     
     func configViewFinish() {
         configview?.delegate = nil
@@ -487,7 +487,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
     
     
     
-    // MARK: プライベート関数
+    // MARK:- プライベート関数
     
     /*
      * 警告メッセージを表示する
@@ -509,6 +509,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
             // 侵入していることを通知音で知らせる
             if audioPlayerIntr != nil {
                 audioPlayerIntr.play()
+                vibration.sharedInstance.vibIntrusionStart()
             }
             warningMessage.isHidden = false
             warningMessage.text = jsonDataManager.sharedInstance.warnBox[num].message2 // 警告メッセージ
@@ -517,8 +518,13 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
             // 0m以上、kNearMsg(m)以下・・・付近
         } else if jsonDataManager.sharedInstance.warnBox[num].distance - Int(circleRadius[num]) < kNearMsg {
             // 付近にいることを通知音で知らせる
+            if audioPlayerIntr.isPlaying == true {
+                audioPlayerIntr.stop()
+                vibration.sharedInstance.vibStop()
+            }
             if audioPlayerNear != nil {
                 audioPlayerNear.play()
+                vibration.sharedInstance.vibNearStart()
             }
             warningMessage.isHidden = false
             warningMessage.text = jsonDataManager.sharedInstance.warnBox[num].message1 // 警告メッセージ
@@ -526,6 +532,10 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
             
             // それ以外・・・安全
         } else {
+            if audioPlayerNear.isPlaying == true {
+                audioPlayerNear.stop()
+                vibration.sharedInstance.vibStop()
+            }
             msgSafeCount += 1
             if msgSafeCount == box.count {
                 msgSafeCount = 0
@@ -962,7 +972,6 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
             // 災害が発生しているとき
         } else {
             
-            //TODO:いちいちif文で分ける必要なし？確認の必要あり。
             // 警告メッセージのタイマーを開始させる
             if messageTimer == nil {
                 messageTimer = Timer.scheduledTimer(timeInterval: kUpdateMM, target: self, selector: #selector(osmViewController.updateMessage), userInfo: nil, repeats: true)

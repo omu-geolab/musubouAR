@@ -53,7 +53,7 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
     var alert: UIAlertController? = nil
     
     
-    // MARK: ライフサイクル
+    // MARK:- ライフサイクル
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -187,7 +187,7 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
         super.didReceiveMemoryWarning()
     }
     
-    // MARK: CLLocationManagerDelegate
+    // MARK:- CLLocationManagerDelegate
     // iPhone の位置情報が更新されるたびに、デリゲートが呼ばれる
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
@@ -208,7 +208,7 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
     }
     
     
-    // MARK: detailViewDelegate
+    // MARK:- detailViewDelegate
     func detailViewFinish() {
         detailview?.delegate = nil
         detailview?.removeFromSuperview()
@@ -217,7 +217,7 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
     
     
     
-    // MARK: プライベート関数
+    // MARK:- プライベート関数
     
     /*
      *カメラの初期化
@@ -393,6 +393,7 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
             // 侵入していることを通知音で知らせる
             if audioPlayerIntr != nil {
                 audioPlayerIntr.play()
+                vibration.sharedInstance.vibNearStart()
             }
             warningMessage.isHidden = false
             warningMessage.text = jsonDataManager.sharedInstance.warnBox[num].message2 // 警告メッセージ
@@ -401,8 +402,13 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
             // 0m以上、kNearMsg(m)以下・・・付近
         } else if jsonDataManager.sharedInstance.warnBox[num].distance - Int(circleRadius[num]) < kNearMsg {
             // 付近にいることを通知音で知らせる
+            if audioPlayerIntr.isPlaying == true {
+                audioPlayerIntr.stop()
+                vibration.sharedInstance.vibStop()
+            }
             if audioPlayerNear != nil {
                 audioPlayerNear.play()
+                vibration.sharedInstance.vibNearStart()
             }
             warningMessage.isHidden = false
             warningMessage.text = jsonDataManager.sharedInstance.warnBox[num].message1 // 警告メッセージ
@@ -410,6 +416,10 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
             
             // それ以外・・・安全
         } else {
+            if audioPlayerNear.isPlaying == true {
+                audioPlayerNear.stop()
+                vibration.sharedInstance.vibStop()
+            }
             msgSafeCount += 1
             if msgSafeCount == box.count {
                 msgSafeCount = 0

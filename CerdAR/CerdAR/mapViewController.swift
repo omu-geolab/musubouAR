@@ -77,7 +77,7 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     var beforeZoomLv = 0.0
         
     
-    // MARK: ライフサイクル
+    // MARK:- ライフサイクル
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -253,7 +253,7 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     }
     
     
-    // MARK: デリゲート-MKMapViewDelegate
+    // MARK:- デリゲート-MKMapViewDelegate
     
     /*
      * 地図を触った後
@@ -426,7 +426,7 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         return circle
     }
     
-    // MARK: デリゲート-CLLocationManagerDelegate
+    // MARK:- デリゲート-CLLocationManagerDelegate
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("didFailWithError: \(error)")
     }
@@ -482,6 +482,7 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
             // 侵入していることを通知音で知らせる
             if audioPlayerIntr != nil {
                 audioPlayerIntr.play()
+                vibration.sharedInstance.vibIntrusionStart()
             }
             warningMessage.text = jsonDataManager.sharedInstance.warnBox[num].message2 // 警告メッセージ
             msgCount += 1
@@ -490,14 +491,23 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         } else if jsonDataManager.sharedInstance.warnBox[num].distance - Int(circleRadius[num]) < kNearMsg {
             warningMessage.isHidden = false
             // 付近にいることを通知音で知らせる
+            if audioPlayerIntr.isPlaying == true {
+                audioPlayerIntr.stop()
+                vibration.sharedInstance.vibStop()
+            }
             if audioPlayerNear != nil {
                 audioPlayerNear.play()
+                vibration.sharedInstance.vibNearStart()
             }
             warningMessage.text = jsonDataManager.sharedInstance.warnBox[num].message1 // 警告メッセージ
             msgCount += 1
             
             // それ以外・・・安全
         } else {
+            if audioPlayerNear.isPlaying == true {
+                audioPlayerNear.stop()
+                vibration.sharedInstance.vibStop()
+            }
             msgSafeCount += 1
             if msgSafeCount == box.count {
                 msgSafeCount = 0
@@ -588,7 +598,7 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     }
     
     
-    // MARK: detailViewDelegate
+    // MARK:- detailViewDelegate
     func detailViewFinish() {
         transFromDetailToMap(pinViewData)
         detailview?.delegate = nil
@@ -596,7 +606,7 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         
     }
     
-    // MARK: configViewDelegate
+    // MARK:- configViewDelegate
     func configViewFinish() {
         transFromDetailToMap(pinViewData)
         configview?.delegate = nil

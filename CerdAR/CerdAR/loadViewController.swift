@@ -201,7 +201,7 @@ class loadViewController: UIViewController, termsViewDelegate, CLLocationManager
     
     
     
-    // MARK: detailViewDelegate
+    // MARK:- detailViewDelegate
     func termsViewfinish() {
         termsview?.delegate = nil
         self.dismiss(animated: false, completion: nil)
