@@ -548,9 +548,9 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
      */
     func updateView() {
 
-        print("warnBox.count : \(jsonDataManager.sharedInstance.warnBox.count)")
-        print("box.count : \(box.count)")
-        print("viewCount : \(viewCount)")
+//        print("warnBox.count : \(jsonDataManager.sharedInstance.warnBox.count)")
+//        print("box.count : \(box.count)")
+//        print("viewCount : \(viewCount)")
 
         var warnbox = 0
         warnbox = jsonDataManager.sharedInstance.warnBox.count
@@ -564,9 +564,6 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
             viewSafeCount = 0
         }
         let num = box[viewCount] // 現在発生している災害のインデックスを渡す
-        print("num : \(num)")
-
-
         
         // 現在地からその災害までの距離を求める
         jsonDataManager.sharedInstance.warnBox[num].distance = calcDistance(jsonDataManager.sharedInstance.warnBox[num].lat, lon: jsonDataManager.sharedInstance.warnBox[num].lon, uLat: userLat, uLon: userLon)
@@ -847,12 +844,10 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         if displayMode == mode.osm.rawValue {
                 displayMode = mode.osmsat.rawValue
                 mapView.styleURL = MGLStyle.satelliteStyleURL(withVersion:9)
-                print("displayMode2 : \(displayMode)")
             
         }else  {
                 displayMode = mode.osm.rawValue
                 mapView.styleURL = MGLStyle.streetsStyleURL(withVersion:9)
-                print("displayMode3 : \(displayMode)")
     
         }
  
@@ -978,9 +973,11 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         // インデックスを初期化
         msgCount = 0
         viewCount = 0
-        
-        print("warnBox.count: \(jsonDataManager.sharedInstance.warnBox.count)")
-        
+
+        mapView.removeAnnotations(polygon) // 円を消す
+        mapView.removeAnnotations(osmInfoBox)
+        mapView.removeAnnotations(osmWarnBox) // 災害のピン情報を削除
+    
         // 追加
         for i in 0 ..< jsonDataManager.sharedInstance.infoBox.count {
             
@@ -1017,7 +1014,6 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
             // 現在災害発生中
             } else if jsonDataManager.sharedInstance.warnBox[i].stop.compare(nowTime) == ComparisonResult.orderedDescending && nowTime.compare(jsonDataManager.sharedInstance.warnBox[i].start) == ComparisonResult.orderedDescending {
                 
-                print("i: \(i)")
                 updatePin(i)
                 
                 let Sn = Date().timeIntervalSince(jsonDataManager.sharedInstance.warnBox[i].start) / 60 * kUpdateWarn // 開始時刻(start)と現在時刻(now)の差
