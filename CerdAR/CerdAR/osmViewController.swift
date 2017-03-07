@@ -136,16 +136,32 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         mapView.addSubview(warningMessage)
         warningMessage.isHidden = true
         
-        /* ピンの設定 */
-        for i in 0 ..< jsonDataManager.sharedInstance.infoBox.count {
-            
-            osmInfoBox.append(MGLTagData())
-            infoPinView.append(MGLAnnotationImage())
-            osmInfoBox[i].inforType = jsonDataManager.sharedInstance.infoBox[i].inforType // タグの種類
-            osmInfoBox[i].pinNum = i //ピン番号
-            osmInfoBox[i].coordinate = CLLocationCoordinate2D(latitude: jsonDataManager.sharedInstance.infoBox[i].lat, longitude: jsonDataManager.sharedInstance.infoBox[i].lon) // 位置
-            mapView.addAnnotation(osmInfoBox[i])
-        }
+//        /* ピンの設定 */
+//        for i in 0 ..< jsonDataManager.sharedInstance.infoBox.count {
+//            
+//            osmInfoBox.append(MGLTagData())
+//            infoPinView.append(MGLAnnotationImage())
+//            osmInfoBox[i].inforType = jsonDataManager.sharedInstance.infoBox[i].inforType // タグの種類
+//            osmInfoBox[i].pinNum = i //ピン番号
+//            osmInfoBox[i].coordinate = CLLocationCoordinate2D(latitude: jsonDataManager.sharedInstance.infoBox[i].lat, longitude: jsonDataManager.sharedInstance.infoBox[i].lon) // 位置
+//            mapView.addAnnotation(osmInfoBox[i])
+//        }
+//        
+//        for i in 0 ..< jsonDataManager.sharedInstance.warnBox.count {
+//            
+//            osmWarnBox.append(MGLTagData())
+//            warnPinView.append(MGLAnnotationImage())
+//            polygon.append(MGLPolygon())
+//            osmWarnBox[i].inforType = jsonDataManager.sharedInstance.warnBox[i].inforType // タグの種類
+//            osmWarnBox[i].pinNum = i //ピン番号
+//            osmWarnBox[i].coordinate = CLLocationCoordinate2D(latitude: jsonDataManager.sharedInstance.warnBox[i].lat, longitude: jsonDataManager.sharedInstance.warnBox[i].lon) // 位置
+//        }
+    }
+    
+    
+    /* 画面が表示される直前 */
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
         for i in 0 ..< jsonDataManager.sharedInstance.warnBox.count {
             
@@ -156,12 +172,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
             osmWarnBox[i].pinNum = i //ピン番号
             osmWarnBox[i].coordinate = CLLocationCoordinate2D(latitude: jsonDataManager.sharedInstance.warnBox[i].lat, longitude: jsonDataManager.sharedInstance.warnBox[i].lon) // 位置
         }
-    }
-    
-    
-    /* 画面が表示される直前 */
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+
         
         displayMode = mode.osm.rawValue
         
@@ -190,6 +201,13 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         }
         
         for i in 0 ..< jsonDataManager.sharedInstance.infoBox.count {
+            osmInfoBox.append(MGLTagData())
+            infoPinView.append(MGLAnnotationImage())
+            osmInfoBox[i].inforType = jsonDataManager.sharedInstance.infoBox[i].inforType // タグの種類
+            osmInfoBox[i].pinNum = i //ピン番号
+            osmInfoBox[i].coordinate = CLLocationCoordinate2D(latitude: jsonDataManager.sharedInstance.infoBox[i].lat, longitude: jsonDataManager.sharedInstance.infoBox[i].lon) // 位置
+            mapView.addAnnotation(osmInfoBox[i])
+
             infoPinView[i].image = jsonDataManager.sharedInstance.infoBox[i].pinImage
             mapView.addAnnotation(osmInfoBox[i])
         }
@@ -216,10 +234,17 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
             viewTimer.invalidate()
         }
         updateTimer.invalidate()
+        
+        osmInfoBox.removeAll()
+        osmWarnBox.removeAll()
+        infoPinView.removeAll()
+        warnPinView.removeAll()
+        polygon.removeAll()
     }
     
     
     override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
         
         if mapView.annotations?.count != nil {
             for annotation in self.mapView.annotations! {
@@ -769,6 +794,8 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         ConfigView().deleteConfigDisplay()
         self.present(mapViewController(), animated: true, completion: nil)
         updateTimer.invalidate() // update()を発火させていたOpenStreetMapsのタイマーを止める
+        self.dismiss(animated: false, completion: nil)
+
     }
     
     /*
