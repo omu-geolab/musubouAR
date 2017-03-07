@@ -486,6 +486,13 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
      */
     func updateMessage() {
         
+        var warnbox = 0
+        warnbox = jsonDataManager.sharedInstance.warnBox.count
+        
+        if box.count != warnbox {
+            msgCount = 0
+        }
+        
         if msgCount == box.count {
             msgCount = 0
             msgSafeCount = 0
@@ -540,13 +547,26 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
      * ここで、警告モードの色や濃さ、表示幅を変更できる
      */
     func updateView() {
+
+        print("warnBox.count : \(jsonDataManager.sharedInstance.warnBox.count)")
+        print("box.count : \(box.count)")
+        print("viewCount : \(viewCount)")
+
+        var warnbox = 0
+        warnbox = jsonDataManager.sharedInstance.warnBox.count
+        
+        if box.count != warnbox {
+            viewCount = 0
+        }
         
         if viewCount == box.count {
             viewCount = 0
             viewSafeCount = 0
         }
-        
         let num = box[viewCount] // 現在発生している災害のインデックスを渡す
+        print("num : \(num)")
+
+
         
         // 現在地からその災害までの距離を求める
         jsonDataManager.sharedInstance.warnBox[num].distance = calcDistance(jsonDataManager.sharedInstance.warnBox[num].lat, lon: jsonDataManager.sharedInstance.warnBox[num].lon, uLat: userLat, uLon: userLon)
@@ -959,6 +979,30 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         msgCount = 0
         viewCount = 0
         
+        print("warnBox.count: \(jsonDataManager.sharedInstance.warnBox.count)")
+        
+        // 追加
+        for i in 0 ..< jsonDataManager.sharedInstance.infoBox.count {
+            
+            osmInfoBox.append(MGLTagData())
+            infoPinView.append(MGLAnnotationImage())
+            osmInfoBox[i].inforType = jsonDataManager.sharedInstance.infoBox[i].inforType // タグの種類
+            osmInfoBox[i].pinNum = i //ピン番号
+            osmInfoBox[i].coordinate = CLLocationCoordinate2D(latitude: jsonDataManager.sharedInstance.infoBox[i].lat, longitude: jsonDataManager.sharedInstance.infoBox[i].lon) // 位置
+            mapView.addAnnotation(osmInfoBox[i])
+        }
+        
+        // 追加
+        for i in 0 ..< jsonDataManager.sharedInstance.warnBox.count {
+            
+            osmWarnBox.append(MGLTagData())
+            warnPinView.append(MGLAnnotationImage())
+            polygon.append(MGLPolygon())
+            osmWarnBox[i].inforType = jsonDataManager.sharedInstance.warnBox[i].inforType // タグの種類
+            osmWarnBox[i].pinNum = i //ピン番号
+            osmWarnBox[i].coordinate = CLLocationCoordinate2D(latitude: jsonDataManager.sharedInstance.warnBox[i].lat, longitude: jsonDataManager.sharedInstance.warnBox[i].lon) // 位置
+        }
+
         for i in 0 ..< jsonDataManager.sharedInstance.warnBox.count {
             
             // 過去の災害
@@ -973,6 +1017,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
             // 現在災害発生中
             } else if jsonDataManager.sharedInstance.warnBox[i].stop.compare(nowTime) == ComparisonResult.orderedDescending && nowTime.compare(jsonDataManager.sharedInstance.warnBox[i].start) == ComparisonResult.orderedDescending {
                 
+                print("i: \(i)")
                 updatePin(i)
                 
                 let Sn = Date().timeIntervalSince(jsonDataManager.sharedInstance.warnBox[i].start) / 60 * kUpdateWarn // 開始時刻(start)と現在時刻(now)の差
@@ -999,7 +1044,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         if box.count == 0 {
             warningMessage.isHidden = true // 警告メッセージを隠す
             
-            // 災害が発生しているとき
+        // 災害が発生しているとき
         } else {
             
             // 警告メッセージのタイマーを開始させる

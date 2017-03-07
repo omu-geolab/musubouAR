@@ -277,6 +277,10 @@ class jsonDataManager: NSObject {
         callback("finished")
     }
     
+    func removeData(){
+        infoBox.removeAll()
+        warnBox.removeAll()
+    }
     
     /*
      * String型で書かれた時間をNSData型に変換する
