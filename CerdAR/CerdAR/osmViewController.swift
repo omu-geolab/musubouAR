@@ -178,7 +178,11 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-//        displayMode = mode.osm.rawValue
+//        print("infoBox.count : \(jsonDataManager.sharedInstance.infoBox.count)")
+//        print("warnBox.count : \(jsonDataManager.sharedInstance.warnBox.count)")
+//        print("box.count : \(box.count)")
+        
+        displayMode = mode.osm.rawValue
         
         mapView.delegate = self
         
@@ -205,9 +209,24 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
             }
         }
         
+        /* 
+            地図の切替問題が解決されるまでの一時的な解決策
+            ARモードから地図モードに戻った際に，ARモードの情報アイコンが表示されてしまう問題に対処
+         
+         */
         for i in 0 ..< jsonDataManager.sharedInstance.infoBox.count {
-            infoPinView[i].image = jsonDataManager.sharedInstance.infoBox[i].pinImage
-            mapView.addAnnotation(osmInfoBox[i])
+ //           infoPinView[i].image = jsonDataManager.sharedInstance.infoBox[i].pinImage
+ //           mapView.addAnnotation(osmInfoBox[i])
+
+            if jsonDataManager.sharedInstance.infoBox[i].icon == "icon_infoTag.png" {
+
+                // 情報タグ
+                let labelImg = makeLabel(osmInfoBox[i].pinNum, inforType: osmInfoBox[i].inforType) // UILabelをUIImageに変換する
+                jsonDataManager.sharedInstance.infoBox[i].pinImage = getPinImage(labelImg, inforType: osmInfoBox[i].inforType)
+                jsonDataManager.sharedInstance.infoBox[i].expandImage = getPinImage(labelImg, inforType: osmInfoBox[i].inforType)
+            }
+            
+            
         }
         
         update() // 災害情報を更新する
@@ -236,7 +255,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         if viewTimer != nil {
             viewTimer.invalidate()
         }
-        updateTimer.invalidate()
+        //updateTimer.invalidate()
         dataUpdateTimer.invalidate()
     }
     

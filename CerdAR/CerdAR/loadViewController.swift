@@ -233,7 +233,7 @@ class loadViewController: UIViewController, termsViewDelegate, CLLocationManager
                     self.json = JSON(data: data!)
                         jsonDataManager.sharedInstance.removeData()
                         jsonDataManager.sharedInstance.storeData(json: self.json, callback: { _ in
-                            print("ネットワーク上のデータを見つけました！")
+//                            print("ネットワーク上のデータを見つけました！")
                         })
                 }
             })
