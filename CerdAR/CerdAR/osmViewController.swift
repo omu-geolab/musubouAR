@@ -237,6 +237,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
             viewTimer.invalidate()
         }
         updateTimer.invalidate()
+        dataUpdateTimer.invalidate()
     }
     
     

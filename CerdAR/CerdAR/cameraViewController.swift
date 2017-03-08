@@ -43,6 +43,7 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
     var viewTimer: Timer! // 警告モードを表示するためのタイマー
     var box: [Int] = [] // 現在発生している災害の番号を管理する配列
     var updateTimer: Timer! // 一定時間ごとにupdate()を発火させる
+    var dataUpdateTimer: Timer! // 一定時間ごとにデータ更新のためにdataUpdateManager()を動作させる
     
     var tagTimer: Timer! // タグを表示するためのタイマー
     var heading = 0.0 // 現在のユーザーの方位を保持する
@@ -135,6 +136,9 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
         
         // kTagUpdateTime秒に1回locateUpdate()を発火させる
         tagTimer = Timer.scheduledTimer(timeInterval: kTagUpdateTime, target: self, selector: #selector(cameraViewController.locateUpdate), userInfo: nil, repeats: true)
+        
+        // データを定期的に更新する
+        //dataUpdateTimer = Timer.scheduledTimer(timeInterval: 3, target: loadViewController(), selector: Selector(("dataUpdateManager")), userInfo: nil, repeats: true)
         
     }
     
@@ -296,6 +300,9 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
     func update() {
         
         let nowTime = Date() // 現在時刻
+//        print("## update.infoBox.count : \(jsonDataManager.sharedInstance.infoBox.count)")
+//        print("## update.box.count : \(box.count)")
+//        print("## infoImageBox.count : \(infoImageBox.count)")
         
         box.removeAll()
         
@@ -312,7 +319,29 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
         // インデックスを初期化
         msgCount = 0
         viewCount = 0
+
+        // 古いタグの削除
+        for i in 0 ..< infoImageBox.count{
+            infoImageBox[i].removeFromSuperview()
+        }
+        infoImageBox.removeAll()
         
+        for i in 0 ..< warnImageBox.count{
+            warnImageBox[i].removeFromSuperview()
+        }
+        warnImageBox.removeAll()
+        
+        
+        // 情報タグの初期化
+        for _ in 0 ..< jsonDataManager.sharedInstance.infoBox.count {
+            infoImageBox.append(UIImageView(frame: CGRect(x: 0.0, y: 0.0, width: 0.0, height: 0.0)))
+        }
+        
+        // 警告タグの初期化
+        for _ in 0 ..< jsonDataManager.sharedInstance.warnBox.count {
+            warnImageBox.append(UIImageView(frame: CGRect(x: 0.0, y: 0.0, width: 0.0, height: 0.0)))
+        }
+
         for i in 0 ..< jsonDataManager.sharedInstance.warnBox.count {
             
             // 現在発生中
@@ -356,6 +385,9 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
                 viewTimer = Timer.scheduledTimer(timeInterval: kUpdateMM, target: self, selector: #selector(cameraViewController.updateView), userInfo: nil, repeats: true)
             }
         }
+        // データを定期的に更新する
+        loadViewController().dataUpdateManager()        
+        
     }
     
     
@@ -365,6 +397,14 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
      * 警告メッセージを表示する
      */
     func updateMessage() {
+        
+        
+        var warnbox = 0
+        warnbox = jsonDataManager.sharedInstance.warnBox.count
+        
+        if box.count != warnbox {
+            msgCount = 0
+        }
         
         if msgCount == box.count {
             msgCount = 0
@@ -419,6 +459,14 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
      * 警告モードを表示する
      */
     func updateView() {
+        
+        
+        var warnbox = 0
+        warnbox = jsonDataManager.sharedInstance.warnBox.count
+        
+        if box.count != warnbox {
+            viewCount = 0
+        }
         
         if viewCount == box.count {
             viewCount = 0
@@ -512,8 +560,20 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
                         
                         DispatchQueue.main.async {
                             
-                            // タグを画面に表示させる
-                            self.tagDisplay(i, imageBox: &infoImageBox, tDir: jsonDataManager.sharedInstance.infoBox[i].direction, tDis: jsonDataManager.sharedInstance.infoBox[i].distance, compass: self.heading, inforType: jsonDataManager.sharedInstance.infoBox[i].inforType)
+                            // データが更新されるタイミングとバッティングするエラーを回避
+                            if self.box.count != jsonDataManager.sharedInstance.warnBox.count {
+                                return
+                            }
+                            if jsonDataManager.sharedInstance.infoBox[i].direction != nil  {
+                                
+                                // タグを画面に表示させる
+                                self.tagDisplay(i, imageBox: &infoImageBox, tDir:
+                                    jsonDataManager.sharedInstance.infoBox[i].direction, tDis:
+                                    jsonDataManager.sharedInstance.infoBox[i].distance, compass: self.heading, inforType:
+                                    jsonDataManager.sharedInstance.infoBox[i].inforType)
+                                
+                            }
+
                         }
                         
                     } else if jsonDataManager.sharedInstance.infoBox[i].distance >= kCamDis && jsonDataManager.sharedInstance.infoBox[i].distance <= kCamDis + 50 {
@@ -551,6 +611,11 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
                         default: // その他
                             warnImage = UIImage(named: "icon_infoTagAR.png")!
                             break
+                        }
+                        
+                        // データが更新されるタイミングとバッティングするエラーを回避
+                        if box.count != jsonDataManager.sharedInstance.warnBox.count {
+                            return
                         }
                         
                         // タグを画面に表示させる
