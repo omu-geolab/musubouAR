@@ -137,12 +137,11 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
         // kTagUpdateTime秒に1回locateUpdate()を発火させる
         tagTimer = Timer.scheduledTimer(timeInterval: kTagUpdateTime, target: self, selector: #selector(cameraViewController.locateUpdate), userInfo: nil, repeats: true)
         
-        // データを定期的に更新する
-        /*
+        // データを定期的に更新する        
         if dataUpdateTimer == nil {
             dataUpdateTimer = Timer.scheduledTimer(timeInterval: 3, target: loadViewController(), selector: Selector(("dataUpdateManager")), userInfo: nil, repeats: true)
         }
- */
+ 
     }
     
     
@@ -174,8 +173,9 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
         if viewTimer != nil {
             viewTimer.invalidate() // 警告モードのタイマーを止める
         }
-//        updateTimer.invalidate() // 災害情報の更新をするタイマーを止める
+        updateTimer.invalidate() // 災害情報の更新をするタイマーを止める
         tagTimer.invalidate() // タグ表示を更新するタイマーを止める
+        dataUpdateTimer.invalidate() // データを更新するタイマーを止める
     }
     
     override func didReceiveMemoryWarning() {
@@ -389,7 +389,7 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
             }
         }
         // データを定期的に更新する
-        loadViewController().dataUpdateManager()        
+       // loadViewController().dataUpdateManager()
         
     }
     
@@ -549,8 +549,6 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
             
             DispatchQueue(label: "showInfoTag").async {
                 
-                var infoTagCounter = jsonDataManager.sharedInstance.infoBox.count
-                
                 // 情報タグのとき
                 for i in 0 ..< jsonDataManager.sharedInstance.infoBox.count {
                     
@@ -566,9 +564,8 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
                         DispatchQueue.main.async {
                             
                             // データが更新されるタイミングとバッティングするエラーを回避
-//                            print("## infocount : \(infoTagCounter)")
-                            if infoTagCounter != jsonDataManager.sharedInstance.infoBox.count {
-                                print("## データが切り替わりました 1")
+//                            print("## infocount : \(infoImageBox.count)")
+                            if infoImageBox.count == jsonDataManager.sharedInstance.infoBox.count && jsonDataManager.sharedInstance.infoBox[i].direction != nil {
                             
                                 // タグを画面に表示させる
                                 self.tagDisplay(i, imageBox: &infoImageBox, tDir:
@@ -576,19 +573,21 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
                                     jsonDataManager.sharedInstance.infoBox[i].distance, compass: self.heading, inforType:
                                     jsonDataManager.sharedInstance.infoBox[i].inforType)
                                 
+                            } else {
+                                // Thread.sleep(forTimeInterval: 1.0)
+                                print("## データが切り替わりました")
+                                
                             }
 
                         }
                         
                     } else if jsonDataManager.sharedInstance.infoBox[i].distance >= kCamDis && jsonDataManager.sharedInstance.infoBox[i].distance <= kCamDis + 50 {
                         // データが更新されるタイミングとバッティングするエラーを回避
-                        if infoTagCounter != jsonDataManager.sharedInstance.infoBox.count {
+                        if infoImageBox.count == jsonDataManager.sharedInstance.infoBox.count {
+                           // print("## infocount 2: \(infoImageBox.count)")
                             infoImageBox[i].removeFromSuperview()
-                            print("## データが切り替わりました 2")
                         }
                     }
-                    infoTagCounter = jsonDataManager.sharedInstance.infoBox.count
-                    
                 }
             }
             
@@ -624,14 +623,23 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
                         }
                         
                         // データが更新されるタイミングとバッティングするエラーを回避
-                        if box.count != jsonDataManager.sharedInstance.warnBox.count {
-                            return
-                        }
+//                        if box.count != jsonDataManager.sharedInstance.warnBox.count {
+//                            return
+//                        }
+                        if warnImageBox.count == jsonDataManager.sharedInstance.warnBox.count && jsonDataManager.sharedInstance.warnBox[i].direction != nil {
+
+                            // タグを画面に表示させる
+                            tagDisplay(i, imageBox: &warnImageBox, tDir:
+                                jsonDataManager.sharedInstance.warnBox[i].direction, tDis:
+                                jsonDataManager.sharedInstance.warnBox[i].distance, compass: heading, inforType:
+                                jsonDataManager.sharedInstance.warnBox[i].inforType)
+                            
+                        } else {
+                            // Thread.sleep(forTimeInterval: 1.0)
+                            print("## データが切り替わりました")
                         
-                        // タグを画面に表示させる
-                        tagDisplay(i, imageBox: &warnImageBox, tDir: jsonDataManager.sharedInstance.warnBox[i].direction, tDis: jsonDataManager.sharedInstance.warnBox[i].distance, compass: heading, inforType: jsonDataManager.sharedInstance.warnBox[i].inforType)
+                        }
                     }
-                    
                 } else if Date().compare(jsonDataManager.sharedInstance.warnBox[i].stop) == ComparisonResult.orderedDescending {
                     
                     // 方角を取得する

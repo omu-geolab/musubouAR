@@ -231,12 +231,12 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         
         update() // 災害情報を更新する
         // kUpdateWarn秒に1回update()を発火させる
-        if updateTimer == nil {
+        if updateTimer == nil || (updateTimer.isValid) == false {
             updateTimer = Timer.scheduledTimer(timeInterval: kUpdateWarn, target: self, selector: #selector(osmViewController.update), userInfo: nil, repeats: true)
         }
         
         // データを定期的に更新する
-        if dataUpdateTimer == nil {
+        if dataUpdateTimer == nil || (dataUpdateTimer.isValid) == false {
             dataUpdateTimer = Timer.scheduledTimer(timeInterval: 3, target: loadViewController(), selector: Selector(("dataUpdateManager")), userInfo: nil, repeats: true)
         }
         
@@ -255,8 +255,8 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         if viewTimer != nil {
             viewTimer.invalidate()
         }
-        //updateTimer.invalidate()
-        dataUpdateTimer.invalidate()
+        updateTimer.invalidate() // 災害情報の更新をするタイマーを止める
+        dataUpdateTimer.invalidate() // データを更新するタイマーを止める
     }
     
     
