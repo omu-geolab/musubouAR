@@ -112,7 +112,7 @@ func makeLabel(_ num: Int, inforType: String) -> UIImage {
     
     if inforType == kInfo {
         
-        if displayMode == mode.applemap.rawValue || displayMode == mode.osm.rawValue { // 地図画面のとき
+        if displayMode == mode.applemap.rawValue || displayMode == mode.osm.rawValue || displayMode == mode.osmsat.rawValue { // 地図画面のとき
             let tagImg = UIImage(named: jsonDataManager.sharedInstance.infoBox[num].icon)! // 情報タグの画像
             label = UILabel(frame: CGRect.init(x: 0.0, y: 0.0, width: tagImg.size.width, height: tagImg.size.height)) //ラベルサイズ
             label.numberOfLines = 2 // ラベル内の行数

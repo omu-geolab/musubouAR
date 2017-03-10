@@ -56,7 +56,7 @@ class ConfigView: UIView {
         aboutAppBut.layer.cornerRadius = 10
         
         
-        print("displayMode : \(displayMode)")
+//        print("displayMode : \(displayMode)")
         // 「地図切り替え」ボタンの挿入(画面左上側)
         if displayMode == mode.applemap.rawValue {
             changeMapBut.setTitle("OpenStreetMapに切り替え", for: UIControlState()) // 通常

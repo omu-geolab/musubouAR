@@ -182,6 +182,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
 //        print("warnBox.count : \(jsonDataManager.sharedInstance.warnBox.count)")
 //        print("box.count : \(box.count)")
         
+        //print("displayMode : \(displayMode)")
         displayMode = mode.osm.rawValue
         
         mapView.delegate = self
@@ -237,8 +238,9 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         
         // データを定期的に更新する
         if dataUpdateTimer == nil || (dataUpdateTimer.isValid) == false {
-            dataUpdateTimer = Timer.scheduledTimer(timeInterval: 3, target: loadViewController(), selector: Selector(("dataUpdateManager")), userInfo: nil, repeats: true)
+            dataUpdateTimer = Timer.scheduledTimer(timeInterval: 5, target: loadViewController(), selector: Selector(("dataUpdateManager")), userInfo: nil, repeats: true)
         }
+ 
         
     }
     
@@ -246,6 +248,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         
+//        print("画面が変わりました")
         mapView.delegate = nil
         locationManager.delegate = nil
         locationManager.stopUpdatingLocation() // GPSの更新を停止する
@@ -844,22 +847,21 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
      * タップした際に，地図データを切り替える
      */
     internal func changeMB(_ sender: UIButton) {
+        mapView.delegate = self
+        mapView.frame = self.view.frame
+        mapView.showsUserLocation = true // 現在地を表示する
+        mapView.isPitchEnabled = false  // ジェスチャでの視点変更を許可しない
         mapView.allowsScrolling = true // スクロールできるにする
         mapView.allowsZooming = true // 拡大縮小できるようにする
         var location: CGPoint = mapView.center
         location.x = view.center.x
-        self.warningView?.center = location
+        
         self.mapView.center = location
-        
-        
+        self.warningView?.center = location
         self.warningView.backgroundColor = UIColor.clear
+        
         self.configview?.removeFromSuperview()
         ConfigView().deleteConfigDisplay()
-        
-        mapView.frame = self.view.frame
-        mapView.showsUserLocation = true // 現在地を表示する
-        mapView.isPitchEnabled = false  // ジェスチャでの視点変更を許可しない
-  //      mapView.delegate = self
         
         if displayMode == mode.osm.rawValue {
                 displayMode = mode.osmsat.rawValue
@@ -870,7 +872,6 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
                 mapView.styleURL = MGLStyle.streetsStyleURL(withVersion:9)
     
         }
- 
     }
     
     /*
@@ -998,7 +999,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         mapView.removeAnnotations(osmInfoBox)
         mapView.removeAnnotations(osmWarnBox) // 災害のピン情報を削除
     
-        // 追加
+        // 最新のデータに更新
         for i in 0 ..< jsonDataManager.sharedInstance.infoBox.count {
             
             osmInfoBox.append(MGLTagData())
@@ -1009,18 +1010,15 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
             mapView.addAnnotation(osmInfoBox[i])
         }
         
-        // 追加
         for i in 0 ..< jsonDataManager.sharedInstance.warnBox.count {
             
+            // 最新のデータに更新
             osmWarnBox.append(MGLTagData())
             warnPinView.append(MGLAnnotationImage())
             polygon.append(MGLPolygon())
             osmWarnBox[i].inforType = jsonDataManager.sharedInstance.warnBox[i].inforType // タグの種類
             osmWarnBox[i].pinNum = i //ピン番号
             osmWarnBox[i].coordinate = CLLocationCoordinate2D(latitude: jsonDataManager.sharedInstance.warnBox[i].lat, longitude: jsonDataManager.sharedInstance.warnBox[i].lon) // 位置
-        }
-
-        for i in 0 ..< jsonDataManager.sharedInstance.warnBox.count {
             
             // 過去の災害
             if nowTime.compare(jsonDataManager.sharedInstance.warnBox[i].stop) == ComparisonResult.orderedDescending {
@@ -1080,6 +1078,10 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
                 viewTimer = Timer.scheduledTimer(timeInterval: kUpdateMM, target: self, selector: #selector(osmViewController.updateView), userInfo: nil, repeats: true)
             }
         }
+        // データを定期的に更新する
+        //loadViewController().dataUpdateManager()
+
+        
     }
     
     /*
