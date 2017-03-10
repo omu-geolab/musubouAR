@@ -51,7 +51,6 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
     var messageTimer: Timer! // 警告メッセージを表示するためのタイマー
     var viewTimer: Timer! // 警告モードを表示するためのタイマー
     var updateTimer: Timer! // 一定時間ごとにupdate()を発火させる
-    var dataUpdateTimer: Timer! // 一定時間ごとに
     
     var warnState = warningState.safe.rawValue // 現在ユーザーは災害からどの位置にいるか(安全・付近・侵入)
     
@@ -62,9 +61,6 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
     let warningMessage = UILabel(frame: CGRect(x: screenWidth - 55.0 - butSize - screenWidth * 0.38, y: screenHeight - 125.0, width: screenWidth * 0.37, height: screenHeight * 0.13)) // 警告メッセージ
     
     var beforeZoomLv = 0.0
-    
-    var json: JSON!
-
     
     
     // 定数
@@ -215,13 +211,8 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         if updateTimer == nil {
             updateTimer = Timer.scheduledTimer(timeInterval: kUpdateWarn, target: self, selector: #selector(osmViewController.update), userInfo: nil, repeats: true)
         }
-        
-        // データを定期的に更新する
-        if dataUpdateTimer == nil {
-            dataUpdateTimer = Timer.scheduledTimer(timeInterval: 3, target: loadViewController(), selector: Selector(("dataUpdateManager")), userInfo: nil, repeats: true)
-        }
-        
     }
+    
     
     /* 別の画面に遷移した直後(破棄) */
     override func viewDidDisappear(_ animated: Bool) {

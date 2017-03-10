@@ -18,8 +18,6 @@ class loadViewController: UIViewController, termsViewDelegate, CLLocationManager
     
     var json: JSON!
     
-    let url = URL(string: "https://www.cerd.osaka-cu.ac.jp/cerdar_pics/Sugimoto/data.geojson")
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -170,6 +168,7 @@ class loadViewController: UIViewController, termsViewDelegate, CLLocationManager
      */
     func jsondata(callback: @escaping (String) -> Void) -> Void {
         
+        let url = URL(string: "https://www.cerd.osaka-cu.ac.jp/cerdar_pics/Sugimoto/data.geojson")
         let req = URLRequest(url: url!, timeoutInterval: 5.0)
         
         let configuration = URLSessionConfiguration.default
@@ -182,7 +181,7 @@ class loadViewController: UIViewController, termsViewDelegate, CLLocationManager
             // urlが見つからない、またはタイムアウトしたとき
             if error != nil {
                 callback("finished")
-            // 成功したとき
+                // 成功したとき
             } else {
                 self.json = JSON(data: data!)
                 callback("finished")
@@ -207,49 +206,6 @@ class loadViewController: UIViewController, termsViewDelegate, CLLocationManager
         self.dismiss(animated: false, completion: nil)
         //self.present(mapViewController(), animated: true, completion: nil)
         self.present(osmViewController(), animated: true, completion: nil)
-    }
-
-
-    /*
-     * データを定期的に更新する
-     */
-    func dataUpdateManager() {
-        if CheckReachability(hostname: "www") {
-            
-            let req = URLRequest(url: url!, timeoutInterval: 5.0)
-            
-            let configuration = URLSessionConfiguration.default
-            configuration.requestCachePolicy = NSURLRequest.CachePolicy.reloadIgnoringLocalCacheData
-            let session = URLSession(configuration: configuration, delegate:nil, delegateQueue:OperationQueue.main)
-            
-            let task = session.dataTask(with: req, completionHandler: {
-                (data, response, error) -> Void in
-                
-                // urlが見つからない、またはタイムアウトしたとき
-                if error != nil {
-                    print("URLが見つかりません")
-                // 成功したとき
-                } else {
-                    self.json = JSON(data: data!)
-//                    jsonDataManager.sharedInstance.storeData(json: self.json, callback: { _ in
-                        print("成功！")
-//                    })
-                }
-            })
-            task.resume()
-            
-            
-        } else { // 接続されていないとき
-            // エラーを表示する
-            let alert: UIAlertController = UIAlertController(title: "エラー!", message: "ネットワークに接続されていません", preferredStyle:  UIAlertControllerStyle.alert)
-            let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: {
-                (action: UIAlertAction!) -> Void in
-                print("OK")
-            })
-            alert.addAction(defaultAction)
-        }
-        
-        
     }
     
     
