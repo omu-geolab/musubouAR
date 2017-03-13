@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 import AVFoundation
 import CoreLocation
+import AudioToolbox
 
 class cameraViewController: UIViewController, CLLocationManagerDelegate, detailViewDelegate {
     
@@ -48,6 +49,8 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
     var heading = 0.0 // 現在のユーザーの方位を保持する
     var beforeHeading = 0.0 // kTagUpdateTime秒前のユーザーの方位を保持する
     
+    var vibrationTimer:Timer? = nil
+
     
     // アラート
     var alert: UIAlertController? = nil
@@ -161,6 +164,10 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+        
+        if vibrationTimer != nil && (vibrationTimer?.isValid)! {
+            vibStop()
+        }
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -393,7 +400,7 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
             // 侵入していることを通知音で知らせる
             if audioPlayerIntr != nil {
                 audioPlayerIntr.play()
-                vibration.sharedInstance.vibNearStart()
+                vibNearStart()
             }
             warningMessage.isHidden = false
             warningMessage.text = jsonDataManager.sharedInstance.warnBox[num].message2 // 警告メッセージ
@@ -404,11 +411,11 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
             // 付近にいることを通知音で知らせる
             if audioPlayerIntr.isPlaying == true {
                 audioPlayerIntr.stop()
-                vibration.sharedInstance.vibStop()
+                vibStop()
             }
             if audioPlayerNear != nil {
                 audioPlayerNear.play()
-                vibration.sharedInstance.vibNearStart()
+                vibNearStart()
             }
             warningMessage.isHidden = false
             warningMessage.text = jsonDataManager.sharedInstance.warnBox[num].message1 // 警告メッセージ
@@ -418,7 +425,7 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
         } else {
             if audioPlayerNear.isPlaying == true {
                 audioPlayerNear.stop()
-                vibration.sharedInstance.vibStop()
+                vibStop()
             }
             msgSafeCount += 1
             if msgSafeCount == box.count {
@@ -843,4 +850,30 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
         detailView().deleteDetailView()
     }
 
+}
+
+//TODO: 見直しが必要
+extension cameraViewController {
+    
+    func vibNearStart() {
+        vibStart(timeInterval:1.0)
+    }
+    
+    func vibIntrusionStart() {
+        vibStart(timeInterval:3.0)
+    }
+    
+    private func vibStart(timeInterval:TimeInterval) {
+        vibrationTimer = Timer.scheduledTimer(timeInterval: timeInterval, target: self, selector: #selector(cameraViewController.vibrate), userInfo: nil, repeats: true)
+        vibrationTimer?.fire()
+    }
+    
+    func vibrate(timer: Timer) {
+        AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
+    }
+    
+    func vibStop() {
+        vibrationTimer?.invalidate()
+        vibrationTimer = nil
+    }
 }
