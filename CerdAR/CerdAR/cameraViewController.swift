@@ -9,7 +9,6 @@ import Foundation
 import UIKit
 import AVFoundation
 import CoreLocation
-import AudioToolbox
 
 class cameraViewController: UIViewController, CLLocationManagerDelegate, detailViewDelegate {
     
@@ -32,7 +31,7 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
     var warningView = UIView(frame: CGRect(x: 0.0, y: 0.0, width: screenWidth, height: screenHeight)) // 警告モード
     var warnState = warningState.safe.rawValue // 現在ユーザーは災害からどの位置にいるか(安全・付近・侵入)
     
-    let warningMessage = UILabel(frame: CGRect(x: screenWidth * 0.35, y: screenHeight - 125.0, width: screenWidth * 0.6, height: screenHeight * 0.13)) // 警告メッセージ
+    let warningMessage = UILabel(frame: CGRect(x: screenWidth * 0.35, y: screenHeight * 0.85 , width: screenWidth * 0.6, height: screenHeight * 0.13)) // 警告メッセージ
     
     
     var warnNums: [Int] = [] // 災害番号
@@ -49,8 +48,7 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
     var heading = 0.0 // 現在のユーザーの方位を保持する
     var beforeHeading = 0.0 // kTagUpdateTime秒前のユーザーの方位を保持する
     
-    var vibrationTimer:Timer? = nil
-
+    let vibration = Vibration()
     
     // アラート
     var alert: UIAlertController? = nil
@@ -90,6 +88,7 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
 //        warningMessage.layer.borderWidth = 5.0 // 枠線の太さ
         warningMessage.layer.cornerRadius = 20.0 // 枠線を角丸にする
         warningMessage.clipsToBounds = true // 角を取る
+        warningMessage.adjustsFontSizeToFitWidth = true
         view.addSubview(warningMessage)
         warningMessage.isHidden = true
         
@@ -165,9 +164,7 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
-        if vibrationTimer != nil && (vibrationTimer?.isValid)! {
-            vibStop()
-        }
+        vibration.vibStop()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -400,7 +397,7 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
             // 侵入していることを通知音で知らせる
             if audioPlayerIntr != nil {
                 audioPlayerIntr.play()
-                vibNearStart()
+                vibration.vibNearStart()
             }
             warningMessage.isHidden = false
             warningMessage.text = jsonDataManager.sharedInstance.warnBox[num].message2 // 警告メッセージ
@@ -411,11 +408,11 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
             // 付近にいることを通知音で知らせる
             if audioPlayerIntr.isPlaying == true {
                 audioPlayerIntr.stop()
-                vibStop()
+                vibration.vibStop()
             }
             if audioPlayerNear != nil {
                 audioPlayerNear.play()
-                vibNearStart()
+                vibration.vibNearStart()
             }
             warningMessage.isHidden = false
             warningMessage.text = jsonDataManager.sharedInstance.warnBox[num].message1 // 警告メッセージ
@@ -425,7 +422,7 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
         } else {
             if audioPlayerNear.isPlaying == true {
                 audioPlayerNear.stop()
-                vibStop()
+                vibration.vibStop()
             }
             msgSafeCount += 1
             if msgSafeCount == box.count {
@@ -852,28 +849,3 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
 
 }
 
-//TODO: 見直しが必要
-extension cameraViewController {
-    
-    func vibNearStart() {
-        vibStart(timeInterval:1.0)
-    }
-    
-    func vibIntrusionStart() {
-        vibStart(timeInterval:3.0)
-    }
-    
-    private func vibStart(timeInterval:TimeInterval) {
-        vibrationTimer = Timer.scheduledTimer(timeInterval: timeInterval, target: self, selector: #selector(cameraViewController.vibrate), userInfo: nil, repeats: true)
-        vibrationTimer?.fire()
-    }
-    
-    func vibrate(timer: Timer) {
-        AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
-    }
-    
-    func vibStop() {
-        vibrationTimer?.invalidate()
-        vibrationTimer = nil
-    }
-}

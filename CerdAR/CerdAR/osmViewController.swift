@@ -12,8 +12,6 @@ import CoreMotion
 import CoreImage
 import Mapbox
 import SystemConfiguration
-import AudioToolbox
-
 
 let mapboxAccess = "pk.eyJ1Ijoic2FicmluYXp1cmFpbWkiLCJhIjoiY2lyaGFmbzFjMDE5cGc5bm42c2ozMnJlYSJ9.7W_kYbSqA3sEZUyS14s_Tw"
 
@@ -59,13 +57,11 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
     var polyNum = 0 // 災害円のインデックス
     
 //    let warningMessage = UILabel(frame: CGRect(x: screenWidth * 0.2, y: screenHeight - 125.0, width: screenWidth * 0.6, height: screenHeight * 0.13)) // 警告メッセージ
-    let warningMessage = UILabel(frame: CGRect(x: screenWidth - 55.0 - butSize - screenWidth * 0.38, y: screenHeight - 125.0, width: screenWidth * 0.37, height: screenHeight * 0.13)) // 警告メッセージ
+    let warningMessage = UILabel(frame: CGRect(x: screenWidth - 55.0 - butSize - screenWidth * 0.38, y: screenHeight * 0.85, width: screenWidth * 0.37, height: screenHeight * 0.13)) // 警告メッセージ
     
     var beforeZoomLv = 0.0
     
-    var vibrationTimer:Timer? = nil
-
-    
+    let vibration = Vibration()
     
     // 定数
     let kWarnFont: CGFloat = 20 // 警告メッセージのフォントサイズ
@@ -256,9 +252,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
             }
         }
         
-        if vibrationTimer != nil && (vibrationTimer?.isValid)! {
-            vibStop()
-        }
+        vibration.vibStop()
 
     }
     
@@ -518,7 +512,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
             // 侵入していることを通知音で知らせる
             if audioPlayerIntr != nil {
                 audioPlayerIntr.play()
-                vibIntrusionStart()
+                vibration.vibIntrusionStart()
             }
             warningMessage.isHidden = false
             warningMessage.text = jsonDataManager.sharedInstance.warnBox[num].message2 // 警告メッセージ
@@ -529,11 +523,11 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
             // 付近にいることを通知音で知らせる
             if audioPlayerIntr.isPlaying == true {
                 audioPlayerIntr.stop()
-                vibStop()
+                vibration.vibStop()
             }
             if audioPlayerNear != nil {
                 audioPlayerNear.play()
-                vibNearStart()
+                vibration.vibNearStart()
             }
             warningMessage.isHidden = false
             warningMessage.text = jsonDataManager.sharedInstance.warnBox[num].message1 // 警告メッセージ
@@ -543,7 +537,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         } else {
             if audioPlayerNear.isPlaying == true {
                 audioPlayerNear.stop()
-                vibStop()
+                vibration.vibStop()
             }
             msgSafeCount += 1
             if msgSafeCount == box.count {
@@ -1015,29 +1009,4 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         return (isReachable && !needsConnection)
     }
     
-}
-
-//TODO: 見直しが必要
-extension osmViewController {
-    func vibNearStart() {
-        vibStart(timeInterval:1.0)
-    }
-    
-    func vibIntrusionStart() {
-        vibStart(timeInterval:3.0)
-    }
-    
-    private func vibStart(timeInterval:TimeInterval) {
-        vibrationTimer = Timer.scheduledTimer(timeInterval: timeInterval, target: self, selector: #selector(osmViewController.vibrate), userInfo: nil, repeats: true)
-        vibrationTimer?.fire()
-    }
-    
-    func vibrate(timer: Timer) {
-        AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
-    }
-    
-    func vibStop() {
-        vibrationTimer?.invalidate()
-        vibrationTimer = nil
-    }
 }

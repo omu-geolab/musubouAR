@@ -70,6 +70,7 @@ class jsonDataManager: NSObject {
                     continue
                 }
                 
+                //TODO:Name→nameにする
                 if let name = json["features"][i]["properties"]["Name"].string { // 目的地の名前
                     infoBox[iN].name = name
                 } else {
@@ -180,7 +181,7 @@ class jsonDataManager: NSObject {
                     continue
                 }
                 
-                
+                //TODO:Name→nameにする
                 if let name = json["features"][i]["properties"]["Name"].string { // 目的地の名前
                     warnBox[wN].name = name
                 } else {
