@@ -10,7 +10,6 @@ import MapKit
 import CoreLocation
 import CoreImage
 import SystemConfiguration
-import AudioToolbox
 
 
 /* UIImageに変換する */
@@ -66,7 +65,7 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     var warnState = warningState.safe.rawValue // 現在ユーザーは災害からどの位置にいるか(安全・付近・侵入)
     
 //    let warningMessage = UILabel(frame: CGRect(x: screenWidth * 0.2, y: screenHeight - 125.0, width: screenWidth * 0.6, height: screenHeight * 0.13)) // 警告メッセージ
-    let warningMessage = UILabel(frame: CGRect(x: screenWidth - 55.0 - butSize - screenWidth * 0.38, y: screenHeight - 125.0, width: screenWidth * 0.37, height: screenHeight * 0.13)) // 警告メッセージ
+    let warningMessage = UILabel(frame: CGRect(x: screenWidth - 55.0 - butSize - screenWidth * 0.38, y: screenHeight * 0.85, width: screenWidth * 0.37, height: screenHeight * 0.13)) // 警告メッセージ
     
     class appleMapsAnnotation: MKPointAnnotation {
         var tagData: TagData!
@@ -77,8 +76,7 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     
     var beforeZoomLv = 0.0
     
-    var vibrationTimer:Timer? = nil
-    
+    let vibration = Vibration()
     
     // MARK:- ライフサイクル
     override func viewDidLoad() {
@@ -222,9 +220,7 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
             self.mapView!.removeAnnotation(annotation)
         }
         
-        if vibrationTimer != nil && (vibrationTimer?.isValid)! {
-            vibStop()
-        }
+        vibration.vibStop()
         
     }
     
@@ -475,7 +471,7 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
             // 侵入していることを通知音で知らせる
             if audioPlayerIntr != nil {
                 audioPlayerIntr.play()
-                vibIntrusionStart()
+                vibration.vibIntrusionStart()
             }
             warningMessage.text = jsonDataManager.sharedInstance.warnBox[num].message2 // 警告メッセージ
             msgCount += 1
@@ -486,11 +482,11 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
             // 付近にいることを通知音で知らせる
             if audioPlayerIntr.isPlaying == true {
                 audioPlayerIntr.stop()
-                vibStop()
+                vibration.vibStop()
             }
             if audioPlayerNear != nil {
                 audioPlayerNear.play()
-                vibNearStart()
+                vibration.vibNearStart()
             }
             warningMessage.text = jsonDataManager.sharedInstance.warnBox[num].message1 // 警告メッセージ
             msgCount += 1
@@ -499,7 +495,7 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         } else {
             if audioPlayerNear.isPlaying == true {
                 audioPlayerNear.stop()
-                vibStop()
+                vibration.vibStop()
             }
             msgSafeCount += 1
             if msgSafeCount == box.count {
@@ -979,26 +975,5 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
 //TODO: 見直しが必要
 extension mapViewController {
     
-    func vibNearStart() {
-        vibStart(timeInterval:1.0)
-    }
-    
-    func vibIntrusionStart() {
-        vibStart(timeInterval:3.0)
-    }
-    
-    private func vibStart(timeInterval:TimeInterval) {
-        vibrationTimer = Timer.scheduledTimer(timeInterval: timeInterval, target: self, selector: #selector(mapViewController.vibrate), userInfo: nil, repeats: true)
-        vibrationTimer?.fire()
-    }
-    
-    func vibrate(timer: Timer) {
-        AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
-    }
-    
-    func vibStop() {
-        vibrationTimer?.invalidate()
-        vibrationTimer = nil
-    }
 }
 
