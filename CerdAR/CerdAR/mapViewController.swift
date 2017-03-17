@@ -143,17 +143,17 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         mapView!.addSubview(warningMessage)
         warningMessage.isHidden = true
         
-        for i in 0 ..< jsonDataManager.sharedInstance.infoBox.count {
-            appleMapsInfoBox.append(appleMapsAnnotation())
-            appleMapsInfoBox[i].tagData = jsonDataManager.sharedInstance.infoBox[i]
-            appleMapsInfoBox[i].coordinate = CLLocationCoordinate2DMake(appleMapsInfoBox[i].tagData.lat, appleMapsInfoBox[i].tagData.lon)
-        }
-        
-        for i in 0 ..< jsonDataManager.sharedInstance.warnBox.count {
-            appleMapsWarnBox.append(appleMapsAnnotation())
-            appleMapsWarnBox[i].tagData = jsonDataManager.sharedInstance.warnBox[i]
-            appleMapsWarnBox[i].coordinate = CLLocationCoordinate2DMake(appleMapsWarnBox[i].tagData.lat, appleMapsWarnBox[i].tagData.lon)
-        }
+//        for i in 0 ..< jsonDataManager.sharedInstance.infoBox.count {
+//            appleMapsInfoBox.append(appleMapsAnnotation())
+//            appleMapsInfoBox[i].tagData = jsonDataManager.sharedInstance.infoBox[i]
+//            appleMapsInfoBox[i].coordinate = CLLocationCoordinate2DMake(appleMapsInfoBox[i].tagData.lat, appleMapsInfoBox[i].tagData.lon)
+//        }
+//        
+//        for i in 0 ..< jsonDataManager.sharedInstance.warnBox.count {
+//            appleMapsWarnBox.append(appleMapsAnnotation())
+//            appleMapsWarnBox[i].tagData = jsonDataManager.sharedInstance.warnBox[i]
+//            appleMapsWarnBox[i].coordinate = CLLocationCoordinate2DMake(appleMapsWarnBox[i].tagData.lat, appleMapsWarnBox[i].tagData.lon)
+//        }
     }
     
     
@@ -177,11 +177,18 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         
         // ピンに画像を設定する
         for i in 0 ..< jsonDataManager.sharedInstance.infoBox.count {
+            appleMapsInfoBox.append(appleMapsAnnotation())
+            appleMapsInfoBox[i].tagData = jsonDataManager.sharedInstance.infoBox[i]
+            appleMapsInfoBox[i].coordinate = CLLocationCoordinate2DMake(appleMapsInfoBox[i].tagData.lat, appleMapsInfoBox[i].tagData.lon)
             infoPinView.append(MKAnnotationView())
             updatePin(appleMapsInfoBox[i])
         }
         
         for i in 0 ..< jsonDataManager.sharedInstance.warnBox.count {
+            appleMapsWarnBox.append(appleMapsAnnotation())
+            appleMapsWarnBox[i].tagData = jsonDataManager.sharedInstance.warnBox[i]
+            appleMapsWarnBox[i].coordinate = CLLocationCoordinate2DMake(appleMapsWarnBox[i].tagData.lat, appleMapsWarnBox[i].tagData.lon)
+
             warnPinView.append(MKAnnotationView())
             circle.append(MKCircle())
             
@@ -239,6 +246,13 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
             viewTimer.invalidate()
         }
         updateTimer.invalidate() // update()を発火させていたAppleMapsのタイマーを止める
+        
+        infoPinView.removeAll()
+        warnPinView.removeAll()
+        box.removeAll()
+        circle.removeAll()
+        appleMapsInfoBox.removeAll()
+        appleMapsWarnBox.removeAll()
     }
     
     
@@ -824,6 +838,9 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         configview?.removeFromSuperview()
         ConfigView().deleteConfigDisplay()
         self.present(osmViewController(), animated: true, completion: nil)
+        
+        self.dismiss(animated: false, completion: nil)
+
     }
     
     
