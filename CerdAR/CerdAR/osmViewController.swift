@@ -752,7 +752,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
      * 設定画面を開く
      */
     internal func onClick_config(_ sender: UIButton) {
-        
+                
         mapView.allowsScrolling = false // スクロールできないようにする
         mapView.allowsZooming = false // 拡大縮小できないようにする
         var location: CGPoint = mapView.center
@@ -762,7 +762,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         backgroundView.isUserInteractionEnabled = true
         backgroundView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(osmViewController.onClick_configBackground(_:))))
         self.configview = ConfigView(frame: CGRect(x: screenWidth / 3 * 2, y: 0, width: screenWidth / 3, height: screenHeight))
-        
+        self.warningView.backgroundColor = UIColor.clear
         
         UIView.animate(
             withDuration: 0.1,

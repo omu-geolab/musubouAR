@@ -35,25 +35,28 @@ class detailView: UIView {
         //背景色
         backgroundColor = UIColor.white
         
-        // タイトルの挿入(画面上側)
-        let titlelBar = UILabel(frame: CGRect.init(x: 0, y: 0, width: dWid, height: dHei * 0.1))
-        titlelBar.text = pinData.name
-        titlelBar.textAlignment = NSTextAlignment.center
-        titlelBar.font = UIFont.systemFont(ofSize: 30)
-        titlelBar.backgroundColor = UIColor.lightGray
-        self.addSubview(titlelBar)
-        
         // 閉じるボタンの挿入(画面左上側)
-        let backButton = UIButton(frame: CGRect.init(x: 0, y: 0, width: screenWidth * 0.8 * 0.1, height: screenHeight * 0.8 * 0.1))
+        let backButton = UIButton(frame: CGRect.init(x: 0, y: 0, width: screenWidth * 0.8 * 0.1, height: dHei * 0.1))
         backButton.setTitle("＜ 戻る", for: UIControlState()) // 通常
         backButton.setTitleColor(UIColor.white, for: UIControlState())
         backButton.setTitle("＜ 戻る", for: UIControlState.highlighted) // ハイライト
-        backButton.titleLabel?.adjustsFontSizeToFitWidth = true
         backButton.setTitleColor(UIColor.black, for: UIControlState.highlighted)
-        backButton.layer.position = CGPoint(x: dWid * 0.05, y: dHei * 0.05)
+        backButton.titleLabel?.adjustsFontSizeToFitWidth = true
+//        backButton.layer.position = CGPoint(x: dWid * 0.05, y: dHei * 0.05)
         backButton.addTarget(self, action: #selector(detailView.onClick_back(_:)), for:.touchUpInside)
         
-        self.addSubview(backButton)
+        // タイトルの挿入(画面上側)
+        let titlelBar = UILabel(frame: CGRect.init(x: screenWidth * 0.8 * 0.1, y: 0, width: dWid - (screenWidth * 0.8 * 0.1), height: dHei * 0.1))
+        titlelBar.text = pinData.name
+        titlelBar.textAlignment = NSTextAlignment.center
+        titlelBar.font = UIFont.systemFont(ofSize: 30)
+        backButton.titleLabel?.adjustsFontSizeToFitWidth = true
+        
+        let baseBar = UIView(frame: CGRect.init(x: 0, y: 0, width: dWid, height: dHei * 0.1))
+        baseBar.backgroundColor = UIColor.lightGray
+        baseBar.addSubview(titlelBar)
+        baseBar.addSubview(backButton)
+        self.addSubview(baseBar)
         
         // コメントの挿入(画面右側)
         let comment = UILabel(frame: CGRect.init(x: 0, y: 0, width: dWid * 0.4 * 0.99, height: dHei * 0.6))

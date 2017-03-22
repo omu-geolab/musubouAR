@@ -942,7 +942,8 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         backgroundView.isUserInteractionEnabled = true
         backgroundView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(mapViewController.onClick_configBackground(_:))))
         self.configview = ConfigView(frame: CGRect(x: screenWidth / 3 * 2, y: 0, width: screenWidth / 3, height: screenHeight))
-        
+        self.warningView.backgroundColor = UIColor.clear
+
         var location: CGPoint = mapView!.center
         location.x = view.center.x - screenWidth / 3
         
@@ -980,9 +981,3 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         return (isReachable && !needsConnection)
     }
 }
-
-//TODO: 見直しが必要
-extension mapViewController {
-    
-}
-
