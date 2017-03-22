@@ -127,8 +127,6 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         
         nowLoc_button.addTarget(self, action: #selector(mapViewController.onClick_nowLocate(_:)), for: .touchUpInside)
         
-        changeMapBut.addTarget(self, action: #selector(mapViewController.onClick_changeMap(_:)), for: .touchUpInside)
-        
         /* 警告タグメッセージの設定 */
         warningMessage.textColor = UIColor.black // 文字色(黒)
         warningMessage.backgroundColor = UIColor.white.withAlphaComponent(CGFloat(kMsgAlpha)) // 背景色(白)
@@ -143,17 +141,17 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         mapView!.addSubview(warningMessage)
         warningMessage.isHidden = true
         
-//        for i in 0 ..< jsonDataManager.sharedInstance.infoBox.count {
-//            appleMapsInfoBox.append(appleMapsAnnotation())
-//            appleMapsInfoBox[i].tagData = jsonDataManager.sharedInstance.infoBox[i]
-//            appleMapsInfoBox[i].coordinate = CLLocationCoordinate2DMake(appleMapsInfoBox[i].tagData.lat, appleMapsInfoBox[i].tagData.lon)
-//        }
-//        
-//        for i in 0 ..< jsonDataManager.sharedInstance.warnBox.count {
-//            appleMapsWarnBox.append(appleMapsAnnotation())
-//            appleMapsWarnBox[i].tagData = jsonDataManager.sharedInstance.warnBox[i]
-//            appleMapsWarnBox[i].coordinate = CLLocationCoordinate2DMake(appleMapsWarnBox[i].tagData.lat, appleMapsWarnBox[i].tagData.lon)
-//        }
+        for i in 0 ..< jsonDataManager.sharedInstance.infoBox.count {
+            appleMapsInfoBox.append(appleMapsAnnotation())
+            appleMapsInfoBox[i].tagData = jsonDataManager.sharedInstance.infoBox[i]
+            appleMapsInfoBox[i].coordinate = CLLocationCoordinate2DMake(appleMapsInfoBox[i].tagData.lat, appleMapsInfoBox[i].tagData.lon)
+        }
+        
+        for i in 0 ..< jsonDataManager.sharedInstance.warnBox.count {
+            appleMapsWarnBox.append(appleMapsAnnotation())
+            appleMapsWarnBox[i].tagData = jsonDataManager.sharedInstance.warnBox[i]
+            appleMapsWarnBox[i].coordinate = CLLocationCoordinate2DMake(appleMapsWarnBox[i].tagData.lat, appleMapsWarnBox[i].tagData.lon)
+        }
     }
     
     
@@ -163,6 +161,7 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         super.viewWillAppear(animated)
         
         mapView?.delegate = self
+
         
         /* 現在地の取得を開始 */
         if CheckReachability(hostname: "www") {
@@ -173,22 +172,16 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
             }
         }
         
+        changeMapBut.addTarget(self, action: #selector(mapViewController.onClick_changeMap(_:)), for: .touchUpInside)
         displayMode = mode.applemap.rawValue // 現在開いている画面は地図画面であると設定する
         
         // ピンに画像を設定する
         for i in 0 ..< jsonDataManager.sharedInstance.infoBox.count {
-            appleMapsInfoBox.append(appleMapsAnnotation())
-            appleMapsInfoBox[i].tagData = jsonDataManager.sharedInstance.infoBox[i]
-            appleMapsInfoBox[i].coordinate = CLLocationCoordinate2DMake(appleMapsInfoBox[i].tagData.lat, appleMapsInfoBox[i].tagData.lon)
             infoPinView.append(MKAnnotationView())
             updatePin(appleMapsInfoBox[i])
         }
         
         for i in 0 ..< jsonDataManager.sharedInstance.warnBox.count {
-            appleMapsWarnBox.append(appleMapsAnnotation())
-            appleMapsWarnBox[i].tagData = jsonDataManager.sharedInstance.warnBox[i]
-            appleMapsWarnBox[i].coordinate = CLLocationCoordinate2DMake(appleMapsWarnBox[i].tagData.lat, appleMapsWarnBox[i].tagData.lon)
-
             warnPinView.append(MKAnnotationView())
             circle.append(MKCircle())
             
@@ -227,6 +220,7 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
             self.mapView!.removeAnnotation(annotation)
         }
         
+        changeMapBut.removeTarget(self, action: #selector(mapViewController.onClick_changeMap(_:)), for: .touchUpInside)
         vibration.vibStop()
         
     }
@@ -246,13 +240,6 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
             viewTimer.invalidate()
         }
         updateTimer.invalidate() // update()を発火させていたAppleMapsのタイマーを止める
-        
-        infoPinView.removeAll()
-        warnPinView.removeAll()
-        box.removeAll()
-        circle.removeAll()
-        appleMapsInfoBox.removeAll()
-        appleMapsWarnBox.removeAll()
     }
     
     
@@ -485,7 +472,9 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
             // 侵入していることを通知音で知らせる
             if audioPlayerIntr != nil {
                 audioPlayerIntr.play()
-                vibration.vibIntrusionStart()
+                if vibration.isVibration == false {
+                    vibration.vibIntrusionStart()
+                }
             }
             warningMessage.text = jsonDataManager.sharedInstance.warnBox[num].message2 // 警告メッセージ
             msgCount += 1
@@ -500,7 +489,9 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
             }
             if audioPlayerNear != nil {
                 audioPlayerNear.play()
-                vibration.vibNearStart()
+                if vibration.isVibration == false {
+                    vibration.vibNearStart()
+                }
             }
             warningMessage.text = jsonDataManager.sharedInstance.warnBox[num].message1 // 警告メッセージ
             msgCount += 1
@@ -791,6 +782,7 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         
         var location: CGPoint = mapView!.center
         location.x = view.center.x
+        self.warningView.backgroundColor = UIColor.clear
         
         UIView.animate(
             withDuration: 0.1,
@@ -837,10 +829,10 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         
         configview?.removeFromSuperview()
         ConfigView().deleteConfigDisplay()
-        self.present(osmViewController(), animated: true, completion: nil)
+//        self.present(osmViewController(), animated: true, completion: nil)
         
-        self.dismiss(animated: false, completion: nil)
-
+        let osmVC = osmViewController()
+        UIApplication.shared.keyWindow?.rootViewController = osmVC
     }
     
     

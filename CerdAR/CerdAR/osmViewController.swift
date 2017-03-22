@@ -136,26 +136,26 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         mapView.addSubview(warningMessage)
         warningMessage.isHidden = true
         
-//        /* ピンの設定 */
-//        for i in 0 ..< jsonDataManager.sharedInstance.infoBox.count {
-//            
-//            osmInfoBox.append(MGLTagData())
-//            infoPinView.append(MGLAnnotationImage())
-//            osmInfoBox[i].inforType = jsonDataManager.sharedInstance.infoBox[i].inforType // タグの種類
-//            osmInfoBox[i].pinNum = i //ピン番号
-//            osmInfoBox[i].coordinate = CLLocationCoordinate2D(latitude: jsonDataManager.sharedInstance.infoBox[i].lat, longitude: jsonDataManager.sharedInstance.infoBox[i].lon) // 位置
-//            mapView.addAnnotation(osmInfoBox[i])
-//        }
-//        
-//        for i in 0 ..< jsonDataManager.sharedInstance.warnBox.count {
-//            
-//            osmWarnBox.append(MGLTagData())
-//            warnPinView.append(MGLAnnotationImage())
-//            polygon.append(MGLPolygon())
-//            osmWarnBox[i].inforType = jsonDataManager.sharedInstance.warnBox[i].inforType // タグの種類
-//            osmWarnBox[i].pinNum = i //ピン番号
-//            osmWarnBox[i].coordinate = CLLocationCoordinate2D(latitude: jsonDataManager.sharedInstance.warnBox[i].lat, longitude: jsonDataManager.sharedInstance.warnBox[i].lon) // 位置
-//        }
+        /* ピンの設定 */
+        for i in 0 ..< jsonDataManager.sharedInstance.infoBox.count {
+            
+            osmInfoBox.append(MGLTagData())
+            infoPinView.append(MGLAnnotationImage())
+            osmInfoBox[i].inforType = jsonDataManager.sharedInstance.infoBox[i].inforType // タグの種類
+            osmInfoBox[i].pinNum = i //ピン番号
+            osmInfoBox[i].coordinate = CLLocationCoordinate2D(latitude: jsonDataManager.sharedInstance.infoBox[i].lat, longitude: jsonDataManager.sharedInstance.infoBox[i].lon) // 位置
+            mapView.addAnnotation(osmInfoBox[i])
+        }
+        
+        for i in 0 ..< jsonDataManager.sharedInstance.warnBox.count {
+            
+            osmWarnBox.append(MGLTagData())
+            warnPinView.append(MGLAnnotationImage())
+            polygon.append(MGLPolygon())
+            osmWarnBox[i].inforType = jsonDataManager.sharedInstance.warnBox[i].inforType // タグの種類
+            osmWarnBox[i].pinNum = i //ピン番号
+            osmWarnBox[i].coordinate = CLLocationCoordinate2D(latitude: jsonDataManager.sharedInstance.warnBox[i].lat, longitude: jsonDataManager.sharedInstance.warnBox[i].lon) // 位置
+        }
     }
     
     
@@ -201,13 +201,6 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         }
         
         for i in 0 ..< jsonDataManager.sharedInstance.infoBox.count {
-            osmInfoBox.append(MGLTagData())
-            infoPinView.append(MGLAnnotationImage())
-            osmInfoBox[i].inforType = jsonDataManager.sharedInstance.infoBox[i].inforType // タグの種類
-            osmInfoBox[i].pinNum = i //ピン番号
-            osmInfoBox[i].coordinate = CLLocationCoordinate2D(latitude: jsonDataManager.sharedInstance.infoBox[i].lat, longitude: jsonDataManager.sharedInstance.infoBox[i].lon) // 位置
-            mapView.addAnnotation(osmInfoBox[i])
-
             infoPinView[i].image = jsonDataManager.sharedInstance.infoBox[i].pinImage
             mapView.addAnnotation(osmInfoBox[i])
         }
@@ -233,13 +226,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         if viewTimer != nil {
             viewTimer.invalidate()
         }
-        updateTimer.invalidate()
-        
-        osmInfoBox.removeAll()
-        osmWarnBox.removeAll()
-        infoPinView.removeAll()
-        warnPinView.removeAll()
-        polygon.removeAll()
+        updateTimer.invalidate()        
     }
     
     
@@ -253,6 +240,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         }
         
         vibration.vibStop()
+        changeMapBut.removeTarget(self, action: #selector(mapViewController.onClick_changeMap(_:)), for: .touchUpInside)
 
     }
     
@@ -512,7 +500,9 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
             // 侵入していることを通知音で知らせる
             if audioPlayerIntr != nil {
                 audioPlayerIntr.play()
-                vibration.vibIntrusionStart()
+                if vibration.isVibration == false {
+                    vibration.vibIntrusionStart()
+                }
             }
             warningMessage.isHidden = false
             warningMessage.text = jsonDataManager.sharedInstance.warnBox[num].message2 // 警告メッセージ
@@ -527,7 +517,9 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
             }
             if audioPlayerNear != nil {
                 audioPlayerNear.play()
-                vibration.vibNearStart()
+                if vibration.isVibration == false {
+                    vibration.vibNearStart()
+                }
             }
             warningMessage.isHidden = false
             warningMessage.text = jsonDataManager.sharedInstance.warnBox[num].message1 // 警告メッセージ
@@ -805,10 +797,14 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         
         configview?.removeFromSuperview()
         ConfigView().deleteConfigDisplay()
-        self.present(mapViewController(), animated: true, completion: nil)
+//        self.present(mapViewController(), animated: true, completion: nil)
         updateTimer.invalidate() // update()を発火させていたOpenStreetMapsのタイマーを止める
-        self.dismiss(animated: false, completion: nil)
+//        self.dismiss(animated: false, completion: nil)
 
+        let mapVC = mapViewController()
+        UIApplication.shared.keyWindow?.rootViewController = mapVC
+
+        
     }
     
     /*
@@ -821,6 +817,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         mapView.allowsZooming = true // 拡大縮小できるようにする
         var location: CGPoint = mapView.center
         location.x = view.center.x
+        self.warningView.backgroundColor = UIColor.clear
         
         UIView.animate(
             withDuration: 0.1,
@@ -832,7 +829,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
             },
             completion: {
                 (value: Bool) in
-                self.warningView.backgroundColor = UIColor.clear
+//                self.warningView.backgroundColor = UIColor.clear
                 self.configview?.removeFromSuperview()
                 ConfigView().deleteConfigDisplay()
             }

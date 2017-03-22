@@ -143,8 +143,6 @@ class loadViewController: UIViewController, termsViewDelegate, CLLocationManager
      */
     func notificationSound() {
         
-        //TODO:バイブを入れる
-        
         do {
             let filePath = Bundle.main.path(forResource: "sound_intrusion", ofType: "mp3")
             let audioPath = NSURL(fileURLWithPath: filePath!)
@@ -206,7 +204,11 @@ class loadViewController: UIViewController, termsViewDelegate, CLLocationManager
         termsview?.delegate = nil
         self.dismiss(animated: false, completion: nil)
         //self.present(mapViewController(), animated: true, completion: nil)
-        self.present(osmViewController(), animated: true, completion: nil)
+//        self.present(osmViewController(), animated: true, completion: nil)
+        
+        let osmVC = osmViewController()
+        UIApplication.shared.keyWindow?.rootViewController = osmVC
+
     }
     
     

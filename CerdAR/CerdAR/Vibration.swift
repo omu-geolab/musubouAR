@@ -11,6 +11,7 @@ import AudioToolbox
 /* 振動 */
 class Vibration: NSObject {
     var timer:Timer? = nil
+    var isVibration = false
     
     /* 初期化　*/
     override init() {
@@ -32,6 +33,7 @@ class Vibration: NSObject {
         vibStop()
         timer = Timer.scheduledTimer(timeInterval: timeInterval, target: self, selector: #selector(self.vibrate), userInfo: nil, repeats: true)
         timer?.fire()
+        isVibration = true
     }
     
     func vibrate(timer: Timer) {
@@ -42,6 +44,7 @@ class Vibration: NSObject {
     func vibStop() {
         if timer != nil && (timer?.isValid)! {
             timer?.invalidate()
+            isVibration = false
         }
     }
 

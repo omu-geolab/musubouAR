@@ -397,7 +397,9 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
             // 侵入していることを通知音で知らせる
             if audioPlayerIntr != nil {
                 audioPlayerIntr.play()
-                vibration.vibNearStart()
+                if vibration.isVibration == false {
+                    vibration.vibNearStart()
+                }
             }
             warningMessage.isHidden = false
             warningMessage.text = jsonDataManager.sharedInstance.warnBox[num].message2 // 警告メッセージ
@@ -412,7 +414,9 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
             }
             if audioPlayerNear != nil {
                 audioPlayerNear.play()
-                vibration.vibNearStart()
+                if vibration.isVibration == false {
+                    vibration.vibNearStart()
+                }
             }
             warningMessage.isHidden = false
             warningMessage.text = jsonDataManager.sharedInstance.warnBox[num].message1 // 警告メッセージ
