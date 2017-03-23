@@ -204,19 +204,14 @@ class loadViewController: UIViewController, termsViewDelegate, CLLocationManager
     func termsViewfinish() {
         termsview?.delegate = nil
         self.dismiss(animated: false, completion: nil)
-<<<<<<< HEAD
-        self.present(mapViewController(), animated: true, completion: nil)
-        //self.present(osmViewController(), animated: true, completion: nil)
-=======
+
         //self.present(mapViewController(), animated: true, completion: nil)
 //        self.present(osmViewController(), animated: true, completion: nil)
         
         let osmVC = osmViewController()
         UIApplication.shared.keyWindow?.rootViewController = osmVC
 
->>>>>>> 5b1145573819315c293c6d2d40c15829816c2a81
     }
-    
     
     
 }
