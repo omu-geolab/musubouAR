@@ -65,7 +65,7 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     var warnState = warningState.safe.rawValue // 現在ユーザーは災害からどの位置にいるか(安全・付近・侵入)
     
 //    let warningMessage = UILabel(frame: CGRect(x: screenWidth * 0.2, y: screenHeight - 125.0, width: screenWidth * 0.6, height: screenHeight * 0.13)) // 警告メッセージ
-    let warningMessage = UILabel(frame: CGRect(x: screenWidth - 55.0 - butSize - screenWidth * 0.38, y: screenHeight - 125.0, width: screenWidth * 0.37, height: screenHeight * 0.13)) // 警告メッセージ
+    let warningMessage = UILabel(frame: CGRect(x: screenWidth - 55.0 - butSize - screenWidth * 0.38, y: screenHeight * 0.85, width: screenWidth * 0.37, height: screenHeight * 0.13)) // 警告メッセージ
     
     class appleMapsAnnotation: MKPointAnnotation {
         var tagData: TagData!
@@ -75,9 +75,10 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     var appleMapsWarnBox = [appleMapsAnnotation]() // ピンの情報を持つ(警告)
     
     var beforeZoomLv = 0.0
-        
     
-    // MARK: ライフサイクル
+    let vibration = Vibration()
+    
+    // MARK:- ライフサイクル
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -126,8 +127,6 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         
         nowLoc_button.addTarget(self, action: #selector(mapViewController.onClick_nowLocate(_:)), for: .touchUpInside)
         
-        changeMapBut.addTarget(self, action: #selector(mapViewController.onClick_changeMap(_:)), for: .touchUpInside)
-        
         /* 警告タグメッセージの設定 */
         warningMessage.textColor = UIColor.black // 文字色(黒)
         warningMessage.backgroundColor = UIColor.white.withAlphaComponent(CGFloat(kMsgAlpha)) // 背景色(白)
@@ -162,6 +161,7 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         super.viewWillAppear(animated)
         
         mapView?.delegate = self
+
         
         /* 現在地の取得を開始 */
         if CheckReachability(hostname: "www") {
@@ -172,6 +172,7 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
             }
         }
         
+        changeMapBut.addTarget(self, action: #selector(mapViewController.onClick_changeMap(_:)), for: .touchUpInside)
         displayMode = mode.applemap.rawValue // 現在開いている画面は地図画面であると設定する
         
         // ピンに画像を設定する
@@ -219,6 +220,9 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
             self.mapView!.removeAnnotation(annotation)
         }
         
+        changeMapBut.removeTarget(self, action: #selector(mapViewController.onClick_changeMap(_:)), for: .touchUpInside)
+        vibration.vibStop()
+        
     }
     
     /* 別の画面に遷移した直後(破棄) */
@@ -239,7 +243,7 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     }
     
     
-    // MARK: デリゲート-MKMapViewDelegate
+    // MARK:- デリゲート-MKMapViewDelegate
     
     /*
      * 地図を触った後
@@ -352,7 +356,11 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
             
             // タグをタップしてからkShowDetail秒後に詳細画面を表示する
             runAfterDelay(kShowDetail) {
-                self.detailview = detailView(frame: CGRect(x: screenWidth * 0.1, y: screenWidth * 0.1, width: screenWidth * 0.8, height: screenHeight * 0.8))
+                if UIDevice.current.userInterfaceIdiom == .phone {
+                    self.detailview = detailView(frame: CGRect(x: screenWidth * 0.1, y: screenWidth * 0.02, width: screenWidth * 0.8, height: screenHeight * 0.9))
+                } else if UIDevice.current.userInterfaceIdiom == .pad {
+                    self.detailview = detailView(frame: CGRect(x: screenWidth * 0.1, y: screenWidth * 0.1, width: screenWidth * 0.8, height: screenHeight * 0.8))
+                }
                 self.detailview!.delegate = self
                 backgroundView = detailView.makebackgroungView()
                 backgroundView.isUserInteractionEnabled = true
@@ -408,7 +416,7 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         return circle
     }
     
-    // MARK: デリゲート-CLLocationManagerDelegate
+    // MARK:- デリゲート-CLLocationManagerDelegate
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("didFailWithError: \(error)")
     }
@@ -464,6 +472,9 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
             // 侵入していることを通知音で知らせる
             if audioPlayerIntr != nil {
                 audioPlayerIntr.play()
+                if vibration.isVibration == false {
+                    vibration.vibIntrusionStart()
+                }
             }
             warningMessage.text = jsonDataManager.sharedInstance.warnBox[num].message2 // 警告メッセージ
             msgCount += 1
@@ -472,14 +483,25 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         } else if jsonDataManager.sharedInstance.warnBox[num].distance - Int(circleRadius[num]) < kNearMsg {
             warningMessage.isHidden = false
             // 付近にいることを通知音で知らせる
+            if audioPlayerIntr.isPlaying == true {
+                audioPlayerIntr.stop()
+                vibration.vibStop()
+            }
             if audioPlayerNear != nil {
                 audioPlayerNear.play()
+                if vibration.isVibration == false {
+                    vibration.vibNearStart()
+                }
             }
             warningMessage.text = jsonDataManager.sharedInstance.warnBox[num].message1 // 警告メッセージ
             msgCount += 1
             
             // それ以外・・・安全
         } else {
+            if audioPlayerNear.isPlaying == true {
+                audioPlayerNear.stop()
+                vibration.vibStop()
+            }
             msgSafeCount += 1
             if msgSafeCount == box.count {
                 msgSafeCount = 0
@@ -570,7 +592,7 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     }
     
     
-    // MARK: detailViewDelegate
+    // MARK:- detailViewDelegate
     func detailViewFinish() {
         transFromDetailToMap(pinViewData)
         detailview?.delegate = nil
@@ -578,7 +600,7 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         
     }
     
-    // MARK: configViewDelegate
+    // MARK:- configViewDelegate
     func configViewFinish() {
         transFromDetailToMap(pinViewData)
         configview?.delegate = nil
@@ -760,6 +782,7 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         
         var location: CGPoint = mapView!.center
         location.x = view.center.x
+        self.warningView.backgroundColor = UIColor.clear
         
         UIView.animate(
             withDuration: 0.1,
@@ -806,7 +829,10 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         
         configview?.removeFromSuperview()
         ConfigView().deleteConfigDisplay()
-        self.present(osmViewController(), animated: true, completion: nil)
+//        self.present(osmViewController(), animated: true, completion: nil)
+        
+        let osmVC = osmViewController()
+        UIApplication.shared.keyWindow?.rootViewController = osmVC
     }
     
     
@@ -916,7 +942,8 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         backgroundView.isUserInteractionEnabled = true
         backgroundView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(mapViewController.onClick_configBackground(_:))))
         self.configview = ConfigView(frame: CGRect(x: screenWidth / 3 * 2, y: 0, width: screenWidth / 3, height: screenHeight))
-        
+        self.warningView.backgroundColor = UIColor.clear
+
         var location: CGPoint = mapView!.center
         location.x = view.center.x - screenWidth / 3
         
