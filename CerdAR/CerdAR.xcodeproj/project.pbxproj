@@ -411,7 +411,7 @@
 				TargetAttributes = {
 					AC2C52C11D5805F70032B689 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 57NUJ8NN7U;
+						DevelopmentTeam = 9F4BD2UBE2;
 						LastSwiftMigration = 0800;
 					};
 					AC2C52D81D5805F80032B689 = {
@@ -672,7 +672,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 57NUJ8NN7U;
+				DEVELOPMENT_TEAM = 9F4BD2UBE2;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/CerdAR",
@@ -692,7 +692,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 57NUJ8NN7U;
+				DEVELOPMENT_TEAM = 9F4BD2UBE2;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/CerdAR",
