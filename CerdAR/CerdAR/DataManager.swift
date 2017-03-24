@@ -344,8 +344,8 @@ enum mode: Int {
 }
 
 // 現在の画面が、地図かカメラかを保持する変数
-//var displayMode = mode.applemap.rawValue
 var displayMode = mode.osm.rawValue
+var mbStyle = "mapbox://styles/mapbox/streets-v9"
 
 var warnImage = UIImage(named: "icon_infoTagAR.png") // 情報タグの画像
 

@@ -821,12 +821,14 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         self.warningView?.center = location
         self.mapView.center = location
         
- //       displayMode = mode.applemap.rawValue
         
         configview?.removeFromSuperview()
         ConfigView().deleteConfigDisplay()
-//        self.present(mapViewController(), animated: true, completion: nil)
         updateTimer.invalidate() // update()を発火させていたOpenStreetMapsのタイマーを止める
+        
+        let mapVC = mapViewController()
+        UIApplication.shared.keyWindow?.rootViewController = mapVC
+
         
     }
     
@@ -852,23 +854,24 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         mapView.isPitchEnabled = false  // ジェスチャでの視点変更を許可しない
   //      mapView.delegate = self
         
-        if displayMode == mode.osm.rawValue {
+        let mapStyle = mapView.styleURL.absoluteString
+        if mapStyle == "mapbox://styles/mapbox/streets-v9" {
                 displayMode = mode.osmsat.rawValue
                 mapView.styleURL = MGLStyle.satelliteStyleURL(withVersion:9)
-                print("displayMode2 : \(displayMode)")
+//                print("currentDisplayMap : \(mapStyle)")
+                mbStyle = mapView.styleURL.absoluteString
             
-        }else  {
+        }else if (mapStyle == "mapbox://styles/mapbox/satellite-v9")  {
                 displayMode = mode.osm.rawValue
                 mapView.styleURL = MGLStyle.streetsStyleURL(withVersion:9)
-                print("displayMode3 : \(displayMode)")
+ //               print("currentDisplayMap : \(mapStyle)")
+                mbStyle = mapView.styleURL.absoluteString
     
+        }else{
+                print("currentDisplayMap :  その他のマップデータが使われています！")
+            
         }
  
-//        self.dismiss(animated: false, completion: nil)
-
-        let mapVC = mapViewController()
-        UIApplication.shared.keyWindow?.rootViewController = mapVC
-
         
     }
     

@@ -831,7 +831,9 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         
         configview?.removeFromSuperview()
         ConfigView().deleteConfigDisplay()
-        //self.present(osmViewController(), animated: true, completion: nil)
+        
+        let rooVC = UIApplication.shared.keyWindow?.rootViewController;
+        print("currentDisplayView : \(rooVC)")
         
         let osmVC = osmViewController()
         UIApplication.shared.keyWindow?.rootViewController = osmVC
