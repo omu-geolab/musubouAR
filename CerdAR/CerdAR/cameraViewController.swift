@@ -31,7 +31,7 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
     var warningView = UIView(frame: CGRect(x: 0.0, y: 0.0, width: screenWidth, height: screenHeight)) // 警告モード
     var warnState = warningState.safe.rawValue // 現在ユーザーは災害からどの位置にいるか(安全・付近・侵入)
     
-    let warningMessage = UILabel(frame: CGRect(x: screenWidth * 0.35, y: screenHeight - 125.0, width: screenWidth * 0.6, height: screenHeight * 0.13)) // 警告メッセージ
+    let warningMessage = UILabel(frame: CGRect(x: screenWidth * 0.35, y: screenHeight * 0.85 , width: screenWidth * 0.6, height: screenHeight * 0.13)) // 警告メッセージ
     
     
     var warnNums: [Int] = [] // 災害番号
@@ -48,15 +48,22 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
     var heading = 0.0 // 現在のユーザーの方位を保持する
     var beforeHeading = 0.0 // kTagUpdateTime秒前のユーザーの方位を保持する
     
+    let vibration = Vibration()
     
     // アラート
-    let alert: UIAlertController = UIAlertController(title: "⚠︎", message: "iPadを垂直に，ホームボタンを右側に向けた状態にiPadを持ち直してください", preferredStyle:  UIAlertControllerStyle.alert)
+    var alert: UIAlertController? = nil
     
     
-    // MARK: ライフサイクル
+    // MARK:- ライフサイクル
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        
+        if UIDevice.current.userInterfaceIdiom == .phone {
+            alert = UIAlertController(title: "⚠︎", message: "iPhoneを垂直に，ホームボタンを右側に向けた状態にiPhoneを持ち直してください", preferredStyle:  UIAlertControllerStyle.alert)
+        } else if UIDevice.current.userInterfaceIdiom == .pad {
+            alert = UIAlertController(title: "⚠︎", message: "iPadを垂直に，ホームボタンを右側に向けた状態にiPadを持ち直してください", preferredStyle:  UIAlertControllerStyle.alert)
+        }
         
         warnState = warningState.safe.rawValue
         
@@ -81,6 +88,7 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
 //        warningMessage.layer.borderWidth = 5.0 // 枠線の太さ
         warningMessage.layer.cornerRadius = 20.0 // 枠線を角丸にする
         warningMessage.clipsToBounds = true // 角を取る
+        warningMessage.adjustsFontSizeToFitWidth = true
         view.addSubview(warningMessage)
         warningMessage.isHidden = true
         
@@ -95,7 +103,13 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
         toMap_Button.addTarget(self, action: #selector(cameraViewController.onClick_map(_:)), for: .touchUpInside)
         
         // コンパス
-        compassView = UIImageView(frame: CGRect(x: 40.0, y: 40.0, width: imgCompass.size.width / 4, height: imgCompass.size.height / 4))
+        var compassWidth = imgCompass.size.width
+        var compassHeight = imgCompass.size.height
+        if UIDevice.current.userInterfaceIdiom == .phone {
+            compassWidth /= 2
+            compassHeight /= 2
+        }
+        compassView = UIImageView(frame: CGRect(x: 55.0, y: 55.0, width: compassWidth / 4, height: compassHeight / 4))
         compassView.image = imgCompass
         view.addSubview(compassView)
         
@@ -149,6 +163,8 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+        
+        vibration.vibStop()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -175,7 +191,7 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
         super.didReceiveMemoryWarning()
     }
     
-    // MARK: CLLocationManagerDelegate
+    // MARK:- CLLocationManagerDelegate
     // iPhone の位置情報が更新されるたびに、デリゲートが呼ばれる
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
@@ -196,7 +212,7 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
     }
     
     
-    // MARK: detailViewDelegate
+    // MARK:- detailViewDelegate
     func detailViewFinish() {
         detailview?.delegate = nil
         detailview?.removeFromSuperview()
@@ -205,7 +221,7 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
     
     
     
-    // MARK: プライベート関数
+    // MARK:- プライベート関数
     
     /*
      *カメラの初期化
@@ -381,6 +397,9 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
             // 侵入していることを通知音で知らせる
             if audioPlayerIntr != nil {
                 audioPlayerIntr.play()
+                if vibration.isVibration == false {
+                    vibration.vibNearStart()
+                }
             }
             warningMessage.isHidden = false
             warningMessage.text = jsonDataManager.sharedInstance.warnBox[num].message2 // 警告メッセージ
@@ -389,8 +408,15 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
             // 0m以上、kNearMsg(m)以下・・・付近
         } else if jsonDataManager.sharedInstance.warnBox[num].distance - Int(circleRadius[num]) < kNearMsg {
             // 付近にいることを通知音で知らせる
+            if audioPlayerIntr.isPlaying == true {
+                audioPlayerIntr.stop()
+                vibration.vibStop()
+            }
             if audioPlayerNear != nil {
                 audioPlayerNear.play()
+                if vibration.isVibration == false {
+                    vibration.vibNearStart()
+                }
             }
             warningMessage.isHidden = false
             warningMessage.text = jsonDataManager.sharedInstance.warnBox[num].message1 // 警告メッセージ
@@ -398,6 +424,10 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
             
             // それ以外・・・安全
         } else {
+            if audioPlayerNear.isPlaying == true {
+                audioPlayerNear.stop()
+                vibration.vibStop()
+            }
             msgSafeCount += 1
             if msgSafeCount == box.count {
                 msgSafeCount = 0
@@ -648,7 +678,7 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
             
             // 遠近感の調整（kCamDisは150mを前提）
             // 画面の表示位置(縦) = 最大最小範囲の調整 +　全体的な位置の微調整
-            y = y * 0.8 + 200
+//            y = y * 0.8 + 200
             
             
             imageBox[index] = UIImageView(frame: CGRect(x: 0.0, y: 0.0, width: CGFloat(size), height: CGFloat(size)))
@@ -709,12 +739,12 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
         
         // 画面が間違えた向きのとき・・・アラートで知らせる
         if deviceOrientation == UIDeviceOrientation.landscapeRight {
-            alert.dismiss(animated: true, completion: nil)
-            present(alert, animated: true, completion: nil)
+            alert?.dismiss(animated: true, completion: nil)
+            present(alert!, animated: true, completion: nil)
             
             // 画面が正しい向きのとき・・・アラートを消す
         } else if deviceOrientation == UIDeviceOrientation.landscapeLeft {
-            alert.dismiss(animated: true, completion: nil)
+            alert?.dismiss(animated: true, completion: nil)
         }
     }
     
@@ -741,7 +771,11 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
                 pinData = jsonDataManager.sharedInstance.warnBox[(-1) + imageView.tag * (-1)]
             }
             
-            detailview = detailView(frame: CGRect(x: screenWidth * 0.1, y: screenWidth * 0.1, width: screenWidth * 0.8, height: screenHeight * 0.8))
+            if UIDevice.current.userInterfaceIdiom == .phone {
+                detailview = detailView(frame: CGRect(x: screenWidth * 0.1, y: screenWidth * 0.02, width: screenWidth * 0.8, height: screenHeight * 0.9))
+            } else if UIDevice.current.userInterfaceIdiom == .pad {
+                detailview = detailView(frame: CGRect(x: screenWidth * 0.1, y: screenWidth * 0.1, width: screenWidth * 0.8, height: screenHeight * 0.8))
+            }
             detailview!.delegate = self
             view.addSubview(detailview!)
         }
@@ -818,3 +852,4 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
     }
 
 }
+

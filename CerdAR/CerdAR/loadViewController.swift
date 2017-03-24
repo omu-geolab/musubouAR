@@ -123,7 +123,7 @@ class loadViewController: UIViewController, termsViewDelegate, CLLocationManager
         activityIndicator = UIActivityIndicatorView()
         activityIndicator.frame = CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight)
         activityIndicator.backgroundColor = UIColor(red: 0/2555, green: 0/255, blue: 0/255, alpha: 0.7)
-        activityIndicator.layer.cornerRadius = 8
+//        activityIndicator.layer.cornerRadius = 8
         activityIndicator.center = self.view.center
         
         //Indicatorの状態を管理
@@ -200,14 +200,18 @@ class loadViewController: UIViewController, termsViewDelegate, CLLocationManager
     
     
     
-    // MARK: detailViewDelegate
+    // MARK:- detailViewDelegate
     func termsViewfinish() {
         termsview?.delegate = nil
         self.dismiss(animated: false, completion: nil)
+
         //self.present(mapViewController(), animated: true, completion: nil)
-        self.present(osmViewController(), animated: true, completion: nil)
+//        self.present(osmViewController(), animated: true, completion: nil)
+        
+        let osmVC = osmViewController()
+        UIApplication.shared.keyWindow?.rootViewController = osmVC
+
     }
-    
     
     
 }

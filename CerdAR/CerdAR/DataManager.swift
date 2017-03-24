@@ -10,7 +10,6 @@ import UIKit
 import MapKit
 import AVFoundation
 
-
 /* タグに持たせるデータ群 */
 class TagData {
     
@@ -71,6 +70,7 @@ class jsonDataManager: NSObject {
                     continue
                 }
                 
+                //TODO:Name→nameにする
                 if let name = json["features"][i]["properties"]["Name"].string { // 目的地の名前
                     infoBox[iN].name = name
                 } else {
@@ -181,7 +181,7 @@ class jsonDataManager: NSObject {
                     continue
                 }
                 
-                
+                //TODO:Name→nameにする
                 if let name = json["features"][i]["properties"]["Name"].string { // 目的地の名前
                     warnBox[wN].name = name
                 } else {
@@ -335,8 +335,6 @@ let butSize: CGFloat = 70.0 // ボタンサイズ
 var audioPlayerNear: AVAudioPlayer! // 通知音(付近)
 var audioPlayerIntr: AVAudioPlayer! // 通知音(侵入)
 
-
-
 /* 現在開いているページは地図画面か、ARカメラ画面か */
 enum mode: Int {
     case applemap = 0
@@ -368,7 +366,6 @@ var pinData: TagData! // タップされたタグの情報を保持
 
 var backgroundView = UIImageView(frame: CGRect.init(x: 0, y: 0, width: screenWidth, height: screenHeight)) // 詳細画面の後ろのビュー
 
-let backBut = UIButton(frame: CGRect.init(x: 0, y: 0, width: screenWidth * 0.8 * 0.1, height: screenHeight * 0.8 * 0.1))
 let changeMapBut = UIButton(frame: CGRect.init(x: 0, y: 0, width: screenWidth / 4, height: screenHeight / 8))
 let changeMapBut2 = UIButton(frame: CGRect.init(x: 0, y: 0, width: screenWidth / 4, height: screenHeight / 8))
 //let changeMapBut3 = UIButton(frame: CGRect.init(x: 0, y: 0, width: screenWidth / 4, height: screenHeight / 8))
