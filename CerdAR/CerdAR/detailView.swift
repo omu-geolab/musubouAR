@@ -73,7 +73,7 @@ class detailView: UIView {
         self.addSubview(scrollView)
         
         // 目的地までの距離の挿入(画面左下側)
-        let distance = UILabel(frame: CGRect.init(x: dWid * 0.05, y: dHei * 0.82, width: dWid * 0.45, height: dHei * 0.1))
+        let distance = UILabel(frame: CGRect.init(x: dWid * 0.05, y: dHei * 0.85, width: dWid * 0.45, height: dHei * 0.1))
         distance.font = UIFont.systemFont(ofSize: 35)
         
         if pinData.inforType == kInfo {
@@ -118,7 +118,7 @@ class detailView: UIView {
                                 
                                 // 成功したとき
                             } else {
-                                let warnImageView = UIImageView(frame: CGRect.init(x: CGFloat(dWid * 0.05), y: CGFloat(dHei * 0.3), width: CGFloat(dWid * 0.45), height: CGFloat(dHei * 0.5)))
+                                let warnImageView = UIImageView(frame: CGRect(x: dWid * 0.05, y: dHei * 0.25, width: dWid * 0.45, height: dHei * 0.5))
                                 
                                 if let image = UIImage(data: data!) {
                                     warnImageView.image = image
@@ -133,7 +133,7 @@ class detailView: UIView {
                     
                 } else {
                     
-                    let warnImageView = UIImageView(frame: CGRect.init(x: CGFloat(dWid * 0.8 * 0.15), y: CGFloat(dHei * 0.2), width: dHei * 0.4, height: dHei * 0.55))
+                    let warnImageView = UIImageView(frame: CGRect(x: CGFloat(dWid * 0.8 * 0.15), y: CGFloat(dHei * 0.2), width: dHei * 0.4, height: dHei * 0.55))
                     if pinData.icon != "icon_infoTag.png" {
                         warnImageView.image = UIImage(named: pinData.icon)
                         self.addSubview(warnImageView)
