@@ -97,7 +97,12 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
         // 地図切替ボタン
         let toMap_Button = UIButton()
         let buttonImage: UIImage = UIImage(named: "icon_map.png")!
-        toMap_Button.frame = CGRect(x: 0.0, y: 0.0, width: butSize, height: butSize)
+        
+        if UIDevice.current.userInterfaceIdiom == .phone {
+            toMap_Button.frame = CGRect(x: 0.0, y: 0.0, width: butSize - 10, height: butSize - 10)
+        } else if UIDevice.current.userInterfaceIdiom == .pad{
+            toMap_Button.frame = CGRect(x: 0.0, y: 0.0, width: butSize, height: butSize)
+        }
         toMap_Button.setImage(buttonImage, for: UIControlState())
         toMap_Button.layer.position = CGPoint(x: 55, y: self.view.bounds.height - 45)
         view.addSubview(toMap_Button)
