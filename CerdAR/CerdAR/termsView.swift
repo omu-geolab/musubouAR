@@ -37,7 +37,7 @@ class termsView: UIView {
         okButton.layer.masksToBounds = true
         okButton.setTitle("同意してサービスを利用する", for: UIControlState())
         okButton.setTitleColor(UIColor.black, for: UIControlState())
-        okButton.titleLabel!.font = UIFont.systemFont(ofSize: 27)
+        okButton.titleLabel!.font = UIFont.systemFont(ofSize: 25)
         okButton.titleLabel!.adjustsFontSizeToFitWidth = true
         okButton.layer.borderColor = UIColor.black.cgColor
         okButton.layer.borderWidth = 3
