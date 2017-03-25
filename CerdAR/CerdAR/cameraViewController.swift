@@ -107,8 +107,11 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
         var compassWidth = imgCompass.size.width
         var compassHeight = imgCompass.size.height
         if UIDevice.current.userInterfaceIdiom == .phone {
-            compassWidth *= 0.7
-            compassHeight *= 0.7
+//            compassWidth *= 0.7
+//            compassHeight *= 0.7
+            compassWidth /= 2
+            compassHeight /= 2
+
         }
         compassView = UIImageView(frame: CGRect(x: 0.0, y: 0.0, width: compassWidth / 4, height: compassHeight / 4))
         compassView.layer.position = CGPoint(x: 55, y: screenHeight * 0.122)
