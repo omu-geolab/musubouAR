@@ -174,8 +174,6 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        /*
-         // コンフリクト部分
         for i in 0 ..< jsonDataManager.sharedInstance.warnBox.count {
             
             osmWarnBox.append(MGLTagData())
@@ -188,7 +186,6 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
 
         
         displayMode = mode.osm.rawValue
-         */
         
         mapView.delegate = self
         
