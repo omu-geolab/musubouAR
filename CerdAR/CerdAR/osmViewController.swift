@@ -256,6 +256,8 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         
         vibration.vibStop()
         changeMapBut.removeTarget(self, action: #selector(mapViewController.onClick_changeMap(_:)), for: .touchUpInside)
+        changeMapBut2.removeTarget(self, action: #selector(self.changeMB(_:)), for: .touchUpInside)
+
 
     }
     
