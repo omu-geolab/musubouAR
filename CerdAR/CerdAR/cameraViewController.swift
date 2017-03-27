@@ -31,7 +31,8 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
     var warningView = UIView(frame: CGRect(x: 0.0, y: 0.0, width: screenWidth, height: screenHeight)) // 警告モード
     var warnState = warningState.safe.rawValue // 現在ユーザーは災害からどの位置にいるか(安全・付近・侵入)
     
-    let warningMessage = UILabel(frame: CGRect(x: screenWidth * 0.35, y: screenHeight * 0.85 , width: screenWidth * 0.6, height: screenHeight * 0.13)) // 警告メッセージ
+    //MARK:警告メッセージの表示位置（高さ）をいじる場合はy:の値を変更する
+    let warningMessage = UILabel(frame: CGRect(x: screenWidth * 0.35, y: screenHeight * 0.8 , width: screenWidth * 0.6, height: screenHeight * 0.13)) // 警告メッセージ
     
     
     var warnNums: [Int] = [] // 災害番号
@@ -96,9 +97,14 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
         // 地図切替ボタン
         let toMap_Button = UIButton()
         let buttonImage: UIImage = UIImage(named: "icon_map.png")!
-        toMap_Button.frame = CGRect(x: 0.0, y: 0.0, width: butSize, height: butSize)
+        
+        if UIDevice.current.userInterfaceIdiom == .phone {
+            toMap_Button.frame = CGRect(x: 0.0, y: 0.0, width: butSize - 10, height: butSize - 10)
+        } else if UIDevice.current.userInterfaceIdiom == .pad{
+            toMap_Button.frame = CGRect(x: 0.0, y: 0.0, width: butSize, height: butSize)
+        }
         toMap_Button.setImage(buttonImage, for: UIControlState())
-        toMap_Button.layer.position = CGPoint(x: 55.0, y: self.view.bounds.height - 55.0)
+        toMap_Button.layer.position = CGPoint(x: 55, y: self.view.bounds.height - 45)
         view.addSubview(toMap_Button)
         toMap_Button.addTarget(self, action: #selector(cameraViewController.onClick_map(_:)), for: .touchUpInside)
         
@@ -106,10 +112,14 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
         var compassWidth = imgCompass.size.width
         var compassHeight = imgCompass.size.height
         if UIDevice.current.userInterfaceIdiom == .phone {
+//            compassWidth *= 0.7
+//            compassHeight *= 0.7
             compassWidth /= 2
             compassHeight /= 2
+
         }
-        compassView = UIImageView(frame: CGRect(x: 55.0, y: 55.0, width: compassWidth / 4, height: compassHeight / 4))
+        compassView = UIImageView(frame: CGRect(x: 0.0, y: 0.0, width: compassWidth / 4, height: compassHeight / 4))
+        compassView.layer.position = CGPoint(x: 55, y: screenHeight * 0.122)
         compassView.image = imgCompass
         view.addSubview(compassView)
         

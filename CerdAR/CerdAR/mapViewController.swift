@@ -64,8 +64,8 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     
     var warnState = warningState.safe.rawValue // 現在ユーザーは災害からどの位置にいるか(安全・付近・侵入)
     
-//    let warningMessage = UILabel(frame: CGRect(x: screenWidth * 0.2, y: screenHeight - 125.0, width: screenWidth * 0.6, height: screenHeight * 0.13)) // 警告メッセージ
-    let warningMessage = UILabel(frame: CGRect(x: screenWidth - 55.0 - butSize - screenWidth * 0.38, y: screenHeight * 0.85, width: screenWidth * 0.37, height: screenHeight * 0.13)) // 警告メッセージ
+    //MARK:警告メッセージの表示位置（高さ）をいじる場合はy:の値を変更する
+    let warningMessage = UILabel(frame: CGRect(x: screenWidth - 55.0 - butSize - screenWidth * 0.38, y: screenHeight * 0.8, width: screenWidth * 0.37, height: screenHeight * 0.13)) // 警告メッセージ
     
     class appleMapsAnnotation: MKPointAnnotation {
         var tagData: TagData!
