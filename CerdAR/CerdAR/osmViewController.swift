@@ -860,13 +860,11 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         if mapStyle == "mapbox://styles/mapbox/streets-v9" {
                 displayMode = mode.osmsat.rawValue
                 mapView.styleURL = MGLStyle.satelliteStyleURL(withVersion:9)
-//                print("currentDisplayMap : \(mapStyle)")
                 mbStyle = mapView.styleURL.absoluteString
             
         }else if (mapStyle == "mapbox://styles/mapbox/satellite-v9")  {
                 displayMode = mode.osm.rawValue
                 mapView.styleURL = MGLStyle.streetsStyleURL(withVersion:9)
- //               print("currentDisplayMap : \(mapStyle)")
                 mbStyle = mapView.styleURL.absoluteString
     
         }else{

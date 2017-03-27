@@ -7,7 +7,6 @@
 
 import Foundation
 import UIKit
-import Mapbox
 
 @objc protocol ConfigViewDelegate {
     func configViewFinish()
@@ -58,8 +57,6 @@ class ConfigView: UIView {
         aboutAppBut.addTarget(self, action: #selector(ConfigView.onClick_aboutApp(_:)), for: .touchUpInside)
         aboutAppBut.layer.cornerRadius = 10
         
-//        let rooVC = UIApplication.shared.keyWindow?.rootViewController;
-//        print("currentDisplayView : \(rooVC)")
 
         // 「地図切り替え」ボタンの挿入(画面左上側)
         if displayMode == mode.applemap.rawValue {
