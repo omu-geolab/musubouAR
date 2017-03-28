@@ -339,6 +339,28 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
         msgCount = 0
         viewCount = 0
         
+        // 古いタグの削除
+        for i in 0 ..< infoImageBox.count{
+            infoImageBox[i].removeFromSuperview()
+        }
+        infoImageBox.removeAll()
+        
+        for i in 0 ..< warnImageBox.count{
+            warnImageBox[i].removeFromSuperview()
+        }
+        warnImageBox.removeAll()
+        
+        
+        // 情報タグの初期化
+        for _ in 0 ..< jsonDataManager.sharedInstance.infoBox.count {
+            infoImageBox.append(UIImageView(frame: CGRect(x: 0.0, y: 0.0, width: 0.0, height: 0.0)))
+        }
+        
+        // 警告タグの初期化
+        for _ in 0 ..< jsonDataManager.sharedInstance.warnBox.count {
+            warnImageBox.append(UIImageView(frame: CGRect(x: 0.0, y: 0.0, width: 0.0, height: 0.0)))
+        }
+        
         for i in 0 ..< jsonDataManager.sharedInstance.warnBox.count {
             
             // 現在発生中
