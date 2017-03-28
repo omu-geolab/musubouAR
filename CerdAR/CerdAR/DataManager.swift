@@ -340,10 +340,12 @@ enum mode: Int {
     case applemap = 0
     case osm = 1
     case cam = 2
+    case osmsat = 3
 }
 
 // 現在の画面が、地図かカメラかを保持する変数
-var displayMode = mode.applemap.rawValue
+var displayMode = mode.osm.rawValue
+var mbStyle = "mapbox://styles/mapbox/streets-v9"
 
 var warnImage = UIImage(named: "icon_infoTagAR.png") // 情報タグの画像
 
@@ -365,5 +367,7 @@ var pinData: TagData! // タップされたタグの情報を保持
 var backgroundView = UIImageView(frame: CGRect.init(x: 0, y: 0, width: screenWidth, height: screenHeight)) // 詳細画面の後ろのビュー
 
 let changeMapBut = UIButton(frame: CGRect.init(x: 0, y: 0, width: screenWidth / 4, height: screenHeight / 8))
+let changeMapBut2 = UIButton(frame: CGRect.init(x: 0, y: 0, width: screenWidth / 4, height: screenHeight / 8))
+//let changeMapBut3 = UIButton(frame: CGRect.init(x: 0, y: 0, width: screenWidth / 4, height: screenHeight / 8))
 
 let cannotTouchView = UIView(frame: CGRect.init(x: 0.0, y: 0.0, width: CGFloat(screenWidth), height: CGFloat(screenHeight))) // 画面に触れられないようにするためのビュー

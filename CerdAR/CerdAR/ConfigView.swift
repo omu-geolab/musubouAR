@@ -16,6 +16,7 @@ class ConfigView: UIView {
     
     weak var delegate: ConfigViewDelegate?
     let aboutAppBut = UIButton(frame: CGRect.init(x: 0, y: 0, width: screenWidth / 4, height: screenHeight / 8))
+//    var mapView = MGLMapView() // 地図画面
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -31,6 +32,7 @@ class ConfigView: UIView {
      */
     func setup() {
         self.addSubview(changeMapBut)
+        self.addSubview(changeMapBut2)
         self.addSubview(aboutAppBut)
         load()
     }
@@ -53,21 +55,94 @@ class ConfigView: UIView {
         aboutAppBut.layer.position = CGPoint(x: screenWidth / 6, y: screenHeight / 3)
         aboutAppBut.backgroundColor = UIColor.gray
         aboutAppBut.addTarget(self, action: #selector(ConfigView.onClick_aboutApp(_:)), for: .touchUpInside)
+        aboutAppBut.layer.cornerRadius = 10
         
+
         // 「地図切り替え」ボタンの挿入(画面左上側)
         if displayMode == mode.applemap.rawValue {
             changeMapBut.setTitle("OpenStreetMapに切り替え", for: UIControlState()) // 通常
             changeMapBut.setTitle("OpenStreetMapに切り替え", for: UIControlState.highlighted) // ハイライト
-        } else if displayMode == mode.osm.rawValue {
+            changeMapBut.layer.cornerRadius = 10
+            
+            changeMapBut2.isHidden = true
+
+           
+        } else if displayMode == mode.osm.rawValue  {
+
             changeMapBut.setTitle("Appleマップに切り替え", for: UIControlState()) // 通常
             changeMapBut.setTitle("Appleマップに切り替え", for: UIControlState.highlighted) // ハイライト
+            changeMapBut.layer.cornerRadius = 10
+            
+            changeMapBut2.isHidden = false
+            changeMapBut2.setTitle("衛星画像に切り替え", for: UIControlState()) // 通常
+            changeMapBut2.setTitle("衛星画像に切り替え", for: UIControlState.highlighted) // ハイライト
+            changeMapBut2.layer.cornerRadius = 10
+
+            
+        } else if displayMode == mode.osmsat.rawValue {
+            
+            changeMapBut.setTitle("Appleマップに切り替え", for: UIControlState()) // 通常
+            changeMapBut.setTitle("Appleマップに切り替え", for: UIControlState.highlighted) // ハイライト
+            changeMapBut.layer.cornerRadius = 10
+            
+            changeMapBut2.isHidden = false
+            changeMapBut2.setTitle("標準地図に切り替え", for: UIControlState()) // 通常
+            changeMapBut2.setTitle("標準地図に切り替え", for: UIControlState.highlighted) // ハイライト
+            changeMapBut2.layer.cornerRadius = 10
+            
         }
+        
+        /*
+         // 新方式
+         if (rooVC is CerdAR.mapViewController){
+            changeMapBut.setTitle("OpenStreetMapに切り替え", for: UIControlState()) // 通常
+            changeMapBut.setTitle("OpenStreetMapに切り替え", for: UIControlState.highlighted) // ハイライト
+            changeMapBut.layer.cornerRadius = 10
+         
+            changeMapBut2.isHidden = true
+         
+         } else if (rooVC is CerdAR.osmViewController)  {
+            if (mbStyle == "mapbox://styles/mapbox/streets-v9" ) {
+                print("mbStyle : \(mbStyle)")
+         
+                changeMapBut.setTitle("Appleマップに切り替え", for: UIControlState()) // 通常
+                changeMapBut.setTitle("Appleマップに切り替え", for: UIControlState.highlighted) // ハイライト
+                changeMapBut.layer.cornerRadius = 10
+         
+                changeMapBut2.isHidden = false
+                changeMapBut2.setTitle("衛星画像に切り替え", for: UIControlState()) // 通常
+                changeMapBut2.setTitle("衛星画像に切り替え", for: UIControlState.highlighted) // ハイライト
+                changeMapBut2.layer.cornerRadius = 10
+         
+            } else if ( mbStyle == "mapbox://styles/mapbox/satellite-v9" )  {
+                print("mbStyle : \(mbStyle)")
+         
+                changeMapBut.setTitle("Appleマップに切り替え", for: UIControlState()) // 通常
+                changeMapBut.setTitle("Appleマップに切り替え", for: UIControlState.highlighted) // ハイライト
+                changeMapBut.layer.cornerRadius = 10
+         
+                changeMapBut2.isHidden = false
+                changeMapBut2.setTitle("標準地図に切り替え", for: UIControlState()) // 通常
+                changeMapBut2.setTitle("標準地図に切り替え", for: UIControlState.highlighted) // ハイライト
+                changeMapBut2.layer.cornerRadius = 10
+         
+            }
+         
+         }
+         */
+
         
         changeMapBut.titleLabel?.adjustsFontSizeToFitWidth = true
         changeMapBut.setTitleColor(UIColor.white, for: UIControlState())
         changeMapBut.setTitleColor(UIColor.black, for: UIControlState.highlighted)
         changeMapBut.layer.position = CGPoint(x: screenWidth / 6, y: screenHeight / 2)
         changeMapBut.backgroundColor = UIColor.gray
+
+        changeMapBut2.setTitleColor(UIColor.white, for: UIControlState())
+        changeMapBut2.setTitleColor(UIColor.black, for: UIControlState.highlighted)
+        changeMapBut2.layer.position = CGPoint(x: screenWidth / 6, y: screenHeight / 1.5)
+        changeMapBut2.backgroundColor = UIColor.gray
+
         
     }
     
@@ -88,6 +163,8 @@ class ConfigView: UIView {
     func onClick_aboutApp(_ sender: UIButton) {
         changeMapBut.removeFromSuperview()
         aboutAppBut.removeFromSuperview()
+        changeMapBut2.isHidden = true
+        
         
         // コメントの挿入(画面右側)
         let comment = UILabel(frame: CGRect.init(x: 0, y: 0, width: screenWidth / 3 - 60, height: dHei * 0.6))
