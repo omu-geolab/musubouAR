@@ -529,7 +529,7 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
         if beforeHeading - heading > kDiff || beforeHeading - heading < -kDiff {
             
             // コンパスを北の方向を指すように画像を回転させる
-            self.compassView.transform = CGAffineTransform(rotationAngle: CGFloat(-1 * heading * M_PI) / 180)
+            self.compassView.transform = CGAffineTransform(rotationAngle: CGFloat((-1 * heading * Double.pi) / 180))
             
             // PCの磁気の影響を受けている時は処理をしない
             if heading < 0 {
@@ -625,10 +625,10 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
         
         // 緯度経度 lat1, lng1 の点を出発として、緯度経度 lat2, lng2 への方位
         // 北を０度で右回りの角度0～360度
-        let Y = cos(tLon * M_PI / 180) * sin(tLat * M_PI / 180 - userLat * M_PI / 180)
-        let X = cos(userLon * M_PI / 180) * sin(tLon * M_PI / 180) - sin(userLon * M_PI / 180) * cos(tLon * M_PI / 180) * cos(tLat * M_PI / 180 - userLat * M_PI / 180)
+        let Y = cos(tLon * Double.pi / 180) * sin(tLat * Double.pi / 180 - userLat * Double.pi / 180)
+        let X = cos(userLon * Double.pi / 180) * sin(tLon * Double.pi / 180) - sin(userLon * Double.pi / 180) * cos(tLon * Double.pi / 180) * cos(tLat * Double.pi / 180 - userLat * Double.pi / 180)
         
-        var dirE0 = 180 * atan2(Y, X) / M_PI // 東向きが０度の方向
+        var dirE0 = 180 * atan2(Y, X) / Double.pi // 東向きが０度の方向
         if dirE0 < 0 {
             dirE0 = dirE0 + 360 //0～360 にする
         }
