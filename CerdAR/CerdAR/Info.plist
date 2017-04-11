@@ -14,16 +14,18 @@
 	<string>6.0</string>
 	<key>CFBundleName</key>
 	<string>$(PRODUCT_NAME)</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
 	<string>2.0</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>3</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>MGLMapboxAccessToken</key>
-	<string>pk.eyJ1Ijoic2FicmluYXp1cmFpbWkiLCJhIjoiY2lyaGFmejR4MDAzNWlkbWh2MHd6cXAxYyJ9.Xt80tvw9JWvfvu9Lw9ZoXQ</string>
+	<string>pk.eyJ1IjoibnJvMmRhaSIsImEiOiJxblpuOHpBIn0.lnPH68LJbWALkadnSrIX3g</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSExceptionDomains</key>

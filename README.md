@@ -8,7 +8,7 @@ CERD-ARは、身のまわりの防災関連情報や仮想的な災害情報を�
 このアプリは，科学技術振興機構(JST) 平成27年度 科学技術コミュニケーション推進事業 問題解決型科学技術コミュニケーション支援ネットワーク形成型[「公立大学防災センター連携による地区防災教室ネットワークの構築」](http://www.jst.go.jp/pr/info/info1109/besshi.html)の中で、[大阪市立大学都市防災教育研究センター（CERD）](https://www.cerd.osaka-cu.ac.jp/)と[株式会社ブリリアントサービス](http://www.brilliantservice.co.jp/)が開発した成果物を、オープンソース化したものです。
 
 * [ライセンスについて](https://bitbucket.org/nro2dai/cerd-ar/src/a30a858468e8554325dc7e79d2ebd7a112c019f9/LICENSE.md?fileviewer=file-view-default)
-* 現行バージョン：　2.0
+* 現行バージョン：　0.2
 
 ### 紹介動画 ###
 
@@ -24,10 +24,7 @@ CERD-ARは、身のまわりの防災関連情報や仮想的な災害情報を�
 * **リアルタイムに変化する災害情報**：災害の日時、災害範囲、災害の種類（現状では、火災・浸水・土砂くずれ・道路閉塞を用意）をタイマーで設定することができます。これにより、火災や浸水などの災害を指定の時間に発災させ、一定の速度で災害範囲を拡大させることができます。また、サーバから定期的にデータを取得し、リアルタイムに更新させることもできます。
 
 * **災害範囲に近接・侵入時の視聴覚的な警告機能**：タイマーにより発災させた災害範囲に、アプリ利用者が近づく・侵入することで、警告メッセージや効果音、アプリ画面の色、バイブレーション（iPhoneのみ）により、視聴覚的に警告をおこないます。  
-
-![6.png](https://bitbucket.org/repo/yEpMMp/images/182153318-6.png) 
-![2017-03-29 18.13.39.png](https://bitbucket.org/repo/yEpMMp/images/2283547336-2017-03-29%2018.13.39.png)
-
+![6.png](https://bitbucket.org/repo/yEpMMp/images/182153318-6.png)  
 ![IMG_0093.PNG](https://bitbucket.org/repo/yEpMMp/images/3265366701-IMG_0093.PNG)
 ![IMG_0046.PNG](https://bitbucket.org/repo/yEpMMp/images/1908220523-IMG_0046.PNG)
 ![IMG_0091.PNG](https://bitbucket.org/repo/yEpMMp/images/2932532370-IMG_0091.PNG)

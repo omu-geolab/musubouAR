@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7E01AA091E56A39400E6F5B1 /* Mapbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E01AA081E56A39400E6F5B1 /* Mapbox.framework */; };
-		7E01AA0A1E56A39400E6F5B1 /* Mapbox.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7E01AA081E56A39400E6F5B1 /* Mapbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7E34F6501E1A58BF007FA7B7 /* medicine-marker.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E34F64F1E1A58BF007FA7B7 /* medicine-marker.png */; };
 		7E34F6521E1A58CA007FA7B7 /* medicine-markerMap.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E34F6511E1A58CA007FA7B7 /* medicine-markerMap.png */; };
 		7E80CB221DD5C6D300B6B281 /* aed-marker.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E80CB211DD5C6D300B6B281 /* aed-marker.png */; };
@@ -29,6 +27,7 @@
 		944FC9A51DE2DBB60063261D /* keisatu-markerMap.png in Resources */ = {isa = PBXBuildFile; fileRef = 944FC9A31DE2DBB60063261D /* keisatu-markerMap.png */; };
 		944FC9A81DE2DC3D0063261D /* roujinhome-marker.png in Resources */ = {isa = PBXBuildFile; fileRef = 944FC9A61DE2DC3D0063261D /* roujinhome-marker.png */; };
 		944FC9A91DE2DC3D0063261D /* roujinhome-markerMap.png in Resources */ = {isa = PBXBuildFile; fileRef = 944FC9A71DE2DC3D0063261D /* roujinhome-markerMap.png */; };
+		946261851E9CC03C005B3025 /* Mapbox.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 946261831E9CC03C005B3025 /* Mapbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		94889CAE1DD5CB62009C2458 /* bouka-marker.png in Resources */ = {isa = PBXBuildFile; fileRef = 94889CAD1DD5CB62009C2458 /* bouka-marker.png */; };
 		AC05B9FA1D811FDA0082C52A /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC05B9F91D811FDA0082C52A /* DataManager.swift */; };
 		AC2AB8F61DB778A10048931C /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2AB8F51DB778A10048931C /* Constant.swift */; };
@@ -84,13 +83,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		7E01AA0B1E56A39400E6F5B1 /* Embed Frameworks */ = {
+		946261861E9CC03C005B3025 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				7E01AA0A1E56A39400E6F5B1 /* Mapbox.framework in Embed Frameworks */,
+				946261851E9CC03C005B3025 /* Mapbox.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -98,12 +97,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		7E01AA081E56A39400E6F5B1 /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mapbox.framework; path = ../Mapbox.framework; sourceTree = "<group>"; };
 		7E34F64F1E1A58BF007FA7B7 /* medicine-marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "medicine-marker.png"; sourceTree = "<group>"; };
 		7E34F6511E1A58CA007FA7B7 /* medicine-markerMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "medicine-markerMap.png"; sourceTree = "<group>"; };
 		7E80CB211DD5C6D300B6B281 /* aed-marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "aed-marker.png"; sourceTree = "<group>"; };
 		7E80CB231DD5C77F00B6B281 /* aed-markerMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "aed-markerMap.png"; sourceTree = "<group>"; };
-		7E943C601DEABFAC007E08E1 /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mapbox.framework; path = "../../Desktop/mapbox-ios-sdk-3.3.7-dynamic.zip フォルダ/dynamic/Mapbox.framework"; sourceTree = "<group>"; };
 		7E943C681DEB1A16007E08E1 /* icon_menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_menu.png; sourceTree = "<group>"; };
 		7EE70DFA1DE930C4000FB537 /* icon_camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_camera.png; sourceTree = "<group>"; };
 		7EE70E061DEA68E5000FB537 /* icon_warn0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_warn0.png; sourceTree = "<group>"; };
@@ -120,6 +117,7 @@
 		944FC9A31DE2DBB60063261D /* keisatu-markerMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "keisatu-markerMap.png"; sourceTree = "<group>"; };
 		944FC9A61DE2DC3D0063261D /* roujinhome-marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "roujinhome-marker.png"; sourceTree = "<group>"; };
 		944FC9A71DE2DC3D0063261D /* roujinhome-markerMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "roujinhome-markerMap.png"; sourceTree = "<group>"; };
+		946261831E9CC03C005B3025 /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mapbox.framework; path = ../Mapbox.framework; sourceTree = "<group>"; };
 		94889CAD1DD5CB62009C2458 /* bouka-marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bouka-marker.png"; sourceTree = "<group>"; };
 		AC05B9F91D811FDA0082C52A /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		AC2AB8F51DB778A10048931C /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
@@ -172,7 +170,6 @@
 				AC2C53011D58093C0032B689 /* AVFoundation.framework in Frameworks */,
 				AC2C52FF1D5809360032B689 /* CoreLocation.framework in Frameworks */,
 				AC2C52FD1D58092B0032B689 /* MapKit.framework in Frameworks */,
-				7E01AA091E56A39400E6F5B1 /* Mapbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,14 +190,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7E943C5F1DEABFAC007E08E1 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				7E943C601DEABFAC007E08E1 /* Mapbox.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		AC2AB8F41DB778420048931C /* sound */ = {
 			isa = PBXGroup;
 			children = (
@@ -219,7 +208,6 @@
 				AC2C52DC1D5805F80032B689 /* CerdARTests */,
 				AC2C52E71D5805F80032B689 /* CerdARUITests */,
 				AC2C52C31D5805F70032B689 /* Products */,
-				7E943C5F1DEABFAC007E08E1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -312,7 +300,7 @@
 		D317AE971D89649D00D4D4FC /* framework */ = {
 			isa = PBXGroup;
 			children = (
-				7E01AA081E56A39400E6F5B1 /* Mapbox.framework */,
+				946261831E9CC03C005B3025 /* Mapbox.framework */,
 				AC7B6A831D66A9B20086897D /* CoreMotion.framework */,
 				AC2C53001D58093C0032B689 /* AVFoundation.framework */,
 				AC2C52FE1D5809360032B689 /* CoreLocation.framework */,
@@ -352,7 +340,8 @@
 				AC2C52BE1D5805F70032B689 /* Sources */,
 				AC2C52BF1D5805F70032B689 /* Frameworks */,
 				AC2C52C01D5805F70032B689 /* Resources */,
-				7E01AA0B1E56A39400E6F5B1 /* Embed Frameworks */,
+				946261861E9CC03C005B3025 /* Embed Frameworks */,
+				940158861E9CC14D00840155 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -413,6 +402,7 @@
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 9F4BD2UBE2;
 						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
 					};
 					AC2C52D81D5805F80032B689 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -508,6 +498,22 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		940158861E9CC14D00840155 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "bash \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mapbox.framework/strip-frameworks.sh\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AC2C52BE1D5805F70032B689 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -583,6 +589,7 @@
 		AC2C52EB1D5805F80032B689 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -603,6 +610,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -630,6 +638,7 @@
 		AC2C52EC1D5805F80032B689 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -650,6 +659,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -672,17 +682,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 9F4BD2UBE2;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/CerdAR",
+					"$(PROJECT_DIR)/",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = CerdAR/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = dy.CerdAR;
+				PRODUCT_BUNDLE_IDENTIFIER = "ocu.cerd-ar";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -692,17 +706,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 9F4BD2UBE2;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/CerdAR",
+					"$(PROJECT_DIR)/",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = CerdAR/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = dy.CerdAR;
+				PRODUCT_BUNDLE_IDENTIFIER = "ocu.cerd-ar";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
