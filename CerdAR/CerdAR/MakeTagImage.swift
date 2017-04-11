@@ -74,9 +74,10 @@ func getLabelText(_ num: Int, inforType: String) -> String {
         }
         
         
-        if displayMode == mode.applemap.rawValue || displayMode == mode.osm.rawValue { // 地図画面の時は名称と範囲
+        if displayMode == mode.applemap.rawValue || displayMode == mode.osm.rawValue || displayMode == mode.osmsat.rawValue { // 地図画面の時は名称と範囲
             text = riskName + "\n"
             text = text + "範囲: " + String(Int(circleRadius[num])) + "m"
+            
         } else { // カメラ画面の時は名称と距離と範囲
             
             var distance = jsonDataManager.sharedInstance.warnBox[num].distance - Int(circleRadius[num])
@@ -117,7 +118,6 @@ func makeLabel(_ num: Int, inforType: String) -> UIImage {
             label = UILabel(frame: CGRect.init(x: 0.0, y: 0.0, width: tagImg.size.width, height: tagImg.size.height)) //ラベルサイズ
             label.numberOfLines = 2 // ラベル内の行数
             
-            
         } else if displayMode == mode.cam.rawValue { // カメラ画面のとき
             let tagImg = UIImage(named: "icon_infoTagAR.png")! // 情報タグの画像
             label = UILabel(frame: CGRect.init(x: 0.0, y: 0.0, width: tagImg.size.width, height: tagImg.size.height)) //ラベルサイズ
@@ -128,9 +128,9 @@ func makeLabel(_ num: Int, inforType: String) -> UIImage {
     } else if inforType == kWarn {
         label = UILabel(frame: CGRect.init(x: 0.0, y: 0.0, width: warnImage!.size.width, height: warnImage!.size.height)) //ラベルサイズ
         if displayMode == mode.cam.rawValue {
-            label.numberOfLines = 4 // ラベル内の行数
-        } else {
             label.numberOfLines = 3 // ラベル内の行数
+        } else {
+            label.numberOfLines = 2 // ラベル内の行数
         }
     }
     
