@@ -291,7 +291,12 @@ class jsonDataManager: NSObject {
      */
     func dateFromString(_ string: String, format: String, num: Int) -> Date {
         let formatter: DateFormatter = DateFormatter()
+        formatter.locale = NSLocale.system
+        formatter.timeZone = NSTimeZone.system
         formatter.dateFormat = format
+        
+//        formatter.locale = NSLocale(localeIdentifier: "jp_JP") as Locale!
+        
         
         if let warnDate: Date = formatter.date(from: string) { // 災害時間を正しいフォーマットで書いているとき
             return warnDate
