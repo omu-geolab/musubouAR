@@ -21,13 +21,14 @@
 		7EE70E211DEAA1B6000FB537 /* sound_near.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7EE70E201DEAA1B6000FB537 /* sound_near.mp3 */; };
 		7EE70E271DEAA9D5000FB537 /* logo_OCU.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7EE70E261DEAA9D5000FB537 /* logo_OCU.jpg */; };
 		7EED1C301DD3666000E46E39 /* bouka-markerMap.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EED1C2F1DD3666000E46E39 /* bouka-markerMap.png */; };
+		9436A46F1F8493A900C0089E /* Mapbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9436A46E1F8493A900C0089E /* Mapbox.framework */; };
+		9436A4701F8493A900C0089E /* Mapbox.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9436A46E1F8493A900C0089E /* Mapbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		944FC99D1DE2D6CD0063261D /* shoubo-marker.png in Resources */ = {isa = PBXBuildFile; fileRef = 944FC99C1DE2D6CD0063261D /* shoubo-marker.png */; };
 		944FC99F1DE2D6D40063261D /* shoubo-markerMap.png in Resources */ = {isa = PBXBuildFile; fileRef = 944FC99E1DE2D6D40063261D /* shoubo-markerMap.png */; };
 		944FC9A41DE2DBB60063261D /* keisatu-marker.png in Resources */ = {isa = PBXBuildFile; fileRef = 944FC9A21DE2DBB60063261D /* keisatu-marker.png */; };
 		944FC9A51DE2DBB60063261D /* keisatu-markerMap.png in Resources */ = {isa = PBXBuildFile; fileRef = 944FC9A31DE2DBB60063261D /* keisatu-markerMap.png */; };
 		944FC9A81DE2DC3D0063261D /* roujinhome-marker.png in Resources */ = {isa = PBXBuildFile; fileRef = 944FC9A61DE2DC3D0063261D /* roujinhome-marker.png */; };
 		944FC9A91DE2DC3D0063261D /* roujinhome-markerMap.png in Resources */ = {isa = PBXBuildFile; fileRef = 944FC9A71DE2DC3D0063261D /* roujinhome-markerMap.png */; };
-		946261851E9CC03C005B3025 /* Mapbox.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 946261831E9CC03C005B3025 /* Mapbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		94889CAE1DD5CB62009C2458 /* bouka-marker.png in Resources */ = {isa = PBXBuildFile; fileRef = 94889CAD1DD5CB62009C2458 /* bouka-marker.png */; };
 		AC05B9FA1D811FDA0082C52A /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC05B9F91D811FDA0082C52A /* DataManager.swift */; };
 		AC2AB8F61DB778A10048931C /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2AB8F51DB778A10048931C /* Constant.swift */; };
@@ -83,13 +84,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		946261861E9CC03C005B3025 /* Embed Frameworks */ = {
+		9436A4711F8493A900C0089E /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				946261851E9CC03C005B3025 /* Mapbox.framework in Embed Frameworks */,
+				9436A4701F8493A900C0089E /* Mapbox.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -111,13 +112,13 @@
 		7EE70E201DEAA1B6000FB537 /* sound_near.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sound_near.mp3; sourceTree = "<group>"; };
 		7EE70E261DEAA9D5000FB537 /* logo_OCU.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = logo_OCU.jpg; sourceTree = "<group>"; };
 		7EED1C2F1DD3666000E46E39 /* bouka-markerMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bouka-markerMap.png"; sourceTree = "<group>"; };
+		9436A46E1F8493A900C0089E /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mapbox.framework; path = ../Mapbox.framework; sourceTree = "<group>"; };
 		944FC99C1DE2D6CD0063261D /* shoubo-marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shoubo-marker.png"; sourceTree = "<group>"; };
 		944FC99E1DE2D6D40063261D /* shoubo-markerMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shoubo-markerMap.png"; sourceTree = "<group>"; };
 		944FC9A21DE2DBB60063261D /* keisatu-marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "keisatu-marker.png"; sourceTree = "<group>"; };
 		944FC9A31DE2DBB60063261D /* keisatu-markerMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "keisatu-markerMap.png"; sourceTree = "<group>"; };
 		944FC9A61DE2DC3D0063261D /* roujinhome-marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "roujinhome-marker.png"; sourceTree = "<group>"; };
 		944FC9A71DE2DC3D0063261D /* roujinhome-markerMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "roujinhome-markerMap.png"; sourceTree = "<group>"; };
-		946261831E9CC03C005B3025 /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mapbox.framework; path = ../Mapbox.framework; sourceTree = "<group>"; };
 		94889CAD1DD5CB62009C2458 /* bouka-marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bouka-marker.png"; sourceTree = "<group>"; };
 		AC05B9F91D811FDA0082C52A /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		AC2AB8F51DB778A10048931C /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
@@ -170,6 +171,7 @@
 				AC2C53011D58093C0032B689 /* AVFoundation.framework in Frameworks */,
 				AC2C52FF1D5809360032B689 /* CoreLocation.framework in Frameworks */,
 				AC2C52FD1D58092B0032B689 /* MapKit.framework in Frameworks */,
+				9436A46F1F8493A900C0089E /* Mapbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,7 +302,7 @@
 		D317AE971D89649D00D4D4FC /* framework */ = {
 			isa = PBXGroup;
 			children = (
-				946261831E9CC03C005B3025 /* Mapbox.framework */,
+				9436A46E1F8493A900C0089E /* Mapbox.framework */,
 				AC7B6A831D66A9B20086897D /* CoreMotion.framework */,
 				AC2C53001D58093C0032B689 /* AVFoundation.framework */,
 				AC2C52FE1D5809360032B689 /* CoreLocation.framework */,
@@ -340,8 +342,8 @@
 				AC2C52BE1D5805F70032B689 /* Sources */,
 				AC2C52BF1D5805F70032B689 /* Frameworks */,
 				AC2C52C01D5805F70032B689 /* Resources */,
-				946261861E9CC03C005B3025 /* Embed Frameworks */,
 				940158861E9CC14D00840155 /* ShellScript */,
+				9436A4711F8493A900C0089E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -689,6 +691,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/CerdAR",
 				);
 				INFOPLIST_FILE = CerdAR/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
@@ -713,6 +716,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/CerdAR",
 				);
 				INFOPLIST_FILE = CerdAR/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
