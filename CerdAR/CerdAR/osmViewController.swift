@@ -99,6 +99,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         mapView.frame = self.view.frame
         mapView.showsUserLocation = true // 現在地を表示する
         mapView.isPitchEnabled = false  // ジェスチャでの視点変更を許可しない
+        mapView.scaleBar.isHidden = false // スケールバーを表示する
         mapView.delegate = self
         view.addSubview(mapView)
         
@@ -128,7 +129,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         let locButImage: UIImage = UIImage(named: "icon_locate.png")!
         nowLoc_button.frame = CGRect.init(x: 0, y: 0, width: butSize, height: butSize)
         nowLoc_button.setImage(locButImage, for: UIControlState())
-        nowLoc_button.layer.position = CGPoint(x: 55.0, y: 55.0)
+        nowLoc_button.layer.position = CGPoint(x: 55.0, y: 90.0)
         mapView.addSubview(nowLoc_button)
         
         nowLoc_button.addTarget(self, action: #selector(osmViewController.nowLocate(_:)), for: .touchUpInside)
