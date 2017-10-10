@@ -86,7 +86,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         
         /* 背景地図の設定 */
         mapView = MGLMapView(frame: view.bounds,
-                             styleURL: MGLStyle.streetsStyleURL(withVersion:9))
+                             styleURL: MGLStyle.satelliteStyleURL(withVersion:9))
         
         //streetsStyleURL : 標準地図
         //lightStyleURL : シンプルな地図
@@ -186,7 +186,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         }
 
         
-        displayMode = mode.osm.rawValue
+        displayMode = mode.osmsat.rawValue
         
         mapView.delegate = self
         
