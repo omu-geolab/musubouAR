@@ -392,7 +392,7 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
                     case 0: // 火災：赤色
                         color = UIColor(red: 0.545, green: 0.020, blue: 0.220, alpha: 1.0)
                         
-                    case 1: // 浸水：青色
+                    case 1, 7: // 浸水：青色
                         color = UIColor(red: 0.000, green: 0.400, blue: 1.000, alpha: 1.0)
                         
                     case 2: // 土砂崩れ：茶色
@@ -546,7 +546,7 @@ class mapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
                 warningView.frame = CGRect(x: 0.0, y: 0.0, width: CGFloat(screenWidth), height: CGFloat(screenHeight))
                 warningView.backgroundColor = UIColor(red: 1.000, green: 0.000, blue: 0.000, alpha: 1.0)
                 
-            case 1: // 浸水：青色
+            case 1, 7: // 浸水：青色
                 warningView.frame = CGRect(x: 0.0, y: CGFloat(screenHeight * 0.75), width: CGFloat(screenWidth), height: CGFloat(screenHeight / 4))
                 warningView.backgroundColor = UIColor(red: 0.000, green: 0.000, blue: 0.600, alpha: 1.0)
                 

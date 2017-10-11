@@ -69,6 +69,7 @@ func getLabelText(_ num: Int, inforType: String) -> String {
         case 4: riskName = "建物の倒壊"
         case 5: riskName = "塀の倒壊"
         case 6: riskName = "道路の亀裂"
+        case 7: riskName = "津波"
 //        case 6: riskName = "通行禁止(コンテナ流入)"
         default: riskName = "その他の災害"
         }

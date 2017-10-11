@@ -501,7 +501,7 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
                 warningView.frame = CGRect(x: 0.0, y: 0.0, width: screenWidth, height: screenHeight)
                 warningView.backgroundColor = UIColor(red: 1.000, green: 0.000, blue: 0.000, alpha: CGFloat(kCamAlpha))
                 
-            case 1: // 浸水：青色
+            case 1, 7: // 浸水：青色
                 warningView.frame = CGRect(x: 0.0, y: screenHeight * 0.75, width: screenWidth, height: screenHeight / 4)
                 warningView.backgroundColor = UIColor(red: 0.000, green: 0.400, blue: 1.000, alpha: CGFloat(kCamAlpha))
                 
@@ -604,7 +604,7 @@ class cameraViewController: UIViewController, CLLocationManagerDelegate, detailV
                         switch jsonDataManager.sharedInstance.warnBox[i].riskType {
                         case 0: // 火災
                             warnImage = UIImage(named: "icon_warn0.png")!
-                        case 1: // 浸水
+                        case 1, 7: // 浸水
                             warnImage = UIImage(named: "icon_warn1.png")!
                         case 2: // 土砂崩れ
                             warnImage = UIImage(named: "icon_warn2.png")!
