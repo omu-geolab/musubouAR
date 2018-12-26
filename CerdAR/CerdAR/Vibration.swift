@@ -36,7 +36,7 @@ class Vibration: NSObject {
         isVibration = true
     }
     
-    func vibrate(timer: Timer) {
+    @objc func vibrate(timer: Timer) {
         AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
     }
     
@@ -47,6 +47,4 @@ class Vibration: NSObject {
             isVibration = false
         }
     }
-
-
 }

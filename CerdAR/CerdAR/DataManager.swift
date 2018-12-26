@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 import MapKit
 import AVFoundation
+import SceneKit
 
 /* タグに持たせるデータ群 */
 class TagData {
@@ -27,9 +28,12 @@ class TagData {
     var pinNum: Int!          // ピン番号
     var pinImage: UIImage!    // タグ画像
     var expandImage: UIImage! // サイズ調節用画像
+    var arImage: UIImage?
+    var elevation:Double?
     
     var distance = 0     // 現在地から目的地までの距離
     
+    // 情報の独自タグ
     var picType: String!      // 写真か動画か
     var photo: String!        // 写真のURL
     var movie: String!        // 動画のURL
@@ -60,7 +64,6 @@ class jsonDataManager: NSObject {
                 
                 infoBox.append(TagData())
                 infoBox[iN].pinNum = iN //ピン番号
-                
                 
                 if let id = json["features"][i]["properties"]["id"].string { // ID
                     infoBox[iN].commonId = id
@@ -158,7 +161,7 @@ class jsonDataManager: NSObject {
                     
                     //アイコンを増やした場合、コードを書き換えなくてもいいように修正
                     iconstr = infoBox[iN].icon
-                    iconstr = (iconstr as NSString).substring(to: iconstr.characters.count - 4)
+                    iconstr = (iconstr as NSString).substring(to: iconstr.count - 4)
                     iconstr = iconstr + "Map.png"
                     
                     infoBox[iN].pinImage = getResizeImage(UIImage(named: iconstr)!, newHeight: 40)
@@ -181,6 +184,9 @@ class jsonDataManager: NSObject {
                 } else {
                     warnBox.removeLast()
                     continue
+                }
+                if let icon = json["features"][i]["properties"]["icon"].string { // 目的地の名前
+                    warnBox[wN].icon = icon
                 }
                 
                 if let name = json["features"][i]["properties"]["Name"].string { // 目的地の名前
@@ -270,33 +276,6 @@ class jsonDataManager: NSObject {
                     continue
                 }
                 
-                if let pType = json["features"][i]["properties"]["pic_type"].string { // 写真か動画か
-                    if pType == kPhoto {
-                        warnBox[wN].picType = kPhoto
-                        if let pm = json["features"][i]["properties"][kPhoto].string { // 写真のURL
-                            warnBox[wN].photo = pm
-                        } else {
-                            warnBox[wN].photo = ""
-                        }
-                        
-                    } else if pType == kMovie {
-                        warnBox[wN].picType = kMovie
-                        if let pm = json["features"][i]["properties"][kMovie].string { // 動画のURL
-                            warnBox[wN].movie = pm
-                        } else {
-                            warnBox[wN].movie = ""
-                        }
-                        
-                    } else {
-                        warnBox[wN].picType = ""
-                        warnBox[wN].photo = ""
-                    }
-                    
-                } else {
-                    warnBox[wN].picType = ""
-                    warnBox[wN].photo = ""
-                }
-                
                 circleRadius.append(0.0)
                 
                 wN += 1
@@ -367,6 +346,8 @@ var warnImageBox: [UIImageView] = [] // 画面上での警告タグ画像の表�
 var userLat: CLLocationDegrees = 0   // 緯度
 var userLon: CLLocationDegrees = 0 // 経度
 
+var wmsUrl: String? = "http://gisws.media.osaka-cu.ac.jp/cgi-bin/sakai_landcover_all" // WMSサーバー
+
 let butSize: CGFloat = 70.0 // ボタンサイズ
 
 var audioPlayerNear: AVAudioPlayer! // 通知音(付近)
@@ -403,8 +384,30 @@ var pinData: TagData! // タップされたタグの情報を保持
 
 var backgroundView = UIImageView(frame: CGRect.init(x: 0, y: 0, width: screenWidth, height: screenHeight)) // 詳細画面の後ろのビュー
 
-let changeMapBut = UIButton(frame: CGRect.init(x: 0, y: 0, width: screenWidth / 4, height: screenHeight / 8))
+//let changeMapBut = UIButton(frame: CGRect.init(x: 0, y: 0, width: screenWidth / 4, height: screenHeight / 8))
 let changeMapBut2 = UIButton(frame: CGRect.init(x: 0, y: 0, width: screenWidth / 4, height: screenHeight / 8))
 //let changeMapBut3 = UIButton(frame: CGRect.init(x: 0, y: 0, width: screenWidth / 4, height: screenHeight / 8))
+let gisInfoBut = UIButton(frame: CGRect.init(x: 0, y: 0, width: screenWidth / 4, height: screenHeight / 8))
+
+/* GIS表示モード */
+enum gisMode: Int {
+    case none = 0
+    case gis = 1
+}
+var gisDisplayMode = gisMode.none // GISモード表示中かどうか
+let GISALPHA : CGFloat = 0.4 // 画像の透過
+
+let subMapSizeW: CGFloat = 126.0 // AR画面の地図の横幅
+let subMapSizeH: CGFloat = 84.0// AR画面の地図の横幅
+
 
 let cannotTouchView = UIView(frame: CGRect.init(x: 0.0, y: 0.0, width: CGFloat(screenWidth), height: CGFloat(screenHeight))) // 画面に触れられないようにするためのビュー
+
+let particleFire = SCNParticleSystem(named: "fire.scnp", inDirectory: "SceneKit.scnassets")
+
+let particleRain = SCNParticleSystem(named: "rain.scnp", inDirectory: "SceneKit.scnassets")
+
+let particleRock = SCNParticleSystem(named: "rock.scnp", inDirectory: "SceneKit.scnassets")
+
+let particleSmoke = SCNParticleSystem(named: "smoke.scnp", inDirectory: "")
+

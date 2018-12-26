@@ -47,38 +47,33 @@ func getLabelText(_ num: Int, inforType: String) -> String {
     
     // 情報タグ
     if inforType == kInfo {
-        
         if displayMode == mode.applemap.rawValue || displayMode == mode.osm.rawValue { // 地図画面の時は名称のみ
             text = jsonDataManager.sharedInstance.infoBox[num].name
-            
         } else { // カメラ画面の時は名称と距離
             text = jsonDataManager.sharedInstance.infoBox[num].name + "\n" + String(jsonDataManager.sharedInstance.infoBox[num].distance) + "m"
         }
         
         // 警告タグ
     } else if inforType == kWarn {
-        
+         
         var riskName: String!
         
         switch jsonDataManager.sharedInstance.warnBox[num].riskType {
             
         case 0: riskName = "火災"
         case 1: riskName = "浸水"
-        case 2: riskName = "土砂崩れ"
+        case 2: riskName = "土砂くずれ"
         case 3: riskName = "落橋"
-        case 4: riskName = "建物の倒壊"
-        case 5: riskName = "塀の倒壊"
-        case 6: riskName = "道路の亀裂"
-        case 7: riskName = "津波"
+        case 4: riskName = "家の倒壊"
+        case 5: riskName = "へいの倒壊"
+        case 6: riskName = "道路陥没"
 //        case 6: riskName = "通行禁止(コンテナ流入)"
         default: riskName = "その他の災害"
         }
         
-        
         if displayMode == mode.applemap.rawValue || displayMode == mode.osm.rawValue || displayMode == mode.osmsat.rawValue { // 地図画面の時は名称と範囲
             text = riskName + "\n"
             text = text + "範囲: " + String(Int(circleRadius[num])) + "m"
-            
         } else { // カメラ画面の時は名称と距離と範囲
             
             var distance = jsonDataManager.sharedInstance.warnBox[num].distance - Int(circleRadius[num])
@@ -125,7 +120,6 @@ func makeLabel(_ num: Int, inforType: String) -> UIImage {
             label.numberOfLines = 3 // ラベル内の行数
         }
         
-        
     } else if inforType == kWarn {
         label = UILabel(frame: CGRect.init(x: 0.0, y: 0.0, width: warnImage!.size.width, height: warnImage!.size.height)) //ラベルサイズ
         if displayMode == mode.cam.rawValue {
@@ -170,9 +164,6 @@ func makeTappedLabel(_ num: Int, size: Double) -> UIImage {
     return labelImg
 }
 
-
-
-
 /**
  * タグ画像を生成する
  * 情報タグ(地図画面・ARカメラ画面)、警告タグ(ARカメラ画面)のとき…吹き出しの画像とmakeLabelで生成した画像を合成してそれを返す
@@ -212,7 +203,6 @@ func getPinImage(_ img: UIImage, inforType: String) -> UIImage {
         
         if displayMode == mode.applemap.rawValue || displayMode == mode.osm.rawValue || displayMode == mode.osmsat.rawValue { // 地図画面のとき
             return img
-            
         } else if displayMode == mode.cam.rawValue { // カメラ画面のとき
             
             let tagRect = CGRect.init(x: 0.0, y: 0.0, width: warnImage!.size.width, height: warnImage!.size.height) // タグ画像のサイズと位置
@@ -221,7 +211,6 @@ func getPinImage(_ img: UIImage, inforType: String) -> UIImage {
             labelRect = CGRect.init(x: 30.0, y: 30.0, width: img.size.width - 60.0, height: img.size.height - 120.0) // ラベル画像のサイズと位置
         }
     }
-    
     
     img.draw(in: labelRect)
     
@@ -246,13 +235,101 @@ func getResizeImage(_ image: UIImage, newHeight: CGFloat) -> UIImage {
     
     let scale = newHeight / image.size.height // 縮尺度を決める
     let newWidth = image.size.width * scale // 新しい画像の幅
+  
+        UIGraphicsBeginImageContext(CGSize.init(width: newWidth, height: newHeight)) // 指定された画像の大きさのコンテキストを用意
+        
+        image.draw(in: CGRect.init(x: 0.0, y: 0.0, width: newWidth, height: newHeight)) // コンテキストに画像を描画する
+        let newImage = UIGraphicsGetImageFromCurrentImageContext() // コンテキストからUIImageを作る
+        UIGraphicsEndImageContext() // コンテキストを閉じる
+        if newImage != nil {
+            return newImage!
+        }
+        return UIImage()
     
-    UIGraphicsBeginImageContext(CGSize.init(width: newWidth, height: newHeight)) // 指定された画像の大きさのコンテキストを用意
-    image.draw(in: CGRect.init(x: 0.0, y: 0.0, width: newWidth, height: newHeight)) // コンテキストに画像を描画する
-    let newImage = UIGraphicsGetImageFromCurrentImageContext() // コンテキストからUIImageを作る
-    UIGraphicsEndImageContext() // コンテキストを閉じる
+}
+
+func getARImage(_ num: Int, inforType: String)-> UIImage{
+    var label: UILabel! // 情報タグの文字
+    var labelImg: UIImage! // ラベル画像
     
+    if inforType == kInfo {
+        if(jsonDataManager.sharedInstance.infoBox[num].icon == "icon_infoTagAR.png"){
+            let tagImg = UIImage(named: jsonDataManager.sharedInstance.infoBox[num].icon)! // 情報タグの画像
+            label = UILabel(frame: CGRect.init(x: 0.0, y: 0.0, width: tagImg.size.width, height: tagImg.size.height)) //ラベルサイズ
+            label.numberOfLines = 2 // ラベル内の行数
+        }else{
+            return UIImage(named: jsonDataManager.sharedInstance.infoBox[num].icon)!
+        }
+    } else if inforType == kWarn {
+        label = UILabel(frame: CGRect.init(x: 0.0, y: 0.0, width: warnImage!.size.width, height: warnImage!.size.height)) //ラベルサイズ
+        label.numberOfLines = 2 // ラベル内の行数
+    }
+    
+    label.text = getARText(num, inforType: inforType) // テキスト
+    label.textColor = UIColor.black // 文字色
+    label.textAlignment = NSTextAlignment.center // 中央揃え
+    label.font = UIFont.systemFont(ofSize: 80) // 初期文字サイズ
+    label.adjustsFontSizeToFitWidth = true // 文字の多さによってフォントサイズを調節する
+    
+    labelImg = label.getImage() as UIImage // UILabelをUIImageに変換する
+    
+    var imgsize: CGFloat =  500
+    var labelRect = CGRect.init()
+    
+    if inforType == kInfo {
+        let tagImg = UIImage(named: "icon_infoTagAR.png")! // 情報タグの画像
+        let tagRect = CGRect.init(x: 0.0, y: 0.0, width: labelImg.size.width, height: labelImg.size.height) // タグ画像のサイズと位置
+        UIGraphicsBeginImageContext(labelImg.size)
+        tagImg.draw(in: tagRect)
+        labelRect = CGRect.init(x: 50.0, y: 70.0, width: labelImg.size.width - 100.0, height: labelImg.size.height - 135.0) // ラベル画像のサイズと位置
+    } else if inforType == kWarn {
+        let tagImg = UIImage(named: jsonDataManager.sharedInstance.warnBox[num].icon ) ?? UIImage(named: "icon_infoTagAR.png")
+        let tagRect = CGRect.init(x: 0.0, y: 0.0, width: tagImg!.size.width, height: tagImg!.size.height) // タグ画像のサイズと位置
+        UIGraphicsBeginImageContext(tagImg!.size)
+        tagImg!.draw(in: tagRect)
+        labelRect = CGRect.init(x: 30.0, y: 30.0, width: labelImg.size.width - 60.0, height: labelImg.size.height - 120.0) // ラベル画像のサイズと位置
+    
+    }
+    
+    labelImg.draw(in: labelRect)
+    
+    // Context に描画された画像を新しく設定
+    let newImage = UIGraphicsGetImageFromCurrentImageContext()
+    
+    // Context 終了
+    UIGraphicsEndImageContext()
+    
+   // return getResizeImage(newImage!, newHeight: imgsize)
     return newImage!
+}
+
+func getARText(_ num: Int, inforType: String) -> String {
+    
+    var text: String!
+    
+    // 情報タグ
+    if inforType == kInfo {
+        text = jsonDataManager.sharedInstance.infoBox[num].name
+        // 警告タグ
+    } else if inforType == kWarn {
+        
+        var riskName: String!
+        
+        switch jsonDataManager.sharedInstance.warnBox[num].riskType {
+            
+        case 0: riskName = "火災"
+        case 1: riskName = "浸水"
+        case 2: riskName = "土砂くずれ"
+        case 3: riskName = "落橋"
+        case 4: riskName = "家の倒壊"
+        case 5: riskName = "へいの倒壊"
+        case 6: riskName = "道路陥没"
+        default: riskName = "その他の災害"
+        }
+        text = riskName + "\n"
+        text = text + "範囲: " + String(Int(circleRadius[num])) + "m"
+    }
+    return text
 }
 
 /*

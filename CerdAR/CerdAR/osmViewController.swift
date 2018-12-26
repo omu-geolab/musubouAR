@@ -23,12 +23,13 @@ class MGLTagData: MGLPointAnnotation {
     var pinNum: Int!          // ピン番号
 }
 
+
 class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapViewDelegate, detailViewDelegate {
-    
     var detailview: detailView? // 詳細画面
     var configview: ConfigView? // 設定画面
     var mapView = MGLMapView() // 地図画面
     
+    var rasterLayer: MGLRasterStyleLayer? //layer add
     var center: CLLocationCoordinate2D! // 中心
     
     let motionManager = CMMotionManager() // 加速度センサ
@@ -85,9 +86,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         view.addSubview(warningView) // viewに追加
         
         /* 背景地図の設定 */
-        mapView = MGLMapView(frame: view.bounds,
-                             styleURL: MGLStyle.satelliteStyleURL(withVersion:9))
-        
+        mapView = MGLMapView(frame: view.bounds, styleURL: MGLStyle.streetsStyleURL)
         //streetsStyleURL : 標準地図
         //lightStyleURL : シンプルな地図
         //satelliteStyleURL :　衛星画像
@@ -99,9 +98,9 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         mapView.frame = self.view.frame
         mapView.showsUserLocation = true // 現在地を表示する
         mapView.isPitchEnabled = false  // ジェスチャでの視点変更を許可しない
-        mapView.scaleBar.isHidden = false // スケールバーを表示する
         mapView.delegate = self
         view.addSubview(mapView)
+        
         
         locationManager = CLLocationManager()
         
@@ -123,13 +122,12 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         mapView.addSubview(toCon_button)
         toCon_button.addTarget(self, action: #selector(osmViewController.onClick_config(_:)), for: .touchUpInside)
         
-        
         // 画面の中心を現在地にするためのボタン生成
         let nowLoc_button = UIButton()
         let locButImage: UIImage = UIImage(named: "icon_locate.png")!
         nowLoc_button.frame = CGRect.init(x: 0, y: 0, width: butSize, height: butSize)
         nowLoc_button.setImage(locButImage, for: UIControlState())
-        nowLoc_button.layer.position = CGPoint(x: 55.0, y: 90.0)
+        nowLoc_button.layer.position = CGPoint(x: 55.0, y: 55.0)
         mapView.addSubview(nowLoc_button)
         
         nowLoc_button.addTarget(self, action: #selector(osmViewController.nowLocate(_:)), for: .touchUpInside)
@@ -156,7 +154,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
             osmInfoBox[i].inforType = jsonDataManager.sharedInstance.infoBox[i].inforType // タグの種類
             osmInfoBox[i].pinNum = i //ピン番号
             osmInfoBox[i].coordinate = CLLocationCoordinate2D(latitude: jsonDataManager.sharedInstance.infoBox[i].lat, longitude: jsonDataManager.sharedInstance.infoBox[i].lon) // 位置
-            mapView.addAnnotation(osmInfoBox[i])
+            // mapView.addAnnotation(osmInfoBox[i])
         }
         
         for i in 0 ..< jsonDataManager.sharedInstance.warnBox.count {
@@ -168,11 +166,18 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
             osmWarnBox[i].pinNum = i //ピン番号
             osmWarnBox[i].coordinate = CLLocationCoordinate2D(latitude: jsonDataManager.sharedInstance.warnBox[i].lat, longitude: jsonDataManager.sharedInstance.warnBox[i].lon) // 位置
         }
+        
+        // 現在地の取得を開始
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager = CLLocationManager()
+        }
+        
     }
     
     
     /* 画面が表示される直前 */
     override func viewWillAppear(_ animated: Bool) {
+        
         super.viewWillAppear(animated)
         
         for i in 0 ..< jsonDataManager.sharedInstance.warnBox.count {
@@ -184,9 +189,8 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
             osmWarnBox[i].pinNum = i //ピン番号
             osmWarnBox[i].coordinate = CLLocationCoordinate2D(latitude: jsonDataManager.sharedInstance.warnBox[i].lat, longitude: jsonDataManager.sharedInstance.warnBox[i].lon) // 位置
         }
-
         
-        displayMode = mode.osmsat.rawValue
+        displayMode = mode.osm.rawValue
         
         mapView.delegate = self
         
@@ -199,8 +203,8 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
             }
         }
         
-        changeMapBut.addTarget(self, action: #selector(osmViewController.changeMap(_:)), for: .touchUpInside)
         changeMapBut2.addTarget(self, action: #selector(self.changeMB(_:)), for: .touchUpInside)
+        gisInfoBut.addTarget(self, action: #selector(self.fetchGISInfo(_:)), for: .touchUpInside)
         
         motionManager.magnetometerUpdateInterval = 0.1 // 加速度センサを取得する間隔
         
@@ -239,7 +243,9 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         if viewTimer != nil {
             viewTimer.invalidate()
         }
-        updateTimer.invalidate()        
+        updateTimer.invalidate()
+        vibration.vibStop()
+        
     }
     
     
@@ -251,14 +257,9 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
                 self.mapView.removeAnnotation(annotation)
             }
         }
-        
-        vibration.vibStop()
-        changeMapBut.removeTarget(self, action: #selector(mapViewController.onClick_changeMap(_:)), for: .touchUpInside)
         changeMapBut2.removeTarget(self, action: #selector(self.changeMB(_:)), for: .touchUpInside)
-
-
+        gisInfoBut.removeTarget(self, action: #selector(self.fetchGISInfo(_:)), for: .touchUpInside)
     }
-    
     
     // MARK:- デリゲート-MKMapViewDelegate
     
@@ -267,11 +268,39 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
      * 拡大縮小に合わせて画像を張り替える
      */
     func mapView(_ mapView: MGLMapView, regionDidChangeAnimated animated: Bool) {
+        
         DispatchQueue(label: "scalingImage").async {
             self.scalingImage()
         }
+        
     }
-    
+    func mapView(_ mapView: MGLMapView, viewFor annotation: MGLAnnotation) -> MGLAnnotationView? {
+        if let pin  =  annotation as? MGLTagData {
+            if annotation === mapView.userLocation {
+                return nil
+            }else{
+                if pin.inforType == kInfo{
+                    let reuseIdentifier = pin.inforType + String(pin.pinNum)
+                    
+                    // For better performance, always try to reuse existing annotations.
+                    var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseIdentifier)
+                    
+                    // If there’s no reusable annotation view available, initialize a new one.
+                    if annotationView == nil {
+                        annotationView = MGLAnnotationView(annotation: pin, reuseIdentifier: reuseIdentifier)
+                        let image = jsonDataManager.sharedInstance.infoBox[pin.pinNum].pinImage
+                        let imageView = UIImageView(image: image)
+                        annotationView?.frame = CGRect(x: 0, y: 0, width: image!.size.width, height: image!.size.height)
+                        annotationView?.addSubview(imageView)
+                        annotationView?.centerOffset = CGVector(dx: 0, dy: -image!.size.height / 2.0)
+                    }
+                    
+                    return annotationView
+                }
+            }
+        }
+        return nil
+    }
     
     /*
      * ピン画像の設定をする
@@ -282,19 +311,8 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
             
             if annotation === mapView.userLocation { // 現在地を示すアノテーションの場合はデフォルトのまま
                 return nil
-                
             } else {
-                if pin.inforType == kInfo {
-                    if infoPinView[pin.pinNum] == mapView.dequeueReusableAnnotationImage(withIdentifier: pin.inforType + String(pin.pinNum)) {
-                        infoPinView[pin.pinNum].image = jsonDataManager.sharedInstance.infoBox[pin.pinNum].pinImage
-                        return infoPinView[pin.pinNum]
-                        
-                    } else { // 再利用できるアノテーションが無い場合（初回など）は生成する
-                        infoPinView[pin.pinNum] = MGLAnnotationImage(image: jsonDataManager.sharedInstance.infoBox[pin.pinNum].pinImage, reuseIdentifier: pin.inforType + String(pin.pinNum))
-                        return infoPinView[pin.pinNum]
-                    }
-                    
-                } else if pin.inforType == kWarn {
+                if pin.inforType == kWarn {
                     if jsonDataManager.sharedInstance.warnBox[pin.pinNum].stop.compare(Date()) == ComparisonResult.orderedDescending && Date().compare(jsonDataManager.sharedInstance.warnBox[pin.pinNum].start) == ComparisonResult.orderedDescending {
                         
                         if warnPinView[pin.pinNum] == mapView.dequeueReusableAnnotationImage(withIdentifier: pin.inforType + String(pin.pinNum)) {
@@ -311,12 +329,33 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         }
         
         mapView.userLocation!.title = ""
-        
         // ユーザーロケーションのとき
         return nil
     }
     
     
+    ///レイヤを表示する
+    ///
+    /// - Parameters:
+    ///   - mapView: mapView
+    ///   - style: style
+    func mapView(_ mapView: MGLMapView, didFinishLoading style: MGLStyle) {
+        // Add a new raster source and layer.
+        let source = MGLRasterTileSource(identifier: "darkmatter", tileURLTemplates: [serverName], options: [ .tileSize: 256 ])
+        let rasterLayer = MGLRasterStyleLayer(identifier: "darkmatter", source: source)
+        rasterLayer.rasterOpacity = NSExpression(forConstantValue: 0.5)
+        mapView.style?.addSource(source)
+        if let layer = mapView.style?.layer(withIdentifier: "darkmatter") {
+            mapView.style?.insertLayer(rasterLayer, above: layer)
+            self.rasterLayer = rasterLayer
+        }else{
+            mapView.style?.insertLayer(rasterLayer, at: 10)
+        }
+        if(gisDisplayMode != gisMode.gis) {
+            mapView.style?.layer(withIdentifier: "darkmatter")?.isVisible = false
+        }
+        
+    }
     
     /*
      * タグ画像がタップされたとき、
@@ -324,9 +363,8 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
      */
     func mapView(_ mapView: MGLMapView, didSelect annotation: MGLAnnotation) {
         self.view.addSubview(cannotTouchView) // 画面をさわれないようにする
-        
+        pinData = nil
         if mapView.userLocation!.coordinate.latitude == annotation.coordinate.latitude && mapView.userLocation!.coordinate.longitude == annotation.coordinate.longitude {
-            
             // 現在地を示すアノテーションの場合はデフォルトのまま
             
         } else { // タップしたタグを赤くする
@@ -360,14 +398,17 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
                     
                     jsonDataManager.sharedInstance.warnBox[i].pinImage = getResizeImage(newImage, newHeight: kTagSize)
                     jsonDataManager.sharedInstance.warnBox[i].expandImage = getResizeImage(newImage, newHeight: kTagSize)
-                    changeImage(&jsonDataManager.sharedInstance.warnBox[i], MGLtag: osmWarnBox[i], newsize: CGFloat(newsize))
+                    changeImage(jsonDataManager.sharedInstance.warnBox[i], MGLtag: osmWarnBox[i], newsize: CGFloat(newsize))
                     
                     break
                 }
             }
         }
         
-        
+        if(pinData == nil){
+            cannotTouchView.removeFromSuperview()
+            return
+        }
         if UIDevice.current.userInterfaceIdiom == .phone {
             self.detailview = detailView(frame: CGRect(x: screenWidth * 0.1, y: screenWidth * 0.02, width: screenWidth * 0.8, height: screenHeight * 0.9))
         } else if UIDevice.current.userInterfaceIdiom == .pad {
@@ -396,7 +437,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         case 0: // 火災のとき：赤色
             return UIColor(red: 0.545, green: 0.020, blue: 0.220, alpha: kFill)
             
-        case 1, 7: // 浸水のとき：青色
+        case 1: // 浸水のとき：青色
             return UIColor(red: 0.000, green: 0.400, blue: 1.000, alpha: kFill)
             
         case 2: // 土砂崩れのとき：茶色
@@ -466,10 +507,9 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
                 
                 jsonDataManager.sharedInstance.warnBox[pinData.pinNum].pinImage = getResizeImage(makeLabel(pinData.pinNum, inforType: kWarn), newHeight: CGFloat(newsize))
                 jsonDataManager.sharedInstance.warnBox[pinData.pinNum].expandImage = getResizeImage(makeLabel(pinData.pinNum, inforType: kWarn), newHeight: CGFloat(newsize))
-                self.changeImage(&jsonDataManager.sharedInstance.warnBox[pinData.pinNum], MGLtag: self.osmWarnBox[pinData.pinNum], newsize: CGFloat(newsize))
+                self.changeImage(jsonDataManager.sharedInstance.warnBox[pinData.pinNum], MGLtag: self.osmWarnBox[pinData.pinNum], newsize: CGFloat(newsize))
                 
-                
-            // 情報タグのとき
+                // 情報タグのとき
             } else if pinData.inforType == kInfo {
                 if pinData.icon == "icon_infoTag.png" {
                     self.makeRedTag(pinData.pinNum, img: UIImage(named: "icon_infoTag.png")!)
@@ -482,7 +522,6 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         
     }
     
-    
     // MARK:- configViewDelegate
     
     func configViewFinish() {
@@ -490,15 +529,12 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         configview?.removeFromSuperview()
     }
     
-    
-    
-    
     // MARK:- プライベート関数
     
     /*
      * 警告メッセージを表示する
      */
-    func updateMessage() {
+    @objc func updateMessage() {
         
         if msgCount == box.count {
             msgCount = 0
@@ -562,12 +598,11 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         }
     }
     
-    
     /*
      * 警告モードを表示する
      * ここで、警告モードの色や濃さ、表示幅を変更できる
      */
-    func updateView() {
+    @objc func updateView() {
         
         if viewCount == box.count {
             viewCount = 0
@@ -588,7 +623,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
                 warningView.frame = CGRect(x: 0.0, y: 0.0, width: CGFloat(screenWidth), height: CGFloat(screenHeight))
                 warningView.backgroundColor = UIColor(red: 1.000, green: 0.000, blue: 0.000, alpha: 1.0)
                 
-            case 1, 7: // 浸水：青色
+            case 1: // 浸水：青色
                 warningView.frame = CGRect(x: 0.0, y: CGFloat(screenHeight * 0.75), width: CGFloat(screenWidth), height: CGFloat(screenHeight / 4))
                 warningView.backgroundColor = UIColor(red: 0.000, green: 0.000, blue: 0.900, alpha: 1.0)
                 
@@ -656,17 +691,14 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         jsonDataManager.sharedInstance.infoBox[index].pinImage = getResizeImage(newImage!, newHeight: kTagSize)
         jsonDataManager.sharedInstance.infoBox[index].expandImage = getResizeImage(newImage!, newHeight: kTagSize)
         
-        changeImage(&jsonDataManager.sharedInstance.infoBox[index], MGLtag: osmInfoBox[index], newsize: CGFloat(kTagNewSize))
+        changeImage(jsonDataManager.sharedInstance.infoBox[index], MGLtag: osmInfoBox[index], newsize: CGFloat(kTagNewSize))
     }
-    
     
     /**
      * 拡大縮小や現在地の更新による新しいピン画像の設定
      */
     func scalingImage() {
-        
         if self.mapView.zoomLevel != beforeZoomLv {
-            
             let beki: Int = Int(27 - self.mapView.zoomLevel)
             let zoomlv: CGFloat = pow(2, CGFloat(beki))
             
@@ -691,12 +723,13 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
                         }
                         
                         DispatchQueue.main.async {
-                            self.changeImage(&jsonDataManager.sharedInstance.warnBox[i], MGLtag: self.osmWarnBox[i], newsize: CGFloat(newsize))
+                            self.changeImage(jsonDataManager.sharedInstance.warnBox[i], MGLtag: self.osmWarnBox[i], newsize: CGFloat(newsize))
                         }
                     }
                 }
             }
         }
+        
         
         beforeZoomLv = self.mapView.zoomLevel
     }
@@ -709,12 +742,10 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
      * @param MGLtag 更新するピン
      * @param newsize 新しいピン画像の縦幅
      */
-    func changeImage(_ tag: inout TagData, MGLtag: MGLTagData, newsize: CGFloat) {
+    func changeImage(_ tag: TagData, MGLtag: MGLTagData, newsize: CGFloat) {
         
         let newimage = getResizeImage(tag.expandImage, newHeight: newsize) // 新しい画像
-        let tmpAnnotation: TagData = tag // 一旦他の場所にデータを保持させる
         mapView.removeAnnotation(MGLtag) // 古い災害ピンを削除
-        tag = tmpAnnotation
         tag.pinImage = newimage
         
         mapView.addAnnotation(MGLtag)
@@ -741,8 +772,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
             newsize = Double(screenWidth) / 2
         }
         
-        self.changeImage(&jsonDataManager.sharedInstance.warnBox[index], MGLtag: self.osmWarnBox[index], newsize: CGFloat(newsize))
-        
+        self.changeImage(jsonDataManager.sharedInstance.warnBox[index], MGLtag: self.osmWarnBox[index], newsize: CGFloat(newsize))
     }
     
     /**
@@ -769,16 +799,18 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
      * 画面左下のボタンをタップしたとき
      * ARカメラ画面に遷移する
      */
-    internal func onclick_AR(_ sender: UIButton) {
-        self.present(cameraViewController(), animated: true, completion: nil)
+    @objc internal func onclick_AR(_ sender: UIButton) {
+        
+        self.present(ARViewController(), animated: true, completion: nil)
+        
     }
     
     
     /*
      * 設定画面を開く
      */
-    internal func onClick_config(_ sender: UIButton) {
-                
+    @objc internal func onClick_config(_ sender: UIButton) {
+        
         mapView.allowsScrolling = false // スクロールできないようにする
         mapView.allowsZooming = false // 拡大縮小できないようにする
         var location: CGPoint = mapView.center
@@ -789,7 +821,6 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         backgroundView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(osmViewController.onClick_configBackground(_:))))
         self.configview = ConfigView(frame: CGRect(x: screenWidth / 3 * 2, y: 0, width: screenWidth / 3, height: screenHeight))
         self.warningView.backgroundColor = UIColor.clear
-        
         UIView.animate(
             withDuration: 0.1,
             delay:0.0,
@@ -797,53 +828,28 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
             animations : {
                 self.warningView?.center = location
                 self.mapView.center = location
-            },
+        },
             completion: {
                 (value: Bool) in
                 self.view.addSubview(self.configview!)
                 self.view.sendSubview(toBack: self.configview!)
                 self.mapView.addSubview(backgroundView)
                 self.view.bringSubview(toFront: backgroundView)
-            }
+        }
         )
-    }
-    
-    
-    /*
-     * 設定画面の「Appleマップ」を
-     * タップした際に，地図データを切り替える
-     */
-    internal func changeMap(_ sender: UIButton) {
-        mapView.allowsScrolling = true // スクロールできるにする
-        mapView.allowsZooming = true // 拡大縮小できるようにする
-        var location: CGPoint = mapView.center
-        location.x = view.center.x
-        self.warningView?.center = location
-        self.mapView.center = location
-        
-        
-        configview?.removeFromSuperview()
-        ConfigView().deleteConfigDisplay()
-        updateTimer.invalidate() // update()を発火させていたOpenStreetMapsのタイマーを止める
-        
-        let mapVC = mapViewController()
-        UIApplication.shared.keyWindow?.rootViewController = mapVC
-
-        
     }
     
     /*
      * 設定画面の「衛星画像/標準地図」を
      * タップした際に，地図データを切り替える
      */
-    internal func changeMB(_ sender: UIButton) {
+    @objc internal func changeMB(_ sender: UIButton) {
         mapView.allowsScrolling = true // スクロールできるにする
         mapView.allowsZooming = true // 拡大縮小できるようにする
         var location: CGPoint = mapView.center
         location.x = view.center.x
         self.warningView?.center = location
         self.mapView.center = location
-        
         
         self.warningView.backgroundColor = UIColor.clear
         self.configview?.removeFromSuperview()
@@ -852,35 +858,45 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         mapView.frame = self.view.frame
         mapView.showsUserLocation = true // 現在地を表示する
         mapView.isPitchEnabled = false  // ジェスチャでの視点変更を許可しない
-  //      mapView.delegate = self
         
         let mapStyle = mapView.styleURL.absoluteString
-        if mapStyle == "mapbox://styles/mapbox/streets-v9" {
-                displayMode = mode.osmsat.rawValue
-                mapView.styleURL = MGLStyle.satelliteStyleURL(withVersion:9)
-                mbStyle = mapView.styleURL.absoluteString
-            
-        }else if (mapStyle == "mapbox://styles/mapbox/satellite-v9")  {
-                displayMode = mode.osm.rawValue
-                mapView.styleURL = MGLStyle.streetsStyleURL(withVersion:9)
-                mbStyle = mapView.styleURL.absoluteString
-    
+        print(mapStyle)
+        if mapStyle == MGLStyle.streetsStyleURL.absoluteString {
+            displayMode = mode.osmsat.rawValue
+            mapView.styleURL = MGLStyle.satelliteStyleURL
+            mbStyle = mapView.styleURL.absoluteString
+        }else if (mapStyle == MGLStyle.satelliteStyleURL.absoluteString)  {
+            displayMode = mode.osm.rawValue
+            mapView.styleURL = MGLStyle.streetsStyleURL
+            mbStyle = mapView.styleURL.absoluteString
         }else{
-                print("currentDisplayMap :  その他のマップデータが使われています！")
-            
+            print("currentDisplayMap :  その他のマップデータが使われています！")
         }
- 
-        
     }
     
     /*
-     * 設定画面の背景をタップしたとき
-     * 表示されているものが廃棄される
+     * 設定画面の「GIS情報」をタップした際に
+     *　GIS情報を取得する
      */
-    func onClick_configBackground(_ sender: UITapGestureRecognizer) {
-        
-        mapView.allowsScrolling = true // スクロールできるようにする
-        mapView.allowsZooming = true // 拡大縮小できるようにする
+    @objc internal func fetchGISInfo(_ sender: UIButton) {
+        closeConfigBackground()
+        if (gisDisplayMode == gisMode.gis) {
+            gisDisplayMode = gisMode.none
+            if let layer = self.mapView.style?.layer(withIdentifier: "darkmatter"){
+                layer.isVisible = false
+            }
+        } else {
+            gisDisplayMode = gisMode.gis
+            if let layer = self.mapView.style?.layer(withIdentifier: "darkmatter"){
+                layer.isVisible = true
+            }
+            //update()
+        }
+    }
+    /// 設定画面を閉じる
+    func closeConfigBackground() {
+        mapView.allowsScrolling = true
+        mapView.allowsZooming = true
         var location: CGPoint = mapView.center
         location.x = view.center.x
         self.warningView.backgroundColor = UIColor.clear
@@ -892,21 +908,29 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
             animations : {
                 self.warningView?.center = location
                 self.mapView.center = location
-            },
+        },
             completion: {
                 (value: Bool) in
-//                self.warningView.backgroundColor = UIColor.clear
                 self.configview?.removeFromSuperview()
                 ConfigView().deleteConfigDisplay()
-            }
+        }
         )
+    }
+    
+    
+    /*
+     * 設定画面の背景をタップしたとき
+     * 表示されているものが廃棄される
+     */
+    @objc func onClick_configBackground(_ sender: UITapGestureRecognizer) {
+        closeConfigBackground()
     }
     
     /*
      * 詳細画面の背景をタップしたとき
      * 表示されているものが廃棄される
      */
-    func onClick_detailBackground(_ sender: UITapGestureRecognizer) {
+    @objc func onClick_detailBackground(_ sender: UITapGestureRecognizer) {
         
         runAfterDelay(kTouchView) {
             if pinData.inforType == kWarn {
@@ -920,7 +944,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
                 
                 jsonDataManager.sharedInstance.warnBox[pinData.pinNum].pinImage = getResizeImage(makeLabel(pinData.pinNum, inforType: kWarn), newHeight: CGFloat(newsize))
                 jsonDataManager.sharedInstance.warnBox[pinData.pinNum].expandImage = getResizeImage(makeLabel(pinData.pinNum, inforType: kWarn), newHeight: CGFloat(newsize))
-                self.changeImage(&jsonDataManager.sharedInstance.warnBox[pinData.pinNum], MGLtag: self.osmWarnBox[pinData.pinNum], newsize: CGFloat(newsize))
+                self.changeImage(jsonDataManager.sharedInstance.warnBox[pinData.pinNum], MGLtag: self.osmWarnBox[pinData.pinNum], newsize: CGFloat(newsize))
                 
             } else if pinData.inforType == kInfo {
                 if pinData.icon == "icon_infoTag.png" {
@@ -937,7 +961,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
      * 画面左上のボタンをタップした時
      * 画面が現在地を中心に表示する
      */
-    internal func nowLocate(_ sender: UIButton) {
+    @objc internal func nowLocate(_ sender: UIButton) {
         self.mapView.setCenter(CLLocationCoordinate2D(latitude: self.mapView.userLocation!.coordinate.latitude, longitude: self.mapView.userLocation!.coordinate.longitude), zoomLevel: 16.5, animated: true)
     }
     
@@ -970,13 +994,11 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         mapView.addAnnotation(polygon[index])
     }
     
-    
-    
     /*
      * 現在時刻で災害が発生しているとき、
      * 災害円を描く
      */
-    func update() {
+    @objc func update() {
         let nowTime = Date() // 現在時刻
         
         box.removeAll()
@@ -991,7 +1013,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
             viewTimer.invalidate()
         }
         
-        // インデックスを初期化
+        // インデックスを初期化,
         msgCount = 0
         viewCount = 0
         
@@ -1004,9 +1026,9 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
                 self.mapView.removeAnnotation(self.polygon[i]) // 円を消す
                 self.mapView.alpha = kMapNormalAlpha
                 self.mapView.removeAnnotation(osmWarnBox[i]) // 災害のピン情報を削除
-                cameraViewController().warningView.backgroundColor = UIColor.clear // AR画面の警告モードをやめる
+                // cameraViewController().warningView.backgroundColor = UIColor.clear // AR画面の警告モードをやめる
                 
-            // 現在災害発生中
+                // 現在災害発生中
             } else if jsonDataManager.sharedInstance.warnBox[i].stop.compare(nowTime) == ComparisonResult.orderedDescending && nowTime.compare(jsonDataManager.sharedInstance.warnBox[i].start) == ComparisonResult.orderedDescending {
                 
                 updatePin(i)
@@ -1025,7 +1047,6 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
                 
                 box.append(i)
                 
-                
             } else {
                 
             }
@@ -1034,7 +1055,6 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         // 災害発生していないとき
         if box.count == 0 {
             warningMessage.isHidden = true // 警告メッセージを隠す
-            
             // 災害が発生しているとき
         } else {
             
@@ -1071,5 +1091,25 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         let needsConnection = (flags.rawValue & UInt32(kSCNetworkFlagsConnectionRequired)) != 0
         return (isReachable && !needsConnection)
     }
+}
+/* UIImageに変換する */
+extension UIView {
     
+    func getImage() -> UIImage {
+        
+        // ビットマップ画像のcontextを作成.
+        UIGraphicsBeginImageContextWithOptions(self.bounds.size, false, 0.0)
+        let context: CGContext = UIGraphicsGetCurrentContext()!
+        
+        // 対象のview内の描画をcontextに複写する.
+        self.layer.render(in: context)
+        
+        // 現在のcontextのビットマップをUIImageとして取得.
+        let capturedImage: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+        
+        // contextを閉じる.
+        UIGraphicsEndImageContext()
+        
+        return capturedImage
+    }
 }
