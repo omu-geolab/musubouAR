@@ -35,6 +35,7 @@ class loadViewController: UIViewController, termsViewDelegate, CLLocationManager
     /*
      * 位置情報のアクセス許可の状況が変わったときの処理
      */
+    
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         switch CLLocationManager.authorizationStatus() {
         case .notDetermined: // 位置情報の取得の可否がわからないとき
@@ -54,10 +55,8 @@ class loadViewController: UIViewController, termsViewDelegate, CLLocationManager
                         
                         // ローカルにdata.json(geojson)が存在しない場合，サーバーからデータを取得する．
                         jsondata(callback: { _ in
-                            
                             // サーバーにもないとき
                             if self.json == nil {
-                                
                                 let alert: UIAlertController = UIAlertController(title: "ERROR!!", message: "GeoJSONファイルが見つかりませんでした", preferredStyle:  UIAlertControllerStyle.alert)
                                 
                                 let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: {
@@ -66,9 +65,8 @@ class loadViewController: UIViewController, termsViewDelegate, CLLocationManager
                                 })
                                 
                                 alert.addAction(defaultAction)
-                                self.present(alert, animated: true, completion: nil)
+                                 self.present(alert, animated: true, completion: nil)
                                 self.showTermsView()
-                                
                                 // サーバーにあったとき
                             } else {
                                 jsonDataManager.sharedInstance.storeData(json: self.json, callback: { _ in
@@ -76,30 +74,39 @@ class loadViewController: UIViewController, termsViewDelegate, CLLocationManager
                                 })
                             }
                         })
-                        
                         return
                     }
                     
                     let jsonData = try? Data(contentsOf: URL(fileURLWithPath: pathFileName))
                     json = JSON(data:jsonData!)
+                    jsonDataManager.sharedInstance.storeData(json: json, callback: { _ in
+                        showTermsView()
+                    })
                 }
-                
-                
-                jsonDataManager.sharedInstance.storeData(json: json, callback: { _ in
-                    showTermsView()
-                })
-                
             } else { // 接続されていないとき
+                let fileName = "data.geojson"
+                
+                if let dir: NSString = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.allDomainsMask, true).first as NSString? {
+                    
+                    let pathFileName = dir.appendingPathComponent(fileName)
+                    guard (try? Data(contentsOf: URL(fileURLWithPath: pathFileName))) == nil else {
+                        let jsonData = try? Data(contentsOf: URL(fileURLWithPath: pathFileName))
+                        json = JSON(data:jsonData!)
+                        jsonDataManager.sharedInstance.storeData(json: json, callback: { _ in
+                            showTermsView()
+                        })
+                        return
+                    }
+                }
                 // jsonは読み込まず、利用規約を表示する
                 showTermsView()
             }
-            
         default: // 位置情報取得が拒否されているとき
             // jsonは読み込まず、利用規約を表示する
+
             showTermsView()
         }
     }
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -117,12 +124,11 @@ class loadViewController: UIViewController, termsViewDelegate, CLLocationManager
         return (isReachable && !needsConnection)
     }
     
-    
     func showIndicator() {
         //Indicatorを作成
         activityIndicator = UIActivityIndicatorView()
         activityIndicator.frame = CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight)
-        activityIndicator.backgroundColor = UIColor(red: 0/2555, green: 0/255, blue: 0/255, alpha: 0.7)
+        activityIndicator.backgroundColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 0.7)
 //        activityIndicator.layer.cornerRadius = 8
         activityIndicator.center = self.view.center
         
@@ -136,7 +142,6 @@ class loadViewController: UIViewController, termsViewDelegate, CLLocationManager
         //Viewに追加
         self.view.addSubview(activityIndicator)
     }
-    
     
     /*
      * 侵入・付近の通知音の設定
@@ -162,7 +167,6 @@ class loadViewController: UIViewController, termsViewDelegate, CLLocationManager
         }
     }
     
-    
     /*
      * サーバーからJSONファイルを探す
      */
@@ -174,10 +178,8 @@ class loadViewController: UIViewController, termsViewDelegate, CLLocationManager
         let configuration = URLSessionConfiguration.default
         configuration.requestCachePolicy = NSURLRequest.CachePolicy.reloadIgnoringLocalCacheData
         let session = URLSession(configuration: configuration, delegate:nil, delegateQueue:OperationQueue.main)
-        
         let task = session.dataTask(with: req, completionHandler: {
             (data, response, error) -> Void in
-            
             // urlが見つからない、またはタイムアウトしたとき
             if error != nil {
                 callback("finished")
@@ -190,15 +192,11 @@ class loadViewController: UIViewController, termsViewDelegate, CLLocationManager
         task.resume()
     }
     
-    
     func showTermsView() {
         termsview = termsView(frame: CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight))
         termsview!.delegate = self
         self.view.addSubview(termsview!)
     }
-    
-    
-    
     
     // MARK:- detailViewDelegate
     func termsViewfinish() {
@@ -207,8 +205,5 @@ class loadViewController: UIViewController, termsViewDelegate, CLLocationManager
         
         let osmVC = osmViewController()
         UIApplication.shared.keyWindow?.rootViewController = osmVC
-
     }
-    
-    
 }

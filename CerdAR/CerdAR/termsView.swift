@@ -117,18 +117,16 @@ class termsView: UIView {
     /*
      * (利用規約)OKボタンをクリックした時
      */
-    func onClick_Ok(_ sender: UIButton) {
+    @objc func onClick_Ok(_ sender: UIButton) {
         delegate?.termsViewfinish()
     }
-    
     
     /*
      * (利用規約)キャンセルボタンをクリックした時
      */
-    func onClick_Cancel(_ sender: UIButton) {
+    @objc func onClick_Cancel(_ sender: UIButton) {
         exit(0) // アプリを終了する
     }
-    
     
     /*
      * ロゴ表示
