@@ -71,9 +71,23 @@ class ARViewController: UIViewController,detailViewDelegate {
         let lightNode = SCNNode()
         let light = SCNLight()
         light.type = .ambient
-        light.intensity = 100
+        light.intensity = 600
         lightNode.light = light
         scene.rootNode.addChildNode(lightNode)
+        
+        let lightNode1 = SCNNode()
+        let light1 = SCNLight()
+        light1.type = .directional
+        light1.intensity = 300
+        lightNode1.light = light1
+        scene.rootNode.addChildNode(lightNode1)
+        
+        let lightNode2 = SCNNode()
+        let light2 = SCNLight()
+        light2.type = .omni
+        light2.intensity = 500
+        lightNode2.light = light2
+        scene.rootNode.addChildNode(lightNode2)
         
         //ARアノテーションのタッチイベント
         let tapGesture = UITapGestureRecognizer(target: self, action:#selector(handleTap(_:)))
@@ -162,7 +176,7 @@ class ARViewController: UIViewController,detailViewDelegate {
             overlay.addEnvironment(filedNamed: "SceneKit.scnassets/rain.sks", position: positionTop, range: range)
             overlay.addEnvironment(filedNamed: "SceneKit.scnassets/flood.sks", position: positionBot, range: range)
         case 2: // 土砂崩れのとき
-            overlay.addEnvironment(filedNamed: "rock.sks", position: positionRight, range: 350)
+            overlay.addEnvironment(filedNamed: "SceneKit.scnassets/rock.sks", position: positionRight, range: 350)
             
         case 3: // 道路閉塞のとき
             overlay.addEnvironment(filedNamed: "SceneKit.scnassets/smoke.sks", position: positionTop, range: range)

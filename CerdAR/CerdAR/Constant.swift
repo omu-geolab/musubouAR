@@ -8,7 +8,7 @@
 import Foundation
 
 /* camera */
-let kCamDis = 1000 // 現在地からkCamDis(m)までのタグを表示する
+let kCamDis = 500 // 現在地からkCamDis(m)までのタグを表示する
 let kCamAlpha = 0.3 // 警告モードのalpha値( 0(薄)<-->(濃)1 ) ※今は各災害同じalpha値で設定している
 let kTagUpdateTime = 0.01 // kTagUpdateTime秒ごとにタグ表示を更新する
 let kDiff = 0.1 // kTagUpdateTime秒前と比較して -kDiff ~ kDiff度の変化があるときのみ処理をする(手ぶれ補正)
