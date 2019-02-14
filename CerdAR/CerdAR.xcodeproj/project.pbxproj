@@ -93,7 +93,7 @@
 		AC2C52EA1D5805F80032B689 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC2C52FA1D5807D00032B689 /* ConfigView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigView.swift; sourceTree = "<group>"; };
 		ACEE245B1D8235FE00102E10 /* MakeTagImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeTagImage.swift; sourceTree = "<group>"; };
-		ACF399B61D98C25100B0EC47 /* osmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = osmViewController.swift; sourceTree = "<group>"; };
+		ACF399B61D98C25100B0EC47 /* osmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = osmViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		ACFD6E0B1DB474680006A765 /* loadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loadViewController.swift; sourceTree = "<group>"; };
 		BF01B83D1F6FEECE001AC15E /* GISImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GISImageView.swift; sourceTree = "<group>"; };
 		D37E86951E780A6A0030B01A /* Vibration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vibration.swift; sourceTree = "<group>"; };
