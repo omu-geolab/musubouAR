@@ -32,4 +32,4 @@ let kMapAlpha = 0.8 // 警告モードのalpha値( 0(濃)<-->(薄)1 ) ※地図�
 let serverName = "https://www.cerd.osaka-cu.ac.jp:8443/styles/positron/{z}/{x}/{y}.png"
 let scaleDefaultAR = Float(0.3)//AR拡大縮小
 let adjustHeightAR = Float(15.0)//AR高さしち調整
-let kUpdateFace = 10.0//一定時平面図更新
+let kUpdateFace = 5.0//一定時平面図更新
