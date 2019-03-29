@@ -2,7 +2,7 @@
 //  MakeTagImage.swift
 //  CerdAR
 //
-//  Copyright (c) 2016 BRILLIANTSERVICE CO.,LTD., CERD (Osaka City University)
+//  Copyright (c) 2018 APPLIED TECHNOLOGY CO.,LTD., 2016 BRILLIANTSERVICE CO.,LTD., CERD (Osaka City University)
 //
 
 import Foundation

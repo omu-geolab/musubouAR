@@ -1,3 +1,5 @@
-binary "https://www.mapbox.com/ios-sdk/Mapbox-iOS-SDK.json" "4.7.0"
+binary "https://www.mapbox.com/ios-sdk/Mapbox-iOS-SDK.json" "4.9.0"
+github "mapbox/MapboxStatic.swift" "v0.10.0"
 github "mapbox/mapbox-events-ios" "v0.4.51"
-github "mapbox/mapbox-scenekit" "1e26d4c185d6383368eb2ff9580604604fc72c8a"
+github "mapbox/mapbox-scenekit" "a3426873bda0b4f2871222cb02e5a7c9677823d7"
+github "raphaelmor/Polyline" "v4.2.0"

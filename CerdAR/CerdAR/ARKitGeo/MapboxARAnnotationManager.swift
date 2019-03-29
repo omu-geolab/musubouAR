@@ -1,3 +1,10 @@
+//
+//  MapboxARAnnotationManager.swift
+//  CerdAR
+//
+//  Copyright (c) 2018 Apptec CO.,LTD., CERD (Osaka City University)
+//
+
 import ARKit
 import CoreLocation
 import GLKit
@@ -5,8 +12,9 @@ import GLKit
 /// ARkitのアノテーションを管理する
 public class MapboxARAnnotationManager {
     
-    private(set) var anchors = [ARAnchor]()
-    private var session: ARSession
+    public var anchors = [ARAnchor]()
+    private var anchorFace:ARAnchor?
+    public var session: ARSession
     
     init(session: ARSession) {
         self.session = session
@@ -15,9 +23,9 @@ public class MapboxARAnnotationManager {
     /// ARマープを作成する
     func addMapSurface(){
         // Add the anchor to the session
-        let anchor = ARAnchor(name: "map_surface",transform: matrix_identity_float4x4)
-        session.add(anchor: anchor)
-        anchors.append(anchor)
+        anchorFace = ARAnchor(name: "map_surface",transform: matrix_identity_float4x4)
+        session.add(anchor: anchorFace!)
+        //anchors.append(anchor)
     }
     
     func addARAnnotation(startLocation: CLLocation, endLocation: CLLocation, tagData: TagData?) {
@@ -64,6 +72,12 @@ public class MapboxARAnnotationManager {
         }
         anchors.removeAll()
     }
+    func removeFaceARAnchor() {
+        if(anchorFace != nil){
+            session.remove(anchor: anchorFace!)
+        }
+    }
+    
 }
 
 

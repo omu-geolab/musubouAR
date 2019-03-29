@@ -78,7 +78,6 @@ class detailView: UIView {
         
         if pinData.inforType == kInfo {
             distance.text = "あと" + String(calcDistance(pinData.lat, lon: pinData.lon, uLat: userLat, uLon: userLon)) + "m"
-
         } else {
             var dst = calcDistance(pinData.lat, lon: pinData.lon, uLat: userLat, uLon: userLon) - Int(circleRadius[pinData.pinNum])
             if dst < 0 {
@@ -90,9 +89,8 @@ class detailView: UIView {
         distance.numberOfLines = 0
         distance.sizeToFit()
         self.addSubview(distance)
-        
-        
-//        // 画像・動画の挿入(画面左側)
+
+        // 画像・動画の挿入(画面左側)
         if pinData.inforType == kInfo {
 
             if pinData.picType == kPhoto { // 画像
@@ -137,13 +135,11 @@ class detailView: UIView {
                     if pinData.icon != "icon_infoTag.png" {
                         warnImageView.image = UIImage(named: pinData.icon)
                         self.addSubview(warnImageView)
-
                     } else {
                         warnImageView.image = pinData.expandImage
                         self.addSubview(warnImageView)
                     }
                 }
-
 
             } else if pinData.picType == kMovie { // 動画
 
@@ -187,8 +183,6 @@ class detailView: UIView {
                     self.addSubview(warnImageView)
                 }
             }
-
-
 
         } else if pinData.inforType == kWarn { // 警告タグ
             let warnImageView = UIImageView(frame: CGRect.init(x: CGFloat(dWid * 0.8 * 0.05), y: CGFloat(dHei * 0.3), width: bounds.height * 0.5, height: bounds.height * 0.5))
@@ -255,8 +249,7 @@ class detailView: UIView {
         }
     }
     
-    
-    
+
     /*
      * ⚠︎画像を表示する
      */
