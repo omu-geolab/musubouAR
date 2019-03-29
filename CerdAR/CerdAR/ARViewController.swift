@@ -199,7 +199,7 @@ class ARViewController: UIViewController,detailViewDelegate {
         startSession()
         self.annotationManager.removeFaceARAnchor();
         self.annotationManager.addMapSurface();
-        timerUpdateFace = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ARViewController.updateFace), userInfo: nil, repeats: true)
+        timerUpdateFace = Timer.scheduledTimer(timeInterval: kUpdateFace, target: self, selector: #selector(ARViewController.updateFace), userInfo: nil, repeats: true)
     
         update() // 災害情報を更新する
         // kUpdateWarn秒に1回update()を発火させる
@@ -514,9 +514,6 @@ class ARViewController: UIViewController,detailViewDelegate {
     @objc func updateFace(){
         self.annotationManager.removeFaceARAnchor()
         self.annotationManager.addMapSurface()
-        if(imageView != nil){
-        timerUpdateFace = Timer.scheduledTimer(timeInterval: kUpdateFace, target: self, selector: #selector(ARViewController.updateFace), userInfo: nil, repeats: true)
-        }
     }
     
     /*
