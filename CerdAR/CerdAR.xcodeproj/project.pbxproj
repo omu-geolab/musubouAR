@@ -29,17 +29,17 @@
 		F033F9F5219171DD008A3A2E /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F033F9F4219171DD008A3A2E /* ARViewController.swift */; };
 		F033F9F8219172E7008A3A2E /* MapboxARAnnotationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F033F9F7219172E7008A3A2E /* MapboxARAnnotationManager.swift */; };
 		F033F9FA219172EC008A3A2E /* MapboxARAnchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F033F9F9219172EC008A3A2E /* MapboxARAnchor.swift */; };
-		F06A927221CB5B9C0075391E /* Mapbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F06A927121CB5B9C0075391E /* Mapbox.framework */; };
-		F06A927421CB5BA20075391E /* MapboxMobileEvents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F06A927321CB5BA20075391E /* MapboxMobileEvents.framework */; };
-		F06A927621CB5BA70075391E /* MapboxSceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F06A927521CB5BA70075391E /* MapboxSceneKit.framework */; };
 		F06D0D4C219C12CB0046747B /* SceneKit.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = F06D0D4B219C12CB0046747B /* SceneKit.scnassets */; };
 		F06E168221D31629004E0BB6 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = F06E168121D31629004E0BB6 /* spark.png */; };
 		F06E168621D316D1004E0BB6 /* confetti.png in Resources */ = {isa = PBXBuildFile; fileRef = F06E168521D316D1004E0BB6 /* confetti.png */; };
 		F06E168821D31709004E0BB6 /* rock.png in Resources */ = {isa = PBXBuildFile; fileRef = F06E168721D31709004E0BB6 /* rock.png */; };
 		F07C561721B4D12F004F760C /* rock.scnp in Resources */ = {isa = PBXBuildFile; fileRef = F07C561621B4D12F004F760C /* rock.scnp */; };
 		F08A2D3921CCE95500777CAC /* rain.scnp in Resources */ = {isa = PBXBuildFile; fileRef = F08A2D3821CCE95500777CAC /* rain.scnp */; };
+		F09D5115224DDC660097F0F3 /* Mapbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F06A927121CB5B9C0075391E /* Mapbox.framework */; };
+		F09D5116224DDC7D0097F0F3 /* MapboxSceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F06A927521CB5BA70075391E /* MapboxSceneKit.framework */; };
 		F0A3E61F21B78A7C0099812E /* smoke.png in Resources */ = {isa = PBXBuildFile; fileRef = F0A3E61D21B78A7C0099812E /* smoke.png */; };
 		F0A3E62021B78A7C0099812E /* smoke.scnp in Resources */ = {isa = PBXBuildFile; fileRef = F0A3E61E21B78A7C0099812E /* smoke.scnp */; };
+		F0C14029224A050400BFDDE7 /* third_party_vector_style.json in Resources */ = {isa = PBXBuildFile; fileRef = F0C14028224A050400BFDDE7 /* third_party_vector_style.json */; };
 		F0C5DB8C21B4CFF90067EF8F /* fire.scnp in Resources */ = {isa = PBXBuildFile; fileRef = F0C5DB8B21B4CFF90067EF8F /* fire.scnp */; };
 /* End PBXBuildFile section */
 
@@ -115,6 +115,7 @@
 		F08A2D3821CCE95500777CAC /* rain.scnp */ = {isa = PBXFileReference; lastKnownFileType = file.scp; path = rain.scnp; sourceTree = "<group>"; };
 		F0A3E61D21B78A7C0099812E /* smoke.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = smoke.png; path = CerdAR/SceneKit.scnassets/smoke.png; sourceTree = "<group>"; };
 		F0A3E61E21B78A7C0099812E /* smoke.scnp */ = {isa = PBXFileReference; lastKnownFileType = file.scp; name = smoke.scnp; path = CerdAR/SceneKit.scnassets/smoke.scnp; sourceTree = "<group>"; };
+		F0C14028224A050400BFDDE7 /* third_party_vector_style.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = third_party_vector_style.json; sourceTree = "<group>"; };
 		F0C5DB8B21B4CFF90067EF8F /* fire.scnp */ = {isa = PBXFileReference; lastKnownFileType = file.scp; name = fire.scnp; path = CerdAR/SceneKit.scnassets/fire.scnp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -123,9 +124,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F06A927221CB5B9C0075391E /* Mapbox.framework in Frameworks */,
-				F06A927421CB5BA20075391E /* MapboxMobileEvents.framework in Frameworks */,
-				F06A927621CB5BA70075391E /* MapboxSceneKit.framework in Frameworks */,
+				F09D5115224DDC660097F0F3 /* Mapbox.framework in Frameworks */,
+				F09D5116224DDC7D0097F0F3 /* MapboxSceneKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,6 +189,7 @@
 		AC2C52C41D5805F70032B689 /* CerdAR */ = {
 			isa = PBXGroup;
 			children = (
+				F0C14028224A050400BFDDE7 /* third_party_vector_style.json */,
 				F033F9F6219172B8008A3A2E /* ARKitGeo */,
 				AC2C03D31D9D1CB9009926E3 /* SwiftyJSON.swift */,
 				AC2C52C51D5805F70032B689 /* AppDelegate.swift */,
@@ -385,6 +386,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0C14029224A050400BFDDE7 /* third_party_vector_style.json in Resources */,
 				7EE70E211DEAA1B6000FB537 /* sound_near.mp3 in Resources */,
 				AC2C52D31D5805F70032B689 /* LaunchScreen.storyboard in Resources */,
 				7EE70E1F1DEAA16A000FB537 /* sound_intrusion.mp3 in Resources */,
@@ -564,7 +566,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -615,7 +617,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -631,7 +633,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = ND55MN997H;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -640,7 +642,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = CerdAR/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -648,7 +650,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "ocu.cerd-ar";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = AR_CERD;
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -662,7 +664,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = ND55MN997H;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -671,7 +673,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = CerdAR/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -679,7 +681,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "ocu.cerd-ar";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = AR_CERD;
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

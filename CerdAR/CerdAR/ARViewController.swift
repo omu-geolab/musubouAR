@@ -1,3 +1,10 @@
+//
+//  ARViewController.swift
+//  CerdAR
+//
+//  Copyright (c) 2018 APPLIED TECHNOLOGY CO.,LTD., CERD (Osaka City University)
+//
+
 import UIKit
 import ARKit
 import SceneKit
@@ -21,24 +28,21 @@ class ARViewController: UIViewController,detailViewDelegate {
     var annotationManager: MapboxARAnnotationManager!
     let startUpdate = false
     var json: JSON!
+    var rasterLayer: MGLRasterStyleLayer? //layer add
     
     var osmInfoBox = [MGLTagData]() // OSM情報タグ用
     var osmWarnBox = [MGLTagData]() // OSM警告タグ用
     
     var infoPinView = [MGLAnnotationImage]() // ピン画像(情報タグ)
     var warnPinView = [MGLAnnotationImage]() // ピン画像(警告タグ)
-    var polygons = [MGLPolygonFeature]() // 災害円
+    var polygons = [PolygonView]() // 災害円
     var polyNum = 0 // 災害円のインデックス
     var testEnviroment:Int = 0 // 環境を取り替えり
-    
-    var scaleDefault = SCNVector3(0.5,0.5,0.5)
-    
+  
     var flag = false //
-    var imageView : UIImage!
+    var imageView : UIImage?
     
     var terrainNode: TerrainNode?
-    
-    
     //大阪市北区
     var minLat = 34.703712
     var minLon = 135.499320
@@ -76,10 +80,11 @@ class ARViewController: UIViewController,detailViewDelegate {
     var messageTimer: Timer! // 警告メッセージを表示するためのタイマー
     var viewTimer: Timer! // 警告モードを表示するためのタイマー
     var updateTimer: Timer! // 一定時間ごとにupdate()を発火させる
+    var timerUpdateFace = Timer()//AR平面図更新
+    var warnCount:Int = 0 //災害を侵入する番号
     
     var warnState = warningState.safe.rawValue // 現在ユーザーは災害からどの位置にいるか(安全・付近・侵入)
     var warnIndex = -1 //災害を侵入すると災害種別のインデクス
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -128,7 +133,7 @@ class ARViewController: UIViewController,detailViewDelegate {
         //ARアノテーションのタッチイベント
         let tapGesture = UITapGestureRecognizer(target: self, action:#selector(handleTap(_:)))
         sceneView.addGestureRecognizer(tapGesture)
-        
+       
         self.view.addSubview(sceneView)
         self.view.addSubview(mapView)
         self.view.addSubview(cameraStateInfoLabel)
@@ -148,18 +153,18 @@ class ARViewController: UIViewController,detailViewDelegate {
         toMap_Button.addTarget(self, action: #selector(ARViewController.onClick_map(_:)), for: .touchUpInside)
         
         //環境を変える
-        let toChangeEnvironment_Button = UIButton()
-        let buttonChangeImage: UIImage = UIImage(named: "star.png")!
-        if UIDevice.current.userInterfaceIdiom == .phone {
-            toChangeEnvironment_Button.frame = CGRect(x: 0.0, y: 0.0, width: butSize - 10, height: butSize - 10)
-        } else if UIDevice.current.userInterfaceIdiom == .pad{
-            toChangeEnvironment_Button.frame = CGRect(x: 0.0, y: 0.0, width: butSize, height: butSize)
-        }
-        toChangeEnvironment_Button.setImage(buttonChangeImage, for: UIControlState())
-        toChangeEnvironment_Button.layer.position = CGPoint(x: 55, y: 50)
-        view.addSubview(toChangeEnvironment_Button)
-        // backgroundView.addSubview(toMap_Button)
-        toChangeEnvironment_Button.addTarget(self, action: #selector(ARViewController.changeEnvironment(_:)), for: .touchUpInside)
+//        let toChangeEnvironment_Button = UIButton()
+//        let buttonChangeImage: UIImage = UIImage(named: "star.png")!
+//        if UIDevice.current.userInterfaceIdiom == .phone {
+//            toChangeEnvironment_Button.frame = CGRect(x: 0.0, y: 0.0, width: butSize - 10, height: butSize - 10)
+//        } else if UIDevice.current.userInterfaceIdiom == .pad{
+//            toChangeEnvironment_Button.frame = CGRect(x: 0.0, y: 0.0, width: butSize, height: butSize)
+//        }
+//        toChangeEnvironment_Button.setImage(buttonChangeImage, for: UIControlState())
+//        toChangeEnvironment_Button.layer.position = CGPoint(x: 55, y: 50)
+//        view.addSubview(toChangeEnvironment_Button)
+//        // backgroundView.addSubview(toMap_Button)
+//        toChangeEnvironment_Button.addTarget(self, action: #selector(ARViewController.changeEnvironment(_:)), for: .touchUpInside)
         
         // ARアノテーションマネージャを作成し、それにARセッションへの参照を与える
         annotationManager = MapboxARAnnotationManager(session: sceneView.session)
@@ -168,12 +173,11 @@ class ARViewController: UIViewController,detailViewDelegate {
         {
             locationManager = CLLocationManager()
             locationManager.delegate = self
-            locationManager.distanceFilter = 2
+            locationManager.distanceFilter = 3
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
             locationManager.requestAlwaysAuthorization()
             locationManager.startUpdatingLocation()
         }
-        
         /* 警告メッセージの設定 */
         warningMessage.textColor = UIColor.black // 文字色(黒)
         warningMessage.backgroundColor = UIColor.white.withAlphaComponent(CGFloat(kMsgAlpha)) // 背景色(白)
@@ -188,15 +192,20 @@ class ARViewController: UIViewController,detailViewDelegate {
         view.addSubview(warningMessage)
         warningMessage.isHidden = true
         
-        update();
-        updateMessage() // 災害情報を更新する
-        updateView();
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         startSession()
-        print(jsonDataManager.sharedInstance.infoBox.count)
+        self.annotationManager.removeFaceARAnchor();
+        self.annotationManager.addMapSurface();
+        timerUpdateFace = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ARViewController.updateFace), userInfo: nil, repeats: true)
+    
+        update() // 災害情報を更新する
+        // kUpdateWarn秒に1回update()を発火させる
+        if updateTimer == nil {
+            updateTimer = Timer.scheduledTimer(timeInterval: kUpdateWarn, target: self, selector: #selector(ARViewController.update), userInfo: nil, repeats: true)
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -204,6 +213,10 @@ class ARViewController: UIViewController,detailViewDelegate {
         
         // Pause the view's session
         sceneView.session.pause()
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
     }
     
     //MARK: Action
@@ -233,13 +246,13 @@ class ARViewController: UIViewController,detailViewDelegate {
             
         case 3: // 道路閉塞のとき
             overlay.addEnvironment(filedNamed: "SceneKit.scnassets/smoke.sks", position: positionTop, range: range)
-        default: //
-            //overlay = SKScene()
-            //self.sceneView.overlaySKScene?.removeFromParent()
+        default:
             print("default")
         }
+        
         runAfterDelay(0.1) {
             self.sceneView.overlaySKScene = overlay
+            
         }
         testEnviroment = testEnviroment + 1
     }
@@ -258,7 +271,6 @@ class ARViewController: UIViewController,detailViewDelegate {
                     return
                 }
                 let mapboxAnchor = anchor as! MapboxARAnchor
-                print("mactch")
                 let info = mapboxAnchor.name?.split(separator: "_")
                 if(info!.count > 1){
                     self.view.addSubview(cannotTouchView) // 画面をさわれないようにする
@@ -280,8 +292,6 @@ class ARViewController: UIViewController,detailViewDelegate {
                     self.detailview!.delegate = self
                     backgroundView = detailView.makebackgroungView()
                     backgroundView.isUserInteractionEnabled = true
-                    //backgroundView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(ARViewController.onClick_detailBackground(_:))))
-                    
                     runAfterDelay(kShowDetail) { // タグをタップしてからkShowDetail秒後に詳細画面を表示する
                         self.view.addSubview(backgroundView)
                         self.view.addSubview(self.detailview!)
@@ -289,16 +299,12 @@ class ARViewController: UIViewController,detailViewDelegate {
                 }
             }
         }
-        
-        
-        
     }
     
     // MARK: - Utility methods
     
     private func startSession() {
         // Create a session configuration
-        flag  = true
         let configuration = ARWorldTrackingConfiguration()
         
         if automaticallyFindTrueNorth {
@@ -310,17 +316,16 @@ class ARViewController: UIViewController,detailViewDelegate {
         
         // Run the view's session
         sceneView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
+        flag  = true
     }
     
     func resetARSession() {
         startSession()
     }
-    
-    
-    
+
     //マープを設定する
     private func configureMapboxMapView() {
-        
+        createSnapshot()//AR平面図作成
         let d:CGFloat = CGFloat(screenWidth)/4
         mapView = MGLMapView(frame: CGRect(x: CGFloat(screenWidth)-d, y: CGFloat(screenHeight)-d, width: d, height: d))
         let styleStreet = MGLStyle.streetsStyleURL
@@ -342,12 +347,12 @@ class ARViewController: UIViewController,detailViewDelegate {
             osmInfoBox[i].pinNum = i //ピン番号
             osmInfoBox[i].coordinate = CLLocationCoordinate2D(latitude: jsonDataManager.sharedInstance.infoBox[i].lat, longitude: jsonDataManager.sharedInstance.infoBox[i].lon) // 位置
             mapView.addAnnotation(osmInfoBox[i])
-            let add = "http://cyberjapandata2.gsi.go.jp/" +
+            //let add = "http://cyberjapandata2.gsi.go.jp/" +
                 
-                "general/dem/scripts/getelevation.php" +
+            //    "general/dem/scripts/getelevation.php" +
                 
-            "?lon=\(osmInfoBox[i].coordinate.longitude)&lat=\(osmInfoBox[i].coordinate.latitude)&outtype=JSON"
-            getJsonFromUrl(urlString: add, i: i, type: kInfo)
+            //"?lon=\(osmInfoBox[i].coordinate.longitude)&lat=\(osmInfoBox[i].coordinate.latitude)&outtype=JSON"
+            //getJsonFromUrl(urlString: add, i: i, type: kInfo)
             
         }
         
@@ -358,15 +363,14 @@ class ARViewController: UIViewController,detailViewDelegate {
             osmWarnBox[i].inforType = jsonDataManager.sharedInstance.warnBox[i].inforType // タグの種類
             osmWarnBox[i].pinNum = i //ピン番号
             osmWarnBox[i].coordinate = CLLocationCoordinate2D(latitude: jsonDataManager.sharedInstance.warnBox[i].lat, longitude: jsonDataManager.sharedInstance.warnBox[i].lon) // 位置
-            mapView.addAnnotation(polygonCircleForCoordinate(coordinate: osmWarnBox[i].coordinate, withMeterRadius: jsonDataManager.sharedInstance.warnBox[i].range,pinNum: i))
-            let add = "http://cyberjapandata2.gsi.go.jp/general/dem/scripts/getelevation.php" +
-            "?lon=\(osmWarnBox[i].coordinate.longitude)&lat=\(osmWarnBox[i].coordinate.latitude)&outtype=JSON"
-            getJsonFromUrl(urlString: add, i: i, type: kWarn)
             
+            mapView.addAnnotation(polygonCircleForCoordinate(coordinate: osmWarnBox[i].coordinate, withMeterRadius: jsonDataManager.sharedInstance.warnBox[i].range,pinNum: i))
+            mapView.addAnnotation(osmWarnBox[i])
+            //let add = "http://cyberjapandata2.gsi.go.jp/general/dem/scripts/getelevation.php" +
+            //"?lon=\(osmWarnBox[i].coordinate.longitude)&lat=\(osmWarnBox[i].coordinate.latitude)&outtype=JSON"
+            //getJsonFromUrl(urlString: add, i: i, type: kWarn)
         }
-        
     }
-    
     
     /// 円を描く
     ///
@@ -396,15 +400,12 @@ class ARViewController: UIViewController,detailViewDelegate {
             coordinates.append(point)
         }
         let polygonView = PolygonView(coordinates: &coordinates, count: UInt(coordinates.count))
-        //let polygonFeature = MGLPolygonFeature(coordinates: &coordinates, count: UInt(coordinates.count))
-        // polygonFeature.attributes  = ["name": "ssadasdasd"]
-        // polygons.append(polygonFeature)
-        //polygon.title = "ssss"
+
         polygonView.pinNum = pinNum
+        polygons.append(polygonView)
         return polygonView
         //self.mapView.addAnnotation(polygon)
     }
-    
     
     // reset
     func detailViewFinish() {
@@ -426,34 +427,31 @@ class ARViewController: UIViewController,detailViewDelegate {
         //            .removeExistingAnchors])
     }
     
-    
     @objc func createSnapshot() {
         // Use the map's style, camera, size, and zoom level to set the snapshot's options.
         let size = CGSize(width: 1000, height: 1000)
         let location = CLLocationCoordinate2D(latitude: userLat, longitude: userLon)
         let camera  = MGLMapCamera(lookingAtCenter: location, acrossDistance: 300, pitch: 0, heading: 0)
-        let options = MGLMapSnapshotOptions(styleURL: mapView.styleURL, camera: camera, size: size)
-
+       
+        var customStyleURL = Bundle.main.url(forResource: "third_party_vector_style", withExtension: "json")!
+        if(gisDisplayMode != gisMode.gis){
+            customStyleURL = MGLStyle.streetsStyleURL
+        }
+        let options = MGLMapSnapshotOptions(styleURL: customStyleURL, camera: camera, size: size)
         options.zoomLevel = 16
-        
-        // Add an activity indicator to show that the snapshot is loading.
-        //let indicator = UIActivityIndicatorView(frame: CGRect(x: self.view.center.x - 30, y: self.view.center.y - 30, width: 60, height: 60))
-        //view.addSubview(indicator)
-        //indicator.startAnimating()
-        
-        // Create the map snapshot.
         var snapshotter: MGLMapSnapshotter? = MGLMapSnapshotter(options: options)
+
+        //snapshotter.
         snapshotter?.start { (snapshot, error) in
             if error != nil {
                 print("Unable to create a map snapshot.")
             } else if let snapshot = snapshot {
-                // Add the map snapshot's image to the image view.
-               // indicator.stopAnimating()
                 self.imageView = snapshot.image
             }
-            
+
             snapshotter = nil
         }
+        
     }
     //
     func getJsonFromUrl(urlString:String,i:Int,type:String){
@@ -474,8 +472,6 @@ class ARViewController: UIViewController,detailViewDelegate {
             } else {
                 if let jsonObj = try? JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? NSDictionary {
                     
-                    //printing the json in console
-                    //print(jsonObj!.value(forKey: "elevation")!)
                     let alt = jsonObj!.value(forKey: "elevation")!
                     if(type == kWarn){
                         jsonDataManager.sharedInstance.warnBox[i].elevation = alt as? Double
@@ -492,7 +488,7 @@ class ARViewController: UIViewController,detailViewDelegate {
     /// ARAnnotaionを追加する
     ///
     /// - Parameter currentLocation: 現在の位置
-    func queryDirections(currentLocation:CLLocation) {
+    func updateEnvorimentAR(currentLocation:CLLocation) {
         
         annotationManager.removeAllARAnchors()
         
@@ -502,15 +498,25 @@ class ARViewController: UIViewController,detailViewDelegate {
             jsonDataManager.sharedInstance.infoBox[i].distance = Int(coordinate.distance(from: currentLocation))
             annotationManager.addARAnnotation(startLocation: currentLocation, endLocation: coordinate, tagData:jsonDataManager.sharedInstance.infoBox[i] )
         }
+        let nowTime = Date()
         for i in 0 ..< jsonDataManager.sharedInstance.warnBox.count {
             let coordinate = CLLocation(latitude: jsonDataManager.sharedInstance.warnBox[i].lat, longitude: jsonDataManager.sharedInstance.warnBox[i].lon )
             //  print(jsonDataManager.sharedInstance.warnBox[i].icon)
             jsonDataManager.sharedInstance.warnBox[i].distance = Int(coordinate.distance(from: currentLocation))
-            annotationManager.addARAnnotation(startLocation: currentLocation, endLocation: coordinate, tagData:jsonDataManager.sharedInstance.warnBox[i])
+            
+            if jsonDataManager.sharedInstance.warnBox[i].stop.compare(nowTime) == ComparisonResult.orderedDescending && nowTime.compare(jsonDataManager.sharedInstance.warnBox[i].start) == ComparisonResult.orderedDescending {
+                annotationManager.addARAnnotation(startLocation: currentLocation, endLocation: coordinate, tagData:jsonDataManager.sharedInstance.warnBox[i])
+            }
         }
-        annotationManager.addMapSurface()
-        
-        mapView.userTrackingMode = .followWithHeading
+        //mapView.userTrackingMode = .followWithHeading
+    }
+    
+    @objc func updateFace(){
+        self.annotationManager.removeFaceARAnchor()
+        self.annotationManager.addMapSurface()
+        if(imageView != nil){
+        timerUpdateFace = Timer.scheduledTimer(timeInterval: kUpdateFace, target: self, selector: #selector(ARViewController.updateFace), userInfo: nil, repeats: true)
+        }
     }
     
     /*
@@ -604,120 +610,33 @@ class ARViewController: UIViewController,detailViewDelegate {
         
         for i in 0 ..< jsonDataManager.sharedInstance.warnBox.count {
             
-            // 過去の災害
-            if nowTime.compare(jsonDataManager.sharedInstance.warnBox[i].stop) == ComparisonResult.orderedDescending {
-                
-                //stopの時刻を過ぎたから、災害の円や文字を消す
-                //self.mapView.removeAnnotation(self.polygon[i]) // 円を消す
-                self.mapView.alpha = kMapNormalAlpha
-                self.mapView.removeAnnotation(osmWarnBox[i]) // 災害のピン情報を削除
-                // cameraViewController().warningView.backgroundColor = UIColor.clear // AR画面の警告モードをやめる
-                
-                // 現在災害発生中
-            } else if jsonDataManager.sharedInstance.warnBox[i].stop.compare(nowTime) == ComparisonResult.orderedDescending && nowTime.compare(jsonDataManager.sharedInstance.warnBox[i].start) == ComparisonResult.orderedDescending {
-                
+            if jsonDataManager.sharedInstance.warnBox[i].stop.compare(nowTime) == ComparisonResult.orderedDescending && nowTime.compare(jsonDataManager.sharedInstance.warnBox[i].start) == ComparisonResult.orderedDescending {
                 box.append(i)
-                
             }
         }
         
         // 災害発生していないとき
-//        if box.count == 0 {
-//            warningMessage.isHidden = true // 警告メッセージを隠す
-//            // 災害が発生しているとき
-//        } else {
-//
-//            // 警告メッセージのタイマーを開始させる
-//            if messageTimer == nil {
-//                messageTimer = Timer.scheduledTimer(timeInterval: kUpdateMM, target: self, selector: #selector(ARViewController.updateMessage), userInfo: nil, repeats: true)
-//            } else if !messageTimer.isValid {
-//                messageTimer = Timer.scheduledTimer(timeInterval: kUpdateMM, target: self, selector: #selector(ARViewController.updateMessage), userInfo: nil, repeats: true)
-//            }
-//
-//            // 警告モードのタイマーを開始させる
-//            // updateView()は初回発火がtimeIntervalで設定した値の後となるため、0秒目のメソッド呼び出しで使用。
-//            if viewTimer == nil {
-//                viewTimer = Timer.scheduledTimer(timeInterval: kUpdateMM, target: self, selector: #selector(ARViewController.updateView), userInfo: nil, repeats: true)
-//                updateView()
-//
-//            } else if !viewTimer.isValid {
-//                viewTimer = Timer.scheduledTimer(timeInterval: kUpdateMM, target: self, selector: #selector(ARViewController.updateView), userInfo: nil, repeats: true)
-//                updateView()
-//            }
-//        }
-    }
-    @objc func updateView() {
-        if viewTimer == nil {
-            viewTimer = Timer.scheduledTimer(timeInterval: kUpdateMM, target: self, selector: #selector(ARViewController.updateView), userInfo: nil, repeats: true)
-
-        }
-        if viewCount == box.count {
-            viewCount = 0
-            viewSafeCount = 0
-        }
-        
-        let num = box[viewCount] // 現在発生している災害のインデックスを渡す
-        
-        // 現在地からその災害までの距離を求める
-        jsonDataManager.sharedInstance.warnBox[num].distance = calcDistance(jsonDataManager.sharedInstance.warnBox[num].lat, lon: jsonDataManager.sharedInstance.warnBox[num].lon, uLat: userLat, uLon: userLon)
-        
-        // 0m以下・・・侵入
-        if jsonDataManager.sharedInstance.warnBox[num].distance - Int(circleRadius[num]) < 0 {
-            let size = self.sceneView.bounds.size
-            let overlay = OverlayScene(size: size)
-
-            let positionTop = CGPoint(x: 0, y: size.height*0.5)
-            let positionBot = CGPoint(x: 0, y: -size.height*0.5)
-            let positionRight = CGPoint(x: size.width*0.4, y: size.height*0.5)
-            let range = size.width
-            let index = warnIndex
-            switch jsonDataManager.sharedInstance.warnBox[num].riskType {
-            
-            case 0: // 火災：赤色
-                overlay.addEnvironment(filedNamed: "SceneKit.scnassets/fire1.sks", position: positionBot, range: range)
-                warnIndex = 0
-            case 1: // 浸水：青色
-                overlay.addEnvironment(filedNamed: "SceneKit.scnassets/rain.sks", position: positionTop, range: range)
-                overlay.addEnvironment(filedNamed: "SceneKit.scnassets/flood.sks", position: positionBot, range: range)
-                warnIndex = 1
-            case 2: // 土砂崩れ：茶色
-                overlay.addEnvironment(filedNamed: "SceneKit.scnassets/rock.sks", position: positionRight, range: 350)
-                warnIndex = 2
-            case 3, 4, 5, 6: // 道路閉塞：黄色
-                 overlay.addEnvironment(filedNamed: "SceneKit.scnassets/smoke.sks", position: positionTop, range: range)
-                warnIndex = 3
-            default: // その他の災害：緑色
-                break
-            }
-            runAfterDelay(0.1) {
-                if(index != self.warnIndex){
-                   // self.sceneView.overlaySKScene = overlay
-                }
-                
-            }
-            
-            viewCount += 1
-            
-            // 0m以上・・・安全
+        if box.count == 0 {
+            warningMessage.isHidden = true // 警告メッセージを隠す
+            // 災害が発生しているとき
         } else {
-            viewSafeCount += 1
-            if viewSafeCount == box.count {
-                viewSafeCount = 0
-                return
+
+            // 警告メッセージのタイマーを開始させる
+            if messageTimer == nil {
+                messageTimer = Timer.scheduledTimer(timeInterval: kUpdateMM, target: self, selector: #selector(ARViewController.updateMessage), userInfo: nil, repeats: true)
+            } else if !messageTimer.isValid {
+                messageTimer = Timer.scheduledTimer(timeInterval: kUpdateMM, target: self, selector: #selector(ARViewController.updateMessage), userInfo: nil, repeats: true)
             }
-            viewCount += 1
-            mapView.alpha = kMapNormalAlpha
-            viewTimer.invalidate()
-            updateView()
-        }
-        
-        if !viewTimer.isValid {
-            viewTimer = Timer.scheduledTimer(timeInterval: kUpdateMM, target: self, selector: #selector(ARViewController.updateView), userInfo: nil, repeats: true)
+
         }
     }
+
     
     
 }
+
+// MARK: - CLLocationManagerDelegate
+
 extension ARViewController: CLLocationManagerDelegate{
     // 位置を変わるとARAnnotationを再表示する
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -738,18 +657,91 @@ extension ARViewController: CLLocationManagerDelegate{
                 minLon = region.center.longitude - 0.5 * region.span.longitudeDelta;
                 maxLon = region.center.longitude + 0.5 * region.span.longitudeDelta;
             }
-            
+            createSnapshot()
+
             userLat = location.coordinate.latitude
             userLon = location.coordinate.longitude
-            createSnapshot()
-            
+//            userLat = self.mapView.centerCoordinate.latitude
+//            userLon = self.mapView.centerCoordinate.longitude
+            updateStatus()
             if(flag){
-                queryDirections(currentLocation: location)
+                self.updateEnvorimentAR(currentLocation: CLLocation(latitude: userLat, longitude: userLon))
             }
         }
     }
+    func updateStatus(){
+        let nowTime = Date() // 現在時刻
+        // インデックスを初期化,
+        msgCount = 0
+        viewCount = 0
+        warnCount = 0
+        
+        for i in 0 ..< jsonDataManager.sharedInstance.warnBox.count {
+            // 過去の災害
+            if jsonDataManager.sharedInstance.warnBox[i].stop.compare(nowTime) == ComparisonResult.orderedDescending && nowTime.compare(jsonDataManager.sharedInstance.warnBox[i].start) == ComparisonResult.orderedDescending {
+                jsonDataManager.sharedInstance.warnBox[i].distance = calcDistance(jsonDataManager.sharedInstance.warnBox[i].lat, lon: jsonDataManager.sharedInstance.warnBox[i].lon, uLat: userLat, uLon: userLon)
+                
+                if jsonDataManager.sharedInstance.warnBox[i].distance - Int(circleRadius[i]) < 0 {
+                    updateOverlay(risk: jsonDataManager.sharedInstance.warnBox[i].riskType)
+                    warnCount += 1
+                    
+                }
+                
+            }else{
+                //stopの時刻を過ぎたから、災害の円や文字を消す
+                self.mapView.removeAnnotation(self.polygons[i]) // 円を消す
+                self.mapView.alpha = kMapNormalAlpha
+                self.mapView.removeAnnotation(osmWarnBox[i]) // 災害のピン情報を削除
+            }
+        }
+        
+        // 災害発生していないとき
+        if warnCount == 0 {
+            self.sceneView.overlaySKScene = OverlayScene(size: self.sceneView.bounds.size)
+            vibration.vibStop()
+            
+            warnIndex = -1
+        }
+    }
+    func updateOverlay( risk:Int){
+        let size = self.sceneView.bounds.size
+        let overlay = OverlayScene(size: size)
+        
+        let positionTop = CGPoint(x: 0, y: size.height*0.5)
+        let positionBot = CGPoint(x: 0, y: -size.height*0.5)
+        let positionRight = CGPoint(x: size.width*0.4, y: size.height*0.5)
+        let range = size.width
+        let index = warnIndex
+        switch risk {
+            
+        case 0: // 火災：赤色
+            overlay.addEnvironment(filedNamed: "SceneKit.scnassets/fire1.sks", position: positionBot, range: range)
+            warnIndex = 0
+            break
+        case 1: // 浸水：青色
+            overlay.addEnvironment(filedNamed: "SceneKit.scnassets/rain.sks", position: positionTop, range: range)
+            overlay.addEnvironment(filedNamed: "SceneKit.scnassets/flood.sks", position: positionBot, range: range)
+            warnIndex = 1
+            break
+        case 2: // 土砂崩れ：茶色
+            overlay.addEnvironment(filedNamed: "SceneKit.scnassets/rock.sks", position: positionRight, range: 350)
+            warnIndex = 2
+            break
+        case 3, 4, 5, 6: // 道路閉塞：黄色
+            overlay.addEnvironment(filedNamed: "SceneKit.scnassets/smoke.sks", position: positionTop, range: range)
+            warnIndex = 3
+            break
+        default: // その他の災害：緑色
+            break
+        }
+        if(index != self.warnIndex){
+            self.sceneView.overlaySKScene = overlay
+        }
+    }
+    
     
 }
+
 // MARK: - ARSCNViewDelegate
 
 extension ARViewController: ARSCNViewDelegate {
@@ -764,16 +756,37 @@ extension ARViewController: ARSCNViewDelegate {
             nodeBox.position.y = nodeBox.position.y - 20*scaleDefaultAR - adjustHeightAR
             nodeBox.eulerAngles.x = -.pi / 2
             node.addChildNode(nodeBox)
-
             //    createTerrain(node: node) // 地形を作成する
         }else{
             let mapboxAnchor = anchor as! MapboxARAnchor
             
             if mapboxAnchor.tagData != nil {
-                addARNode(to: node, for: anchor, with: mapboxAnchor.tagData!)
+                self.addARNode(to: node, for: anchor, with: mapboxAnchor.tagData!)
             }
         }
         
+        
+    }
+    func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
+        // updateされた平面ノードと同じidのものの情報をアップデート
+       // print("render update");
+//        if(anchor.name != "map_surface"){
+//        let mapboxAnchor = anchor as! MapboxARAnchor
+//        
+//        if mapboxAnchor.tagData != nil {
+//            self.updateARnode(to: node, for: anchor, with: mapboxAnchor.tagData!)
+//        }
+//        }
+       // updateARnode(to: node, for: anchor, with: <#T##TagData#>)
+        
+        
+    }
+    
+    func session(_ session: ARSession, didUpdate anchors: [ARAnchor]){
+        print("session update")
+    }
+    func updateARnode(to node: SCNNode,for anchor: ARAnchor, with tagData: TagData){
+        print(tagData.inforType)
     }
     func session(_ session: ARSession, cameraDidChangeTrackingState camera: ARCamera) {
         print("camera did change tracking state: \(camera.trackingState)")
@@ -846,7 +859,6 @@ extension ARViewController: ARSCNViewDelegate {
         adjustHeight = adjustHeightAR
         var scaleNumber = 0.01;
         for childNode in childNodes {
-            
             scaleNumber = Double(scaleDefaultAR)
             childNode.scale = scale
             childNode.position.y = childNode.position.y - adjustHeight
@@ -854,7 +866,6 @@ extension ARViewController: ARSCNViewDelegate {
                 childNode.addAnimation(node: childNode)
             }
             node.addChildNode(childNode)
-            
         }
         let constraint = SCNBillboardConstraint()
         scene.rootNode.constraints = [constraint]
@@ -912,8 +923,7 @@ extension ARViewController: ARSCNViewDelegate {
         if(name == "SceneKit.scnassets/icon_infoTag.scn"){
             let text = SCNText(string: String(data.name), extrusionDepth: 0.1)
             let textNodeInfo = SCNNode(geometry: text)
-            
-            
+        
             textNodeInfo.scale = SCNVector3(scale.x*0.5, scale.y*0.5, scale.z*0.5)
             //let(minT,_) = (node.boundingBox)
             
@@ -922,8 +932,6 @@ extension ARViewController: ARSCNViewDelegate {
             textNodeInfo.position.x = textNodeInfo.position.x - Float(15*scale.x)
             node.addChildNode(textNodeInfo)
         }
-        
-        
     }
     private func defaultMaterials() -> [SCNMaterial] {
         let groundImage = SCNMaterial()
@@ -977,9 +985,15 @@ extension ARViewController: ARSCNViewDelegate {
     }
 }
 
-extension UIImage{
-    func mergeImage(with image:UIImage){
-        
+extension UIView{
+    func snapshot() -> UIImage {
+
+        UIGraphicsBeginImageContextWithOptions(bounds.size, false, 0)
+        self.drawHierarchy(in:bounds, afterScreenUpdates: true)
+        let snapshot = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return snapshot!
+    
     }
 }
 
@@ -1072,12 +1086,94 @@ extension ARViewController: MGLMapViewDelegate {
         }
         return nil
     }
-    
+    func mapView(_ mapView: MGLMapView, didFinishLoading style: MGLStyle) {
+        // Add a new raster source and layer.
+        let source = MGLRasterTileSource(identifier: "darkmatter", tileURLTemplates: [serverName], options: [ .tileSize: 256 ])
+        let rasterLayer = MGLRasterStyleLayer(identifier: "darkmatter", source: source)
+        
+        rasterLayer.rasterOpacity = NSExpression(forConstantValue: 0.5)
+        mapView.style?.addSource(source)
+        if let layer = mapView.style?.layer(withIdentifier: "darkmatter") {
+            mapView.style?.insertLayer(rasterLayer, above: layer)
+            self.rasterLayer = rasterLayer
+        }else{
+            mapView.style?.insertLayer(rasterLayer, at: 10)
+        }
+        
+        if(gisDisplayMode != gisMode.gis){
+            if let layer = self.mapView.style?.layer(withIdentifier: "darkmatter"){
+                layer.isVisible = false
+            }
+        }
+        createSnapshot()
+        self.annotationManager.removeFaceARAnchor()
+        self.annotationManager.addMapSurface()
+  
+    }
     func mapView(_ mapView: MGLMapView, annotationCanShowCallout annotation: MGLAnnotation) -> Bool {
         // Always allow callouts to popup when annotations are tapped.
         return false
     }
-    
+    func mapView(_ mapView: MGLMapView, regionDidChangeAnimated animated: Bool) {
+        
+        DispatchQueue(label: "scalingImage").async {
+            self.scalingImage()
+        }
+    }
+    /**
+     * 拡大縮小や現在地の更新による新しいピン画像の設定
+     */
+    func scalingImage() {
+        if self.mapView.zoomLevel != beforeZoomLv {
+            let beki: Int = Int(27 - self.mapView.zoomLevel)
+            let zoomlv: CGFloat = pow(2, CGFloat(beki))
+            
+            for i in 0 ..< jsonDataManager.sharedInstance.warnBox.count {
+                
+                if jsonDataManager.sharedInstance.warnBox[i].stop.compare(Date()) == ComparisonResult.orderedDescending && Date().compare(jsonDataManager.sharedInstance.warnBox[i].start) == ComparisonResult.orderedDescending {
+                    
+                    // 1度 = 約111km
+                    //
+                    //                     タグのサイズ (m)
+                    //  画面の横幅 ×  ----------------------------
+                    //                 縮尺度 × 111(km) × 1000    ← 画面が表示されている実際の範囲を m で計算している
+                    //
+                    // これで、画面の何%で表示すればいいかわかるので、それにscreenWidthをかけると、画面に表示する画像のサイズが決定する
+                    // タグのサイズは、災害円の直径
+                    
+                    if jsonDataManager.sharedInstance.warnBox[i].expandImage != nil {
+                        let han: Double = circleRadius[i] * self.kDia + 0.1
+                        var newsize: Double = Double(screenWidth) * han / Double(zoomlv)
+                        if newsize > Double(screenWidth) / 2 {
+                            newsize = Double(screenWidth) / 2
+                        }
+                        
+                        DispatchQueue.main.async {
+                            self.changeImage(jsonDataManager.sharedInstance.warnBox[i], MGLtag: self.osmWarnBox[i], newsize: CGFloat(newsize))
+                        }
+                    }
+                }
+            }
+        }
+        
+        
+        beforeZoomLv = self.mapView.zoomLevel
+    }
+    /**
+     * ピンのタグ画像を新しいタグ画像に更新する
+     *
+     * @param tag 更新するピン
+     * @param MGLtag 更新するピン
+     * @param newsize 新しいピン画像の縦幅
+     */
+    func changeImage(_ tag: TagData, MGLtag: MGLTagData, newsize: CGFloat) {
+        
+        let newimage = getResizeImage(tag.expandImage, newHeight: newsize) // 新しい画像
+        mapView.removeAnnotation(MGLtag) // 古い災害ピンを削除
+        tag.pinImage = newimage
+        
+        mapView.addAnnotation(MGLtag)
+    }
 }
 
 extension SCNNode {

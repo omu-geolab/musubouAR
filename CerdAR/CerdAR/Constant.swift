@@ -2,7 +2,7 @@
 //  Constant.swift
 //  CerdAR
 //
-//  Copyright (c) 2016 BRILLIANTSERVICE CO.,LTD., CERD (Osaka City University)
+//  Copyright (c) 2018 APPLIED TECHNOLOGY CO.,LTD., 2016 BRILLIANTSERVICE CO.,LTD., CERD (Osaka City University)
 //
 
 import Foundation
@@ -19,8 +19,8 @@ let kWarnAnimation = 0.1 // 警告タグがタップされた時のアニメー�
 
 /* 共通(camera,map,osm) */
 let kNearMsg = 50 // 現在地から災害までがnearMsg(m)以内であれば、付近にいるメッセージを表示する
-let kUpdateWarn = 3.0 // 災害情報の更新周期（倍速）※災害円の拡大速度もここで行っている
-let kUpdateMM = 2.0 // 警告メッセージと警告モードの更新周期
+let kUpdateWarn = 5.0 // 災害情報の更新周期（倍速）※災害円の拡大速度もここで行っている
+let kUpdateMM = 1.0 // 警告メッセージと警告モードの更新周期
 let kMsgAlpha = 0.6 // 警告メッセージのalpha値( 0(薄)<-->(濃)1 )
 
 /* 共通(map,osm) */
@@ -28,9 +28,8 @@ let kTouchView = 0.1 // 詳細画面が閉じられてからkTouchView後に地�
 let kShowDetail = 0.1 // タグをタップしてからkShowDetail秒後に詳細画面を表示する
 let kMapAlpha = 0.8 // 警告モードのalpha値( 0(濃)<-->(薄)1 ) ※地図画面を薄くしているため、薄すぎると地図が見えづらくなる
 
-//let serverName = "http://192.168.160.76:32769/styles/dark-matter/{z}/{x}/{y}.png"
-//let serverName = "https://tile.openstreetmap.org/{z}/{x}/{y}.png"
-let serverName = "https://cyberjapandata.gsi.go.jp/xyz/lum4bl_kinki2008/{z}/{x}/{y}.png"
-//let serverName = "https://cyberjapandata.gsi.go.jp/xyz/lcmfc1/{z}/{x}/{y}.png"
-let scaleDefaultAR = Float(0.3)
-let adjustHeightAR = Float(15.0)
+/* 共通(AR) */
+let serverName = "https://www.cerd.osaka-cu.ac.jp:8443/styles/positron/{z}/{x}/{y}.png"
+let scaleDefaultAR = Float(0.3)//AR拡大縮小
+let adjustHeightAR = Float(15.0)//AR高さしち調整
+let kUpdateFace = 10.0//一定時平面図更新

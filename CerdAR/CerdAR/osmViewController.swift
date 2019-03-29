@@ -2,7 +2,7 @@
 //  osmViewController.swift
 //  CerdAR
 //
-//  Copyright (c) 2016 BRILLIANTSERVICE CO.,LTD., CERD (Osaka City University)
+//  Copyright (c) 2018 APPLIED TECHNOLOGY CO.,LTD., 2016 BRILLIANTSERVICE CO.,LTD., CERD (Osaka City University)
 //
 
 import UIKit
@@ -15,10 +15,8 @@ import SystemConfiguration
 
 let mapboxAccess = "pk.eyJ1Ijoic2FicmluYXp1cmFpbWkiLCJhIjoiY2lyaGFmbzFjMDE5cGc5bm42c2ozMnJlYSJ9.7W_kYbSqA3sEZUyS14s_Tw"
 
-
 // OSMで持つデータ
 class MGLTagData: MGLPointAnnotation {
-    
     var inforType: String!    // 種別(info or warn)
     var pinNum: Int!          // ピン番号
 }
@@ -148,13 +146,12 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         
         /* ピンの設定 */
         for i in 0 ..< jsonDataManager.sharedInstance.infoBox.count {
-            
             osmInfoBox.append(MGLTagData())
             infoPinView.append(MGLAnnotationImage())
             osmInfoBox[i].inforType = jsonDataManager.sharedInstance.infoBox[i].inforType // タグの種類
             osmInfoBox[i].pinNum = i //ピン番号
             osmInfoBox[i].coordinate = CLLocationCoordinate2D(latitude: jsonDataManager.sharedInstance.infoBox[i].lat, longitude: jsonDataManager.sharedInstance.infoBox[i].lon) // 位置
-            // mapView.addAnnotation(osmInfoBox[i])
+            //mapView.addAnnotation(osmInfoBox[i])
         }
         
         for i in 0 ..< jsonDataManager.sharedInstance.warnBox.count {
@@ -229,7 +226,6 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         }
     }
     
-    
     /* 別の画面に遷移した直後(破棄) */
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
@@ -257,10 +253,14 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
                 self.mapView.removeAnnotation(annotation)
             }
         }
+       
         changeMapBut2.removeTarget(self, action: #selector(self.changeMB(_:)), for: .touchUpInside)
         gisInfoBut.removeTarget(self, action: #selector(self.fetchGISInfo(_:)), for: .touchUpInside)
     }
     
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
     // MARK:- デリゲート-MKMapViewDelegate
     
     /*
@@ -333,7 +333,6 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         return nil
     }
     
-    
     ///レイヤを表示する
     ///
     /// - Parameters:
@@ -343,7 +342,8 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         // Add a new raster source and layer.
         let source = MGLRasterTileSource(identifier: "darkmatter", tileURLTemplates: [serverName], options: [ .tileSize: 256 ])
         let rasterLayer = MGLRasterStyleLayer(identifier: "darkmatter", source: source)
-        rasterLayer.rasterOpacity = NSExpression(forConstantValue: 0.5)
+        
+        rasterLayer.rasterOpacity = NSExpression(forConstantValue: 0.8)
         mapView.style?.addSource(source)
         if let layer = mapView.style?.layer(withIdentifier: "darkmatter") {
             mapView.style?.insertLayer(rasterLayer, above: layer)

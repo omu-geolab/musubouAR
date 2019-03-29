@@ -2,8 +2,9 @@
 //  loadViewController.swift
 //  CerdAR
 //
-//  Copyright (c) 2016 BRILLIANTSERVICE CO.,LTD., CERD (Osaka City University)
+//  Copyright (c) 2018 APPLIED TECHNOLOGY CO.,LTD., 2016 BRILLIANTSERVICE CO.,LTD., CERD (Osaka City University)
 //
+
 
 import UIKit
 import CoreLocation
@@ -30,8 +31,7 @@ class loadViewController: UIViewController, termsViewDelegate, CLLocationManager
         locationManager?.delegate = self
         
     }
-    
-    
+
     /*
      * 位置情報のアクセス許可の状況が変わったときの処理
      */
@@ -129,7 +129,7 @@ class loadViewController: UIViewController, termsViewDelegate, CLLocationManager
         activityIndicator = UIActivityIndicatorView()
         activityIndicator.frame = CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight)
         activityIndicator.backgroundColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 0.7)
-//        activityIndicator.layer.cornerRadius = 8
+//      activityIndicator.layer.cornerRadius = 8
         activityIndicator.center = self.view.center
         
         //Indicatorの状態を管理
@@ -147,11 +147,10 @@ class loadViewController: UIViewController, termsViewDelegate, CLLocationManager
      * 侵入・付近の通知音の設定
      */
     func notificationSound() {
-        
         do {
             let filePath = Bundle.main.path(forResource: "sound_intrusion", ofType: "mp3")
-            let audioPath = NSURL(fileURLWithPath: filePath!)
-            audioPlayerIntr = try AVAudioPlayer(contentsOf: audioPath as URL)
+            let audioPath = URL(fileURLWithPath: filePath!)
+            audioPlayerIntr = try AVAudioPlayer(contentsOf: audioPath)
             audioPlayerIntr.prepareToPlay()
         } catch {
             print("Error")
@@ -159,8 +158,8 @@ class loadViewController: UIViewController, termsViewDelegate, CLLocationManager
         
         do {
             let filePath = Bundle.main.path(forResource: "sound_near", ofType: "mp3")
-            let audioPath = NSURL(fileURLWithPath: filePath!)
-            audioPlayerNear = try AVAudioPlayer(contentsOf: audioPath as URL)
+            let audioPath = URL(fileURLWithPath: filePath!)
+            audioPlayerNear = try AVAudioPlayer(contentsOf: audioPath)
             audioPlayerNear.prepareToPlay()
         } catch {
             print("Error")

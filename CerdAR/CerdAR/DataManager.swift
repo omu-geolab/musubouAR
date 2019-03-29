@@ -2,7 +2,7 @@
 //  DataManager.swift
 //  CerdAR
 //
-//  Copyright (c) 2016 BRILLIANTSERVICE CO.,LTD., CERD (Osaka City University)
+//  Copyright (c) 2018 APPLIED TECHNOLOGY CO.,LTD., 2016 BRILLIANTSERVICE CO.,LTD., CERD (Osaka City University)
 //
 
 import Foundation
@@ -15,7 +15,7 @@ import SceneKit
 class TagData {
     
     // 共通タグ
-    var commonId: String!           // 共通ID(必要なのか？)
+    var commonId: String!     // 共通ID(必要なのか？)
     var name: String!         // タグの名前
     var inforType: String!    // 種別(info or warn)
     var icon: String!         // 使用する画像
@@ -28,7 +28,6 @@ class TagData {
     var pinNum: Int!          // ピン番号
     var pinImage: UIImage!    // タグ画像
     var expandImage: UIImage! // サイズ調節用画像
-    var arImage: UIImage?
     var elevation:Double?
     
     var distance = 0     // 現在地から目的地までの距離
