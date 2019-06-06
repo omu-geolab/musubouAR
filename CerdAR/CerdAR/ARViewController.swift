@@ -656,8 +656,8 @@ extension ARViewController: CLLocationManagerDelegate{
             }
             createSnapshot()
 
-            userLat = location.coordinate.latitude
-            userLon = location.coordinate.longitude
+            //userLat = location.coordinate.latitude
+            //userLon = location.coordinate.longitude
 //            userLat = self.mapView.centerCoordinate.latitude
 //            userLon = self.mapView.centerCoordinate.longitude
             updateStatus()
@@ -748,6 +748,8 @@ extension ARViewController: ARSCNViewDelegate {
         if(anchor.name == "map_surface"){
             let box = SCNPlane(width: 1000, height: 1000)
             box.materials.last?.diffuse.contents = self.imageView
+            //box.firstMaterial?.transparency = 0.5
+            box.materials.last?.transparency = 0.8
             let nodeBox = SCNNode(geometry: box)
             nodeBox.position = node.position
             nodeBox.position.y = nodeBox.position.y - 20*scaleDefaultAR - adjustHeightAR
@@ -1112,7 +1114,9 @@ extension ARViewController: MGLMapViewDelegate {
         return false
     }
     func mapView(_ mapView: MGLMapView, regionDidChangeAnimated animated: Bool) {
-        
+                    userLat = self.mapView.centerCoordinate.latitude
+                    userLon = self.mapView.centerCoordinate.longitude
+        updateStatus()
         DispatchQueue(label: "scalingImage").async {
             self.scalingImage()
         }
