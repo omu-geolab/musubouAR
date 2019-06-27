@@ -27,7 +27,8 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
     var configview: ConfigView? // 設定画面
     var mapView = MGLMapView() // 地図画面
     
-    var rasterLayer: MGLRasterStyleLayer? //layer add
+    var rasterLayer: MGLRasterStyleLayer? //レイヤ追加
+    var source : MGLRasterTileSource?//レイヤのソース追加
     var center: CLLocationCoordinate2D! // 中心
     
     let motionManager = CMMotionManager() // 加速度センサ
@@ -340,20 +341,21 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
     ///   - style: style
     func mapView(_ mapView: MGLMapView, didFinishLoading style: MGLStyle) {
         // Add a new raster source and layer.
-        let source = MGLRasterTileSource(identifier: "darkmatter", tileURLTemplates: [serverName], options: [ .tileSize: 256 ])
-        let rasterLayer = MGLRasterStyleLayer(identifier: "darkmatter", source: source)
-        
-        rasterLayer.rasterOpacity = NSExpression(forConstantValue: 0.8)
-        mapView.style?.addSource(source)
-        if let layer = mapView.style?.layer(withIdentifier: "darkmatter") {
-            mapView.style?.insertLayer(rasterLayer, above: layer)
-            self.rasterLayer = rasterLayer
-        }else{
-            mapView.style?.insertLayer(rasterLayer, at: 10)
-        }
-        if(gisDisplayMode != gisMode.gis) {
-            mapView.style?.layer(withIdentifier: "darkmatter")?.isVisible = false
-        }
+//        let source = MGLRasterTileSource(identifier: "darkmatter", tileURLTemplates: [GisList.sharedGis.list[0].server], options: [ .tileSize: 128 ])
+//        print(GisList.sharedGis.list[0].name)
+//        let rasterLayer = MGLRasterStyleLayer(identifier: "darkmatter", source: source)
+//
+//        rasterLayer.rasterOpacity = NSExpression(forConstantValue: 0.8)
+//        mapView.style?.addSource(source)
+//        if let layer = mapView.style?.layer(withIdentifier: "darkmatter") {
+//            mapView.style?.insertLayer(rasterLayer, above: layer)
+//            self.rasterLayer = rasterLayer
+//        }else{
+//            mapView.style?.insertLayer(rasterLayer, at: 10)
+//        }
+//        if(gisDisplayMode != gisMode.gis) {
+//            mapView.style?.layer(withIdentifier: "darkmatter")?.isVisible = false
+//        }
         
     }
     
@@ -880,18 +882,83 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
      */
     @objc internal func fetchGISInfo(_ sender: UIButton) {
         closeConfigBackground()
-        if (gisDisplayMode == gisMode.gis) {
-            gisDisplayMode = gisMode.none
-            if let layer = self.mapView.style?.layer(withIdentifier: "darkmatter"){
-                layer.isVisible = false
+        // UIAlertController
+        let alertController:UIAlertController =
+            UIAlertController(title:"GISデータ表示",
+                              message: "GISデータを選択してかください。",
+                              preferredStyle: .alert)
+        
+        for i in 0 ..< GisList.sharedGis.list.count {
+            let item = GisList.sharedGis.list[i]
+            let action = UIAlertAction(title: item.name, style: .default){
+                action in
+                self.changeLayer(server: item.server)
+                self.saveGisDatatoFile(json : item.glStyle)
+                serverName = item.server
             }
-        } else {
-            gisDisplayMode = gisMode.gis
-            if let layer = self.mapView.style?.layer(withIdentifier: "darkmatter"){
-                layer.isVisible = true
-            }
-            //update()
+            alertController.addAction(action)
         }
+        let cancel = UIAlertAction(title: "キャンセル", style: .default){
+            action in
+            if let layermap = self.mapView.style?.layer(withIdentifier: self.rasterLayer?.identifier ?? "") {
+                self.mapView.style?.removeLayer(layermap)
+            }
+            
+            if let sourcemap = self.mapView.style?.source(withIdentifier: self.source?.identifier ?? ""){
+                self.mapView.style?.removeSource(sourcemap)
+            }
+            gisDisplayMode = gisMode.none
+        }
+        alertController.addAction(cancel)
+        
+
+        
+        // UIAlertControllerの起動
+        present(alertController, animated: true, completion: nil)
+    }
+
+    
+    func saveGisDatatoFile(json:JSON){
+        
+        let dataS = json.description;
+        if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+            
+            let fileURL = dir.appendingPathComponent(fileName)
+            
+            do {
+                try dataS.write(to: fileURL, atomically: false, encoding: .utf8)
+            } catch {
+                print(error)
+            }
+            
+        }
+        
+    }
+    //var rasterLayer : MGLRasterStyleLayer
+    func changeLayer(server:String){
+        if let layermap = mapView.style?.layer(withIdentifier: rasterLayer?.identifier ?? "") {
+             mapView.style?.removeLayer(layermap)
+        }
+        
+        if let sourcemap = mapView.style?.source(withIdentifier: source?.identifier ?? ""){
+            mapView.style?.removeSource(sourcemap)
+        }
+        source = MGLRasterTileSource(identifier: "darkmatter", tileURLTemplates: [server], options: [ .tileSize: 256 ])
+        if(source == nil){return}
+        let layerStyle = MGLRasterStyleLayer(identifier: "darkmatter", source: source!)
+        
+        layerStyle.rasterOpacity = NSExpression(forConstantValue: 0.8)
+        self.mapView.style?.addSource(source!)
+        if let layer = mapView.style?.layer(withIdentifier: "darkmatter") {
+            mapView.style?.insertLayer(layerStyle, above: layer)
+            
+        }else{
+            self.mapView.style?.insertLayer(layerStyle, at: 10)
+            
+        }
+        self.rasterLayer = layerStyle
+        gisDisplayMode = gisMode.gis
+        
     }
     /// 設定画面を閉じる
     func closeConfigBackground() {

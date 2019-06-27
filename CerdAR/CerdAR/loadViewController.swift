@@ -29,6 +29,31 @@ class loadViewController: UIViewController, termsViewDelegate, CLLocationManager
         
         locationManager = CLLocationManager()
         locationManager?.delegate = self
+        guard let data = try? getJSONData() else { return }
+        let gisdata = JSON(data: data!)
+        
+        GisList.sharedGis.getListFromJson(json: gisdata)
+        if(GisList.sharedGis.list.count > 0){
+            saveGisDatatoFile(json: GisList.sharedGis.list[1].glStyle)
+        }
+        
+        
+    }
+    
+    func saveGisDatatoFile(json:JSON){
+        
+        let dataS = json.description;
+        if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+            
+            let fileURL = dir.appendingPathComponent(fileName)
+            
+            do {
+                try dataS.write(to: fileURL, atomically: false, encoding: .utf8)
+            } catch {
+                print(error)
+            }
+            
+        }
         
     }
 
@@ -205,4 +230,21 @@ class loadViewController: UIViewController, termsViewDelegate, CLLocationManager
         let osmVC = osmViewController()
         UIApplication.shared.keyWindow?.rootViewController = osmVC
     }
+    func getJSONData() throws -> Data? {
+        let fileName = "gis_data.json"
+        
+        if let dir: NSString = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.allDomainsMask, true).first as NSString? {
+            
+            let pathFileName = dir.appendingPathComponent(fileName)
+            guard (try? Data(contentsOf: URL(fileURLWithPath: pathFileName))) != nil else {
+                guard let path = Bundle.main.path(forResource: "gis_data", ofType: "json") else { return nil }
+                let url = URL(fileURLWithPath: path)
+                
+                return try Data(contentsOf: url)
+            }
+            return try? Data(contentsOf: URL(fileURLWithPath: pathFileName))
+        }
+        return nil
+    }
+    
 }

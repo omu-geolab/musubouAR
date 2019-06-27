@@ -1,71 +1,21 @@
 {
     "version": 8,
-    "name": "Sinsui",
-    "metadata": {
-        "mapbox:origin": "basic-template",
-        "mapbox:autocomposite": true,
-        "mapbox:type": "template",
-        "mapbox:sdk-support": {
-            "js": "0.54.0",
-            "android": "6.7.0",
-            "ios": "4.7.0"
-        }
-    },
-    "center": [135.54650935837526, 34.70470994992827],
-    "zoom": 10.18267864693348,
-    "bearing": 0,
-    "pitch": 0,
+    "name": "Raster Tiles",
     "sources": {
-        "composite": {"url": "mapbox://nro2dai.bcdztftd", "type": "vector"}
-    },
-    "sprite": "mapbox://sprites/nro2dai/cjwdfiy6n0ug11dpfy0olamx5/629bpdwpqxu5j66f3aoku8h84",
-    "glyphs": "mapbox://fonts/nro2dai/{fontstack}/{range}.pbf",
-    "layers": [
-        {
-            "id": "sinsui-soutei",
-            "type": "fill",
-            "source": "composite",
-            "source-layer": "sinsui-4ee5ei",
-            "layout": {},
-            "paint": {
-                "fill-color": [
-                    "match",
-                    ["get", "A31_001"],
-                    [11],
-                    "hsl(60, 100%, 90%)",
-                    [12],
-                    "hsl(85, 64%, 86%)",
-                    [13],
-                    "hsl(114, 46%, 82%)",
-                    [15],
-                    "hsl(164, 44%, 66%)",
-                    [14],
-                    "hsl(140, 44%, 74%)",
-                    [21],
-                    "hsl(178, 44%, 57%)",
-                    [22],
-                    "hsl(186, 53%, 51%)",
-                    [23],
-                    "hsl(193, 54%, 49%)",
-                    [24],
-                    "hsl(199, 57%, 47%)",
-                    [25],
-                    "hsl(204, 61%, 45%)",
-                    [26],
-                    "hsl(213, 62%, 42%)",
-                    [27],
-                    "hsl(221, 61%, 39%)",
-                    "#000000"
-                ],
-                "fill-outline-color": "hsla(0, 0%, 0%, 0)",
-                "fill-opacity": 1
-            }
+        "gsiStd": {
+            "type": "raster",
+            "tiles": [
+                "https://cyberjapandata.gsi.go.jp/xyz/lcmfc2/{z}/{x}/{y}.png"
+            ],
+            "tileSize": 256
         }
-    ],
-    "created": "2019-06-01T11:24:51.730Z",
-    "id": "cjwdfiy6n0ug11dpfy0olamx5",
-    "modified": "2019-06-02T00:47:22.998Z",
-    "owner": "nro2dai",
-    "visibility": "private",
-    "draft": false
+    },
+    "layers": [{
+        "id": "gsiStd",
+        "type": "raster",
+        "source": "gsiStd",
+        "paint": {
+            "raster-fade-duration": 100
+        }
+    }]
 }

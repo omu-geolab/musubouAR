@@ -173,7 +173,7 @@ class ARViewController: UIViewController,detailViewDelegate {
         {
             locationManager = CLLocationManager()
             locationManager.delegate = self
-            locationManager.distanceFilter = 3
+            locationManager.distanceFilter = 2
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
             locationManager.requestAlwaysAuthorization()
             locationManager.startUpdatingLocation()
@@ -434,9 +434,13 @@ class ARViewController: UIViewController,detailViewDelegate {
         let camera  = MGLMapCamera(lookingAtCenter: location, acrossDistance: 300, pitch: 0, heading: 0)
        
         var customStyleURL = Bundle.main.url(forResource: "third_party_vector_style", withExtension: "json")!
+        if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+            customStyleURL = dir.appendingPathComponent(fileName)
+        }
         if(gisDisplayMode != gisMode.gis){
             customStyleURL = MGLStyle.streetsStyleURL
         }
+        
         let options = MGLMapSnapshotOptions(styleURL: customStyleURL, camera: camera, size: size)
         options.zoomLevel = 16
         var snapshotter: MGLMapSnapshotter? = MGLMapSnapshotter(options: options)
@@ -606,7 +610,9 @@ class ARViewController: UIViewController,detailViewDelegate {
         viewCount = 0
         
         for i in 0 ..< jsonDataManager.sharedInstance.warnBox.count {
-            
+            if(jsonDataManager.sharedInstance.warnBox[i].stop == nil){
+                continue;
+            }
             if jsonDataManager.sharedInstance.warnBox[i].stop.compare(nowTime) == ComparisonResult.orderedDescending && nowTime.compare(jsonDataManager.sharedInstance.warnBox[i].start) == ComparisonResult.orderedDescending {
                 box.append(i)
             }
@@ -654,12 +660,10 @@ extension ARViewController: CLLocationManagerDelegate{
                 minLon = region.center.longitude - 0.5 * region.span.longitudeDelta;
                 maxLon = region.center.longitude + 0.5 * region.span.longitudeDelta;
             }
+            userLat = location.coordinate.latitude
+            userLon = location.coordinate.longitude
             createSnapshot()
 
-            //userLat = location.coordinate.latitude
-            //userLon = location.coordinate.longitude
-//            userLat = self.mapView.centerCoordinate.latitude
-//            userLon = self.mapView.centerCoordinate.longitude
             updateStatus()
             if(flag){
                 self.updateEnvorimentAR(currentLocation: CLLocation(latitude: userLat, longitude: userLon))
@@ -675,6 +679,9 @@ extension ARViewController: CLLocationManagerDelegate{
         
         for i in 0 ..< jsonDataManager.sharedInstance.warnBox.count {
             // 過去の災害
+            if(jsonDataManager.sharedInstance.warnBox[i].stop == nil){
+                continue;
+            }
             if jsonDataManager.sharedInstance.warnBox[i].stop.compare(nowTime) == ComparisonResult.orderedDescending && nowTime.compare(jsonDataManager.sharedInstance.warnBox[i].start) == ComparisonResult.orderedDescending {
                 jsonDataManager.sharedInstance.warnBox[i].distance = calcDistance(jsonDataManager.sharedInstance.warnBox[i].lat, lon: jsonDataManager.sharedInstance.warnBox[i].lon, uLat: userLat, uLon: userLon)
                 
@@ -1114,9 +1121,9 @@ extension ARViewController: MGLMapViewDelegate {
         return false
     }
     func mapView(_ mapView: MGLMapView, regionDidChangeAnimated animated: Bool) {
-                    userLat = self.mapView.centerCoordinate.latitude
-                    userLon = self.mapView.centerCoordinate.longitude
-        updateStatus()
+                    //userLat = self.mapView.centerCoordinate.latitude
+                    //userLon = self.mapView.centerCoordinate.longitude
+        //updateStatus()
         DispatchQueue(label: "scalingImage").async {
             self.scalingImage()
         }
@@ -1130,7 +1137,9 @@ extension ARViewController: MGLMapViewDelegate {
             let zoomlv: CGFloat = pow(2, CGFloat(beki))
             
             for i in 0 ..< jsonDataManager.sharedInstance.warnBox.count {
-                
+                if(jsonDataManager.sharedInstance.warnBox[i].stop == nil){
+                    continue;
+                }
                 if jsonDataManager.sharedInstance.warnBox[i].stop.compare(Date()) == ComparisonResult.orderedDescending && Date().compare(jsonDataManager.sharedInstance.warnBox[i].start) == ComparisonResult.orderedDescending {
                     
                     // 1度 = 約111km
