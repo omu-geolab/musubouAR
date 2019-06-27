@@ -410,3 +410,27 @@ let particleRock = SCNParticleSystem(named: "rock.scnp", inDirectory: "SceneKit.
 
 let particleSmoke = SCNParticleSystem(named: "smoke.scnp", inDirectory: "")
 
+class GisData : NSObject {
+    var name:String!
+    var server:String!
+    var glStyle:JSON!
+}
+
+class GisList : NSObject {
+    var list = [GisData]()
+    func getListFromJson(json : JSON){
+        for i in 0 ..< json.count{
+            let item = GisData();
+            item.name = json[i]["name"].string
+            item.server = json[i]["server"].string
+            item.glStyle = json[i]["gl_style"]
+            list.append(item)
+        }
+    }
+    class var sharedGis: GisList {
+        struct Static {
+            static let instance: GisList = GisList()
+        }
+        return Static.instance
+    }
+}

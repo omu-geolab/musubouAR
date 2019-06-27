@@ -1,0 +1,52 @@
+[
+{
+    "name":"地理院タイル-lum200k",
+    "server":"https://cyberjapandata.gsi.go.jp/xyz/lcmfc2/{z}/{x}/{y}.png",
+    "gl_style":{
+        "version": 8,
+        "name": "Raster Tiles",
+        "sources": {
+            "gsiStd": {
+                "type": "raster",
+                "tiles": [
+                    "https://cyberjapandata.gsi.go.jp/xyz/lcmfc2/{z}/{x}/{y}.png"
+                ],
+                "tileSize": 256
+            }
+        },
+        "layers": [{
+            "id": "gsiStd",
+            "type": "raster",
+            "source": "gsiStd",
+            "paint": {
+                "raster-fade-duration": 100
+            }
+        }]
+    }
+},
+{
+    "name":"地理院タイル-lum200k",
+    "server":"https://cyberjapandata.gsi.go.jp/xyz/lum200k/{z}/{x}/{y}.png",
+    "gl_style":{
+        "version": 8,
+        "name": "Raster Tiles",
+        "sources": {
+            "gsiStd": {
+                "type": "raster",
+                "tiles": [
+                    "https://cyberjapandata.gsi.go.jp/xyz/lum200k/{z}/{x}/{y}.png"
+                ],
+                "tileSize": 256
+            }
+        },
+        "layers": [{
+            "id": "gsiStd",
+            "type": "raster",
+            "source": "gsiStd",
+            "paint": {
+                "raster-fade-duration": 100
+            }
+        }]
+    }
+}
+]
