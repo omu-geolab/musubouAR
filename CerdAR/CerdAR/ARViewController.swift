@@ -85,6 +85,7 @@ class ARViewController: UIViewController,detailViewDelegate {
     
     var warnState = warningState.safe.rawValue // 現在ユーザーは災害からどの位置にいるか(安全・付近・侵入)
     var warnIndex = -1 //災害を侵入すると災害種別のインデクス
+    var textStepper:UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -152,6 +153,41 @@ class ARViewController: UIViewController,detailViewDelegate {
         view.addSubview(toMap_Button)
         toMap_Button.addTarget(self, action: #selector(ARViewController.onClick_map(_:)), for: .touchUpInside)
         
+        // AR更新
+        let changeAR_Button = UIButton()
+        let arChangeImage: UIImage = UIImage(named: "rotation.png")!
+        
+        if UIDevice.current.userInterfaceIdiom == .phone {
+            changeAR_Button.frame = CGRect(x: 0.0, y: 0.0, width: butSize - 10, height: butSize - 10)
+        } else if UIDevice.current.userInterfaceIdiom == .pad{
+            changeAR_Button.frame = CGRect(x: 0.0, y: 0.0, width: butSize, height: butSize)
+        }
+        changeAR_Button.setImage(arChangeImage, for: UIControlState())
+        changeAR_Button.layer.position = CGPoint(x: self.view.bounds.width - 45, y: 60)
+        view.addSubview(changeAR_Button)
+        changeAR_Button.addTarget(self, action: #selector(ARViewController.changeAR(_:)), for: .touchUpInside)
+        
+        //AR高度変更
+        
+        let stepperHeight = UIStepper()
+        stepperHeight.stepValue = 1
+        stepperHeight.backgroundColor = UIColor.white
+       
+        stepperHeight.minimumValue = -100
+        stepperHeight.value = Double(adjustHeightAR)
+        stepperHeight.layer.position = CGPoint(x: self.view.bounds.width - 80, y: self.view.bounds.height/2)
+        view.addSubview(stepperHeight)
+        stepperHeight.addTarget(self, action: #selector(ARViewController.changeARHeight(_:)), for: .touchUpInside)
+        
+        textStepper = UITextView(frame: CGRect(x: 0.0, y: 0.0, width: 100, height: 20))
+        textStepper!.text = String(adjustHeightAR)
+        textStepper!.layer.position = CGPoint(x: self.view.bounds.width - 80, y: self.view.bounds.height/2 - 40)
+        view.addSubview(textStepper!)
+        
+        
+        
+        
+        
         //環境を変える
 //        let toChangeEnvironment_Button = UIButton()
 //        let buttonChangeImage: UIImage = UIImage(named: "star.png")!
@@ -173,7 +209,6 @@ class ARViewController: UIViewController,detailViewDelegate {
         {
             locationManager = CLLocationManager()
             locationManager.delegate = self
-            locationManager.distanceFilter = 2
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
             locationManager.requestAlwaysAuthorization()
             locationManager.startUpdatingLocation()
@@ -191,15 +226,15 @@ class ARViewController: UIViewController,detailViewDelegate {
         warningMessage.adjustsFontSizeToFitWidth = true // 文字の多さによってフォントサイズを調節する
         view.addSubview(warningMessage)
         warningMessage.isHidden = true
+        startSession()
+        
         
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        startSession()
-        self.annotationManager.removeFaceARAnchor();
-        self.annotationManager.addMapSurface();
-        timerUpdateFace = Timer.scheduledTimer(timeInterval: kUpdateFace, target: self, selector: #selector(ARViewController.updateFace), userInfo: nil, repeats: true)
+       
+       // timerUpdateFace = Timer.scheduledTimer(timeInterval: kUpdateFace, target: self, selector: #selector(ARViewController.updateFace), userInfo: nil, repeats: true)
     
         update() // 災害情報を更新する
         // kUpdateWarn秒に1回update()を発火させる
@@ -223,6 +258,15 @@ class ARViewController: UIViewController,detailViewDelegate {
     //地図を戻す
     @objc func onClick_map(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
+    }
+    @objc func changeAR(_ sender: UIButton) {
+        self.updateFace()
+    }
+    @objc func changeARHeight(_ sender: UIStepper) {
+        let stepper = sender as UIStepper
+        adjustHeightAR = Float(stepper.value)
+        textStepper!.text = String(adjustHeightAR)
+        self.updateFace()
     }
     
     //環境を取り替えり
@@ -325,7 +369,7 @@ class ARViewController: UIViewController,detailViewDelegate {
 
     //マープを設定する
     private func configureMapboxMapView() {
-        createSnapshot()//AR平面図作成
+        //createSnapshot()//AR平面図作成
         let d:CGFloat = CGFloat(screenWidth)/4
         mapView = MGLMapView(frame: CGRect(x: CGFloat(screenWidth)-d, y: CGFloat(screenHeight)-d, width: d, height: d))
         let styleStreet = MGLStyle.streetsStyleURL
@@ -340,7 +384,9 @@ class ARViewController: UIViewController,detailViewDelegate {
         // mapView.layer.cornerRadius = d/2
         
         for i in 0 ..< jsonDataManager.sharedInstance.infoBox.count {
-            
+            if(jsonDataManager.sharedInstance.infoBox[i].lat == nil ){
+                continue
+            }
             osmInfoBox.append(MGLTagData())
             infoPinView.append(MGLAnnotationImage())
             osmInfoBox[i].inforType = jsonDataManager.sharedInstance.infoBox[i].inforType // タグの種類
@@ -357,7 +403,9 @@ class ARViewController: UIViewController,detailViewDelegate {
         }
         
         for i in 0 ..< jsonDataManager.sharedInstance.warnBox.count {
-            
+            if(jsonDataManager.sharedInstance.warnBox[i].lat == nil ){
+                continue
+            }
             osmWarnBox.append(MGLTagData())
             warnPinView.append(MGLAnnotationImage())
             osmWarnBox[i].inforType = jsonDataManager.sharedInstance.warnBox[i].inforType // タグの種類
@@ -429,9 +477,9 @@ class ARViewController: UIViewController,detailViewDelegate {
     
     @objc func createSnapshot() {
         // Use the map's style, camera, size, and zoom level to set the snapshot's options.
-        let size = CGSize(width: 1000, height: 1000)
+        let size = CGSize(width: widthMapAR, height: heightMapAR)
         let location = CLLocationCoordinate2D(latitude: userLat, longitude: userLon)
-        let camera  = MGLMapCamera(lookingAtCenter: location, acrossDistance: 300, pitch: 0, heading: 0)
+        let camera  = MGLMapCamera(lookingAtCenter: location, acrossDistance: 0, pitch: 0, heading: 0)
        
         var customStyleURL = Bundle.main.url(forResource: "third_party_vector_style", withExtension: "json")!
         if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
@@ -442,18 +490,32 @@ class ARViewController: UIViewController,detailViewDelegate {
         }
         
         let options = MGLMapSnapshotOptions(styleURL: customStyleURL, camera: camera, size: size)
-        options.zoomLevel = 16
+        let mapWidth = (cos(userLat * Double.pi/180) * 2 * Double.pi * 6378137)/2
+        
+        let level = log2(mapWidth / 256)
+        print(level)
+        options.zoomLevel = level
         var snapshotter: MGLMapSnapshotter? = MGLMapSnapshotter(options: options)
+        
+        
 
         //snapshotter.
         snapshotter?.start { (snapshot, error) in
             if error != nil {
                 print("Unable to create a map snapshot.")
+                self.updateFace()
+                
             } else if let snapshot = snapshot {
                 self.imageView = snapshot.image
+                self.annotationManager.removeFaceARAnchor()
+                self.annotationManager.addMapSurface()
+                if(self.flag){
+                    self.updateEnvorimentAR(currentLocation: CLLocation(latitude: userLat, longitude: userLon))
+                }
             }
 
             snapshotter = nil
+            
         }
         
     }
@@ -496,7 +558,11 @@ class ARViewController: UIViewController,detailViewDelegate {
         
         annotationManager.removeAllARAnchors()
         
+    
         for i in 0 ..< jsonDataManager.sharedInstance.infoBox.count {
+            if(jsonDataManager.sharedInstance.infoBox[i].lat == nil){
+                continue
+            }
             let coordinate = CLLocation(latitude: jsonDataManager.sharedInstance.infoBox[i].lat, longitude: jsonDataManager.sharedInstance.infoBox[i].lon )
             // print(jsonDataManager.sharedInstance.infoBox[i].icon)
             jsonDataManager.sharedInstance.infoBox[i].distance = Int(coordinate.distance(from: currentLocation))
@@ -504,6 +570,9 @@ class ARViewController: UIViewController,detailViewDelegate {
         }
         let nowTime = Date()
         for i in 0 ..< jsonDataManager.sharedInstance.warnBox.count {
+            if(jsonDataManager.sharedInstance.warnBox[i].lat == nil){
+                continue
+            }
             let coordinate = CLLocation(latitude: jsonDataManager.sharedInstance.warnBox[i].lat, longitude: jsonDataManager.sharedInstance.warnBox[i].lon )
             //  print(jsonDataManager.sharedInstance.warnBox[i].icon)
             jsonDataManager.sharedInstance.warnBox[i].distance = Int(coordinate.distance(from: currentLocation))
@@ -516,8 +585,7 @@ class ARViewController: UIViewController,detailViewDelegate {
     }
     
     @objc func updateFace(){
-        self.annotationManager.removeFaceARAnchor()
-        self.annotationManager.addMapSurface()
+        createSnapshot()
     }
     
     /*
@@ -662,12 +730,36 @@ extension ARViewController: CLLocationManagerDelegate{
             }
             userLat = location.coordinate.latitude
             userLon = location.coordinate.longitude
-            createSnapshot()
-
+            //createSnapshot()
+            updateAllDistances()
             updateStatus()
-            if(flag){
-                self.updateEnvorimentAR(currentLocation: CLLocation(latitude: userLat, longitude: userLon))
+           
+        }
+    }
+    
+    func updateAllDistances(){
+        if let anchors = sceneView.session.currentFrame?.anchors {
+            print(anchors.count)
+            for anchor in anchors {
+                
+                if let anchorNode = sceneView.node(for: anchor) {
+                    for node in anchorNode.childNodes{
+                        if node is NodeText {
+                            let nodeItem = node as! NodeText
+                            let location = CLLocation(latitude: nodeItem.data!.lat, longitude: nodeItem.data!.lon)
+                            let myLocation = CLLocation(latitude: userLat, longitude: userLon)
+                            let distance = myLocation.distance(from: location)
+                            let floodDis = Int(distance)
+                            let text = SCNText(string: String(floodDis) + " m", extrusionDepth: 0.1)
+                            node.geometry = text
+                            
+                        }
+                    }
+                }
             }
+            
+        } else {
+            debugPrint("Anchors not found")
         }
     }
     func updateStatus(){
@@ -753,13 +845,14 @@ extension ARViewController: ARSCNViewDelegate {
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
         
         if(anchor.name == "map_surface"){
-            let box = SCNPlane(width: 1000, height: 1000)
+            let box = SCNPlane(width: CGFloat(widthMapAR) , height: CGFloat(heightMapAR))
+            
             box.materials.last?.diffuse.contents = self.imageView
             //box.firstMaterial?.transparency = 0.5
-            box.materials.last?.transparency = 0.8
+            box.materials.last?.transparency = CGFloat(kMapARAlpha)
             let nodeBox = SCNNode(geometry: box)
             nodeBox.position = node.position
-            nodeBox.position.y = nodeBox.position.y - 20*scaleDefaultAR - adjustHeightAR
+            nodeBox.position.y = nodeBox.position.y - adjustHeightAR
             nodeBox.eulerAngles.x = -.pi / 2
             node.addChildNode(nodeBox)
             //    createTerrain(node: node) // 地形を作成する
@@ -773,21 +866,6 @@ extension ARViewController: ARSCNViewDelegate {
         
         
     }
-    func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
-        // updateされた平面ノードと同じidのものの情報をアップデート
-       // print("render update");
-//        if(anchor.name != "map_surface"){
-//        let mapboxAnchor = anchor as! MapboxARAnchor
-//        
-//        if mapboxAnchor.tagData != nil {
-//            self.updateARnode(to: node, for: anchor, with: mapboxAnchor.tagData!)
-//        }
-//        }
-       // updateARnode(to: node, for: anchor, with: <#T##TagData#>)
-        
-        
-    }
-    
     func session(_ session: ARSession, didUpdate anchors: [ARAnchor]){
         print("session update")
     }
@@ -854,20 +932,58 @@ extension ARViewController: ARSCNViewDelegate {
     ///   - node: <#node description#>
     ///   - data: <#data description#>
     private func loadScene(name : String ,node: SCNNode, with data: TagData) {
+//        if(data.inforType == kWarn){
+//            if(data.distance > data.range){
+//                let box = SCNCylinder(radius: CGFloat(data.range), height: 0.2)
+//                var color = UIColor(red: 0.200, green: 1.000, blue: 0.384, alpha: 1)
+//                switch data.riskType {
+//
+//                case 0: // 火災のとき：赤色
+//                    color =  UIColor(red: 0.545, green: 0.020, blue: 0.220, alpha: 1)
+//
+//                case 1: // 浸水のとき：青色
+//                    color =   UIColor(red: 0.000, green: 0.400, blue: 1.000, alpha: 1)
+//
+//                case 2: // 土砂崩れのとき：茶色
+//                    color =   UIColor(red: 0.800, green: 0.400, blue: 0.000, alpha: 1)
+//
+//                case 3, 4, 5, 6: // 道路閉塞のとき：黄色
+//                    color =   UIColor(red: 1.000, green: 0.945, blue: 0.024, alpha: 1)
+//
+//                default: // その他の災害のとき：緑色
+//                    color =   UIColor(red: 0.200, green: 1.000, blue: 0.384, alpha: 1)
+//                }
+//                box.materials.last?.diffuse.contents = color
+//                //box.firstMaterial?.transparency = 0.5
+//                box.materials.last?.transparency = 0.8
+//                let nodeBox = SCNNode(geometry: box)
+//                nodeBox.position = node.position
+//                nodeBox.position.y = nodeBox.position.y - adjustHeightAR - 1.0
+//                //nodeBox.eulerAngles.x = -.pi / 2
+//                node.addChildNode(nodeBox)
+//                // return
+//            }else{
+//                return
+//            }
+//
+//        }
+        if(data.distance == 0) {
+            return
+        }
         guard let scene = SCNScene(named: name) else {
             print("Could not load scene!")
             return
         }
+        let scaleDefaultAR = adjustHeightAR * scaleAR
         let scale = SCNVector3(scaleDefaultAR,scaleDefaultAR,scaleDefaultAR)
         let childNodes = scene.rootNode.childNodes
-        let elevation =  data.elevation ?? 0
-        var adjustHeight = Float(altitude - elevation)
-        adjustHeight = adjustHeightAR
-        var scaleNumber = 0.01;
+        //let elevation =  data.elevation ?? 0
+       // var adjustHeight = Float(altitude - elevation)
+        //let adjustHeight = adjustHeightAR
+        let scaleNumber = scaleDefaultAR;
         for childNode in childNodes {
-            scaleNumber = Double(scaleDefaultAR)
             childNode.scale = scale
-            childNode.position.y = childNode.position.y - adjustHeight
+            childNode.position.y = childNode.position.y - adjustHeightAR + scaleDefaultAR*heightARModel/2
             if(data.inforType == kInfo){
                 childNode.addAnimation(node: childNode)
             }
@@ -875,12 +991,17 @@ extension ARViewController: ARSCNViewDelegate {
         }
         let constraint = SCNBillboardConstraint()
         scene.rootNode.constraints = [constraint]
+        
         let text = SCNText(string: String(data.distance) + " m", extrusionDepth: 0.1)
-        let textNode = SCNNode(geometry: text)
-        textNode.scale = SCNVector3(scaleNumber*0.7,scaleNumber*0.7,scaleNumber*0.7)
+       
+        let textNode = NodeText(geometry: text)
+        textNode.data = data
+        
+        
+        textNode.scale = SCNVector3(scaleNumber*0.5,scaleNumber*0.5,scaleNumber*0.5)
         textNode.position = node.position
-        textNode.position.y = textNode.position.y + Float(20*scaleNumber) - adjustHeight
-        textNode.position.x = textNode.position.x - Float(15*scaleNumber*0.5)
+        textNode.position.y = textNode.position.y -  adjustHeightAR + scaleDefaultAR*heightARModel
+        textNode.position.x = textNode.position.x - 10 * scaleNumber
         node.addChildNode(textNode)
         
         if(data.inforType == kWarn){
@@ -890,8 +1011,8 @@ extension ARViewController: ARSCNViewDelegate {
             textNodeWarn.scale = SCNVector3(scale.x*0.5, scale.y*0.5, scale.z*0.5)
             
             textNodeWarn.position = node.position
-            textNodeWarn.position.y = textNodeWarn.position.y - adjustHeight
-            textNodeWarn.position.x = textNodeWarn.position.x - Float(12*scale.x)
+            textNodeWarn.position.y = textNodeWarn.position.y - adjustHeightAR + scaleDefaultAR*heightARModel/2
+            textNodeWarn.position.x = textNodeWarn.position.x - 10 * scaleNumber
             node.addChildNode(textNodeWarn)
             var particle: SCNParticleSystem
             
@@ -904,26 +1025,29 @@ extension ARViewController: ARSCNViewDelegate {
             }else{
                 particle = particleSmoke!
             }
+            
             let gemetry  = particle.emitterShape
             
             gemetry?.firstMaterial?.diffuse.contents = UIColor.clear
             let particleNode = SCNNode(geometry: gemetry)
             particleNode.position = node.position
-            
+            particleNode.scale = scale
             if(data.icon == "icon_warn0.png"){
-                particleNode.position.y = particleNode.position.y - Float(15*scaleNumber) - adjustHeight
+                particleNode.position.y = particleNode.position.y - adjustHeightAR
+                
             }else if(data.icon == "icon_warn1.png"){
-                particleNode.position.y = particleNode.position.y + Float(13*scaleNumber) - adjustHeight
-                particleNode.position.x = particleNode.position.x + Float(8*scaleNumber)
+                particleNode.position.y = particleNode.position.y - adjustHeightAR + scaleDefaultAR*heightARModel
+                particleNode.position.x = particleNode.position.x + 5
             }else if(data.icon == "icon_warn2.png"){
-                particleNode.position.y = particleNode.position.y + Float(15*scaleNumber) - adjustHeight
-                particleNode.position.x = particleNode.position.x + Float(8*scaleNumber)
+                particleNode.position.y = particleNode.position.y - adjustHeightAR + scaleDefaultAR*heightARModel
+                particleNode.position.x = particleNode.position.x + 5
             }else{
-                particleNode.position.y = particleNode.position.y - Float(15*scaleNumber) - adjustHeight
+                particleNode.position.y = particleNode.position.y - adjustHeightAR
             }
             
             particleNode.addParticleSystem(particle)
-            node.addChildNode(particleNode)
+            
+            //node.addChildNode(particleNode)
         }
         
         if(name == "SceneKit.scnassets/icon_infoTag.scn"){
@@ -934,7 +1058,7 @@ extension ARViewController: ARSCNViewDelegate {
             //let(minT,_) = (node.boundingBox)
             
             textNodeInfo.position = node.position
-            textNodeInfo.position.y = textNodeInfo.position.y - adjustHeight
+            textNodeInfo.position.y = textNodeInfo.position.y - adjustHeightAR + scaleDefaultAR*heightARModel/2
             textNodeInfo.position.x = textNodeInfo.position.x - Float(15*scale.x)
             node.addChildNode(textNodeInfo)
         }
@@ -957,6 +1081,7 @@ extension ARViewController: ARSCNViewDelegate {
         return [sideMaterial, sideMaterial, sideMaterial, sideMaterial, groundImage, bottomMaterial]
     }
     func createTerrain(node:SCNNode) {
+        let scaleDefaultAR = adjustHeightAR * scaleAR
         terrainNode = TerrainNode(minLat: minLat, maxLat: maxLat,
                                   minLon: minLon, maxLon: maxLon)
         let scale = 1
@@ -1111,9 +1236,7 @@ extension ARViewController: MGLMapViewDelegate {
                 layer.isVisible = false
             }
         }
-        createSnapshot()
-        self.annotationManager.removeFaceARAnchor()
-        self.annotationManager.addMapSurface()
+        updateFace()
   
     }
     func mapView(_ mapView: MGLMapView, annotationCanShowCallout annotation: MGLAnnotation) -> Bool {

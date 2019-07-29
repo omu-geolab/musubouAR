@@ -31,6 +31,7 @@
 		F033F9F8219172E7008A3A2E /* MapboxARAnnotationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F033F9F7219172E7008A3A2E /* MapboxARAnnotationManager.swift */; };
 		F033F9FA219172EC008A3A2E /* MapboxARAnchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F033F9F9219172EC008A3A2E /* MapboxARAnchor.swift */; };
 		F06D0D4C219C12CB0046747B /* SceneKit.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = F06D0D4B219C12CB0046747B /* SceneKit.scnassets */; };
+		F06D986B22E98DA6001CCB9E /* NodeText.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06D986A22E98DA6001CCB9E /* NodeText.swift */; };
 		F06E168221D31629004E0BB6 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = F06E168121D31629004E0BB6 /* spark.png */; };
 		F06E168621D316D1004E0BB6 /* confetti.png in Resources */ = {isa = PBXBuildFile; fileRef = F06E168521D316D1004E0BB6 /* confetti.png */; };
 		F06E168821D31709004E0BB6 /* rock.png in Resources */ = {isa = PBXBuildFile; fileRef = F06E168721D31709004E0BB6 /* rock.png */; };
@@ -110,6 +111,7 @@
 		F06A927321CB5BA20075391E /* MapboxMobileEvents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapboxMobileEvents.framework; path = Carthage/Build/iOS/MapboxMobileEvents.framework; sourceTree = "<group>"; };
 		F06A927521CB5BA70075391E /* MapboxSceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapboxSceneKit.framework; path = Carthage/Build/iOS/MapboxSceneKit.framework; sourceTree = "<group>"; };
 		F06D0D4B219C12CB0046747B /* SceneKit.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = SceneKit.scnassets; sourceTree = "<group>"; };
+		F06D986A22E98DA6001CCB9E /* NodeText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeText.swift; sourceTree = "<group>"; };
 		F06E168121D31629004E0BB6 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 		F06E168521D316D1004E0BB6 /* confetti.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = confetti.png; sourceTree = "<group>"; };
 		F06E168721D31709004E0BB6 /* rock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rock.png; sourceTree = "<group>"; };
@@ -260,6 +262,7 @@
 		F033F9F6219172B8008A3A2E /* ARKitGeo */ = {
 			isa = PBXGroup;
 			children = (
+				F06D986A22E98DA6001CCB9E /* NodeText.swift */,
 				F033F9F9219172EC008A3A2E /* MapboxARAnchor.swift */,
 				F033F9F7219172E7008A3A2E /* MapboxARAnnotationManager.swift */,
 			);
@@ -457,6 +460,7 @@
 				AC2C52FB1D5807D00032B689 /* ConfigView.swift in Sources */,
 				ACF399B71D98C25100B0EC47 /* osmViewController.swift in Sources */,
 				AC2C03D41D9D1CB9009926E3 /* SwiftyJSON.swift in Sources */,
+				F06D986B22E98DA6001CCB9E /* NodeText.swift in Sources */,
 				AC05B9FA1D811FDA0082C52A /* DataManager.swift in Sources */,
 				D3CF68DE1D91187D008B588E /* termsView.swift in Sources */,
 				ACEE245C1D8235FE00102E10 /* MakeTagImage.swift in Sources */,
@@ -637,8 +641,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = ND55MN997H;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 73EH2323UK;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -655,7 +659,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "ocu.cerd-ar";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = AR_CERD;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -668,8 +672,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = ND55MN997H;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 73EH2323UK;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -686,7 +690,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "ocu.cerd-ar";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = AR_CERD;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
