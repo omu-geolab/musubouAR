@@ -25,7 +25,6 @@ public class MapboxARAnnotationManager {
         // Add the anchor to the session
         anchorFace = ARAnchor(name: "map_surface",transform: matrix_identity_float4x4)
         session.add(anchor: anchorFace!)
-        //anchors.append(anchor)
     }
     
     func addARAnnotation(startLocation: CLLocation, endLocation: CLLocation, tagData: TagData?) {
@@ -43,7 +42,6 @@ public class MapboxARAnnotationManager {
             let bearing = GLKMathDegreesToRadians(bearingDegrees)
             
             //始点を中心にして、終点を移動して、回転する
-            // the bearing of the end location and "push" it out the required distance
             let position = vector_float4(0.0, 0.0, -distance, 0.0)
             let translationMatrix = getTranslationMatrix(position)
             let rotationMatrix = getRotationAroundY(bearing)

@@ -8,7 +8,7 @@
 import Foundation
 
 /* camera */
-let kCamDis = 500 // 現在地からkCamDis(m)までのタグを表示する
+let kCamDis = 300 // 現在地からkCamDis(m)までのタグを表示する
 let kCamAlpha = 0.3 // 警告モードのalpha値( 0(薄)<-->(濃)1 ) ※今は各災害同じalpha値で設定している
 let kTagUpdateTime = 0.01 // kTagUpdateTime秒ごとにタグ表示を更新する
 let kDiff = 0.1 // kTagUpdateTime秒前と比較して -kDiff ~ kDiff度の変化があるときのみ処理をする(手ぶれ補正)
@@ -34,7 +34,11 @@ let kMapAlpha = 0.8 // 警告モードのalpha値( 0(濃)<-->(薄)1 ) ※地図�
 var serverName = "https://cyberjapandata.gsi.go.jp/xyz/lcmfc2/{z}/{x}/{y}.png"
 
 
-let scaleDefaultAR = Float(0.3)//AR拡大縮小
-let adjustHeightAR = Float(15.0)//AR高さしち調整
+let scaleAR = Float(0.02)//AR拡大縮小
+var adjustHeightAR = Float(10)//AR高さしち調整
+let heightARModel = Float(40.0)
 let kUpdateFace = 5.0//一定時平面図更新
 let fileName = "third_party_vector_style.json"
+let heightMapAR = 400.0
+let widthMapAR = 400.0
+let kMapARAlpha = Float(0.9)

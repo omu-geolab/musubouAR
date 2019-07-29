@@ -179,7 +179,9 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         super.viewWillAppear(animated)
         
         for i in 0 ..< jsonDataManager.sharedInstance.warnBox.count {
-            
+            if(jsonDataManager.sharedInstance.warnBox[i].lat == nil){
+                continue
+            }
             osmWarnBox.append(MGLTagData())
             warnPinView.append(MGLAnnotationImage())
             polygon.append(MGLPolygon())
@@ -216,6 +218,9 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         }
         
         for i in 0 ..< jsonDataManager.sharedInstance.infoBox.count {
+            if(i >= infoPinView.count){
+                continue
+            }
             infoPinView[i].image = jsonDataManager.sharedInstance.infoBox[i].pinImage
             mapView.addAnnotation(osmInfoBox[i])
         }
@@ -705,6 +710,9 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
             let zoomlv: CGFloat = pow(2, CGFloat(beki))
             
             for i in 0 ..< jsonDataManager.sharedInstance.warnBox.count {
+                if(jsonDataManager.sharedInstance.warnBox[i].stop == nil){
+                    continue
+                }
                 
                 if jsonDataManager.sharedInstance.warnBox[i].stop.compare(Date()) == ComparisonResult.orderedDescending && Date().compare(jsonDataManager.sharedInstance.warnBox[i].start) == ComparisonResult.orderedDescending {
                     
@@ -723,7 +731,6 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
                         if newsize > Double(screenWidth) / 2 {
                             newsize = Double(screenWidth) / 2
                         }
-                        
                         DispatchQueue.main.async {
                             self.changeImage(jsonDataManager.sharedInstance.warnBox[i], MGLtag: self.osmWarnBox[i], newsize: CGFloat(newsize))
                         }
@@ -1085,10 +1092,12 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         viewCount = 0
         
         for i in 0 ..< jsonDataManager.sharedInstance.warnBox.count {
-            
+            if(jsonDataManager.sharedInstance.warnBox[i].stop == nil){
+                continue
+            }
             // 過去の災害
             if nowTime.compare(jsonDataManager.sharedInstance.warnBox[i].stop) == ComparisonResult.orderedDescending {
-                
+
                 //stopの時刻を過ぎたから、災害の円や文字を消す
                 self.mapView.removeAnnotation(self.polygon[i]) // 円を消す
                 self.mapView.alpha = kMapNormalAlpha
