@@ -16,7 +16,6 @@
 		AC2C52CB1D5805F70032B689 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC2C52C91D5805F70032B689 /* Main.storyboard */; };
 		AC2C52D01D5805F70032B689 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC2C52CF1D5805F70032B689 /* Assets.xcassets */; };
 		AC2C52D31D5805F70032B689 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC2C52D11D5805F70032B689 /* LaunchScreen.storyboard */; };
-		AC2C52DE1D5805F80032B689 /* CerdARTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2C52DD1D5805F80032B689 /* CerdARTests.swift */; };
 		AC2C52E91D5805F80032B689 /* CerdARUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2C52E81D5805F80032B689 /* CerdARUITests.swift */; };
 		AC2C52FB1D5807D00032B689 /* ConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2C52FA1D5807D00032B689 /* ConfigView.swift */; };
 		ACEE245C1D8235FE00102E10 /* MakeTagImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEE245B1D8235FE00102E10 /* MakeTagImage.swift */; };
@@ -88,8 +87,6 @@
 		AC2C52D21D5805F70032B689 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC2C52D41D5805F70032B689 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC2C52D91D5805F80032B689 /* CerdARTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CerdARTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AC2C52DD1D5805F80032B689 /* CerdARTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CerdARTests.swift; sourceTree = "<group>"; };
-		AC2C52DF1D5805F80032B689 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC2C52E41D5805F80032B689 /* CerdARUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CerdARUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC2C52E81D5805F80032B689 /* CerdARUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CerdARUITests.swift; sourceTree = "<group>"; };
 		AC2C52EA1D5805F80032B689 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -173,7 +170,6 @@
 				AC2AB8F41DB778420048931C /* sound */,
 				AC2C53021D5809610032B689 /* Image */,
 				AC2C52C41D5805F70032B689 /* CerdAR */,
-				AC2C52DC1D5805F80032B689 /* CerdARTests */,
 				AC2C52E71D5805F80032B689 /* CerdARUITests */,
 				AC2C52C31D5805F70032B689 /* Products */,
 				F033F9FF2191768C008A3A2E /* Frameworks */,
@@ -211,15 +207,6 @@
 				F06D0D4B219C12CB0046747B /* SceneKit.scnassets */,
 			);
 			path = CerdAR;
-			sourceTree = "<group>";
-		};
-		AC2C52DC1D5805F80032B689 /* CerdARTests */ = {
-			isa = PBXGroup;
-			children = (
-				AC2C52DD1D5805F80032B689 /* CerdARTests.swift */,
-				AC2C52DF1D5805F80032B689 /* Info.plist */,
-			);
-			path = CerdARTests;
 			sourceTree = "<group>";
 		};
 		AC2C52E71D5805F80032B689 /* CerdARUITests */ = {
@@ -479,7 +466,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC2C52DE1D5805F80032B689 /* CerdARTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

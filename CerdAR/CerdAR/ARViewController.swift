@@ -210,6 +210,7 @@ class ARViewController: UIViewController,detailViewDelegate {
             locationManager = CLLocationManager()
             locationManager.delegate = self
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.distanceFilter = 5
             locationManager.requestAlwaysAuthorization()
             locationManager.startUpdatingLocation()
         }
@@ -728,8 +729,8 @@ extension ARViewController: CLLocationManagerDelegate{
                 minLon = region.center.longitude - 0.5 * region.span.longitudeDelta;
                 maxLon = region.center.longitude + 0.5 * region.span.longitudeDelta;
             }
-            userLat = location.coordinate.latitude
-            userLon = location.coordinate.longitude
+            //userLat = location.coordinate.latitude
+            //userLon = location.coordinate.longitude
             //createSnapshot()
             updateAllDistances()
             updateStatus()
@@ -1244,8 +1245,8 @@ extension ARViewController: MGLMapViewDelegate {
         return false
     }
     func mapView(_ mapView: MGLMapView, regionDidChangeAnimated animated: Bool) {
-                    //userLat = self.mapView.centerCoordinate.latitude
-                    //userLon = self.mapView.centerCoordinate.longitude
+                    userLat = self.mapView.centerCoordinate.latitude
+                    userLon = self.mapView.centerCoordinate.longitude
         //updateStatus()
         DispatchQueue(label: "scalingImage").async {
             self.scalingImage()
