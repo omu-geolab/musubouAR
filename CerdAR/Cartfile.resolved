@@ -1,4 +1,4 @@
-binary "https://www.mapbox.com/ios-sdk/Mapbox-iOS-SDK.json" "5.0.0"
+binary "https://www.mapbox.com/ios-sdk/Mapbox-iOS-SDK.json" "5.2.0"
 github "mapbox/MapboxStatic.swift" "v0.10.0"
 github "mapbox/mapbox-events-ios" "v0.4.51"
 github "mapbox/mapbox-scenekit" "9063c71933ebdf3b8e44b668b4c9bfb7830c76d5"

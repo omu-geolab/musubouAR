@@ -86,13 +86,14 @@ class ARViewController: UIViewController,detailViewDelegate {
     var warnState = warningState.safe.rawValue // 現在ユーザーは災害からどの位置にいるか(安全・付近・侵入)
     var warnIndex = -1 //災害を侵入すると災害種別のインデクス
     var textStepper:UITextView!
+    var label:UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         displayMode = mode.cam.rawValue
         
         cameraStateInfoLabel = UILabel(frame: CGRect(x: CGFloat(screenWidth)/2, y: 0, width: 250, height: 50))
-        configureMapboxMapView()
+        
         sceneView = ARSCNView(frame: self.view.frame)
         sceneView.delegate = self
         //sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints, ARSCNDebugOptions.showWorldOrigin]
@@ -136,7 +137,7 @@ class ARViewController: UIViewController,detailViewDelegate {
         sceneView.addGestureRecognizer(tapGesture)
        
         self.view.addSubview(sceneView)
-        self.view.addSubview(mapView)
+       
         self.view.addSubview(cameraStateInfoLabel)
         
         // 地図切替ボタン
@@ -169,20 +170,47 @@ class ARViewController: UIViewController,detailViewDelegate {
         
         //AR高度変更
         
-        let stepperHeight = UIStepper()
-        stepperHeight.stepValue = 1
-        stepperHeight.backgroundColor = UIColor.white
-       
-        stepperHeight.minimumValue = -100
-        stepperHeight.value = Double(adjustHeightAR)
-        stepperHeight.layer.position = CGPoint(x: self.view.bounds.width - 80, y: self.view.bounds.height/2)
-        view.addSubview(stepperHeight)
-        stepperHeight.addTarget(self, action: #selector(ARViewController.changeARHeight(_:)), for: .touchUpInside)
-        
-        textStepper = UITextView(frame: CGRect(x: 0.0, y: 0.0, width: 100, height: 20))
-        textStepper!.text = String(adjustHeightAR)
-        textStepper!.layer.position = CGPoint(x: self.view.bounds.width - 80, y: self.view.bounds.height/2 - 40)
-        view.addSubview(textStepper!)
+//        let stepperHeight = UIStepper()
+//        stepperHeight.stepValue = 1
+//        stepperHeight.backgroundColor = UIColor.white
+//
+//        stepperHeight.minimumValue = -100
+//        stepperHeight.value = Double(adjustHeightAR)
+//        stepperHeight.layer.position = CGPoint(x: self.view.bounds.width - 80, y: self.view.bounds.height/2)
+//        view.addSubview(stepperHeight)
+//        stepperHeight.addTarget(self, action: #selector(ARViewController.changeARHeight(_:)), for: .touchUpInside)
+//
+//        textStepper = UITextView(frame: CGRect(x: 0.0, y: 0.0, width: 100, height: 20))
+//        textStepper!.text = String(adjustHeightAR)
+//        textStepper!.layer.position = CGPoint(x: self.view.bounds.width - 80, y: self.view.bounds.height/2 - 40)
+
+        let slider = SectionedSlider(
+            frame: CGRect(x: self.view.bounds.width - 80, y: self.view.bounds.height/2 - 178, width: 70, height: 178), // Choose a 15.6 / 40 ration for width/height
+            selectedSection: 3, // Initial selected section
+            sections: 20, // Number of sections. Choose between 2 and 20
+            palette: Palette(
+                viewBackgroundColor: UIColor(red: 0, green: 0, blue: 0, alpha: 0),
+                sliderBackgroundColor: .darkGray,
+                sliderColor: .white
+            )
+        )
+        label = UILabel(frame: CGRect(x: self.view.bounds.width - 80, y: self.view.bounds.height/2 - 210, width: 70, height: 30))
+        label.textAlignment = .center
+        label.font = label.font.withSize(20)
+        slider.delegate = self
+        view.addSubview(slider)
+        view.addSubview(label)
+//
+//        let sliderStep = UISlider(frame: CGRect(x: self.view.bounds.width/2, y: self.view.bounds.height/2 - 200, width: 200, height: 40))
+//        sliderStep.minimumValue = 0
+//        sliderStep.maximumValue = 20
+//        sliderStep.maximumTrackTintColor = .darkGray
+//        sliderStep.minimumTrackTintColor = .green
+//
+//        view.addSubview(sliderStep)
+//        sliderStep.transform = CGAffineTransform(rotationAngle: CGFloat(-Double.pi/2))
+//        sliderStep.addTarget(self, action: #selector(sliderDidChangeValue(_:)), for: .valueChanged)
+       // view.addSubview(textStepper!)
         
         
         
@@ -228,8 +256,8 @@ class ARViewController: UIViewController,detailViewDelegate {
         view.addSubview(warningMessage)
         warningMessage.isHidden = true
         startSession()
-        
-        
+        configureMapboxMapView()
+        self.view.addSubview(mapView)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -264,10 +292,16 @@ class ARViewController: UIViewController,detailViewDelegate {
         self.updateFace()
     }
     @objc func changeARHeight(_ sender: UIStepper) {
-        let stepper = sender as UIStepper
-        adjustHeightAR = Float(stepper.value)
-        textStepper!.text = String(adjustHeightAR)
-        self.updateFace()
+//        let stepper = sender as UIStepper
+//        adjustHeightAR = Float(stepper.value)
+//        textStepper!.text = String(adjustHeightAR)
+       // self.updateFace()
+        
+        
+    }
+    
+    @objc func sliderDidChangeValue(_ sender: UISlider) { // @IBActionでも可
+        print(sender.value) // 0.0
     }
     
     //環境を取り替えり
@@ -313,6 +347,7 @@ class ARViewController: UIViewController,detailViewDelegate {
             let result: AnyObject = hitResults[0]
             if let anchor = sceneView.anchor(for: result.node) {
                 if(anchor.name == "map_surface"){
+                    
                     return
                 }
                 let mapboxAnchor = anchor as! MapboxARAnchor
@@ -376,13 +411,22 @@ class ARViewController: UIViewController,detailViewDelegate {
         let styleStreet = MGLStyle.streetsStyleURL
         
         mapView.styleURL = styleStreet
+        
+        mapView.setZoomLevel(18, animated: true)
+       
+       // mapView.zoomLevel = 18
+        //mapView.zoomLevel = mapView.zoomLevel + 0.01;
+        //print(mapView.zoomLevel)
+        //mapView.setUserTrackingMode(.followWithHeading, animated: true, completionHandler: nil)
         // mapView.allowsRotating = false
         // mapView.allowsZooming = false
         mapView.delegate = self
-        //mapView.allowsScrolling = false
+        mapView.allowsTilting = false
+        mapView.allowsRotating = false
         mapView.userTrackingMode = .followWithHeading
         mapView.showsUserHeadingIndicator =  true
-        // mapView.layer.cornerRadius = d/2
+        //let camera = MGLMapCamera(lookingAtCenter: CLLocationCoordinate2D(latitude: userLat, longitude: userLon), acrossDistance: 100, pitch: 0, heading: 0)
+       // mapView.setCamera(camera, animated: true)
         
         for i in 0 ..< jsonDataManager.sharedInstance.infoBox.count {
             if(jsonDataManager.sharedInstance.infoBox[i].lat == nil ){
@@ -494,7 +538,7 @@ class ARViewController: UIViewController,detailViewDelegate {
         let mapWidth = (cos(userLat * Double.pi/180) * 2 * Double.pi * 6378137)/2
         
         let level = log2(mapWidth / 256)
-        print(level)
+        //print(level)
         options.zoomLevel = level
         var snapshotter: MGLMapSnapshotter? = MGLMapSnapshotter(options: options)
         
@@ -504,14 +548,17 @@ class ARViewController: UIViewController,detailViewDelegate {
         snapshotter?.start { (snapshot, error) in
             if error != nil {
                 print("Unable to create a map snapshot.")
-                self.updateFace()
+               // self.updateFace()
                 
             } else if let snapshot = snapshot {
                 self.imageView = snapshot.image
+                
                 self.annotationManager.removeFaceARAnchor()
-                self.annotationManager.addMapSurface()
-                if(self.flag){
-                    self.updateEnvorimentAR(currentLocation: CLLocation(latitude: userLat, longitude: userLon))
+                if(adjustHeightAR > 0.4 ){
+                    self.annotationManager.addMapSurface()
+                    if(self.flag){
+                        self.updateEnvorimentAR(currentLocation: CLLocation(latitude: userLat, longitude: userLon))
+                    }
                 }
             }
 
@@ -575,9 +622,8 @@ class ARViewController: UIViewController,detailViewDelegate {
                 continue
             }
             let coordinate = CLLocation(latitude: jsonDataManager.sharedInstance.warnBox[i].lat, longitude: jsonDataManager.sharedInstance.warnBox[i].lon )
-            //  print(jsonDataManager.sharedInstance.warnBox[i].icon)
+            //print(jsonDataManager.sharedInstance.warnBox[i].icon)
             jsonDataManager.sharedInstance.warnBox[i].distance = Int(coordinate.distance(from: currentLocation))
-            
             if jsonDataManager.sharedInstance.warnBox[i].stop.compare(nowTime) == ComparisonResult.orderedDescending && nowTime.compare(jsonDataManager.sharedInstance.warnBox[i].start) == ComparisonResult.orderedDescending {
                 annotationManager.addARAnnotation(startLocation: currentLocation, endLocation: coordinate, tagData:jsonDataManager.sharedInstance.warnBox[i])
             }
@@ -600,8 +646,8 @@ class ARViewController: UIViewController,detailViewDelegate {
             msgCount = 0
             msgSafeCount = 0
         }
-        //print(box.count)
-        //print(msgCount)
+        print(box.count)
+        print(msgCount)
         let num = box[msgCount]  // 現在発生している災害のインデックスを渡す
         
         // 現在地からその災害までの距離を求める
@@ -714,24 +760,23 @@ extension ARViewController: CLLocationManagerDelegate{
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.last{
             altitude = location.altitude
-            let region = MKCoordinateRegionMakeWithDistance(location.coordinate, 1000, 1000)
-            let northWestCorner = CLLocationCoordinate2D(latitude: region.center.latitude  - (region.span.latitudeDelta  / 2.0), longitude: region.center.longitude - (region.span.longitudeDelta / 2.0))
-            let southEastCorner = CLLocationCoordinate2D(latitude: region.center.latitude  + (region.span.latitudeDelta  / 2.0), longitude: region.center.longitude + (region.span.longitudeDelta / 2.0))
-            if (
-                location.coordinate.latitude  >= northWestCorner.latitude &&
-                    location.coordinate.latitude  <= southEastCorner.latitude &&
-                    location.coordinate.longitude >= northWestCorner.longitude &&
-                    location.coordinate.longitude <= southEastCorner.longitude
-                )
-            {
-                minLat = region.center.latitude - 0.5 * region.span.latitudeDelta;
-                maxLat = region.center.latitude + 0.5 * region.span.latitudeDelta;
-                minLon = region.center.longitude - 0.5 * region.span.longitudeDelta;
-                maxLon = region.center.longitude + 0.5 * region.span.longitudeDelta;
-            }
-            //userLat = location.coordinate.latitude
-            //userLon = location.coordinate.longitude
-            //createSnapshot()
+//            let region = MKCoordinateRegionMakeWithDistance(location.coordinate, 1000, 1000)
+//            let northWestCorner = CLLocationCoordinate2D(latitude: region.center.latitude  - (region.span.latitudeDelta  / 2.0), longitude: region.center.longitude - (region.span.longitudeDelta / 2.0))
+//            let southEastCorner = CLLocationCoordinate2D(latitude: region.center.latitude  + (region.span.latitudeDelta  / 2.0), longitude: region.center.longitude + (region.span.longitudeDelta / 2.0))
+//            if (
+//                location.coordinate.latitude  >= northWestCorner.latitude &&
+//                    location.coordinate.latitude  <= southEastCorner.latitude &&
+//                    location.coordinate.longitude >= northWestCorner.longitude &&
+//                    location.coordinate.longitude <= southEastCorner.longitude
+//                )
+//            {
+//                minLat = region.center.latitude - 0.5 * region.span.latitudeDelta;
+//                maxLat = region.center.latitude + 0.5 * region.span.latitudeDelta;
+//                minLon = region.center.longitude - 0.5 * region.span.longitudeDelta;
+//                maxLon = region.center.longitude + 0.5 * region.span.longitudeDelta;
+//            }
+            userLat = location.coordinate.latitude
+            userLon = location.coordinate.longitude
             updateAllDistances()
             updateStatus()
            
@@ -740,25 +785,37 @@ extension ARViewController: CLLocationManagerDelegate{
     
     func updateAllDistances(){
         if let anchors = sceneView.session.currentFrame?.anchors {
-            print(anchors.count)
+            //print(anchors.count)
             for anchor in anchors {
-                
                 if let anchorNode = sceneView.node(for: anchor) {
                     for node in anchorNode.childNodes{
                         if node is NodeText {
                             let nodeItem = node as! NodeText
                             let location = CLLocation(latitude: nodeItem.data!.lat, longitude: nodeItem.data!.lon)
                             let myLocation = CLLocation(latitude: userLat, longitude: userLon)
-                            let distance = myLocation.distance(from: location)
+                            var distance = myLocation.distance(from: location)
+                            
+                            if(nodeItem.data?.inforType == kWarn){
+                                distance = distance - Double(nodeItem.data?.range ?? 0)
+                                if(distance < 1){
+                                    distance = 0
+                                }
+                            }
+                            
                             let floodDis = Int(distance)
+                            
                             let text = SCNText(string: String(floodDis) + " m", extrusionDepth: 0.1)
                             node.geometry = text
+                            if(floodDis == 0){
+                                anchorNode.isHidden = true
+                            }else{
+                                anchorNode.isHidden = false
+                            }
                             
                         }
                     }
                 }
             }
-            
         } else {
             debugPrint("Anchors not found")
         }
@@ -969,13 +1026,18 @@ extension ARViewController: ARSCNViewDelegate {
 //
 //        }
         if(data.distance == 0) {
-            return
+            node.isHidden = true
+        }else{
+            node.isHidden = false
         }
         guard let scene = SCNScene(named: name) else {
             print("Could not load scene!")
+            print(name)
             return
         }
-        let scaleDefaultAR = adjustHeightAR * scaleAR
+        let adjustHeightMap = adjustHeightAR < 1 ? 1.0 : (1.0 + adjustHeightAR*0.07)
+        let adjustHeightObject = Float(data.distance < 5 ? 1.0 :  (1.0 + Float(data.distance) * 0.07))
+        let scaleDefaultAR =  adjustHeightMap * scaleAR * adjustHeightObject
         let scale = SCNVector3(scaleDefaultAR,scaleDefaultAR,scaleDefaultAR)
         let childNodes = scene.rootNode.childNodes
         //let elevation =  data.elevation ?? 0
@@ -1165,10 +1227,7 @@ extension ARViewController: MGLMapViewDelegate {
     // MARK: - Utility methods for MGLMapViewDelegate
     
     func mapView(_ mapView: MGLMapView, imageFor annotation: MGLAnnotation) -> MGLAnnotationImage? {
-        
-        
         if let pin = annotation as? MGLTagData {
-            
             if annotation === mapView.userLocation { // 現在地を示すアノテーションの場合はデフォルトのまま
                 return nil
             } else {
@@ -1237,7 +1296,7 @@ extension ARViewController: MGLMapViewDelegate {
                 layer.isVisible = false
             }
         }
-        updateFace()
+        self.updateFace()
   
     }
     func mapView(_ mapView: MGLMapView, annotationCanShowCallout annotation: MGLAnnotation) -> Bool {
@@ -1316,6 +1375,23 @@ extension SCNNode {
         let repeatForever = SCNAction.repeatForever(rotateOne)
         node.runAction(repeatForever)
     }
+}
+extension ARViewController: SectionedSliderDelegate {
+    
+    func sectionChanged(slider: SectionedSlider, selected: Int) {
+        label?.text = String(Float(selected)/2) + "m"
+        adjustHeightAR = Float(selected)/2
+        //print(adjustHeightAR)
+        if(adjustHeightAR < 0.5){
+            self.annotationManager.removeFaceARAnchor()
+            self.annotationManager.removeAllARAnchors()
+        }else{
+            self.updateFace()
+        }
+        
+        
+    }
+    
 }
 
 class PolygonView: MGLPolygon {
