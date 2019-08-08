@@ -111,7 +111,7 @@
 		F06A927521CB5BA70075391E /* MapboxSceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapboxSceneKit.framework; path = Carthage/Build/iOS/MapboxSceneKit.framework; sourceTree = "<group>"; };
 		F06D0D4B219C12CB0046747B /* SceneKit.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = SceneKit.scnassets; sourceTree = "<group>"; };
 		F06D986A22E98DA6001CCB9E /* NodeText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeText.swift; sourceTree = "<group>"; };
-		F06D987522FA75E1001CCB9E /* SectionedSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SectionedSlider.swift; path = "../../../../Downloads/SectionedSlider-master/Sources/SectionedSlider.swift"; sourceTree = "<group>"; };
+		F06D987522FA75E1001CCB9E /* SectionedSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionedSlider.swift; sourceTree = "<group>"; };
 		F06E168121D31629004E0BB6 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 		F06E168521D316D1004E0BB6 /* confetti.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = confetti.png; sourceTree = "<group>"; };
 		F06E168721D31709004E0BB6 /* rock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rock.png; sourceTree = "<group>"; };
@@ -193,7 +193,6 @@
 		AC2C52C41D5805F70032B689 /* CerdAR */ = {
 			isa = PBXGroup;
 			children = (
-				F06D987522FA75E1001CCB9E /* SectionedSlider.swift */,
 				F023CFE822C33B4300E115F8 /* gis_data.json */,
 				F0C14028224A050400BFDDE7 /* third_party_vector_style.json */,
 				F033F9F6219172B8008A3A2E /* ARKitGeo */,
@@ -243,6 +242,7 @@
 		D360EF561D912DB200A3AFE8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F06D987522FA75E1001CCB9E /* SectionedSlider.swift */,
 				BF01B83D1F6FEECE001AC15E /* GISImageView.swift */,
 				AC2C52FA1D5807D00032B689 /* ConfigView.swift */,
 				D3CF68DB1D91187D008B588E /* detailView.swift */,
