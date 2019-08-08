@@ -1304,9 +1304,9 @@ extension ARViewController: MGLMapViewDelegate {
         return false
     }
     func mapView(_ mapView: MGLMapView, regionDidChangeAnimated animated: Bool) {
-                    userLat = self.mapView.centerCoordinate.latitude
-                    userLon = self.mapView.centerCoordinate.longitude
-        //updateStatus()
+                    //userLat = self.mapView.centerCoordinate.latitude
+                    //userLon = self.mapView.centerCoordinate.longitude
+        updateStatus()
         DispatchQueue(label: "scalingImage").async {
             self.scalingImage()
         }
