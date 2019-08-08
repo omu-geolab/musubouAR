@@ -31,6 +31,8 @@
 		F033F9FA219172EC008A3A2E /* MapboxARAnchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F033F9F9219172EC008A3A2E /* MapboxARAnchor.swift */; };
 		F06D0D4C219C12CB0046747B /* SceneKit.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = F06D0D4B219C12CB0046747B /* SceneKit.scnassets */; };
 		F06D986B22E98DA6001CCB9E /* NodeText.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06D986A22E98DA6001CCB9E /* NodeText.swift */; };
+		F06D987022FA6A71001CCB9E /* MapboxMobileEvents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F06A927321CB5BA20075391E /* MapboxMobileEvents.framework */; };
+		F06D987622FA75E1001CCB9E /* SectionedSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06D987522FA75E1001CCB9E /* SectionedSlider.swift */; };
 		F06E168221D31629004E0BB6 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = F06E168121D31629004E0BB6 /* spark.png */; };
 		F06E168621D316D1004E0BB6 /* confetti.png in Resources */ = {isa = PBXBuildFile; fileRef = F06E168521D316D1004E0BB6 /* confetti.png */; };
 		F06E168821D31709004E0BB6 /* rock.png in Resources */ = {isa = PBXBuildFile; fileRef = F06E168721D31709004E0BB6 /* rock.png */; };
@@ -109,6 +111,7 @@
 		F06A927521CB5BA70075391E /* MapboxSceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapboxSceneKit.framework; path = Carthage/Build/iOS/MapboxSceneKit.framework; sourceTree = "<group>"; };
 		F06D0D4B219C12CB0046747B /* SceneKit.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = SceneKit.scnassets; sourceTree = "<group>"; };
 		F06D986A22E98DA6001CCB9E /* NodeText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeText.swift; sourceTree = "<group>"; };
+		F06D987522FA75E1001CCB9E /* SectionedSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SectionedSlider.swift; path = "../../../../Downloads/SectionedSlider-master/Sources/SectionedSlider.swift"; sourceTree = "<group>"; };
 		F06E168121D31629004E0BB6 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 		F06E168521D316D1004E0BB6 /* confetti.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = confetti.png; sourceTree = "<group>"; };
 		F06E168721D31709004E0BB6 /* rock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rock.png; sourceTree = "<group>"; };
@@ -125,6 +128,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F06D987022FA6A71001CCB9E /* MapboxMobileEvents.framework in Frameworks */,
 				F09D5115224DDC660097F0F3 /* Mapbox.framework in Frameworks */,
 				F09D5116224DDC7D0097F0F3 /* MapboxSceneKit.framework in Frameworks */,
 			);
@@ -189,6 +193,7 @@
 		AC2C52C41D5805F70032B689 /* CerdAR */ = {
 			isa = PBXGroup;
 			children = (
+				F06D987522FA75E1001CCB9E /* SectionedSlider.swift */,
 				F023CFE822C33B4300E115F8 /* gis_data.json */,
 				F0C14028224A050400BFDDE7 /* third_party_vector_style.json */,
 				F033F9F6219172B8008A3A2E /* ARKitGeo */,
@@ -425,8 +430,8 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/MapboxSceneKit.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/MapboxMobileEvents.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Mapbox.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/MapboxMobileEvents.framework",
 			);
 			outputFileListPaths = (
 			);
@@ -449,6 +454,7 @@
 				AC2C03D41D9D1CB9009926E3 /* SwiftyJSON.swift in Sources */,
 				F06D986B22E98DA6001CCB9E /* NodeText.swift in Sources */,
 				AC05B9FA1D811FDA0082C52A /* DataManager.swift in Sources */,
+				F06D987622FA75E1001CCB9E /* SectionedSlider.swift in Sources */,
 				D3CF68DE1D91187D008B588E /* termsView.swift in Sources */,
 				ACEE245C1D8235FE00102E10 /* MakeTagImage.swift in Sources */,
 				F033F9FA219172EC008A3A2E /* MapboxARAnchor.swift in Sources */,

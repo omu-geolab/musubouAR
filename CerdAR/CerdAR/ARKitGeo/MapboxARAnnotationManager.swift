@@ -13,7 +13,7 @@ import GLKit
 public class MapboxARAnnotationManager {
     
     public var anchors = [ARAnchor]()
-    private var anchorFace:ARAnchor?
+    public var anchorFace:ARAnchor?
     public var session: ARSession
     
     init(session: ARSession) {
@@ -74,6 +74,7 @@ public class MapboxARAnnotationManager {
         if(anchorFace != nil){
             session.remove(anchor: anchorFace!)
         }
+        anchorFace = nil
     }
     
 }
