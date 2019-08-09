@@ -186,7 +186,7 @@ class ARViewController: UIViewController,detailViewDelegate {
 
         let slider = SectionedSlider(
             frame: CGRect(x: self.view.bounds.width - 80, y: self.view.bounds.height/2 - 178, width: 70, height: 178), // Choose a 15.6 / 40 ration for width/height
-            selectedSection: 3, // Initial selected section
+            selectedSection: 1, // Initial selected section
             sections: 20, // Number of sections. Choose between 2 and 20
             palette: Palette(
                 viewBackgroundColor: UIColor(red: 0, green: 0, blue: 0, alpha: 0),
@@ -263,7 +263,7 @@ class ARViewController: UIViewController,detailViewDelegate {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
        
-       // timerUpdateFace = Timer.scheduledTimer(timeInterval: kUpdateFace, target: self, selector: #selector(ARViewController.updateFace), userInfo: nil, repeats: true)
+        timerUpdateFace = Timer.scheduledTimer(timeInterval: kUpdateFace, target: self, selector: #selector(ARViewController.updateFace), userInfo: nil, repeats: true)
     
         update() // 災害情報を更新する
         // kUpdateWarn秒に1回update()を発火させる
@@ -411,22 +411,12 @@ class ARViewController: UIViewController,detailViewDelegate {
         let styleStreet = MGLStyle.streetsStyleURL
         
         mapView.styleURL = styleStreet
-        
-        mapView.setZoomLevel(18, animated: true)
-       
-       // mapView.zoomLevel = 18
-        //mapView.zoomLevel = mapView.zoomLevel + 0.01;
-        //print(mapView.zoomLevel)
-        //mapView.setUserTrackingMode(.followWithHeading, animated: true, completionHandler: nil)
-        // mapView.allowsRotating = false
-        // mapView.allowsZooming = false
+        mapView.setCenter(CLLocationCoordinate2D(latitude: userLat, longitude: userLon), zoomLevel: 18, animated: false)
+        mapView.setUserTrackingMode(.followWithHeading, animated: false, completionHandler: nil)
         mapView.delegate = self
         mapView.allowsTilting = false
         mapView.allowsRotating = false
-        mapView.userTrackingMode = .followWithHeading
         mapView.showsUserHeadingIndicator =  true
-        //let camera = MGLMapCamera(lookingAtCenter: CLLocationCoordinate2D(latitude: userLat, longitude: userLon), acrossDistance: 100, pitch: 0, heading: 0)
-       // mapView.setCamera(camera, animated: true)
         
         for i in 0 ..< jsonDataManager.sharedInstance.infoBox.count {
             if(jsonDataManager.sharedInstance.infoBox[i].lat == nil ){
@@ -542,8 +532,6 @@ class ARViewController: UIViewController,detailViewDelegate {
         options.zoomLevel = level
         var snapshotter: MGLMapSnapshotter? = MGLMapSnapshotter(options: options)
         
-        
-
         //snapshotter.
         snapshotter?.start { (snapshot, error) in
             if error != nil {
@@ -552,7 +540,6 @@ class ARViewController: UIViewController,detailViewDelegate {
                 
             } else if let snapshot = snapshot {
                 self.imageView = snapshot.image
-                
                 self.annotationManager.removeFaceARAnchor()
                 if(adjustHeightAR > 0.4 ){
                     self.annotationManager.addMapSurface()
@@ -561,11 +548,8 @@ class ARViewController: UIViewController,detailViewDelegate {
                     }
                 }
             }
-
             snapshotter = nil
-            
         }
-        
     }
     //
     func getJsonFromUrl(urlString:String,i:Int,type:String){
@@ -606,7 +590,6 @@ class ARViewController: UIViewController,detailViewDelegate {
         
         annotationManager.removeAllARAnchors()
         
-    
         for i in 0 ..< jsonDataManager.sharedInstance.infoBox.count {
             if(jsonDataManager.sharedInstance.infoBox[i].lat == nil){
                 continue
@@ -646,8 +629,8 @@ class ARViewController: UIViewController,detailViewDelegate {
             msgCount = 0
             msgSafeCount = 0
         }
-        print(box.count)
-        print(msgCount)
+        //print(box.count)
+        //print(msgCount)
         let num = box[msgCount]  // 現在発生している災害のインデックスを渡す
         
         // 現在地からその災害までの距離を求める
@@ -806,10 +789,12 @@ extension ARViewController: CLLocationManagerDelegate{
                             
                             let text = SCNText(string: String(floodDis) + " m", extrusionDepth: 0.1)
                             node.geometry = text
-                            if(floodDis == 0){
+                            if(floodDis  < 1){
                                 anchorNode.isHidden = true
+                                anchorNode.isPaused =  true
                             }else{
                                 anchorNode.isHidden = false
+                                anchorNode.isPaused = false
                             }
                             
                         }
@@ -1037,7 +1022,7 @@ extension ARViewController: ARSCNViewDelegate {
         }
         let adjustHeightMap = adjustHeightAR < 1 ? 1.0 : (1.0 + adjustHeightAR*0.07)
         let adjustHeightObject = Float(data.distance < 5 ? 1.0 :  (1.0 + Float(data.distance) * 0.07))
-        let scaleDefaultAR =  adjustHeightMap * scaleAR * adjustHeightObject
+        let scaleDefaultAR = scaleAR * adjustHeightObject
         let scale = SCNVector3(scaleDefaultAR,scaleDefaultAR,scaleDefaultAR)
         let childNodes = scene.rootNode.childNodes
         //let elevation =  data.elevation ?? 0
@@ -1380,18 +1365,43 @@ extension ARViewController: SectionedSliderDelegate {
     
     func sectionChanged(slider: SectionedSlider, selected: Int) {
         label?.text = String(Float(selected)/2) + "m"
+        let adjusted = Float(selected)/2 - adjustHeightAR
         adjustHeightAR = Float(selected)/2
+        
         //print(adjustHeightAR)
         if(adjustHeightAR < 0.5){
-            self.annotationManager.removeFaceARAnchor()
-            self.annotationManager.removeAllARAnchors()
+            if let anchors = sceneView.session.currentFrame?.anchors {
+                for anchor in anchors {
+                    if let anchorNode = sceneView.node(for: anchor) {
+                        if(!anchorNode.isPaused){
+                            anchorNode.isHidden = true
+                        }
+                        
+                    }
+                }
+            }
+            else {
+                debugPrint("Anchors not found")
+            }
         }else{
-            self.updateFace()
+            if let anchors = sceneView.session.currentFrame?.anchors {
+                for anchor in anchors {
+                    if let anchorNode = sceneView.node(for: anchor) {
+                        if(!anchorNode.isPaused){
+                            anchorNode.isHidden = false
+                        }
+                        for node in anchorNode.childNodes{
+                            node.position.y = node.position.y - adjusted
+                        }
+                    }
+                }
+            }
+            else {
+                debugPrint("Anchors not found")
+            }
         }
-        
-        
     }
-    
+
 }
 
 class PolygonView: MGLPolygon {
