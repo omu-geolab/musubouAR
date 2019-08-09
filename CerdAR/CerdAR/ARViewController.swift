@@ -169,20 +169,6 @@ class ARViewController: UIViewController,detailViewDelegate {
         changeAR_Button.addTarget(self, action: #selector(ARViewController.changeAR(_:)), for: .touchUpInside)
         
         //AR高度変更
-        
-//        let stepperHeight = UIStepper()
-//        stepperHeight.stepValue = 1
-//        stepperHeight.backgroundColor = UIColor.white
-//
-//        stepperHeight.minimumValue = -100
-//        stepperHeight.value = Double(adjustHeightAR)
-//        stepperHeight.layer.position = CGPoint(x: self.view.bounds.width - 80, y: self.view.bounds.height/2)
-//        view.addSubview(stepperHeight)
-//        stepperHeight.addTarget(self, action: #selector(ARViewController.changeARHeight(_:)), for: .touchUpInside)
-//
-//        textStepper = UITextView(frame: CGRect(x: 0.0, y: 0.0, width: 100, height: 20))
-//        textStepper!.text = String(adjustHeightAR)
-//        textStepper!.layer.position = CGPoint(x: self.view.bounds.width - 80, y: self.view.bounds.height/2 - 40)
 
         let slider = SectionedSlider(
             frame: CGRect(x: self.view.bounds.width - 80, y: self.view.bounds.height/2 - 178, width: 70, height: 178), // Choose a 15.6 / 40 ration for width/height
@@ -200,36 +186,7 @@ class ARViewController: UIViewController,detailViewDelegate {
         slider.delegate = self
         view.addSubview(slider)
         view.addSubview(label)
-//
-//        let sliderStep = UISlider(frame: CGRect(x: self.view.bounds.width/2, y: self.view.bounds.height/2 - 200, width: 200, height: 40))
-//        sliderStep.minimumValue = 0
-//        sliderStep.maximumValue = 20
-//        sliderStep.maximumTrackTintColor = .darkGray
-//        sliderStep.minimumTrackTintColor = .green
-//
-//        view.addSubview(sliderStep)
-//        sliderStep.transform = CGAffineTransform(rotationAngle: CGFloat(-Double.pi/2))
-//        sliderStep.addTarget(self, action: #selector(sliderDidChangeValue(_:)), for: .valueChanged)
-       // view.addSubview(textStepper!)
-        
-        
-        
-        
-        
-        //環境を変える
-//        let toChangeEnvironment_Button = UIButton()
-//        let buttonChangeImage: UIImage = UIImage(named: "star.png")!
-//        if UIDevice.current.userInterfaceIdiom == .phone {
-//            toChangeEnvironment_Button.frame = CGRect(x: 0.0, y: 0.0, width: butSize - 10, height: butSize - 10)
-//        } else if UIDevice.current.userInterfaceIdiom == .pad{
-//            toChangeEnvironment_Button.frame = CGRect(x: 0.0, y: 0.0, width: butSize, height: butSize)
-//        }
-//        toChangeEnvironment_Button.setImage(buttonChangeImage, for: UIControlState())
-//        toChangeEnvironment_Button.layer.position = CGPoint(x: 55, y: 50)
-//        view.addSubview(toChangeEnvironment_Button)
-//        // backgroundView.addSubview(toMap_Button)
-//        toChangeEnvironment_Button.addTarget(self, action: #selector(ARViewController.changeEnvironment(_:)), for: .touchUpInside)
-        
+
         // ARアノテーションマネージャを作成し、それにARセッションへの参照を与える
         annotationManager = MapboxARAnnotationManager(session: sceneView.session)
         // location service
@@ -290,14 +247,6 @@ class ARViewController: UIViewController,detailViewDelegate {
     }
     @objc func changeAR(_ sender: UIButton) {
         self.updateFace()
-    }
-    @objc func changeARHeight(_ sender: UIStepper) {
-//        let stepper = sender as UIStepper
-//        adjustHeightAR = Float(stepper.value)
-//        textStepper!.text = String(adjustHeightAR)
-       // self.updateFace()
-        
-        
     }
     
     @objc func sliderDidChangeValue(_ sender: UISlider) { // @IBActionでも可
@@ -857,7 +806,7 @@ extension ARViewController: CLLocationManagerDelegate{
             overlay.addEnvironment(filedNamed: "SceneKit.scnassets/fire1.sks", position: positionBot, range: range)
             warnIndex = 0
             break
-        case 1: // 浸水：青色
+        case 1,7: // 浸水：青色
             overlay.addEnvironment(filedNamed: "SceneKit.scnassets/rain.sks", position: positionTop, range: range)
             overlay.addEnvironment(filedNamed: "SceneKit.scnassets/flood.sks", position: positionBot, range: range)
             warnIndex = 1
@@ -1020,14 +969,11 @@ extension ARViewController: ARSCNViewDelegate {
             print(name)
             return
         }
-        let adjustHeightMap = adjustHeightAR < 1 ? 1.0 : (1.0 + adjustHeightAR*0.07)
+        //let adjustHeightMap = adjustHeightAR < 1 ? 1.0 : (1.0 + adjustHeightAR*0.07)
         let adjustHeightObject = Float(data.distance < 5 ? 1.0 :  (1.0 + Float(data.distance) * 0.07))
         let scaleDefaultAR = scaleAR * adjustHeightObject
         let scale = SCNVector3(scaleDefaultAR,scaleDefaultAR,scaleDefaultAR)
         let childNodes = scene.rootNode.childNodes
-        //let elevation =  data.elevation ?? 0
-       // var adjustHeight = Float(altitude - elevation)
-        //let adjustHeight = adjustHeightAR
         let scaleNumber = scaleDefaultAR;
         for childNode in childNodes {
             childNode.scale = scale
