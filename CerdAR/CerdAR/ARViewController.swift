@@ -815,7 +815,7 @@ extension ARViewController: CLLocationManagerDelegate{
             overlay.addEnvironment(filedNamed: "SceneKit.scnassets/rock.sks", position: positionRight, range: 350)
             warnIndex = 2
             break
-        case 3, 4, 5, 6: // 道路閉塞：黄色
+        case 3, 4, 5, 6, 8: // 道路閉塞：黄色
             overlay.addEnvironment(filedNamed: "SceneKit.scnassets/smoke.sks", position: positionTop, range: range)
             warnIndex = 3
             break
