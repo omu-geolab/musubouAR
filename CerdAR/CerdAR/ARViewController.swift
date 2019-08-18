@@ -87,6 +87,8 @@ class ARViewController: UIViewController,detailViewDelegate {
     var warnIndex = -1 //災害を侵入すると災害種別のインデクス
     var textStepper:UITextView!
     var label:UILabel!
+    var resetKalmanFilter: Bool = false
+    var hcKalmanFilter: HCKalmanAlgorithm?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -193,11 +195,14 @@ class ARViewController: UIViewController,detailViewDelegate {
         if (CLLocationManager.locationServicesEnabled())
         {
             locationManager = CLLocationManager()
-            locationManager.delegate = self
-            locationManager.desiredAccuracy = kCLLocationAccuracyBest
-            locationManager.distanceFilter = 5
+            //locationManager.requestLocation()
+            locationManager.requestWhenInUseAuthorization()
             locationManager.requestAlwaysAuthorization()
+            locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation
+            locationManager.delegate = self
+            //locationManager.allowsBackgroundLocationUpdates = true
             locationManager.startUpdatingLocation()
+            
         }
         /* 警告メッセージの設定 */
         warningMessage.textColor = UIColor.black // 文字色(黒)
@@ -690,31 +695,65 @@ class ARViewController: UIViewController,detailViewDelegate {
 extension ARViewController: CLLocationManagerDelegate{
     // 位置を変わるとARAnnotationを再表示する
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        if let location = locations.last{
-            altitude = location.altitude
-//            let region = MKCoordinateRegionMakeWithDistance(location.coordinate, 1000, 1000)
-//            let northWestCorner = CLLocationCoordinate2D(latitude: region.center.latitude  - (region.span.latitudeDelta  / 2.0), longitude: region.center.longitude - (region.span.longitudeDelta / 2.0))
-//            let southEastCorner = CLLocationCoordinate2D(latitude: region.center.latitude  + (region.span.latitudeDelta  / 2.0), longitude: region.center.longitude + (region.span.longitudeDelta / 2.0))
-//            if (
-//                location.coordinate.latitude  >= northWestCorner.latitude &&
-//                    location.coordinate.latitude  <= southEastCorner.latitude &&
-//                    location.coordinate.longitude >= northWestCorner.longitude &&
-//                    location.coordinate.longitude <= southEastCorner.longitude
-//                )
-//            {
-//                minLat = region.center.latitude - 0.5 * region.span.latitudeDelta;
-//                maxLat = region.center.latitude + 0.5 * region.span.latitudeDelta;
-//                minLon = region.center.longitude - 0.5 * region.span.longitudeDelta;
-//                maxLon = region.center.longitude + 0.5 * region.span.longitudeDelta;
+//        if let location = locations.last{
+//            altitude = location.altitude
+//            //userLat = location.coordinate.latitude
+//            //userLon = location.coordinate.longitude
+//            if(filterAndAddLocation(location)){
+//                updateAllDistances()
+//                updateStatus()
 //            }
-            userLat = location.coordinate.latitude
-            userLon = location.coordinate.longitude
-            updateAllDistances()
-            updateStatus()
-           
+//
+//
+//        }
+        let myLocation: CLLocation = locations.first!
+        
+        if hcKalmanFilter == nil {
+            self.hcKalmanFilter = HCKalmanAlgorithm(initialLocation: myLocation)
+        }
+        else {
+            if let hcKalmanFilter = self.hcKalmanFilter {
+                if resetKalmanFilter == true {
+                    hcKalmanFilter.resetKalman(newStartLocation: myLocation)
+                    resetKalmanFilter = false
+                }
+                else {
+                    let kalmanLocation = hcKalmanFilter.processState(currentLocation: myLocation)
+                    print(kalmanLocation.coordinate)
+                    userLat = kalmanLocation.coordinate.latitude
+                    userLon = kalmanLocation.coordinate.longitude
+                    updateAllDistances()
+                    updateStatus()
+                    
+                }
+            }
         }
     }
-    
+    func filterAndAddLocation(_ location: CLLocation) -> Bool{
+        let age = -location.timestamp.timeIntervalSinceNow
+        
+        if age > 10{
+            print("Locaiton is old.")
+            return false
+        }
+        
+        if location.horizontalAccuracy < 0{
+            print("Latitidue and longitude values are invalid.")
+            return false
+        }
+        
+        if location.horizontalAccuracy > 100{
+            print("Accuracy is too low.")
+            return false
+        }
+        
+        print("Location quality is good enough.")
+        userLon = location.coordinate.longitude
+        userLat = location.coordinate.latitude
+        
+        return true
+        
+    }
     func updateAllDistances(){
         if let anchors = sceneView.session.currentFrame?.anchors {
             //print(anchors.count)

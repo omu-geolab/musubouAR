@@ -923,13 +923,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CerdAR/ARViewController.swift"
-            timestampString = "587037439.115558"
+            timestampString = "587830356.868819"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "628"
-            endingLineNumber = "628"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            startingLineNumber = "635"
+            endingLineNumber = "635"
+            landmarkName = "updateMessage()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -939,13 +939,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CerdAR/ARViewController.swift"
-            timestampString = "587037439.1160409"
+            timestampString = "587830356.869235"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "631"
-            endingLineNumber = "631"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            startingLineNumber = "638"
+            endingLineNumber = "638"
+            landmarkName = "updateMessage()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -955,13 +955,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CerdAR/ARViewController.swift"
-            timestampString = "587037439.116406"
+            timestampString = "587830356.8694921"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "637"
-            endingLineNumber = "637"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            startingLineNumber = "644"
+            endingLineNumber = "644"
+            landmarkName = "updateMessage()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1067,13 +1067,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CerdAR/ARViewController.swift"
-            timestampString = "587037439.1169569"
+            timestampString = "587830356.869801"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1288"
-            endingLineNumber = "1288"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            startingLineNumber = "1329"
+            endingLineNumber = "1329"
+            landmarkName = "ARViewController"
+            landmarkType = "21">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1083,13 +1083,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CerdAR/ARViewController.swift"
-            timestampString = "587037439.117275"
+            timestampString = "587830356.870043"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1277"
-            endingLineNumber = "1277"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            startingLineNumber = "1318"
+            endingLineNumber = "1318"
+            landmarkName = "scalingImage()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1339,13 +1339,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CerdAR/ARViewController.swift"
-            timestampString = "587037439.1178631"
+            timestampString = "587830356.870374"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "551"
-            endingLineNumber = "551"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            startingLineNumber = "558"
+            endingLineNumber = "558"
+            landmarkName = "updateEnvorimentAR(currentLocation:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
