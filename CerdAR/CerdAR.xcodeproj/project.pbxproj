@@ -26,6 +26,9 @@
 		D3CF68DD1D91187D008B588E /* detailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CF68DB1D91187D008B588E /* detailView.swift */; };
 		D3CF68DE1D91187D008B588E /* termsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CF68DC1D91187D008B588E /* termsView.swift */; };
 		F023CFE922C33B4300E115F8 /* gis_data.json in Resources */ = {isa = PBXBuildFile; fileRef = F023CFE822C33B4300E115F8 /* gis_data.json */; };
+		F0319F7623098E1A002DEF7C /* HCMatrixObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0319F7523098E1A002DEF7C /* HCMatrixObject.swift */; };
+		F0319F7823098E25002DEF7C /* HCKalmanAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0319F7723098E25002DEF7C /* HCKalmanAlgorithm.swift */; };
+		F0319F7A23099272002DEF7C /* Surge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0319F7923099272002DEF7C /* Surge.framework */; };
 		F033F9F5219171DD008A3A2E /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F033F9F4219171DD008A3A2E /* ARViewController.swift */; };
 		F033F9F8219172E7008A3A2E /* MapboxARAnnotationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F033F9F7219172E7008A3A2E /* MapboxARAnnotationManager.swift */; };
 		F033F9FA219172EC008A3A2E /* MapboxARAnchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F033F9F9219172EC008A3A2E /* MapboxARAnchor.swift */; };
@@ -101,6 +104,9 @@
 		D3CF68DB1D91187D008B588E /* detailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = detailView.swift; sourceTree = "<group>"; };
 		D3CF68DC1D91187D008B588E /* termsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = termsView.swift; sourceTree = "<group>"; };
 		F023CFE822C33B4300E115F8 /* gis_data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = gis_data.json; sourceTree = "<group>"; };
+		F0319F7523098E1A002DEF7C /* HCMatrixObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HCMatrixObject.swift; sourceTree = "<group>"; };
+		F0319F7723098E25002DEF7C /* HCKalmanAlgorithm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HCKalmanAlgorithm.swift; sourceTree = "<group>"; };
+		F0319F7923099272002DEF7C /* Surge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Surge.framework; path = Carthage/Build/iOS/Surge.framework; sourceTree = "<group>"; };
 		F033F9F4219171DD008A3A2E /* ARViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
 		F033F9F7219172E7008A3A2E /* MapboxARAnnotationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapboxARAnnotationManager.swift; sourceTree = "<group>"; };
 		F033F9F9219172EC008A3A2E /* MapboxARAnchor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapboxARAnchor.swift; sourceTree = "<group>"; };
@@ -128,6 +134,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0319F7A23099272002DEF7C /* Surge.framework in Frameworks */,
 				F06D987022FA6A71001CCB9E /* MapboxMobileEvents.framework in Frameworks */,
 				F09D5115224DDC660097F0F3 /* Mapbox.framework in Frameworks */,
 				F09D5116224DDC7D0097F0F3 /* MapboxSceneKit.framework in Frameworks */,
@@ -193,6 +200,8 @@
 		AC2C52C41D5805F70032B689 /* CerdAR */ = {
 			isa = PBXGroup;
 			children = (
+				F0319F7523098E1A002DEF7C /* HCMatrixObject.swift */,
+				F0319F7723098E25002DEF7C /* HCKalmanAlgorithm.swift */,
 				F023CFE822C33B4300E115F8 /* gis_data.json */,
 				F0C14028224A050400BFDDE7 /* third_party_vector_style.json */,
 				F033F9F6219172B8008A3A2E /* ARKitGeo */,
@@ -264,6 +273,7 @@
 		F033F9FF2191768C008A3A2E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F0319F7923099272002DEF7C /* Surge.framework */,
 				F06A927521CB5BA70075391E /* MapboxSceneKit.framework */,
 				F06A927321CB5BA20075391E /* MapboxMobileEvents.framework */,
 				F06A927121CB5B9C0075391E /* Mapbox.framework */,
@@ -432,6 +442,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/MapboxSceneKit.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Mapbox.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/MapboxMobileEvents.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Surge.framework",
 			);
 			outputFileListPaths = (
 			);
@@ -454,6 +465,8 @@
 				AC2C03D41D9D1CB9009926E3 /* SwiftyJSON.swift in Sources */,
 				F06D986B22E98DA6001CCB9E /* NodeText.swift in Sources */,
 				AC05B9FA1D811FDA0082C52A /* DataManager.swift in Sources */,
+				F0319F7623098E1A002DEF7C /* HCMatrixObject.swift in Sources */,
+				F0319F7823098E25002DEF7C /* HCKalmanAlgorithm.swift in Sources */,
 				F06D987622FA75E1001CCB9E /* SectionedSlider.swift in Sources */,
 				D3CF68DE1D91187D008B588E /* termsView.swift in Sources */,
 				ACEE245C1D8235FE00102E10 /* MakeTagImage.swift in Sources */,

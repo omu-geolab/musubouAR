@@ -1,3 +1,4 @@
 binary "https://www.mapbox.com/ios-sdk/Mapbox-iOS-SDK.json" ~> 5.0
 github "mapbox/mapbox-scenekit" "master"
 github "mapbox/MapboxStatic.swift" ~> 0.10
+github "mattt/Surge" ~> 2.0.0
