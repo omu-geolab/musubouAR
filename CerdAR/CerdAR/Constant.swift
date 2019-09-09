@@ -35,7 +35,7 @@ var serverName = "https://cyberjapandata.gsi.go.jp/xyz/lcmfc2/{z}/{x}/{y}.png"
 
 
 let scaleAR = Float(0.02)//AR拡大縮小
-var adjustHeightAR = Float(0.5)//AR高さし調整
+var adjustHeightAR = Float(1.5)//AR高さし調整
 let heightARModel = Float(40.0)
 let kUpdateFace = 5.0//一定時平面図更新
 let fileName = "third_party_vector_style.json"
