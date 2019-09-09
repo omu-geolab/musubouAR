@@ -905,7 +905,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
             }
             alertController.addAction(action)
         }
-        let cancel = UIAlertAction(title: "キャンセル", style: .default){
+        let cancel = UIAlertAction(title: "表示なし", style: .default){
             action in
             if let layermap = self.mapView.style?.layer(withIdentifier: self.rasterLayer?.identifier ?? "") {
                 self.mapView.style?.removeLayer(layermap)
