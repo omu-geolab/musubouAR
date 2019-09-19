@@ -73,15 +73,16 @@ class ARViewController: UIViewController,detailViewDelegate {
     var warningView: UIView! // 災害範囲内に侵入した時に画面の色を変える
     var warnNums: [Int] = [] // 災害番号
     var box: [Int] = [] // 現在発生している災害の番号を管理する配列
-    var msgCount = 0 // 警告メッセージを表示する災害の配列番号を管理する
-    var msgSafeCount = 0 // ユーザーは現在安全圏にいるかを確認するための変数
-    var viewCount = 0 // 警告モードを表示する災害の配列番号を管理する
-    var viewSafeCount = 0 // ユーザーは現在付近または安全圏にいるかを確認するための変数
-    var messageTimer: Timer! // 警告メッセージを表示するためのタイマー
-    var viewTimer: Timer! // 警告モードを表示するためのタイマー
     var updateTimer: Timer! // 一定時間ごとにupdate()を発火させる
     var timerUpdateFace = Timer()//AR平面図更新
     var warnCount:Int = 0 //災害を侵入する番号
+    
+    var warningCount = 0 //災害を侵入する番号
+    var warningAllCount = 0
+    var warningEnter:[TagData] = []
+    var warningNear:[TagData] = []
+    var warningSafeCount = 0
+    var warningTimer: Timer!
     
     var warnState = warningState.safe.rawValue // 現在ユーザーは災害からどの位置にいるか(安全・付近・侵入)
     var warnIndex = -1 //災害を侵入すると災害種別のインデクス
@@ -171,10 +172,9 @@ class ARViewController: UIViewController,detailViewDelegate {
         changeAR_Button.addTarget(self, action: #selector(ARViewController.changeAR(_:)), for: .touchUpInside)
         
         //AR高度変更
-
         let slider = SectionedSlider(
-            frame: CGRect(x: self.view.bounds.width - 80, y: self.view.bounds.height/2 - 178, width: 70, height: 178), // Choose a 15.6 / 40 ration for width/height
-            selectedSection: 1, // Initial selected section
+            frame: CGRect(x: 20, y: self.view.bounds.height/2 - 89, width: 70, height: 178), // Choose a 15.6 / 40 ration for width/height
+            selectedSection: 3, // Initial selected section
             sections: 20, // Number of sections. Choose between 2 and 20
             palette: Palette(
                 viewBackgroundColor: UIColor(red: 0, green: 0, blue: 0, alpha: 0),
@@ -182,7 +182,7 @@ class ARViewController: UIViewController,detailViewDelegate {
                 sliderColor: .white
             )
         )
-        label = UILabel(frame: CGRect(x: self.view.bounds.width - 80, y: self.view.bounds.height/2 - 210, width: 70, height: 30))
+        label = UILabel(frame: CGRect(x: 20, y: self.view.bounds.height/2 - 120, width: 70, height: 30))
         label.textAlignment = .center
         label.font = label.font.withSize(20)
         slider.delegate = self
@@ -370,6 +370,8 @@ class ARViewController: UIViewController,detailViewDelegate {
         mapView.delegate = self
         mapView.allowsTilting = false
         mapView.allowsRotating = false
+        mapView.allowsZooming = false
+        mapView.allowsScrolling = false
         mapView.showsUserHeadingIndicator =  true
         
         for i in 0 ..< jsonDataManager.sharedInstance.infoBox.count {
@@ -572,94 +574,18 @@ class ARViewController: UIViewController,detailViewDelegate {
         createSnapshot()
     }
     
-    /*
-     * 警告メッセージを表示する
-     */
-    @objc func updateMessage() {
-        if messageTimer == nil {
-            messageTimer = Timer.scheduledTimer(timeInterval: kUpdateMM, target: self, selector: #selector(ARViewController.updateMessage), userInfo: nil, repeats: true)
-        }
-        if msgCount == box.count {
-            msgCount = 0
-            msgSafeCount = 0
-        }
-        //print(box.count)
-        //print(msgCount)
-        let num = box[msgCount]  // 現在発生している災害のインデックスを渡す
-        
-        // 現在地からその災害までの距離を求める
-        jsonDataManager.sharedInstance.warnBox[num].distance = calcDistance(jsonDataManager.sharedInstance.warnBox[num].lat, lon: jsonDataManager.sharedInstance.warnBox[num].lon, uLat: userLat, uLon: userLon) // 距離を求める
-        
-        // 0m以下・・・侵入
-        if jsonDataManager.sharedInstance.warnBox[num].distance - jsonDataManager.sharedInstance.warnBox[num].range < 0 {
-            // 侵入していることを通知音で知らせる
-            if audioPlayerIntr != nil {
-                audioPlayerIntr.play()
-                if vibration.isVibration == false {
-                    vibration.vibIntrusionStart()
-                }
-            }
-            warningMessage.isHidden = false
-            warningMessage.text = jsonDataManager.sharedInstance.warnBox[num].message2 // 警告メッセージ
-            msgCount += 1
-            
-            // 0m以上、kNearMsg(m)以下・・・付近
-        } else if jsonDataManager.sharedInstance.warnBox[num].distance - jsonDataManager.sharedInstance.warnBox[num].range < kNearMsg {
-            // 付近にいることを通知音で知らせる
-            if audioPlayerIntr.isPlaying == true {
-                audioPlayerIntr.stop()
-                vibration.vibStop()
-            }
-            if audioPlayerNear != nil {
-                audioPlayerNear.play()
-                if vibration.isVibration == false {
-                    vibration.vibNearStart()
-                }
-            }
-            warningMessage.isHidden = false
-            warningMessage.text = jsonDataManager.sharedInstance.warnBox[num].message1 // 警告メッセージ
-            msgCount += 1
-            
-            // それ以外・・・安全
-        } else {
-            if audioPlayerNear.isPlaying == true {
-                audioPlayerNear.stop()
-                vibration.vibStop()
-            }
-            msgSafeCount += 1
-            if msgSafeCount == box.count {
-                msgSafeCount = 0
-                warningMessage.isHidden = true
-                return
-            }
-            msgCount += 1
-            messageTimer.invalidate()
-            updateMessage()
-        }
-        
-        if !messageTimer.isValid {
-            messageTimer = Timer.scheduledTimer(timeInterval: kUpdateMM, target: self, selector: #selector(ARViewController.updateMessage), userInfo: nil, repeats: true)
-        }
-    }
-    
     @objc func update() {
         let nowTime = Date() // 現在時刻
         
         box.removeAll()
         
         // 警告メッセージのタイマーを止める
-        if messageTimer != nil {
-            messageTimer.invalidate()
+        if warningTimer != nil {
+            warningTimer.invalidate()
         }
         
-        // 警告モードのタイマーを止める
-        if viewTimer != nil {
-            viewTimer.invalidate()
-        }
-        
-        // インデックスを初期化,
-        msgCount = 0
-        viewCount = 0
+        warningEnter.removeAll()
+        warningNear.removeAll()
         
         for i in 0 ..< jsonDataManager.sharedInstance.warnBox.count {
             if(jsonDataManager.sharedInstance.warnBox[i].stop == nil){
@@ -667,27 +593,110 @@ class ARViewController: UIViewController,detailViewDelegate {
             }
             if jsonDataManager.sharedInstance.warnBox[i].stop.compare(nowTime) == ComparisonResult.orderedDescending && nowTime.compare(jsonDataManager.sharedInstance.warnBox[i].start) == ComparisonResult.orderedDescending {
                 box.append(i)
+                jsonDataManager.sharedInstance.warnBox[i].distance = calcDistance(jsonDataManager.sharedInstance.warnBox[i].lat, lon: jsonDataManager.sharedInstance.warnBox[i].lon, uLat: userLat, uLon: userLon)
+                if jsonDataManager.sharedInstance.warnBox[i].distance - Int(circleRadius[i]) < 0 {
+                    let tagdata = jsonDataManager.sharedInstance.warnBox[i]
+                    warningEnter.append(tagdata)
+                }else if jsonDataManager.sharedInstance.warnBox[i].distance - Int(circleRadius[i]) < kNearMsg {
+                    let tagdata = jsonDataManager.sharedInstance.warnBox[i]
+                    warningNear.append(tagdata)
+                }
             }
         }
         
         // 災害発生していないとき
-        if box.count == 0 {
-            warningMessage.isHidden = true // 警告メッセージを隠す
+        warningAllCount = warningEnter.count + warningNear.count
+        if(warningEnter.count == 0){
+            warningView.isHidden = true
+            if audioPlayerIntr.isPlaying == true {
+                audioPlayerIntr.stop()
+            }
+        }
+        if(warningNear.count == 0){
+            if audioPlayerNear.isPlaying == true {
+                audioPlayerNear.stop()
+            }
+        }
+        if warningAllCount == 0 {
+            vibration.vibStop()
+            warningMessage.isHidden = true
             // 災害が発生しているとき
         } else {
-
+            updateWarningView()
             // 警告メッセージのタイマーを開始させる
-            if messageTimer == nil {
-                messageTimer = Timer.scheduledTimer(timeInterval: kUpdateMM, target: self, selector: #selector(ARViewController.updateMessage), userInfo: nil, repeats: true)
-            } else if !messageTimer.isValid {
-                messageTimer = Timer.scheduledTimer(timeInterval: kUpdateMM, target: self, selector: #selector(ARViewController.updateMessage), userInfo: nil, repeats: true)
-            }
-
+            warningTimer = Timer.scheduledTimer(timeInterval: kUpdateMM, target: self, selector: #selector(osmViewController.updateWarningView), userInfo: nil, repeats: true)
         }
     }
-
     
+    /*
+     * 警告メッセージと警告モードを表示する
+     */
     
+    @objc func updateWarningView(){
+        if(warningCount >= warningAllCount){
+            warningCount = 0
+        }
+        let waringNearCount = warningCount - warningEnter.count
+        if warningEnter.count > 0 && warningEnter.count > warningCount{
+            
+            if audioPlayerNear.isPlaying == true {
+                audioPlayerNear.stop()
+            }
+            if audioPlayerIntr != nil {
+                audioPlayerIntr.play()
+                if vibration.isVibration == false {
+                    vibration.vibIntrusionStart()
+                }
+            }
+            
+            warningView.isHidden = false
+            warningMessage.isHidden = false
+            warningMessage.text = warningEnter[warningCount].message2 // 警告メッセージ
+            
+            switch warningEnter[warningCount].riskType {
+            case 0: // 火災：赤色
+                warningView.frame = CGRect(x: 0.0, y: 0.0, width: CGFloat(screenWidth), height: CGFloat(screenHeight))
+                warningView.backgroundColor = UIColor(red: 1.000, green: 0.000, blue: 0.000, alpha: 1.0)
+                
+            case 1: // 浸水：青色
+                warningView.frame = CGRect(x: 0.0, y: CGFloat(screenHeight * 0.75), width: CGFloat(screenWidth), height: CGFloat(screenHeight / 4))
+                warningView.backgroundColor = UIColor(red: 0.000, green: 0.000, blue: 0.900, alpha: 1.0)
+                
+            case 2: // 土砂崩れ：茶色
+                warningView.frame = CGRect(x: 0.0, y: CGFloat(screenHeight * 0.75), width: CGFloat(screenWidth), height: CGFloat(screenHeight / 4))
+                warningView.backgroundColor = UIColor(red: 0.800, green: 0.400, blue: 0.000, alpha: 1.0)
+                
+            case 3, 4, 5, 6: // 道路閉塞：黄色
+                warningView.frame = CGRect(x: 0.0, y: CGFloat(screenHeight * 0.75), width: CGFloat(screenWidth), height: CGFloat(screenHeight / 4))
+                warningView.backgroundColor = UIColor(red: 1.000, green: 0.945, blue: 0.024, alpha: 1.0)
+            default: // その他の災害：緑色
+                warningView.frame = CGRect(x: 0.0, y: 0.0, width: CGFloat(screenWidth), height: CGFloat(screenHeight))
+                warningView.backgroundColor = UIColor(red: 0.200, green: 1.000, blue: 0.384, alpha: 1.0)
+                break
+            }
+            mapView.alpha = CGFloat(kMapAlpha) // 画面の色の濃さを設定する((濃)0<-->1.0(薄))
+           
+            warningCount += 1
+        }
+        
+        if(warningNear.count > 0 && waringNearCount >= 0 &&  waringNearCount < warningNear.count){
+            if audioPlayerIntr.isPlaying == false {
+                if audioPlayerNear != nil {
+                    audioPlayerNear.play()
+                    if vibration.isVibration == false {
+                        vibration.vibNearStart()
+                    }
+                }
+            }
+            warningMessage.isHidden = false
+            warningMessage.text = warningNear[waringNearCount].message1
+            warningCount += 1
+        }
+        
+        if(warningCount >= warningAllCount){
+            warningCount = 0
+        }
+    }
 }
 
 // MARK: - CLLocationManagerDelegate
@@ -695,39 +704,39 @@ class ARViewController: UIViewController,detailViewDelegate {
 extension ARViewController: CLLocationManagerDelegate{
     // 位置を変わるとARAnnotationを再表示する
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-//        if let location = locations.last{
-//            altitude = location.altitude
-//            //userLat = location.coordinate.latitude
-//            //userLon = location.coordinate.longitude
+        if let location = locations.last{
+            altitude = location.altitude
+            userLat = location.coordinate.latitude
+            userLon = location.coordinate.longitude
+            updateAllDistances()
+            updateStatus()
 //            if(filterAndAddLocation(location)){
 //                updateAllDistances()
 //                updateStatus()
 //            }
+        }
+//        let myLocation: CLLocation = locations.first!
 //
-//
+//        if hcKalmanFilter == nil {
+//            self.hcKalmanFilter = HCKalmanAlgorithm(initialLocation: myLocation)
 //        }
-        let myLocation: CLLocation = locations.first!
-        
-        if hcKalmanFilter == nil {
-            self.hcKalmanFilter = HCKalmanAlgorithm(initialLocation: myLocation)
-        }
-        else {
-            if let hcKalmanFilter = self.hcKalmanFilter {
-                if resetKalmanFilter == true {
-                    hcKalmanFilter.resetKalman(newStartLocation: myLocation)
-                    resetKalmanFilter = false
-                }
-                else {
-                    let kalmanLocation = hcKalmanFilter.processState(currentLocation: myLocation)
-                    print(kalmanLocation.coordinate)
-                    userLat = kalmanLocation.coordinate.latitude
-                    userLon = kalmanLocation.coordinate.longitude
-                    updateAllDistances()
-                    updateStatus()
-                    
-                }
-            }
-        }
+//        else {
+//            if let hcKalmanFilter = self.hcKalmanFilter {
+//                if resetKalmanFilter == true {
+//                    hcKalmanFilter.resetKalman(newStartLocation: myLocation)
+//                    resetKalmanFilter = false
+//                }
+//                else {
+//                    let kalmanLocation = hcKalmanFilter.processState(currentLocation: myLocation)
+//                    //print(kalmanLocation.coordinate)
+//                    //userLat = kalmanLocation.coordinate.latitude
+//                    //userLon = kalmanLocation.coordinate.longitude
+//                    updateAllDistances()
+//                    updateStatus()
+//
+//                }
+//            }
+//        }
     }
     func filterAndAddLocation(_ location: CLLocation) -> Bool{
         let age = -location.timestamp.timeIntervalSinceNow
@@ -795,9 +804,7 @@ extension ARViewController: CLLocationManagerDelegate{
     }
     func updateStatus(){
         let nowTime = Date() // 現在時刻
-        // インデックスを初期化,
-        msgCount = 0
-        viewCount = 0
+
         warnCount = 0
         
         for i in 0 ..< jsonDataManager.sharedInstance.warnBox.count {
@@ -1276,6 +1283,7 @@ extension ARViewController: MGLMapViewDelegate {
     func mapView(_ mapView: MGLMapView, regionDidChangeAnimated animated: Bool) {
                     //userLat = self.mapView.centerCoordinate.latitude
                     //userLon = self.mapView.centerCoordinate.longitude
+        //updateAllDistances()
         updateStatus()
         DispatchQueue(label: "scalingImage").async {
             self.scalingImage()

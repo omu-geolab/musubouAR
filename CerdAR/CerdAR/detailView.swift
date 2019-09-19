@@ -162,6 +162,7 @@ class detailView: UIView {
 
                             // 成功したとき
                         } else {
+                            
                             let webview = UIWebView(frame: CGRect.init(x: CGFloat(dWid * 0.05), y: CGFloat(dHei * 0.3), width: CGFloat(dWid * 0.45), height: CGFloat(dHei * 0.5)))
                             webview.scalesPageToFit = true
                             webview.scrollView.bounces = false

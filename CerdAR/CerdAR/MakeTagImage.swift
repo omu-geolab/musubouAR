@@ -273,7 +273,7 @@ func getARImage(_ num: Int, inforType: String)-> UIImage{
     
     labelImg = label.getImage() as UIImage // UILabelをUIImageに変換する
     
-    var imgsize: CGFloat =  500
+    //var imgsize: CGFloat =  500
     var labelRect = CGRect.init()
     
     if inforType == kInfo {
