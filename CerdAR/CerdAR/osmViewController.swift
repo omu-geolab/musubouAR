@@ -43,15 +43,17 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
     var warningView: UIView! // 災害範囲内に侵入した時に画面の色を変える
     var warnNums: [Int] = [] // 災害番号
     var box: [Int] = [] // 現在発生している災害の番号を管理する配列
-    var msgCount = 0 // 警告メッセージを表示する災害の配列番号を管理する
-    var msgSafeCount = 0 // ユーザーは現在安全圏にいるかを確認するための変数
-    var viewCount = 0 // 警告モードを表示する災害の配列番号を管理する
-    var viewSafeCount = 0 // ユーザーは現在付近または安全圏にいるかを確認するための変数
-    var messageTimer: Timer! // 警告メッセージを表示するためのタイマー
-    var viewTimer: Timer! // 警告モードを表示するためのタイマー
+
     var updateTimer: Timer! // 一定時間ごとにupdate()を発火させる
     
     var warnState = warningState.safe.rawValue // 現在ユーザーは災害からどの位置にいるか(安全・付近・侵入)
+    
+    var warningCount = 0
+    var warningAllCount = 0
+    var warningEnter:[TagData] = []
+    var warningNear:[TagData] = []
+    var warningSafeCount = 0
+    var warningTimer: Timer! 
     
     var polygon = [MGLPolygon]() // 災害円
     var polyNum = 0 // 災害円のインデックス
@@ -239,15 +241,14 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         mapView.delegate = nil
         locationManager.delegate = nil
         locationManager.stopUpdatingLocation() // GPSの更新を停止する
-        if messageTimer != nil {
-            messageTimer.invalidate()
+        if warningTimer != nil {
+            warningTimer.invalidate()
         }
-        if viewTimer != nil {
-            viewTimer.invalidate()
-        }
+
+//        if viewTimer != nil {
+//            viewTimer.invalidate()
+//        }
         updateTimer.invalidate()
-        vibration.vibStop()
-        
     }
     
     
@@ -274,7 +275,8 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
      * 拡大縮小に合わせて画像を張り替える
      */
     func mapView(_ mapView: MGLMapView, regionDidChangeAnimated animated: Bool) {
-        
+        //userLat = self.mapView.centerCoordinate.latitude
+         //userLon = self.mapView.centerCoordinate.longitude
         DispatchQueue(label: "scalingImage").async {
             self.scalingImage()
         }
@@ -535,143 +537,8 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         configview?.delegate = nil
         configview?.removeFromSuperview()
     }
-    
-    // MARK:- プライベート関数
-    
-    /*
-     * 警告メッセージを表示する
-     */
-    @objc func updateMessage() {
-        
-        if msgCount == box.count {
-            msgCount = 0
-            msgSafeCount = 0
-        }
-        
-        let num = box[msgCount]  // 現在発生している災害のインデックスを渡す
-        
-        // 現在地からその災害までの距離を求める
-        jsonDataManager.sharedInstance.warnBox[num].distance = calcDistance(jsonDataManager.sharedInstance.warnBox[num].lat, lon: jsonDataManager.sharedInstance.warnBox[num].lon, uLat: userLat, uLon: userLon) // 距離を求める
-        
-        // 0m以下・・・侵入
-        if jsonDataManager.sharedInstance.warnBox[num].distance - Int(circleRadius[num]) < 0 {
-            // 侵入していることを通知音で知らせる
-            if audioPlayerIntr != nil {
-                audioPlayerIntr.play()
-                if vibration.isVibration == false {
-                    vibration.vibIntrusionStart()
-                }
-            }
-            warningMessage.isHidden = false
-            warningMessage.text = jsonDataManager.sharedInstance.warnBox[num].message2 // 警告メッセージ
-            msgCount += 1
-            
-            // 0m以上、kNearMsg(m)以下・・・付近
-        } else if jsonDataManager.sharedInstance.warnBox[num].distance - Int(circleRadius[num]) < kNearMsg {
-            // 付近にいることを通知音で知らせる
-            if audioPlayerIntr.isPlaying == true {
-                audioPlayerIntr.stop()
-                vibration.vibStop()
-            }
-            if audioPlayerNear != nil {
-                audioPlayerNear.play()
-                if vibration.isVibration == false {
-                    vibration.vibNearStart()
-                }
-            }
-            warningMessage.isHidden = false
-            warningMessage.text = jsonDataManager.sharedInstance.warnBox[num].message1 // 警告メッセージ
-            msgCount += 1
-            
-            // それ以外・・・安全
-        } else {
-            if audioPlayerNear.isPlaying == true {
-                audioPlayerNear.stop()
-                vibration.vibStop()
-            }
-            msgSafeCount += 1
-            if msgSafeCount == box.count {
-                msgSafeCount = 0
-                warningMessage.isHidden = true
-                return
-            }
-            msgCount += 1
-            messageTimer.invalidate()
-            updateMessage()
-        }
-        
-        if !messageTimer.isValid {
-            messageTimer = Timer.scheduledTimer(timeInterval: kUpdateMM, target: self, selector: #selector(osmViewController.updateMessage), userInfo: nil, repeats: true)
-        }
-    }
-    
-    /*
-     * 警告モードを表示する
-     * ここで、警告モードの色や濃さ、表示幅を変更できる
-     */
-    @objc func updateView() {
-        
-        if viewCount == box.count {
-            viewCount = 0
-            viewSafeCount = 0
-        }
-        
-        let num = box[viewCount] // 現在発生している災害のインデックスを渡す
-        
-        // 現在地からその災害までの距離を求める
-        jsonDataManager.sharedInstance.warnBox[num].distance = calcDistance(jsonDataManager.sharedInstance.warnBox[num].lat, lon: jsonDataManager.sharedInstance.warnBox[num].lon, uLat: userLat, uLon: userLon)
-        
-        // 0m以下・・・侵入
-        if jsonDataManager.sharedInstance.warnBox[num].distance - Int(circleRadius[num]) < 0 {
-            
-            switch jsonDataManager.sharedInstance.warnBox[num].riskType {
-                
-            case 0: // 火災：赤色
-                warningView.frame = CGRect(x: 0.0, y: 0.0, width: CGFloat(screenWidth), height: CGFloat(screenHeight))
-                warningView.backgroundColor = UIColor(red: 1.000, green: 0.000, blue: 0.000, alpha: 1.0)
-                
-            case 1: // 浸水：青色
-                warningView.frame = CGRect(x: 0.0, y: CGFloat(screenHeight * 0.75), width: CGFloat(screenWidth), height: CGFloat(screenHeight / 4))
-                warningView.backgroundColor = UIColor(red: 0.000, green: 0.000, blue: 0.900, alpha: 1.0)
-                
-            case 2: // 土砂崩れ：茶色
-                warningView.frame = CGRect(x: 0.0, y: CGFloat(screenHeight * 0.75), width: CGFloat(screenWidth), height: CGFloat(screenHeight / 4))
-                warningView.backgroundColor = UIColor(red: 0.800, green: 0.400, blue: 0.000, alpha: 1.0)
-                
-            case 3, 4, 5, 6: // 道路閉塞：黄色
-                warningView.frame = CGRect(x: 0.0, y: CGFloat(screenHeight * 0.75), width: CGFloat(screenWidth), height: CGFloat(screenHeight / 4))
-                warningView.backgroundColor = UIColor(red: 1.000, green: 0.945, blue: 0.024, alpha: 1.0)
-                
-            default: // その他の災害：緑色
-                warningView.frame = CGRect(x: 0.0, y: 0.0, width: CGFloat(screenWidth), height: CGFloat(screenHeight))
-                warningView.backgroundColor = UIColor(red: 0.200, green: 1.000, blue: 0.384, alpha: 1.0)
-                break
-            }
-            mapView.alpha = CGFloat(kMapAlpha) // 画面の色の濃さを設定する((濃)0<-->1.0(薄))
-            
-            if configview != nil {
-                self.view.bringSubview(toFront: configview!)
-            }
-            
-            viewCount += 1
-            
-            // 0m以上・・・安全
-        } else {
-            viewSafeCount += 1
-            if viewSafeCount == box.count {
-                viewSafeCount = 0
-                return
-            }
-            viewCount += 1
-            mapView.alpha = kMapNormalAlpha
-            viewTimer.invalidate()
-            updateView()
-        }
-        
-        if !viewTimer.isValid {
-            viewTimer = Timer.scheduledTimer(timeInterval: kUpdateMM, target: self, selector: #selector(osmViewController.updateView), userInfo: nil, repeats: true)
-        }
-    }
+
+ 
     
     /*
      * タップされたタグを赤色にする
@@ -1075,21 +942,13 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
     @objc func update() {
         let nowTime = Date() // 現在時刻
         
-        box.removeAll()
-        
         // 警告メッセージのタイマーを止める
-        if messageTimer != nil {
-            messageTimer.invalidate()
+        if warningTimer != nil {
+            warningTimer.invalidate()
         }
-        
-        // 警告モードのタイマーを止める
-        if viewTimer != nil {
-            viewTimer.invalidate()
-        }
-        
-        // インデックスを初期化,
-        msgCount = 0
-        viewCount = 0
+        box.removeAll()
+        warningEnter.removeAll()
+        warningNear.removeAll()
         
         for i in 0 ..< jsonDataManager.sharedInstance.warnBox.count {
             if(jsonDataManager.sharedInstance.warnBox[i].stop == nil){
@@ -1122,37 +981,113 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
                 }
                 
                 box.append(i)
-                
-            } else {
-                
+                jsonDataManager.sharedInstance.warnBox[i].distance = calcDistance(jsonDataManager.sharedInstance.warnBox[i].lat, lon: jsonDataManager.sharedInstance.warnBox[i].lon, uLat: userLat, uLon: userLon)
+                if jsonDataManager.sharedInstance.warnBox[i].distance - Int(circleRadius[i]) < 0 {
+                    let tagdata = jsonDataManager.sharedInstance.warnBox[i]
+                    warningEnter.append(tagdata)
+                }else if jsonDataManager.sharedInstance.warnBox[i].distance - Int(circleRadius[i]) < kNearMsg {
+                    let tagdata = jsonDataManager.sharedInstance.warnBox[i]
+                    warningNear.append(tagdata)
+                }
             }
         }
         
         // 災害発生していないとき
-        if box.count == 0 {
-            warningMessage.isHidden = true // 警告メッセージを隠す
-            // 災害が発生しているとき
-        } else {
-            
-            // 警告メッセージのタイマーを開始させる
-            if messageTimer == nil {
-                messageTimer = Timer.scheduledTimer(timeInterval: kUpdateMM, target: self, selector: #selector(osmViewController.updateMessage), userInfo: nil, repeats: true)
-            } else if !messageTimer.isValid {
-                messageTimer = Timer.scheduledTimer(timeInterval: kUpdateMM, target: self, selector: #selector(osmViewController.updateMessage), userInfo: nil, repeats: true)
-            }
-            
-            // 警告モードのタイマーを開始させる
-            // updateView()は初回発火がtimeIntervalで設定した値の後となるため、0秒目のメソッド呼び出しで使用。
-            if viewTimer == nil {
-                viewTimer = Timer.scheduledTimer(timeInterval: kUpdateMM, target: self, selector: #selector(osmViewController.updateView), userInfo: nil, repeats: true)
-                updateView()
-                
-            } else if !viewTimer.isValid {
-                viewTimer = Timer.scheduledTimer(timeInterval: kUpdateMM, target: self, selector: #selector(osmViewController.updateView), userInfo: nil, repeats: true)
-                updateView()
+        warningAllCount = warningEnter.count + warningNear.count
+        if(warningEnter.count == 0){
+            warningView.isHidden = true
+            if audioPlayerIntr.isPlaying == true {
+                audioPlayerIntr.stop()
             }
         }
+        if(warningNear.count == 0){
+            if audioPlayerNear.isPlaying == true {
+                audioPlayerNear.stop()
+            }
+        }
+        if warningAllCount == 0 {
+            vibration.vibStop()
+            warningMessage.isHidden = true
+            // 災害が発生しているとき
+        } else {
+            updateWarningView()
+            // 警告メッセージのタイマーを開始させる
+             warningTimer = Timer.scheduledTimer(timeInterval: kUpdateMM, target: self, selector: #selector(osmViewController.updateWarningView), userInfo: nil, repeats: true)
+        }
     }
+
+    /*
+     * 警告メッセージと警告モードを表示する
+     */
+    
+    @objc func updateWarningView(){
+        if(warningCount >= warningAllCount){
+            warningCount = 0
+        }
+        let waringNearCount = warningCount - warningEnter.count
+        if warningEnter.count > 0 && warningEnter.count > warningCount{
+            
+            if audioPlayerNear.isPlaying == true {
+                audioPlayerNear.stop()
+            }
+            if audioPlayerIntr != nil {
+                audioPlayerIntr.play()
+                if vibration.isVibration == false {
+                    vibration.vibIntrusionStart()
+                }
+            }
+            warningView.isHidden = false
+            warningMessage.isHidden = false
+            warningMessage.text = warningEnter[warningCount].message2 // 警告メッセージ
+            
+            switch warningEnter[warningCount].riskType {
+            case 0: // 火災：赤色
+                warningView.frame = CGRect(x: 0.0, y: 0.0, width: CGFloat(screenWidth), height: CGFloat(screenHeight))
+                warningView.backgroundColor = UIColor(red: 1.000, green: 0.000, blue: 0.000, alpha: 1.0)
+                
+            case 1: // 浸水：青色
+                warningView.frame = CGRect(x: 0.0, y: CGFloat(screenHeight * 0.75), width: CGFloat(screenWidth), height: CGFloat(screenHeight / 4))
+                warningView.backgroundColor = UIColor(red: 0.000, green: 0.000, blue: 0.900, alpha: 1.0)
+    
+            case 2: // 土砂崩れ：茶色
+                warningView.frame = CGRect(x: 0.0, y: CGFloat(screenHeight * 0.75), width: CGFloat(screenWidth), height: CGFloat(screenHeight / 4))
+                warningView.backgroundColor = UIColor(red: 0.800, green: 0.400, blue: 0.000, alpha: 1.0)
+                
+            case 3, 4, 5, 6: // 道路閉塞：黄色
+                warningView.frame = CGRect(x: 0.0, y: CGFloat(screenHeight * 0.75), width: CGFloat(screenWidth), height: CGFloat(screenHeight / 4))
+                warningView.backgroundColor = UIColor(red: 1.000, green: 0.945, blue: 0.024, alpha: 1.0)
+            default: // その他の災害：緑色
+                warningView.frame = CGRect(x: 0.0, y: 0.0, width: CGFloat(screenWidth), height: CGFloat(screenHeight))
+                warningView.backgroundColor = UIColor(red: 0.200, green: 1.000, blue: 0.384, alpha: 1.0)
+                break
+            }
+            mapView.alpha = CGFloat(kMapAlpha) // 画面の色の濃さを設定する((濃)0<-->1.0(薄))
+            
+            if configview != nil {
+                self.view.bringSubview(toFront: configview!)
+            }
+            warningCount += 1
+        }
+        
+        if(warningNear.count > 0 && waringNearCount >= 0 &&  waringNearCount < warningNear.count){
+            if audioPlayerIntr.isPlaying == false {
+                if audioPlayerNear != nil {
+                    audioPlayerNear.play()
+                    if vibration.isVibration == false {
+                        vibration.vibNearStart()
+                    }
+                }
+            }
+            warningMessage.isHidden = false
+            warningMessage.text = warningNear[waringNearCount].message1
+            warningCount += 1
+        }
+        
+        if(warningCount >= warningAllCount){
+            warningCount = 0
+        }
+    }
+
     
     /*
      * ネットワークに接続されているか確認する
