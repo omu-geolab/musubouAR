@@ -251,6 +251,7 @@ class ARViewController: UIViewController,detailViewDelegate {
         self.dismiss(animated: true, completion: nil)
     }
     @objc func changeAR(_ sender: UIButton) {
+        startSession()
         self.updateFace()
     }
     
@@ -366,7 +367,7 @@ class ARViewController: UIViewController,detailViewDelegate {
         
         mapView.styleURL = styleStreet
         mapView.setCenter(CLLocationCoordinate2D(latitude: userLat, longitude: userLon), zoomLevel: 18, animated: false)
-        mapView.setUserTrackingMode(.followWithHeading, animated: false, completionHandler: nil)
+        mapView.setUserTrackingMode(.followWithHeading, animated: true, completionHandler: nil)
         mapView.delegate = self
         mapView.allowsTilting = false
         mapView.allowsRotating = false
@@ -468,6 +469,14 @@ class ARViewController: UIViewController,detailViewDelegate {
     
     @objc func createSnapshot() {
         // Use the map's style, camera, size, and zoom level to set the snapshot's options.
+        //let deviceModel = UIDevice.current.systemName
+        //print(deviceModel)
+//        switch deviceModel {
+//        case <#pattern#>:
+//            <#code#>
+//        default:
+//            <#code#>
+//        }
         let size = CGSize(width: widthMapAR, height: heightMapAR)
         let location = CLLocationCoordinate2D(latitude: userLat, longitude: userLon)
         let camera  = MGLMapCamera(lookingAtCenter: location, acrossDistance: 0, pitch: 0, heading: 0)
@@ -503,6 +512,7 @@ class ARViewController: UIViewController,detailViewDelegate {
                         self.updateEnvorimentAR(currentLocation: CLLocation(latitude: userLat, longitude: userLon))
                     }
                 }
+                self.mapView.setUserTrackingMode(.followWithHeading, animated: true, completionHandler: nil)
             }
             snapshotter = nil
         }
@@ -913,16 +923,16 @@ extension ARViewController: ARSCNViewDelegate {
     func session(_ session: ARSession, cameraDidChangeTrackingState camera: ARCamera) {
         print("camera did change tracking state: \(camera.trackingState)")
         
-        switch camera.trackingState {
-        case .normal:
-            cameraStateInfoLabel.text = "Ready!"
-            UIView.animate(withDuration: 1, delay: 1, options: [], animations: {
-                self.cameraStateInfoLabel.alpha = 0
-            }, completion: nil)
-        default:
-            cameraStateInfoLabel.alpha = 1
-            cameraStateInfoLabel.text = "Move the camera"
-        }
+//        switch camera.trackingState {
+//        case .normal:
+//            cameraStateInfoLabel.text = "Ready!"
+//            UIView.animate(withDuration: 1, delay: 1, options: [], animations: {
+//                self.cameraStateInfoLabel.alpha = 0
+//            }, completion: nil)
+//        default:
+//            cameraStateInfoLabel.alpha = 1
+//            cameraStateInfoLabel.text = "Move the camera"
+//        }
     }
     
     func session(_ session: ARSession, didFailWithError error: Error) {
