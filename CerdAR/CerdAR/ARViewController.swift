@@ -385,12 +385,6 @@ class ARViewController: UIViewController,detailViewDelegate {
             osmInfoBox[i].pinNum = i //ピン番号
             osmInfoBox[i].coordinate = CLLocationCoordinate2D(latitude: jsonDataManager.sharedInstance.infoBox[i].lat, longitude: jsonDataManager.sharedInstance.infoBox[i].lon) // 位置
             mapView.addAnnotation(osmInfoBox[i])
-            //let add = "http://cyberjapandata2.gsi.go.jp/" +
-                
-            //    "general/dem/scripts/getelevation.php" +
-                
-            //"?lon=\(osmInfoBox[i].coordinate.longitude)&lat=\(osmInfoBox[i].coordinate.latitude)&outtype=JSON"
-            //getJsonFromUrl(urlString: add, i: i, type: kInfo)
             
         }
         
@@ -406,9 +400,7 @@ class ARViewController: UIViewController,detailViewDelegate {
             
             mapView.addAnnotation(polygonCircleForCoordinate(coordinate: osmWarnBox[i].coordinate, withMeterRadius: jsonDataManager.sharedInstance.warnBox[i].range,pinNum: i))
             mapView.addAnnotation(osmWarnBox[i])
-            //let add = "http://cyberjapandata2.gsi.go.jp/general/dem/scripts/getelevation.php" +
-            //"?lon=\(osmWarnBox[i].coordinate.longitude)&lat=\(osmWarnBox[i].coordinate.latitude)&outtype=JSON"
-            //getJsonFromUrl(urlString: add, i: i, type: kWarn)
+
         }
     }
     
@@ -462,21 +454,10 @@ class ARViewController: UIViewController,detailViewDelegate {
         // Restart session with a different worldAlignment - prevents bug from crashing app
         self.sceneView.session.pause()
         startSession()
-        //        self.sceneView.session.run(configuration, options: [
-        //            .resetTracking,
-        //            .removeExistingAnchors])
     }
     
     @objc func createSnapshot() {
         // Use the map's style, camera, size, and zoom level to set the snapshot's options.
-        //let deviceModel = UIDevice.current.systemName
-        //print(deviceModel)
-//        switch deviceModel {
-//        case <#pattern#>:
-//            <#code#>
-//        default:
-//            <#code#>
-//        }
         let size = CGSize(width: widthMapAR, height: heightMapAR)
         let location = CLLocationCoordinate2D(latitude: userLat, longitude: userLon)
         let camera  = MGLMapCamera(lookingAtCenter: location, acrossDistance: 0, pitch: 0, heading: 0)
@@ -491,7 +472,7 @@ class ARViewController: UIViewController,detailViewDelegate {
         
         let options = MGLMapSnapshotOptions(styleURL: customStyleURL, camera: camera, size: size)
         let mapWidth = (cos(userLat * Double.pi/180) * 2 * Double.pi * 6378137)/2
-        
+         
         let level = log2(mapWidth / 256)
         //print(level)
         options.zoomLevel = level
@@ -720,33 +701,7 @@ extension ARViewController: CLLocationManagerDelegate{
             userLon = location.coordinate.longitude
             updateAllDistances()
             updateStatus()
-//            if(filterAndAddLocation(location)){
-//                updateAllDistances()
-//                updateStatus()
-//            }
         }
-//        let myLocation: CLLocation = locations.first!
-//
-//        if hcKalmanFilter == nil {
-//            self.hcKalmanFilter = HCKalmanAlgorithm(initialLocation: myLocation)
-//        }
-//        else {
-//            if let hcKalmanFilter = self.hcKalmanFilter {
-//                if resetKalmanFilter == true {
-//                    hcKalmanFilter.resetKalman(newStartLocation: myLocation)
-//                    resetKalmanFilter = false
-//                }
-//                else {
-//                    let kalmanLocation = hcKalmanFilter.processState(currentLocation: myLocation)
-//                    //print(kalmanLocation.coordinate)
-//                    //userLat = kalmanLocation.coordinate.latitude
-//                    //userLon = kalmanLocation.coordinate.longitude
-//                    updateAllDistances()
-//                    updateStatus()
-//
-//                }
-//            }
-//        }
     }
     func filterAndAddLocation(_ location: CLLocation) -> Bool{
         let age = -location.timestamp.timeIntervalSinceNow
@@ -833,9 +788,12 @@ extension ARViewController: CLLocationManagerDelegate{
                 
             }else{
                 //stopの時刻を過ぎたから、災害の円や文字を消す
-                self.mapView.removeAnnotation(self.polygons[i]) // 円を消す
-                self.mapView.alpha = kMapNormalAlpha
-                self.mapView.removeAnnotation(osmWarnBox[i]) // 災害のピン情報を削除
+                if(self.polygons.count > i){
+                    self.mapView.removeAnnotation(self.polygons[i]) // 円を消す
+                    self.mapView.alpha = kMapNormalAlpha
+                    self.mapView.removeAnnotation(osmWarnBox[i]) // 災害のピン情報を削除
+                }
+               
             }
         }
         
@@ -1234,7 +1192,7 @@ extension ARViewController: MGLMapViewDelegate {
             }
         }
         //if let pin = annotation as? MGLTagData {
-        return MGLAnnotationImage()
+        return nil
     }
     
     func mapView(_ mapView: MGLMapView, viewFor annotation: MGLAnnotation) -> MGLAnnotationView? {
@@ -1294,7 +1252,7 @@ extension ARViewController: MGLMapViewDelegate {
                     //userLat = self.mapView.centerCoordinate.latitude
                     //userLon = self.mapView.centerCoordinate.longitude
         //updateAllDistances()
-        updateStatus()
+        //updateStatus()
         DispatchQueue(label: "scalingImage").async {
             self.scalingImage()
         }

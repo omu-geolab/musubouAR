@@ -765,8 +765,8 @@
             timestampString = "590577365.423758"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "586"
-            endingLineNumber = "586"
+            startingLineNumber = "567"
+            endingLineNumber = "567"
             landmarkName = "ARViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -867,8 +867,8 @@
             timestampString = "590577365.424557"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1347"
-            endingLineNumber = "1347"
+            startingLineNumber = "1305"
+            endingLineNumber = "1305"
             landmarkName = "ARViewController"
             landmarkType = "21">
          </BreakpointContent>
@@ -884,8 +884,8 @@
             timestampString = "590577365.425043"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1336"
-            endingLineNumber = "1336"
+            startingLineNumber = "1294"
+            endingLineNumber = "1294"
             landmarkName = "scalingImage()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1088,8 +1088,8 @@
             timestampString = "590577365.425637"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "570"
-            endingLineNumber = "570"
+            startingLineNumber = "551"
+            endingLineNumber = "551"
             landmarkName = "updateEnvorimentAR(currentLocation:)"
             landmarkType = "7">
          </BreakpointContent>
