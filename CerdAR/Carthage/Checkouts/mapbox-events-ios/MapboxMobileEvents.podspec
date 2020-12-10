@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
   s.name = 'MapboxMobileEvents'
-  s.version = "0.4.51"
+  s.version = "0.10.5"
   s.summary = "Mapbox Mobile Events"
 
   s.description  = "Collects usage information to help Mapbox improve its products."
@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
-  s.ios.deployment_target = "8.0"
+  s.ios.deployment_target = "9.0"
 
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -30,14 +30,13 @@ Pod::Spec.new do |s|
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
-  s.source_files = ["MapboxMobileEvents/**/*.{h,m}", "vendor/TrustKit/**/*.{h,m,c}"]
-  s.resources = "MapboxMobileEvents/Resources/*"
-  s.exclude_files = "MapboxMobileEvents/MMENamespacedDependencies.h"
+  s.source_files = ["Sources/MapboxMobileEvents/**/*.{h,m}"]
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
   s.requires_arc = true
   s.module_name = 'MapboxMobileEvents'
   s.library = 'z'
+  s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES' }
 
 end
