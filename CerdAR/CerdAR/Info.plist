@@ -28,14 +28,21 @@
 	<string>pk.eyJ1IjoibnJvMmRhaSIsImEiOiJxblpuOHpBIn0.lnPH68LJbWALkadnSrIX3g</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
 		<key>NSExceptionDomains</key>
 		<dict>
+			<key>dmis4owgs.info</key>
+			<dict>
+				<key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+			</dict>
 			<key>gisws.media.osaka-cu.ac.jp</key>
 			<dict>
 				<key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
 				<true/>
 			</dict>
-			<key>dmis4owgs.info</key>
+			<key>stamen-tiles.a.ssl.fastly.net</key>
 			<dict>
 				<key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
 				<true/>
@@ -45,25 +52,18 @@
 				<key>NSExceptionAllowsInsecureHTTPLoads</key>
 				<true/>
 			</dict>
-			<key>stamen-tiles.a.ssl.fastly.net</key>
-			<dict>
-				<key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
-				<true/>
-			</dict>
 		</dict>
-		<key>NSAllowsArbitraryLoads</key>
-		<true/>
 	</dict>
 	<key>NSCameraUsageDescription</key>
 	<string>Camera Use</string>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string>常に許可</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>ユーザーの位置をMKMapView上に表示します。</string>
-	<key>NSLocationUsageDescription</key>
-	<string>for arkit</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>for arkit</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>常に許可</string>
+	<key>NSLocationUsageDescription</key>
+	<string>for arkit</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>ユーザーの位置をMKMapView上に表示します。</string>
 	<key>UIFileSharingEnabled</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>

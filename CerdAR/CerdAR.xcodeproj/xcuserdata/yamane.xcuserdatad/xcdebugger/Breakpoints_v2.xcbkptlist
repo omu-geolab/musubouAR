@@ -21,7 +21,7 @@
             landmarkType = "3">
             <Locations>
                <Location
-                  uuid = "A828FE60-45CE-42E2-A6FB-D667A2C1DF66 - 4c8332202d333ba4"
+                  uuid = "A828FE60-45CE-42E2-A6FB-D667A2C1DF66 - 51ec753cd4e6fc10"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -37,7 +37,7 @@
                   offsetFromSymbolStart = "108">
                </Location>
                <Location
-                  uuid = "A828FE60-45CE-42E2-A6FB-D667A2C1DF66 - 74b679b895820780"
+                  uuid = "A828FE60-45CE-42E2-A6FB-D667A2C1DF66 - 69d93ea46c57c034"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -53,7 +53,7 @@
                   offsetFromSymbolStart = "132">
                </Location>
                <Location
-                  uuid = "A828FE60-45CE-42E2-A6FB-D667A2C1DF66 - f9a9d5f994116e95"
+                  uuid = "A828FE60-45CE-42E2-A6FB-D667A2C1DF66 - e4c692e56dc4a921"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -69,7 +69,7 @@
                   offsetFromSymbolStart = "52">
                </Location>
                <Location
-                  uuid = "A828FE60-45CE-42E2-A6FB-D667A2C1DF66 - 896f7f2045be432c"
+                  uuid = "A828FE60-45CE-42E2-A6FB-D667A2C1DF66 - 9400383cbc6b8498"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -85,7 +85,7 @@
                   offsetFromSymbolStart = "60">
                </Location>
                <Location
-                  uuid = "A828FE60-45CE-42E2-A6FB-D667A2C1DF66 - e240187dd5ccfbd0"
+                  uuid = "A828FE60-45CE-42E2-A6FB-D667A2C1DF66 - ff2f5f612c193c64"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -101,7 +101,7 @@
                   offsetFromSymbolStart = "44">
                </Location>
                <Location
-                  uuid = "A828FE60-45CE-42E2-A6FB-D667A2C1DF66 - a0b7147f8e10047c"
+                  uuid = "A828FE60-45CE-42E2-A6FB-D667A2C1DF66 - bdd8536377c5c3c8"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -442,7 +442,7 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "4525B7AD-0404-4B47-9AD5-CA12F4809C2C - ebdd53cf2076baf1"
+                  uuid = "4525B7AD-0404-4B47-9AD5-CA12F4809C2C - 85c744b99a90205d"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -458,7 +458,7 @@
                   offsetFromSymbolStart = "1292">
                </Location>
                <Location
-                  uuid = "4525B7AD-0404-4B47-9AD5-CA12F4809C2C - ebdd53cf2076baf1"
+                  uuid = "4525B7AD-0404-4B47-9AD5-CA12F4809C2C - 85c744b99a90205d"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -767,8 +767,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "567"
             endingLineNumber = "567"
-            landmarkName = "ARViewController"
-            landmarkType = "3">
+            landmarkName = "updateFace()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -859,40 +859,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "FD807FF6-C310-4297-84EB-6D9C2183CAF4"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CerdAR/ARViewController.swift"
-            timestampString = "590577365.424557"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1305"
-            endingLineNumber = "1305"
-            landmarkName = "ARViewController"
-            landmarkType = "21">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "DB0CB4B0-AE94-4722-95E0-ED4245898260"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CerdAR/ARViewController.swift"
-            timestampString = "590577365.425043"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1294"
-            endingLineNumber = "1294"
-            landmarkName = "scalingImage()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "F5199F5F-DB0A-4DC2-8139-3AE906095CF5"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -907,7 +873,7 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "F5199F5F-DB0A-4DC2-8139-3AE906095CF5 - eaa27f19b90d7389"
+                  uuid = "F5199F5F-DB0A-4DC2-8139-3AE906095CF5 - ff1186e2ffc9a241"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -923,7 +889,7 @@
                   offsetFromSymbolStart = "3900">
                </Location>
                <Location
-                  uuid = "F5199F5F-DB0A-4DC2-8139-3AE906095CF5 - 2e705cd6d021b5fd"
+                  uuid = "F5199F5F-DB0A-4DC2-8139-3AE906095CF5 - 3bc3a52d96e564d6"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -992,7 +958,7 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "0529FFFC-5738-4325-854E-FD4482AD83AE - 996c8deb0fd261ff"
+                  uuid = "0529FFFC-5738-4325-854E-FD4482AD83AE - 8cdf741049168eeb"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1008,7 +974,7 @@
                   offsetFromSymbolStart = "620">
                </Location>
                <Location
-                  uuid = "0529FFFC-5738-4325-854E-FD4482AD83AE - 62dd3bd5123f9865"
+                  uuid = "0529FFFC-5738-4325-854E-FD4482AD83AE - 776ec22e54fb7712"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1063,23 +1029,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "4B7D1501-D77B-4647-A2E3-0DA528C17641"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CerdAR/ARKitGeo/MapboxARAnnotationManager.swift"
-            timestampString = "586949927.8118221"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "100"
-            endingLineNumber = "100"
-            landmarkName = "MapboxARAnnotationManager"
-            landmarkType = "21">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "913BDBB6-2837-4928-A74E-FA823E44A0E2"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -1091,40 +1040,6 @@
             startingLineNumber = "551"
             endingLineNumber = "551"
             landmarkName = "updateEnvorimentAR(currentLocation:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "EA2041A8-E450-46A5-8C5B-3757555AF6FF"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CerdAR/osmViewController.swift"
-            timestampString = "590577365.426017"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "999"
-            endingLineNumber = "999"
-            landmarkName = "update()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "BE7A365B-8B61-4BFE-93B9-A826E737D496"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CerdAR/osmViewController.swift"
-            timestampString = "590577365.426113"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1003"
-            endingLineNumber = "1003"
-            landmarkName = "update()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

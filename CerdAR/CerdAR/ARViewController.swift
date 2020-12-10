@@ -369,10 +369,10 @@ class ARViewController: UIViewController,detailViewDelegate {
         mapView.setCenter(CLLocationCoordinate2D(latitude: userLat, longitude: userLon), zoomLevel: 18, animated: false)
         mapView.setUserTrackingMode(.followWithHeading, animated: true, completionHandler: nil)
         mapView.delegate = self
-        mapView.allowsTilting = false
-        mapView.allowsRotating = false
-        mapView.allowsZooming = false
-        mapView.allowsScrolling = false
+//        mapView.allowsTilting = false
+//        mapView.allowsRotating = false
+//        mapView.allowsZooming = false
+//        mapView.allowsScrolling = false
         mapView.showsUserHeadingIndicator =  true
         
         for i in 0 ..< jsonDataManager.sharedInstance.infoBox.count {
@@ -493,7 +493,7 @@ class ARViewController: UIViewController,detailViewDelegate {
                         self.updateEnvorimentAR(currentLocation: CLLocation(latitude: userLat, longitude: userLon))
                     }
                 }
-                self.mapView.setUserTrackingMode(.followWithHeading, animated: true, completionHandler: nil)
+                //self.mapView.setUserTrackingMode(.followWithHeading, animated: true, completionHandler: nil)
             }
             snapshotter = nil
         }
@@ -697,10 +697,10 @@ extension ARViewController: CLLocationManagerDelegate{
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.last{
             altitude = location.altitude
-            userLat = location.coordinate.latitude
-            userLon = location.coordinate.longitude
-            updateAllDistances()
-            updateStatus()
+//            userLat = location.coordinate.latitude
+//            userLon = location.coordinate.longitude
+//            updateAllDistances()
+//            updateStatus()
         }
     }
     func filterAndAddLocation(_ location: CLLocation) -> Bool{
@@ -1249,13 +1249,14 @@ extension ARViewController: MGLMapViewDelegate {
         return false
     }
     func mapView(_ mapView: MGLMapView, regionDidChangeAnimated animated: Bool) {
-                    //userLat = self.mapView.centerCoordinate.latitude
-                    //userLon = self.mapView.centerCoordinate.longitude
-        //updateAllDistances()
-        //updateStatus()
-        DispatchQueue(label: "scalingImage").async {
-            self.scalingImage()
-        }
+        userLat = self.mapView.centerCoordinate.latitude
+        userLon = self.mapView.centerCoordinate.longitude
+//        self.updateFace();
+        updateAllDistances()
+        updateStatus()
+//        DispatchQueue(label: "scalingImage").async {
+//            self.scalingImage()
+//        }
     }
     /**
      * 拡大縮小や現在地の更新による新しいピン画像の設定

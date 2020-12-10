@@ -237,18 +237,15 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
     /* 別の画面に遷移した直後(破棄) */
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        
         mapView.delegate = nil
         locationManager.delegate = nil
         locationManager.stopUpdatingLocation() // GPSの更新を停止する
         if warningTimer != nil {
             warningTimer.invalidate()
         }
-
-//        if viewTimer != nil {
-//            viewTimer.invalidate()
-//        }
-        updateTimer.invalidate()
+        if updateTimer != nil {
+            updateTimer.invalidate()
+        }
     }
     
     
@@ -277,9 +274,9 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
     func mapView(_ mapView: MGLMapView, regionDidChangeAnimated animated: Bool) {
         //userLat = self.mapView.centerCoordinate.latitude
          //userLon = self.mapView.centerCoordinate.longitude
-        DispatchQueue(label: "scalingImage").async {
+//        DispatchQueue(label: "scalingImage").async {
             self.scalingImage()
-        }
+//        }
         
     }
     func mapView(_ mapView: MGLMapView, viewFor annotation: MGLAnnotation) -> MGLAnnotationView? {
@@ -598,9 +595,9 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
                         if newsize > Double(screenWidth) / 2 {
                             newsize = Double(screenWidth) / 2
                         }
-                        DispatchQueue.main.async {
+//                        DispatchQueue.main.async {
                             self.changeImage(jsonDataManager.sharedInstance.warnBox[i], MGLtag: self.osmWarnBox[i], newsize: CGFloat(newsize))
-                        }
+//                        1}
                     }
                 }
             }
@@ -676,9 +673,9 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
      * ARカメラ画面に遷移する
      */
     @objc internal func onclick_AR(_ sender: UIButton) {
-        
-        self.present(ARViewController(), animated: true, completion: nil)
-        
+        let vc = ARViewController()
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
     }
     
     

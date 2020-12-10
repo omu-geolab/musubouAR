@@ -2,6 +2,8 @@
 #
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
 
+.idea
+
 ## Build generated
 build/
 DerivedData/
@@ -49,8 +51,8 @@ playground.xcworkspace
 #
 # Add this line if you want to avoid checking in source code from Carthage dependencies.
 # Carthage/Checkouts
-
-Carthage/Build
+Cartfile.resolved
+Carthage
 
 # fastlane
 #
@@ -65,3 +67,7 @@ fastlane/screenshots
 fastlane/test_output
 
 test_output/
+docs/
+.DS_Store
+
+.swiftpm
