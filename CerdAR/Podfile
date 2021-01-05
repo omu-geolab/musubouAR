@@ -1,0 +1,21 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'CerdAR' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for CerdAR
+  pod 'Mapbox-iOS-SDK', '~> 6.3.0'
+  pod 'MapboxStatic.swift', '~> 0.12'
+  pod 'Surge', '~> 2.3.1'
+  target 'CerdARTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'CerdARUITests' do
+    # Pods for testing
+  end
+
+end

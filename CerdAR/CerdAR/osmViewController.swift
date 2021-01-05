@@ -109,7 +109,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         let toCam_button = UIButton()
         let buttonImage: UIImage = UIImage(named: "icon_camera.png")!
         toCam_button.frame = CGRect(x: 0.0, y: 0.0, width: butSize, height: butSize)
-        toCam_button.setImage(buttonImage, for: UIControlState())
+        toCam_button.setImage(buttonImage, for: UIControl.State())
         toCam_button.layer.position = CGPoint(x: 55.0, y: self.view.bounds.height - 55.0)
         mapView.addSubview(toCam_button)
         toCam_button.addTarget(self, action: #selector(osmViewController.onclick_AR(_:)), for: .touchUpInside)
@@ -118,7 +118,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         let toCon_button = UIButton()
         let conButImage: UIImage = UIImage(named: "icon_menu.png")!
         toCon_button.frame = CGRect(x: 0.0, y: 0.0, width: butSize, height: butSize)
-        toCon_button.setImage(conButImage, for: UIControlState())
+        toCon_button.setImage(conButImage, for: UIControl.State())
         toCon_button.layer.position = CGPoint(x: self.view.bounds.width - 55.0, y: self.view.bounds.height - 55.0)
         mapView.addSubview(toCon_button)
         toCon_button.addTarget(self, action: #selector(osmViewController.onClick_config(_:)), for: .touchUpInside)
@@ -127,7 +127,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         let nowLoc_button = UIButton()
         let locButImage: UIImage = UIImage(named: "icon_locate.png")!
         nowLoc_button.frame = CGRect.init(x: 0, y: 0, width: butSize, height: butSize)
-        nowLoc_button.setImage(locButImage, for: UIControlState())
+        nowLoc_button.setImage(locButImage, for: UIControl.State())
         nowLoc_button.layer.position = CGPoint(x: 55.0, y: 55.0)
         mapView.addSubview(nowLoc_button)
         
@@ -697,7 +697,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         UIView.animate(
             withDuration: 0.1,
             delay:0.0,
-            options : UIViewAnimationOptions.curveEaseIn,
+            options : UIView.AnimationOptions.curveEaseIn,
             animations : {
                 self.warningView?.center = location
                 self.mapView.center = location
@@ -705,9 +705,9 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
             completion: {
                 (value: Bool) in
                 self.view.addSubview(self.configview!)
-                self.view.sendSubview(toBack: self.configview!)
+                self.view.sendSubviewToBack(self.configview!)
                 self.mapView.addSubview(backgroundView)
-                self.view.bringSubview(toFront: backgroundView)
+                self.view.bringSubviewToFront(backgroundView)
         }
         )
     }
@@ -842,7 +842,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         UIView.animate(
             withDuration: 0.1,
             delay:0.0,
-            options : UIViewAnimationOptions.curveEaseIn,
+            options : UIView.AnimationOptions.curveEaseIn,
             animations : {
                 self.warningView?.center = location
                 self.mapView.center = location
@@ -1061,7 +1061,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
             mapView.alpha = CGFloat(kMapAlpha) // 画面の色の濃さを設定する((濃)0<-->1.0(薄))
             
             if configview != nil {
-                self.view.bringSubview(toFront: configview!)
+                self.view.bringSubviewToFront(configview!)
             }
             warningCount += 1
         }

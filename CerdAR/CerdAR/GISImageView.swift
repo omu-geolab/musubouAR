@@ -84,8 +84,8 @@ extension MKMapPoint {
         let y : CLLocationDistance = -distance * cos(angle * (Double.pi / 180));
         let xPoint : Double = mapPointsPerMeter * x;
         let yPoint : Double = mapPointsPerMeter * y;
-        let point : MKMapPoint = MKMapPointMake(self.x + xPoint, self.y + yPoint);
-        return MKCoordinateForMapPoint(point);
+        let point : MKMapPoint = MKMapPoint(x: self.x + xPoint, y: self.y + yPoint);
+        return point.coordinate;
     }
 }
 

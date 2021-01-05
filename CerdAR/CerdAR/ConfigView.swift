@@ -44,10 +44,10 @@ class ConfigView: UIView {
         self.backgroundColor = UIColor.white
         
         // 「このアプリについて」ボタンの挿入(画面左上側)
-        aboutAppBut.setTitle("このアプリについて", for: UIControlState()) // 通常
-        aboutAppBut.setTitleColor(UIColor.white, for: UIControlState())
-        aboutAppBut.setTitle("このアプリについて", for: UIControlState.highlighted) // ハイライト
-        aboutAppBut.setTitleColor(UIColor.black, for: UIControlState.highlighted)
+        aboutAppBut.setTitle("このアプリについて", for: UIControl.State()) // 通常
+        aboutAppBut.setTitleColor(UIColor.white, for: UIControl.State())
+        aboutAppBut.setTitle("このアプリについて", for: UIControl.State.highlighted) // ハイライト
+        aboutAppBut.setTitleColor(UIColor.black, for: UIControl.State.highlighted)
         aboutAppBut.titleLabel?.adjustsFontSizeToFitWidth = true
         aboutAppBut.layer.position = CGPoint(x: screenWidth / 6, y: screenHeight / 3)
         aboutAppBut.backgroundColor = UIColor.gray
@@ -58,25 +58,25 @@ class ConfigView: UIView {
         if displayMode == mode.osm.rawValue  {
    
             changeMapBut2.isHidden = false
-            changeMapBut2.setTitle("衛星画像に切り替え", for: UIControlState()) // 通常
-            changeMapBut2.setTitle("衛星画像に切り替え", for: UIControlState.highlighted) // ハイライト
+            changeMapBut2.setTitle("衛星画像に切り替え", for: UIControl.State()) // 通常
+            changeMapBut2.setTitle("衛星画像に切り替え", for: UIControl.State.highlighted) // ハイライト
             changeMapBut2.layer.cornerRadius = 10
 
             
         } else if displayMode == mode.osmsat.rawValue {
             
             changeMapBut2.isHidden = false
-            changeMapBut2.setTitle("標準地図に切り替え", for: UIControlState()) // 通常
-            changeMapBut2.setTitle("標準地図に切り替え", for: UIControlState.highlighted) // ハイライト
+            changeMapBut2.setTitle("標準地図に切り替え", for: UIControl.State()) // 通常
+            changeMapBut2.setTitle("標準地図に切り替え", for: UIControl.State.highlighted) // ハイライト
             changeMapBut2.layer.cornerRadius = 10
             
         }
         
         // 「GIS情報」ボタンの挿入
-        gisInfoBut.setTitle("GIS情報", for: UIControlState())
-        gisInfoBut.setTitleColor(UIColor.white, for: UIControlState())
-        gisInfoBut.setTitle("GIS情報", for: UIControlState.highlighted)
-        gisInfoBut.setTitleColor(UIColor.black, for: UIControlState.highlighted)
+        gisInfoBut.setTitle("GIS情報", for: UIControl.State())
+        gisInfoBut.setTitleColor(UIColor.white, for: UIControl.State())
+        gisInfoBut.setTitle("GIS情報", for: UIControl.State.highlighted)
+        gisInfoBut.setTitleColor(UIColor.black, for: UIControl.State.highlighted)
         gisInfoBut.titleLabel?.adjustsFontSizeToFitWidth = true
         gisInfoBut.layer.position = CGPoint(x: screenWidth / 6, y: screenHeight / 1.5)
         gisInfoBut.backgroundColor = UIColor.gray
@@ -122,8 +122,8 @@ class ConfigView: UIView {
          */
 
 
-        changeMapBut2.setTitleColor(UIColor.white, for: UIControlState())
-        changeMapBut2.setTitleColor(UIColor.black, for: UIControlState.highlighted)
+        changeMapBut2.setTitleColor(UIColor.white, for: UIControl.State())
+        changeMapBut2.setTitleColor(UIColor.black, for: UIControl.State.highlighted)
         changeMapBut2.layer.position = CGPoint(x: screenWidth / 6, y: screenHeight / 2)
         changeMapBut2.backgroundColor = UIColor.gray
 

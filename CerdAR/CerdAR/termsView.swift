@@ -35,8 +35,8 @@ class termsView: UIView {
         let okButton = UIButton(frame: CGRect(x: 0, y: 0, width: bounds.width * 0.8 * 0.45, height: bounds.height * 0.8 * 0.15))
         okButton.backgroundColor = UIColor.yellow
         okButton.layer.masksToBounds = true
-        okButton.setTitle("同意してサービスを利用する", for: UIControlState())
-        okButton.setTitleColor(UIColor.black, for: UIControlState())
+        okButton.setTitle("同意してサービスを利用する", for: UIControl.State())
+        okButton.setTitleColor(UIColor.black, for: UIControl.State())
         okButton.titleLabel!.font = UIFont.systemFont(ofSize: 25)
         okButton.titleLabel!.adjustsFontSizeToFitWidth = true
         okButton.layer.borderColor = UIColor.black.cgColor
@@ -50,8 +50,8 @@ class termsView: UIView {
         let cancelButton = UIButton(frame: CGRect(x: 0, y: 0, width: bounds.width * 0.8 * 0.41, height: bounds.height * 0.8 * 0.15))
         cancelButton.backgroundColor = UIColor.gray
         cancelButton.layer.masksToBounds = true
-        cancelButton.setTitle("同意せずアプリを閉じる", for: UIControlState())
-        cancelButton.setTitleColor(UIColor.white, for: UIControlState())
+        cancelButton.setTitle("同意せずアプリを閉じる", for: UIControl.State())
+        cancelButton.setTitleColor(UIColor.white, for: UIControl.State())
         cancelButton.titleLabel!.font = UIFont.systemFont(ofSize: 25)
         cancelButton.titleLabel!.adjustsFontSizeToFitWidth = true
         cancelButton.layer.position = CGPoint(x: screenWidth * 0.2, y: screenHeight * 0.8 * 0.85)

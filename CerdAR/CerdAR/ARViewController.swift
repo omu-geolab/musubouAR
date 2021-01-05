@@ -13,7 +13,7 @@ import CoreLocation
 import Mapbox
 import MapKit
 import AVFoundation
-import MapboxSceneKit
+//import MapboxSceneKit
 
 class ARViewController: UIViewController,detailViewDelegate {
     
@@ -42,7 +42,7 @@ class ARViewController: UIViewController,detailViewDelegate {
     var flag = false //
     var imageView : UIImage?
     
-    var terrainNode: TerrainNode?
+//    var terrainNode: TerrainNode?
     //大阪市北区
     var minLat = 34.703712
     var minLon = 135.499320
@@ -152,7 +152,7 @@ class ARViewController: UIViewController,detailViewDelegate {
         } else if UIDevice.current.userInterfaceIdiom == .pad{
             toMap_Button.frame = CGRect(x: 0.0, y: 0.0, width: butSize, height: butSize)
         }
-        toMap_Button.setImage(buttonImage, for: UIControlState())
+        toMap_Button.setImage(buttonImage, for: UIControl.State())
         toMap_Button.layer.position = CGPoint(x: 55, y: self.view.bounds.height - 45)
         view.addSubview(toMap_Button)
         toMap_Button.addTarget(self, action: #selector(ARViewController.onClick_map(_:)), for: .touchUpInside)
@@ -166,7 +166,7 @@ class ARViewController: UIViewController,detailViewDelegate {
         } else if UIDevice.current.userInterfaceIdiom == .pad{
             changeAR_Button.frame = CGRect(x: 0.0, y: 0.0, width: butSize, height: butSize)
         }
-        changeAR_Button.setImage(arChangeImage, for: UIControlState())
+        changeAR_Button.setImage(arChangeImage, for: UIControl.State())
         changeAR_Button.layer.position = CGPoint(x: self.view.bounds.width - 45, y: 60)
         view.addSubview(changeAR_Button)
         changeAR_Button.addTarget(self, action: #selector(ARViewController.changeAR(_:)), for: .touchUpInside)
@@ -517,7 +517,7 @@ class ARViewController: UIViewController,detailViewDelegate {
             } else {
                 if let jsonObj = try? JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? NSDictionary {
                     
-                    let alt = jsonObj!.value(forKey: "elevation")!
+                    let alt = jsonObj.value(forKey: "elevation")!
                     if(type == kWarn){
                         jsonDataManager.sharedInstance.warnBox[i].elevation = alt as? Double
                     }else if (type == kInfo){
@@ -1089,38 +1089,38 @@ extension ARViewController: ARSCNViewDelegate {
         return [sideMaterial, sideMaterial, sideMaterial, sideMaterial, groundImage, bottomMaterial]
     }
     func createTerrain(node:SCNNode) {
-        let scaleDefaultAR = adjustHeightAR * scaleAR
-        terrainNode = TerrainNode(minLat: minLat, maxLat: maxLat,
-                                  minLon: minLon, maxLon: maxLon)
-        let scale = 1
-        let terrainNodeScale = SCNVector3( scale, scale, scale) // Scale down map (otherwise it's far too big)
-        if let terrainNode = terrainNode {
-            terrainNode.scale = terrainNodeScale // Scale down map
-            terrainNode.position = SCNVector3(0.0,-(  20*scaleDefaultAR + Float(altitude) + 15.0), 0.0) // Place map slightly below clouds
-            terrainNode.geometry?.materials = defaultMaterials() // Add default materials
-            node.addChildNode(terrainNode)
-            terrainNode.fetchTerrainAndTexture(minWallHeight: 0, enableDynamicShadows: true, textureStyle: "mapbox/streets-v9", heightProgress: { progress, total in
-            }, heightCompletion: { fetchError in
-                if let fetchError = fetchError {
-                    NSLog("Texture load failed: \(fetchError.localizedDescription)")
-                } else {
-                    NSLog("Terrain load complete")
-                }
-            }, textureProgress: { progress, total in
-                
-            }) { image, fetchError in
-                if let fetchError = fetchError {
-                    NSLog("Texture load failed: \(fetchError.localizedDescription)")
-                }
-                if image != nil {
-                    NSLog("Texture load complete")
-                    terrainNode.geometry?.materials[4].diffuse.contents = image
-                    self.imageView = image
-                }else if(self.imageView != nil){
-                    terrainNode.geometry?.materials[4].diffuse.contents = self.imageView
-                }
-            }
-        }
+//        let scaleDefaultAR = adjustHeightAR * scaleAR
+//        terrainNode = TerrainNode(minLat: minLat, maxLat: maxLat,
+//                                  minLon: minLon, maxLon: maxLon)
+//        let scale = 1
+//        let terrainNodeScale = SCNVector3( scale, scale, scale) // Scale down map (otherwise it's far too big)
+//        if let terrainNode = terrainNode {
+//            terrainNode.scale = terrainNodeScale // Scale down map
+//            terrainNode.position = SCNVector3(0.0,-(  20*scaleDefaultAR + Float(altitude) + 15.0), 0.0) // Place map slightly below clouds
+//            terrainNode.geometry?.materials = defaultMaterials() // Add default materials
+//            node.addChildNode(terrainNode)
+//            terrainNode.fetchTerrainAndTexture(minWallHeight: 0, enableDynamicShadows: true, textureStyle: "mapbox/streets-v9", heightProgress: { progress, total in
+//            }, heightCompletion: { fetchError in
+//                if let fetchError = fetchError {
+//                    NSLog("Texture load failed: \(fetchError.localizedDescription)")
+//                } else {
+//                    NSLog("Terrain load complete")
+//                }
+//            }, textureProgress: { progress, total in
+//                
+//            }) { image, fetchError in
+//                if let fetchError = fetchError {
+//                    NSLog("Texture load failed: \(fetchError.localizedDescription)")
+//                }
+//                if image != nil {
+//                    NSLog("Texture load complete")
+//                    terrainNode.geometry?.materials[4].diffuse.contents = image
+//                    self.imageView = image
+//                }else if(self.imageView != nil){
+//                    terrainNode.geometry?.materials[4].diffuse.contents = self.imageView
+//                }
+//            }
+//        }
     }
 }
 
