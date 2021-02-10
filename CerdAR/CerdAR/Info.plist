@@ -25,7 +25,7 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>MGLMapboxAccessToken</key>
-	<string>pk.eyJ1IjoibnJvMmRhaSIsImEiOiJxblpuOHpBIn0.lnPH68LJbWALkadnSrIX3g</string>
+	<string>sk.eyJ1IjoidGgtbmd1eWVuIiwiYSI6ImNrampyYm82bDRzcHQycm5xbGJzeDUyNTEifQ.1G44mnP4Qm3Ds5mGqrMd8A</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
@@ -56,6 +56,12 @@
 	</dict>
 	<key>NSCameraUsageDescription</key>
 	<string>Camera Use</string>
+	<key>NSHealthClinicalHealthRecordsShareUsageDescription</key>
+	<string>Health Records Usage</string>
+	<key>NSHealthShareUsageDescription</key>
+	<string>Health Share Usage</string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>Health Update Usage</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>for arkit</string>
 	<key>NSLocationAlwaysUsageDescription</key>
@@ -64,10 +70,16 @@
 	<string>for arkit</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>ユーザーの位置をMKMapView上に表示します。</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>audio</string>
+		<string>location</string>
+		<string>remote-notification</string>
+	</array>
 	<key>UIFileSharingEnabled</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>
-	<string>Main</string>
+	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
@@ -80,6 +92,7 @@
 	<array>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
+		<string>UIInterfaceOrientationPortrait</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>

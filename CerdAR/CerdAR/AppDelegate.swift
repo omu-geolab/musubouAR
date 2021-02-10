@@ -7,6 +7,7 @@
 
 import UIKit
 //import CoreData
+import SwiftUI
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,11 +15,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var viewController: UIViewController = loadViewController()    //var myNavigationController: UINavigationController?
     
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        UNUserNotificationCenter.current().requestAuthorization(
+            options: [.alert, .sound, .badge]){
+            (granted, _) in
+            if granted{
+                UNUserNotificationCenter.current().delegate = self
+            }
+        }
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.backgroundColor = UIColor.white
         self.window?.rootViewController = self.viewController
+//        self.window?.rootViewController = UIHostingController(rootView: LoadingView())
         self.window?.makeKeyAndVisible()
         
         // Override point for customization after application launch.
@@ -52,4 +60,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         /////self.saveContext()
     }
     
+}
+extension AppDelegate: UNUserNotificationCenterDelegate {
+    func userNotificationCenter(
+        _ center: UNUserNotificationCenter,
+        willPresent notification: UNNotification,
+        withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void)
+    {
+        // アプリ起動時も通知を行う
+        completionHandler([ .badge, .sound, .alert ])
+    }
 }

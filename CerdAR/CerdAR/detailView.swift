@@ -34,13 +34,19 @@ class detailView: UIView {
         
         //背景色
         backgroundColor = UIColor.white
+        let backgroundImage = UIImage(named: "detail-bg")!
+        var imageView : UIImageView!
+        imageView = UIImageView(frame: self.bounds)
+        imageView.contentMode =  UIView.ContentMode.scaleAspectFit
+        imageView.image = backgroundImage
+        self.addSubview(imageView)
         
         // 閉じるボタンの挿入(画面左上側)
         let backButton = UIButton(frame: CGRect.init(x: 0, y: 0, width: screenWidth * 0.8 * 0.1, height: dHei * 0.1))
-        backButton.setTitle("＜ 戻る", for: UIControlState()) // 通常
-        backButton.setTitleColor(UIColor.white, for: UIControlState())
-        backButton.setTitle("＜ 戻る", for: UIControlState.highlighted) // ハイライト
-        backButton.setTitleColor(UIColor.black, for: UIControlState.highlighted)
+        backButton.setTitle("＜ 戻る", for: UIControl.State()) // 通常
+        backButton.setTitleColor(UIColor.white, for: UIControl.State())
+        backButton.setTitle("＜ 戻る", for: UIControl.State.highlighted) // ハイライト
+        backButton.setTitleColor(UIColor.black, for: UIControl.State.highlighted)
         backButton.titleLabel?.adjustsFontSizeToFitWidth = true
 //        backButton.layer.position = CGPoint(x: dWid * 0.05, y: dHei * 0.05)
         backButton.addTarget(self, action: #selector(detailView.onClick_back(_:)), for:.touchUpInside)

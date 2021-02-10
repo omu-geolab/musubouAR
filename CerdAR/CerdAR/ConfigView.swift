@@ -15,7 +15,8 @@ import UIKit
 class ConfigView: UIView {
     
     weak var delegate: ConfigViewDelegate?
-    let aboutAppBut = UIButton(frame: CGRect.init(x: 0, y: 0, width: screenWidth / 4, height: screenHeight / 8))
+    let aboutAppBut = UIButton(frame: CGRect.init(x: 0, y: 0, width: screenWidth / 3, height: screenHeight / 6))
+    let deletebutton = UIButton(frame: CGRect.init(x: 0, y: 0, width: 30, height: 30))
 //    var mapView = MGLMapView() // 地図画面
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -30,6 +31,13 @@ class ConfigView: UIView {
      * 設定画面の表示
      */
     func setup() {
+        let backgroundImage = UIImage(named: "info-bg")!
+        var imageView : UIImageView!
+        imageView = UIImageView(frame: self.bounds)
+        imageView.contentMode =  UIView.ContentMode.scaleAspectFill
+        imageView.image = backgroundImage
+        self.addSubview(imageView)
+
         self.addSubview(changeMapBut2)
         self.addSubview(aboutAppBut)
         self.addSubview(gisInfoBut)
@@ -40,48 +48,84 @@ class ConfigView: UIView {
      * 設定画面のパーツの準備
      */
     func load() {
-        
-        self.backgroundColor = UIColor.white
+
+//        self.sendSubviewToBack(imageView)
+
         
         // 「このアプリについて」ボタンの挿入(画面左上側)
-        aboutAppBut.setTitle("このアプリについて", for: UIControlState()) // 通常
-        aboutAppBut.setTitleColor(UIColor.white, for: UIControlState())
-        aboutAppBut.setTitle("このアプリについて", for: UIControlState.highlighted) // ハイライト
-        aboutAppBut.setTitleColor(UIColor.black, for: UIControlState.highlighted)
-        aboutAppBut.titleLabel?.adjustsFontSizeToFitWidth = true
-        aboutAppBut.layer.position = CGPoint(x: screenWidth / 6, y: screenHeight / 3)
-        aboutAppBut.backgroundColor = UIColor.gray
+        print(screenWidth)
+        print(screenHeight)
+        let height:CGFloat = 50.0
+        let width:CGFloat = 200.0
+        let buttonImage: UIImage = UIImage(named: "about-icon")!
+        aboutAppBut.setImage(buttonImage, for: .normal)
+//        aboutAppBut.titleLabel?.adjustsFontSizeToFitWidth = true
+//        aboutAppBut.layer.position = CGPoint(x: screenWidth / 6, y: screenHeight / 3)
         aboutAppBut.addTarget(self, action: #selector(ConfigView.onClick_aboutApp(_:)), for: .touchUpInside)
-        aboutAppBut.layer.cornerRadius = 10
+        aboutAppBut.translatesAutoresizingMaskIntoConstraints = false
+        let constraintsAbout = [
+            aboutAppBut.centerYAnchor.constraint(equalTo: self.centerYAnchor,constant: -70),
+            aboutAppBut.centerXAnchor.constraint(equalTo: self.centerXAnchor,constant: 0),
+            aboutAppBut.heightAnchor.constraint(equalToConstant: height),
+            aboutAppBut.widthAnchor.constraint(equalToConstant: width)
+        ]
+        NSLayoutConstraint.activate(constraintsAbout)
         
+        let deleteImage: UIImage = UIImage(systemName: "xmark")!
+        deletebutton.setImage(deleteImage, for: .normal)
+        deletebutton.tintColor = .black
+        
+//        aboutAppBut.titleLabel?.adjustsFontSizeToFitWidth = true
+//        deletebutton.layer.position = CGPoint(x: screenWidth / 6, y: screenHeight / 3)
+        deletebutton.addTarget(self, action: #selector(ConfigView.onClick_back(_:)), for: .touchUpInside)
+        self.addSubview(deletebutton)
+        deletebutton.translatesAutoresizingMaskIntoConstraints = false
+        let constraintsDelete = [
+            deletebutton.topAnchor.constraint(equalTo: self.topAnchor,constant: 3),
+            deletebutton.trailingAnchor.constraint(equalTo: self.trailingAnchor,constant: -3),
+            deletebutton.heightAnchor.constraint(equalToConstant: 30),
+            deletebutton.widthAnchor.constraint(equalToConstant: 30)
+        ]
+        NSLayoutConstraint.activate(constraintsDelete)
+
 
         if displayMode == mode.osm.rawValue  {
    
             changeMapBut2.isHidden = false
-            changeMapBut2.setTitle("衛星画像に切り替え", for: UIControlState()) // 通常
-            changeMapBut2.setTitle("衛星画像に切り替え", for: UIControlState.highlighted) // ハイライト
-            changeMapBut2.layer.cornerRadius = 10
-
+            let satelliteImage: UIImage = UIImage(named: "change-map-icon")!
+            changeMapBut2.setImage(satelliteImage, for: .normal)
             
         } else if displayMode == mode.osmsat.rawValue {
-            
             changeMapBut2.isHidden = false
-            changeMapBut2.setTitle("標準地図に切り替え", for: UIControlState()) // 通常
-            changeMapBut2.setTitle("標準地図に切り替え", for: UIControlState.highlighted) // ハイライト
-            changeMapBut2.layer.cornerRadius = 10
+            let generalImage: UIImage = UIImage(named: "change-general-map-icon")!
+            changeMapBut2.setImage(generalImage, for: .normal)
             
         }
         
+//        changeMapBut2.layer.position = CGPoint(x: screenWidth / 6, y: screenHeight / 2)
+        changeMapBut2.translatesAutoresizingMaskIntoConstraints = false
+        let constraintsMap = [
+            changeMapBut2.centerYAnchor.constraint(equalTo: self.centerYAnchor,constant: 0),
+            changeMapBut2.centerXAnchor.constraint(equalTo: self.centerXAnchor,constant: 0),
+            changeMapBut2.heightAnchor.constraint(equalToConstant: height),
+            changeMapBut2.widthAnchor.constraint(equalToConstant: width)
+        ]
+        NSLayoutConstraint.activate(constraintsMap)
+
         // 「GIS情報」ボタンの挿入
-        gisInfoBut.setTitle("GIS情報", for: UIControlState())
-        gisInfoBut.setTitleColor(UIColor.white, for: UIControlState())
-        gisInfoBut.setTitle("GIS情報", for: UIControlState.highlighted)
-        gisInfoBut.setTitleColor(UIColor.black, for: UIControlState.highlighted)
-        gisInfoBut.titleLabel?.adjustsFontSizeToFitWidth = true
+
         gisInfoBut.layer.position = CGPoint(x: screenWidth / 6, y: screenHeight / 1.5)
-        gisInfoBut.backgroundColor = UIColor.gray
-        gisInfoBut.layer.cornerRadius = 10
-        
+        let gisImage: UIImage = UIImage(named: "change-gis-icon")!
+        gisInfoBut.setImage(gisImage, for: .normal)
+        gisInfoBut.translatesAutoresizingMaskIntoConstraints = false
+        let constraintsGis = [
+            gisInfoBut.centerYAnchor.constraint(equalTo: self.centerYAnchor,constant: 70),
+            gisInfoBut.centerXAnchor.constraint(equalTo: self.centerXAnchor,constant: 0),
+            gisInfoBut.heightAnchor.constraint(equalToConstant: height),
+            gisInfoBut.widthAnchor.constraint(equalToConstant: width)
+        ]
+        NSLayoutConstraint.activate(constraintsGis)
+
         /*
          // 新方式
          if (rooVC is CerdAR.mapViewController){
@@ -122,10 +166,6 @@ class ConfigView: UIView {
          */
 
 
-        changeMapBut2.setTitleColor(UIColor.white, for: UIControlState())
-        changeMapBut2.setTitleColor(UIColor.black, for: UIControlState.highlighted)
-        changeMapBut2.layer.position = CGPoint(x: screenWidth / 6, y: screenHeight / 2)
-        changeMapBut2.backgroundColor = UIColor.gray
 
         
     }
@@ -135,7 +175,7 @@ class ConfigView: UIView {
      * (「戻る」または背景をタップする)
      * 表示されているパーツを破棄する
      */
-    func onClick_back(_ sender: UIButton) {
+    @objc func onClick_back(_ sender: UIButton) {
         self.removeFromSuperview()
         deleteConfigDisplay()
     }
@@ -146,12 +186,13 @@ class ConfigView: UIView {
      */
     @objc func onClick_aboutApp(_ sender: UIButton) {
         aboutAppBut.removeFromSuperview()
+//        deletebutton.removeFromSuperview()
         changeMapBut2.isHidden = true
         gisInfoBut.removeFromSuperview()
         
         
         // コメントの挿入(画面右側)
-        let comment = UILabel(frame: CGRect.init(x: 0, y: 0, width: screenWidth / 3 - 60, height: dHei * 0.6))
+        let comment = UILabel(frame: CGRect.init(x: 0, y: 0, width: 270, height: 270))
         comment.font = UIFont.systemFont(ofSize: 15)
         comment.text = "[SWIFTY JSON]" + "\n"
         comment.text = comment.text! + "The MIT License (MIT)" + "\n"
@@ -215,10 +256,12 @@ class ConfigView: UIView {
         comment.text = comment.text! + "\n\n"
         comment.numberOfLines = 0
         comment.sizeToFit()
+        comment.tintColor  = .black
+        comment.textColor = .black
         
         // スクロールビューの生成
         let scrollView = UIScrollView()
-        scrollView.frame = CGRect.init(x: 20, y: screenHeight * 0.05, width: screenWidth / 3 - 50, height: screenHeight * 0.9)
+        scrollView.frame = CGRect.init(x: 10, y: 10, width:280, height: 280)
         scrollView.addSubview(comment)
         scrollView.contentSize = CGSize.init(width: comment.frame.size.width, height: comment.frame.size.height)
         self.addSubview(scrollView)

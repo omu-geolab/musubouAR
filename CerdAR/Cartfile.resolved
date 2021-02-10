@@ -1,5 +1,0 @@
-binary "https://www.mapbox.com/ios-sdk/Mapbox-iOS-SDK.json" "5.9.0"
-github "mapbox/MapboxStatic.swift" "v0.10.0"
-github "mapbox/mapbox-events-ios" "v0.10.5"
-github "mattt/Surge" "2.2.0"
-github "raphaelmor/Polyline" "v4.2.1"

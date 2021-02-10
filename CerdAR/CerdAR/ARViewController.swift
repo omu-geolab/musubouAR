@@ -13,7 +13,7 @@ import CoreLocation
 import Mapbox
 import MapKit
 import AVFoundation
-import MapboxSceneKit
+//import MapboxSceneKit
 
 class ARViewController: UIViewController,detailViewDelegate {
     
@@ -24,6 +24,7 @@ class ARViewController: UIViewController,detailViewDelegate {
     var controlsContainerView: UIView!
     var locationManager: CLLocationManager!
     var detailview: detailView? // 詳細画面
+    var detailCustomView: DetailViewController?
     // ARAnnotion管理
     var annotationManager: MapboxARAnnotationManager!
     let startUpdate = false
@@ -42,7 +43,7 @@ class ARViewController: UIViewController,detailViewDelegate {
     var flag = false //
     var imageView : UIImage?
     
-    var terrainNode: TerrainNode?
+//    var terrainNode: TerrainNode?
     //大阪市北区
     var minLat = 34.703712
     var minLon = 135.499320
@@ -138,56 +139,111 @@ class ARViewController: UIViewController,detailViewDelegate {
         //ARアノテーションのタッチイベント
         let tapGesture = UITapGestureRecognizer(target: self, action:#selector(handleTap(_:)))
         sceneView.addGestureRecognizer(tapGesture)
+      
        
         self.view.addSubview(sceneView)
+        sceneView.translatesAutoresizingMaskIntoConstraints = false
+        let constraints = [
+            sceneView.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: 0),
+            sceneView.trailingAnchor.constraint(equalTo: view.trailingAnchor,constant: 0),
+            sceneView.topAnchor.constraint(equalTo: view.topAnchor,constant: 0),
+            sceneView.bottomAnchor.constraint(equalTo: view.bottomAnchor,constant: 0),
+        ]
+
+        NSLayoutConstraint.activate(constraints)
        
         self.view.addSubview(cameraStateInfoLabel)
-        
+        var sizeButton =  butSize * 1.3
+        let margins = view.layoutMarginsGuide
         // 地図切替ボタン
         let toMap_Button = UIButton()
-        let buttonImage: UIImage = UIImage(named: "icon_map.png")!
-        
-        if UIDevice.current.userInterfaceIdiom == .phone {
-            toMap_Button.frame = CGRect(x: 0.0, y: 0.0, width: butSize - 10, height: butSize - 10)
-        } else if UIDevice.current.userInterfaceIdiom == .pad{
-            toMap_Button.frame = CGRect(x: 0.0, y: 0.0, width: butSize, height: butSize)
+        let buttonImage: UIImage = UIImage(named: "home-icon")!
+        if UIDevice.current.userInterfaceIdiom == .pad{
+            sizeButton =  butSize * 1.5
         }
-        toMap_Button.setImage(buttonImage, for: UIControlState())
-        toMap_Button.layer.position = CGPoint(x: 55, y: self.view.bounds.height - 45)
+        toMap_Button.setImage(buttonImage, for: UIControl.State())
+        toMap_Button.layer.shadowColor = UIColor.black.cgColor
+        toMap_Button.layer.shadowRadius = 5
+        toMap_Button.layer.shadowOffset = CGSize(width: 5, height: 5)
+        toMap_Button.layer.shadowOpacity = 0.6
         view.addSubview(toMap_Button)
+        
+        toMap_Button.translatesAutoresizingMaskIntoConstraints = false
+        let constraintsMap = [
+            toMap_Button.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: 10),
+            toMap_Button.topAnchor.constraint(equalTo: margins.topAnchor, constant: -10),
+            toMap_Button.heightAnchor.constraint(equalToConstant: sizeButton),
+            toMap_Button.widthAnchor.constraint(equalToConstant: sizeButton)
+        ]
+        NSLayoutConstraint.activate(constraintsMap)
         toMap_Button.addTarget(self, action: #selector(ARViewController.onClick_map(_:)), for: .touchUpInside)
         
         // AR更新
         let changeAR_Button = UIButton()
-        let arChangeImage: UIImage = UIImage(named: "rotation.png")!
+        let arChangeImage: UIImage = UIImage(named: "refresh-ar-icon")!
+        changeAR_Button.setImage(arChangeImage, for: UIControl.State())
+        changeAR_Button.layer.shadowColor = UIColor.black.cgColor
+        changeAR_Button.layer.shadowRadius = 5
+        changeAR_Button.layer.shadowOffset = CGSize(width: 5, height: 5)
+        changeAR_Button.layer.shadowOpacity = 0.6
         
-        if UIDevice.current.userInterfaceIdiom == .phone {
-            changeAR_Button.frame = CGRect(x: 0.0, y: 0.0, width: butSize - 10, height: butSize - 10)
-        } else if UIDevice.current.userInterfaceIdiom == .pad{
-            changeAR_Button.frame = CGRect(x: 0.0, y: 0.0, width: butSize, height: butSize)
-        }
-        changeAR_Button.setImage(arChangeImage, for: UIControlState())
-        changeAR_Button.layer.position = CGPoint(x: self.view.bounds.width - 45, y: 60)
         view.addSubview(changeAR_Button)
+        
+        changeAR_Button.translatesAutoresizingMaskIntoConstraints = false
+        let constraintsAR = [
+            changeAR_Button.rightAnchor.constraint(equalTo: view.rightAnchor,constant: -10),
+            changeAR_Button.topAnchor.constraint(equalTo: margins.topAnchor, constant: -3),
+            changeAR_Button.heightAnchor.constraint(equalToConstant: sizeButton),
+            changeAR_Button.widthAnchor.constraint(equalToConstant: sizeButton)
+        ]
+        NSLayoutConstraint.activate(constraintsAR)
         changeAR_Button.addTarget(self, action: #selector(ARViewController.changeAR(_:)), for: .touchUpInside)
         
         //AR高度変更
         let slider = SectionedSlider(
-            frame: CGRect(x: 20, y: self.view.bounds.height/2 - 89, width: 70, height: 178), // Choose a 15.6 / 40 ration for width/height
+            frame: CGRect(x: 20, y: self.view.bounds.height/2, width: 70, height: 178), // Choose a 15.6 / 40 ration for width/height
             selectedSection: 3, // Initial selected section
             sections: 20, // Number of sections. Choose between 2 and 20
             palette: Palette(
                 viewBackgroundColor: UIColor(red: 0, green: 0, blue: 0, alpha: 0),
-                sliderBackgroundColor: .darkGray,
-                sliderColor: .white
+                sliderBackgroundColor: .yellow,
+                sliderColor: .systemYellow
             )
         )
-        label = UILabel(frame: CGRect(x: 20, y: self.view.bounds.height/2 - 120, width: 70, height: 30))
+        slider.layer.shadowColor = UIColor.black.cgColor
+        slider.layer.shadowRadius = 5
+        slider.layer.shadowOffset = CGSize(width: 5, height: 5)
+        slider.layer.shadowOpacity = 0.6
+        label = UILabel(frame: CGRect(x: 20, y: self.view.bounds.height/2 - 120, width: 70, height: 50))
         label.textAlignment = .center
-        label.font = label.font.withSize(20)
+        label.font = label.font.withSize(25)
+        label.textColor = .black
+        label.backgroundColor = UIColor(red: 255, green: 255, blue: 255, alpha: 0.9)
+        label.layer.cornerRadius = 15
+        label.clipsToBounds = true
+        label.layer.shadowColor = UIColor.black.cgColor
+        label.layer.shadowRadius = 5
+        label.layer.shadowOffset = CGSize(width: 5, height: 5)
+        label.layer.shadowOpacity = 0.6
         slider.delegate = self
         view.addSubview(slider)
+        slider.translatesAutoresizingMaskIntoConstraints = false
+        let constraintsSlider = [
+            slider.trailingAnchor.constraint(equalTo: view.trailingAnchor,constant: -20),
+            slider.centerYAnchor.constraint(equalTo: view.centerYAnchor,constant: 35),
+            slider.heightAnchor.constraint(equalToConstant: 178),
+            slider.widthAnchor.constraint(equalToConstant: 70)
+        ]
+        NSLayoutConstraint.activate(constraintsSlider)
         view.addSubview(label)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        let constraintsLabel = [
+            label.trailingAnchor.constraint(equalTo: view.trailingAnchor,constant: -20),
+            label.centerYAnchor.constraint(equalTo: view.centerYAnchor,constant: -90),
+            label.heightAnchor.constraint(equalToConstant: 50),
+            label.widthAnchor.constraint(equalToConstant: 70)
+        ]
+        NSLayoutConstraint.activate(constraintsLabel)
 
         // ARアノテーションマネージャを作成し、それにARセッションへの参照を与える
         annotationManager = MapboxARAnnotationManager(session: sceneView.session)
@@ -219,7 +275,8 @@ class ARViewController: UIViewController,detailViewDelegate {
         warningMessage.isHidden = true
         startSession()
         configureMapboxMapView()
-        self.view.addSubview(mapView)
+     
+
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -239,6 +296,12 @@ class ARViewController: UIViewController,detailViewDelegate {
         
         // Pause the view's session
         sceneView.session.pause()
+        if warningTimer != nil {
+            warningTimer.invalidate()
+        }
+        if updateTimer != nil {
+            updateTimer.invalidate()
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -320,16 +383,21 @@ class ARViewController: UIViewController,detailViewDelegate {
                     }
                     
                     if UIDevice.current.userInterfaceIdiom == .phone {
-                        self.detailview = detailView(frame: CGRect(x: screenWidth * 0.1, y: screenWidth * 0.02, width: screenWidth * 0.8, height: screenHeight * 0.9))
+//                        self.detailview = detailView(frame: CGRect(x: screenWidth * 0.1, y: screenWidth * 0.02, width: screenWidth * 0.8, height: screenHeight * 0.9))
+                        self.detailCustomView = DetailViewController(frame: CGRect(x: screenWidth * 0.1, y: screenWidth * 0.02, width: screenWidth * 0.8, height: screenHeight * 0.9))
                     } else if UIDevice.current.userInterfaceIdiom == .pad {
-                        self.detailview = detailView(frame: CGRect(x: screenWidth * 0.1, y: screenWidth * 0.1, width: screenWidth * 0.8, height: screenHeight * 0.8))
+//                        self.detailview = detailView(frame: CGRect(x: screenWidth * 0.1, y: screenWidth * 0.1, width: screenWidth * 0.8, height: screenHeight * 0.8))
+                        self.detailCustomView = DetailViewController(frame: CGRect(x: screenWidth * 0.1, y: screenWidth * 0.02, width: screenWidth * 0.8, height: screenHeight * 0.9))
                     }
-                    self.detailview!.delegate = self
-                    backgroundView = detailView.makebackgroungView()
-                    backgroundView.isUserInteractionEnabled = true
+//                    self.detailview!.delegate = self
+//                    backgroundView = detailView.makebackgroungView()
+//                    backgroundView.isUserInteractionEnabled = true
+
+//                    backgroundView = detailView.makebackgroungView()
+//                    backgroundView.isUserInteractionEnabled = true
                     runAfterDelay(kShowDetail) { // タグをタップしてからkShowDetail秒後に詳細画面を表示する
-                        self.view.addSubview(backgroundView)
-                        self.view.addSubview(self.detailview!)
+//                        self.view.addSubview(backgroundView)
+                        self.view.addSubview(self.detailCustomView!)
                     }
                 }
             }
@@ -361,9 +429,13 @@ class ARViewController: UIViewController,detailViewDelegate {
     //マープを設定する
     private func configureMapboxMapView() {
         //createSnapshot()//AR平面図作成
-        let d:CGFloat = CGFloat(screenWidth)/4
-        mapView = MGLMapView(frame: CGRect(x: CGFloat(screenWidth)-d, y: CGFloat(screenHeight)-d, width: d, height: d))
+        let d:CGFloat = 375
+        mapView = MGLMapView(frame: CGRect(x: 0, y: 0, width: d, height: d))
+        mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        mapView.camera = MGLMapCamera(lookingAtCenter: CLLocationCoordinate2D(latitude: 34.7, longitude: 135.5), altitude: 1200, pitch: 45, heading: 0)
         let styleStreet = MGLStyle.streetsStyleURL
+        mapView.layer.cornerRadius = mapView.frame.height/2
+        
         
         mapView.styleURL = styleStreet
         mapView.setCenter(CLLocationCoordinate2D(latitude: userLat, longitude: userLon), zoomLevel: 18, animated: false)
@@ -374,6 +446,22 @@ class ARViewController: UIViewController,detailViewDelegate {
 //        mapView.allowsZooming = false
 //        mapView.allowsScrolling = false
         mapView.showsUserHeadingIndicator =  true
+        mapView.layer.shadowColor = UIColor.black.cgColor
+        mapView.layer.shadowRadius = 5
+        mapView.layer.shadowOffset = CGSize(width: 5, height: 5)
+        mapView.layer.shadowOpacity = 0.6
+        self.view.addSubview(mapView)
+        
+        let margins = view.layoutMarginsGuide
+        mapView.translatesAutoresizingMaskIntoConstraints = false
+        let constraintsMapbox = [
+            mapView.bottomAnchor.constraint(equalTo: view.bottomAnchor,constant: d/2),
+            mapView.centerXAnchor.constraint(equalTo: margins.centerXAnchor,constant: 0),
+//            mapView.centerXAnchor.constraint(equalToSystemSpacingBelow: view.centerXAnchor, multiplier: 1),
+            mapView.heightAnchor.constraint(equalToConstant: d),
+            mapView.widthAnchor.constraint(equalToConstant: d)
+        ]
+        NSLayoutConstraint.activate(constraintsMapbox)
         
         for i in 0 ..< jsonDataManager.sharedInstance.infoBox.count {
             if(jsonDataManager.sharedInstance.infoBox[i].lat == nil ){
@@ -517,7 +605,7 @@ class ARViewController: UIViewController,detailViewDelegate {
             } else {
                 if let jsonObj = try? JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? NSDictionary {
                     
-                    let alt = jsonObj!.value(forKey: "elevation")!
+                    let alt = jsonObj.value(forKey: "elevation")!
                     if(type == kWarn){
                         jsonDataManager.sharedInstance.warnBox[i].elevation = alt as? Double
                     }else if (type == kInfo){
@@ -643,7 +731,7 @@ class ARViewController: UIViewController,detailViewDelegate {
             warningView.isHidden = false
             warningMessage.isHidden = false
             warningMessage.text = warningEnter[warningCount].message2 // 警告メッセージ
-            
+            Notification.showNotification(tilte: "警告", message: NSString(format: "%.2f", CGFloat.random(in: 1...1000)) as String)
             switch warningEnter[warningCount].riskType {
             case 0: // 火災：赤色
                 warningView.frame = CGRect(x: 0.0, y: 0.0, width: CGFloat(screenWidth), height: CGFloat(screenHeight))
@@ -852,7 +940,7 @@ extension ARViewController: ARSCNViewDelegate {
         
         if(anchor.name == "map_surface"){
             let box = SCNPlane(width: CGFloat(widthMapAR) , height: CGFloat(heightMapAR))
-            
+            box.cornerRadius = CGFloat(widthMapAR/2)
             box.materials.last?.diffuse.contents = self.imageView
             //box.firstMaterial?.transparency = 0.5
             box.materials.last?.transparency = CGFloat(kMapARAlpha)
@@ -1089,38 +1177,38 @@ extension ARViewController: ARSCNViewDelegate {
         return [sideMaterial, sideMaterial, sideMaterial, sideMaterial, groundImage, bottomMaterial]
     }
     func createTerrain(node:SCNNode) {
-        let scaleDefaultAR = adjustHeightAR * scaleAR
-        terrainNode = TerrainNode(minLat: minLat, maxLat: maxLat,
-                                  minLon: minLon, maxLon: maxLon)
-        let scale = 1
-        let terrainNodeScale = SCNVector3( scale, scale, scale) // Scale down map (otherwise it's far too big)
-        if let terrainNode = terrainNode {
-            terrainNode.scale = terrainNodeScale // Scale down map
-            terrainNode.position = SCNVector3(0.0,-(  20*scaleDefaultAR + Float(altitude) + 15.0), 0.0) // Place map slightly below clouds
-            terrainNode.geometry?.materials = defaultMaterials() // Add default materials
-            node.addChildNode(terrainNode)
-            terrainNode.fetchTerrainAndTexture(minWallHeight: 0, enableDynamicShadows: true, textureStyle: "mapbox/streets-v9", heightProgress: { progress, total in
-            }, heightCompletion: { fetchError in
-                if let fetchError = fetchError {
-                    NSLog("Texture load failed: \(fetchError.localizedDescription)")
-                } else {
-                    NSLog("Terrain load complete")
-                }
-            }, textureProgress: { progress, total in
-                
-            }) { image, fetchError in
-                if let fetchError = fetchError {
-                    NSLog("Texture load failed: \(fetchError.localizedDescription)")
-                }
-                if image != nil {
-                    NSLog("Texture load complete")
-                    terrainNode.geometry?.materials[4].diffuse.contents = image
-                    self.imageView = image
-                }else if(self.imageView != nil){
-                    terrainNode.geometry?.materials[4].diffuse.contents = self.imageView
-                }
-            }
-        }
+//        let scaleDefaultAR = adjustHeightAR * scaleAR
+//        terrainNode = TerrainNode(minLat: minLat, maxLat: maxLat,
+//                                  minLon: minLon, maxLon: maxLon)
+//        let scale = 1
+//        let terrainNodeScale = SCNVector3( scale, scale, scale) // Scale down map (otherwise it's far too big)
+//        if let terrainNode = terrainNode {
+//            terrainNode.scale = terrainNodeScale // Scale down map
+//            terrainNode.position = SCNVector3(0.0,-(  20*scaleDefaultAR + Float(altitude) + 15.0), 0.0) // Place map slightly below clouds
+//            terrainNode.geometry?.materials = defaultMaterials() // Add default materials
+//            node.addChildNode(terrainNode)
+//            terrainNode.fetchTerrainAndTexture(minWallHeight: 0, enableDynamicShadows: true, textureStyle: "mapbox/streets-v9", heightProgress: { progress, total in
+//            }, heightCompletion: { fetchError in
+//                if let fetchError = fetchError {
+//                    NSLog("Texture load failed: \(fetchError.localizedDescription)")
+//                } else {
+//                    NSLog("Terrain load complete")
+//                }
+//            }, textureProgress: { progress, total in
+//                
+//            }) { image, fetchError in
+//                if let fetchError = fetchError {
+//                    NSLog("Texture load failed: \(fetchError.localizedDescription)")
+//                }
+//                if image != nil {
+//                    NSLog("Texture load complete")
+//                    terrainNode.geometry?.materials[4].diffuse.contents = image
+//                    self.imageView = image
+//                }else if(self.imageView != nil){
+//                    terrainNode.geometry?.materials[4].diffuse.contents = self.imageView
+//                }
+//            }
+//        }
     }
 }
 

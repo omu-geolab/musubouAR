@@ -765,10 +765,10 @@
             timestampString = "590577365.423758"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "567"
-            endingLineNumber = "567"
-            landmarkName = "updateFace()"
-            landmarkType = "7">
+            startingLineNumber = "655"
+            endingLineNumber = "655"
+            landmarkName = "ARViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1037,8 +1037,8 @@
             timestampString = "590577365.425637"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "551"
-            endingLineNumber = "551"
+            startingLineNumber = "639"
+            endingLineNumber = "639"
             landmarkName = "updateEnvorimentAR(currentLocation:)"
             landmarkType = "7">
          </BreakpointContent>
