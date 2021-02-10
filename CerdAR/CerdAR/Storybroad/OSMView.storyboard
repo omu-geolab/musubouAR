@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1fo-Iv-YbA">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Osm View Controller-->
+        <scene sceneID="7vy-Nt-YdF">
+            <objects>
+                <viewController id="1fo-Iv-YbA" customClass="osmViewController" customModule="CerdAR" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="O5c-Jm-guN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RF9-8K-I6B" customClass="MGLMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8oE-WM-jgq">
+                                        <rect key="frame" x="8" y="20" width="75" height="75"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="75" id="QTM-Wd-3sE"/>
+                                            <constraint firstAttribute="height" constant="75" id="kW5-HF-Gj9"/>
+                                            <constraint firstAttribute="width" secondItem="8oE-WM-jgq" secondAttribute="height" multiplier="1:1" id="shS-iq-7fA"/>
+                                        </constraints>
+                                        <state key="normal" image="map-icon"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nTb-eo-lTd">
+                                        <rect key="frame" x="8" y="801" width="75" height="75"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="nTb-eo-lTd" secondAttribute="height" multiplier="1:1" id="6M8-oN-vSO"/>
+                                            <constraint firstAttribute="width" constant="75" id="GW7-0N-u5W"/>
+                                            <constraint firstAttribute="height" constant="75" id="nGm-kb-7BP"/>
+                                        </constraints>
+                                        <state key="normal" image="ar2-icon"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V2H-4l-mQ5">
+                                        <rect key="frame" x="331" y="801" width="75" height="75"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="75" id="0qh-my-DJ2"/>
+                                            <constraint firstAttribute="width" secondItem="V2H-4l-mQ5" secondAttribute="height" multiplier="1:1" id="bc5-Uy-Vvg"/>
+                                            <constraint firstAttribute="height" constant="75" id="oaG-FA-8zr"/>
+                                        </constraints>
+                                        <state key="normal" image="setting-icon"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="V2H-4l-mQ5" secondAttribute="trailing" constant="8" id="1cN-fx-Wzz"/>
+                                    <constraint firstItem="8oE-WM-jgq" firstAttribute="leading" secondItem="RF9-8K-I6B" secondAttribute="leading" constant="8" id="8BM-mG-Ayy"/>
+                                    <constraint firstItem="8oE-WM-jgq" firstAttribute="top" secondItem="RF9-8K-I6B" secondAttribute="top" constant="20" id="Lqf-ri-hIB"/>
+                                    <constraint firstAttribute="bottom" secondItem="V2H-4l-mQ5" secondAttribute="bottom" constant="20" id="TVZ-a0-boX"/>
+                                    <constraint firstItem="nTb-eo-lTd" firstAttribute="leading" secondItem="RF9-8K-I6B" secondAttribute="leading" constant="8" id="u1l-2a-bdD"/>
+                                    <constraint firstAttribute="bottom" secondItem="nTb-eo-lTd" secondAttribute="bottom" constant="20" id="wLe-di-nev"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="styleURL__" value="mapbox://styles/th-nguyen/ckk29t1zw391617rrt2rwls2i"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="showsUserLocation" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="showsScale" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="HLK-d3-Yyv"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="RF9-8K-I6B" firstAttribute="leading" secondItem="O5c-Jm-guN" secondAttribute="leading" id="IXv-sS-Jq1"/>
+                            <constraint firstAttribute="bottom" secondItem="RF9-8K-I6B" secondAttribute="bottom" id="eHz-WJ-l9h"/>
+                            <constraint firstAttribute="trailing" secondItem="RF9-8K-I6B" secondAttribute="trailing" id="jrx-OQ-voR"/>
+                            <constraint firstItem="RF9-8K-I6B" firstAttribute="top" secondItem="O5c-Jm-guN" secondAttribute="top" id="nw7-my-Uwf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="RF9-8K-I6B" id="vLk-4C-CdA"/>
+                        <outlet property="nowLoc_button" destination="8oE-WM-jgq" id="l6o-QY-5p5"/>
+                        <outlet property="toCam_button" destination="nTb-eo-lTd" id="YTu-Eo-5Qd"/>
+                        <outlet property="toCon_button" destination="V2H-4l-mQ5" id="qwf-vR-BA4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LhF-9B-nN4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="150.72463768115944" y="75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ar2-icon" width="250" height="250"/>
+        <image name="map-icon" width="250" height="250"/>
+        <image name="setting-icon" width="250" height="250"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

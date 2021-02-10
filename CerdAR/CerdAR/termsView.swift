@@ -30,13 +30,26 @@ class termsView: UIView {
      * 利用規約の表示
      */
     func viewInit() {
-        
+        let backgroundImage = UIImage(named: "new-bg")!
+        var imageView : UIImageView!
+        imageView = UIImageView(frame: self.bounds)
+        imageView.contentMode =  UIView.ContentMode.scaleAspectFill
+        imageView.image = backgroundImage
+        self.addSubview(imageView)
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        let constraintsBackground = [
+            imageView.trailingAnchor.constraint(equalTo: self.trailingAnchor,constant: 0),
+            imageView.leadingAnchor.constraint(equalTo: self.leadingAnchor,constant: 0),
+            imageView.topAnchor.constraint(equalTo: self.topAnchor,constant: 0),
+            imageView.bottomAnchor.constraint(equalTo: self.bottomAnchor,constant: 0),
+        ]
+        NSLayoutConstraint.activate(constraintsBackground)
         // OKボタンの生成
         let okButton = UIButton(frame: CGRect(x: 0, y: 0, width: bounds.width * 0.8 * 0.45, height: bounds.height * 0.8 * 0.15))
         okButton.backgroundColor = UIColor.yellow
         okButton.layer.masksToBounds = true
-        okButton.setTitle("同意してサービスを利用する", for: UIControlState())
-        okButton.setTitleColor(UIColor.black, for: UIControlState())
+        okButton.setTitle("同意してサービスを利用する", for: UIControl.State())
+        okButton.setTitleColor(UIColor.black, for: UIControl.State())
         okButton.titleLabel!.font = UIFont.systemFont(ofSize: 25)
         okButton.titleLabel!.adjustsFontSizeToFitWidth = true
         okButton.layer.borderColor = UIColor.black.cgColor
@@ -50,8 +63,8 @@ class termsView: UIView {
         let cancelButton = UIButton(frame: CGRect(x: 0, y: 0, width: bounds.width * 0.8 * 0.41, height: bounds.height * 0.8 * 0.15))
         cancelButton.backgroundColor = UIColor.gray
         cancelButton.layer.masksToBounds = true
-        cancelButton.setTitle("同意せずアプリを閉じる", for: UIControlState())
-        cancelButton.setTitleColor(UIColor.white, for: UIControlState())
+        cancelButton.setTitle("同意せずアプリを閉じる", for: UIControl.State())
+        cancelButton.setTitleColor(UIColor.white, for: UIControl.State())
         cancelButton.titleLabel!.font = UIFont.systemFont(ofSize: 25)
         cancelButton.titleLabel!.adjustsFontSizeToFitWidth = true
         cancelButton.layer.position = CGPoint(x: screenWidth * 0.2, y: screenHeight * 0.8 * 0.85)
@@ -60,8 +73,9 @@ class termsView: UIView {
         
         // アラートビューの生成
         let alertView = UIView(frame: CGRect(x: bounds.width * 0.1, y: bounds.height * 0.1, width: bounds.width * 0.8, height: bounds.height * 0.8))
-        alertView.backgroundColor = UIColor.white
-        
+        //alertView.backgroundColor = UIColor.white
+        alertView.layer.cornerRadius = 20.0
+        alertView.backgroundColor = UIColor.init(displayP3Red: 255, green: 255, blue: 255, alpha: 0.9)
         // 利用規約ラベルの生成
         let termsLabel = UILabel(frame: CGRect(x: bounds.width * 0.8 * 0.05, y: bounds.height * 0.8 * 0.2 - bounds.height * 0.8 * 0.16 - ((screenHeight * 0.8 * 0.85 - (bounds.height * 0.8 * 0.15 / 2)) - ( bounds.height * 0.8 * 0.2 + bounds.height * 0.8 * 0.55 )), width: bounds.width * 0.8 * 0.3, height: bounds.height * 0.8 * 0.16))
         termsLabel.font = UIFont.systemFont(ofSize: 30)
@@ -92,7 +106,7 @@ class termsView: UIView {
             + "移動中は本アプリを含め端末の操作、および表示画面の注視をしないでください。" + "\n"
             + "必ず安全な場所に停止してから、周囲の安全を十分に確認してから操作および画面の確認を行ってください。" + "　\n　\n　\n　\n　\n　\n"
         
-        alertLabel.font = UIFont.systemFont(ofSize: 18)
+        alertLabel.font = UIFont.systemFont(ofSize: 20)
         alertLabel.adjustsFontSizeToFitWidth = true
         alertLabel.numberOfLines = 0
         alertLabel.sizeToFit()
@@ -110,8 +124,12 @@ class termsView: UIView {
         //ボタン
         alertView.addSubview(okButton)
         alertView.addSubview(cancelButton)
-        
+
+//        let backgroundImage = UIImage(named: "new-bg")!
+//        self.backgroundColor = UIColor(patternImage: backgroundImage)
         addSubview(alertView)
+      
+        
     }
     
     /*
@@ -143,8 +161,9 @@ class termsView: UIView {
         // ロゴ画像(CERD)
         let cerdImage = UIImage(named: "logo_CERD.jpg")
         let logoCerdView = UIImageView(image: cerdImage)
-        var logoWidth = (cerdImage?.size.width)! * 0.16
-        var logoHeight = (cerdImage?.size.height)! * 0.16
+        var logoWidth = (cerdImage?.size.width)! * 0.3
+        var logoHeight = (cerdImage?.size.height)! * 0.3
+        logoCerdView.layer.opacity = 0.9
         if UIDevice.current.userInterfaceIdiom == .phone {
             logoWidth /= 2
             logoHeight /= 2

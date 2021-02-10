@@ -30,7 +30,7 @@ class loadViewController: UIViewController, termsViewDelegate, CLLocationManager
         locationManager = CLLocationManager()
         locationManager?.delegate = self
         guard let data = try? getJSONData() else { return }
-        let gisdata = JSON(data: data!)
+        let gisdata = JSON(data: data)
         
         GisList.sharedGis.getListFromJson(json: gisdata)
         if(GisList.sharedGis.list.count > 0){
@@ -82,9 +82,9 @@ class loadViewController: UIViewController, termsViewDelegate, CLLocationManager
                         jsondata(callback: { _ in
                             // サーバーにもないとき
                             if self.json == nil {
-                                let alert: UIAlertController = UIAlertController(title: "ERROR!!", message: "GeoJSONファイルが見つかりませんでした", preferredStyle:  UIAlertControllerStyle.alert)
+                                let alert: UIAlertController = UIAlertController(title: "ERROR!!", message: "GeoJSONファイルが見つかりませんでした", preferredStyle:  UIAlertController.Style.alert)
                                 
-                                let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: {
+                                let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: {
                                     (action: UIAlertAction!) -> Void in
                                     print("OK")
                                 })
@@ -159,7 +159,7 @@ class loadViewController: UIViewController, termsViewDelegate, CLLocationManager
         
         //Indicatorの状態を管理
         activityIndicator.hidesWhenStopped = false
-        activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.white
+        activityIndicator.style = UIActivityIndicatorView.Style.white
         
         //クルクルを開始
         activityIndicator.startAnimating()
@@ -217,17 +217,29 @@ class loadViewController: UIViewController, termsViewDelegate, CLLocationManager
     }
     
     func showTermsView() {
-        termsview = termsView(frame: CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight))
-        termsview!.delegate = self
-        self.view.addSubview(termsview!)
+//        termsview = termsView(frame: CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight))
+//        termsview!.delegate = self
+//        self.view.addSubview(termsview!)
+
+        let updateView = UIStoryboard(name: "TermsView", bundle: .main)
+        if let vc = updateView.instantiateInitialViewController() as? TermsViewController {
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            appDelegate.window?.rootViewController = vc
+        }
     }
     
     // MARK:- detailViewDelegate
     func termsViewfinish() {
         termsview?.delegate = nil
         self.dismiss(animated: false, completion: nil)
-        
+//        let osmView = UIStoryboard(name: "OSMView", bundle: .main)
+//        if let vc = osmView.instantiateInitialViewController() as? osmViewController {
+//            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+//            appDelegate.window?.rootViewController = vc
+//        }
         let osmVC = osmViewController()
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.window?.rootViewController = osmVC
         UIApplication.shared.keyWindow?.rootViewController = osmVC
     }
     func getJSONData() throws -> Data? {

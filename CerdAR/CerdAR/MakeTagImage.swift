@@ -24,11 +24,11 @@ import MapKit
 func calcDistance(_ lat: Double, lon: Double, uLat: Double, uLon: Double) -> Int {
     
     let cLocation1 = CLLocationCoordinate2DMake(lat, lon)
-    let point1 = MKMapPointForCoordinate(cLocation1)
+    let point1 = MKMapPoint(cLocation1)
     let cLocation2 = CLLocationCoordinate2DMake(uLat, uLon)
-    let point2 = MKMapPointForCoordinate(cLocation2)
+    let point2 = MKMapPoint(cLocation2)
     
-    return Int(MKMetersBetweenMapPoints(point1, point2))
+    return Int(point1.distance(to: point2))
 }
 
 /**

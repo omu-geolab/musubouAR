@@ -384,9 +384,9 @@ var pinData: TagData! // タップされたタグの情報を保持
 var backgroundView = UIImageView(frame: CGRect.init(x: 0, y: 0, width: screenWidth, height: screenHeight)) // 詳細画面の後ろのビュー
 
 //let changeMapBut = UIButton(frame: CGRect.init(x: 0, y: 0, width: screenWidth / 4, height: screenHeight / 8))
-let changeMapBut2 = UIButton(frame: CGRect.init(x: 0, y: 0, width: screenWidth / 4, height: screenHeight / 8))
+let changeMapBut2 = UIButton(frame: CGRect.init(x: 0, y: 0, width: screenWidth / 3, height: screenHeight / 6))
 //let changeMapBut3 = UIButton(frame: CGRect.init(x: 0, y: 0, width: screenWidth / 4, height: screenHeight / 8))
-let gisInfoBut = UIButton(frame: CGRect.init(x: 0, y: 0, width: screenWidth / 4, height: screenHeight / 8))
+let gisInfoBut = UIButton(frame: CGRect.init(x: 0, y: 0, width: screenWidth / 3, height: screenHeight / 6))
 
 /* GIS表示モード */
 enum gisMode: Int {
