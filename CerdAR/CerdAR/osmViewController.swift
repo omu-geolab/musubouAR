@@ -88,6 +88,8 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         
         /* 背景地図の設定 */
         mapView = MGLMapView(frame: view.bounds, styleURL: MGLStyle.streetsStyleURL)
+        mapView.camera = MGLMapCamera(lookingAtCenter: CLLocationCoordinate2D(latitude: 40.7411, longitude: -73.9897), altitude: 1200, pitch: 45, heading: 0)
+
         //streetsStyleURL : 標準地図
         //lightStyleURL : シンプルな地図
         //satelliteStyleURL :　衛星画像
