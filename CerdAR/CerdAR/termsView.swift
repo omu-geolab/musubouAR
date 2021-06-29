@@ -30,7 +30,7 @@ class termsView: UIView {
      * 利用規約の表示
      */
     func viewInit() {
-        let backgroundImage = UIImage(named: "new-bg")!
+        let backgroundImage = UIImage(named: "info-bg")!
         var imageView : UIImageView!
         imageView = UIImageView(frame: self.bounds)
         imageView.contentMode =  UIView.ContentMode.scaleAspectFill

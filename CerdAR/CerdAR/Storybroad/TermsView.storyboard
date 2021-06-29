@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="psJ-JP-oH6">
-    <device id="retina4_7" orientation="landscape" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -13,18 +12,15 @@
         <scene sceneID="kqp-TE-6cj">
             <objects>
                 <viewController storyboardIdentifier="TermsView" id="psJ-JP-oH6" customClass="TermsViewController" customModule="CerdAR" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="h0t-GL-La6">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                    <view key="view" contentMode="scaleToFill" id="h0t-GL-La6" customClass="GradientView" customModule="CerdAR" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2hk-ei-vRj">
-                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="new-bg" translatesAutoresizingMaskIntoConstraints="NO" id="BlW-lW-U3n">
-                                        <rect key="frame" x="-46" y="-33" width="760" height="472"/>
-                                    </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xPb-7i-26i">
-                                        <rect key="frame" x="30" y="30" width="607" height="315"/>
+                                        <rect key="frame" x="30" y="30" width="354" height="758"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="利用規約" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H2w-Bf-ysl">
                                                 <rect key="frame" x="8" y="24" width="155" height="35"/>
@@ -37,17 +33,17 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_CERD" translatesAutoresizingMaskIntoConstraints="NO" id="ayb-RO-8Gh">
-                                                <rect key="frame" x="479" y="12" width="120" height="59"/>
+                                                <rect key="frame" x="226" y="12" width="120" height="59"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="120" id="Bf6-uO-isf"/>
                                                     <constraint firstAttribute="height" constant="59" id="Iw7-6s-cdX"/>
                                                 </constraints>
                                             </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IFe-WF-fEQ">
-                                                <rect key="frame" x="18" y="79" width="571" height="88"/>
+                                                <rect key="frame" x="18" y="79" width="318" height="531"/>
                                                 <subviews>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nCN-De-xgA">
-                                                        <rect key="frame" x="0.0" y="0.0" width="571" height="88"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="318" height="531"/>
                                                         <color key="backgroundColor" red="0.94426157994923854" green="0.94426157994923854" blue="0.94426157994923854" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <color key="tintColor" systemColor="systemOrangeColor"/>
                                                         <string key="text">大阪市立大学 都市防災教育研究センター(CERD)が提供するiOS端末用アプリ「CERD-AR」の利用について、以下の通りに定めます。
@@ -77,13 +73,13 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="❖  このアプリを使用すると、利用規約に同意したことになります。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dkE-tQ-oHR">
-                                                <rect key="frame" x="18" y="175" width="571" height="48"/>
+                                                <rect key="frame" x="18" y="618" width="318" height="48"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zpH-35-gqj">
-                                                <rect key="frame" x="449" y="233" width="140" height="70"/>
+                                                <rect key="frame" x="196" y="676" width="140" height="70"/>
                                                 <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="140" id="1Y7-DG-uHK"/>
@@ -106,7 +102,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Avj-YN-5CD">
-                                                <rect key="frame" x="18" y="233" width="140" height="70"/>
+                                                <rect key="frame" x="18" y="676" width="140" height="70"/>
                                                 <color key="backgroundColor" systemColor="systemGray2Color"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="70" id="3FJ-Pe-G69"/>
@@ -147,19 +143,15 @@
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="10"/>
+                                                <integer key="value" value="20"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="xPb-7i-26i" secondAttribute="bottom" constant="30" id="1EO-De-HEb"/>
-                                    <constraint firstAttribute="trailing" secondItem="BlW-lW-U3n" secondAttribute="trailing" constant="-47" id="6Au-az-I6g"/>
-                                    <constraint firstItem="BlW-lW-U3n" firstAttribute="top" secondItem="2hk-ei-vRj" secondAttribute="top" constant="-33" id="7bD-e4-DdK"/>
                                     <constraint firstItem="xPb-7i-26i" firstAttribute="leading" secondItem="2hk-ei-vRj" secondAttribute="leading" constant="30" id="biO-vX-GIE"/>
                                     <constraint firstItem="xPb-7i-26i" firstAttribute="top" secondItem="2hk-ei-vRj" secondAttribute="top" constant="30" id="eg4-Hn-1yI"/>
-                                    <constraint firstItem="BlW-lW-U3n" firstAttribute="leading" secondItem="2hk-ei-vRj" secondAttribute="leading" constant="-46" id="gal-cd-YiA"/>
-                                    <constraint firstAttribute="bottom" secondItem="BlW-lW-U3n" secondAttribute="bottom" constant="-64" id="vzH-eN-AIr"/>
                                     <constraint firstAttribute="trailing" secondItem="xPb-7i-26i" secondAttribute="trailing" constant="30" id="zUO-nM-HGK"/>
                                 </constraints>
                             </view>
@@ -172,6 +164,22 @@
                             <constraint firstItem="2hk-ei-vRj" firstAttribute="trailing" secondItem="2JZ-pC-6AT" secondAttribute="trailing" id="Fv9-LM-Yqh"/>
                             <constraint firstItem="2JZ-pC-6AT" firstAttribute="bottom" secondItem="2hk-ei-vRj" secondAttribute="bottom" id="XWr-K3-Go8"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                <color key="value" red="0.75719964620000002" green="1" blue="0.82995558589999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                <color key="value" red="1" green="0.99898582400000002" blue="0.88219621910000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="startLocation">
+                                <real key="value" value="0.050000000000000003"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="endLocation">
+                                <real key="value" value="0.94999999999999996"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="horizontalMode" value="NO"/>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="diagonalMode" value="YES"/>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
                         <outlet property="cancelButton" destination="Avj-YN-5CD" id="vLb-x8-e7n"/>
@@ -185,7 +193,6 @@
     </scenes>
     <resources>
         <image name="logo_CERD" width="691.5" height="302"/>
-        <image name="new-bg" width="500" height="319"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -15,6 +15,7 @@ import SystemConfiguration
 import HealthKit
 import HealthKitUI
 import AVFoundation
+import WatchConnectivity
 
 let mapboxAccess = "pk.eyJ1Ijoic2FicmluYXp1cmFpbWkiLCJhIjoiY2lyaGFmbzFjMDE5cGc5bm42c2ozMnJlYSJ9.7W_kYbSqA3sEZUyS14s_Tw"
 
@@ -25,12 +26,14 @@ class MGLTagData: MGLPointAnnotation {
 }
 
 
-class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapViewDelegate, detailViewDelegate, detailViewIphoneDelegate ,detailViewIpadDelegate {
+class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapViewDelegate, detailViewDelegate, detailViewIphoneDelegate ,detailViewIpadDelegate, ConfigViewDelegate {
     
     
     var detailview: detailView? // 詳細画面
     var detailCustomIphone: DetailViewIphone = DetailViewIphone()
     var detailCustomIpad: DetailViewIpad = DetailViewIpad()
+    var heartView:HeartView?
+    let toWorkout_button = ToggleButton()
     var configview: ConfigView? // 設定画面
     var mapView = MGLMapView() // 地図画面
     
@@ -50,7 +53,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
     var warningView: UIView! // 災害範囲内に侵入した時に画面の色を変える
     var warnNums: [Int] = [] // 災害番号
     var box: [Int] = [] // 現在発生している災害の番号を管理する配列
-
+    
     var updateTimer: Timer! // 一定時間ごとにupdate()を発火させる
     
     var warnState = warningState.safe.rawValue // 現在ユーザーは災害からどの位置にいるか(安全・付近・侵入)
@@ -66,7 +69,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
     var polyNum = 0 // 災害円のインデックス
     
     //MARK:警告メッセージの表示位置（高さ）をいじる場合はy:の値を変更する
-    let warningMessage = UILabel(frame: CGRect(x: screenWidth - 55.0 - butSize - screenWidth * 0.38, y: screenHeight * 0.8, width: screenWidth * 0.37, height: screenHeight * 0.13)) // 警告メッセージ
+    var warningMessage = UILabel(frame: CGRect(x: screenWidth - 55.0 - butSize - screenWidth * 0.38, y: screenHeight * 0.8, width: screenWidth * 0.37, height: screenHeight * 0.13)) // 警告メッセージ
     
     var beforeZoomLv = 0.0
     
@@ -86,15 +89,19 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
     let kTagSize: CGFloat = 500 // タグ画像のサイズ
     let styleMapboxURL = URL(string: "mapbox://styles/th-nguyen/ckk29t1zw391617rrt2rwls2i")
     var audioPlayer: AVAudioPlayer!
-
-//    @IBOutlet weak var mapView: MGLMapView!
-//    @IBOutlet weak var nowLoc_button: UIButton!
-//    @IBOutlet weak var toCam_button: UIButton!
-//    @IBOutlet weak var toCon_button: UIButton!
+    //    var wcSession : WCSession! = nil
+    
+    //    @IBOutlet weak var mapView: MGLMapView!
+    //    @IBOutlet weak var nowLoc_button: UIButton!
+    //    @IBOutlet weak var toCam_button: UIButton!
+    //    @IBOutlet weak var toCon_button: UIButton!
     // MARK:- ライフサイクル
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        WorkoutService.shared.delegate = self
+        WorkoutService.shared.ExpportAllWorkouts()
+        
         /* 警告ビューの設定 */
         warningView = UIView(frame: CGRect.init(x: kZero, y: kZero, width: CGFloat(screenWidth), height: CGFloat(screenHeight)))
         view.addSubview(warningView) // viewに追加
@@ -122,7 +129,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         
         /* マップビューの設定 */
         mapView.frame = self.view.frame
-
+        
         mapView.camera = MGLMapCamera(lookingAtCenter: CLLocationCoordinate2D(latitude: 34.7, longitude: 135.5), altitude: 1200, pitch: 45, heading: 0)
         mapView.showsUserLocation = true // 現在地を表示する
         mapView.isPitchEnabled = false  // ジェスチャでの視点変更を許可しない
@@ -130,6 +137,10 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         mapView.scaleBarPosition = .topRight
         mapView.scaleBarMargins = CGPoint(x: 50, y: 0)
         mapView.delegate = self
+        mapView.attributionButtonPosition = .bottomLeft
+        mapView.attributionButtonMargins = CGPoint(x: 200, y: 0)
+        mapView.logoViewMargins = CGPoint(x: 100, y: 0)
+    
         view.addSubview(mapView)
         mapView.translatesAutoresizingMaskIntoConstraints = false
         let constraints = [
@@ -141,9 +152,9 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         NSLayoutConstraint.activate(constraints)
         
         locationManager = CLLocationManager()
-        var  sizeButton =  butSize*1.5
+        var  sizeButton =  butSize
         if UIDevice.current.userInterfaceIdiom == .pad{
-            sizeButton =  butSize*2.0
+            sizeButton =  butSize*1.5
         }
         // 画面遷移するためのボタンを生成
         let toCam_button = UIButton()
@@ -153,12 +164,12 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         toCam_button.layer.shadowRadius = 5
         toCam_button.layer.shadowOffset = CGSize(width: 10, height: 10)
         toCam_button.layer.shadowOpacity = 0.6
-
+        
         mapView.addSubview(toCam_button)
         toCam_button.translatesAutoresizingMaskIntoConstraints = false
         let constraintsCamera = [
             toCam_button.leadingAnchor.constraint(equalTo: mapView.leadingAnchor,constant: 15),
-            toCam_button.bottomAnchor.constraint(equalTo: mapView.bottomAnchor,constant: 0),
+            toCam_button.bottomAnchor.constraint(equalTo: mapView.bottomAnchor,constant: -15),
             toCam_button.heightAnchor.constraint(equalToConstant: sizeButton),
             toCam_button.widthAnchor.constraint(equalToConstant: sizeButton)
         ]
@@ -177,13 +188,54 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         mapView.addSubview(toCon_button)
         toCon_button.translatesAutoresizingMaskIntoConstraints = false
         let constraintsSetting = [
-            toCon_button.trailingAnchor.constraint(equalTo: mapView.trailingAnchor,constant: -10),
-            toCon_button.bottomAnchor.constraint(equalTo: mapView.bottomAnchor,constant: 0),
+            toCon_button.trailingAnchor.constraint(equalTo: mapView.trailingAnchor,constant: -15),
+            toCon_button.bottomAnchor.constraint(equalTo: mapView.bottomAnchor,constant: -15),
             toCon_button.heightAnchor.constraint(equalToConstant: sizeButton),
             toCon_button.widthAnchor.constraint(equalToConstant: sizeButton)
         ]
         NSLayoutConstraint.activate(constraintsSetting)
         toCon_button.addTarget(self, action: #selector(osmViewController.onClick_config(_:)), for: .touchUpInside)
+        
+        if WorkoutService.shared.isSupport() {
+            // ワークアウト起動のボタン生成
+            let startButImage: UIImage = UIImage(named: "play-icon")!
+            toWorkout_button.setImage(startButImage, for: UIControl.State())
+            toWorkout_button.highlightedSelectedImage = UIImage(named: "stop-icon")
+            toWorkout_button.normalSelectedImage = UIImage(named: "play-icon")
+            toWorkout_button.initToggleButton()
+            toWorkout_button.startAnimatingPressActions()
+            
+            toWorkout_button.layer.shadowColor = UIColor.black.cgColor
+            toWorkout_button.layer.shadowRadius = 5
+            toWorkout_button.layer.shadowOffset = CGSize(width: 5, height: 5)
+            toWorkout_button.layer.shadowOpacity = 0.6
+            
+            mapView.addSubview(toWorkout_button)
+            toWorkout_button.translatesAutoresizingMaskIntoConstraints = false
+            let constraintsSetting = [
+                toWorkout_button.trailingAnchor.constraint(equalTo: mapView.trailingAnchor,constant: -15),
+                toWorkout_button.bottomAnchor.constraint(equalTo: mapView.bottomAnchor,constant: -30 - sizeButton),
+                toWorkout_button.heightAnchor.constraint(equalToConstant: sizeButton),
+                toWorkout_button.widthAnchor.constraint(equalToConstant: sizeButton)
+            ]
+            NSLayoutConstraint.activate(constraintsSetting)
+            toWorkout_button.addTarget(self, action: #selector(osmViewController.onClick_StartWorkout(_:)), for: .touchUpInside)
+            self.heartView = HeartView(frame: CGRect(x: 0, y: 0, width: 70, height: 140))
+            mapView.addSubview(heartView!)
+            heartView!.translatesAutoresizingMaskIntoConstraints = false
+            heartView!.layer.cornerRadius = 30
+            heartView!.clipsToBounds = true
+            heartView!.backgroundColor = UIColor(displayP3Red: 255, green: 255, blue: 255, alpha: 0.6)
+            let constraintsHeart = [
+                heartView!.trailingAnchor.constraint(equalTo: mapView.trailingAnchor,constant: -15),
+                heartView!.bottomAnchor.constraint(equalTo: mapView.bottomAnchor,constant: -45 - sizeButton*2),
+                heartView!.heightAnchor.constraint(equalToConstant: sizeButton*2),
+                heartView!.widthAnchor.constraint(equalToConstant: sizeButton)
+            ]
+            NSLayoutConstraint.activate(constraintsHeart)
+            heartView!.heartAnimation()
+            heartView?.isHidden = true
+        }
         
         // 画面の中心を現在地にするためのボタン生成
         let nowLoc_button = UIButton()
@@ -193,19 +245,25 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         nowLoc_button.layer.shadowRadius = 5
         nowLoc_button.layer.shadowOffset = CGSize(width: 10, height: 10)
         nowLoc_button.layer.shadowOpacity = 0.6
-
+        
         mapView.addSubview(nowLoc_button)
         nowLoc_button.translatesAutoresizingMaskIntoConstraints = false
         let constraintsLocation = [
             nowLoc_button.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: 10),
-            nowLoc_button.topAnchor.constraint(equalTo: margins.topAnchor,constant: 0),
+            nowLoc_button.topAnchor.constraint(equalTo: margins.topAnchor,constant: 10),
             nowLoc_button.heightAnchor.constraint(equalToConstant: sizeButton),
             nowLoc_button.widthAnchor.constraint(equalToConstant: sizeButton)
         ]
         NSLayoutConstraint.activate(constraintsLocation)
         nowLoc_button.addTarget(self, action: #selector(self.nowLocate(_:)), for: .touchUpInside)
         
+        /*アニメーション設定*/
+        nowLoc_button.startAnimatingPressActions()
+        toCam_button.startAnimatingPressActions()
+        toCon_button.startAnimatingPressActions()
+        
         /* 警告メッセージの設定 */
+        warningMessage = UILabel()
         warningMessage.textColor = UIColor.black // 文字色(黒)
         warningMessage.backgroundColor = UIColor.white.withAlphaComponent(CGFloat(kMsgAlpha)) // 背景色(白)
         warningMessage.textAlignment = NSTextAlignment.center // 中央揃え
@@ -218,6 +276,20 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         warningMessage.adjustsFontSizeToFitWidth = true // 文字の多さによってフォントサイズを調節する
         mapView.addSubview(warningMessage)
         warningMessage.isHidden = true
+        warningMessage.translatesAutoresizingMaskIntoConstraints = false
+        var widthtWaring  = realWidth! - 170
+        if UIDevice.current.userInterfaceIdiom == .pad{
+            widthtWaring =  widthtWaring*1.5
+        }
+        let constraintsWarning = [
+            warningMessage.bottomAnchor.constraint(equalTo: view.bottomAnchor,constant: -50),
+            warningMessage.centerXAnchor.constraint(equalTo: margins.centerXAnchor,constant: 0),
+            warningMessage.heightAnchor.constraint(equalToConstant: widthtWaring/2),
+            warningMessage.widthAnchor.constraint(equalToConstant: widthtWaring)
+        ]
+        NSLayoutConstraint.activate(constraintsWarning)
+        
+        
         
         /* ピンの設定 */
         for i in 0 ..< jsonDataManager.sharedInstance.infoBox.count {
@@ -244,7 +316,15 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
             locationManager = CLLocationManager()
         }
         authorizeHealthKit()
-        testSampleQuery()
+//        testSampleQuery()
+        //        WorkoutService.shared.startWatchApp()
+        //        WorkoutService.shared.getWorkoutApp()
+    }
+    
+    func initWCSession(){
+        //        wcSession = WCSession.default
+        //        wcSession.delegate = self
+        //        wcSession.activate()
     }
     func testSampleQuery() {
         let healthStore = HKHealthStore()
@@ -252,8 +332,8 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         let today = Date()
         let startDate = Calendar.current.date(byAdding: .hour, value: -5, to: today)
         let endDate = Calendar.current.date(byAdding: .hour, value: -3, to: today)
-          
-          let predicate = HKQuery.predicateForSamples(withStart: startDate, end: endDate, options: HKQueryOptions.strictEndDate)
+        
+        let predicate = HKQuery.predicateForSamples(withStart: startDate, end: endDate, options: HKQueryOptions.strictEndDate)
         let query = HKSampleQuery.init(sampleType: sampleType!,
                                        predicate: predicate,
                                        limit: HKObjectQueryNoLimit,
@@ -264,25 +344,25 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         healthStore.execute(query)
     }
     private func authorizeHealthKit() {
-      
-      HealthKitSetupAssistant.authorizeHealthKit { (authorized, error) in
         
-        guard authorized else {
-          
-          let baseMessage = "HealthKit Authorization Failed"
-          
-          if let error = error {
-            print("\(baseMessage). Reason: \(error.localizedDescription)")
-          } else {
-            print(baseMessage)
-          }
-          
-          return
+        HealthKitSetupAssistant.authorizeHealthKit { (authorized, error) in
+            
+            guard authorized else {
+                
+                let baseMessage = "HealthKit Authorization Failed"
+                
+                if let error = error {
+                    print("\(baseMessage). Reason: \(error.localizedDescription)")
+                } else {
+                    print(baseMessage)
+                }
+                
+                return
+            }
+            
+            print("HealthKit Successfully Authorized.")
         }
         
-        print("HealthKit Successfully Authorized.")
-      }
-      
     }
     
     /* 画面が表示される直前 */
@@ -290,10 +370,13 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         
         super.viewWillAppear(animated)
         
+        WorkoutService.shared.delegate = self
+        
         for i in 0 ..< jsonDataManager.sharedInstance.warnBox.count {
             if(jsonDataManager.sharedInstance.warnBox[i].lat == nil){
                 continue
             }
+            jsonDataManager.sharedInstance.warnBox[i].isFullRange = false
             osmWarnBox.append(MGLTagData())
             warnPinView.append(MGLAnnotationImage())
             polygon.append(MGLPolygon())
@@ -307,25 +390,23 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         mapView.delegate = self
         
         /* 現在地の取得を開始 */
-        if CheckReachability(hostname: "www") {
-            if CLLocationManager.authorizationStatus() == .authorizedAlways || CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
-                locationManager.delegate = self
-                locationManager.startUpdatingLocation() // GPSの使用を開始する
-                locationManager.desiredAccuracy = kCLLocationAccuracyBest // 精度を最高精度にする
-            }
+        
+        if CLLocationManager.authorizationStatus() == .authorizedAlways || CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
+            locationManager.delegate = self
+            locationManager.startUpdatingLocation() // GPSの使用を開始する
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest // 精度を最高精度にする
         }
         
         changeMapBut2.addTarget(self, action: #selector(self.changeMB(_:)), for: .touchUpInside)
         gisInfoBut.addTarget(self, action: #selector(self.fetchGISInfo(_:)), for: .touchUpInside)
+        activeBut.addTarget(self, action: #selector(self.showActiveWorkout(_:)), for: .touchUpInside)
         
         motionManager.magnetometerUpdateInterval = 0.1 // 加速度センサを取得する間隔
         
         // 画面の中心をユーザーの現在地にする
-        if CheckReachability(hostname: "www") {
-            if CLLocationManager.authorizationStatus() == .authorizedAlways || CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
-                runAfterDelay(1.5) {
-                    self.mapView.setCenter((self.locationManager.location?.coordinate)!, zoomLevel: 16.5, animated: true)
-                }
+        if CLLocationManager.authorizationStatus() == .authorizedAlways || CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
+            runAfterDelay(1.5) {
+                self.mapView.setCenter((self.locationManager.location?.coordinate)!, zoomLevel: 16.5, animated: true)
             }
         }
         
@@ -338,12 +419,10 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         }
         
         update() // 災害情報を更新する
-        // kUpdateWarn秒に1回update()を発火させる
-        if updateTimer == nil {
-//            DispatchQueue.global(qos: .back).async {
-                self.updateTimer = Timer.scheduledTimer(timeInterval: kUpdateWarn, target: self, selector: #selector(osmViewController.update), userInfo: nil, repeats: true)
-//                RunLoop.current.run()
-//            }
+        self.updateTimer = Timer.scheduledTimer(timeInterval: kUpdateWarn, target: self, selector: #selector(osmViewController.update), userInfo: nil, repeats: true)
+        
+        if  let heartView = self.heartView {
+            heartView.heartAnimation()
         }
     }
     
@@ -370,13 +449,27 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
                 self.mapView.removeAnnotation(annotation)
             }
         }
-       
+        if audioPlayerNear.isPlaying == true {
+            audioPlayerNear.stop()
+        }
+        if audioPlayerIntr.isPlaying == true {
+            audioPlayerIntr.stop()
+        }
+        if vibration.isVibration == true {
+            vibration.vibStop()
+        }
         changeMapBut2.removeTarget(self, action: #selector(self.changeMB(_:)), for: .touchUpInside)
         gisInfoBut.removeTarget(self, action: #selector(self.fetchGISInfo(_:)), for: .touchUpInside)
+        activeBut.removeTarget(self, action: #selector(self.showActiveWorkout(_:)), for: .touchUpInside)
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        heartView?.heartAnimation()
     }
     // MARK:- デリゲート-MKMapViewDelegate
     
@@ -385,11 +478,11 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
      * 拡大縮小に合わせて画像を張り替える
      */
     func mapView(_ mapView: MGLMapView, regionDidChangeAnimated animated: Bool) {
-        //userLat = self.mapView.centerCoordinate.latitude
-         //userLon = self.mapView.centerCoordinate.longitude
-//        DispatchQueue(label: "scalingImage").async {
-            self.scalingImage()
-//        }
+        userLat = self.mapView.centerCoordinate.latitude
+        userLon = self.mapView.centerCoordinate.longitude
+        //        DispatchQueue(label: "scalingImage").async {
+        self.scalingImage()
+        //        }
         
     }
     func mapView(_ mapView: MGLMapView, viewFor annotation: MGLAnnotation) -> MGLAnnotationView? {
@@ -456,46 +549,46 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
     /// - Parameters:
     ///   - mapView: mapView
     ///   - style: style
-//    func mapView(_ mapView: MGLMapView, didFinishLoading style: MGLStyle) {
-//        // Add a new raster source and layer.
-////        let source = MGLRasterTileSource(identifier: "darkmatter", tileURLTemplates: [GisList.sharedGis.list[0].server], options: [ .tileSize: 128 ])
-////        print(GisList.sharedGis.list[0].name)
-////        let rasterLayer = MGLRasterStyleLayer(identifier: "darkmatter", source: source)
-////
-////        rasterLayer.rasterOpacity = NSExpression(forConstantValue: 0.8)
-////        mapView.style?.addSource(source)
-////        if let layer = mapView.style?.layer(withIdentifier: "darkmatter") {
-////            mapView.style?.insertLayer(rasterLayer, above: layer)
-////            self.rasterLayer = rasterLayer
-////        }else{
-////            mapView.style?.insertLayer(rasterLayer, at: 10)
-////        }
-////        if(gisDisplayMode != gisMode.gis) {
-////            mapView.style?.layer(withIdentifier: "darkmatter")?.isVisible = false
-////        }
-//
-//    }
+    //    func mapView(_ mapView: MGLMapView, didFinishLoading style: MGLStyle) {
+    //        // Add a new raster source and layer.
+    ////        let source = MGLRasterTileSource(identifier: "darkmatter", tileURLTemplates: [GisList.sharedGis.list[0].server], options: [ .tileSize: 128 ])
+    ////        print(GisList.sharedGis.list[0].name)
+    ////        let rasterLayer = MGLRasterStyleLayer(identifier: "darkmatter", source: source)
+    ////
+    ////        rasterLayer.rasterOpacity = NSExpression(forConstantValue: 0.8)
+    ////        mapView.style?.addSource(source)
+    ////        if let layer = mapView.style?.layer(withIdentifier: "darkmatter") {
+    ////            mapView.style?.insertLayer(rasterLayer, above: layer)
+    ////            self.rasterLayer = rasterLayer
+    ////        }else{
+    ////            mapView.style?.insertLayer(rasterLayer, at: 10)
+    ////        }
+    ////        if(gisDisplayMode != gisMode.gis) {
+    ////            mapView.style?.layer(withIdentifier: "darkmatter")?.isVisible = false
+    ////        }
+    //
+    //    }
     var light: MGLLight!
     func mapView(_ mapView: MGLMapView, didFinishLoading style: MGLStyle) {
-     
-    // Add a MGLFillExtrusionStyleLayer.
-//    addFillExtrusionLayer(style: style)
-     
-    // Create an MGLLight object.
-    light = MGLLight()
-     
-    // Create an MGLSphericalPosition and set the radial, azimuthal, and polar values.
-    // Radial : Distance from the center of the base of an object to its light. Takes a CGFloat.
-    // Azimuthal : Position of the light relative to its anchor. Takes a CLLocationDirection.
-    // Polar : The height of the light. Takes a CLLocationDirection.
-    let position = MGLSphericalPositionMake(5, 180, 80)
-    light.position = NSExpression(forConstantValue: NSValue(mglSphericalPosition: position))
-     
-    // Set the light anchor to the map and add the light object to the map view's style. The light anchor can be the viewport (or rotates with the viewport) or the map (rotates with the map). To make the viewport the anchor, replace `map` with `viewport`.
-    light.anchor = NSExpression(forConstantValue: "map")
-    style.light = light
+        
+        // Add a MGLFillExtrusionStyleLayer.
+        //    addFillExtrusionLayer(style: style)
+        
+        // Create an MGLLight object.
+        light = MGLLight()
+        
+        // Create an MGLSphericalPosition and set the radial, azimuthal, and polar values.
+        // Radial : Distance from the center of the base of an object to its light. Takes a CGFloat.
+        // Azimuthal : Position of the light relative to its anchor. Takes a CLLocationDirection.
+        // Polar : The height of the light. Takes a CLLocationDirection.
+        let position = MGLSphericalPositionMake(5, 180, 80)
+        light.position = NSExpression(forConstantValue: NSValue(mglSphericalPosition: position))
+        
+        // Set the light anchor to the map and add the light object to the map view's style. The light anchor can be the viewport (or rotates with the viewport) or the map (rotates with the map). To make the viewport the anchor, replace `map` with `viewport`.
+        light.anchor = NSExpression(forConstantValue: "map")
+        style.light = light
     }
-     
+    
     func addFillExtrusionLayer(style: MGLStyle) {
         // Access the Mapbox Streets source and use it to create a `MGLFillExtrusionStyleLayer`. The source identifier is `composite`. Use the `sources` property on a style to verify source identifiers.
         let source = style.source(withIdentifier: "composite")!
@@ -551,8 +644,9 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
                     warnPinView[i].image = makeTappedLabel(i, size: Double(newsize))
                     let newImage = makeTappedLabel(i, size: Double(newsize))
                     
-                    jsonDataManager.sharedInstance.warnBox[i].pinImage = getResizeImage(newImage, newHeight: kTagSize)
-                    jsonDataManager.sharedInstance.warnBox[i].expandImage = getResizeImage(newImage, newHeight: kTagSize)
+                    let image = getResizeImage(newImage, newHeight: kTagSize)
+                    jsonDataManager.sharedInstance.warnBox[i].pinImage = image
+                    jsonDataManager.sharedInstance.warnBox[i].expandImage = image
                     changeImage(jsonDataManager.sharedInstance.warnBox[i], MGLtag: osmWarnBox[i], newsize: CGFloat(newsize))
                     
                     break
@@ -564,11 +658,11 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
             cannotTouchView.removeFromSuperview()
             return
         }
-//        if UIDevice.current.userInterfaceIdiom == .phone {
-//            self.detailview = detailView(frame: CGRect(x: screenWidth * 0.1, y: screenWidth * 0.02, width: screenWidth * 0.8, height: screenHeight * 0.9))
-//        } else if UIDevice.current.userInterfaceIdiom == .pad {
-//            self.detailview = detailView(frame: CGRect(x: screenWidth * 0.1, y: screenWidth * 0.1, width: screenWidth * 0.8, height: screenHeight * 0.8))
-//        }
+        //        if UIDevice.current.userInterfaceIdiom == .phone {
+        //            self.detailview = detailView(frame: CGRect(x: screenWidth * 0.1, y: screenWidth * 0.02, width: screenWidth * 0.8, height: screenHeight * 0.9))
+        //        } else if UIDevice.current.userInterfaceIdiom == .pad {
+        //            self.detailview = detailView(frame: CGRect(x: screenWidth * 0.1, y: screenWidth * 0.1, width: screenWidth * 0.8, height: screenHeight * 0.8))
+        //        }
         var widthView = [screenWidth,screenHeight].min()! - 10
         var heightView = widthView/1.3
         if UIDevice.current.userInterfaceIdiom == .pad {
@@ -576,7 +670,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
             heightView = widthView/1.5
         }
         self.detailCustomIphone = DetailViewIphone(frame: CGRect(x: 0, y: 0, width: widthView, height: heightView))
-  
+        
         detailCustomIphone.translatesAutoresizingMaskIntoConstraints = false
         detailCustomIphone.setView()
         self.detailCustomIphone.delegate = self
@@ -585,7 +679,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         background.backgroundColor = UIColor.gray
         backgroundView = background
         backgroundView.isUserInteractionEnabled = true
-
+        
         
         self.detailCustomIphone.deleteButton.addTarget(self, action: #selector(osmViewController.onClick_detailBackground(_:)), for: .touchUpInside)
         backgroundView.isUserInteractionEnabled = true
@@ -622,7 +716,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
     func mapView(_ mapView: MGLMapView, fillColorForPolygonAnnotation annotation: MGLPolygon) -> UIColor {
         
         switch jsonDataManager.sharedInstance.warnBox[polyNum].riskType {
-            
+        
         case 0: // 火災のとき：赤色
             return UIColor(red: 0.545, green: 0.020, blue: 0.220, alpha: kFill)
             
@@ -656,11 +750,11 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         // 設定によって制限されているとき、位置情報の取得を拒否しているとき
         case .restricted, .denied:
             manager.stopUpdatingLocation() // GPSの取得を停止する
-            
+        
         // 既に位置情報の取得が許可されているとき
         case .authorizedWhenInUse, .authorizedAlways:
             manager.startUpdatingLocation() // GPSの取得を開始する
-            
+        
         default: break
         }
     }
@@ -672,8 +766,8 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
      */
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
-        userLat = (locationManager.location?.coordinate.latitude)!
-        userLon = (locationManager.location?.coordinate.longitude)!
+        //        userLat = (locationManager.location?.coordinate.latitude)!
+        //        userLon = (locationManager.location?.coordinate.longitude)!
         
     }
     
@@ -692,11 +786,14 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
     // MARK:- configViewDelegate
     
     func configViewFinish() {
+        mapView.allowsScrolling = true
+        mapView.allowsZooming = true
+        self.warningView.backgroundColor = UIColor.clear
         configview?.delegate = nil
         configview?.removeFromSuperview()
     }
-
- 
+    
+    
     
     /*
      * タップされたタグを赤色にする
@@ -719,9 +816,9 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         
         // Context 終了
         UIGraphicsEndImageContext()
-        
-        jsonDataManager.sharedInstance.infoBox[index].pinImage = getResizeImage(newImage!, newHeight: kTagSize)
-        jsonDataManager.sharedInstance.infoBox[index].expandImage = getResizeImage(newImage!, newHeight: kTagSize)
+        let image =  getResizeImage(newImage!, newHeight: kTagSize)
+        jsonDataManager.sharedInstance.infoBox[index].pinImage = image
+        jsonDataManager.sharedInstance.infoBox[index].expandImage = image
         
         changeImage(jsonDataManager.sharedInstance.infoBox[index], MGLtag: osmInfoBox[index], newsize: CGFloat(kTagNewSize))
     }
@@ -752,13 +849,13 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
                     
                     if jsonDataManager.sharedInstance.warnBox[i].expandImage != nil {
                         let han: Double = circleRadius[i] * self.kDia + 0.1
-                        var newsize: Double = Double(screenWidth) * han / Double(zoomlv)
-                        if newsize > Double(screenWidth) / 2 {
-                            newsize = Double(screenWidth) / 2
+                        var newsize: Double = Double(realWidth!) * han / Double(zoomlv)
+                        if newsize > Double(realWidth!) / 2 {
+                            newsize = Double(realWidth!) / 2
                         }
-//                        DispatchQueue.main.async {
-                            self.changeImage(jsonDataManager.sharedInstance.warnBox[i], MGLtag: self.osmWarnBox[i], newsize: CGFloat(newsize))
-//                        1}
+                        //                        DispatchQueue.main.async {
+                        self.changeImage(jsonDataManager.sharedInstance.warnBox[i], MGLtag: self.osmWarnBox[i], newsize: CGFloat(newsize))
+                        //                        1}
                     }
                 }
             }
@@ -795,8 +892,9 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
     func updatePin(_ index: Int) {
         
         let labelImg = makeLabel(index, inforType: kWarn) // UILabelをUIImageに変換する
-        jsonDataManager.sharedInstance.warnBox[index].pinImage = getPinImage(labelImg, inforType: kWarn)
-        jsonDataManager.sharedInstance.warnBox[index].expandImage = getPinImage(labelImg, inforType: kWarn)
+        let image = getPinImage(labelImg, inforType: kWarn)
+        jsonDataManager.sharedInstance.warnBox[index].pinImage = image
+        jsonDataManager.sharedInstance.warnBox[index].expandImage = image
         
         let beki: Int = Int(27 - self.mapView.zoomLevel)
         let zoomlv: CGFloat = pow(2, CGFloat(beki))
@@ -840,6 +938,27 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         self.present(vc, animated: true, completion: nil)
     }
     
+    /*
+     * ワークアウト開始
+     */
+    @objc internal func onClick_StartWorkout(_ sender: UIButton) {
+        playButtonSound()
+        if sender.isSelected {
+            WorkoutService.shared.startWatchApp(completion: {
+                _ in
+                WorkoutService.shared.send(key: "message", message: "start")
+                DispatchQueue.main.async {
+                    self.heartView?.isHidden = false
+                    self.heartView?.heartRateLabel.text = "--"
+                }
+            })
+        }else {
+            WorkoutService.shared.endWorkout()
+            heartView?.isHidden = true
+        }
+        
+        
+    }
     
     /*
      * 設定画面を開く
@@ -859,9 +978,10 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         self.configview = ConfigView(frame: CGRect(x:0, y: 0, width: 300, height: 300))
         self.configview?.layer.cornerRadius = 20
         self.configview?.clipsToBounds = true
+        self.configview?.delegate = self
         self.warningView.backgroundColor = UIColor.clear
-      
-//        self.mapView.sendSubviewToBack(self.configview!)
+        
+        //        self.mapView.sendSubviewToBack(self.configview!)
         self.mapView.addSubview(backgroundView)
         backgroundView.translatesAutoresizingMaskIntoConstraints = false
         let constraints = [
@@ -871,7 +991,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
             backgroundView.bottomAnchor.constraint(equalTo: view.bottomAnchor,constant: 0),
         ]
         NSLayoutConstraint.activate(constraints)
-//        self.view.bringSubviewToFront(backgroundView)
+        //        self.view.bringSubviewToFront(backgroundView)
         self.mapView.addSubview(self.configview!)
         self.configview?.translatesAutoresizingMaskIntoConstraints = false
         let constraintsMap = [
@@ -881,20 +1001,20 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
             self.configview!.widthAnchor.constraint(equalToConstant: 300)
         ]
         NSLayoutConstraint.activate(constraintsMap)
-//        UIView.animate(
-//            withDuration: 0.1,
-//            delay:0.0,
-//            options : UIView.AnimationOptions.curveEaseIn,
-//            animations : {
-//                self.warningView?.center = location
-//                self.mapView.center = location
-//        },
-//            completion: {
-//                (value: Bool) in
-//
-//
-//        }
-//        )
+        //        UIView.animate(
+        //            withDuration: 0.1,
+        //            delay:0.0,
+        //            options : UIView.AnimationOptions.curveEaseIn,
+        //            animations : {
+        //                self.warningView?.center = location
+        //                self.mapView.center = location
+        //        },
+        //            completion: {
+        //                (value: Bool) in
+        //
+        //
+        //        }
+        //        )
     }
     
     /*
@@ -967,12 +1087,24 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         }
         alertController.addAction(cancel)
         
-
+        
         
         // UIAlertControllerの起動
         present(alertController, animated: true, completion: nil)
     }
-
+    /*
+     * 設定画面の「最近アクティビティ」をタップした際に
+     *　アクティビティ情報を取得する
+     */
+    @objc internal func showActiveWorkout(_ sender: UIButton) {
+        closeConfigBackground()
+        let view = UIStoryboard(name: "WorkoutsView", bundle: .main)
+        if let vc = view.instantiateInitialViewController() as? WorkoutViewController {
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true, completion: nil)
+        }
+    }
+    
     
     func saveGisDatatoFile(json:JSON){
         
@@ -993,7 +1125,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
     //var rasterLayer : MGLRasterStyleLayer
     func changeLayer(server:String){
         if let layermap = mapView.style?.layer(withIdentifier: rasterLayer?.identifier ?? "") {
-             mapView.style?.removeLayer(layermap)
+            mapView.style?.removeLayer(layermap)
         }
         
         if let sourcemap = mapView.style?.source(withIdentifier: source?.identifier ?? ""){
@@ -1031,12 +1163,12 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
             animations : {
                 self.warningView?.center = location
                 self.mapView.center = location
-        },
+            },
             completion: {
                 (value: Bool) in
                 self.configview?.removeFromSuperview()
                 ConfigView().deleteConfigDisplay()
-        }
+            }
         )
     }
     
@@ -1061,7 +1193,6 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         detailCustomIphone.deleteDetailView()
         detailCustomIpad.removeFromSuperview()
         detailCustomIpad.deleteDetailView()
-
     }
     
     func detailViewIphoneFinish() {
@@ -1070,7 +1201,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         detailCustomIphone.translatesAutoresizingMaskIntoConstraints = false
         detailCustomIphone.removeFromSuperview()
         detailCustomIphone.deleteDetailView()
-
+        
     }
     func detailViewIpadFinish() {
         updatePinText()
@@ -1078,7 +1209,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         detailCustomIpad.translatesAutoresizingMaskIntoConstraints = false
         detailCustomIpad.removeFromSuperview()
         detailCustomIpad.deleteDetailView()
-
+        
     }
     
     func updatePinText(){
@@ -1091,9 +1222,9 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
                 if newsize > Double(screenWidth) / 2 {
                     newsize = Double(screenWidth) / 2
                 }
-                
-                jsonDataManager.sharedInstance.warnBox[pinData.pinNum].pinImage = getResizeImage(makeLabel(pinData.pinNum, inforType: kWarn), newHeight: CGFloat(newsize))
-                jsonDataManager.sharedInstance.warnBox[pinData.pinNum].expandImage = getResizeImage(makeLabel(pinData.pinNum, inforType: kWarn), newHeight: CGFloat(newsize))
+                let image = getResizeImage(makeLabel(pinData.pinNum, inforType: kWarn), newHeight: CGFloat(newsize))
+                jsonDataManager.sharedInstance.warnBox[pinData.pinNum].pinImage = image
+                jsonDataManager.sharedInstance.warnBox[pinData.pinNum].expandImage = image
                 self.changeImage(jsonDataManager.sharedInstance.warnBox[pinData.pinNum], MGLtag: self.osmWarnBox[pinData.pinNum], newsize: CGFloat(newsize))
                 
             } else if pinData.inforType == kInfo {
@@ -1112,6 +1243,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
     @objc internal func nowLocate(_ sender: UIButton) {
         playButtonSound()
         self.mapView.setCenter(CLLocationCoordinate2D(latitude: self.mapView.userLocation!.coordinate.latitude, longitude: self.mapView.userLocation!.coordinate.longitude), zoomLevel: 16.5, animated: true)
+        
     }
     
     /*
@@ -1164,7 +1296,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
             }
             // 過去の災害
             if nowTime.compare(jsonDataManager.sharedInstance.warnBox[i].stop) == ComparisonResult.orderedDescending {
-
+                
                 //stopの時刻を過ぎたから、災害の円や文字を消す
                 self.mapView.removeAnnotation(self.polygon[i]) // 円を消す
                 self.mapView.alpha = kMapNormalAlpha
@@ -1172,12 +1304,18 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
                 // cameraViewController().warningView.backgroundColor = UIColor.clear // AR画面の警告モードをやめる
                 
                 // 現在災害発生中
-            } else if jsonDataManager.sharedInstance.warnBox[i].stop.compare(nowTime) == ComparisonResult.orderedDescending && nowTime.compare(jsonDataManager.sharedInstance.warnBox[i].start) == ComparisonResult.orderedDescending {
+            } else if nowTime.compare(jsonDataManager.sharedInstance.warnBox[i].stop) == ComparisonResult.orderedAscending && nowTime.compare(jsonDataManager.sharedInstance.warnBox[i].start) == ComparisonResult.orderedDescending {
                 
-                updatePin(i)
+//                updatePin(i)
                 
                 let Sn = Date().timeIntervalSince(jsonDataManager.sharedInstance.warnBox[i].start) / 60 * kUpdateWarn // 開始時刻(start)と現在時刻(now)の差
-                makeCircle(i, startNow: Sn)
+                if !jsonDataManager.sharedInstance.warnBox[i].isFullRange {
+                    if CLLocationDistance(Sn) > CLLocationDistance(jsonDataManager.sharedInstance.warnBox[i].range) {
+                        jsonDataManager.sharedInstance.warnBox[i].isFullRange = true
+                    }
+                    makeCircle(i, startNow: Sn)
+                    updatePin(i)
+                }
                 
                 // 警告タグの範囲を更新
                 let beki: Int = Int(27 - self.mapView.zoomLevel)
@@ -1189,6 +1327,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
                 }
                 
                 box.append(i)
+               
                 jsonDataManager.sharedInstance.warnBox[i].distance = calcDistance(jsonDataManager.sharedInstance.warnBox[i].lat, lon: jsonDataManager.sharedInstance.warnBox[i].lon, uLat: userLat, uLon: userLon)
                 if jsonDataManager.sharedInstance.warnBox[i].distance - Int(circleRadius[i]) < 0 {
                     let tagdata = jsonDataManager.sharedInstance.warnBox[i]
@@ -1220,10 +1359,10 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         } else {
             updateWarningView()
             // 警告メッセージのタイマーを開始させる
-             warningTimer = Timer.scheduledTimer(timeInterval: kUpdateMM, target: self, selector: #selector(osmViewController.updateWarningView), userInfo: nil, repeats: true)
+            warningTimer = Timer.scheduledTimer(timeInterval: kUpdateMM, target: self, selector: #selector(osmViewController.updateWarningView), userInfo: nil, repeats: true)
         }
     }
-
+    
     /*
      * 警告メッセージと警告モードを表示する
      */
@@ -1247,7 +1386,6 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
             warningView.isHidden = false
             warningMessage.isHidden = false
             warningMessage.text = warningEnter[warningCount].message2 // 警告メッセージ
-            Notification.showNotification(tilte: "警告", message: warningEnter[warningCount].message2)
             
             switch warningEnter[warningCount].riskType {
             case 0: // 火災：赤色
@@ -1257,7 +1395,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
             case 1: // 浸水：青色
                 warningView.frame = CGRect(x: 0.0, y: CGFloat(screenHeight * 0.75), width: CGFloat(screenWidth), height: CGFloat(screenHeight / 4))
                 warningView.backgroundColor = UIColor(red: 0.000, green: 0.000, blue: 0.900, alpha: 1.0)
-    
+                
             case 2: // 土砂崩れ：茶色
                 warningView.frame = CGRect(x: 0.0, y: CGFloat(screenHeight * 0.75), width: CGFloat(screenWidth), height: CGFloat(screenHeight / 4))
                 warningView.backgroundColor = UIColor(red: 0.800, green: 0.400, blue: 0.000, alpha: 1.0)
@@ -1295,8 +1433,13 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         if(warningCount >= warningAllCount){
             warningCount = 0
         }
+        //            Notification.showNotification(tilte: "警告", message: warningEnter[warningCount].message2)
+        if let message = warningMessage.text {
+            WorkoutService.shared.send(key: "notification", message:  message)
+        }
+        
     }
-
+    
     
     /*
      * ネットワークに接続されているか確認する
@@ -1313,7 +1456,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
     }
     
     func playButtonSound(){
-
+        
         if let soundURL = Bundle.main.url(forResource: "click", withExtension: "wav") {
             
             do {
@@ -1351,3 +1494,27 @@ extension UIView {
         return capturedImage
     }
 }
+extension osmViewController:WorkoutServiceDelegate {
+    func dataFromWatch(data: WorkoutData) {
+        if let heartRate = data.heart {
+            DispatchQueue.main.async {
+                self.heartView?.heartAnimation()
+                self.heartView?.heartRateLabel.text = heartRate
+            }
+        }
+    }
+    
+    func excuteFromWatch(active: Bool) {
+        DispatchQueue.main.async {
+            self.toWorkout_button.setClicked(isSelect: active)
+            self.playButtonSound()
+            if active {
+                self.heartView?.isHidden = false
+            }else {
+                self.heartView?.isHidden = true
+            }
+        }
+        
+    }
+}
+

@@ -44,6 +44,7 @@ class TagData {
     var message1: String!     // 警告範囲に近づいてきた時のメッセージ
     var message2: String!     // 警告範囲に侵入した時のメッセージ
     var riskType: Int!        // 災害の種類(0:火災,1:浸水,2:落橋,3:土砂崩れ)
+    var isFullRange:Bool = false // 災害の範囲拡大フラグ
 }
 
 
@@ -336,6 +337,9 @@ let kMovie = "movie" // 動画
 let screenWidth = UIScreen.main.bounds.size.width   // 実機の画面の横の長さ
 let screenHeight = UIScreen.main.bounds.size.height // 実機の画面の縦の長さ
 
+let realWidth = [screenWidth,screenHeight].min()
+let realHeight = [screenWidth,screenHeight].max()
+
 let dWid = screenWidth * 0.8
 let dHei = screenHeight * 0.8
 
@@ -387,6 +391,7 @@ var backgroundView = UIImageView(frame: CGRect.init(x: 0, y: 0, width: screenWid
 let changeMapBut2 = UIButton(frame: CGRect.init(x: 0, y: 0, width: screenWidth / 3, height: screenHeight / 6))
 //let changeMapBut3 = UIButton(frame: CGRect.init(x: 0, y: 0, width: screenWidth / 4, height: screenHeight / 8))
 let gisInfoBut = UIButton(frame: CGRect.init(x: 0, y: 0, width: screenWidth / 3, height: screenHeight / 6))
+let activeBut = UIButton(frame: CGRect.init(x: 0, y: 0, width: screenWidth / 3, height: screenHeight / 6))
 
 /* GIS表示モード */
 enum gisMode: Int {

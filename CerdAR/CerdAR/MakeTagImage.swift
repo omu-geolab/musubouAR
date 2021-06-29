@@ -52,7 +52,6 @@ func getLabelText(_ num: Int, inforType: String) -> String {
         } else { // カメラ画面の時は名称と距離
             text = jsonDataManager.sharedInstance.infoBox[num].name + "\n" + String(jsonDataManager.sharedInstance.infoBox[num].distance) + "m"
         }
-        
         // 警告タグ
     } else if inforType == kWarn {
          

@@ -1,37 +1,157 @@
-/**
- * Copyright (c) 2017 Razeware LLC
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in
- * all copies or substantial portions of the Software.
- *
- * Notwithstanding the foregoing, you may not use, copy, modify, merge, publish,
- * distribute, sublicense, create a derivative work, and/or sell copies of the
- * Software in any work that is designed, intended, or marketed for pedagogical or
- * instructional purposes related to programming, coding, application development,
- * or information technology.  Permission for such use, copying, modification,
- * merger, publication, distribution, sublicensing, creation of derivative works,
- * or sale is expressly withheld.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
- * THE SOFTWARE.
- */
 
 import HealthKit
 
 class HealthKitSetupAssistant {
-  
+    static let healthKitCharacteristicsTypes: Set<HKCharacteristicType> = Set(arrayLiteral:
+        HKObjectType.characteristicType(forIdentifier: HKCharacteristicTypeIdentifier.dateOfBirth)!,
+        HKObjectType.characteristicType(forIdentifier: HKCharacteristicTypeIdentifier.biologicalSex)!,
+        HKObjectType.characteristicType(forIdentifier: HKCharacteristicTypeIdentifier.bloodType)!,
+        HKObjectType.characteristicType(forIdentifier: HKCharacteristicTypeIdentifier.fitzpatrickSkinType)!
+    )
+    
+    static let healthKitCategoryTypes: Set<HKCategoryType> = Set(arrayLiteral:
+        HKObjectType.categoryType(forIdentifier: HKCategoryTypeIdentifier.sleepAnalysis)!,
+        HKObjectType.categoryType(forIdentifier: HKCategoryTypeIdentifier.cervicalMucusQuality)!,
+        HKObjectType.categoryType(forIdentifier: HKCategoryTypeIdentifier.ovulationTestResult)!,
+        HKObjectType.categoryType(forIdentifier: HKCategoryTypeIdentifier.menstrualFlow)!,
+        HKObjectType.categoryType(forIdentifier: HKCategoryTypeIdentifier.intermenstrualBleeding)!,
+        HKObjectType.categoryType(forIdentifier: HKCategoryTypeIdentifier.sexualActivity)!
+    )
+    
+    // not writable
+    static let healthKitCategoryLockedTypes: Set<HKCategoryType> = Set(arrayLiteral:
+        HKObjectType.categoryType(forIdentifier: HKCategoryTypeIdentifier.appleStandHour)!
+    )
+    
+    static let healthKitQuantityTypes: Set<HKQuantityType> = Set(arrayLiteral:
+        // Body Measurements
+        HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.bodyMassIndex)!,
+        HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.bodyFatPercentage)!,
+        HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.height)!,
+        HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.bodyMass)!,
+        HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.leanBodyMass)!,
+        // Fitness
+        HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.stepCount)!,
+        HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.distanceWalkingRunning)!,
+        HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.walkingSpeed)!,
+        HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.walkingStepLength)!,
+//
+        HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.distanceCycling)!,
+        HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.basalEnergyBurned)!,
+        HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.activeEnergyBurned)!,
+        HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.flightsClimbed)!,
+        // Vitals
+        HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.heartRate)!,
+        HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.bodyTemperature)!,
+        HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.basalBodyTemperature)!,
+        HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.bloodPressureSystolic)!,
+        HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.bloodPressureDiastolic)!,
+        HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.respiratoryRate)!,
+        // Results
+        HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.oxygenSaturation)!,
+        HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.peripheralPerfusionIndex)!,
+        HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.bloodGlucose)!,
+        HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.numberOfTimesFallen)!,
+        HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.electrodermalActivity)!,
+        HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.inhalerUsage)!,
+        HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.bloodAlcoholContent)!,
+        HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.forcedVitalCapacity)!,
+        HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.forcedExpiratoryVolume1)!,
+        HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.peakExpiratoryFlowRate)!,
+        // Nutrition
+        HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryFatTotal)!,
+        HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryFatPolyunsaturated)!,
+        HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryFatMonounsaturated)!,
+        HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryFatSaturated)!,
+        HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryCholesterol)!,
+        HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietarySodium)!,
+        HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryCarbohydrates)!,
+        HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryFiber)!,
+        HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietarySugar)!,
+        HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryEnergyConsumed)!,
+        HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryProtein)!,
+        HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryVitaminA)!,
+        HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryVitaminB6)!,
+        HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryVitaminB12)!,
+        HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryVitaminC)!,
+        HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryVitaminD)!,
+        HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryVitaminE)!,
+        HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryVitaminK)!,
+        HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryCalcium)!,
+        HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryIron)!,
+        HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryThiamin)!,
+        HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryRiboflavin)!,
+        HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryNiacin)!,
+        HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryFolate)!,
+        HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryBiotin)!,
+        HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryPantothenicAcid)!,
+        HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryPhosphorus)!,
+        HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryIodine)!,
+        HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryMagnesium)!,
+        HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryZinc)!,
+        HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietarySelenium)!,
+        HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryCopper)!,
+        HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryManganese)!,
+        HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryChromium)!,
+        HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryMolybdenum)!,
+        HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryChloride)!,
+        HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryPotassium)!,
+        HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryCaffeine)!,
+        HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryWater)!,
+        HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.uvExposure)!,
+        HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.heartRateVariabilitySDNN)!,
+        HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.restingHeartRate)!
+    )
+    
+    //not writable
+    static let healthKitQuantityLockedTypes: Set<HKQuantityType> = Set(arrayLiteral:
+                HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.nikeFuel)!,
+                HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.walkingHeartRateAverage)!
+    )
+    
+    static let healthKitCorrelationTypes: Set<HKCorrelationType> = Set(arrayLiteral:
+        HKObjectType.correlationType(forIdentifier: HKCorrelationTypeIdentifier.bloodPressure)!,
+        HKObjectType.correlationType(forIdentifier: HKCorrelationTypeIdentifier.food)!
+    )
+    
+    static let workoutType = HKObjectType.workoutType()
+    static let heartbeat = HKSeriesType.heartbeat()
+    static let workoutRoute = HKSeriesType.workoutRoute()
+
+    static func allTypes() -> Set<HKObjectType> {
+        var allTypes : Set<HKObjectType> = Set()
+        allTypes.formUnion((healthKitCharacteristicsTypes as Set<HKObjectType>?)!)
+        allTypes.formUnion((healthKitQuantityTypes as Set<HKObjectType>?)!)
+        allTypes.formUnion((healthKitCategoryTypes as Set<HKObjectType>?)!)
+        allTypes.formUnion((healthKitCorrelationTypes as Set<HKObjectType>?)!)
+        allTypes.insert(workoutType)
+        allTypes.insert(heartbeat)
+        allTypes.insert(workoutRoute)
+        return allTypes
+    }
+    
+    static func authorizationReadTypes() -> Set<HKObjectType> {
+        var authTypes : Set<HKObjectType> = Set()
+        authTypes.formUnion((healthKitCharacteristicsTypes as Set<HKObjectType>?)!)
+        authTypes.formUnion((healthKitQuantityTypes as Set<HKObjectType>?)!)
+        authTypes.formUnion((healthKitQuantityLockedTypes as Set<HKObjectType>?)!)
+        authTypes.formUnion((healthKitCategoryTypes as Set<HKObjectType>?)!)
+        authTypes.formUnion((healthKitCategoryLockedTypes as Set<HKObjectType>?)!)
+        authTypes.insert(workoutType)
+        authTypes.insert(heartbeat)
+        authTypes.insert(workoutRoute)
+        return authTypes
+    }
+    
+    static func authorizationWriteTypes() -> Set<HKSampleType> {
+         var authTypes : Set<HKSampleType> = Set()
+        authTypes.formUnion((healthKitQuantityTypes as Set<HKSampleType>?)!)
+        authTypes.formUnion((healthKitCategoryTypes as Set<HKSampleType>?)!)
+        authTypes.insert(workoutType)
+        authTypes.insert(heartbeat)
+        authTypes.insert(workoutRoute)
+        return authTypes
+    }
   private enum HealthkitSetupError: Error {
     case notAvailableOnDevice
     case dataTypeNotAvailable
@@ -45,40 +165,9 @@ class HealthKitSetupAssistant {
       return
     }
     
-    //2. Prepare the data types that will interact with HealthKit
-    guard   let dateOfBirth = HKObjectType.characteristicType(forIdentifier: .dateOfBirth),
-            let bloodType = HKObjectType.characteristicType(forIdentifier: .bloodType),
-            let biologicalSex = HKObjectType.characteristicType(forIdentifier: .biologicalSex),
-            let bodyMassIndex = HKObjectType.quantityType(forIdentifier: .bodyMassIndex),
-            let height = HKObjectType.quantityType(forIdentifier: .height),
-            let bodyMass = HKObjectType.quantityType(forIdentifier: .bodyMass),
-            let activeEnergy = HKObjectType.quantityType(forIdentifier: .activeEnergyBurned),
-            let heartRate = HKObjectType.quantityType(forIdentifier: .heartRate),
-         let stepCount = HKObjectType.quantityType(forIdentifier: .stepCount)
-            else {
-        
-            completion(false, HealthkitSetupError.dataTypeNotAvailable)
-            return
-    }
-    
-    //3. Prepare a list of types you want HealthKit to read and write
-    let healthKitTypesToWrite: Set<HKSampleType> = [bodyMassIndex,
-                                                    activeEnergy,
-                                                    HKObjectType.workoutType()]
-    
-    let healthKitTypesToRead: Set<HKObjectType> = [dateOfBirth,
-                                                   heartRate,
-                                                   stepCount,
-                                                   bloodType,
-                                                   biologicalSex,
-                                                   bodyMassIndex,
-                                                   height,
-                                                   bodyMass,
-                                                   HKObjectType.workoutType()]
-    
     //4. Request Authorization
-    HKHealthStore().requestAuthorization(toShare: healthKitTypesToWrite,
-                                         read: healthKitTypesToRead) { (success, error) in
+    HKHealthStore().requestAuthorization(toShare: authorizationWriteTypes(),
+                                         read: authorizationReadTypes()) { (success, error) in
       completion(success, error)
     }
   }

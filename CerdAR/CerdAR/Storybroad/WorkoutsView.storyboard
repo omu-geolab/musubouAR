@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aHV-WO-cQC">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Workout View Controller-->
+        <scene sceneID="rzf-gr-su5">
+            <objects>
+                <viewController id="aHV-WO-cQC" customClass="WorkoutViewController" customModule="CerdAR" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ml9-KU-pTM" customClass="GradientView" customModule="CerdAR" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9O4-zq-EXY">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="最近のアクティビティ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e7T-5r-oy4">
+                                        <rect key="frame" x="8" y="0.0" width="306" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="so7-eM-6jo"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vPP-st-mYM">
+                                        <rect key="frame" x="353" y="3" width="53" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="53" id="Lci-og-RwH"/>
+                                            <constraint firstAttribute="height" constant="44" id="u5y-zc-Ybj"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="xmark" catalog="system">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="25" scale="medium" weight="light"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tapDeteleButton:" destination="aHV-WO-cQC" eventType="touchUpInside" id="5cb-bN-wiS"/>
+                                        </connections>
+                                    </button>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" indicatorStyle="black" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="Toe-s3-SzD">
+                                        <rect key="frame" x="17" y="58" width="380" height="752"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableView>
+                                </subviews>
+                                <color key="tintColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="vPP-st-mYM" firstAttribute="top" secondItem="9O4-zq-EXY" secondAttribute="top" constant="3" id="2yU-fP-Iv5"/>
+                                    <constraint firstItem="e7T-5r-oy4" firstAttribute="leading" secondItem="9O4-zq-EXY" secondAttribute="leading" constant="8" id="5YZ-sx-tZi"/>
+                                    <constraint firstAttribute="bottom" secondItem="Toe-s3-SzD" secondAttribute="bottom" constant="8" id="90A-1M-Ube"/>
+                                    <constraint firstAttribute="trailing" secondItem="vPP-st-mYM" secondAttribute="trailing" constant="8" id="An3-gO-KaD"/>
+                                    <constraint firstAttribute="trailing" secondItem="e7T-5r-oy4" secondAttribute="trailing" constant="100" id="EhZ-KP-qrT"/>
+                                    <constraint firstItem="e7T-5r-oy4" firstAttribute="top" secondItem="9O4-zq-EXY" secondAttribute="top" id="Un2-eZ-9Wi"/>
+                                    <constraint firstItem="Toe-s3-SzD" firstAttribute="top" secondItem="e7T-5r-oy4" secondAttribute="bottom" constant="8" symbolic="YES" id="VIs-Bg-3Bn"/>
+                                    <constraint firstItem="Toe-s3-SzD" firstAttribute="leading" secondItem="9O4-zq-EXY" secondAttribute="leading" constant="17" id="cci-dB-eHy"/>
+                                    <constraint firstAttribute="trailing" secondItem="Toe-s3-SzD" secondAttribute="trailing" constant="17" id="soS-Zg-2pM"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="SGG-bE-YXk"/>
+                        <color key="backgroundColor" red="0.94619541952054798" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="SGG-bE-YXk" firstAttribute="trailing" secondItem="9O4-zq-EXY" secondAttribute="trailing" id="2JB-ix-74K"/>
+                            <constraint firstItem="SGG-bE-YXk" firstAttribute="bottom" secondItem="9O4-zq-EXY" secondAttribute="bottom" id="Xjo-9h-9M5"/>
+                            <constraint firstItem="9O4-zq-EXY" firstAttribute="leading" secondItem="SGG-bE-YXk" secondAttribute="leading" id="kSN-aP-7be"/>
+                            <constraint firstItem="9O4-zq-EXY" firstAttribute="top" secondItem="SGG-bE-YXk" secondAttribute="top" id="ycT-7u-Zm7"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                <color key="value" red="0.75719964617355684" green="1" blue="0.82995558585463458" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                <color key="value" red="1" green="0.9989858240226267" blue="0.88219621912098956" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="diagonalMode" value="YES"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="startLocation">
+                                <real key="value" value="0.050000000000000003"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="endLocation">
+                                <real key="value" value="0.90000000000000002"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <connections>
+                        <outlet property="workoutListview" destination="Toe-s3-SzD" id="LKd-kl-p0Y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1dA-ec-at0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="150.72463768115944" y="82.366071428571431"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="xmark" catalog="system" width="128" height="113"/>
+    </resources>
+</document>

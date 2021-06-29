@@ -31,16 +31,17 @@ class ConfigView: UIView {
      * 設定画面の表示
      */
     func setup() {
-        let backgroundImage = UIImage(named: "info-bg")!
-        var imageView : UIImageView!
-        imageView = UIImageView(frame: self.bounds)
-        imageView.contentMode =  UIView.ContentMode.scaleAspectFill
-        imageView.image = backgroundImage
-        self.addSubview(imageView)
-
+//        let backgroundImage = UIImage(named: "info-bg")!
+//        var imageView : UIImageView!
+//        imageView = UIImageView(frame: self.bounds)
+//        imageView.contentMode =  UIView.ContentMode.scaleAspectFill
+//        imageView.image = backgroundImage
+//        self.addSubview(imageView)
+        self.backgroundColor = .white
         self.addSubview(changeMapBut2)
         self.addSubview(aboutAppBut)
         self.addSubview(gisInfoBut)
+        self.addSubview(activeBut)
         load()
     }
 
@@ -53,8 +54,6 @@ class ConfigView: UIView {
 
         
         // 「このアプリについて」ボタンの挿入(画面左上側)
-        print(screenWidth)
-        print(screenHeight)
         let height:CGFloat = 50.0
         let width:CGFloat = 200.0
         let buttonImage: UIImage = UIImage(named: "about-icon")!
@@ -64,7 +63,7 @@ class ConfigView: UIView {
         aboutAppBut.addTarget(self, action: #selector(ConfigView.onClick_aboutApp(_:)), for: .touchUpInside)
         aboutAppBut.translatesAutoresizingMaskIntoConstraints = false
         let constraintsAbout = [
-            aboutAppBut.centerYAnchor.constraint(equalTo: self.centerYAnchor,constant: -70),
+            aboutAppBut.centerYAnchor.constraint(equalTo: self.centerYAnchor,constant: -105),
             aboutAppBut.centerXAnchor.constraint(equalTo: self.centerXAnchor,constant: 0),
             aboutAppBut.heightAnchor.constraint(equalToConstant: height),
             aboutAppBut.widthAnchor.constraint(equalToConstant: width)
@@ -105,7 +104,7 @@ class ConfigView: UIView {
 //        changeMapBut2.layer.position = CGPoint(x: screenWidth / 6, y: screenHeight / 2)
         changeMapBut2.translatesAutoresizingMaskIntoConstraints = false
         let constraintsMap = [
-            changeMapBut2.centerYAnchor.constraint(equalTo: self.centerYAnchor,constant: 0),
+            changeMapBut2.centerYAnchor.constraint(equalTo: self.centerYAnchor,constant: -35),
             changeMapBut2.centerXAnchor.constraint(equalTo: self.centerXAnchor,constant: 0),
             changeMapBut2.heightAnchor.constraint(equalToConstant: height),
             changeMapBut2.widthAnchor.constraint(equalToConstant: width)
@@ -119,13 +118,26 @@ class ConfigView: UIView {
         gisInfoBut.setImage(gisImage, for: .normal)
         gisInfoBut.translatesAutoresizingMaskIntoConstraints = false
         let constraintsGis = [
-            gisInfoBut.centerYAnchor.constraint(equalTo: self.centerYAnchor,constant: 70),
+            gisInfoBut.centerYAnchor.constraint(equalTo: self.centerYAnchor,constant: 35),
             gisInfoBut.centerXAnchor.constraint(equalTo: self.centerXAnchor,constant: 0),
             gisInfoBut.heightAnchor.constraint(equalToConstant: height),
             gisInfoBut.widthAnchor.constraint(equalToConstant: width)
         ]
         NSLayoutConstraint.activate(constraintsGis)
+        
+        // 「アクティビティ情報」ボタンの挿入
 
+        activeBut.layer.position = CGPoint(x: screenWidth / 6, y: screenHeight / 1.5)
+        let activeImage: UIImage = UIImage(named: "app-active")!
+        activeBut.setImage(activeImage, for: .normal)
+        activeBut.translatesAutoresizingMaskIntoConstraints = false
+        let constraintsActive = [
+            activeBut.centerYAnchor.constraint(equalTo: self.centerYAnchor,constant: 105),
+            activeBut.centerXAnchor.constraint(equalTo: self.centerXAnchor,constant: 0),
+            activeBut.heightAnchor.constraint(equalToConstant: height),
+            activeBut.widthAnchor.constraint(equalToConstant: width)
+        ]
+        NSLayoutConstraint.activate(constraintsActive)
         /*
          // 新方式
          if (rooVC is CerdAR.mapViewController){
@@ -189,6 +201,7 @@ class ConfigView: UIView {
 //        deletebutton.removeFromSuperview()
         changeMapBut2.isHidden = true
         gisInfoBut.removeFromSuperview()
+        activeBut.removeFromSuperview()
         
         
         // コメントの挿入(画面右側)
