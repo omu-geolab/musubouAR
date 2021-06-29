@@ -25,6 +25,7 @@ class ARViewController: UIViewController,detailViewDelegate {
     var locationManager: CLLocationManager!
     var detailview: detailView? // 詳細画面
     var detailCustomView: DetailViewController?
+    var detailCustomIphone: DetailViewIphone = DetailViewIphone()
     // ARAnnotion管理
     var annotationManager: MapboxARAnnotationManager!
     let startUpdate = false
@@ -52,7 +53,7 @@ class ARViewController: UIViewController,detailViewDelegate {
     var altitude = 20.0
     
     //MARK:警告メッセージの表示位置（高さ）をいじる場合はy:の値を変更する
-    let warningMessage = UILabel(frame: CGRect(x: screenWidth*0.45 - 55.0 - butSize, y: screenHeight * 0.8, width: screenWidth * 0.37, height: screenHeight * 0.13)) // 警告メッセージ
+    var warningMessage = UILabel(frame: CGRect(x: screenWidth*0.45 - 55.0 - butSize, y: screenHeight * 0.8, width: screenWidth * 0.37, height: screenHeight * 0.13)) // 警告メッセージ
     
     var beforeZoomLv = 0.0
     
@@ -91,6 +92,7 @@ class ARViewController: UIViewController,detailViewDelegate {
     var label:UILabel!
     var resetKalmanFilter: Bool = false
     var hcKalmanFilter: HCKalmanAlgorithm?
+    var audioPlayer: AVAudioPlayer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -125,7 +127,7 @@ class ARViewController: UIViewController,detailViewDelegate {
         let lightNode1 = SCNNode()
         let light1 = SCNLight()
         light1.type = .directional
-        light1.intensity = 300
+        light1.intensity = 600
         lightNode1.light = light1
         scene.rootNode.addChildNode(lightNode1)
         
@@ -153,13 +155,13 @@ class ARViewController: UIViewController,detailViewDelegate {
         NSLayoutConstraint.activate(constraints)
        
         self.view.addSubview(cameraStateInfoLabel)
-        var sizeButton =  butSize * 1.3
+        var sizeButton =  butSize * 1.0
         let margins = view.layoutMarginsGuide
         // 地図切替ボタン
         let toMap_Button = UIButton()
         let buttonImage: UIImage = UIImage(named: "home-icon")!
         if UIDevice.current.userInterfaceIdiom == .pad{
-            sizeButton =  butSize * 1.5
+            sizeButton =  butSize * 1.2
         }
         toMap_Button.setImage(buttonImage, for: UIControl.State())
         toMap_Button.layer.shadowColor = UIColor.black.cgColor
@@ -171,7 +173,7 @@ class ARViewController: UIViewController,detailViewDelegate {
         toMap_Button.translatesAutoresizingMaskIntoConstraints = false
         let constraintsMap = [
             toMap_Button.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: 10),
-            toMap_Button.topAnchor.constraint(equalTo: margins.topAnchor, constant: -10),
+            toMap_Button.topAnchor.constraint(equalTo: margins.topAnchor, constant: 10),
             toMap_Button.heightAnchor.constraint(equalToConstant: sizeButton),
             toMap_Button.widthAnchor.constraint(equalToConstant: sizeButton)
         ]
@@ -192,13 +194,14 @@ class ARViewController: UIViewController,detailViewDelegate {
         changeAR_Button.translatesAutoresizingMaskIntoConstraints = false
         let constraintsAR = [
             changeAR_Button.rightAnchor.constraint(equalTo: view.rightAnchor,constant: -10),
-            changeAR_Button.topAnchor.constraint(equalTo: margins.topAnchor, constant: -3),
+            changeAR_Button.topAnchor.constraint(equalTo: margins.topAnchor, constant: 10),
             changeAR_Button.heightAnchor.constraint(equalToConstant: sizeButton),
             changeAR_Button.widthAnchor.constraint(equalToConstant: sizeButton)
         ]
         NSLayoutConstraint.activate(constraintsAR)
         changeAR_Button.addTarget(self, action: #selector(ARViewController.changeAR(_:)), for: .touchUpInside)
-        
+        changeAR_Button.startAnimatingPressActions()
+        toMap_Button.startAnimatingPressActions()
         //AR高度変更
         let slider = SectionedSlider(
             frame: CGRect(x: 20, y: self.view.bounds.height/2, width: 70, height: 178), // Choose a 15.6 / 40 ration for width/height
@@ -229,7 +232,7 @@ class ARViewController: UIViewController,detailViewDelegate {
         view.addSubview(slider)
         slider.translatesAutoresizingMaskIntoConstraints = false
         let constraintsSlider = [
-            slider.trailingAnchor.constraint(equalTo: view.trailingAnchor,constant: -20),
+            slider.trailingAnchor.constraint(equalTo: view.trailingAnchor,constant: -10),
             slider.centerYAnchor.constraint(equalTo: view.centerYAnchor,constant: 35),
             slider.heightAnchor.constraint(equalToConstant: 178),
             slider.widthAnchor.constraint(equalToConstant: 70)
@@ -238,7 +241,7 @@ class ARViewController: UIViewController,detailViewDelegate {
         view.addSubview(label)
         label.translatesAutoresizingMaskIntoConstraints = false
         let constraintsLabel = [
-            label.trailingAnchor.constraint(equalTo: view.trailingAnchor,constant: -20),
+            label.trailingAnchor.constraint(equalTo: view.trailingAnchor,constant: -10),
             label.centerYAnchor.constraint(equalTo: view.centerYAnchor,constant: -90),
             label.heightAnchor.constraint(equalToConstant: 50),
             label.widthAnchor.constraint(equalToConstant: 70)
@@ -254,13 +257,14 @@ class ARViewController: UIViewController,detailViewDelegate {
             //locationManager.requestLocation()
             locationManager.requestWhenInUseAuthorization()
             locationManager.requestAlwaysAuthorization()
-            locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
             locationManager.delegate = self
-            //locationManager.allowsBackgroundLocationUpdates = true
+            locationManager.allowsBackgroundLocationUpdates = true
             locationManager.startUpdatingLocation()
             
         }
         /* 警告メッセージの設定 */
+        warningMessage = UILabel()
         warningMessage.textColor = UIColor.black // 文字色(黒)
         warningMessage.backgroundColor = UIColor.white.withAlphaComponent(CGFloat(kMsgAlpha)) // 背景色(白)
         warningMessage.textAlignment = NSTextAlignment.center // 中央揃え
@@ -273,6 +277,19 @@ class ARViewController: UIViewController,detailViewDelegate {
         warningMessage.adjustsFontSizeToFitWidth = true // 文字の多さによってフォントサイズを調節する
         view.addSubview(warningMessage)
         warningMessage.isHidden = true
+        warningMessage.translatesAutoresizingMaskIntoConstraints = false
+        var widthtWaring  = realWidth! - 170
+        if UIDevice.current.userInterfaceIdiom == .pad{
+            widthtWaring =  widthtWaring*1.5
+        }
+        let constraintsWarning = [
+            warningMessage.bottomAnchor.constraint(equalTo: view.bottomAnchor,constant: -190),
+            warningMessage.centerXAnchor.constraint(equalTo: margins.centerXAnchor,constant: 0),
+            warningMessage.heightAnchor.constraint(equalToConstant: widthtWaring/2),
+            warningMessage.widthAnchor.constraint(equalToConstant: widthtWaring)
+        ]
+        NSLayoutConstraint.activate(constraintsWarning)
+
         startSession()
         configureMapboxMapView()
      
@@ -302,6 +319,15 @@ class ARViewController: UIViewController,detailViewDelegate {
         if updateTimer != nil {
             updateTimer.invalidate()
         }
+        vibration.vibStop()
+        if audioPlayerNear.isPlaying == true {
+            audioPlayerNear.stop()
+        }
+        if audioPlayerIntr.isPlaying == true {
+            audioPlayerIntr.stop()
+        }
+        locationManager.stopUpdatingLocation()
+        mapView.delegate = nil
     }
     
     override func didReceiveMemoryWarning() {
@@ -311,9 +337,11 @@ class ARViewController: UIViewController,detailViewDelegate {
     //MARK: Action
     //地図を戻す
     @objc func onClick_map(_ sender: UIButton) {
+        playButtonSound()
         self.dismiss(animated: true, completion: nil)
     }
     @objc func changeAR(_ sender: UIButton) {
+        playButtonSound()
         startSession()
         self.updateFace()
     }
@@ -381,24 +409,50 @@ class ARViewController: UIViewController,detailViewDelegate {
                     }else {
                         return
                     }
-                    
-                    if UIDevice.current.userInterfaceIdiom == .phone {
-//                        self.detailview = detailView(frame: CGRect(x: screenWidth * 0.1, y: screenWidth * 0.02, width: screenWidth * 0.8, height: screenHeight * 0.9))
-                        self.detailCustomView = DetailViewController(frame: CGRect(x: screenWidth * 0.1, y: screenWidth * 0.02, width: screenWidth * 0.8, height: screenHeight * 0.9))
-                    } else if UIDevice.current.userInterfaceIdiom == .pad {
-//                        self.detailview = detailView(frame: CGRect(x: screenWidth * 0.1, y: screenWidth * 0.1, width: screenWidth * 0.8, height: screenHeight * 0.8))
-                        self.detailCustomView = DetailViewController(frame: CGRect(x: screenWidth * 0.1, y: screenWidth * 0.02, width: screenWidth * 0.8, height: screenHeight * 0.9))
+                    var widthView = [screenWidth,screenHeight].min()! - 10
+                    var heightView = widthView/1.3
+                    if UIDevice.current.userInterfaceIdiom == .pad {
+                        widthView = [screenWidth,screenHeight].min()!*0.8
+                        heightView = widthView/1.5
                     }
+                    self.detailCustomIphone = DetailViewIphone(frame: CGRect(x: 0, y: 0, width: widthView, height: heightView))
+                    detailCustomIphone.translatesAutoresizingMaskIntoConstraints = false
+                    detailCustomIphone.setView()
+                    self.detailCustomIphone.delegate = self
+                    self.view.addSubview(self.detailCustomIphone)
+                    self.detailCustomIphone.translatesAutoresizingMaskIntoConstraints = false
+                    let constraintsView = [
+                        self.detailCustomIphone.centerXAnchor.constraint(equalTo: self.view.centerXAnchor,constant: 0),
+                        self.detailCustomIphone.centerYAnchor.constraint(equalTo: self.view.centerYAnchor,constant: 0),
+                        self.detailCustomIphone.heightAnchor.constraint(equalToConstant: heightView),
+                        self.detailCustomIphone.widthAnchor.constraint(equalToConstant: widthView),
+                    ]
+                    NSLayoutConstraint.activate(constraintsView)
+//                    let background = UIImageView(frame: self.view.frame)
+//                    background.alpha = 0.5
+//                    background.backgroundColor = UIColor.gray
+//                    backgroundView = background
+//                    backgroundView.isUserInteractionEnabled = true
+
+                    
+//                    self.detailCustomIphone.deleteButton.addTarget(self, action: #selector(osmViewController.onClick_detailBackground(_:)), for: .touchUpInside)
+//                    if UIDevice.current.userInterfaceIdiom == .phone {
+////                        self.detailview = detailView(frame: CGRect(x: screenWidth * 0.1, y: screenWidth * 0.02, width: screenWidth * 0.8, height: screenHeight * 0.9))
+//                        self.detailCustomView = DetailViewController(frame: CGRect(x: screenWidth * 0.1, y: screenWidth * 0.02, width: screenWidth * 0.8, height: screenHeight * 0.9))
+//                    } else if UIDevice.current.userInterfaceIdiom == .pad {
+////                        self.detailview = detailView(frame: CGRect(x: screenWidth * 0.1, y: screenWidth * 0.1, width: screenWidth * 0.8, height: screenHeight * 0.8))
+//                        self.detailCustomView = DetailViewController(frame: CGRect(x: screenWidth * 0.1, y: screenWidth * 0.02, width: screenWidth * 0.8, height: screenHeight * 0.9))
+//                    }
 //                    self.detailview!.delegate = self
 //                    backgroundView = detailView.makebackgroungView()
 //                    backgroundView.isUserInteractionEnabled = true
 
 //                    backgroundView = detailView.makebackgroungView()
 //                    backgroundView.isUserInteractionEnabled = true
-                    runAfterDelay(kShowDetail) { // タグをタップしてからkShowDetail秒後に詳細画面を表示する
-//                        self.view.addSubview(backgroundView)
-                        self.view.addSubview(self.detailCustomView!)
-                    }
+//                    runAfterDelay(kShowDetail) { // タグをタップしてからkShowDetail秒後に詳細画面を表示する
+////                        self.view.addSubview(backgroundView)
+//                        self.view.addSubview(self.detailCustomView!)
+//                    }
                 }
             }
         }
@@ -441,10 +495,10 @@ class ARViewController: UIViewController,detailViewDelegate {
         mapView.setCenter(CLLocationCoordinate2D(latitude: userLat, longitude: userLon), zoomLevel: 18, animated: false)
         mapView.setUserTrackingMode(.followWithHeading, animated: true, completionHandler: nil)
         mapView.delegate = self
-//        mapView.allowsTilting = false
-//        mapView.allowsRotating = false
-//        mapView.allowsZooming = false
-//        mapView.allowsScrolling = false
+        mapView.allowsTilting = false
+        mapView.allowsRotating = false
+        mapView.allowsZooming = false
+        mapView.allowsScrolling = false
         mapView.showsUserHeadingIndicator =  true
         mapView.layer.shadowColor = UIColor.black.cgColor
         mapView.layer.shadowRadius = 5
@@ -574,13 +628,16 @@ class ARViewController: UIViewController,detailViewDelegate {
                 
             } else if let snapshot = snapshot {
                 self.imageView = snapshot.image
-                self.annotationManager.removeFaceARAnchor()
-                if(adjustHeightAR > 0.4 ){
-                    self.annotationManager.addMapSurface()
-                    if(self.flag){
-                        self.updateEnvorimentAR(currentLocation: CLLocation(latitude: userLat, longitude: userLon))
+                DispatchQueue.main.async {
+                    self.annotationManager.removeFaceARAnchor()
+                    if(adjustHeightAR > 0.4 ){
+                        self.annotationManager.addMapSurface()
+                        if(self.flag){
+                            self.updateEnvorimentAR(currentLocation: CLLocation(latitude: userLat, longitude: userLon))
+                        }
                     }
                 }
+               
                 //self.mapView.setUserTrackingMode(.followWithHeading, animated: true, completionHandler: nil)
             }
             snapshotter = nil
@@ -731,7 +788,8 @@ class ARViewController: UIViewController,detailViewDelegate {
             warningView.isHidden = false
             warningMessage.isHidden = false
             warningMessage.text = warningEnter[warningCount].message2 // 警告メッセージ
-            Notification.showNotification(tilte: "警告", message: NSString(format: "%.2f", CGFloat.random(in: 1...1000)) as String)
+//            Notification.showNotification(tilte: "警告", message: NSString(format: "%.2f", CGFloat.random(in: 1...1000)) as String)
+            WorkoutService.shared.send(key: "notification", message: warningMessage.text ?? "")
             switch warningEnter[warningCount].riskType {
             case 0: // 火災：赤色
                 warningView.frame = CGRect(x: 0.0, y: 0.0, width: CGFloat(screenWidth), height: CGFloat(screenHeight))
@@ -785,10 +843,10 @@ extension ARViewController: CLLocationManagerDelegate{
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.last{
             altitude = location.altitude
-//            userLat = location.coordinate.latitude
-//            userLon = location.coordinate.longitude
-//            updateAllDistances()
-//            updateStatus()
+            userLat = location.coordinate.latitude
+            userLon = location.coordinate.longitude
+            updateAllDistances()
+            updateStatus()
         }
     }
     func filterAndAddLocation(_ location: CLLocation) -> Bool{
@@ -820,36 +878,40 @@ extension ARViewController: CLLocationManagerDelegate{
         if let anchors = sceneView.session.currentFrame?.anchors {
             //print(anchors.count)
             for anchor in anchors {
-                if let anchorNode = sceneView.node(for: anchor) {
-                    for node in anchorNode.childNodes{
-                        if node is NodeText {
-                            let nodeItem = node as! NodeText
-                            let location = CLLocation(latitude: nodeItem.data!.lat, longitude: nodeItem.data!.lon)
-                            let myLocation = CLLocation(latitude: userLat, longitude: userLon)
-                            var distance = myLocation.distance(from: location)
+                if let arAnchor = anchor as? MapboxARAnchor {
+                    if let anchorNode = sceneView.node(for: arAnchor) {
+                        for node in anchorNode.childNodes{
                             
-                            if(nodeItem.data?.inforType == kWarn){
-                                distance = distance - Double(nodeItem.data?.range ?? 0)
-                                if(distance < 1){
-                                    distance = 0
+                            if node is NodeText {
+                                let nodeItem = node as! NodeText
+                                let location = CLLocation(latitude: nodeItem.data!.lat, longitude: nodeItem.data!.lon)
+                                let myLocation = CLLocation(latitude: userLat, longitude: userLon)
+                                var distance = myLocation.distance(from: location)
+                                
+                                if(nodeItem.data?.inforType == kWarn){
+                                    distance = distance - Double(nodeItem.data?.range ?? 0)
+                                    if(distance < 1){
+                                        distance = 0
+                                    }
                                 }
+                                
+                                let floodDis = Int(distance)
+                                
+                                let text = SCNText(string: String(floodDis) + " m", extrusionDepth: 0.1)
+                                node.geometry = text
+                                if(floodDis  < 1){
+                                    anchorNode.isHidden = true
+                                    anchorNode.isPaused =  true
+                                }else{
+                                    anchorNode.isHidden = false
+                                    anchorNode.isPaused = false
+                                }
+                                
                             }
-                            
-                            let floodDis = Int(distance)
-                            
-                            let text = SCNText(string: String(floodDis) + " m", extrusionDepth: 0.1)
-                            node.geometry = text
-                            if(floodDis  < 1){
-                                anchorNode.isHidden = true
-                                anchorNode.isPaused =  true
-                            }else{
-                                anchorNode.isHidden = false
-                                anchorNode.isPaused = false
-                            }
-                            
                         }
                     }
                 }
+
             }
         } else {
             debugPrint("Anchors not found")
@@ -1071,9 +1133,10 @@ extension ARViewController: ARSCNViewDelegate {
             print(name)
             return
         }
-        //let adjustHeightMap = adjustHeightAR < 1 ? 1.0 : (1.0 + adjustHeightAR*0.07)
+        let adjustHeightMap = adjustHeightAR < 1 ? 1.0 : (1.0 + adjustHeightAR*0.07)
         let adjustHeightObject = Float(data.distance < 5 ? 1.0 :  (1.0 + Float(data.distance) * 0.07))
         let scaleDefaultAR = scaleAR * adjustHeightObject
+//        let scaleDefaultAR = scaleAR*3
         let scale = SCNVector3(scaleDefaultAR,scaleDefaultAR,scaleDefaultAR)
         let childNodes = scene.rootNode.childNodes
         let scaleNumber = scaleDefaultAR;
@@ -1081,23 +1144,33 @@ extension ARViewController: ARSCNViewDelegate {
             childNode.scale = scale
             childNode.position.y = childNode.position.y - adjustHeightAR + scaleDefaultAR*heightARModel/2
             if(data.inforType == kInfo){
-                childNode.addAnimation(node: childNode)
+//                childNode.addAnimation(node: childNode)
             }
             node.addChildNode(childNode)
         }
+        let box = SCNTube(innerRadius: 0.2, outerRadius: 0.22, height: 0.001)
+        box.materials.last?.diffuse.contents = UIColor.white
+        //box.firstMaterial?.transparency = 0.5
+        box.materials.last?.transparency = CGFloat(kMapARAlpha)
+        let nodeBox = SCNNode(geometry: box)
+        nodeBox.position = node.position
+        nodeBox.position.y = node.position.y - adjustHeightAR
+        nodeBox.addAnimationScale(node: nodeBox)
+        node.addChildNode(nodeBox)
         let constraint = SCNBillboardConstraint()
         scene.rootNode.constraints = [constraint]
         
-        let text = SCNText(string: String(data.distance) + " m", extrusionDepth: 0.1)
+        let text = SCNText(string: String(data.distance) + " m", extrusionDepth: 0.2)
        
         let textNode = NodeText(geometry: text)
         textNode.data = data
-        
-        
-        textNode.scale = SCNVector3(scaleNumber*0.5,scaleNumber*0.5,scaleNumber*0.5)
+
+        textNode.scale = SCNVector3(scaleNumber*0.7,scaleNumber*0.7,scaleNumber*0.7)
+        let (minVec, maxVec) = textNode.boundingBox
+        textNode.pivot = SCNMatrix4MakeTranslation((maxVec.x - minVec.x) / 2 + minVec.x, (maxVec.y - minVec.y) / 2 + minVec.y, 0)
         textNode.position = node.position
-        textNode.position.y = textNode.position.y -  adjustHeightAR + scaleDefaultAR*heightARModel
-        textNode.position.x = textNode.position.x - 10 * scaleNumber
+        textNode.position.y = textNode.position.y -  adjustHeightAR + scaleDefaultAR*heightARModel + (maxVec.y - minVec.y) * scaleNumber / 2
+//        textNode.position.x = textNode.position.x - 10 * scaleNumber
         node.addChildNode(textNode)
         
         if(data.inforType == kWarn){
@@ -1209,6 +1282,22 @@ extension ARViewController: ARSCNViewDelegate {
 //                }
 //            }
 //        }
+    }
+    func playButtonSound(){
+
+        if let soundURL = Bundle.main.url(forResource: "click", withExtension: "wav") {
+            
+            do {
+                audioPlayer = try AVAudioPlayer(contentsOf: soundURL)
+            }
+            catch {
+                print(error)
+            }
+            
+            audioPlayer.play()
+        }else{
+            print("Unable to locate audio file")
+        }
     }
 }
 
@@ -1337,11 +1426,11 @@ extension ARViewController: MGLMapViewDelegate {
         return false
     }
     func mapView(_ mapView: MGLMapView, regionDidChangeAnimated animated: Bool) {
-        userLat = self.mapView.centerCoordinate.latitude
-        userLon = self.mapView.centerCoordinate.longitude
-//        self.updateFace();
-        updateAllDistances()
-        updateStatus()
+//        userLat = self.mapView.centerCoordinate.latitude
+//        userLon = self.mapView.centerCoordinate.longitude
+////        self.updateFace();
+//        updateAllDistances()
+//        updateStatus()
 //        DispatchQueue(label: "scalingImage").async {
 //            self.scalingImage()
 //        }
@@ -1408,6 +1497,29 @@ extension SCNNode {
     func addAnimation(node: SCNNode) {
         let rotateOne = SCNAction.rotateBy(x: 0, y: CGFloat(Float.pi), z: 0, duration: 3.0)
         let repeatForever = SCNAction.repeatForever(rotateOne)
+        node.runAction(repeatForever)
+    }
+    func addAnimationScale(node: SCNNode) {
+        let rotateOne = SCNAction.rotateBy(x: 0, y: CGFloat(Float.pi), z: 0, duration: 3.0)
+        
+        
+        let scale = SCNAction.scale(to: 20, duration: 2.0)
+        let scale1 = SCNAction.scale(to: 1, duration: 1.5)
+       
+        let sequence = SCNAction.sequence([scale, scale1])
+        let repeatForever = SCNAction.repeatForever(sequence)
+        node.runAction(repeatForever)
+    }
+    
+}
+extension SCNTube {
+    func addAnimationScale(node: SCNNode) {
+        let rotateOne = SCNAction.rotateBy(x: 0, y: CGFloat(Float.pi), z: 0, duration: 3.0)
+        
+        
+        let scale = SCNAction.scale(to: 2.5, duration: 1)
+        let repeatForever = SCNAction.repeatForever(scale)
+        
         node.runAction(repeatForever)
     }
 }
@@ -1483,5 +1595,15 @@ class OverlayScene: SKScene {
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+}
+extension ARViewController:detailViewIphoneDelegate {
+    func detailViewIphoneFinish() {
+        cannotTouchView.removeFromSuperview()
+        detailCustomIphone.delegate = nil
+        detailCustomIphone.translatesAutoresizingMaskIntoConstraints = false
+        detailCustomIphone.removeFromSuperview()
+        detailCustomIphone.deleteDetailView()
+
     }
 }

@@ -15,6 +15,8 @@ class TermsViewController: UIViewController {
     @IBOutlet weak var cancelButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        continousButton.startAnimatingPressActions()
+        cancelButton.startAnimatingPressActions()
         continousButton.layer.borderColor = UIColor.black.cgColor
         continousButton.layer.borderWidth = 3
     }
@@ -22,7 +24,7 @@ class TermsViewController: UIViewController {
         exit(0) // アプリを終了する
     }
     @IBAction func continousApp(_ sender: Any) {
-        self.dismiss(animated: false, completion: nil)
+        self.dismiss(animated: true, completion: nil)
         let osmVC = osmViewController()
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.window?.rootViewController = osmVC

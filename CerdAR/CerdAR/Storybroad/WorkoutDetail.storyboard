@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wbL-Ek-v3Y">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Workout Detaill-->
+        <scene sceneID="9En-Rn-jr0">
+            <objects>
+                <viewController id="wbL-Ek-v3Y" customClass="WorkoutDetaill" customModule="CerdAR" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OOj-Jt-CzB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Y3q-Zd-g0G">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="luZ-wE-wmb">
+                                <rect key="frame" x="364" y="44" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="0LE-KW-V5g"/>
+                                    <constraint firstAttribute="height" constant="50" id="g13-eZ-CpO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" image="xmark" catalog="system">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="20" scale="large" weight="bold"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapDeleteButton:" destination="wbL-Ek-v3Y" eventType="touchUpInside" id="PXj-gS-zN1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="rG5-mk-sGH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Y3q-Zd-g0G" secondAttribute="bottom" id="4YX-0G-Fhe"/>
+                            <constraint firstAttribute="trailing" secondItem="Y3q-Zd-g0G" secondAttribute="trailing" id="AP7-8V-GrQ"/>
+                            <constraint firstItem="Y3q-Zd-g0G" firstAttribute="leading" secondItem="OOj-Jt-CzB" secondAttribute="leading" id="bAz-Ol-gyP"/>
+                            <constraint firstItem="Y3q-Zd-g0G" firstAttribute="top" secondItem="OOj-Jt-CzB" secondAttribute="top" id="oJ1-Ts-3Eh"/>
+                            <constraint firstItem="rG5-mk-sGH" firstAttribute="trailing" secondItem="luZ-wE-wmb" secondAttribute="trailing" id="uCj-Kh-9bV"/>
+                            <constraint firstItem="luZ-wE-wmb" firstAttribute="top" secondItem="rG5-mk-sGH" secondAttribute="top" id="xW4-w2-DTd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="Y3q-Zd-g0G" id="ldp-VN-iVF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XvK-JM-oqH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="15.942028985507248" y="61.607142857142854"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="xmark" catalog="system" width="128" height="113"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

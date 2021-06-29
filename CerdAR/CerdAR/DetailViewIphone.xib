@@ -2,10 +2,8 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -23,15 +21,12 @@
             <rect key="frame" x="0.0" y="0.0" width="455" height="310"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kj8-9j-FDf">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kj8-9j-FDf" customClass="GradientView" customModule="CerdAR" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="455" height="310"/>
                     <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info-bg" translatesAutoresizingMaskIntoConstraints="NO" id="6d2-zW-FEI">
-                            <rect key="frame" x="0.0" y="0.0" width="455" height="310"/>
-                        </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="F1d-EA-B9F">
                             <rect key="frame" x="41" y="10" width="368" height="35"/>
-                            <color key="backgroundColor" red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="0.47241545376712329" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" red="0.90769384816039556" green="0.91221208756345173" blue="0.88685561286836545" alpha="0.73346532534246578" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="35" id="Y79-S8-maU"/>
                             </constraints>
@@ -56,7 +51,7 @@
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" alpha="0.94999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="fpg-GJ-2mE">
                                             <rect key="frame" x="25" y="208" width="187.5" height="35"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="backgroundColor" red="0.90769384816039556" green="0.91221208756345173" blue="0.88685561286836545" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="35" id="vgv-WT-ME3"/>
@@ -129,29 +124,35 @@
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
+                            <connections>
+                                <action selector="tapDeleteButton:" destination="-1" eventType="touchUpInside" id="83W-oP-UZL"/>
+                            </connections>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="Ssu-7j-ZmF" firstAttribute="leading" secondItem="kj8-9j-FDf" secondAttribute="leading" id="1Jc-fz-ZJG"/>
-                        <constraint firstItem="6d2-zW-FEI" firstAttribute="leading" secondItem="kj8-9j-FDf" secondAttribute="leading" id="29N-Bc-tCY"/>
                         <constraint firstItem="F1d-EA-B9F" firstAttribute="leading" secondItem="kj8-9j-FDf" secondAttribute="leading" constant="41" id="8cg-4z-xHi"/>
                         <constraint firstAttribute="trailing" secondItem="bcP-J9-efO" secondAttribute="trailing" constant="8" id="AUm-Q2-KGT"/>
                         <constraint firstAttribute="trailing" secondItem="Ssu-7j-ZmF" secondAttribute="trailing" id="CKs-G6-hiz"/>
                         <constraint firstItem="bcP-J9-efO" firstAttribute="top" secondItem="kj8-9j-FDf" secondAttribute="top" constant="7" id="LzV-ed-cxn"/>
                         <constraint firstItem="bcP-J9-efO" firstAttribute="leading" secondItem="F1d-EA-B9F" secondAttribute="trailing" constant="10" id="OgY-VO-YA5"/>
                         <constraint firstItem="Ssu-7j-ZmF" firstAttribute="top" secondItem="F1d-EA-B9F" secondAttribute="bottom" constant="10" id="Rxu-5d-kCc"/>
-                        <constraint firstAttribute="trailing" secondItem="6d2-zW-FEI" secondAttribute="trailing" id="YAc-y5-ib6"/>
                         <constraint firstItem="F1d-EA-B9F" firstAttribute="top" secondItem="kj8-9j-FDf" secondAttribute="top" constant="10" id="bjA-xV-PRe"/>
                         <constraint firstAttribute="bottom" secondItem="Ssu-7j-ZmF" secondAttribute="bottom" id="d81-ik-9it"/>
-                        <constraint firstAttribute="bottom" secondItem="6d2-zW-FEI" secondAttribute="bottom" id="grE-Zd-Jjl"/>
-                        <constraint firstItem="6d2-zW-FEI" firstAttribute="top" secondItem="kj8-9j-FDf" secondAttribute="top" id="yiT-07-1Fu"/>
                     </constraints>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                             <integer key="value" value="25"/>
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                        <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="diagonalMode" value="YES"/>
                     </userDefinedRuntimeAttributes>
                 </view>
             </subviews>
@@ -167,10 +168,6 @@
         </view>
     </objects>
     <resources>
-        <image name="info-bg" width="200" height="200"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

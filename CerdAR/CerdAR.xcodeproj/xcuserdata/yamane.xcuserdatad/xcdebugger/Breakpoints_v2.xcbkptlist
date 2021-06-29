@@ -283,8 +283,8 @@
             timestampString = "590577365.423213"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "138"
-            endingLineNumber = "138"
+            startingLineNumber = "137"
+            endingLineNumber = "137"
             landmarkName = "makeLabel(_:inforType:)"
             landmarkType = "9">
          </BreakpointContent>
@@ -765,8 +765,8 @@
             timestampString = "590577365.423758"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "655"
-            endingLineNumber = "655"
+            startingLineNumber = "712"
+            endingLineNumber = "712"
             landmarkName = "ARViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -910,40 +910,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "2CB63D6E-5A86-4782-BA7D-27DBC8F6D015"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CerdAR/loadViewController.swift"
-            timestampString = "586744030.598985"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "213"
-            endingLineNumber = "213"
-            landmarkName = "jsondata(callback:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "32A196AA-C273-449F-9B56-510F2D0B19B4"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CerdAR/loadViewController.swift"
-            timestampString = "586744030.599044"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "212"
-            endingLineNumber = "212"
-            landmarkName = "jsondata(callback:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "0529FFFC-5738-4325-854E-FD4482AD83AE"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -1037,8 +1003,8 @@
             timestampString = "590577365.425637"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "639"
-            endingLineNumber = "639"
+            startingLineNumber = "696"
+            endingLineNumber = "696"
             landmarkName = "updateEnvorimentAR(currentLocation:)"
             landmarkType = "7">
          </BreakpointContent>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="17701" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38"/>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="17500"/>
+    </dependencies>
+    <scenes>
+        <!--InterfaceController-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller identifier="InterfaceController" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="CerdARWatch_Extension">
+                    <items>
+                        <group width="1" alignment="left" id="4SY-1m-7EC">
+                            <items>
+                                <imageView width="30" height="30" alignment="left" image="flame" catalog="system" id="NNh-FX-aeg">
+                                    <color key="tintColor" red="1" green="0.1476878425875322" blue="0.17277919991903468" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </imageView>
+                                <label width="100" height="36" alignment="left" text="--" textAlignment="center" id="6If-RA-pvM"/>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="Ulz-nZ-EPQ">
+                            <items>
+                                <imageView width="30" height="30" alignment="left" image="heart.fill" catalog="system" id="3gM-1N-Yuy">
+                                    <color key="tintColor" red="1" green="0.14768784260000001" blue="0.17277919990000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </imageView>
+                                <label width="100" height="36" alignment="left" text="--" textAlignment="center" id="CbT-G6-fI1"/>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="bYu-sW-2fb">
+                            <items>
+                                <imageView width="30" height="30" alignment="left" image="figure.walk" catalog="system" id="Yjv-ah-HkA">
+                                    <color key="tintColor" red="0.37035096136361789" green="1" blue="0.081933799432400312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </imageView>
+                                <label width="100" height="36" alignment="left" text="--" textAlignment="center" id="ciJ-d5-MuY"/>
+                            </items>
+                        </group>
+                        <button width="1" alignment="left" title="開始" id="ZHe-eS-LWk">
+                            <connections>
+                                <action selector="tapActionButton" destination="AgC-eL-Hgc" id="aFs-HB-lPt"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="actionButton" destination="ZHe-eS-LWk" id="sc0-Co-EXf"/>
+                        <outlet property="caloLabel" destination="6If-RA-pvM" id="LnP-WL-dxv"/>
+                        <outlet property="heartRateLabel" destination="CbT-G6-fI1" id="2tj-ZC-sz2"/>
+                        <outlet property="runLabel" destination="ciJ-d5-MuY" id="STp-t4-VQ6"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="220" y="345"/>
+        </scene>
+        <!--Workout Controller-->
+        <scene sceneID="Bd3-D7-ElA">
+            <objects>
+                <controller id="Rcp-Qd-0UB" customClass="WorkoutController" customModule="CerdARWatch_Extension">
+                    <items>
+                        <label width="41" alignment="left" text="Start" id="zI9-Py-1zH"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="468" y="345"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" numberOfLines="0" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                        <segue destination="eXb-UN-Cd0" kind="relationship" relationship="dynamicInteractiveNotificationInterface" id="mpB-YA-K8N"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="220" y="643"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="CerdARWatch" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="643"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="Niz-AI-uX2">
+            <objects>
+                <controller id="eXb-UN-Cd0" customClass="NotificationController" customModule="CerdARWatch" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="335" y="975"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="figure.walk" catalog="system" width="96" height="128"/>
+        <image name="flame" catalog="system" width="111" height="128"/>
+        <image name="heart.fill" catalog="system" width="128" height="105"/>
+    </resources>
+</document>
