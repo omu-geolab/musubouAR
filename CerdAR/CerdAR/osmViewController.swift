@@ -478,8 +478,8 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
      * 拡大縮小に合わせて画像を張り替える
      */
     func mapView(_ mapView: MGLMapView, regionDidChangeAnimated animated: Bool) {
-        userLat = self.mapView.centerCoordinate.latitude
-        userLon = self.mapView.centerCoordinate.longitude
+//        userLat = self.mapView.centerCoordinate.latitude
+//        userLon = self.mapView.centerCoordinate.longitude
         //        DispatchQueue(label: "scalingImage").async {
         self.scalingImage()
         //        }
@@ -766,8 +766,8 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
      */
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
-        //        userLat = (locationManager.location?.coordinate.latitude)!
-        //        userLon = (locationManager.location?.coordinate.longitude)!
+                userLat = (locationManager.location?.coordinate.latitude)!
+                userLon = (locationManager.location?.coordinate.longitude)!
         
     }
     
