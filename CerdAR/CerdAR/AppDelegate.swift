@@ -28,6 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.rootViewController = self.viewController
 //        self.window?.rootViewController = UIHostingController(rootView: LoadingView())
         self.window?.makeKeyAndVisible()
+        Unity.shared.setHostMainWindow(window)
         
         // Override point for customization after application launch.
         return true
