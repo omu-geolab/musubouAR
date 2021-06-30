@@ -176,6 +176,26 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         NSLayoutConstraint.activate(constraintsCamera)
         toCam_button.addTarget(self, action: #selector(osmViewController.onclick_AR(_:)), for: .touchUpInside)
         
+        // LIDAR画面遷移するためのボタンを生成
+        let toLidar_button = UIButton()
+        let buttonImageLidar: UIImage = UIImage(named: "lidar")!
+        toLidar_button.setImage(buttonImageLidar, for: UIControl.State())
+        toLidar_button.layer.shadowColor = UIColor.black.cgColor
+        toLidar_button.layer.shadowRadius = 5
+        toLidar_button.layer.shadowOffset = CGSize(width: 10, height: 10)
+        toLidar_button.layer.shadowOpacity = 0.6
+        
+        mapView.addSubview(toLidar_button)
+        toLidar_button.translatesAutoresizingMaskIntoConstraints = false
+        let constraintsLidar = [
+            toLidar_button.leadingAnchor.constraint(equalTo: mapView.leadingAnchor,constant: 15),
+            toLidar_button.bottomAnchor.constraint(equalTo: mapView.bottomAnchor,constant: -15*2 - sizeButton),
+            toLidar_button.heightAnchor.constraint(equalToConstant: sizeButton),
+            toLidar_button.widthAnchor.constraint(equalToConstant: sizeButton)
+        ]
+        NSLayoutConstraint.activate(constraintsLidar)
+        toLidar_button.addTarget(self, action: #selector(osmViewController.onclick_Lidar(_:)), for: .touchUpInside)
+        
         // 設定画面へ遷移するためのボタン生成
         let toCon_button = UIButton()
         let conButImage: UIImage = UIImage(named: "setting-icon")!
@@ -936,6 +956,15 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         let vc = ARViewController()
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true, completion: nil)
+    }
+    
+    /*
+     * 画面左下のボタンをタップしたとき
+     * Lidarカメラ画面に遷移する
+     */
+    @objc internal func onclick_Lidar(_ sender: UIButton) {
+        playButtonSound()
+        Unity.shared.show()
     }
     
     /*
