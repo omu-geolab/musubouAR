@@ -260,6 +260,46 @@ void RegisterAllStrippedInternalCalls()
 
 	//End Registrations for type : UnityEngine.AudioSettings
 
+	//Start Registrations for type : UnityEngine.AudioSource
+
+		//System.Boolean UnityEngine.AudioSource::get_isPlaying()
+		void Register_UnityEngine_AudioSource_get_isPlaying();
+		Register_UnityEngine_AudioSource_get_isPlaying();
+
+		//System.Single UnityEngine.AudioSource::get_volume()
+		void Register_UnityEngine_AudioSource_get_volume();
+		Register_UnityEngine_AudioSource_get_volume();
+
+		//System.Void UnityEngine.AudioSource::PlayHelper(UnityEngine.AudioSource,System.UInt64)
+		void Register_UnityEngine_AudioSource_PlayHelper();
+		Register_UnityEngine_AudioSource_PlayHelper();
+
+		//System.Void UnityEngine.AudioSource::Stop(System.Boolean)
+		void Register_UnityEngine_AudioSource_Stop();
+		Register_UnityEngine_AudioSource_Stop();
+
+		//System.Void UnityEngine.AudioSource::set_clip(UnityEngine.AudioClip)
+		void Register_UnityEngine_AudioSource_set_clip();
+		Register_UnityEngine_AudioSource_set_clip();
+
+		//System.Void UnityEngine.AudioSource::set_loop(System.Boolean)
+		void Register_UnityEngine_AudioSource_set_loop();
+		Register_UnityEngine_AudioSource_set_loop();
+
+		//System.Void UnityEngine.AudioSource::set_outputAudioMixerGroup(UnityEngine.Audio.AudioMixerGroup)
+		void Register_UnityEngine_AudioSource_set_outputAudioMixerGroup();
+		Register_UnityEngine_AudioSource_set_outputAudioMixerGroup();
+
+		//System.Void UnityEngine.AudioSource::set_playOnAwake(System.Boolean)
+		void Register_UnityEngine_AudioSource_set_playOnAwake();
+		Register_UnityEngine_AudioSource_set_playOnAwake();
+
+		//System.Void UnityEngine.AudioSource::set_volume(System.Single)
+		void Register_UnityEngine_AudioSource_set_volume();
+		Register_UnityEngine_AudioSource_set_volume();
+
+	//End Registrations for type : UnityEngine.AudioSource
+
 	//Start Registrations for type : UnityEngine.Behaviour
 
 		//System.Boolean UnityEngine.Behaviour::get_enabled()
@@ -2290,6 +2330,14 @@ void RegisterAllStrippedInternalCalls()
 
 	//Start Registrations for type : UnityEngine.ParticleSystem
 
+		//System.Boolean UnityEngine.ParticleSystem::get_isPlaying()
+		void Register_UnityEngine_ParticleSystem_get_isPlaying();
+		Register_UnityEngine_ParticleSystem_get_isPlaying();
+
+		//System.Int32 UnityEngine.ParticleSystem::GetParticles(UnityEngine.ParticleSystem/Particle[],System.Int32,System.Int32)
+		void Register_UnityEngine_ParticleSystem_GetParticles();
+		Register_UnityEngine_ParticleSystem_GetParticles();
+
 		//System.Void UnityEngine.ParticleSystem::EmitOld_Internal(UnityEngine.ParticleSystem/Particle&)
 		void Register_UnityEngine_ParticleSystem_EmitOld_Internal();
 		Register_UnityEngine_ParticleSystem_EmitOld_Internal();
@@ -2302,23 +2350,83 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_ParticleSystem_Emit_Internal();
 		Register_UnityEngine_ParticleSystem_Emit_Internal();
 
+		//System.Void UnityEngine.ParticleSystem::Play(System.Boolean)
+		void Register_UnityEngine_ParticleSystem_Play();
+		Register_UnityEngine_ParticleSystem_Play();
+
 		//System.Void UnityEngine.ParticleSystem::SetParticles(UnityEngine.ParticleSystem/Particle[],System.Int32,System.Int32)
 		void Register_UnityEngine_ParticleSystem_SetParticles();
 		Register_UnityEngine_ParticleSystem_SetParticles();
 
+		//System.Void UnityEngine.ParticleSystem::Stop(System.Boolean,UnityEngine.ParticleSystemStopBehavior)
+		void Register_UnityEngine_ParticleSystem_Stop();
+		Register_UnityEngine_ParticleSystem_Stop();
+
 	//End Registrations for type : UnityEngine.ParticleSystem
 
+	//Start Registrations for type : UnityEngine.ParticleSystem/EmissionModule
+
+		//System.Void UnityEngine.ParticleSystem/EmissionModule::get_rateOverTime_Injected(UnityEngine.ParticleSystem/EmissionModule&,UnityEngine.ParticleSystem/MinMaxCurve&)
+		void Register_UnityEngine_ParticleSystem_EmissionModule_get_rateOverTime_Injected();
+		Register_UnityEngine_ParticleSystem_EmissionModule_get_rateOverTime_Injected();
+
+		//System.Void UnityEngine.ParticleSystem/EmissionModule::set_enabled_Injected(UnityEngine.ParticleSystem/EmissionModule&,System.Boolean)
+		void Register_UnityEngine_ParticleSystem_EmissionModule_set_enabled_Injected();
+		Register_UnityEngine_ParticleSystem_EmissionModule_set_enabled_Injected();
+
+		//System.Void UnityEngine.ParticleSystem/EmissionModule::set_rateOverTime_Injected(UnityEngine.ParticleSystem/EmissionModule&,UnityEngine.ParticleSystem/MinMaxCurve&)
+		void Register_UnityEngine_ParticleSystem_EmissionModule_set_rateOverTime_Injected();
+		Register_UnityEngine_ParticleSystem_EmissionModule_set_rateOverTime_Injected();
+
+	//End Registrations for type : UnityEngine.ParticleSystem/EmissionModule
+
 	//Start Registrations for type : UnityEngine.ParticleSystem/MainModule
+
+		//System.Int32 UnityEngine.ParticleSystem/MainModule::get_maxParticles_Injected(UnityEngine.ParticleSystem/MainModule&)
+		void Register_UnityEngine_ParticleSystem_MainModule_get_maxParticles_Injected();
+		Register_UnityEngine_ParticleSystem_MainModule_get_maxParticles_Injected();
 
 		//System.Void UnityEngine.ParticleSystem/MainModule::get_startColor_Injected(UnityEngine.ParticleSystem/MainModule&,UnityEngine.ParticleSystem/MinMaxGradient&)
 		void Register_UnityEngine_ParticleSystem_MainModule_get_startColor_Injected();
 		Register_UnityEngine_ParticleSystem_MainModule_get_startColor_Injected();
 
+		//System.Void UnityEngine.ParticleSystem/MainModule::get_startLifetime_Injected(UnityEngine.ParticleSystem/MainModule&,UnityEngine.ParticleSystem/MinMaxCurve&)
+		void Register_UnityEngine_ParticleSystem_MainModule_get_startLifetime_Injected();
+		Register_UnityEngine_ParticleSystem_MainModule_get_startLifetime_Injected();
+
 		//System.Void UnityEngine.ParticleSystem/MainModule::get_startSize_Injected(UnityEngine.ParticleSystem/MainModule&,UnityEngine.ParticleSystem/MinMaxCurve&)
 		void Register_UnityEngine_ParticleSystem_MainModule_get_startSize_Injected();
 		Register_UnityEngine_ParticleSystem_MainModule_get_startSize_Injected();
 
+		//System.Void UnityEngine.ParticleSystem/MainModule::get_startSpeed_Injected(UnityEngine.ParticleSystem/MainModule&,UnityEngine.ParticleSystem/MinMaxCurve&)
+		void Register_UnityEngine_ParticleSystem_MainModule_get_startSpeed_Injected();
+		Register_UnityEngine_ParticleSystem_MainModule_get_startSpeed_Injected();
+
+		//System.Void UnityEngine.ParticleSystem/MainModule::set_startSize_Injected(UnityEngine.ParticleSystem/MainModule&,UnityEngine.ParticleSystem/MinMaxCurve&)
+		void Register_UnityEngine_ParticleSystem_MainModule_set_startSize_Injected();
+		Register_UnityEngine_ParticleSystem_MainModule_set_startSize_Injected();
+
+		//System.Void UnityEngine.ParticleSystem/MainModule::set_startSpeed_Injected(UnityEngine.ParticleSystem/MainModule&,UnityEngine.ParticleSystem/MinMaxCurve&)
+		void Register_UnityEngine_ParticleSystem_MainModule_set_startSpeed_Injected();
+		Register_UnityEngine_ParticleSystem_MainModule_set_startSpeed_Injected();
+
 	//End Registrations for type : UnityEngine.ParticleSystem/MainModule
+
+	//Start Registrations for type : UnityEngine.ParticleSystem/ShapeModule
+
+		//System.Void UnityEngine.ParticleSystem/ShapeModule::set_shapeType_Injected(UnityEngine.ParticleSystem/ShapeModule&,UnityEngine.ParticleSystemShapeType)
+		void Register_UnityEngine_ParticleSystem_ShapeModule_set_shapeType_Injected();
+		Register_UnityEngine_ParticleSystem_ShapeModule_set_shapeType_Injected();
+
+	//End Registrations for type : UnityEngine.ParticleSystem/ShapeModule
+
+	//Start Registrations for type : UnityEngine.ParticleSystemExtensionsImpl
+
+		//System.Int32 UnityEngine.ParticleSystemExtensionsImpl::GetCollisionEvents(UnityEngine.ParticleSystem,UnityEngine.GameObject,System.Collections.Generic.List`1<UnityEngine.ParticleCollisionEvent>)
+		void Register_UnityEngine_ParticleSystemExtensionsImpl_GetCollisionEvents();
+		Register_UnityEngine_ParticleSystemExtensionsImpl_GetCollisionEvents();
+
+	//End Registrations for type : UnityEngine.ParticleSystemExtensionsImpl
 
 	//Start Registrations for type : UnityEngine.ParticleSystemRenderer
 
@@ -4523,6 +4631,26 @@ void RegisterAllStrippedInternalCalls()
 		Register_UnityEngine_Video_VideoPlayer_get_clip();
 
 	//End Registrations for type : UnityEngine.Video.VideoPlayer
+
+	//Start Registrations for type : UnityEngine.WindZone
+
+		//System.Single UnityEngine.WindZone::get_radius()
+		void Register_UnityEngine_WindZone_get_radius();
+		Register_UnityEngine_WindZone_get_radius();
+
+		//System.Single UnityEngine.WindZone::get_windMain()
+		void Register_UnityEngine_WindZone_get_windMain();
+		Register_UnityEngine_WindZone_get_windMain();
+
+		//System.Void UnityEngine.WindZone::set_windMain(System.Single)
+		void Register_UnityEngine_WindZone_set_windMain();
+		Register_UnityEngine_WindZone_set_windMain();
+
+		//System.Void UnityEngine.WindZone::set_windTurbulence(System.Single)
+		void Register_UnityEngine_WindZone_set_windTurbulence();
+		Register_UnityEngine_WindZone_set_windTurbulence();
+
+	//End Registrations for type : UnityEngine.WindZone
 
 	//Start Registrations for type : UnityEngine.XR.InputDevices
 

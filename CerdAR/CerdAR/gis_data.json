@@ -1,6 +1,6 @@
 [
 {
-    "name":"地理院タイル-std",
+    "name":"地理院タイル（標準）",
     "server":"https://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png",
     "gl_style":{
         "version": 8,
@@ -25,24 +25,24 @@
     }
 },
 {
-    "name":"地理院タイル-lum200k",
-    "server":"https://cyberjapandata.gsi.go.jp/xyz/lum200k/{z}/{x}/{y}.png",
+    "name":"空中写真（1961～1969年）",
+    "server":"https://cyberjapandata.gsi.go.jp/xyz/ort_old10/{z}/{x}/{y}.png",
     "gl_style":{
         "version": 8,
         "name": "Raster Tiles",
         "sources": {
-            "gsiStd": {
+            "gsiOrt_old10": {
                 "type": "raster",
                 "tiles": [
-                    "https://cyberjapandata.gsi.go.jp/xyz/lum200k/{z}/{x}/{y}.png"
+                    "https://cyberjapandata.gsi.go.jp/xyz/ort_old10/{z}/{x}/{y}.png"
                 ],
                 "tileSize": 256
             }
         },
         "layers": [{
-            "id": "gsiStd",
+            "id": "gsiOrt_old10",
             "type": "raster",
-            "source": "gsiStd",
+            "source": "gsiOrt_old10",
             "paint": {
                 "raster-fade-duration": 100
             }
@@ -50,7 +50,57 @@
     }
 },
 {
-    "name":"大阪浸水",
+    "name":"数値地図5000（土地利用）",
+    "server":"https://cyberjapandata.gsi.go.jp/xyz/lum4bl_kinki2008/{z}/{x}/{y}.png",
+    "gl_style":{
+        "version": 8,
+        "name": "Raster Tiles",
+        "sources": {
+            "lum4bl_kinki2008": {
+                "type": "raster",
+                "tiles": [
+                    "https://cyberjapandata.gsi.go.jp/xyz/lum4bl_kinki2008/{z}/{x}/{y}.png"
+                ],
+                "tileSize": 256
+            }
+        },
+        "layers": [{
+            "id": "lum4bl_kinki2008",
+            "type": "raster",
+            "source": "lum4bl_kinki2008",
+            "paint": {
+                "raster-fade-duration": 100
+            }
+        }]
+    }
+},
+{
+    "name":"国管理河川_洪水浸水想定区域（想定最大規模）",
+    "server":"https://disaportaldata.gsi.go.jp/raster/01_flood_l2_shinsuishin_kuni_data/{z}/{x}/{y}.png",
+    "gl_style":{
+        "version": 8,
+        "name": "Raster Tiles",
+        "sources": {
+            "01_flood_l2_shinsuishin_kuni_data": {
+                "type": "raster",
+                "tiles": [
+                    "https://disaportaldata.gsi.go.jp/raster/01_flood_l2_shinsuishin_kuni_data/{z}/{x}/{y}.png"
+                ],
+                "tileSize": 256
+            }
+        },
+        "layers": [{
+            "id": "01_flood_l2_shinsuishin_kuni_data",
+            "type": "raster",
+            "source": "01_flood_l2_shinsuishin_kuni_data",
+            "paint": {
+                "raster-fade-duration": 100
+            }
+        }]
+    }
+},
+{
+    "name":"洪水浸水想定図（大和川/淀川）",
     "server":"https://www.cerd.osaka-cu.ac.jp/cerd-ar_tiles/sinsui/{z}/{x}/{y}.png",
     "gl_style":{
         "version": 8,
@@ -122,6 +172,96 @@
         "owner": "nro2dai",
         "visibility": "private",
         "draft": false
+    }
+},
+{
+    "name":"津波浸水想定図（南海トラフ）",
+    "server":"https://www.cerd.osaka-cu.ac.jp/cerd-ar_tiles/nankai-tsunami/{z}/{x}/{y}.png",
+    "gl_style":{
+        "version": 8,
+        "name": "nankai-tsunami",
+        "metadata": {
+            "mapbox:origin": "basic-template",
+            "mapbox:autocomposite": true,
+            "mapbox:type": "template",
+            "mapbox:sdk-support": {
+                "js": "0.54.0",
+                "android": "6.7.0",
+                "ios": "4.7.0"
+            }
+        },
+        "center": [135.54650935837526, 34.70470994992827],
+        "zoom": 11,
+        "bearing": 0,
+        "pitch": 0,
+        "sources": {
+            "composite": {"url": "mapbox://nro2dai.cql7guu2", "type": "vector"}
+        },
+        "sprite": "mapbox://sprites/nro2dai/ck2tw46ji019y1cqv4ks01usv/ck2u8j60r58fu0sgyxrigm3cu",
+        "glyphs": "mapbox://fonts/nro2dai/{fontstack}/{range}.pbf",
+        "layers": [
+            {
+            "id": "nankai-tsunami",
+                          "type": "fill",
+                          "source": "composite",
+                          "source-layer": "tsunami-8kd1zj",
+                          "layout": {},
+                          "paint": {
+                              "fill-color": [
+                                  "match",
+                                  ["get", "A40_003"],
+                                  ["", "0.01m以上 〜 0.3m未満"],
+                                  "hsl(60, 100%, 50%)",
+                                  ["0.3m以上 〜 1m未満"],
+                                  "rgb(255, 158, 1)",
+                                  ["1m以上 〜 2m未満"],
+                                  "rgb(255, 73, 1)",
+                                  ["2m以上 〜 3m未満"],
+                                  "rgb(219, 76, 126)",
+                                  ["3m以上 〜 4m未満"],
+                                  "hsl(300, 100%, 50%)",
+                                  ["4m以上 〜 5m未満"],
+                                  "rgb(174, 0, 255)",
+                                  ["5m以上"],
+                                  "rgb(120, 1, 255)",
+                                  "hsla(0, 0%, 0%, 0)"
+                              ],
+                              "fill-outline-color": "hsla(0, 0%, 0%, 0)"
+                          }
+
+            }
+        ],
+        "created": "2019-11-11T03:51:49.038Z",
+        "id": "ck2tw46ji019y1cqv4ks01usv",
+        "modified": "2019-11-11T04:29:35.670Z",
+        "owner": "nro2dai",
+        "visibility": "private",
+        "draft": false
+    }
+},
+{
+    "name":"高潮浸水深_6p4m",
+    "server":"https://www.cerd.osaka-cu.ac.jp/cerd-ar_tiles/takashio6p4m/{z}/{x}/{y}.png",
+    "gl_style":{
+        "version": 8,
+        "name": "Raster Tiles",
+        "sources": {
+            "gsiStd": {
+                "type": "raster",
+                "tiles": [
+                    "https://www.cerd.osaka-cu.ac.jp/cerd-ar_tiles/takashio6p4m/{z}/{x}/{y}.png"
+                ],
+                "tileSize": 256
+            }
+        },
+        "layers": [{
+            "id": "sinsui_6p4m",
+            "type": "raster",
+            "source": "sinsui_6p4m",
+            "paint": {
+                "raster-fade-duration": 100
+            }
+        }]
     }
 }
 ]

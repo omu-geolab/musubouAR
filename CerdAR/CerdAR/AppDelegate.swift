@@ -7,13 +7,14 @@
 
 import UIKit
 //import CoreData
-import SwiftUI
+//import SwiftUI
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
-    var viewController: UIViewController = loadViewController()    //var myNavigationController: UINavigationController?
+    private(set) var launchOptions: [UIApplication.LaunchOptionsKey: Any]?
+    //var myNavigationController: UINavigationController?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         UNUserNotificationCenter.current().requestAuthorization(
@@ -23,9 +24,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 UNUserNotificationCenter.current().delegate = self
             }
         }
+        self.launchOptions = launchOptions
+        let viewController: UIViewController = loadViewController()
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.backgroundColor = UIColor.white
-        self.window?.rootViewController = self.viewController
+        self.window?.rootViewController = viewController
 //        self.window?.rootViewController = UIHostingController(rootView: LoadingView())
         self.window?.makeKeyAndVisible()
         Unity.shared.setHostMainWindow(window)
@@ -63,6 +66,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
 }
+
 extension AppDelegate: UNUserNotificationCenterDelegate {
     func userNotificationCenter(
         _ center: UNUserNotificationCenter,
