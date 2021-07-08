@@ -1,3 +1,4 @@
+
 // [!] important set UnityFramework in Target Membership for this file
 // [!]           and set Public header visibility
 
@@ -16,5 +17,3 @@ __attribute__ ((visibility("default")))
 +(void) registerAPIforNativeCalls:(id<NativeCallsProtocol>) aApi;
 
 @end
-
-

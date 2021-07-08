@@ -15,8 +15,8 @@
 #if IL2CPP_MONO_DEBUGGER
 static const Il2CppMethodExecutionContextInfo g_methodExecutionContextInfos[2] = 
 {
-	{ 14069, 0,  4 } /*tableIndex: 0 */,
-	{ 14069, 0,  9 } /*tableIndex: 1 */,
+	{ 14111, 0,  4 } /*tableIndex: 0 */,
+	{ 14111, 0,  9 } /*tableIndex: 1 */,
 };
 #else
 static const Il2CppMethodExecutionContextInfo g_methodExecutionContextInfos[1] = { { 0, 0, 0 } };

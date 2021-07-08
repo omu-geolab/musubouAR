@@ -13,7 +13,6 @@ import CoreLocation
 import Mapbox
 import MapKit
 import AVFoundation
-//import MapboxSceneKit
 
 class ARViewController: UIViewController,detailViewDelegate {
     
@@ -76,7 +75,7 @@ class ARViewController: UIViewController,detailViewDelegate {
     var warnNums: [Int] = [] // 災害番号
     var box: [Int] = [] // 現在発生している災害の番号を管理する配列
     var updateTimer: Timer! // 一定時間ごとにupdate()を発火させる
-    var timerUpdateFace = Timer()//AR平面図更新
+    var timerUpdateFace: Timer!//AR平面図更新
     var warnCount:Int = 0 //災害を侵入する番号
     
     var warningCount = 0 //災害を侵入する番号
@@ -319,6 +318,9 @@ class ARViewController: UIViewController,detailViewDelegate {
         if updateTimer != nil {
             updateTimer.invalidate()
         }
+        if timerUpdateFace != nil {
+            timerUpdateFace.invalidate()
+        }
         vibration.vibStop()
         if audioPlayerNear.isPlaying == true {
             audioPlayerNear.stop()
@@ -495,10 +497,10 @@ class ARViewController: UIViewController,detailViewDelegate {
         mapView.setCenter(CLLocationCoordinate2D(latitude: userLat, longitude: userLon), zoomLevel: 18, animated: false)
         mapView.setUserTrackingMode(.followWithHeading, animated: true, completionHandler: nil)
         mapView.delegate = self
-        mapView.allowsTilting = false
-        mapView.allowsRotating = false
-        mapView.allowsZooming = false
-        mapView.allowsScrolling = false
+//        mapView.allowsTilting = false
+//        mapView.allowsRotating = false
+//        mapView.allowsZooming = false
+//        mapView.allowsScrolling = false
         mapView.showsUserHeadingIndicator =  true
         mapView.layer.shadowColor = UIColor.black.cgColor
         mapView.layer.shadowRadius = 5
@@ -842,11 +844,11 @@ extension ARViewController: CLLocationManagerDelegate{
     // 位置を変わるとARAnnotationを再表示する
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.last{
-            altitude = location.altitude
-            userLat = location.coordinate.latitude
-            userLon = location.coordinate.longitude
-            updateAllDistances()
-            updateStatus()
+//            altitude = location.altitude
+//            userLat = location.coordinate.latitude
+//            userLon = location.coordinate.longitude
+//            updateAllDistances()
+//            updateStatus()
         }
     }
     func filterAndAddLocation(_ location: CLLocation) -> Bool{
@@ -1088,41 +1090,7 @@ extension ARViewController: ARSCNViewDelegate {
     ///   - node: <#node description#>
     ///   - data: <#data description#>
     private func loadScene(name : String ,node: SCNNode, with data: TagData) {
-//        if(data.inforType == kWarn){
-//            if(data.distance > data.range){
-//                let box = SCNCylinder(radius: CGFloat(data.range), height: 0.2)
-//                var color = UIColor(red: 0.200, green: 1.000, blue: 0.384, alpha: 1)
-//                switch data.riskType {
-//
-//                case 0: // 火災のとき：赤色
-//                    color =  UIColor(red: 0.545, green: 0.020, blue: 0.220, alpha: 1)
-//
-//                case 1: // 浸水のとき：青色
-//                    color =   UIColor(red: 0.000, green: 0.400, blue: 1.000, alpha: 1)
-//
-//                case 2: // 土砂崩れのとき：茶色
-//                    color =   UIColor(red: 0.800, green: 0.400, blue: 0.000, alpha: 1)
-//
-//                case 3, 4, 5, 6: // 道路閉塞のとき：黄色
-//                    color =   UIColor(red: 1.000, green: 0.945, blue: 0.024, alpha: 1)
-//
-//                default: // その他の災害のとき：緑色
-//                    color =   UIColor(red: 0.200, green: 1.000, blue: 0.384, alpha: 1)
-//                }
-//                box.materials.last?.diffuse.contents = color
-//                //box.firstMaterial?.transparency = 0.5
-//                box.materials.last?.transparency = 0.8
-//                let nodeBox = SCNNode(geometry: box)
-//                nodeBox.position = node.position
-//                nodeBox.position.y = nodeBox.position.y - adjustHeightAR - 1.0
-//                //nodeBox.eulerAngles.x = -.pi / 2
-//                node.addChildNode(nodeBox)
-//                // return
-//            }else{
-//                return
-//            }
-//
-//        }
+        
         if(data.distance == 0) {
             node.isHidden = true
         }else{
@@ -1426,14 +1394,14 @@ extension ARViewController: MGLMapViewDelegate {
         return false
     }
     func mapView(_ mapView: MGLMapView, regionDidChangeAnimated animated: Bool) {
-//        userLat = self.mapView.centerCoordinate.latitude
-//        userLon = self.mapView.centerCoordinate.longitude
-////        self.updateFace();
-//        updateAllDistances()
-//        updateStatus()
-//        DispatchQueue(label: "scalingImage").async {
-//            self.scalingImage()
-//        }
+        userLat = self.mapView.centerCoordinate.latitude
+        userLon = self.mapView.centerCoordinate.longitude
+//        self.updateFace();
+        updateAllDistances()
+        updateStatus()
+        DispatchQueue(label: "scalingImage").async {
+            self.scalingImage()
+        }
     }
     /**
      * 拡大縮小や現在地の更新による新しいピン画像の設定
@@ -1500,7 +1468,7 @@ extension SCNNode {
         node.runAction(repeatForever)
     }
     func addAnimationScale(node: SCNNode) {
-        let rotateOne = SCNAction.rotateBy(x: 0, y: CGFloat(Float.pi), z: 0, duration: 3.0)
+//        let rotateOne = SCNAction.rotateBy(x: 0, y: CGFloat(Float.pi), z: 0, duration: 3.0)
         
         
         let scale = SCNAction.scale(to: 20, duration: 2.0)
@@ -1514,7 +1482,7 @@ extension SCNNode {
 }
 extension SCNTube {
     func addAnimationScale(node: SCNNode) {
-        let rotateOne = SCNAction.rotateBy(x: 0, y: CGFloat(Float.pi), z: 0, duration: 3.0)
+//        let rotateOne = SCNAction.rotateBy(x: 0, y: CGFloat(Float.pi), z: 0, duration: 3.0)
         
         
         let scale = SCNAction.scale(to: 2.5, duration: 1)

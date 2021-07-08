@@ -52,6 +52,7 @@
 		F033F9F8219172E7008A3A2E /* MapboxARAnnotationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F033F9F7219172E7008A3A2E /* MapboxARAnnotationManager.swift */; };
 		F033F9FA219172EC008A3A2E /* MapboxARAnchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F033F9F9219172EC008A3A2E /* MapboxARAnchor.swift */; };
 		F03B8203268B1F8C003A6011 /* Unity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03B8202268B1F8C003A6011 /* Unity.swift */; };
+		F03B8238268C54DB003A6011 /* UnityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03B8237268C54DB003A6011 /* UnityViewController.swift */; };
 		F040A5A025B6C18300647A7F /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F040A59F25B6C18300647A7F /* LoadingView.swift */; };
 		F055A0B4268B236200034143 /* UnityFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F055A0B2268B236200034143 /* UnityFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F05A3C9A26048756002BC9E4 /* NodeAR.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05A3C9926048756002BC9E4 /* NodeAR.swift */; };
@@ -230,6 +231,7 @@
 		F033F9F7219172E7008A3A2E /* MapboxARAnnotationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapboxARAnnotationManager.swift; sourceTree = "<group>"; };
 		F033F9F9219172EC008A3A2E /* MapboxARAnchor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapboxARAnchor.swift; sourceTree = "<group>"; };
 		F03B8202268B1F8C003A6011 /* Unity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unity.swift; sourceTree = "<group>"; };
+		F03B8237268C54DB003A6011 /* UnityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnityViewController.swift; sourceTree = "<group>"; };
 		F040A59F25B6C18300647A7F /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		F054082921CB56E4009D8558 /* MapboxMobileEvents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapboxMobileEvents.framework; path = ../Carthage/Build/iOS/MapboxMobileEvents.framework; sourceTree = "<group>"; };
 		F054082B21CB56E9009D8558 /* MapboxSceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapboxSceneKit.framework; path = ../Carthage/Build/iOS/MapboxSceneKit.framework; sourceTree = "<group>"; };
@@ -444,6 +446,7 @@
 				F0986D3125C10B2D00CB0FE6 /* TermsViewController.swift */,
 				F09088A325EC87B7008463C8 /* WorkoutViewController.swift */,
 				F060A96325F2134B00888F67 /* WorkoutDetaill.swift */,
+				F03B8237268C54DB003A6011 /* UnityViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -935,6 +938,7 @@
 				F060A98625F849E700888F67 /* ToggleButton.swift in Sources */,
 				F0319F7823098E25002DEF7C /* HCKalmanAlgorithm.swift in Sources */,
 				F06D987622FA75E1001CCB9E /* SectionedSlider.swift in Sources */,
+				F03B8238268C54DB003A6011 /* UnityViewController.swift in Sources */,
 				F09088C725EE3C45008463C8 /* GradidentPolylineRenderer.swift in Sources */,
 				D3CF68DE1D91187D008B588E /* termsView.swift in Sources */,
 				ACEE245C1D8235FE00102E10 /* MakeTagImage.swift in Sources */,
