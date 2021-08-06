@@ -497,10 +497,10 @@ class ARViewController: UIViewController,detailViewDelegate {
         mapView.setCenter(CLLocationCoordinate2D(latitude: userLat, longitude: userLon), zoomLevel: 18, animated: false)
         mapView.setUserTrackingMode(.followWithHeading, animated: true, completionHandler: nil)
         mapView.delegate = self
-//        mapView.allowsTilting = false
-//        mapView.allowsRotating = false
-//        mapView.allowsZooming = false
-//        mapView.allowsScrolling = false
+        mapView.allowsTilting = false
+        mapView.allowsRotating = false
+        mapView.allowsZooming = false
+        mapView.allowsScrolling = false
         mapView.showsUserHeadingIndicator =  true
         mapView.layer.shadowColor = UIColor.black.cgColor
         mapView.layer.shadowRadius = 5
@@ -844,11 +844,11 @@ extension ARViewController: CLLocationManagerDelegate{
     // 位置を変わるとARAnnotationを再表示する
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.last{
-//            altitude = location.altitude
-//            userLat = location.coordinate.latitude
-//            userLon = location.coordinate.longitude
-//            updateAllDistances()
-//            updateStatus()
+            altitude = location.altitude
+            userLat = location.coordinate.latitude
+            userLon = location.coordinate.longitude
+            updateAllDistances()
+            updateStatus()
         }
     }
     func filterAndAddLocation(_ location: CLLocation) -> Bool{
@@ -1394,11 +1394,11 @@ extension ARViewController: MGLMapViewDelegate {
         return false
     }
     func mapView(_ mapView: MGLMapView, regionDidChangeAnimated animated: Bool) {
-        userLat = self.mapView.centerCoordinate.latitude
-        userLon = self.mapView.centerCoordinate.longitude
-//        self.updateFace();
-        updateAllDistances()
-        updateStatus()
+//        userLat = self.mapView.centerCoordinate.latitude
+//        userLon = self.mapView.centerCoordinate.longitude
+////        self.updateFace();
+//        updateAllDistances()
+//        updateStatus()
         DispatchQueue(label: "scalingImage").async {
             self.scalingImage()
         }
