@@ -3,23 +3,17 @@ PODS:
   - Mapbox-iOS-SDK (6.3.0):
     - MapboxMobileEvents (~> 0.10.4)
   - MapboxMobileEvents (0.10.7)
-  - MapboxStatic.swift (0.12.0):
-    - Polyline (~> 5.0)
-  - Polyline (5.0.2)
   - Surge (2.0.0)
 
 DEPENDENCIES:
   - HealthKitSampleGenerator (from `https://github.com/mkhoshpour/healthkit-sample-generator`)
   - Mapbox-iOS-SDK (~> 6.3.0)
-  - MapboxStatic.swift (~> 0.12)
   - Surge (~> 2.0.0)
 
 SPEC REPOS:
   trunk:
     - Mapbox-iOS-SDK
     - MapboxMobileEvents
-    - MapboxStatic.swift
-    - Polyline
     - Surge
 
 EXTERNAL SOURCES:
@@ -35,10 +29,8 @@ SPEC CHECKSUMS:
   HealthKitSampleGenerator: 017bdf6832a956a1cb026ebd955f22433031750a
   Mapbox-iOS-SDK: 2563ed87ead6ec08f1c2090873977b8a7be335a8
   MapboxMobileEvents: d0a581dedd8f47411cc65ea520b965e83914316e
-  MapboxStatic.swift: aa3e4fabb307414bd3a51a2cb83f37a5b07db7f1
-  Polyline: fce41d72e1146c41c6d081f7656827226f643dff
   Surge: 1f0286bc5f0fe4283f3455479895bf85c7ef7760
 
-PODFILE CHECKSUM: 130c424c38170814ebfe5d2bf65d0e093dfb8c14
+PODFILE CHECKSUM: 705e80ba01e3c69d3691c45b244927ed5a3d0afc
 
 COCOAPODS: 1.10.0

@@ -92,6 +92,8 @@ class ARViewController: UIViewController,detailViewDelegate {
     var resetKalmanFilter: Bool = false
     var hcKalmanFilter: HCKalmanAlgorithm?
     var audioPlayer: AVAudioPlayer!
+    var levelZoomMap:Double = 1.0
+    var isOrientation = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -292,7 +294,11 @@ class ARViewController: UIViewController,detailViewDelegate {
         startSession()
         configureMapboxMapView()
      
-
+        NotificationCenter.default.addObserver(
+                    self,
+                    selector: #selector(orientationChanged),
+                    name: UIDevice.orientationDidChangeNotification,
+                    object: nil)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -300,7 +306,7 @@ class ARViewController: UIViewController,detailViewDelegate {
        
         timerUpdateFace = Timer.scheduledTimer(timeInterval: kUpdateFace, target: self, selector: #selector(ARViewController.updateFace), userInfo: nil, repeats: true)
     
-        update() // 災害情報を更新する
+//        update() // 災害情報を更新する
         // kUpdateWarn秒に1回update()を発火させる
         if updateTimer == nil {
             updateTimer = Timer.scheduledTimer(timeInterval: kUpdateWarn, target: self, selector: #selector(ARViewController.update), userInfo: nil, repeats: true)
@@ -334,6 +340,10 @@ class ARViewController: UIViewController,detailViewDelegate {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    @objc func orientationChanged() {
+      isOrientation =  true
     }
     
     //MARK: Action
@@ -489,9 +499,8 @@ class ARViewController: UIViewController,detailViewDelegate {
         mapView = MGLMapView(frame: CGRect(x: 0, y: 0, width: d, height: d))
         mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         mapView.camera = MGLMapCamera(lookingAtCenter: CLLocationCoordinate2D(latitude: 34.7, longitude: 135.5), altitude: 1200, pitch: 45, heading: 0)
-        let styleStreet = MGLStyle.streetsStyleURL
+        let styleStreet = MGLStyle.streetsStyleURL(withVersion: 9)
         mapView.layer.cornerRadius = mapView.frame.height/2
-        
         
         mapView.styleURL = styleStreet
         mapView.setCenter(CLLocationCoordinate2D(latitude: userLat, longitude: userLon), zoomLevel: 18, animated: false)
@@ -501,6 +510,12 @@ class ARViewController: UIViewController,detailViewDelegate {
         mapView.allowsRotating = false
         mapView.allowsZooming = false
         mapView.allowsScrolling = false
+//        #if DEBUG
+//        mapView.allowsTilting = true
+//        mapView.allowsRotating = true
+//        mapView.allowsZooming = true
+//        mapView.allowsScrolling = true
+//        #endif
         mapView.showsUserHeadingIndicator =  true
         mapView.layer.shadowColor = UIColor.black.cgColor
         mapView.layer.shadowRadius = 5
@@ -541,7 +556,7 @@ class ARViewController: UIViewController,detailViewDelegate {
             osmWarnBox[i].inforType = jsonDataManager.sharedInstance.warnBox[i].inforType // タグの種類
             osmWarnBox[i].pinNum = i //ピン番号
             osmWarnBox[i].coordinate = CLLocationCoordinate2D(latitude: jsonDataManager.sharedInstance.warnBox[i].lat, longitude: jsonDataManager.sharedInstance.warnBox[i].lon) // 位置
-            
+
             mapView.addAnnotation(polygonCircleForCoordinate(coordinate: osmWarnBox[i].coordinate, withMeterRadius: jsonDataManager.sharedInstance.warnBox[i].range,pinNum: i))
             mapView.addAnnotation(osmWarnBox[i])
 
@@ -583,6 +598,78 @@ class ARViewController: UIViewController,detailViewDelegate {
         //self.mapView.addAnnotation(polygon)
     }
     
+    func loadGeoJson() {
+        DispatchQueue.global().async {
+            // Get the path for example.geojson in the app’s bundle.
+            guard let jsonUrl = Bundle.main.url(forResource: "LinePolygon", withExtension: "geojson") else {
+                preconditionFailure("Failed to load local GeoJSON file")
+            }
+            
+            guard let jsonData = try? Data(contentsOf: jsonUrl) else {
+                preconditionFailure("Failed to parse GeoJSON file")
+            }
+            
+            DispatchQueue.main.async {
+                self.drawPolyline(geoJson: jsonData)
+            }
+        }
+    }
+    
+    func drawPolyline(geoJson: Data) {
+        // Add our GeoJSON data to the map as an MGLGeoJSONSource.
+        // We can then reference this data from an MGLStyleLayer.
+        
+        // MGLMapView.style is optional, so you must guard against it not being set.
+        guard let style = self.mapView.style else { return }
+        
+        guard let shapeFromGeoJSON = try? MGLShape(data: geoJson, encoding: String.Encoding.utf8.rawValue) else {
+            fatalError("Could not generate MGLShape")
+        }
+        
+        let source = MGLShapeSource(identifier: "polyline", shape: shapeFromGeoJSON, options: nil)
+        style.addSource(source)
+        
+        // Create new layer for the line.
+        let layer = MGLLineStyleLayer(identifier: "polyline", source: source)
+        
+        // Set the line join and cap to a rounded end.
+        layer.lineJoin = NSExpression(forConstantValue: "round")
+        layer.lineCap = NSExpression(forConstantValue: "round")
+        
+        // Set the line color to a constant blue color.
+        layer.lineColor = NSExpression(forConstantValue: UIColor(red: 59/255, green: 178/255, blue: 208/255, alpha: 1))
+        
+        // Use `NSExpression` to smoothly adjust the line width from 2pt to 20pt between zoom levels 14 and 18. The `interpolationBase` parameter allows the values to interpolate along an exponential curve.
+        layer.lineWidth = NSExpression(format: "mgl_interpolate:withCurveType:parameters:stops:($zoomLevel, 'linear', nil, %@)",
+                                       [14: 2, 18: 20])
+        
+        // We can also add a second layer that will draw a stroke around the original line.
+        let casingLayer = MGLLineStyleLayer(identifier: "polyline-case", source: source)
+        // Copy these attributes from the main line layer.
+        casingLayer.lineJoin = layer.lineJoin
+        casingLayer.lineCap = layer.lineCap
+        // Line gap width represents the space before the outline begins, so should match the main line’s line width exactly.
+        casingLayer.lineGapWidth = layer.lineWidth
+        // Stroke color slightly darker than the line color.
+        casingLayer.lineColor = NSExpression(forConstantValue: UIColor(red: 41/255, green: 145/255, blue: 171/255, alpha: 1))
+        // Use `NSExpression` to gradually increase the stroke width between zoom levels 14 and 18.
+        casingLayer.lineWidth = NSExpression(format: "mgl_interpolate:withCurveType:parameters:stops:($zoomLevel, 'linear', nil, %@)", [14: 1, 18: 4])
+        
+        // Just for fun, let’s add another copy of the line with a dash pattern.
+        let dashedLayer = MGLLineStyleLayer(identifier: "polyline-dash", source: source)
+        dashedLayer.lineJoin = layer.lineJoin
+        dashedLayer.lineCap = layer.lineCap
+        dashedLayer.lineColor = NSExpression(forConstantValue: UIColor.white)
+        dashedLayer.lineOpacity = NSExpression(forConstantValue: 0.5)
+        dashedLayer.lineWidth = layer.lineWidth
+        // Dash pattern in the format [dash, gap, dash, gap, ...]. You’ll want to adjust these values based on the line cap style.
+        dashedLayer.lineDashPattern = NSExpression(forConstantValue: [0, 1.5])
+        
+        style.addLayer(layer)
+        style.addLayer(dashedLayer)
+        style.insertLayer(casingLayer, below: layer)
+    }
+    
     // reset
     func detailViewFinish() {
         
@@ -611,7 +698,11 @@ class ARViewController: UIViewController,detailViewDelegate {
             customStyleURL = dir.appendingPathComponent(fileName)
         }
         if(gisDisplayMode != gisMode.gis){
-            customStyleURL = MGLStyle.streetsStyleURL
+            customStyleURL = MGLStyle.streetsStyleURL(withVersion: 9)
+            if(self.flag){
+                self.updateEnvorimentAR(currentLocation: CLLocation(latitude: userLat, longitude: userLon))
+            }
+            return
         }
         
         let options = MGLMapSnapshotOptions(styleURL: customStyleURL, camera: camera, size: size)
@@ -786,7 +877,6 @@ class ARViewController: UIViewController,detailViewDelegate {
                     vibration.vibIntrusionStart()
                 }
             }
-            
             warningView.isHidden = false
             warningMessage.isHidden = false
             warningMessage.text = warningEnter[warningCount].message2 // 警告メッセージ
@@ -936,6 +1026,7 @@ extension ARViewController: CLLocationManagerDelegate{
                     updateOverlay(risk: jsonDataManager.sharedInstance.warnBox[i].riskType)
                     warnCount += 1
                     
+                    
                 }
                 
             }else{
@@ -955,40 +1046,69 @@ extension ARViewController: CLLocationManagerDelegate{
             vibration.vibStop()
             
             warnIndex = -1
+            DispatchQueue.main.async {
+                self.mapView.isHidden = false
+            }
+        }else {
+            DispatchQueue.main.async {
+                self.mapView.isHidden = true
+            }
         }
+        #if DEBUG
+        DispatchQueue.main.async {
+            self.mapView.isHidden = false
+        }
+        #endif
     }
     func updateOverlay( risk:Int){
         let size = self.sceneView.bounds.size
         let overlay = OverlayScene(size: size)
         
         let positionTop = CGPoint(x: 0, y: size.height*0.5)
-        let positionBot = CGPoint(x: 0, y: -size.height*0.5)
+        let positionBot1 = CGPoint(x: 0, y: -size.height*0.5)
+        let positionBot2 = CGPoint(x: 0, y: -size.height*0.3)
         let positionRight = CGPoint(x: size.width*0.4, y: size.height*0.5)
+        let positionCenter = CGPoint(x: 0, y: size.height*0.5)
         let range = size.width
         let index = warnIndex
         switch risk {
-            
         case 0: // 火災：赤色
-            overlay.addEnvironment(filedNamed: "SceneKit.scnassets/fire1.sks", position: positionBot, range: range)
+            overlay.addEnvironment(filedNamed: "SceneKit.scnassets/firesmoke.sks", position: positionTop, range: range)
+            overlay.addEnvironment(filedNamed: "SceneKit.scnassets/fire1.sks", position: positionBot1, range: range)
             warnIndex = 0
             break
-        case 1,7: // 浸水：青色
+        case 1,7: // 1 浸水・7 津波：青色
             overlay.addEnvironment(filedNamed: "SceneKit.scnassets/rain.sks", position: positionTop, range: range)
-            overlay.addEnvironment(filedNamed: "SceneKit.scnassets/flood.sks", position: positionBot, range: range)
+            overlay.addEnvironment(filedNamed: "SceneKit.scnassets/flooding.sks", position: positionBot2, range: range)
             warnIndex = 1
             break
         case 2: // 土砂崩れ：茶色
             overlay.addEnvironment(filedNamed: "SceneKit.scnassets/rock.sks", position: positionRight, range: 350)
             warnIndex = 2
             break
-        case 3, 4, 5, 6, 8: // 道路閉塞：黄色
+        case 3, 6: // 道路閉塞：黄色
             overlay.addEnvironment(filedNamed: "SceneKit.scnassets/smoke.sks", position: positionTop, range: range)
             warnIndex = 3
+            break
+        case 4: // 家屋倒壊：黄色
+            overlay.addEnvironment(filedNamed: "SceneKit.scnassets/rubble.sks", position: positionCenter, range: 350)
+            warnIndex = 4
+            break
+        case 5: // ブロック塀：黄色
+            overlay.addEnvironment(filedNamed: "SceneKit.scnassets/block.sks", position: positionCenter, range: 350)
+            warnIndex = 5
+            break
+        case 8: // 液状化：黄色
+            overlay.addEnvironment(filedNamed: "SceneKit.scnassets/liquefaction.sks", position: positionBot2, range: range)
+            warnIndex = 6
             break
         default: // その他の災害：緑色
             break
         }
-        if(index != self.warnIndex){
+        if(index != self.warnIndex || isOrientation == true){
+            isOrientation = false
+            self.sceneView.overlaySKScene = overlay
+        }else if (self.sceneView.overlaySKScene?.size.width != overlay.size.width ) {
             self.sceneView.overlaySKScene = overlay
         }
     }
@@ -1387,6 +1507,7 @@ extension ARViewController: MGLMapViewDelegate {
             }
         }
         self.updateFace()
+        loadGeoJson()
   
     }
     func mapView(_ mapView: MGLMapView, annotationCanShowCallout annotation: MGLAnnotation) -> Bool {
@@ -1394,15 +1515,14 @@ extension ARViewController: MGLMapViewDelegate {
         return false
     }
     func mapView(_ mapView: MGLMapView, regionDidChangeAnimated animated: Bool) {
-//        userLat = self.mapView.centerCoordinate.latitude
-//        userLon = self.mapView.centerCoordinate.longitude
-////        self.updateFace();
-//        updateAllDistances()
-//        updateStatus()
-        DispatchQueue(label: "scalingImage").async {
-            self.scalingImage()
+        if mapView.zoomLevel >  levelZoomMap + 0.5 || mapView.zoomLevel <  levelZoomMap - 0.5 {
+            levelZoomMap = mapView.zoomLevel
+            DispatchQueue.main.async {
+                 self.scalingImage()
+            }
         }
     }
+   
     /**
      * 拡大縮小や現在地の更新による新しいピン画像の設定
      */

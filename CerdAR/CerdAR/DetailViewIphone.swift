@@ -218,29 +218,34 @@ class DetailViewIphone: UIView {
                     text = "火災"
                     warnImg = UIImage(named: "icon_warn0.png")!
                 case 1:
-                    text = "水が流れています"
+                    text = "浸水しています"
                     warnImg = UIImage(named: "icon_warn1.png")!
                 case 2:
                     text = "土砂くずれ"
                     warnImg = UIImage(named: "icon_warn2.png")!
                 case 3:
-                    text = "橋がこわれています"
+                    text = "煙が発生しています"
                     warnImg = UIImage(named: "icon_warn3.png")!
                 case 4:
-                    text = "家がこわれています"
+                    text = "家が倒壊しています"
                     warnImg = UIImage(named: "icon_warn3.png")!
                 case 5:
-                    text = "へいがこわれています"
+                    text = "塀が倒壊しています"
                     warnImg = UIImage(named: "icon_warn3.png")!
                 case 6:
                     text = "道路にあながあいています"
                     //text = "通行禁止\n(コンテナ流入)"
                     warnImg = UIImage(named: "icon_warn3.png")!
+                case 7:
+                    text = "津波で水があふれています"
+                    warnImg = UIImage(named: "icon_warn1.png")!
+                case 8:
+                    text = "道が液状化しています"
+                    warnImg = UIImage(named: "icon_warn3.png")!
                 default:
                     text = "その他の災害"
                     warnImg = UIImage(named: "icon_infoTagAR.png")!
                 }
-
                 let label = UILabel(frame: CGRect.init(x: 0.0, y: 0.0, width: warnImg!.size.width, height: warnImg!.size.height)) //ラベルサイズ
 
                 label.text = text
