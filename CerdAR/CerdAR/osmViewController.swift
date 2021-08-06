@@ -87,8 +87,10 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
     let kFill: CGFloat = 0.6   // 円内部の透明度
     let kZero: CGFloat = 0 // 初期値0
     let kTagSize: CGFloat = 500 // タグ画像のサイズ
-    let styleMapboxURL = URL(string: "mapbox://styles/th-nguyen/ckk29t1zw391617rrt2rwls2i")
+//    let styleMapboxURL = URL(string: "mapbox://styles/th-nguyen/ckk29t1zw391617rrt2rwls2i")
+    let styleMapboxURL = MGLStyle.streetsStyleURL(withVersion: 9)
     var audioPlayer: AVAudioPlayer!
+    var levelZoomMap:Double = 1.0
     //    var wcSession : WCSession! = nil
     
     //    @IBOutlet weak var mapView: MGLMapView!
@@ -500,9 +502,12 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
     func mapView(_ mapView: MGLMapView, regionDidChangeAnimated animated: Bool) {
 //        userLat = self.mapView.centerCoordinate.latitude
 //        userLon = self.mapView.centerCoordinate.longitude
-        //        DispatchQueue(label: "scalingImage").async {
-        self.scalingImage()
-        //        }
+        if mapView.zoomLevel >  levelZoomMap + 0.5 || mapView.zoomLevel <  levelZoomMap - 0.5 {
+            levelZoomMap = mapView.zoomLevel
+            DispatchQueue.main.async {
+                 self.scalingImage()
+            }
+        }
         
     }
     func mapView(_ mapView: MGLMapView, viewFor annotation: MGLAnnotation) -> MGLAnnotationView? {
@@ -607,6 +612,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         // Set the light anchor to the map and add the light object to the map view's style. The light anchor can be the viewport (or rotates with the viewport) or the map (rotates with the map). To make the viewport the anchor, replace `map` with `viewport`.
         light.anchor = NSExpression(forConstantValue: "map")
         style.light = light
+        loadGeoJson()
     }
     
     func addFillExtrusionLayer(style: MGLStyle) {
@@ -1068,7 +1074,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         
         let mapStyle = mapView.styleURL.absoluteString
         print(mapStyle)
-        if mapStyle == styleMapboxURL!.absoluteString {
+        if mapStyle == styleMapboxURL.absoluteString {
             displayMode = mode.osmsat.rawValue
             mapView.styleURL = MGLStyle.satelliteStyleURL
             mbStyle = mapView.styleURL.absoluteString
@@ -1263,6 +1269,78 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
             }
             cannotTouchView.removeFromSuperview()
         }
+    }
+    
+    func loadGeoJson() {
+        DispatchQueue.global().async {
+            // Get the path for example.geojson in the app’s bundle.
+            guard let jsonUrl = Bundle.main.url(forResource: "LinePolygon", withExtension: "geojson") else {
+                preconditionFailure("Failed to load local GeoJSON file")
+            }
+            
+            guard let jsonData = try? Data(contentsOf: jsonUrl) else {
+                preconditionFailure("Failed to parse GeoJSON file")
+            }
+            
+            DispatchQueue.main.async {
+                self.drawPolyline(geoJson: jsonData)
+            }
+        }
+    }
+    
+    func drawPolyline(geoJson: Data) {
+        // Add our GeoJSON data to the map as an MGLGeoJSONSource.
+        // We can then reference this data from an MGLStyleLayer.
+        
+        // MGLMapView.style is optional, so you must guard against it not being set.
+        guard let style = self.mapView.style else { return }
+        
+        guard let shapeFromGeoJSON = try? MGLShape(data: geoJson, encoding: String.Encoding.utf8.rawValue) else {
+            fatalError("Could not generate MGLShape")
+        }
+        
+        let source = MGLShapeSource(identifier: "polyline", shape: shapeFromGeoJSON, options: nil)
+        style.addSource(source)
+        
+        // Create new layer for the line.
+        let layer = MGLLineStyleLayer(identifier: "polyline", source: source)
+        
+        // Set the line join and cap to a rounded end.
+        layer.lineJoin = NSExpression(forConstantValue: "round")
+        layer.lineCap = NSExpression(forConstantValue: "round")
+        
+        // Set the line color to a constant blue color.
+        layer.lineColor = NSExpression(forConstantValue: UIColor(red: 59/255, green: 178/255, blue: 208/255, alpha: 1))
+        
+        // Use `NSExpression` to smoothly adjust the line width from 2pt to 20pt between zoom levels 14 and 18. The `interpolationBase` parameter allows the values to interpolate along an exponential curve.
+        layer.lineWidth = NSExpression(format: "mgl_interpolate:withCurveType:parameters:stops:($zoomLevel, 'linear', nil, %@)",
+                                       [14: 2, 18: 20])
+        
+        // We can also add a second layer that will draw a stroke around the original line.
+        let casingLayer = MGLLineStyleLayer(identifier: "polyline-case", source: source)
+        // Copy these attributes from the main line layer.
+        casingLayer.lineJoin = layer.lineJoin
+        casingLayer.lineCap = layer.lineCap
+        // Line gap width represents the space before the outline begins, so should match the main line’s line width exactly.
+        casingLayer.lineGapWidth = layer.lineWidth
+        // Stroke color slightly darker than the line color.
+        casingLayer.lineColor = NSExpression(forConstantValue: UIColor(red: 41/255, green: 145/255, blue: 171/255, alpha: 1))
+        // Use `NSExpression` to gradually increase the stroke width between zoom levels 14 and 18.
+        casingLayer.lineWidth = NSExpression(format: "mgl_interpolate:withCurveType:parameters:stops:($zoomLevel, 'linear', nil, %@)", [14: 1, 18: 4])
+        
+        // Just for fun, let’s add another copy of the line with a dash pattern.
+        let dashedLayer = MGLLineStyleLayer(identifier: "polyline-dash", source: source)
+        dashedLayer.lineJoin = layer.lineJoin
+        dashedLayer.lineCap = layer.lineCap
+        dashedLayer.lineColor = NSExpression(forConstantValue: UIColor.white)
+        dashedLayer.lineOpacity = NSExpression(forConstantValue: 0.5)
+        dashedLayer.lineWidth = layer.lineWidth
+        // Dash pattern in the format [dash, gap, dash, gap, ...]. You’ll want to adjust these values based on the line cap style.
+        dashedLayer.lineDashPattern = NSExpression(forConstantValue: [0, 1.5])
+        
+        style.addLayer(layer)
+        style.addLayer(dashedLayer)
+        style.insertLayer(casingLayer, below: layer)
     }
     
     /*

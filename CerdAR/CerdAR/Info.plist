@@ -29,7 +29,7 @@
 	<key>LSSupportsOpeningDocumentsInPlace</key>
 	<true/>
 	<key>MGLMapboxAccessToken</key>
-	<string>sk.eyJ1IjoidGgtbmd1eWVuIiwiYSI6ImNrampyYm82bDRzcHQycm5xbGJzeDUyNTEifQ.1G44mnP4Qm3Ds5mGqrMd8A</string>
+	<string>pk.eyJ1IjoidGgtbmd1eWVuIiwiYSI6ImNrcnpvcjE2aTFjNXUyb244amVlZmFpcDAifQ.bhLVPCGZCM4Gb372F1wjxA</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>

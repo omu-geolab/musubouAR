@@ -62,10 +62,12 @@ func getLabelText(_ num: Int, inforType: String) -> String {
         case 0: riskName = "火災"
         case 1: riskName = "浸水"
         case 2: riskName = "土砂くずれ"
-        case 3: riskName = "落橋"
+        case 3: riskName = "煙"
         case 4: riskName = "家の倒壊"
         case 5: riskName = "へいの倒壊"
         case 6: riskName = "道路陥没"
+        case 7: riskName = "津波"
+        case 8: riskName = "液状化"
 //        case 6: riskName = "通行禁止(コンテナ流入)"
         default: riskName = "その他の災害"
         }
@@ -131,7 +133,7 @@ func makeLabel(_ num: Int, inforType: String) -> UIImage {
     label.text = getLabelText(num, inforType: inforType) // テキスト
     label.textColor = UIColor.black // 文字色
     label.textAlignment = NSTextAlignment.center // 中央揃え
-    label.font = UIFont.systemFont(ofSize: 80) // 初期文字サイズ
+    label.font = UIFont.systemFont(ofSize: 100) // 初期文字サイズ
     label.adjustsFontSizeToFitWidth = true // 文字の多さによってフォントサイズを調節する
     
     labelImg = label.getImage() as UIImage // UILabelをUIImageに変換する
