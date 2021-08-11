@@ -276,6 +276,33 @@ class jsonDataManager: NSObject {
                     continue
                 }
                 
+                if let pType = json["features"][i]["properties"]["pic_type"].string { // 写真か動画か
+                    if pType == kPhoto {
+                        warnBox[wN].picType = kPhoto
+                        if let pm = json["features"][i]["properties"][kPhoto].string { // 写真のURL
+                            warnBox[wN].photo = pm
+                        } else {
+                            warnBox[wN].photo = ""
+                        }
+                        
+                    } else if pType == kMovie {
+                        warnBox[wN].picType = kMovie
+                        if let pm = json["features"][i]["properties"][kMovie].string { // 動画のURL
+                            warnBox[wN].movie = pm
+                        } else {
+                            warnBox[wN].movie = ""
+                        }
+                        
+                    } else {
+                        warnBox[wN].picType = ""
+                        warnBox[wN].photo = ""
+                    }
+                    
+                } else {
+                    warnBox[wN].picType = ""
+                    warnBox[wN].photo = ""
+                }
+                
                 circleRadius.append(0.0)
                 
                 wN += 1

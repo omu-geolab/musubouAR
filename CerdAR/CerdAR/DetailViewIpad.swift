@@ -185,6 +185,76 @@ class DetailViewIpad: UIView {
                 }
 
             } else if pinData.inforType == kWarn { // 警告タグ
+                if pinData.picType == kPhoto { // 警告タグに画像がある場合
+                    if pinData.photo != nil {
+                        if pinData.photo.range(of: "jpg") == nil && pinData.photo.range(of: "png") == nil && pinData.photo.range(of: "JPG") == nil {
+                            notFound()
+                            
+                        } else {
+                            
+                            let url = URL(string: pinData.photo)
+                            let req = URLRequest(url: url!, cachePolicy: NSURLRequest(url: url!).cachePolicy, timeoutInterval: 5.0)
+                            
+                            let configuration = URLSessionConfiguration.default
+                            let session = URLSession(configuration: configuration, delegate:nil, delegateQueue:OperationQueue.main)
+                            
+                            let task = session.dataTask(with: req, completionHandler: {
+                                (data, response, error) -> Void in
+                                
+                                // urlが見つからない、またはタイムアウトしたとき
+                                if error != nil {
+                                    self.notFound()
+                                    
+                                    // 成功したとき
+                                } else {
+                                    let warnImageView = UIImageView(frame: CGRect(x: dWid * 0.05, y: dHei * 0.25, width: dWid * 0.45, height: dHei * 0.5))
+                                    
+                                    if let image = UIImage(data: data!) {
+                                        warnImageView.image = image
+                                    } else {
+                                        warnImageView.image = UIImage(named: "icon_notfound.png")
+                                    }
+                                    self.addSubview(warnImageView)
+                                }
+                            })
+                            task.resume()
+                        }
+                        
+                    }
+
+                } else if pinData.picType == kMovie { // 動画
+                    if !pinData.movie.hasPrefix("http://www.youtube.com/embed/") && !pinData.movie.hasPrefix("https://www.youtube.com/embed/") {
+                        notFound()
+                        
+                    } else {
+                        let url = URL(string : pinData.movie)
+                        let req = URLRequest(url: url!, cachePolicy: NSURLRequest(url: url!).cachePolicy, timeoutInterval: 5.0)
+                        let configuration = URLSessionConfiguration.default
+                        let session = URLSession(configuration: configuration, delegate:nil, delegateQueue:OperationQueue.main)
+
+                        let task = session.dataTask(with: req, completionHandler: {
+                            (data, response, error) -> Void in
+                            
+                            // urlが見つからない、またはタイムアウトしたとき
+                            if error != nil {
+                                self.notFound()
+                                
+                                // 成功したとき
+                            } else {
+                                let webview = UIWebView(frame: CGRect.init(x:0, y: 0, width: self.showView.bounds.width, height:self.showView.bounds.height))
+                                webview.scalesPageToFit = true
+                                webview.scrollView.bounces = false
+                                webview.loadRequest(req)
+                                self.showView.addSubview(webview)
+                                
+                            }
+                        })
+                        task.resume()
+                    }
+                    
+                    
+             } else {  // 警告タグに画像がない場合は，アイコン画像を表示
+                
                 let warnImageView = UIImageView(frame: CGRect.init(x: 0, y: 0, width: self.showView.bounds.width, height:self.showView.bounds.height))
 
                 let warnImg: UIImage!
@@ -246,6 +316,7 @@ class DetailViewIpad: UIView {
                 warnImageView.contentMode = .scaleAspectFit
                 self.showView.addSubview(warnImageView)
 
+            }
             }
         }
     }
