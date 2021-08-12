@@ -406,9 +406,9 @@ enum warningState: String {
     case safe = "安全"
 }
 
-let kTagXY: CGFloat = 30 // タグのx,y座標
-let kTagW: CGFloat = 60 // タグの横幅
-let kTagH: CGFloat = 120 // タグの縦幅
+let kTagXY: CGFloat = 0 // タグのx,y座標
+let kTagW: CGFloat = 0 // タグの横幅
+let kTagH: CGFloat = 30 // タグの縦幅
 
 var pinData: TagData! // タップされたタグの情報を保持
 
