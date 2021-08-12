@@ -279,14 +279,19 @@ class ARViewController: UIViewController,detailViewDelegate {
         view.addSubview(warningMessage)
         warningMessage.isHidden = true
         warningMessage.translatesAutoresizingMaskIntoConstraints = false
-        var widthtWaring  = realWidth! - 170
+        var widthtWaring  = realWidth! - 100
+        var heightWaring = realHeight!
         if UIDevice.current.userInterfaceIdiom == .pad{
-            widthtWaring =  widthtWaring*1.5
+            widthtWaring =  widthtWaring*1.1
+            heightWaring = widthtWaring/8
+        } else {
+            heightWaring = widthtWaring/3
         }
+        
         let constraintsWarning = [
             warningMessage.bottomAnchor.constraint(equalTo: view.bottomAnchor,constant: -190),
             warningMessage.centerXAnchor.constraint(equalTo: margins.centerXAnchor,constant: 0),
-            warningMessage.heightAnchor.constraint(equalToConstant: widthtWaring/2),
+            warningMessage.heightAnchor.constraint(equalToConstant: heightWaring),
             warningMessage.widthAnchor.constraint(equalToConstant: widthtWaring)
         ]
         NSLayoutConstraint.activate(constraintsWarning)
