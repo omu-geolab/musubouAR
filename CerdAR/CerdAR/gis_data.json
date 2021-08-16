@@ -1,6 +1,6 @@
 [
 {
-    "name":"地理院タイル（標準）",
+    "name":"地理院地図（標準）",
     "server":"https://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png",
     "gl_style":{
         "version": 8,
@@ -18,56 +18,6 @@
             "id": "gsiStd",
             "type": "raster",
             "source": "gsiStd",
-            "paint": {
-                "raster-fade-duration": 100
-            }
-        }]
-    }
-},
-{
-    "name":"空中写真（1961～1969年）",
-    "server":"https://cyberjapandata.gsi.go.jp/xyz/ort_old10/{z}/{x}/{y}.png",
-    "gl_style":{
-        "version": 8,
-        "name": "Raster Tiles",
-        "sources": {
-            "gsiOrt_old10": {
-                "type": "raster",
-                "tiles": [
-                    "https://cyberjapandata.gsi.go.jp/xyz/ort_old10/{z}/{x}/{y}.png"
-                ],
-                "tileSize": 256
-            }
-        },
-        "layers": [{
-            "id": "gsiOrt_old10",
-            "type": "raster",
-            "source": "gsiOrt_old10",
-            "paint": {
-                "raster-fade-duration": 100
-            }
-        }]
-    }
-},
-{
-    "name":"数値地図5000（土地利用）",
-    "server":"https://cyberjapandata.gsi.go.jp/xyz/lum4bl_kinki2008/{z}/{x}/{y}.png",
-    "gl_style":{
-        "version": 8,
-        "name": "Raster Tiles",
-        "sources": {
-            "lum4bl_kinki2008": {
-                "type": "raster",
-                "tiles": [
-                    "https://cyberjapandata.gsi.go.jp/xyz/lum4bl_kinki2008/{z}/{x}/{y}.png"
-                ],
-                "tileSize": 256
-            }
-        },
-        "layers": [{
-            "id": "lum4bl_kinki2008",
-            "type": "raster",
-            "source": "lum4bl_kinki2008",
             "paint": {
                 "raster-fade-duration": 100
             }
