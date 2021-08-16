@@ -188,7 +188,7 @@ func getPinImage(_ img: UIImage, inforType: String) -> UIImage {
             let tagRect = CGRect.init(x: 0.0, y: 0.0, width: img.size.width, height: img.size.height) // タグ画像のサイズと位置
             UIGraphicsBeginImageContext(img.size)
             tagImg.draw(in: tagRect)
-            imgsize = 100
+            imgsize = 50
             labelRect = CGRect.init(x: kTagXY, y: kTagXY, width: img.size.width - kTagW, height: img.size.height - kTagH) // ラベル画像のサイズと位置
             
         } else if displayMode == mode.cam.rawValue { // カメラ画面のとき

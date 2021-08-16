@@ -80,7 +80,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
     let kWarnBorder: CGFloat = 5 // 警告メッセージの枠線の太さ
     let kWarnCorner: CGFloat = 20 // 警告メッセージの枠線の角丸
     let kMapNormalAlpha: CGFloat = 1.0 // 地図の透明度
-    let kTagNewSize = 100.0 // 新しいタグ画像のサイズ
+    let kTagNewSize = 50.0 // 新しいタグ画像のサイズ
     let kDia = 2.0 // 直径
     let kWarnNewSize = 0.7 // 新しい警告タグの画像のサイズ
     let kFill: CGFloat = 0.6   // 円内部の透明度
@@ -133,7 +133,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         
         mapView.camera = MGLMapCamera(lookingAtCenter: CLLocationCoordinate2D(latitude: 34.7, longitude: 135.5), altitude: 1200, pitch: 45, heading: 0)
         mapView.showsUserLocation = true // 現在地を表示する
-        mapView.isPitchEnabled = false  // ジェスチャでの視点変更を許可しない
+        mapView.isPitchEnabled = true  // ジェスチャでの視点変更を許可しない
         mapView.showsScale = true
         mapView.scaleBarPosition = .topRight
         mapView.scaleBarMargins = CGPoint(x: 50, y: 0)
@@ -299,14 +299,19 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         mapView.addSubview(warningMessage)
         warningMessage.isHidden = true
         warningMessage.translatesAutoresizingMaskIntoConstraints = false
-        var widthtWaring  = realWidth! - 170
+        var widthtWaring  = realWidth! - 180
+        var heightWaring = realHeight!
         if UIDevice.current.userInterfaceIdiom == .pad{
-            widthtWaring =  widthtWaring*1.5
+            widthtWaring = widthtWaring*1.2
+            heightWaring = widthtWaring/8
+        } else {
+            heightWaring = widthtWaring/2
         }
+        
         let constraintsWarning = [
             warningMessage.bottomAnchor.constraint(equalTo: view.bottomAnchor,constant: -50),
             warningMessage.centerXAnchor.constraint(equalTo: margins.centerXAnchor,constant: 0),
-            warningMessage.heightAnchor.constraint(equalToConstant: widthtWaring/2),
+            warningMessage.heightAnchor.constraint(equalToConstant: heightWaring),
             warningMessage.widthAnchor.constraint(equalToConstant: widthtWaring)
         ]
         NSLayoutConstraint.activate(constraintsWarning)
@@ -1335,9 +1340,16 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         // Dash pattern in the format [dash, gap, dash, gap, ...]. You’ll want to adjust these values based on the line cap style.
         dashedLayer.lineDashPattern = NSExpression(forConstantValue: [0, 1.5])
         
-        style.addLayer(layer)
-        style.addLayer(dashedLayer)
-        style.insertLayer(casingLayer, below: layer)
+        // Street Mapの場合
+        if let symbolLayer = style.layer(withIdentifier: "admin-1-boundary") ?? style.layer(withIdentifier: "admin-3-4-boundaries") {
+            style.insertLayer(layer, below: symbolLayer)
+        
+        // 衛星画像の場合
+        } else {
+            style.insertLayer(layer, at: 10) //10 は 適当
+        }
+        style.insertLayer(dashedLayer, above: layer)
+        style.insertLayer(casingLayer, above: dashedLayer)
     }
     
     /*
