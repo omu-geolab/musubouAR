@@ -18,4 +18,7 @@ public class NodeText: SCNNode {
     required init(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    deinit {
+        print("\(data?.name) is being deinitialized")
+    }
 }

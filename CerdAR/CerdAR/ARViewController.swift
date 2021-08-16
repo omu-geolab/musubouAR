@@ -21,7 +21,7 @@ class ARViewController: UIViewController,detailViewDelegate {
     var mapView: MGLMapView!
     var sceneView: ARSCNView!
     var controlsContainerView: UIView!
-    var locationManager: CLLocationManager!
+//    var locationManager: CLLocationManager!
     var detailview: detailView? // 詳細画面
     var detailCustomView: DetailViewController?
     var detailCustomIphone: DetailViewIphone = DetailViewIphone()
@@ -94,9 +94,20 @@ class ARViewController: UIViewController,detailViewDelegate {
     var audioPlayer: AVAudioPlayer!
     var levelZoomMap:Double = 1.0
     var isOrientation = false
-    
+    let scene = SCNScene()
+    let slider = SectionedSlider(
+        frame: CGRect(x: 20, y: 300, width: 70, height: 178), // Choose a 15.6 / 40 ration for width/height
+        selectedSection: 3, // Initial selected section
+        sections: 20, // Number of sections. Choose between 2 and 20
+        palette: Palette(
+            viewBackgroundColor: UIColor(red: 0, green: 0, blue: 0, alpha: 0),
+            sliderBackgroundColor: .yellow,
+            sliderColor: .systemYellow
+        )
+    )
     override func viewDidLoad() {
         super.viewDidLoad()
+        slider.frame = CGRect(x: 20, y: self.view.bounds.height/2, width: 70, height: 178)
         displayMode = mode.cam.rawValue
         
         cameraStateInfoLabel = UILabel(frame: CGRect(x: CGFloat(screenWidth)/2, y: 0, width: 250, height: 50))
@@ -108,7 +119,6 @@ class ARViewController: UIViewController,detailViewDelegate {
         warningView = UIView(frame: CGRect.init(x: kZero, y: kZero, width: CGFloat(screenWidth), height: CGFloat(screenHeight)))
         view.addSubview(warningView) // viewに追加
         //環境を設定する
-        let scene = SCNScene()
         sceneView.scene = scene
         
         //カメラを設定する
@@ -204,16 +214,6 @@ class ARViewController: UIViewController,detailViewDelegate {
         changeAR_Button.startAnimatingPressActions()
         toMap_Button.startAnimatingPressActions()
         //AR高度変更
-        let slider = SectionedSlider(
-            frame: CGRect(x: 20, y: self.view.bounds.height/2, width: 70, height: 178), // Choose a 15.6 / 40 ration for width/height
-            selectedSection: 3, // Initial selected section
-            sections: 20, // Number of sections. Choose between 2 and 20
-            palette: Palette(
-                viewBackgroundColor: UIColor(red: 0, green: 0, blue: 0, alpha: 0),
-                sliderBackgroundColor: .yellow,
-                sliderColor: .systemYellow
-            )
-        )
         slider.layer.shadowColor = UIColor.black.cgColor
         slider.layer.shadowRadius = 5
         slider.layer.shadowOffset = CGSize(width: 5, height: 5)
@@ -252,18 +252,18 @@ class ARViewController: UIViewController,detailViewDelegate {
         // ARアノテーションマネージャを作成し、それにARセッションへの参照を与える
         annotationManager = MapboxARAnnotationManager(session: sceneView.session)
         // location service
-        if (CLLocationManager.locationServicesEnabled())
-        {
-            locationManager = CLLocationManager()
-            //locationManager.requestLocation()
-            locationManager.requestWhenInUseAuthorization()
-            locationManager.requestAlwaysAuthorization()
-            locationManager.desiredAccuracy = kCLLocationAccuracyBest
-            locationManager.delegate = self
-            locationManager.allowsBackgroundLocationUpdates = true
-            locationManager.startUpdatingLocation()
-            
-        }
+//        if (CLLocationManager.locationServicesEnabled())
+//        {
+//            locationManager = CLLocationManager()
+//            //locationManager.requestLocation()
+//            locationManager.requestWhenInUseAuthorization()
+//            locationManager.requestAlwaysAuthorization()
+//            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+//            locationManager.delegate = self
+//            locationManager.allowsBackgroundLocationUpdates = true
+//            locationManager.startUpdatingLocation()
+//
+//        }
         /* 警告メッセージの設定 */
         warningMessage = UILabel()
         warningMessage.textColor = UIColor.black // 文字色(黒)
@@ -334,8 +334,25 @@ class ARViewController: UIViewController,detailViewDelegate {
         if audioPlayerIntr.isPlaying == true {
             audioPlayerIntr.stop()
         }
-        locationManager.stopUpdatingLocation()
+//        locationManager.stopUpdatingLocation()
+
+        sceneView.delegate = nil
+        sceneView.scene.rootNode.cleanup()
+        sceneView.removeFromSuperview()
+        sceneView = nil
+        osmInfoBox.removeAll()
+        osmWarnBox.removeAll()
+        infoPinView.removeAll()
+        warnPinView.removeAll()
+        polygons.removeAll()
+        NotificationCenter.default.removeObserver(self)
+        slider.delegate = nil
         mapView.delegate = nil
+        for view  in self.view.subviews{
+            view.removeConstraints(view.constraints)
+            view.removeFromSuperview()
+        }
+       
     }
     
     override func didReceiveMemoryWarning() {
@@ -351,10 +368,13 @@ class ARViewController: UIViewController,detailViewDelegate {
     @objc func onClick_map(_ sender: UIButton) {
         playButtonSound()
         self.dismiss(animated: true, completion: nil)
+        let vc = osmViewController()
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.window?.rootViewController = vc
     }
     @objc func changeAR(_ sender: UIButton) {
         playButtonSound()
-        startSession()
+//        startSession()
         self.updateFace()
     }
     
@@ -484,7 +504,7 @@ class ARViewController: UIViewController,detailViewDelegate {
         }
         
         // Run the view's session
-        sceneView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
+        sceneView.session.run(configuration)
         flag  = true
     }
     
@@ -730,7 +750,6 @@ class ARViewController: UIViewController,detailViewDelegate {
                         }
                     }
                 }
-               
                 //self.mapView.setUserTrackingMode(.followWithHeading, animated: true, completionHandler: nil)
             }
             snapshotter = nil
@@ -774,7 +793,6 @@ class ARViewController: UIViewController,detailViewDelegate {
     func updateEnvorimentAR(currentLocation:CLLocation) {
         
         annotationManager.removeAllARAnchors()
-        
         for i in 0 ..< jsonDataManager.sharedInstance.infoBox.count {
             if(jsonDataManager.sharedInstance.infoBox[i].lat == nil){
                 continue
@@ -800,6 +818,7 @@ class ARViewController: UIViewController,detailViewDelegate {
     }
     
     @objc func updateFace(){
+//        startSession()
         createSnapshot()
     }
     
@@ -853,7 +872,7 @@ class ARViewController: UIViewController,detailViewDelegate {
         } else {
             updateWarningView()
             // 警告メッセージのタイマーを開始させる
-            warningTimer = Timer.scheduledTimer(timeInterval: kUpdateMM, target: self, selector: #selector(osmViewController.updateWarningView), userInfo: nil, repeats: true)
+            warningTimer = Timer.scheduledTimer(timeInterval: kUpdateMM, target: self, selector: #selector(ARViewController.updateWarningView), userInfo: nil, repeats: true)
         }
     }
     
@@ -933,13 +952,13 @@ class ARViewController: UIViewController,detailViewDelegate {
 extension ARViewController: CLLocationManagerDelegate{
     // 位置を変わるとARAnnotationを再表示する
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        if let location = locations.last{
-            altitude = location.altitude
-            userLat = location.coordinate.latitude
-            userLon = location.coordinate.longitude
-            updateAllDistances()
-            updateStatus()
-        }
+//        if let location = locations.last{
+//            altitude = location.altitude
+//            userLat = location.coordinate.latitude
+//            userLon = location.coordinate.longitude
+//            updateAllDistances()
+//            updateStatus()
+//        }
     }
     func filterAndAddLocation(_ location: CLLocation) -> Bool{
         let age = -location.timestamp.timeIntervalSinceNow
@@ -1054,11 +1073,11 @@ extension ARViewController: CLLocationManagerDelegate{
                 self.mapView.isHidden = true
             }
         }
-        #if DEBUG
-        DispatchQueue.main.async {
-            self.mapView.isHidden = false
-        }
-        #endif
+//        #if DEBUG
+//        DispatchQueue.main.async {
+//            self.mapView.isHidden = false
+//        }
+//        #endif
     }
     func updateOverlay( risk:Int){
         let size = self.sceneView.bounds.size
@@ -1522,6 +1541,18 @@ extension ARViewController: MGLMapViewDelegate {
             }
         }
     }
+    
+    func mapView(_ mapView: MGLMapView, didUpdate userLocation: MGLUserLocation?) {
+        
+        if let location = userLocation?.location {
+            print(location)
+            altitude = location.altitude
+            userLat = location.coordinate.latitude
+            userLon = location.coordinate.longitude
+            updateAllDistances()
+            updateStatus()
+        }
+    }
    
     /**
      * 拡大縮小や現在地の更新による新しいピン画像の設定
@@ -1693,5 +1724,15 @@ extension ARViewController:detailViewIphoneDelegate {
         detailCustomIphone.removeFromSuperview()
         detailCustomIphone.deleteDetailView()
 
+    }
+}
+extension SCNNode {
+    func cleanup() {
+        
+        for child in childNodes {
+            child.cleanup()
+        }
+        geometry = nil
+        removeFromParentNode()
     }
 }

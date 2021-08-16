@@ -8,7 +8,7 @@
 
 import UIKit
 @IBDesignable
-class GradientView: UIView {
+class GradientColorView: UIView {
     @IBInspectable var startColor:   UIColor = .black { didSet { updateColors() }}
     @IBInspectable var endColor:     UIColor = .white { didSet { updateColors() }}
     @IBInspectable var startLocation: Double =   0.05 { didSet { updateLocations() }}
@@ -40,6 +40,19 @@ class GradientView: UIView {
         updatePoints()
         updateLocations()
         updateColors()
+    }
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+    
+    required public init?(coder aDecoder: NSCoder) {
+        
+        super.init(coder: aDecoder)
+        
+    }
+    
+    deinit {
+        print("GradientColorView deinit")
     }
 
 }

@@ -26,12 +26,11 @@ class MGLTagData: MGLPointAnnotation {
 }
 
 
-class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapViewDelegate, detailViewDelegate, detailViewIphoneDelegate ,detailViewIpadDelegate, ConfigViewDelegate {
+class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapViewDelegate, detailViewDelegate, detailViewIphoneDelegate , ConfigViewDelegate {
     
     
     var detailview: detailView? // 詳細画面
     var detailCustomIphone: DetailViewIphone = DetailViewIphone()
-    var detailCustomIpad: DetailViewIpad = DetailViewIpad()
     var heartView:HeartView?
     let toWorkout_button = ToggleButton()
     var configview: ConfigView? // 設定画面
@@ -188,6 +187,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         toLidar_button.layer.shadowOpacity = 0.6
         
         mapView.addSubview(toLidar_button)
+        toLidar_button.isHidden = true
         toLidar_button.translatesAutoresizingMaskIntoConstraints = false
         let constraintsLidar = [
             toLidar_button.leadingAnchor.constraint(equalTo: mapView.leadingAnchor,constant: 15),
@@ -453,6 +453,9 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         super.viewDidDisappear(animated)
         mapView.delegate = nil
         locationManager.delegate = nil
+        WorkoutService.shared.delegate = nil
+        detailCustomIphone.delegate = nil
+        configview?.delegate = nil
         locationManager.stopUpdatingLocation() // GPSの更新を停止する
         if warningTimer != nil {
             warningTimer.invalidate()
@@ -960,8 +963,12 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
     @objc internal func onclick_AR(_ sender: UIButton) {
         playButtonSound()
         let vc = ARViewController()
-        vc.modalPresentationStyle = .fullScreen
-        self.present(vc, animated: true, completion: nil)
+//        vc.modalPresentationStyle = .fullScreen
+//        self.present(vc, animated: true, completion: nil)
+//        self.navigationController?.pushViewController(vc, animated: true)
+        self.dismiss(animated: true, completion: nil)
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.window?.rootViewController = vc
     }
     
     /*
@@ -1226,8 +1233,6 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         detailView().deleteDetailView()
         detailCustomIphone.removeFromSuperview()
         detailCustomIphone.deleteDetailView()
-        detailCustomIpad.removeFromSuperview()
-        detailCustomIpad.deleteDetailView()
     }
     
     func detailViewIphoneFinish() {
@@ -1236,14 +1241,6 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         detailCustomIphone.translatesAutoresizingMaskIntoConstraints = false
         detailCustomIphone.removeFromSuperview()
         detailCustomIphone.deleteDetailView()
-        
-    }
-    func detailViewIpadFinish() {
-        updatePinText()
-        detailCustomIpad.delegate = nil
-        detailCustomIpad.translatesAutoresizingMaskIntoConstraints = false
-        detailCustomIpad.removeFromSuperview()
-        detailCustomIpad.deleteDetailView()
         
     }
     

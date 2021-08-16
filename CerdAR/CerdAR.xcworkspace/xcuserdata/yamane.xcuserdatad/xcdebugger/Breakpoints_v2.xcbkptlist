@@ -46,8 +46,8 @@
             filePath = "CerdAR/osmViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "805"
-            endingLineNumber = "805"
+            startingLineNumber = "808"
+            endingLineNumber = "808"
             landmarkName = "detailViewFinish()"
             landmarkType = "7">
          </BreakpointContent>
@@ -62,8 +62,8 @@
             filePath = "CerdAR/osmViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1224"
-            endingLineNumber = "1224"
+            startingLineNumber = "1231"
+            endingLineNumber = "1231"
             landmarkName = "onClick_detailBackground(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -110,8 +110,8 @@
             filePath = "CerdAR/osmViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1352"
-            endingLineNumber = "1352"
+            startingLineNumber = "1349"
+            endingLineNumber = "1349"
             landmarkName = "nowLocate(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -782,8 +782,8 @@
             filePath = "CerdAR/osmViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1624"
-            endingLineNumber = "1624"
+            startingLineNumber = "1621"
+            endingLineNumber = "1621"
             landmarkName = "excuteFromWatch(active:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -798,8 +798,8 @@
             filePath = "CerdAR/osmViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1606"
-            endingLineNumber = "1606"
+            startingLineNumber = "1603"
+            endingLineNumber = "1603"
             landmarkName = "dataFromWatch(data:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -958,8 +958,8 @@
             filePath = "CerdAR/osmViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "817"
-            endingLineNumber = "817"
+            startingLineNumber = "820"
+            endingLineNumber = "820"
             landmarkName = "configViewFinish()"
             landmarkType = "7">
          </BreakpointContent>
@@ -974,8 +974,8 @@
             filePath = "CerdAR/osmViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "795"
-            endingLineNumber = "795"
+            startingLineNumber = "798"
+            endingLineNumber = "798"
             landmarkName = "locationManager(_:didUpdateLocations:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -990,8 +990,8 @@
             filePath = "CerdAR/osmViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "794"
-            endingLineNumber = "794"
+            startingLineNumber = "797"
+            endingLineNumber = "797"
             landmarkName = "locationManager(_:didUpdateLocations:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1006,8 +1006,8 @@
             filePath = "CerdAR/osmViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "793"
-            endingLineNumber = "793"
+            startingLineNumber = "796"
+            endingLineNumber = "796"
             landmarkName = "locationManager(_:didUpdateLocations:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1022,8 +1022,8 @@
             filePath = "CerdAR/osmViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1495"
-            endingLineNumber = "1495"
+            startingLineNumber = "1492"
+            endingLineNumber = "1492"
             landmarkName = "updateWarningView()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1038,8 +1038,8 @@
             filePath = "CerdAR/osmViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1451"
-            endingLineNumber = "1451"
+            startingLineNumber = "1448"
+            endingLineNumber = "1448"
             landmarkName = "update()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1054,8 +1054,8 @@
             filePath = "CerdAR/osmViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1467"
-            endingLineNumber = "1467"
+            startingLineNumber = "1464"
+            endingLineNumber = "1464"
             landmarkName = "update()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1070,8 +1070,8 @@
             filePath = "CerdAR/osmViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1478"
-            endingLineNumber = "1478"
+            startingLineNumber = "1475"
+            endingLineNumber = "1475"
             landmarkName = "updateWarningView()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1086,8 +1086,8 @@
             filePath = "CerdAR/osmViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1484"
-            endingLineNumber = "1484"
+            startingLineNumber = "1481"
+            endingLineNumber = "1481"
             landmarkName = "updateWarningView()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1102,8 +1102,8 @@
             filePath = "CerdAR/osmViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1462"
-            endingLineNumber = "1462"
+            startingLineNumber = "1459"
+            endingLineNumber = "1459"
             landmarkName = "update()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1182,8 +1182,8 @@
             filePath = "CerdAR/ARViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1690"
-            endingLineNumber = "1690"
+            startingLineNumber = "1721"
+            endingLineNumber = "1721"
             landmarkName = "detailViewIphoneFinish()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1278,8 +1278,8 @@
             filePath = "CerdAR/osmViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1426"
-            endingLineNumber = "1426"
+            startingLineNumber = "1423"
+            endingLineNumber = "1423"
             landmarkName = "update()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1294,8 +1294,8 @@
             filePath = "CerdAR/osmViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1421"
-            endingLineNumber = "1421"
+            startingLineNumber = "1418"
+            endingLineNumber = "1418"
             landmarkName = "update()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1304,6 +1304,22 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "475C80C4-B53D-4D34-80EB-DB58D444BACD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CerdAR/osmViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1417"
+            endingLineNumber = "1417"
+            landmarkName = "update()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4D6D9690-30EE-46B3-9571-E856CCBDD0FD"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -1319,22 +1335,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "4D6D9690-30EE-46B3-9571-E856CCBDD0FD"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CerdAR/osmViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1423"
-            endingLineNumber = "1423"
-            landmarkName = "update()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "3189FC52-BBC5-418B-BB65-95F72871C209"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -1342,8 +1342,8 @@
             filePath = "CerdAR/osmViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1396"
-            endingLineNumber = "1396"
+            startingLineNumber = "1393"
+            endingLineNumber = "1393"
             landmarkName = "update()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1358,8 +1358,8 @@
             filePath = "CerdAR/osmViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1461"
-            endingLineNumber = "1461"
+            startingLineNumber = "1458"
+            endingLineNumber = "1458"
             landmarkName = "update()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1374,8 +1374,8 @@
             filePath = "CerdAR/osmViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1452"
-            endingLineNumber = "1452"
+            startingLineNumber = "1449"
+            endingLineNumber = "1449"
             landmarkName = "update()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1413,16 +1413,80 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "333C5791-04E8-4F86-B8F3-9393A9771A2E"
+            uuid = "F0F9B4BC-CC4A-4F0B-BFB3-5C729D6C029F"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CerdAR/ARViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "552"
-            endingLineNumber = "552"
-            landmarkName = "configureMapboxMapView()"
+            startingLineNumber = "342"
+            endingLineNumber = "342"
+            landmarkName = "viewWillDisappear(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5CF24757-2F65-4159-B681-2CAA8B55529F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CerdAR/loadViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "232"
+            endingLineNumber = "232"
+            landmarkName = "showTermsView()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "11921C84-3B03-4569-A9FC-1004C2592BCD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CerdAR/loadViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "244"
+            endingLineNumber = "244"
+            landmarkName = "showTermsView()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7BAB4159-7DD8-4372-B749-B4168A840778"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CerdAR/loadViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "231"
+            endingLineNumber = "231"
+            landmarkName = "showTermsView()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DEE7E083-CB44-4CE8-9314-88C46E6A7CEA"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CerdAR/Models/GradientColorView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "traitCollectionDidChange(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
