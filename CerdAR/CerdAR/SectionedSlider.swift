@@ -504,6 +504,10 @@ open class SectionedSlider: UIView {
         
     }
     
+    deinit {
+        print("Slider deinit")
+    }
+    
     // MARK: - Lifecyle
     override open func awakeFromNib() {
         

@@ -40,6 +40,13 @@ class loadViewController: UIViewController, termsViewDelegate, CLLocationManager
         
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        for view  in self.view.subviews{
+            view.removeConstraints(view.constraints)
+            view.removeFromSuperview()
+        }
+    }
+    
     func saveGisDatatoFile(json:JSON){
         
         let dataS = json.description;
@@ -223,8 +230,18 @@ class loadViewController: UIViewController, termsViewDelegate, CLLocationManager
 
         let updateView = UIStoryboard(name: "TermsView", bundle: .main)
         if let vc = updateView.instantiateInitialViewController() as? TermsViewController {
+//            let navigationController = UINavigationController(rootViewController: vc)
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
-            appDelegate.window?.rootViewController = vc
+////            appDelegate.window?.rootViewController = UINavigationController()
+            let window = appDelegate.window
+            if let window = window {
+              window.rootViewController = vc
+              window.makeKeyAndVisible()
+            }
+//            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+//            appDelegate.window?.rootViewController = UINavigationController()
+//            navigationController?.pushViewController(vc, animated: true)
+//            self.navigationController?.pushViewController(vc, animated: true)
         }
     }
     

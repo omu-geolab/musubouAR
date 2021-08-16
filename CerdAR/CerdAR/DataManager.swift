@@ -45,6 +45,9 @@ class TagData {
     var message2: String!     // 警告範囲に侵入した時のメッセージ
     var riskType: Int!        // 災害の種類(0:火災,1:浸水,2:落橋,3:土砂崩れ)
     var isFullRange:Bool = false // 災害の範囲拡大フラグ
+    deinit {
+        print("\(String(describing: name)) is being deinitialized")
+    }
 }
 
 

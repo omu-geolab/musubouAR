@@ -30,6 +30,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.backgroundColor = UIColor.white
         self.window?.rootViewController = viewController
 //        self.window?.rootViewController = UIHostingController(rootView: LoadingView())
+//        let navigationController = UINavigationController(rootViewController: viewController)
+//             window = UIWindow(frame: UIScreen.main.bounds)
+//             if let window = window {
+//               window.rootViewController = navigationController
+//               window.makeKeyAndVisible()
+//             }
         self.window?.makeKeyAndVisible()
         Unity.shared.setHostMainWindow(window)
         

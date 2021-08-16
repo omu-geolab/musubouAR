@@ -20,6 +20,14 @@ class TermsViewController: UIViewController {
         continousButton.layer.borderColor = UIColor.black.cgColor
         continousButton.layer.borderWidth = 3
     }
+    override func viewWillDisappear(_ animated: Bool) {
+        for view  in self.view.subviews{
+            view.removeConstraints(view.constraints)
+            view.removeFromSuperview()
+        }
+        view.removeFromSuperview()
+    }
+    
     @IBAction func cancelApp(_ sender: Any) {
         exit(0) // アプリを終了する
     }

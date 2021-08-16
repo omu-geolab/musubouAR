@@ -29,7 +29,6 @@
 		D3CF68DD1D91187D008B588E /* detailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CF68DB1D91187D008B588E /* detailView.swift */; };
 		D3CF68DE1D91187D008B588E /* termsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CF68DC1D91187D008B588E /* termsView.swift */; };
 		F00A92AB25CD244E00BC5D5A /* PlaySound.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00A92AA25CD244E00BC5D5A /* PlaySound.swift */; };
-		F00A92AF25CD37D100BC5D5A /* click.wav in Resources */ = {isa = PBXBuildFile; fileRef = F00A92AE25CD37D100BC5D5A /* click.wav */; };
 		F00A933B25D3BB5B00BC5D5A /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F00A933925D3BB5B00BC5D5A /* Interface.storyboard */; };
 		F00A933D25D3BB5D00BC5D5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F00A933C25D3BB5D00BC5D5A /* Assets.xcassets */; };
 		F00A934425D3BB5D00BC5D5A /* CerdARWatch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F00A934325D3BB5D00BC5D5A /* CerdARWatch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -64,7 +63,7 @@
 		F060A99225F86A9100888F67 /* HeartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F060A99125F86A9100888F67 /* HeartView.xib */; };
 		F060A99825F89ED100888F67 /* WorkoutData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F060A99725F89ED100888F67 /* WorkoutData.swift */; };
 		F060A99E25F9F76F00888F67 /* NotificationWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F060A99D25F9F76F00888F67 /* NotificationWatch.swift */; };
-		F060A9C42600774E00888F67 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F060A9C32600774E00888F67 /* GradientView.swift */; };
+		F060A9C42600774E00888F67 /* GradientColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F060A9C32600774E00888F67 /* GradientColorView.swift */; };
 		F06D0D4C219C12CB0046747B /* SceneKit.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = F06D0D4B219C12CB0046747B /* SceneKit.scnassets */; };
 		F06D986B22E98DA6001CCB9E /* NodeText.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06D986A22E98DA6001CCB9E /* NodeText.swift */; };
 		F06D987622FA75E1001CCB9E /* SectionedSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06D987522FA75E1001CCB9E /* SectionedSlider.swift */; };
@@ -95,6 +94,7 @@
 		F0A3E61F21B78A7C0099812E /* smoke.png in Resources */ = {isa = PBXBuildFile; fileRef = F0A3E61D21B78A7C0099812E /* smoke.png */; };
 		F0A3E62021B78A7C0099812E /* smoke.scnp in Resources */ = {isa = PBXBuildFile; fileRef = F0A3E61E21B78A7C0099812E /* smoke.scnp */; };
 		F0B4EE3526BD67430062FC7D /* LinePolygon.geojson in Resources */ = {isa = PBXBuildFile; fileRef = F0B4EE3426BD67430062FC7D /* LinePolygon.geojson */; };
+		F0B4EE3726C9FCC30062FC7D /* click.wav in Resources */ = {isa = PBXBuildFile; fileRef = F0B4EE3626C9FCC20062FC7D /* click.wav */; };
 		F0C1392225EF7EE3004E67CD /* WorkoutJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C1392125EF7EE3004E67CD /* WorkoutJSON.swift */; };
 		F0C1392925EF8996004E67CD /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C1392825EF8996004E67CD /* DateExtension.swift */; };
 		F0C1393325F0C177004E67CD /* ConstantsWorkout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C1393225F0C177004E67CD /* ConstantsWorkout.swift */; };
@@ -204,7 +204,6 @@
 		D3CF68DC1D91187D008B588E /* termsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = termsView.swift; sourceTree = "<group>"; };
 		E0D858644B38509A64BEFA4C /* Pods_CerdAR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CerdAR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F00A92AA25CD244E00BC5D5A /* PlaySound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySound.swift; sourceTree = "<group>"; };
-		F00A92AE25CD37D100BC5D5A /* click.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = click.wav; path = ../../../Downloads/click.wav; sourceTree = "<group>"; };
 		F00A933725D3BB5B00BC5D5A /* CerdARWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CerdARWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F00A933A25D3BB5B00BC5D5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		F00A933C25D3BB5D00BC5D5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -246,7 +245,7 @@
 		F060A99125F86A9100888F67 /* HeartView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeartView.xib; sourceTree = "<group>"; };
 		F060A99725F89ED100888F67 /* WorkoutData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutData.swift; sourceTree = "<group>"; };
 		F060A99D25F9F76F00888F67 /* NotificationWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationWatch.swift; sourceTree = "<group>"; };
-		F060A9C32600774E00888F67 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		F060A9C32600774E00888F67 /* GradientColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientColorView.swift; sourceTree = "<group>"; };
 		F06A927121CB5B9C0075391E /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mapbox.framework; path = Carthage/Build/iOS/Mapbox.framework; sourceTree = "<group>"; };
 		F06A927321CB5BA20075391E /* MapboxMobileEvents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapboxMobileEvents.framework; path = Carthage/Build/iOS/MapboxMobileEvents.framework; sourceTree = "<group>"; };
 		F06A927521CB5BA70075391E /* MapboxSceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapboxSceneKit.framework; path = Carthage/Build/iOS/MapboxSceneKit.framework; sourceTree = "<group>"; };
@@ -281,6 +280,7 @@
 		F0A3E61D21B78A7C0099812E /* smoke.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = smoke.png; path = CerdAR/SceneKit.scnassets/smoke.png; sourceTree = "<group>"; };
 		F0A3E61E21B78A7C0099812E /* smoke.scnp */ = {isa = PBXFileReference; lastKnownFileType = file.scp; name = smoke.scnp; path = CerdAR/SceneKit.scnassets/smoke.scnp; sourceTree = "<group>"; };
 		F0B4EE3426BD67430062FC7D /* LinePolygon.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = LinePolygon.geojson; sourceTree = "<group>"; };
+		F0B4EE3626C9FCC20062FC7D /* click.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = click.wav; sourceTree = "<group>"; };
 		F0C1392125EF7EE3004E67CD /* WorkoutJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutJSON.swift; sourceTree = "<group>"; };
 		F0C1392825EF8996004E67CD /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		F0C1393225F0C177004E67CD /* ConstantsWorkout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsWorkout.swift; sourceTree = "<group>"; };
@@ -349,7 +349,7 @@
 		AC2AB8F41DB778420048931C /* sound */ = {
 			isa = PBXGroup;
 			children = (
-				F00A92AE25CD37D100BC5D5A /* click.wav */,
+				F0B4EE3626C9FCC20062FC7D /* click.wav */,
 				7EE70E1E1DEAA16A000FB537 /* sound_intrusion.mp3 */,
 				7EE70E201DEAA1B6000FB537 /* sound_near.mp3 */,
 			);
@@ -549,7 +549,7 @@
 				F060A95725F11D1600888F67 /* HKSampleData.swift */,
 				F060A98525F849E700888F67 /* ToggleButton.swift */,
 				F060A99725F89ED100888F67 /* WorkoutData.swift */,
-				F060A9C32600774E00888F67 /* GradientView.swift */,
+				F060A9C32600774E00888F67 /* GradientColorView.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -734,8 +734,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0B4EE3726C9FCC30062FC7D /* click.wav in Resources */,
 				F0C14029224A050400BFDDE7 /* third_party_vector_style.json in Resources */,
-				F00A92AF25CD37D100BC5D5A /* click.wav in Resources */,
 				F071A3F125CA3553009D6E7D /* OSMView.storyboard in Resources */,
 				F023CFE922C33B4300E115F8 /* gis_data.json in Resources */,
 				7EE70E211DEAA1B6000FB537 /* sound_near.mp3 in Resources */,
@@ -956,7 +956,7 @@
 				F00A92AB25CD244E00BC5D5A /* PlaySound.swift in Sources */,
 				F033F9F8219172E7008A3A2E /* MapboxARAnnotationManager.swift in Sources */,
 				F071A3E725C7BE85009D6E7D /* Notification.swift in Sources */,
-				F060A9C42600774E00888F67 /* GradientView.swift in Sources */,
+				F060A9C42600774E00888F67 /* GradientColorView.swift in Sources */,
 				F0C1393325F0C177004E67CD /* ConstantsWorkout.swift in Sources */,
 				F060A98C25F86A7100888F67 /* HeartView.swift in Sources */,
 				AC2C52C61D5805F70032B689 /* AppDelegate.swift in Sources */,
