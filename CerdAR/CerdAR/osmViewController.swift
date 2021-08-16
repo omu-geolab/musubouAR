@@ -1108,7 +1108,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         // UIAlertController
         let alertController:UIAlertController =
             UIAlertController(title:"GISデータ表示",
-                              message: "GISデータを選択してかください。",
+                              message: "GISデータを選択してください。",
                               preferredStyle: .alert)
         
         for i in 0 ..< GisList.sharedGis.list.count {
