@@ -26,6 +26,7 @@ class WorkoutService: NSObject, WCSessionDelegate {
     var delegate:WorkoutServiceDelegate?
     var isActiveApp:Bool = false
     var messageTimer: Timer?
+    var isRunWorkout:Bool = false
     override init() {
         super.init()
         messageTimer = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(self.sendPending), userInfo: nil, repeats: true)
@@ -64,9 +65,11 @@ class WorkoutService: NSObject, WCSessionDelegate {
                 sendPending()
             }
             if state.elementsEqual("Start") {
+                isRunWorkout = true
                 delegate?.excuteFromWatch(active: true)
             }
             if state.elementsEqual("End") {
+                isRunWorkout = false
                 delegate?.excuteFromWatch(active: false)
             }
             if state.elementsEqual("Suspended") {
@@ -98,9 +101,11 @@ class WorkoutService: NSObject, WCSessionDelegate {
                 sendPending()
             }
             if state.elementsEqual("Start") {
+                isRunWorkout = true
                 delegate?.excuteFromWatch(active: true)
             }
             if state.elementsEqual("End") {
+                isRunWorkout = false
                 delegate?.excuteFromWatch(active: false)
                 ExpportAllWorkouts()
             }
