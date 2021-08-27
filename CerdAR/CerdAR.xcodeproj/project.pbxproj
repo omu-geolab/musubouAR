@@ -399,6 +399,7 @@
 				F0986D2A25C0F71900CB0FE6 /* Storybroad */,
 				F0986D1425B95C0000CB0FE6 /* CerdAR.entitlements */,
 				F023CFE822C33B4300E115F8 /* gis_data.json */,
+				F0B4EE3426BD67430062FC7D /* LinePolygon.geojson */,
 				F0C14028224A050400BFDDE7 /* third_party_vector_style.json */,
 				F0986D2425B9660700CB0FE6 /* HealthKitSetupAssistant.swift */,
 				F0319F7523098E1A002DEF7C /* HCMatrixObject.swift */,
@@ -561,7 +562,6 @@
 				F071A3F025CA3553009D6E7D /* OSMView.storyboard */,
 				F090888D25E8F449008463C8 /* WorkoutsView.storyboard */,
 				F060A95D25F212D300888F67 /* WorkoutDetail.storyboard */,
-				F0B4EE3426BD67430062FC7D /* LinePolygon.geojson */,
 			);
 			path = Storybroad;
 			sourceTree = "<group>";

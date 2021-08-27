@@ -90,6 +90,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
     let styleMapboxURL = MGLStyle.streetsStyleURL(withVersion: 9)
     var audioPlayer: AVAudioPlayer!
     var levelZoomMap:Double = 1.0
+    var isWorkoutRun:Bool = false
     //    var wcSession : WCSession! = nil
     
     //    @IBOutlet weak var mapView: MGLMapView!
@@ -257,6 +258,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
             NSLayoutConstraint.activate(constraintsHeart)
             heartView!.heartAnimation()
             heartView?.isHidden = true
+            heartView?.isUserInteractionEnabled = false
         }
         
         // 画面の中心を現在地にするためのボタン生成
@@ -450,6 +452,16 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         
         if  let heartView = self.heartView {
             heartView.heartAnimation()
+        }
+       
+        DispatchQueue.main.async {
+            if WorkoutService.shared.isRunWorkout {
+                self.toWorkout_button.setClicked(isSelect: true)
+                self.heartView?.isHidden = false
+            }else {
+                self.toWorkout_button.setClicked(isSelect: false)
+                self.heartView?.isHidden = true
+            }
         }
     }
     
@@ -971,7 +983,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
 //        vc.modalPresentationStyle = .fullScreen
 //        self.present(vc, animated: true, completion: nil)
 //        self.navigationController?.pushViewController(vc, animated: true)
-        self.dismiss(animated: true, completion: nil)
+//        self.dismiss(animated: true, completion: nil)
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.window?.rootViewController = vc
     }
@@ -1003,8 +1015,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
             WorkoutService.shared.endWorkout()
             heartView?.isHidden = true
         }
-        
-        
+        WorkoutService.shared.isRunWorkout = sender.isSelected
     }
     
     /*
@@ -1614,6 +1625,11 @@ extension osmViewController:WorkoutServiceDelegate {
     func dataFromWatch(data: WorkoutData) {
         if let heartRate = data.heart {
             DispatchQueue.main.async {
+                if((self.heartView?.isHidden) != nil){
+                    self.heartView?.isHidden = false
+                    self.toWorkout_button.setClicked(isSelect: true)
+                    WorkoutService.shared.isRunWorkout = true
+                }
                 self.heartView?.heartAnimation()
                 self.heartView?.heartRateLabel.text = heartRate
             }

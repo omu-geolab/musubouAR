@@ -218,6 +218,9 @@ class ARViewController: UIViewController,detailViewDelegate {
         slider.layer.shadowRadius = 5
         slider.layer.shadowOffset = CGSize(width: 5, height: 5)
         slider.layer.shadowOpacity = 0.6
+        slider.isHidden = true
+       
+
         label = UILabel(frame: CGRect(x: 20, y: self.view.bounds.height/2 - 120, width: 70, height: 50))
         label.textAlignment = .center
         label.font = label.font.withSize(25)
@@ -229,8 +232,13 @@ class ARViewController: UIViewController,detailViewDelegate {
         label.layer.shadowRadius = 5
         label.layer.shadowOffset = CGSize(width: 5, height: 5)
         label.layer.shadowOpacity = 0.6
+        label.isHidden = true
         slider.delegate = self
         view.addSubview(slider)
+        if(gisDisplayMode == gisMode.gis){
+            slider.isHidden = false
+            label.isHidden = false
+        }
         slider.translatesAutoresizingMaskIntoConstraints = false
         let constraintsSlider = [
             slider.trailingAnchor.constraint(equalTo: view.trailingAnchor,constant: -10),
