@@ -766,7 +766,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         case 0: // 火災のとき：赤色
             return UIColor(red: 0.545, green: 0.020, blue: 0.220, alpha: kFill)
             
-        case 1: // 浸水のとき：青色
+        case 1, 7: // 浸水のとき：青色
             return UIColor(red: 0.000, green: 0.400, blue: 1.000, alpha: kFill)
             
         case 2: // 土砂崩れのとき：茶色
@@ -1519,7 +1519,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
                 warningView.frame = CGRect(x: 0.0, y: 0.0, width: CGFloat(screenWidth), height: CGFloat(screenHeight))
                 warningView.backgroundColor = UIColor(red: 1.000, green: 0.000, blue: 0.000, alpha: 1.0)
                 
-            case 1: // 浸水：青色
+            case 1, 7: // 浸水・津波：青色
                 warningView.frame = CGRect(x: 0.0, y: CGFloat(screenHeight * 0.75), width: CGFloat(screenWidth), height: CGFloat(screenHeight / 4))
                 warningView.backgroundColor = UIColor(red: 0.000, green: 0.000, blue: 0.900, alpha: 1.0)
                 
