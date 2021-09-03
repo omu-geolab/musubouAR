@@ -1099,6 +1099,7 @@ extension ARViewController: CLLocationManagerDelegate{
         let positionTop = CGPoint(x: 0, y: size.height*0.5)
         let positionBot1 = CGPoint(x: 0, y: -size.height*0.5)
         let positionBot2 = CGPoint(x: 0, y: -size.height*0.3)
+        let positionBot3 = CGPoint(x: 0, y: -size.height*0.45)
         let positionRight = CGPoint(x: size.width*0.4, y: size.height*0.5)
         let positionCenter = CGPoint(x: 0, y: size.height*0.5)
         let range = size.width
@@ -1131,7 +1132,7 @@ extension ARViewController: CLLocationManagerDelegate{
             warnIndex = 5
             break
         case 8: // 液状化：黄色
-            overlay.addEnvironment(filedNamed: "SceneKit.scnassets/liquefaction.sks", position: positionBot2, range: range)
+            overlay.addEnvironment(filedNamed: "SceneKit.scnassets/liquefaction.sks", position: positionBot3, range: range)
             warnIndex = 6
             break
         default: // その他の災害：緑色
