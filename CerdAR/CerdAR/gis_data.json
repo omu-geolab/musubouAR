@@ -26,7 +26,7 @@
 },
 {
     "name":"洪水浸水想定図（大和川/淀川）",
-    "server":"https://www.cerd.osaka-cu.ac.jp/cerd-ar_tiles/yodo-tiles/{z}/{x}/{y}.png",
+    "server":"https://www.cerd.osaka-cu.ac.jp/cerd-ar_tiles/sinsui/{z}/{x}/{y}.png",
     "gl_style":{
         "version": 8,
         "name": "Sinsui",
@@ -126,10 +126,10 @@
 },
 {
     "name":"津波浸水想定図（南海トラフ）",
-    "server":"https://www.cerd.osaka-cu.ac.jp/cerd-ar_tiles/nankai-tsunami-yodogawa/{z}/{x}/{y}.png",
+    "server":"https://www.cerd.osaka-cu.ac.jp/cerd-ar_tiles/nankai-tsunami/{z}/{x}/{y}.png",
     "gl_style":{
         "version": 8,
-        "name": "nankai-tsunami-yodogawa",
+        "name": "nankai-tsunami",
         "metadata": {
             "mapbox:origin": "basic-template",
             "mapbox:autocomposite": true,

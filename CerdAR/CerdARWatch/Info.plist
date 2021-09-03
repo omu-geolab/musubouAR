@@ -26,7 +26,7 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
 	<key>WKCompanionAppBundleIdentifier</key>
-	<string>ocu.cerdar</string>
+	<string>jp.co.apptec.cerdar</string>
 	<key>WKWatchKitApp</key>
 	<true/>
 </dict>
