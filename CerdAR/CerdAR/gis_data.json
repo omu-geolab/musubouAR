@@ -25,24 +25,24 @@
     }
 },
 {
-    "name":"洪水浸水想定図（大和川/淀川）",
-    "server":"https://www.cerd.osaka-cu.ac.jp/cerd-ar_tiles/sinsui/{z}/{x}/{y}.png",
+    "name":"洪水浸水想定区域（想定最大規模）",
+    "server":"https://disaportaldata.gsi.go.jp/raster/01_flood_l2_shinsuishin_data/{z}/{x}/{y}.png",
     "gl_style":{
         "version": 8,
         "name": "Raster Tiles",
         "sources": {
-            "gsiStd": {
+            "01_flood_l2_shinsuishin_data": {
                 "type": "raster",
                 "tiles": [
-                    "https://www.cerd.osaka-cu.ac.jp/cerd-ar_tiles/sinsui/{z}/{x}/{y}.png"
+                    "https://disaportaldata.gsi.go.jp/raster/01_flood_l2_shinsuishin_data/{z}/{x}/{y}.png"
                 ],
                 "tileSize": 256
             }
         },
         "layers": [{
-            "id": "gsiStd",
+            "id": "01_flood_l2_shinsuishin_data",
             "type": "raster",
-            "source": "gsiStd",
+            "source": "01_flood_l2_shinsuishin_data",
             "paint": {
                 "raster-fade-duration": 100
             }
@@ -51,23 +51,23 @@
 },
 {
     "name":"津波浸水想定図（南海トラフ）",
-    "server":"https://www.cerd.osaka-cu.ac.jp/cerd-ar_tiles/nankai-tsunami/{z}/{x}/{y}.png",
+    "server":"https://disaportaldata.gsi.go.jp/raster/04_tsunami_newlegend_pref_data/27/{z}/{x}/{y}.png",
     "gl_style":{
         "version": 8,
         "name": "Raster Tiles",
         "sources": {
-            "gsiStd": {
+            "04_tsunami_newlegend_pref_data": {
                 "type": "raster",
                 "tiles": [
-                    "https://www.cerd.osaka-cu.ac.jp/cerd-ar_tiles/nankai-tsunami/{z}/{x}/{y}.png"
+                    "https://disaportaldata.gsi.go.jp/raster/04_tsunami_newlegend_pref_data/27/{z}/{x}/{y}.png"
                 ],
                 "tileSize": 256
             }
         },
         "layers": [{
-            "id": "gsiStd",
+            "id": "04_tsunami_newlegend_pref_data",
             "type": "raster",
-            "source": "gsiStd",
+            "source": "04_tsunami_newlegend_pref_data",
             "paint": {
                 "raster-fade-duration": 100
             }
