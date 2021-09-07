@@ -25,78 +25,53 @@
     }
 },
 {
-    "name":"洪水浸水想定図（大和川/淀川）",
-    "server":"https://www.cerd.osaka-cu.ac.jp/cerd-ar_tiles/sinsui/{z}/{x}/{y}.png",
+    "name":"洪水浸水想定区域（想定最大規模）",
+    "server":"https://disaportaldata.gsi.go.jp/raster/01_flood_l2_shinsuishin_data/{z}/{x}/{y}.png",
     "gl_style":{
         "version": 8,
-        "name": "Sinsui",
-        "metadata": {
-            "mapbox:origin": "basic-template",
-            "mapbox:autocomposite": true,
-            "mapbox:type": "template",
-            "mapbox:sdk-support": {
-                "js": "0.54.0",
-                "android": "6.7.0",
-                "ios": "4.7.0"
-            }
-        },
-        "center": [135.54650935837526, 34.70470994992827],
-        "zoom": 10.18267864693348,
-        "bearing": 0,
-        "pitch": 0,
+        "name": "Raster Tiles",
         "sources": {
-            "composite": {"url": "mapbox://nro2dai.bcdztftd", "type": "vector"}
-        },
-        "sprite": "mapbox://sprites/nro2dai/cjwdfiy6n0ug11dpfy0olamx5/629bpdwpqxu5j66f3aoku8h84",
-        "glyphs": "mapbox://fonts/nro2dai/{fontstack}/{range}.pbf",
-        "layers": [
-            {
-                "id": "sinsui-soutei",
-                "type": "fill",
-                "source": "composite",
-                "source-layer": "sinsui-4ee5ei",
-                "layout": {},
-                "paint": {
-                    "fill-color": [
-                        "match",
-                        ["get", "A31_001"],
-                        [11],
-                        "hsl(60, 100%, 90%)",
-                        [12],
-                        "hsl(85, 64%, 86%)",
-                        [13],
-                        "hsl(114, 46%, 82%)",
-                        [15],
-                        "hsl(164, 44%, 66%)",
-                        [14],
-                        "hsl(140, 44%, 74%)",
-                        [21],
-                        "hsl(178, 44%, 57%)",
-                        [22],
-                        "hsl(186, 53%, 51%)",
-                        [23],
-                        "hsl(193, 54%, 49%)",
-                        [24],
-                        "hsl(199, 57%, 47%)",
-                        [25],
-                        "hsl(204, 61%, 45%)",
-                        [26],
-                        "hsl(213, 62%, 42%)",
-                        [27],
-                        "hsl(221, 61%, 39%)",
-                        "#000000"
-                    ],
-                    "fill-outline-color": "hsla(0, 0%, 0%, 0)",
-                    "fill-opacity": 1
-                }
+            "01_flood_l2_shinsuishin_data": {
+                "type": "raster",
+                "tiles": [
+                    "https://disaportaldata.gsi.go.jp/raster/01_flood_l2_shinsuishin_data/{z}/{x}/{y}.png"
+                ],
+                "tileSize": 256
             }
-        ],
-        "created": "2019-06-01T11:24:51.730Z",
-        "id": "cjwdfiy6n0ug11dpfy0olamx5",
-        "modified": "2019-06-02T00:47:22.998Z",
-        "owner": "nro2dai",
-        "visibility": "private",
-        "draft": false
+        },
+        "layers": [{
+            "id": "01_flood_l2_shinsuishin_data",
+            "type": "raster",
+            "source": "01_flood_l2_shinsuishin_data",
+            "paint": {
+                "raster-fade-duration": 100
+            }
+        }]
+    }
+},
+{
+    "name":"津波浸水想定図（南海トラフ）",
+    "server":"https://disaportaldata.gsi.go.jp/raster/04_tsunami_newlegend_pref_data/27/{z}/{x}/{y}.png",
+    "gl_style":{
+        "version": 8,
+        "name": "Raster Tiles",
+        "sources": {
+            "04_tsunami_newlegend_pref_data": {
+                "type": "raster",
+                "tiles": [
+                    "https://disaportaldata.gsi.go.jp/raster/04_tsunami_newlegend_pref_data/27/{z}/{x}/{y}.png"
+                ],
+                "tileSize": 256
+            }
+        },
+        "layers": [{
+            "id": "04_tsunami_newlegend_pref_data",
+            "type": "raster",
+            "source": "04_tsunami_newlegend_pref_data",
+            "paint": {
+                "raster-fade-duration": 100
+            }
+        }]
     }
 },
 {
@@ -122,71 +97,6 @@
                 "raster-fade-duration": 100
             }
         }]
-    }
-},
-{
-    "name":"津波浸水想定図（南海トラフ）",
-    "server":"https://www.cerd.osaka-cu.ac.jp/cerd-ar_tiles/nankai-tsunami/{z}/{x}/{y}.png",
-    "gl_style":{
-        "version": 8,
-        "name": "nankai-tsunami",
-        "metadata": {
-            "mapbox:origin": "basic-template",
-            "mapbox:autocomposite": true,
-            "mapbox:type": "template",
-            "mapbox:sdk-support": {
-                "js": "0.54.0",
-                "android": "6.7.0",
-                "ios": "4.7.0"
-            }
-        },
-        "center": [135.54650935837526, 34.70470994992827],
-        "zoom": 11,
-        "bearing": 0,
-        "pitch": 0,
-        "sources": {
-            "composite": {"url": "mapbox://nro2dai.cql7guu2", "type": "vector"}
-        },
-        "sprite": "mapbox://sprites/nro2dai/ck2tw46ji019y1cqv4ks01usv/ck2u8j60r58fu0sgyxrigm3cu",
-        "glyphs": "mapbox://fonts/nro2dai/{fontstack}/{range}.pbf",
-        "layers": [
-            {
-            "id": "nankai-tsunami",
-                          "type": "fill",
-                          "source": "composite",
-                          "source-layer": "tsunami-8kd1zj",
-                          "layout": {},
-                          "paint": {
-                              "fill-color": [
-                                  "match",
-                                  ["get", "A40_003"],
-                                  ["", "0.01m以上 〜 0.3m未満"],
-                                  "hsl(60, 100%, 50%)",
-                                  ["0.3m以上 〜 1m未満"],
-                                  "rgb(255, 158, 1)",
-                                  ["1m以上 〜 2m未満"],
-                                  "rgb(255, 73, 1)",
-                                  ["2m以上 〜 3m未満"],
-                                  "rgb(219, 76, 126)",
-                                  ["3m以上 〜 4m未満"],
-                                  "hsl(300, 100%, 50%)",
-                                  ["4m以上 〜 5m未満"],
-                                  "rgb(174, 0, 255)",
-                                  ["5m以上"],
-                                  "rgb(120, 1, 255)",
-                                  "hsla(0, 0%, 0%, 0)"
-                              ],
-                              "fill-outline-color": "hsla(0, 0%, 0%, 0)"
-                          }
-
-            }
-        ],
-        "created": "2019-11-11T03:51:49.038Z",
-        "id": "ck2tw46ji019y1cqv4ks01usv",
-        "modified": "2019-11-11T04:29:35.670Z",
-        "owner": "nro2dai",
-        "visibility": "private",
-        "draft": false
     }
 }
 ]

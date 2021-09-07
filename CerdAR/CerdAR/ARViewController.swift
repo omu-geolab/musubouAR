@@ -904,7 +904,7 @@ class ARViewController: UIViewController,detailViewDelegate {
                 warningView.frame = CGRect(x: 0.0, y: 0.0, width: CGFloat(screenWidth), height: CGFloat(screenHeight))
                 warningView.backgroundColor = UIColor(red: 1.000, green: 0.000, blue: 0.000, alpha: 1.0)
                 
-            case 1: // 浸水：青色
+            case 1, 7: // 浸水・津波：青色
                 warningView.frame = CGRect(x: 0.0, y: CGFloat(screenHeight * 0.75), width: CGFloat(screenWidth), height: CGFloat(screenHeight / 4))
                 warningView.backgroundColor = UIColor(red: 0.000, green: 0.000, blue: 0.900, alpha: 1.0)
                 
@@ -1084,6 +1084,7 @@ extension ARViewController: CLLocationManagerDelegate{
         let positionTop = CGPoint(x: 0, y: size.height*0.5)
         let positionBot1 = CGPoint(x: 0, y: -size.height*0.5)
         let positionBot2 = CGPoint(x: 0, y: -size.height*0.3)
+        let positionBot3 = CGPoint(x: 0, y: -size.height*0.45)
         let positionRight = CGPoint(x: size.width*0.4, y: size.height*0.5)
         let positionCenter = CGPoint(x: 0, y: size.height*0.5)
         let range = size.width
@@ -1116,7 +1117,7 @@ extension ARViewController: CLLocationManagerDelegate{
             warnIndex = 5
             break
         case 8: // 液状化：黄色
-            overlay.addEnvironment(filedNamed: "SceneKit.scnassets/liquefaction.sks", position: positionBot2, range: range)
+            overlay.addEnvironment(filedNamed: "SceneKit.scnassets/liquefaction.sks", position: positionBot3, range: range)
             warnIndex = 6
             break
         default: // その他の災害：緑色
@@ -1434,7 +1435,7 @@ extension ARViewController: MGLMapViewDelegate {
             case 0: // 火災のとき：赤色
                 return UIColor(red: 0.545, green: 0.020, blue: 0.220, alpha: kFill)
                 
-            case 1: // 浸水のとき：青色
+            case 1, 7: // 浸水・津波：青色
                 return UIColor(red: 0.000, green: 0.400, blue: 1.000, alpha: kFill)
                 
             case 2: // 土砂崩れのとき：茶色
