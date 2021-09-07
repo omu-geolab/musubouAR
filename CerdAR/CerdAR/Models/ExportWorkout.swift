@@ -33,7 +33,7 @@ class ExportWorkout:NSObject {
         dic["device"] = workout.device?.description
         dic["uuid"] = workout.uuid.uuidString
         let uuid = workout.uuid.uuidString
-        let dateStart = workout.startDate.toString(format: "yyyy-MM-dd HH:mm:ss Z")
+        let dateStart = workout.startDate.toString(format: "yyyy-MM-dd HH-mm-ss Z")
         let dir = FileManager.default.urls(
             for: .documentDirectory,
             in: .userDomainMask

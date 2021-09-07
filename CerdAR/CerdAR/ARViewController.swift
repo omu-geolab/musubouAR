@@ -90,7 +90,6 @@ class ARViewController: UIViewController,detailViewDelegate {
     var textStepper:UITextView!
     var label:UILabel!
     var resetKalmanFilter: Bool = false
-    var hcKalmanFilter: HCKalmanAlgorithm?
     var audioPlayer: AVAudioPlayer!
     var levelZoomMap:Double = 1.0
     var isOrientation = false
@@ -473,31 +472,6 @@ class ARViewController: UIViewController,detailViewDelegate {
                         self.detailCustomIphone.widthAnchor.constraint(equalToConstant: widthView),
                     ]
                     NSLayoutConstraint.activate(constraintsView)
-//                    let background = UIImageView(frame: self.view.frame)
-//                    background.alpha = 0.5
-//                    background.backgroundColor = UIColor.gray
-//                    backgroundView = background
-//                    backgroundView.isUserInteractionEnabled = true
-
-                    
-//                    self.detailCustomIphone.deleteButton.addTarget(self, action: #selector(osmViewController.onClick_detailBackground(_:)), for: .touchUpInside)
-//                    if UIDevice.current.userInterfaceIdiom == .phone {
-////                        self.detailview = detailView(frame: CGRect(x: screenWidth * 0.1, y: screenWidth * 0.02, width: screenWidth * 0.8, height: screenHeight * 0.9))
-//                        self.detailCustomView = DetailViewController(frame: CGRect(x: screenWidth * 0.1, y: screenWidth * 0.02, width: screenWidth * 0.8, height: screenHeight * 0.9))
-//                    } else if UIDevice.current.userInterfaceIdiom == .pad {
-////                        self.detailview = detailView(frame: CGRect(x: screenWidth * 0.1, y: screenWidth * 0.1, width: screenWidth * 0.8, height: screenHeight * 0.8))
-//                        self.detailCustomView = DetailViewController(frame: CGRect(x: screenWidth * 0.1, y: screenWidth * 0.02, width: screenWidth * 0.8, height: screenHeight * 0.9))
-//                    }
-//                    self.detailview!.delegate = self
-//                    backgroundView = detailView.makebackgroungView()
-//                    backgroundView.isUserInteractionEnabled = true
-
-//                    backgroundView = detailView.makebackgroungView()
-//                    backgroundView.isUserInteractionEnabled = true
-//                    runAfterDelay(kShowDetail) { // タグをタップしてからkShowDetail秒後に詳細画面を表示する
-////                        self.view.addSubview(backgroundView)
-//                        self.view.addSubview(self.detailCustomView!)
-//                    }
                 }
             }
         }
@@ -532,7 +506,10 @@ class ARViewController: UIViewController,detailViewDelegate {
         mapView = MGLMapView(frame: CGRect(x: 0, y: 0, width: d, height: d))
         mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         mapView.camera = MGLMapCamera(lookingAtCenter: CLLocationCoordinate2D(latitude: 34.7, longitude: 135.5), altitude: 1200, pitch: 45, heading: 0)
-        let styleStreet = MGLStyle.streetsStyleURL(withVersion: 9)
+        var styleStreet = MGLStyle.streetsStyleURL(withVersion: 9)
+        if(gisDisplayMode == gisMode.gis){
+            styleStreet = URL(string: "mapbox://styles/th-nguyen/ckt40rmik0ez517lp7b2lormn") ??  MGLStyle.streetsStyleURL(withVersion: 9)
+        }
         mapView.layer.cornerRadius = mapView.frame.height/2
         
         mapView.styleURL = styleStreet
@@ -742,13 +719,13 @@ class ARViewController: UIViewController,detailViewDelegate {
         let mapWidth = (cos(userLat * Double.pi/180) * 2 * Double.pi * 6378137)/2
          
         let level = log2(mapWidth / 256)
-        //print(level)
         options.zoomLevel = level
         var snapshotter: MGLMapSnapshotter? = MGLMapSnapshotter(options: options)
         
         //snapshotter.
         snapshotter?.start { (snapshot, error) in
             if error != nil {
+                print(error)
                 print("Unable to create a map snapshot.")
                // self.updateFace()
                 
@@ -839,6 +816,14 @@ class ARViewController: UIViewController,detailViewDelegate {
         let nowTime = Date() // 現在時刻
         
         box.removeAll()
+        
+        if isSound {
+            audioPlayerNear.volume = 1
+            audioPlayerIntr.volume = 1
+        }else {
+            audioPlayerNear.volume = 0
+            audioPlayerIntr.volume = 0
+        }
         
         // 警告メッセージのタイマーを止める
         if warningTimer != nil {

@@ -86,8 +86,8 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
     let kFill: CGFloat = 0.6   // 円内部の透明度
     let kZero: CGFloat = 0 // 初期値0
     let kTagSize: CGFloat = 500 // タグ画像のサイズ
-//    let styleMapboxURL = URL(string: "mapbox://styles/th-nguyen/ckk29t1zw391617rrt2rwls2i")
-    let styleMapboxURL = MGLStyle.streetsStyleURL(withVersion: 9)
+    let styleMapboxGIS = URL(string: "mapbox://styles/th-nguyen/ckt40rmik0ez517lp7b2lormn")
+    let styleMapboxURL = MGLStyle.streetsStyleURL
     var audioPlayer: AVAudioPlayer!
     var levelZoomMap:Double = 1.0
     var isWorkoutRun:Bool = false
@@ -812,8 +812,8 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
      */
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
-                userLat = (locationManager.location?.coordinate.latitude)!
-                userLon = (locationManager.location?.coordinate.longitude)!
+        userLat = (locationManager.location?.coordinate.latitude)!
+        userLon = (locationManager.location?.coordinate.longitude)!
         
     }
     
@@ -980,10 +980,6 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
     @objc internal func onclick_AR(_ sender: UIButton) {
         playButtonSound()
         let vc = ARViewController()
-//        vc.modalPresentationStyle = .fullScreen
-//        self.present(vc, animated: true, completion: nil)
-//        self.navigationController?.pushViewController(vc, animated: true)
-//        self.dismiss(animated: true, completion: nil)
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.window?.rootViewController = vc
     }
@@ -1033,7 +1029,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         backgroundView = background
         backgroundView.isUserInteractionEnabled = true
         backgroundView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(osmViewController.onClick_configBackground(_:))))
-        self.configview = ConfigView(frame: CGRect(x:0, y: 0, width: 300, height: 300))
+        self.configview = ConfigView(frame: CGRect(x:0, y: 0, width: 300, height: 330))
         self.configview?.layer.cornerRadius = 20
         self.configview?.clipsToBounds = true
         self.configview?.delegate = self
@@ -1055,24 +1051,10 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         let constraintsMap = [
             self.configview!.bottomAnchor.constraint(equalTo: self.view.bottomAnchor,constant: -20),
             self.configview!.centerXAnchor.constraint(equalTo: self.view.centerXAnchor,constant: 0),
-            self.configview!.heightAnchor.constraint(equalToConstant: 300),
+            self.configview!.heightAnchor.constraint(equalToConstant: 330),
             self.configview!.widthAnchor.constraint(equalToConstant: 300)
         ]
         NSLayoutConstraint.activate(constraintsMap)
-        //        UIView.animate(
-        //            withDuration: 0.1,
-        //            delay:0.0,
-        //            options : UIView.AnimationOptions.curveEaseIn,
-        //            animations : {
-        //                self.warningView?.center = location
-        //                self.mapView.center = location
-        //        },
-        //            completion: {
-        //                (value: Bool) in
-        //
-        //
-        //        }
-        //        )
     }
     
     /*
@@ -1096,8 +1078,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         mapView.isPitchEnabled = false  // ジェスチャでの視点変更を許可しない
         
         let mapStyle = mapView.styleURL.absoluteString
-        print(mapStyle)
-        if mapStyle == styleMapboxURL.absoluteString {
+        if mapStyle == styleMapboxURL.absoluteString || mapStyle == styleMapboxGIS!.absoluteString {
             displayMode = mode.osmsat.rawValue
             mapView.styleURL = MGLStyle.satelliteStyleURL
             mbStyle = mapView.styleURL.absoluteString
@@ -1126,9 +1107,16 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
             let item = GisList.sharedGis.list[i]
             let action = UIAlertAction(title: item.name, style: .default){
                 action in
-                self.changeLayer(server: item.server)
-                self.saveGisDatatoFile(json : item.glStyle)
-                serverName = item.server
+                if ( displayMode == mode.osm.rawValue){
+                    self.mapView.styleURL = self.styleMapboxGIS
+                }
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute: {
+                    self.changeLayer(server: item.server)
+                    self.saveGisDatatoFile(json : item.glStyle)
+                    serverName = item.server
+                   
+                })
             }
             alertController.addAction(action)
         }
@@ -1142,6 +1130,9 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
                 self.mapView.style?.removeSource(sourcemap)
             }
             gisDisplayMode = gisMode.none
+            if ( displayMode == mode.osm.rawValue){
+                self.mapView.styleURL = self.styleMapboxURL
+            }
         }
         alertController.addAction(cancel)
         
@@ -1409,6 +1400,13 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
     @objc func update() {
         let nowTime = Date() // 現在時刻
         
+        if isSound {
+            audioPlayerNear.volume = 1
+            audioPlayerIntr.volume = 1
+        }else {
+            audioPlayerNear.volume = 0
+            audioPlayerIntr.volume = 0
+        }
         // 警告メッセージのタイマーを止める
         if warningTimer != nil {
             warningTimer.invalidate()
@@ -1495,6 +1493,15 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
      */
     
     @objc func updateWarningView(){
+        
+        if isSound {
+            audioPlayerNear.volume = 1
+            audioPlayerIntr.volume = 1
+        }else {
+            audioPlayerNear.volume = 0
+            audioPlayerIntr.volume = 0
+        }
+        
         if(warningCount >= warningAllCount){
             warningCount = 0
         }

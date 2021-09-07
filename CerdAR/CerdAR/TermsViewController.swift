@@ -37,6 +37,5 @@ class TermsViewController: UIViewController {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.window?.rootViewController = osmVC
     }
-    
 }
 
