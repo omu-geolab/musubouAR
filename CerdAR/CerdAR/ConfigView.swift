@@ -17,6 +17,7 @@ class ConfigView: UIView {
     weak var delegate: ConfigViewDelegate?
     let aboutAppBut = UIButton(frame: CGRect.init(x: 0, y: 0, width: screenWidth / 3, height: screenHeight / 6))
     let deletebutton = UIButton(frame: CGRect.init(x: 0, y: 0, width: 30, height: 30))
+    let soundbutton = UIButton(frame: CGRect.init(x: 0, y: 0, width: 60, height: 60))
 //    var mapView = MGLMapView() // 地図画面
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -37,7 +38,6 @@ class ConfigView: UIView {
 //        imageView.contentMode =  UIView.ContentMode.scaleAspectFill
 //        imageView.image = backgroundImage
 //        self.addSubview(imageView)
-        self.backgroundColor = .white
         self.addSubview(changeMapBut2)
         self.addSubview(aboutAppBut)
         self.addSubview(gisInfoBut)
@@ -52,7 +52,10 @@ class ConfigView: UIView {
 
 //        self.sendSubviewToBack(imageView)
 
-        
+        let backgroundImage = UIImageView(frame: CGRect(origin: .zero, size: CGSize(width: 300, height: 330)))
+        backgroundImage.image = UIImage(named: "bg-setting")
+        backgroundImage.contentMode = .scaleToFill
+        self.insertSubview(backgroundImage, at: 0)
         // 「このアプリについて」ボタンの挿入(画面左上側)
         let height:CGFloat = 50.0
         let width:CGFloat = 200.0
@@ -63,7 +66,7 @@ class ConfigView: UIView {
         aboutAppBut.addTarget(self, action: #selector(ConfigView.onClick_aboutApp(_:)), for: .touchUpInside)
         aboutAppBut.translatesAutoresizingMaskIntoConstraints = false
         let constraintsAbout = [
-            aboutAppBut.centerYAnchor.constraint(equalTo: self.centerYAnchor,constant: -105),
+            aboutAppBut.centerYAnchor.constraint(equalTo: self.centerYAnchor,constant: -105 + 40),
             aboutAppBut.centerXAnchor.constraint(equalTo: self.centerXAnchor,constant: 0),
             aboutAppBut.heightAnchor.constraint(equalToConstant: height),
             aboutAppBut.widthAnchor.constraint(equalToConstant: width)
@@ -80,16 +83,33 @@ class ConfigView: UIView {
         self.addSubview(deletebutton)
         deletebutton.translatesAutoresizingMaskIntoConstraints = false
         let constraintsDelete = [
-            deletebutton.topAnchor.constraint(equalTo: self.topAnchor,constant: 3),
+            deletebutton.topAnchor.constraint(equalTo: self.topAnchor,constant: 33),
             deletebutton.trailingAnchor.constraint(equalTo: self.trailingAnchor,constant: -3),
             deletebutton.heightAnchor.constraint(equalToConstant: 30),
             deletebutton.widthAnchor.constraint(equalToConstant: 30)
         ]
         NSLayoutConstraint.activate(constraintsDelete)
+        
+        if isSound {
+            let soundOn: UIImage = UIImage(named: "soundon")!
+            soundbutton.setImage(soundOn, for: .normal)
+        }else {
+            let soundOff: UIImage = UIImage(named: "soundoff")!
+            soundbutton.setImage(soundOff, for: .normal)
+        }
+        soundbutton.addTarget(self, action: #selector(ConfigView.changeSound(_:)), for: .touchUpInside)
+        self.addSubview(soundbutton)
+        soundbutton.translatesAutoresizingMaskIntoConstraints = false
+        let constraintsSound = [
+            soundbutton.topAnchor.constraint(equalTo: self.topAnchor,constant: 5),
+            soundbutton.centerXAnchor.constraint(equalTo: self.centerXAnchor,constant: 0),
+            soundbutton.heightAnchor.constraint(equalToConstant: 60),
+            soundbutton.widthAnchor.constraint(equalToConstant: 60)
+        ]
+        NSLayoutConstraint.activate(constraintsSound)
 
 
         if displayMode == mode.osm.rawValue  {
-   
             changeMapBut2.isHidden = false
             let satelliteImage: UIImage = UIImage(named: "change-map-icon")!
             changeMapBut2.setImage(satelliteImage, for: .normal)
@@ -104,7 +124,7 @@ class ConfigView: UIView {
 //        changeMapBut2.layer.position = CGPoint(x: screenWidth / 6, y: screenHeight / 2)
         changeMapBut2.translatesAutoresizingMaskIntoConstraints = false
         let constraintsMap = [
-            changeMapBut2.centerYAnchor.constraint(equalTo: self.centerYAnchor,constant: -35),
+            changeMapBut2.centerYAnchor.constraint(equalTo: self.centerYAnchor,constant: 0),
             changeMapBut2.centerXAnchor.constraint(equalTo: self.centerXAnchor,constant: 0),
             changeMapBut2.heightAnchor.constraint(equalToConstant: height),
             changeMapBut2.widthAnchor.constraint(equalToConstant: width)
@@ -118,7 +138,7 @@ class ConfigView: UIView {
         gisInfoBut.setImage(gisImage, for: .normal)
         gisInfoBut.translatesAutoresizingMaskIntoConstraints = false
         let constraintsGis = [
-            gisInfoBut.centerYAnchor.constraint(equalTo: self.centerYAnchor,constant: 35),
+            gisInfoBut.centerYAnchor.constraint(equalTo: self.centerYAnchor,constant: 65),
             gisInfoBut.centerXAnchor.constraint(equalTo: self.centerXAnchor,constant: 0),
             gisInfoBut.heightAnchor.constraint(equalToConstant: height),
             gisInfoBut.widthAnchor.constraint(equalToConstant: width)
@@ -132,7 +152,7 @@ class ConfigView: UIView {
         activeBut.setImage(activeImage, for: .normal)
         activeBut.translatesAutoresizingMaskIntoConstraints = false
         let constraintsActive = [
-            activeBut.centerYAnchor.constraint(equalTo: self.centerYAnchor,constant: 105),
+            activeBut.centerYAnchor.constraint(equalTo: self.centerYAnchor,constant: 130),
             activeBut.centerXAnchor.constraint(equalTo: self.centerXAnchor,constant: 0),
             activeBut.heightAnchor.constraint(equalToConstant: height),
             activeBut.widthAnchor.constraint(equalToConstant: width)
@@ -192,6 +212,17 @@ class ConfigView: UIView {
         deleteConfigDisplay()
     }
     
+    @objc func changeSound(_ sender: UIButton) {
+        isSound = !isSound
+        if isSound {
+            let soundOn: UIImage = UIImage(named: "soundon")!
+            soundbutton.setImage(soundOn, for: .normal)
+        }else {
+            let soundOff: UIImage = UIImage(named: "soundoff")!
+            soundbutton.setImage(soundOff, for: .normal)
+        }
+    }
+    
     /*
      * (「このアプリについて」をタップする)
      * OSSのライセンス表記
@@ -202,6 +233,7 @@ class ConfigView: UIView {
         changeMapBut2.isHidden = true
         gisInfoBut.removeFromSuperview()
         activeBut.removeFromSuperview()
+//        soundbutton.removeFromSuperview()
         
         
         // コメントの挿入(画面右側)
@@ -274,7 +306,7 @@ class ConfigView: UIView {
         
         // スクロールビューの生成
         let scrollView = UIScrollView()
-        scrollView.frame = CGRect.init(x: 10, y: 10, width:280, height: 280)
+        scrollView.frame = CGRect.init(x: 10, y: 65, width:280, height: 280)
         scrollView.addSubview(comment)
         scrollView.contentSize = CGSize.init(width: comment.frame.size.width, height: comment.frame.size.height)
         self.addSubview(scrollView)
