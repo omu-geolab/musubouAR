@@ -449,16 +449,19 @@ class GisData : NSObject {
     var name:String!
     var server:String!
     var glStyle:JSON!
+    var legend:String!
 }
 
 class GisList : NSObject {
     var list = [GisData]()
+    var selectedGis:GisData?
     func getListFromJson(json : JSON){
         for i in 0 ..< json.count{
             let item = GisData();
             item.name = json[i]["name"].string
             item.server = json[i]["server"].string
             item.glStyle = json[i]["gl_style"]
+            item.legend = json[i]["legend"].string
             list.append(item)
         }
     }

@@ -27,6 +27,7 @@
 {
     "name":"洪水浸水想定区域（想定最大規模）",
     "server":"https://disaportaldata.gsi.go.jp/raster/01_flood_l2_shinsuishin_data/{z}/{x}/{y}.png",
+    "legend":"https://disaportal.gsi.go.jp/hazardmap/copyright/img/shinsui_legend2-1.png",
     "gl_style":{
         "version": 8,
         "name": "Raster Tiles",
@@ -52,6 +53,7 @@
 {
     "name":"津波浸水想定図（南海トラフ）",
     "server":"https://disaportaldata.gsi.go.jp/raster/04_tsunami_newlegend_pref_data/27/{z}/{x}/{y}.png",
+    "legend":"https://disaportal.gsi.go.jp/hazardmap/copyright/img/tsunami_newlegend.png",
     "gl_style":{
         "version": 8,
         "name": "Raster Tiles",

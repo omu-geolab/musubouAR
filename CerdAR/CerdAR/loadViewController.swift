@@ -97,7 +97,7 @@ class loadViewController: UIViewController, termsViewDelegate, CLLocationManager
                                 })
                                 
                                 alert.addAction(defaultAction)
-                                 self.present(alert, animated: true, completion: nil)
+                                self.present(alert, animated: true, completion: nil)
                                 self.showTermsView()
                                 // サーバーにあったとき
                             } else {

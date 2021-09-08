@@ -91,6 +91,8 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
     var audioPlayer: AVAudioPlayer!
     var levelZoomMap:Double = 1.0
     var isWorkoutRun:Bool = false
+    var pathGISImage:String = ""
+    let legend_button = UIButton()
     //    var wcSession : WCSession! = nil
     
     //    @IBOutlet weak var mapView: MGLMapView!
@@ -142,7 +144,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         mapView.attributionButtonPosition = .bottomLeft
         mapView.attributionButtonMargins = CGPoint(x: 200, y: 0)
         mapView.logoViewMargins = CGPoint(x: 100, y: 0)
-    
+        
         view.addSubview(mapView)
         mapView.translatesAutoresizingMaskIntoConstraints = false
         let constraints = [
@@ -219,6 +221,28 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         NSLayoutConstraint.activate(constraintsSetting)
         toCon_button.addTarget(self, action: #selector(osmViewController.onClick_config(_:)), for: .touchUpInside)
         
+        //凡例表示するためのボタン生成
+        
+        
+        let legendButImage: UIImage = UIImage(named: "legend")!
+        legend_button.setImage(legendButImage, for: UIControl.State())
+        legend_button.layer.shadowColor = UIColor.black.cgColor
+        legend_button.layer.shadowRadius = 5
+        legend_button.layer.shadowOffset = CGSize(width: 10, height: 10)
+        legend_button.layer.shadowOpacity = 0.6
+        legend_button.startAnimatingPressActions()
+        mapView.addSubview(legend_button)
+        legend_button.isHidden =  true
+        legend_button.translatesAutoresizingMaskIntoConstraints = false
+        let constraintsLegend = [
+            legend_button.trailingAnchor.constraint(equalTo: mapView.trailingAnchor,constant: -15 ),
+            legend_button.bottomAnchor.constraint(equalTo: mapView.bottomAnchor,constant: -30 - sizeButton),
+            legend_button.heightAnchor.constraint(equalToConstant: sizeButton),
+            legend_button.widthAnchor.constraint(equalToConstant: sizeButton)
+        ]
+        NSLayoutConstraint.activate(constraintsLegend)
+        legend_button.addTarget(self, action: #selector(showLegend), for: .touchUpInside)
+        
         if WorkoutService.shared.isSupport() {
             // ワークアウト起動のボタン生成
             let startButImage: UIImage = UIImage(named: "play-icon")!
@@ -237,7 +261,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
             toWorkout_button.translatesAutoresizingMaskIntoConstraints = false
             let constraintsSetting = [
                 toWorkout_button.trailingAnchor.constraint(equalTo: mapView.trailingAnchor,constant: -15),
-                toWorkout_button.bottomAnchor.constraint(equalTo: mapView.bottomAnchor,constant: -30 - sizeButton),
+                toWorkout_button.bottomAnchor.constraint(equalTo: mapView.bottomAnchor,constant: -45 - sizeButton*2),
                 toWorkout_button.heightAnchor.constraint(equalToConstant: sizeButton),
                 toWorkout_button.widthAnchor.constraint(equalToConstant: sizeButton)
             ]
@@ -251,7 +275,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
             heartView!.backgroundColor = UIColor(displayP3Red: 255, green: 255, blue: 255, alpha: 0.6)
             let constraintsHeart = [
                 heartView!.trailingAnchor.constraint(equalTo: mapView.trailingAnchor,constant: -15),
-                heartView!.bottomAnchor.constraint(equalTo: mapView.bottomAnchor,constant: -45 - sizeButton*2),
+                heartView!.bottomAnchor.constraint(equalTo: mapView.bottomAnchor,constant: -60 - sizeButton*3),
                 heartView!.heightAnchor.constraint(equalToConstant: sizeButton*2),
                 heartView!.widthAnchor.constraint(equalToConstant: sizeButton)
             ]
@@ -345,7 +369,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
             locationManager = CLLocationManager()
         }
         authorizeHealthKit()
-//        testSampleQuery()
+        //        testSampleQuery()
         //        WorkoutService.shared.startWatchApp()
         //        WorkoutService.shared.getWorkoutApp()
     }
@@ -453,7 +477,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         if  let heartView = self.heartView {
             heartView.heartAnimation()
         }
-       
+        
         DispatchQueue.main.async {
             if WorkoutService.shared.isRunWorkout {
                 self.toWorkout_button.setClicked(isSelect: true)
@@ -462,6 +486,24 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
                 self.toWorkout_button.setClicked(isSelect: false)
                 self.heartView?.isHidden = true
             }
+        }
+        
+        if let item = GisList.sharedGis.selectedGis {
+            if ( displayMode == mode.osm.rawValue){
+                self.mapView.styleURL = self.styleMapboxGIS
+            }
+            if (item.legend != nil) {
+                self.pathGISImage = item.legend
+                self.legend_button.isHidden = false
+            } else {
+                self.pathGISImage = ""
+                self.legend_button.isHidden = true
+            }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute: {
+                self.changeLayer(server: item.server)
+                self.saveGisDatatoFile(json : item.glStyle)
+                serverName = item.server
+            })
         }
     }
     
@@ -520,12 +562,12 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
      * 拡大縮小に合わせて画像を張り替える
      */
     func mapView(_ mapView: MGLMapView, regionDidChangeAnimated animated: Bool) {
-//        userLat = self.mapView.centerCoordinate.latitude
-//        userLon = self.mapView.centerCoordinate.longitude
+        //        userLat = self.mapView.centerCoordinate.latitude
+        //        userLon = self.mapView.centerCoordinate.longitude
         if mapView.zoomLevel >  levelZoomMap + 0.5 || mapView.zoomLevel <  levelZoomMap - 0.5 {
             levelZoomMap = mapView.zoomLevel
             DispatchQueue.main.async {
-                 self.scalingImage()
+                self.scalingImage()
             }
         }
         
@@ -1089,6 +1131,20 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         }else{
             print("currentDisplayMap :  その他のマップデータが使われています！")
         }
+        if let layermap = self.mapView.style?.layer(withIdentifier: self.rasterLayer?.identifier ?? "") {
+            self.mapView.style?.removeLayer(layermap)
+        }
+        
+        if let sourcemap = self.mapView.style?.source(withIdentifier: self.source?.identifier ?? ""){
+            self.mapView.style?.removeSource(sourcemap)
+        }
+        gisDisplayMode = gisMode.none
+        if ( displayMode == mode.osm.rawValue){
+            self.mapView.styleURL = self.styleMapboxURL
+        }
+        self.pathGISImage = ""
+        self.legend_button.isHidden = true
+        GisList.sharedGis.selectedGis = nil
     }
     
     /*
@@ -1110,13 +1166,22 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
                 if ( displayMode == mode.osm.rawValue){
                     self.mapView.styleURL = self.styleMapboxGIS
                 }
+                if (item.legend != nil) {
+                    self.pathGISImage = item.legend
+                    self.legend_button.isHidden = false
+                } else {
+                    self.pathGISImage = ""
+                    self.legend_button.isHidden = true
+                }
                 
+                //                self.pathGISImage =
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute: {
                     self.changeLayer(server: item.server)
                     self.saveGisDatatoFile(json : item.glStyle)
                     serverName = item.server
-                   
+                    
                 })
+                GisList.sharedGis.selectedGis = item
             }
             alertController.addAction(action)
         }
@@ -1133,6 +1198,10 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
             if ( displayMode == mode.osm.rawValue){
                 self.mapView.styleURL = self.styleMapboxURL
             }
+            self.pathGISImage = ""
+            self.legend_button.isHidden = true
+            GisList.sharedGis.selectedGis = nil
+            
         }
         alertController.addAction(cancel)
         
@@ -1277,17 +1346,24 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
     
     func loadGeoJson() {
         DispatchQueue.global().async {
-            // Get the path for example.geojson in the app’s bundle.
-            guard let jsonUrl = Bundle.main.url(forResource: "LinePolygon", withExtension: "geojson") else {
-                preconditionFailure("Failed to load local GeoJSON file")
-            }
-            
-            guard let jsonData = try? Data(contentsOf: jsonUrl) else {
-                preconditionFailure("Failed to parse GeoJSON file")
-            }
-            
-            DispatchQueue.main.async {
-                self.drawPolyline(geoJson: jsonData)
+            let fileName = "LinePolygon.geojson"
+            if let dir: NSString = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.allDomainsMask, true).first as NSString? {
+                let pathFileName = dir.appendingPathComponent(fileName)
+                guard let data = try? Data(contentsOf: URL(fileURLWithPath: pathFileName)) else {
+                    if let path = Bundle.main.path(forResource: "LinePolygon", ofType: "geojson"){
+                        let url = URL(fileURLWithPath: path)
+                        guard let jsonData = try? Data(contentsOf: url) else {
+                            preconditionFailure("Failed to parse GeoJSON file")
+                        }
+                        DispatchQueue.main.async {
+                            self.drawPolyline(geoJson: jsonData)
+                        }
+                    }
+                    return
+                }
+                DispatchQueue.main.async {
+                    self.drawPolyline(geoJson: data)
+                }
             }
         }
     }
@@ -1345,8 +1421,8 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         // Street Mapの場合
         if let symbolLayer = style.layer(withIdentifier: "admin-1-boundary") ?? style.layer(withIdentifier: "admin-3-4-boundaries") {
             style.insertLayer(layer, below: symbolLayer)
-        
-        // 衛星画像の場合
+            
+            // 衛星画像の場合
         } else {
             style.insertLayer(layer, at: 10) //10 は 適当
         }
@@ -1431,7 +1507,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
                 // 現在災害発生中
             } else if nowTime.compare(jsonDataManager.sharedInstance.warnBox[i].stop) == ComparisonResult.orderedAscending && nowTime.compare(jsonDataManager.sharedInstance.warnBox[i].start) == ComparisonResult.orderedDescending {
                 
-//                updatePin(i)
+                //                updatePin(i)
                 
                 let Sn = Date().timeIntervalSince(jsonDataManager.sharedInstance.warnBox[i].start) / 60 * kUpdateWarn // 開始時刻(start)と現在時刻(now)の差
                 if !jsonDataManager.sharedInstance.warnBox[i].isFullRange {
@@ -1452,7 +1528,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
                 }
                 
                 box.append(i)
-               
+                
                 jsonDataManager.sharedInstance.warnBox[i].distance = calcDistance(jsonDataManager.sharedInstance.warnBox[i].lat, lon: jsonDataManager.sharedInstance.warnBox[i].lon, uLat: userLat, uLon: userLon)
                 if jsonDataManager.sharedInstance.warnBox[i].distance - Int(circleRadius[i]) < 0 {
                     let tagdata = jsonDataManager.sharedInstance.warnBox[i]
@@ -1603,6 +1679,37 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
             audioPlayer.play()
         }else{
             print("Unable to locate audio file")
+        }
+    }
+    
+    @objc func showLegend(){
+        if !pathGISImage.isEmpty {
+            let alertController = UIAlertController(title: "\n\n\n\n\n\n\n\n\n\n\n\n\n\n", message: nil, preferredStyle: .actionSheet)
+            if let url:URL = URL(string: pathGISImage) {
+                let data = try? Data(contentsOf: url)
+                let image = UIImage(data: data!)
+                let margin:CGFloat = 10.0
+                let rect = CGRect(x: margin, y: margin, width: 300, height: 250)
+                let customView = UIImageView(frame: rect)
+                customView.image = image
+                customView.contentMode = .scaleAspectFit
+                alertController.view.addSubview(customView)
+                customView.translatesAutoresizingMaskIntoConstraints = false
+                let constraintsSetting = [
+                    customView.centerYAnchor.constraint(equalTo: alertController.view.centerYAnchor, constant: -30),
+                    customView.centerXAnchor.constraint(equalTo: alertController.view.centerXAnchor, constant: 0),
+                    customView.heightAnchor.constraint(equalToConstant: 250),
+                    customView.widthAnchor.constraint(equalToConstant: 300)
+                ]
+                NSLayoutConstraint.activate(constraintsSetting)
+                
+                let cancelAction = UIAlertAction(title: "閉じる", style: .cancel, handler: {(alert: UIAlertAction!) in print("閉じる")})
+                alertController.addAction(cancelAction)
+                
+                DispatchQueue.main.async {
+                    self.present(alertController, animated: true, completion:{})
+                }
+            }
         }
     }
     
