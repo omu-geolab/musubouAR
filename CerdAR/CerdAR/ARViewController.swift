@@ -386,7 +386,7 @@ class ARViewController: UIViewController,detailViewDelegate {
     }
     @objc func changeAR(_ sender: UIButton) {
         playButtonSound()
-//        startSession()
+        startSession()
         self.updateFace()
     }
     
@@ -491,7 +491,9 @@ class ARViewController: UIViewController,detailViewDelegate {
         }
         
         // Run the view's session
-        sceneView.session.run(configuration)
+        sceneView.session.run(configuration,options: [
+                                .resetTracking,
+                                .removeExistingAnchors])
         flag  = true
     }
     
@@ -610,17 +612,24 @@ class ARViewController: UIViewController,detailViewDelegate {
     
     func loadGeoJson() {
         DispatchQueue.global().async {
-            // Get the path for example.geojson in the app’s bundle.
-            guard let jsonUrl = Bundle.main.url(forResource: "LinePolygon", withExtension: "geojson") else {
-                preconditionFailure("Failed to load local GeoJSON file")
-            }
-            
-            guard let jsonData = try? Data(contentsOf: jsonUrl) else {
-                preconditionFailure("Failed to parse GeoJSON file")
-            }
-            
-            DispatchQueue.main.async {
-                self.drawPolyline(geoJson: jsonData)
+            let fileName = "LinePolygon.geojson"
+            if let dir: NSString = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.allDomainsMask, true).first as NSString? {
+                let pathFileName = dir.appendingPathComponent(fileName)
+                guard let data = try? Data(contentsOf: URL(fileURLWithPath: pathFileName)) else {
+                    if let path = Bundle.main.path(forResource: "LinePolygon", ofType: "geojson"){
+                        let url = URL(fileURLWithPath: path)
+                        guard let jsonData = try? Data(contentsOf: url) else {
+                            preconditionFailure("Failed to parse GeoJSON file")
+                        }
+                        DispatchQueue.main.async {
+                            self.drawPolyline(geoJson: jsonData)
+                        }
+                    }
+                    return
+                }
+                DispatchQueue.main.async {
+                    self.drawPolyline(geoJson: data)
+                }
             }
         }
     }
