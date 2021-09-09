@@ -1684,31 +1684,44 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
     
     @objc func showLegend(){
         if !pathGISImage.isEmpty {
-            let alertController = UIAlertController(title: "\n\n\n\n\n\n\n\n\n\n\n\n\n\n", message: nil, preferredStyle: .actionSheet)
+            let alertController = UIAlertController(title: "\n\n\n\n\n\n\n\n\n\n\n", message: nil, preferredStyle: .alert)
             if let url:URL = URL(string: pathGISImage) {
-                let data = try? Data(contentsOf: url)
-                let image = UIImage(data: data!)
-                let margin:CGFloat = 10.0
-                let rect = CGRect(x: margin, y: margin, width: 300, height: 250)
-                let customView = UIImageView(frame: rect)
-                customView.image = image
-                customView.contentMode = .scaleAspectFit
-                alertController.view.addSubview(customView)
-                customView.translatesAutoresizingMaskIntoConstraints = false
-                let constraintsSetting = [
-                    customView.centerYAnchor.constraint(equalTo: alertController.view.centerYAnchor, constant: -30),
-                    customView.centerXAnchor.constraint(equalTo: alertController.view.centerXAnchor, constant: 0),
-                    customView.heightAnchor.constraint(equalToConstant: 250),
-                    customView.widthAnchor.constraint(equalToConstant: 300)
-                ]
-                NSLayoutConstraint.activate(constraintsSetting)
-                
-                let cancelAction = UIAlertAction(title: "閉じる", style: .cancel, handler: {(alert: UIAlertAction!) in print("閉じる")})
-                alertController.addAction(cancelAction)
-                
-                DispatchQueue.main.async {
-                    self.present(alertController, animated: true, completion:{})
+                do {
+                    let data = try? Data(contentsOf: url)
+                    let image = UIImage(data: data!)
+                    let margin:CGFloat = 10.0
+                    let rect = CGRect(x: margin, y: margin, width: 300, height: 250)
+                    let customView = UIImageView(frame: rect)
+                    customView.image = image
+                    customView.contentMode = .scaleAspectFit
+                    alertController.view.addSubview(customView)
+                    customView.translatesAutoresizingMaskIntoConstraints = false
+                    let constraintsSetting = [
+                        customView.centerYAnchor.constraint(equalTo: alertController.view.centerYAnchor, constant: -13),
+                        customView.centerXAnchor.constraint(equalTo: alertController.view.centerXAnchor, constant: 0),
+                        customView.heightAnchor.constraint(equalToConstant: 250),
+                        customView.widthAnchor.constraint(equalToConstant: 300)
+                    ]
+                    NSLayoutConstraint.activate(constraintsSetting)
+
+                    if UIDevice.current.userInterfaceIdiom == .pad {
+                        if let popoverController = alertController.popoverPresentationController {
+                            popoverController.sourceView = self.view
+                            let screenSize = UIScreen.main.bounds
+                            popoverController.sourceRect = CGRect(x: screenSize.size.width / 2,y: screenSize.size.height,width: 0,height: 0)
+                            popoverController.permittedArrowDirections = []
+                        }
+                    }
+                    let cancelAction = UIAlertAction(title: "閉じる", style: .cancel, handler: {(alert: UIAlertAction!) in print("閉じる")})
+                    alertController.addAction(cancelAction)
+                    DispatchQueue.main.async {
+                        self.present(alertController, animated: true, completion:{})
+                    }
+                } catch {
+                    // エラー処理
+                    print("凡例ダウンロードエラー")
                 }
+                
             }
         }
     }
