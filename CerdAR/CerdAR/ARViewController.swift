@@ -734,7 +734,6 @@ class ARViewController: UIViewController,detailViewDelegate {
         //snapshotter.
         snapshotter?.start { (snapshot, error) in
             if error != nil {
-                print(error)
                 print("Unable to create a map snapshot.")
                // self.updateFace()
                 
@@ -1174,9 +1173,6 @@ extension ARViewController: ARSCNViewDelegate {
     func session(_ session: ARSession, didUpdate anchors: [ARAnchor]){
         print("session update")
     }
-    func updateARnode(to node: SCNNode,for anchor: ARAnchor, with tagData: TagData){
-        print(tagData.inforType)
-    }
     func session(_ session: ARSession, cameraDidChangeTrackingState camera: ARCamera) {
         print("camera did change tracking state: \(camera.trackingState)")
         
@@ -1248,7 +1244,7 @@ extension ARViewController: ARSCNViewDelegate {
             print(name)
             return
         }
-        let adjustHeightMap = adjustHeightAR < 1 ? 1.0 : (1.0 + adjustHeightAR*0.07)
+//        let adjustHeightMap = adjustHeightAR < 1 ? 1.0 : (1.0 + adjustHeightAR*0.07)
         let adjustHeightObject = Float(data.distance < 5 ? 1.0 :  (1.0 + Float(data.distance) * 0.07))
         let scaleDefaultAR = scaleAR * adjustHeightObject
 //        let scaleDefaultAR = scaleAR*3
@@ -1553,7 +1549,6 @@ extension ARViewController: MGLMapViewDelegate {
     func mapView(_ mapView: MGLMapView, didUpdate userLocation: MGLUserLocation?) {
         
         if let location = userLocation?.location {
-            print(location)
             altitude = location.altitude
             userLat = location.coordinate.latitude
             userLon = location.coordinate.longitude

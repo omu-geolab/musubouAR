@@ -13,7 +13,9 @@
                 <outlet property="detailText" destination="F4A-Ou-BqA" id="G2K-ic-nhS"/>
                 <outlet property="distanceLabel" destination="fpg-GJ-2mE" id="jdu-M9-GZX"/>
                 <outlet property="showView" destination="qaH-wA-gMw" id="VZz-GV-v1n"/>
+                <outlet property="soundButton" destination="yjy-bg-za7" id="ZL7-HY-GCA"/>
                 <outlet property="titleLabel" destination="F1d-EA-B9F" id="Ojk-jC-Nql"/>
+                <outlet property="volumeSlider" destination="dif-6S-RXW" id="H7o-4T-Eda"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -81,7 +83,7 @@
                                     <rect key="frame" x="227.5" y="0.0" width="227.5" height="255"/>
                                     <subviews>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.90000000000000002" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F4A-Ou-BqA">
-                                            <rect key="frame" x="30" y="0.0" width="189.5" height="205"/>
+                                            <rect key="frame" x="20" y="0.0" width="199.5" height="205"/>
                                             <color key="tintColor" red="0.96418017710000004" green="1" blue="0.99359944140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -93,12 +95,36 @@
                                                 <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                         </textView>
+                                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="dif-6S-RXW">
+                                            <rect key="frame" x="51.5" y="213" width="105" height="30"/>
+                                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="101" id="ZdQ-lk-3mP"/>
+                                                <constraint firstAttribute="height" constant="29" id="ytA-Fp-H2E"/>
+                                            </constraints>
+                                            <connections>
+                                                <action selector="volumeSliderChange:" destination="-1" eventType="valueChanged" id="hia-2O-gyD"/>
+                                            </connections>
+                                        </slider>
+                                        <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yjy-bg-za7">
+                                            <rect key="frame" x="162" y="216.5" width="24" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="24" id="ZZj-WH-xbe"/>
+                                                <constraint firstAttribute="width" constant="24" id="tVs-cL-XOZ"/>
+                                            </constraints>
+                                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <state key="normal" backgroundImage="speaker.wave.2" catalog="system"/>
+                                        </button>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="F4A-Ou-BqA" firstAttribute="leading" secondItem="0Nb-8m-ikJ" secondAttribute="leading" constant="30" id="0Eh-wS-NIA"/>
+                                        <constraint firstItem="F4A-Ou-BqA" firstAttribute="leading" secondItem="0Nb-8m-ikJ" secondAttribute="leading" constant="20" id="0Eh-wS-NIA"/>
+                                        <constraint firstItem="yjy-bg-za7" firstAttribute="leading" secondItem="dif-6S-RXW" secondAttribute="trailing" constant="7.5" id="13y-tu-l7P"/>
                                         <constraint firstAttribute="trailing" secondItem="F4A-Ou-BqA" secondAttribute="trailing" constant="8" id="4lS-NF-N7l"/>
+                                        <constraint firstAttribute="bottom" secondItem="dif-6S-RXW" secondAttribute="bottom" constant="13" id="5kj-Xw-4jx"/>
+                                        <constraint firstAttribute="bottom" secondItem="yjy-bg-za7" secondAttribute="bottom" constant="16" id="TJD-OL-P1R"/>
                                         <constraint firstAttribute="bottom" secondItem="F4A-Ou-BqA" secondAttribute="bottom" constant="50" id="TTb-5X-eeN"/>
                                         <constraint firstItem="F4A-Ou-BqA" firstAttribute="top" secondItem="0Nb-8m-ikJ" secondAttribute="top" id="bpW-ar-UZd"/>
+                                        <constraint firstItem="dif-6S-RXW" firstAttribute="centerX" secondItem="0Nb-8m-ikJ" secondAttribute="centerX" constant="-10" id="y6F-Rz-sfw"/>
                                     </constraints>
                                 </view>
                             </subviews>
@@ -168,6 +194,7 @@
         </view>
     </objects>
     <resources>
+        <image name="speaker.wave.2" catalog="system" width="128" height="90"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
     </resources>
 </document>

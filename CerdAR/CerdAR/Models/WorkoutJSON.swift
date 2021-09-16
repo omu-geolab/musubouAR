@@ -18,18 +18,16 @@ class WorkoutJSON {
     var duration:TimeInterval?
     func toJson() -> String {
         let jsonDic = [
-            "createDate":createDate.toString(format: "yyyy-MM-dd HH:mm:ss Z"),
+            "createDate":createDate.toString(format: "yyyy-MM-dd HH:mm:ss Z") ?? "",
             "sdate":sdate?.toString(format: "yyyy-MM-dd HH:mm:ss Z") ?? "",
             "edate":edate?.toString(format: "yyyy-MM-dd HH:mm:ss Z") ?? "",
             "workoutActivityType":workoutActivityType ?? "",
             "totalEnergyBurned":totalEnergyBurned ?? 0,
-            "duration":duration,
-            
+            "duration":duration ?? 0,
         ] as [String : Any]
         do {
             let jsonData = try JSONSerialization.data(withJSONObject: jsonDic)
             let jsonStr = String(bytes: jsonData, encoding: .utf8)!
-            print(jsonStr)
             return jsonStr
         } catch (let e) {
             print(e)

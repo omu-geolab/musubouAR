@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import WebKit
+import MediaPlayer
 @objc protocol detailViewIphoneDelegate {
     func detailViewIphoneFinish()
 }
@@ -18,7 +20,9 @@ class DetailViewIphone: UIView {
     @IBOutlet weak var detailText: UITextView!
     @IBOutlet weak var showView: UIView!
     @IBOutlet weak var deleteButton: UIButton!
-  
+    @IBOutlet weak var volumeSlider: UISlider!
+    @IBOutlet weak var soundButton: UIButton!
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         loadNib()
@@ -71,7 +75,13 @@ class DetailViewIphone: UIView {
      *画面表示設定
      */
     func setView(){
-        
+        let vol = AVAudioSession.sharedInstance().outputVolume
+        volumeSlider.setValue(vol, animated: false)
+        if  vol == 0 {
+            soundButton.setBackgroundImage(UIImage(systemName: "speaker.slash"), for: .normal)
+        }else {
+            soundButton.setBackgroundImage(UIImage(systemName: "speaker.wave.2"), for: .normal)
+        }
         if let data = pinData {
             titleLabel.text = data.name
             detailText.text = data.descript
@@ -169,15 +179,13 @@ class DetailViewIphone: UIView {
 
                                 // 成功したとき
                             } else {
-                                
-                                let webview = UIWebView(frame: CGRect.init(x:0, y: 0, width: self.showView.bounds.width, height:self.showView.bounds.height))
-                                webview.scalesPageToFit = true
-                                webview.scrollView.bounces = false
-                                webview.loadRequest(req)
-                                webview.layer.cornerRadius = 15
-                                webview.clipsToBounds = true
-                                self.showView.addSubview(webview)
-
+                                let webConfiguration = WKWebViewConfiguration()
+                                // 3 WKWebView に Configuration を引き渡し initialize
+                                let webView = WKWebView(frame: CGRect.init(x:0, y: 0, width: self.showView.bounds.width, height:self.showView.bounds.height), configuration: webConfiguration)
+                                webView.layer.cornerRadius = 15
+                                webView.clipsToBounds = true
+                                webView.load(req)
+                                self.showView.addSubview(webView)
                             }
                         })
                         task.resume()
@@ -242,9 +250,7 @@ class DetailViewIphone: UIView {
                             })
                             task.resume()
                         }
-                        
                     }
-
                 } else if pinData.picType == kMovie { // 動画
                     if !pinData.movie.hasPrefix("http://www.youtube.com/embed/") && !pinData.movie.hasPrefix("https://www.youtube.com/embed/") {
                         notFound()
@@ -264,13 +270,22 @@ class DetailViewIphone: UIView {
                                 
                                 // 成功したとき
                             } else {
-                                let webview = UIWebView(frame: CGRect.init(x:0, y: 0, width: self.showView.bounds.width, height:self.showView.bounds.height))
-                                webview.scalesPageToFit = true
-                                webview.scrollView.bounces = false
-                                webview.loadRequest(req)
-                                webview.layer.cornerRadius = 15
-                                webview.clipsToBounds = true
-                                self.showView.addSubview(webview)
+//                                let webview = UIWebView(frame: CGRect.init(x:0, y: 0, width: self.showView.bounds.width, height:self.showView.bounds.height))
+//                                webview.scalesPageToFit = true
+//                                webview.scrollView.bounces = false
+//                                webview.loadRequest(req)
+//                                webview.layer.cornerRadius = 15
+//                                webview.clipsToBounds = true
+//                                self.showView.addSubview(webview)
+                                let webConfiguration = WKWebViewConfiguration()
+                                // 3 WKWebView に Configuration を引き渡し initialize
+                                let webView = WKWebView(frame: CGRect.init(x:0, y: 0, width: self.showView.bounds.width, height:self.showView.bounds.height), configuration: webConfiguration)
+                                webView.layer.cornerRadius = 15
+                                webView.clipsToBounds = true
+                                
+                                webView.load(req)
+                                self.showView.addSubview(webView)
+                             
                                 
                             }
                         })
@@ -376,4 +391,13 @@ class DetailViewIphone: UIView {
         NSLayoutConstraint.activate(constraints)
     }
     
+    @IBAction func volumeSliderChange(_ sender: Any) {
+        let vol = volumeSlider.value
+        MPVolumeView.setVolume(vol)
+        if  vol == 0 {
+            soundButton.setBackgroundImage(UIImage(systemName: "speaker.slash"), for: .normal)
+        }else {
+            soundButton.setBackgroundImage(UIImage(systemName: "speaker.wave.2"), for: .normal)
+        }
+    }
 }

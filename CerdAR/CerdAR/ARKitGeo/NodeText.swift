@@ -19,6 +19,6 @@ public class NodeText: SCNNode {
         fatalError("init(coder:) has not been implemented")
     }
     deinit {
-        print("\(data?.name) is being deinitialized")
+        print("\(String(describing: data?.name)) is being deinitialized")
     }
 }
