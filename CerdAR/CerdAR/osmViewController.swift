@@ -16,6 +16,7 @@ import HealthKit
 import HealthKitUI
 import AVFoundation
 import WatchConnectivity
+import MediaPlayer
 
 let mapboxAccess = "pk.eyJ1Ijoic2FicmluYXp1cmFpbWkiLCJhIjoiY2lyaGFmbzFjMDE5cGc5bm42c2ozMnJlYSJ9.7W_kYbSqA3sEZUyS14s_Tw"
 
@@ -102,7 +103,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
     // MARK:- ライフサイクル
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        MPVolumeView.setVolume(0.2)
         WorkoutService.shared.delegate = self
         WorkoutService.shared.ExpportAllWorkouts()
         
@@ -391,7 +392,6 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
                                        predicate: predicate,
                                        limit: HKObjectQueryNoLimit,
                                        sortDescriptors: nil) { (query, results, error) in
-            print(results)
         }
         
         healthStore.execute(query)
@@ -444,7 +444,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         
         /* 現在地の取得を開始 */
         
-        if CLLocationManager.authorizationStatus() == .authorizedAlways || CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
+        if locationManager.authorizationStatus == .authorizedAlways || locationManager.authorizationStatus == .authorizedWhenInUse {
             locationManager.delegate = self
             locationManager.startUpdatingLocation() // GPSの使用を開始する
             locationManager.desiredAccuracy = kCLLocationAccuracyBest // 精度を最高精度にする
@@ -457,7 +457,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         motionManager.magnetometerUpdateInterval = 0.1 // 加速度センサを取得する間隔
         
         // 画面の中心をユーザーの現在地にする
-        if CLLocationManager.authorizationStatus() == .authorizedAlways || CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
+        if locationManager.authorizationStatus == .authorizedAlways || locationManager.authorizationStatus == .authorizedWhenInUse {
             runAfterDelay(1.5) {
                 self.mapView.setCenter((self.locationManager.location?.coordinate)!, zoomLevel: 16.5, animated: true)
             }
@@ -632,29 +632,6 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
     }
     
     ///レイヤを表示する
-    ///
-    /// - Parameters:
-    ///   - mapView: mapView
-    ///   - style: style
-    //    func mapView(_ mapView: MGLMapView, didFinishLoading style: MGLStyle) {
-    //        // Add a new raster source and layer.
-    ////        let source = MGLRasterTileSource(identifier: "darkmatter", tileURLTemplates: [GisList.sharedGis.list[0].server], options: [ .tileSize: 128 ])
-    ////        print(GisList.sharedGis.list[0].name)
-    ////        let rasterLayer = MGLRasterStyleLayer(identifier: "darkmatter", source: source)
-    ////
-    ////        rasterLayer.rasterOpacity = NSExpression(forConstantValue: 0.8)
-    ////        mapView.style?.addSource(source)
-    ////        if let layer = mapView.style?.layer(withIdentifier: "darkmatter") {
-    ////            mapView.style?.insertLayer(rasterLayer, above: layer)
-    ////            self.rasterLayer = rasterLayer
-    ////        }else{
-    ////            mapView.style?.insertLayer(rasterLayer, at: 10)
-    ////        }
-    ////        if(gisDisplayMode != gisMode.gis) {
-    ////            mapView.style?.layer(withIdentifier: "darkmatter")?.isVisible = false
-    ////        }
-    //
-    //    }
     var light: MGLLight!
     func mapView(_ mapView: MGLMapView, didFinishLoading style: MGLStyle) {
         
@@ -1686,40 +1663,35 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         if !pathGISImage.isEmpty {
             let alertController = UIAlertController(title: "\n\n\n\n\n\n\n\n\n\n\n", message: nil, preferredStyle: .alert)
             if let url:URL = URL(string: pathGISImage) {
-                do {
-                    let data = try? Data(contentsOf: url)
-                    let image = UIImage(data: data!)
-                    let margin:CGFloat = 10.0
-                    let rect = CGRect(x: margin, y: margin, width: 300, height: 250)
-                    let customView = UIImageView(frame: rect)
-                    customView.image = image
-                    customView.contentMode = .scaleAspectFit
-                    alertController.view.addSubview(customView)
-                    customView.translatesAutoresizingMaskIntoConstraints = false
-                    let constraintsSetting = [
-                        customView.centerYAnchor.constraint(equalTo: alertController.view.centerYAnchor, constant: -13),
-                        customView.centerXAnchor.constraint(equalTo: alertController.view.centerXAnchor, constant: 0),
-                        customView.heightAnchor.constraint(equalToConstant: 250),
-                        customView.widthAnchor.constraint(equalToConstant: 300)
-                    ]
-                    NSLayoutConstraint.activate(constraintsSetting)
-
-                    if UIDevice.current.userInterfaceIdiom == .pad {
-                        if let popoverController = alertController.popoverPresentationController {
-                            popoverController.sourceView = self.view
-                            let screenSize = UIScreen.main.bounds
-                            popoverController.sourceRect = CGRect(x: screenSize.size.width / 2,y: screenSize.size.height,width: 0,height: 0)
-                            popoverController.permittedArrowDirections = []
-                        }
+                let data = try? Data(contentsOf: url)
+                let image = UIImage(data: data!)
+                let margin:CGFloat = 10.0
+                let rect = CGRect(x: margin, y: margin, width: 300, height: 250)
+                let customView = UIImageView(frame: rect)
+                customView.image = image
+                customView.contentMode = .scaleAspectFit
+                alertController.view.addSubview(customView)
+                customView.translatesAutoresizingMaskIntoConstraints = false
+                let constraintsSetting = [
+                    customView.centerYAnchor.constraint(equalTo: alertController.view.centerYAnchor, constant: -13),
+                    customView.centerXAnchor.constraint(equalTo: alertController.view.centerXAnchor, constant: 0),
+                    customView.heightAnchor.constraint(equalToConstant: 250),
+                    customView.widthAnchor.constraint(equalToConstant: 300)
+                ]
+                NSLayoutConstraint.activate(constraintsSetting)
+                
+                if UIDevice.current.userInterfaceIdiom == .pad {
+                    if let popoverController = alertController.popoverPresentationController {
+                        popoverController.sourceView = self.view
+                        let screenSize = UIScreen.main.bounds
+                        popoverController.sourceRect = CGRect(x: screenSize.size.width / 2,y: screenSize.size.height,width: 0,height: 0)
+                        popoverController.permittedArrowDirections = []
                     }
-                    let cancelAction = UIAlertAction(title: "閉じる", style: .cancel, handler: {(alert: UIAlertAction!) in print("閉じる")})
-                    alertController.addAction(cancelAction)
-                    DispatchQueue.main.async {
-                        self.present(alertController, animated: true, completion:{})
-                    }
-                } catch {
-                    // エラー処理
-                    print("凡例ダウンロードエラー")
+                }
+                let cancelAction = UIAlertAction(title: "閉じる", style: .cancel, handler: {(alert: UIAlertAction!) in print("閉じる")})
+                alertController.addAction(cancelAction)
+                DispatchQueue.main.async {
+                    self.present(alertController, animated: true, completion:{})
                 }
                 
             }
@@ -1777,3 +1749,12 @@ extension osmViewController:WorkoutServiceDelegate {
     }
 }
 
+extension MPVolumeView {
+    static func setVolume(_ volume: Float) {
+        let volumeView = MPVolumeView()
+        let slider = volumeView.subviews.first(where: { $0 is UISlider }) as? UISlider
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.01) {
+            slider?.value = volume
+        }
+    }
+}

@@ -69,7 +69,7 @@ class loadViewController: UIViewController, termsViewDelegate, CLLocationManager
      */
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        switch CLLocationManager.authorizationStatus() {
+        switch status {
         case .notDetermined: // 位置情報の取得の可否がわからないとき
             locationManager?.requestWhenInUseAuthorization() // 位置情報取得の可否についてのダイアログを出す
             
@@ -166,7 +166,7 @@ class loadViewController: UIViewController, termsViewDelegate, CLLocationManager
         
         //Indicatorの状態を管理
         activityIndicator.hidesWhenStopped = false
-        activityIndicator.style = UIActivityIndicatorView.Style.white
+        activityIndicator.style = .medium
         
         //クルクルを開始
         activityIndicator.startAnimating()
@@ -257,7 +257,6 @@ class loadViewController: UIViewController, termsViewDelegate, CLLocationManager
         let osmVC = osmViewController()
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.window?.rootViewController = osmVC
-        UIApplication.shared.keyWindow?.rootViewController = osmVC
     }
     func getJSONData() throws -> Data? {
         let fileName = "gis_data.json"

@@ -80,6 +80,6 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void)
     {
         // アプリ起動時も通知を行う
-        completionHandler([ .badge, .sound, .alert ])
+        completionHandler([ .badge, .sound, .banner ])
     }
 }

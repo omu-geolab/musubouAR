@@ -62,30 +62,30 @@ public class MapboxARAnnotationManager {
         }
     }
     func updateARAnnotation(userLocation: CLLocation, anchor: MapboxARAnchor) {
-        guard  let tagData = anchor.tagData else {
-            return
-        }
-       
-        let arLocation = CLLocation(latitude: tagData.lat, longitude: tagData.lon)
-        let origin = matrix_identity_float4x4
-        // 始点と終点の間の距離と方位を決定する
-        var distance = Float(arLocation.distance(from: userLocation))
-        if(tagData.inforType == kWarn){
-            distance = distance - Float((tagData.range)!)
-            if(distance < 0){
-                distance = 0
-            }
-        }
-        if(distance < Float(kCamDis)){//アノテーションの距離を判断する
-            let bearingDegrees = userLocation.bearingTo(endLocation: arLocation)
-            let bearing = GLKMathDegreesToRadians(bearingDegrees)
-            
-            //始点を中心にして、終点を移動して、回転する
-            let position = vector_float4(0.0, 0.0, -distance, 0.0)
-            let translationMatrix = getTranslationMatrix(position)
-            let rotationMatrix = getRotationAroundY(bearing)
-            let transformMatrix = simd_mul(rotationMatrix, translationMatrix)
-            let transform = simd_mul(origin, transformMatrix)
+//        guard  let tagData = anchor.tagData else {
+//            return
+//        }
+//
+//        let arLocation = CLLocation(latitude: tagData.lat, longitude: tagData.lon)
+//        let origin = matrix_identity_float4x4
+//        // 始点と終点の間の距離と方位を決定する
+//        var distance = Float(arLocation.distance(from: userLocation))
+//        if(tagData.inforType == kWarn){
+//            distance = distance - Float((tagData.range)!)
+//            if(distance < 0){
+//                distance = 0
+//            }
+//        }
+//        if(distance < Float(kCamDis)){//アノテーションの距離を判断する
+//            let bearingDegrees = userLocation.bearingTo(endLocation: arLocation)
+//            let bearing = GLKMathDegreesToRadians(bearingDegrees)
+//
+//            //始点を中心にして、終点を移動して、回転する
+//            let position = vector_float4(0.0, 0.0, -distance, 0.0)
+//            let translationMatrix = getTranslationMatrix(position)
+//            let rotationMatrix = getRotationAroundY(bearing)
+//            let transformMatrix = simd_mul(rotationMatrix, translationMatrix)
+//            let transform = simd_mul(origin, transformMatrix)
 //            anchor.transform = transform
             // 変換した位置にMapbox ARアンカーアンカーを作成します
 //            let anchor_name = ((tagData?.inforType)!) + String(format:"_%d",(tagData?.pinNum)!)
@@ -98,9 +98,9 @@ public class MapboxARAnnotationManager {
 //            session.add(anchor: anchor)
             
 //            anchors.append(anchor)
-        }else {
-            
-        }
+//        }else {
+//
+//        }
     }
     
     

@@ -7,7 +7,7 @@
 
 import Foundation
 import UIKit
-
+import WebKit
 @objc protocol detailViewDelegate {
     func detailViewFinish()
 }
@@ -169,11 +169,13 @@ class detailView: UIView {
                             // 成功したとき
                         } else {
                             
-                            let webview = UIWebView(frame: CGRect.init(x: CGFloat(dWid * 0.05), y: CGFloat(dHei * 0.3), width: CGFloat(dWid * 0.45), height: CGFloat(dHei * 0.5)))
-                            webview.scalesPageToFit = true
-                            webview.scrollView.bounces = false
-                            webview.loadRequest(req)
-                            self.addSubview(webview)
+                            let webConfiguration = WKWebViewConfiguration()
+                            // 3 WKWebView に Configuration を引き渡し initialize
+                            let webView = WKWebView(frame: CGRect.init(x: CGFloat(dWid * 0.05), y: CGFloat(dHei * 0.3), width: CGFloat(dWid * 0.45), height: CGFloat(dHei * 0.5)), configuration: webConfiguration)
+                            webView.layer.cornerRadius = 15
+                            webView.clipsToBounds = true
+                            webView.load(req)
+                            self.addSubview(webView)
 
                         }
                     })
