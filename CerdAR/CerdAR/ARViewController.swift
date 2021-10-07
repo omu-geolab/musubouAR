@@ -23,7 +23,6 @@ class ARViewController: UIViewController,detailViewDelegate {
     var controlsContainerView: UIView!
 //    var locationManager: CLLocationManager!
     var detailview: detailView? // 詳細画面
-    var detailCustomView: DetailViewController?
     var detailCustomIphone: DetailViewIphone = DetailViewIphone()
     // ARAnnotion管理
     var annotationManager: MapboxARAnnotationManager!
