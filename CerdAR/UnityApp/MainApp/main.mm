@@ -23,7 +23,6 @@ int main(int argc, char* argv[])
     @autoreleasepool
     {
         id ufw = UnityFrameworkLoad();
-        [ufw setDataBundleId: "com.unity3d.framework"];
         [ufw runUIApplicationMainWithArgc: argc argv: argv];
         return 0;
     }

@@ -191,7 +191,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         toLidar_button.layer.shadowOpacity = 0.6
         
         mapView.addSubview(toLidar_button)
-        toLidar_button.isHidden = true
+//        toLidar_button.isHidden = true
         toLidar_button.translatesAutoresizingMaskIntoConstraints = false
         let constraintsLidar = [
             toLidar_button.leadingAnchor.constraint(equalTo: mapView.leadingAnchor,constant: 15),

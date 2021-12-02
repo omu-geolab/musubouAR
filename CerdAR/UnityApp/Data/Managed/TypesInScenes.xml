@@ -12,7 +12,6 @@
 		<type fullname="UnityEngine.Material" preserve="nothing"/>
 		<type fullname="UnityEditor.TimeManager" preserve="nothing"/>
 		<type fullname="UnityEditor.InputManager" preserve="nothing"/>
-		<type fullname="UnityEngine.ComputeShader" preserve="nothing"/>
 		<type fullname="UnityEditor.PhysicsManager" preserve="nothing"/>
 		<type fullname="UnityEngine.TextAsset" preserve="nothing"/>
 		<type fullname="UnityEditor.MonoScript" preserve="nothing"/>
@@ -29,9 +28,12 @@
 		<type fullname="UnityEngine.BoxCollider" preserve="nothing"/>
 		<type fullname="UnityEngine.SphereCollider" preserve="nothing"/>
 		<type fullname="UnityEngine.Canvas" preserve="nothing"/>
-		<type fullname="UnityEngine.Video.VideoPlayer" preserve="nothing"/>
+		<type fullname="UnityEngine.Animation" preserve="nothing"/>
 		<type fullname="UnityEngine.Font" preserve="nothing"/>
 		<type fullname="UnityEngine.Renderer" preserve="nothing"/>
+		<type fullname="UnityEngine.ParticleSystemRenderer" preserve="nothing"/>
+		<type fullname="UnityEngine.ParticleSystem" preserve="nothing"/>
+		<type fullname="UnityEngine.WindZone" preserve="nothing"/>
 		<type fullname="UnityEngine.LightProbeGroup" preserve="nothing"/>
 		<type fullname="UnityEngine.Sprite" preserve="nothing"/>
 		<type fullname="UnityEngine.RenderSettings" preserve="nothing"/>
@@ -41,28 +43,25 @@
 		<type fullname="UnityEngine.Camera" preserve="nothing"/>
 		<type fullname="UnityEngine.Mesh" preserve="nothing"/>
 		<type fullname="UnityEngine.GameObject" preserve="nothing"/>
+		<type fullname="UnityEngine.AudioClip" preserve="nothing"/>
 		<type fullname="UnityEngine.MeshFilter" preserve="nothing"/>
-		<type fullname="UnityEngine.Video.VideoClip" preserve="nothing"/>
 		<type fullname="UnityEngine.RectTransform" preserve="nothing"/>
 		<type fullname="UnityEngine.CanvasRenderer" preserve="nothing"/>
-		<type fullname="UnityEngine.RenderTexture" preserve="nothing"/>
 		<type fullname="UnityEngine.Cubemap" preserve="nothing"/>
 		<type fullname="UnityEngine.LightmapSettings" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="Assembly-CSharp">
-		<type fullname="ARKitCoachingOverlay" preserve="nothing"/>
-		<type fullname="ARUXAnimationManager" preserve="nothing"/>
-		<type fullname="ARUXReasonsManager" preserve="nothing"/>
-		<type fullname="ARWaterLevelController" preserve="nothing"/>
 		<type fullname="BoxVolumeController" preserve="nothing"/>
-		<type fullname="DisableTrackedVisuals" preserve="nothing"/>
-		<type fullname="LocalizationManager" preserve="nothing"/>
-		<type fullname="PlaceObjectsOnPlane" preserve="nothing"/>
-		<type fullname="QuitBehavior" preserve="nothing"/>
-		<type fullname="UIManager" preserve="nothing"/>
+		<type fullname="DigitalRuby.RainMaker.RainCollision" preserve="nothing"/>
+		<type fullname="DigitalRuby.RainMaker.RainScript" preserve="nothing"/>
+		<type fullname="Float" preserve="nothing"/>
+		<type fullname="FloodController" preserve="nothing"/>
+		<type fullname="RuleWaterController" preserve="nothing"/>
+		<type fullname="UnityEngine.XR.ARFoundation.Samples.ARKitCoachingOverlay" preserve="nothing"/>
 		<type fullname="UnityEngine.XR.ARFoundation.Samples.BackButton" preserve="nothing"/>
+		<type fullname="UnityEngine.XR.ARFoundation.Samples.MeshClassificationFracking" preserve="nothing"/>
 		<type fullname="UnityEngine.XR.ARFoundation.Samples.ProjectileLauncher" preserve="nothing"/>
-		<type fullname="WaterBoxController" preserve="nothing"/>
+		<type fullname="cardbroadMove" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="Unity.InputSystem">
 		<type fullname="UnityEngine.InputSystem.InputSettings" preserve="nothing"/>
@@ -102,23 +101,13 @@
 	<assembly fullname="Unity.RenderPipelines.Universal.Runtime">
 		<type fullname="UnityEngine.Rendering.Universal.Bloom" preserve="nothing"/>
 		<type fullname="UnityEngine.Rendering.Universal.ChromaticAberration" preserve="nothing"/>
-		<type fullname="UnityEngine.Rendering.Universal.DepthOfField" preserve="nothing"/>
 		<type fullname="UnityEngine.Rendering.Universal.ForwardRendererData" preserve="nothing"/>
 		<type fullname="UnityEngine.Rendering.Universal.LensDistortion" preserve="nothing"/>
 		<type fullname="UnityEngine.Rendering.Universal.PostProcessData" preserve="nothing"/>
-		<type fullname="UnityEngine.Rendering.Universal.Tonemapping" preserve="nothing"/>
 		<type fullname="UnityEngine.Rendering.Universal.UniversalAdditionalCameraData" preserve="nothing"/>
 		<type fullname="UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset" preserve="nothing"/>
 		<type fullname="UnityEngine.Rendering.Universal.Vignette" preserve="nothing"/>
 		<type fullname="UnityEngine.Rendering.Universal.XRSystemData" preserve="nothing"/>
-	</assembly>
-	<assembly fullname="Unity.TextMeshPro">
-		<type fullname="TMPro.TMP_ColorGradient" preserve="nothing"/>
-		<type fullname="TMPro.TMP_FontAsset" preserve="nothing"/>
-		<type fullname="TMPro.TMP_Settings" preserve="nothing"/>
-		<type fullname="TMPro.TMP_SpriteAsset" preserve="nothing"/>
-		<type fullname="TMPro.TMP_StyleSheet" preserve="nothing"/>
-		<type fullname="TMPro.TextMeshProUGUI" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="Unity.XR.ARFoundation">
 		<type fullname="UnityEngine.XR.ARFoundation.ARBackgroundRendererFeature" preserve="nothing"/>
@@ -128,9 +117,7 @@
 		<type fullname="UnityEngine.XR.ARFoundation.ARMeshManager" preserve="nothing"/>
 		<type fullname="UnityEngine.XR.ARFoundation.AROcclusionManager" preserve="nothing"/>
 		<type fullname="UnityEngine.XR.ARFoundation.ARPlaneManager" preserve="nothing"/>
-		<type fullname="UnityEngine.XR.ARFoundation.ARPointCloudManager" preserve="nothing"/>
 		<type fullname="UnityEngine.XR.ARFoundation.ARPoseDriver" preserve="nothing"/>
-		<type fullname="UnityEngine.XR.ARFoundation.ARRaycastManager" preserve="nothing"/>
 		<type fullname="UnityEngine.XR.ARFoundation.ARSession" preserve="nothing"/>
 		<type fullname="UnityEngine.XR.ARFoundation.ARSessionOrigin" preserve="nothing"/>
 	</assembly>
@@ -152,7 +139,6 @@
 		<type fullname="UnityEngine.UI.Image" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.LayoutElement" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.Mask" preserve="nothing"/>
-		<type fullname="UnityEngine.UI.RawImage" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.ScrollRect" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.Scrollbar" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.Text" preserve="nothing"/>

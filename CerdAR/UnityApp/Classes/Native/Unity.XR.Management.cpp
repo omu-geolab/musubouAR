@@ -129,7 +129,6 @@ struct XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F;
 // UnityEngine.XR.Management.XRManagerSettings/<InitializeLoader>d__24
 struct U3CInitializeLoaderU3Ed__24_tBE52372328AAFF3147B0E3361196652E33780D08;
 
-IL2CPP_EXTERN_C Il2CppSequencePoint g_sequencePointsUnity_XR_Management[];
 IL2CPP_EXTERN_C RuntimeClass* Action_tAF41423D285AE0862865348CF6CE51CD085ABBA6_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Debug_tEB68BCBEB8EFD60F8043C67146DC05E7F50F374B_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Dictionary_2_t4F3B5B526335E16355EDBC766052AEAB07B1777B_il2cpp_TypeInfo_var;
@@ -154,7 +153,6 @@ IL2CPP_EXTERN_C const RuntimeMethod* Dictionary_2__ctor_m3324CFB49A4472C773672F6
 IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_Dispose_m90A4F0B5CA0D3890D8D3E4676EE09E17B22AA9C7_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_MoveNext_m19D8DC887F99E56196FA26536373CE0E192D6741_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_get_Current_m7EF1367FE7BF714A357AD14CE9116844D666EAF8_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_get_Current_m9C4EBBD2108B51885E750F927D7936290C8E20EE_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* HashSet_1_Contains_m3746B7839FD76045903DDEC97E4C798377AD286F_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* HashSet_1__ctor_mB09B56AC059585C15C0A749AD8CA32F81FB35D69_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_Add_m1206F9435068DE0A1227F38DA413669A9EC8BC60_RuntimeMethod_var;
@@ -167,87 +165,10 @@ IL2CPP_EXTERN_C const RuntimeMethod* List_1_Remove_m60EF64583D4A2159D8847CECE666
 IL2CPP_EXTERN_C const RuntimeMethod* List_1__ctor_m668F9DF24A8F3F30F15BD07F3FB7418CAF4E098A_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1__ctor_m82ECFD0D827C0B490A570BBDF6CC9DE255D2F3E0_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1__ctor_mC89CC0C2318DA4814B4A860E7EDF82390819C439_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Count_m3632094BEC4410A1022FD0293E7BA88FC3B811A8_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Count_m5D847939ABB9A78203B062CAFFE975792174D00F_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Count_mDA8E3574C54D9AF9AAA40D8B4EA21135FC65C83F_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Count_mDC5A0FFB7BA8225B30C2C7BE2AFC9895D9F4D597_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* U3CInitializeLoaderU3Ed__24_MoveNext_m9733633A3CB4DF756000710D5FB8DDCA939BAA7C_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* U3CInitializeLoaderU3Ed__24_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mE9A5688D0D12E13F6D7A8061300CBFBB3A6E7ADC_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CInitializeLoaderU3Ed__24_System_Collections_IEnumerator_Reset_mF26C5E49F5BB327E51F87E0754220EDE1DB89FA5_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* U3CInitializeLoaderU3Ed__24_System_Collections_IEnumerator_get_Current_mFFB71C0E0BA36427C8862A0F70949FBB4FB20A0D_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* U3CInitializeLoaderU3Ed__24_System_IDisposable_Dispose_mAE9903D2BB332F700807D7E234E81A4C40175A43_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* U3CInitializeLoaderU3Ed__24_U3CU3Em__Finally1_m4467023F4795A0DC8C12494E3AC3B2B463601578_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* U3CInitializeLoaderU3Ed__24__ctor_m0E4D3E9793A0D92D6A3C53D875CFBA384AFA280E_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* XRConfigurationDataAttribute__ctor_m37A56C5A9B2814E993519016D189FA3AB8271E7B_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* XRConfigurationDataAttribute__ctor_m8BC8EB57DFC926006F8E5F70E7A150F7711299BB_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* XRConfigurationDataAttribute_get_buildSettingsKey_m0E2C659E5049C4700D88265718DABE39625F4808_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* XRConfigurationDataAttribute_get_displayName_mE3CA8CE22420D26CDEF10FBAC28E96056D2A6807_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* XRConfigurationDataAttribute_set_buildSettingsKey_mB3C7DFD97AA98506013E603211DCABDE89694889_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* XRConfigurationDataAttribute_set_displayName_mFE7B985C02F56D827A5819BC7C622FEF8A34742E_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* XRGeneralSettings_AttemptInitializeXRSDKOnLoad_m25C4FF6460E96AB85AD43A0FFFE4569E3618E196_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* XRGeneralSettings_AttemptStartXRSDKOnBeforeSplashScreen_m69A4793D7DC90E31D4C00ABB34AB2F18DAFD107C_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* XRGeneralSettings_Awake_mA50DA38B1FA224BADC66F689593400F9F77C551E_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* XRGeneralSettings_DeInitXRSDK_m393413ABA4D5D4CA976ECB6AF2C04E81685E2183_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* XRGeneralSettings_InitXRSDK_m8D064A0726709F70957413174C7625C33140DA2C_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* XRGeneralSettings_OnDestroy_mADCE8F90BABF1629E10E8BCF6FA19388C169A430_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* XRGeneralSettings_Quit_m5C5E8099B3E4105FD09B06D1A15B0D7FB358BA70_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* XRGeneralSettings_StartXRSDK_mA126F57DFAB5A6EE2651ADB6DD28AB41C72DBED8_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* XRGeneralSettings_Start_m192139B0BB00B8D23C6EEBB90290ABB6C4352F29_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* XRGeneralSettings_StopXRSDK_m5972F9B13CAF086DE0CCFD19E1D84C0D98EEDE9A_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* XRGeneralSettings__cctor_m1A0A5F4C74AB2262794AADF08D2CF0E27BAAD506_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* XRGeneralSettings__ctor_mD3A03E89F7FA70B2DB8E6E4EDF18EFBD24B312F2_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* XRGeneralSettings_get_AssignedSettings_mA98F4DB18321E6DBFA016F5C3699614C66796541_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* XRGeneralSettings_get_InitManagerOnStart_m21A3FAE9CDFED7D125E0794EFC2C2B18E3878E53_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* XRGeneralSettings_get_Instance_m8D7FC68414773249E7C8EEF06048916FD7E7D68D_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* XRGeneralSettings_get_Manager_m5E4819323E32CA8E97058B8ED282558779099544_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* XRGeneralSettings_set_Manager_mD03B32F78152AC3EE2DA737A037DA5895D325D29_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* XRLoaderHelper_Deinitialize_m618CFFA37B20197EBC745080E4594256877D82B2_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* XRLoaderHelper__ctor_mD27E0396EC4B11E208CF891642475B496CADAC9B_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* XRLoader_Deinitialize_m2F552753A612D81962AA678C2A4672FBB01A9292_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* XRLoader_GetSupportedGraphicsDeviceTypes_m712F693E83D84188B540518910B0D797C52BC76C_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* XRLoader_Initialize_mDACAE27E5D38879E691DADB1462769CBE0484C04_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* XRLoader_Start_mE0B66E131569B4D440A52A84771BB9ADCF03FE84_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* XRLoader_Stop_mBEE0CD2B4ADC3D207F286BC1DCDA05FA4CDECC7C_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* XRLoader__ctor_mA07711BD60D005274815F8306CBCCABC8D6D6509_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* XRManagerSettings_CheckGraphicsAPICompatibility_m0A5AABEC0CF864942733D746120B368C5605FA63_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* XRManagerSettings_CheckLoaderRegistration_m9EA96D33F0815F4B6E02BEFA3CCABCAA0B57662F_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* XRManagerSettings_DeinitializeLoader_m6AD4F079818DF78946C99AD8D49E3D343DAAF290_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* XRManagerSettings_InitializeLoaderSync_m97C5BA258C318867D1B8B8183AAC454D5EAA23F5_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* XRManagerSettings_InitializeLoader_m92B987C89AF6F7E7D05718296243E0ED021FD6B3_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* XRManagerSettings_OnDestroy_m1254BD5929E70938B2906C3E04A54BB6F2EAC793_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* XRManagerSettings_OnDisable_mA755DECB077780BDAB72067FBB69DB25452BC782_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* XRManagerSettings_StartSubsystems_mB9F502956C1FC6AD6D421CD36C3980B095B4282E_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* XRManagerSettings_Start_mC3C0B0D138802215C7F3E441D5D517F875A4E582_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* XRManagerSettings_StopSubsystems_m7FF3553EEF8C7AB1D58A3D9034A25D8C31D30FFC_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* XRManagerSettings_TryAddLoader_mE3C59682B8C148AAE668477F15683EC97BA3718B_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* XRManagerSettings_TryRemoveLoader_m4866CC1097BFE346ACC11D833F7D4FE5C1A1D4EE_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* XRManagerSettings_TrySetLoaders_m8431B99D6193EFAAFAEA7983C80B4F36EB86D1FD_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* XRManagerSettings__ctor_m00CA8F7EAA0858EC7F726043164C595B313A3881_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* XRManagerSettings_get_activeLoader_mB1950E58B1DD1774EB2798CEBA6D3C371CE8F1D8_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* XRManagerSettings_get_activeLoaders_m9F30D886C1EDE39B17981230C965EF1DA95F98F4_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* XRManagerSettings_get_automaticLoading_m2F854EC3F5A23B77C3819988414EEA070B3A067B_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* XRManagerSettings_get_automaticRunning_m35A499E67629829BB4E89952FC3778D55D685890_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* XRManagerSettings_get_currentLoaders_m1DF4A3AE134A1EE9FC00BB15522F2CDBBE5D9430_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* XRManagerSettings_get_isInitializationComplete_m1559C8B12004C52CBAC825FFE823C2C4DF7C719D_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* XRManagerSettings_get_loaders_mEBFC514878CB5F85A0602F4075E5CBC2E36E89EA_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* XRManagerSettings_get_registeredLoaders_mEDEE89F9BF880AA0C03BC4C6413CAA15264A7572_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* XRManagerSettings_set_activeLoader_m77ACE8749C38314C5DA2A6A4F6551DDBC552EC72_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* XRManagerSettings_set_automaticLoading_m955E88785E48CD480FC0D2198F68AFAC419C7E53_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* XRManagerSettings_set_automaticRunning_mDD9D47FD94BD122FA725ED624D056108DAE22E0C_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* XRManagerSettings_set_currentLoaders_mF3807937DC20F875F4EF6229CC624EAA28B07F54_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeType* Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* Enumerator_t5E925E051A8E0B9BEF75F1250A9B42E275E89FCF_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* GraphicsDeviceType_t531071CD9311C868D1279D2550F83670D18FB779_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* HashSet_1_t0BB7AD0707F32BD77A251670A64E2F9355AC13F6_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* Int32_tFDE5F8CD43D10453F6A2E0C77FE48C6CC7009046_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* List_1_t00813CFE30B665F36E8422B4070F39D77D700541_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* List_1_t6331523A19E51FB87CA899920C03B10A48A562B0_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* U3CInitializeLoaderU3Ed__24_tBE52372328AAFF3147B0E3361196652E33780D08_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* XRConfigurationDataAttribute_tC94F83D607B934FF3F894802DF857C51AA165236_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* XRLoaderHelper_t37A55C343AC31D25BB3EBD203DABFA357F51C013_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F_0_0_0_var;
 struct Delegate_t_marshaled_com;
 struct Delegate_t_marshaled_pinvoke;
 struct Exception_t_marshaled_com;
@@ -1570,10 +1491,8 @@ public:
 	RuntimeObject * ___U3CU3E2__current_1;
 	// UnityEngine.XR.Management.XRManagerSettings UnityEngine.XR.Management.XRManagerSettings/<InitializeLoader>d__24::<>4__this
 	XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * ___U3CU3E4__this_2;
-	// System.Collections.Generic.List`1/Enumerator<UnityEngine.XR.Management.XRLoader> UnityEngine.XR.Management.XRManagerSettings/<InitializeLoader>d__24::<>s__1
-	Enumerator_t5E925E051A8E0B9BEF75F1250A9B42E275E89FCF  ___U3CU3Es__1_3;
-	// UnityEngine.XR.Management.XRLoader UnityEngine.XR.Management.XRManagerSettings/<InitializeLoader>d__24::<loader>5__2
-	XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B * ___U3CloaderU3E5__2_4;
+	// System.Collections.Generic.List`1/Enumerator<UnityEngine.XR.Management.XRLoader> UnityEngine.XR.Management.XRManagerSettings/<InitializeLoader>d__24::<>7__wrap1
+	Enumerator_t5E925E051A8E0B9BEF75F1250A9B42E275E89FCF  ___U3CU3E7__wrap1_3;
 
 public:
 	inline static int32_t get_offset_of_U3CU3E1__state_0() { return static_cast<int32_t>(offsetof(U3CInitializeLoaderU3Ed__24_tBE52372328AAFF3147B0E3361196652E33780D08, ___U3CU3E1__state_0)); }
@@ -1602,25 +1521,16 @@ public:
 		Il2CppCodeGenWriteBarrier((void**)(&___U3CU3E4__this_2), (void*)value);
 	}
 
-	inline static int32_t get_offset_of_U3CU3Es__1_3() { return static_cast<int32_t>(offsetof(U3CInitializeLoaderU3Ed__24_tBE52372328AAFF3147B0E3361196652E33780D08, ___U3CU3Es__1_3)); }
-	inline Enumerator_t5E925E051A8E0B9BEF75F1250A9B42E275E89FCF  get_U3CU3Es__1_3() const { return ___U3CU3Es__1_3; }
-	inline Enumerator_t5E925E051A8E0B9BEF75F1250A9B42E275E89FCF * get_address_of_U3CU3Es__1_3() { return &___U3CU3Es__1_3; }
-	inline void set_U3CU3Es__1_3(Enumerator_t5E925E051A8E0B9BEF75F1250A9B42E275E89FCF  value)
+	inline static int32_t get_offset_of_U3CU3E7__wrap1_3() { return static_cast<int32_t>(offsetof(U3CInitializeLoaderU3Ed__24_tBE52372328AAFF3147B0E3361196652E33780D08, ___U3CU3E7__wrap1_3)); }
+	inline Enumerator_t5E925E051A8E0B9BEF75F1250A9B42E275E89FCF  get_U3CU3E7__wrap1_3() const { return ___U3CU3E7__wrap1_3; }
+	inline Enumerator_t5E925E051A8E0B9BEF75F1250A9B42E275E89FCF * get_address_of_U3CU3E7__wrap1_3() { return &___U3CU3E7__wrap1_3; }
+	inline void set_U3CU3E7__wrap1_3(Enumerator_t5E925E051A8E0B9BEF75F1250A9B42E275E89FCF  value)
 	{
-		___U3CU3Es__1_3 = value;
-		Il2CppCodeGenWriteBarrier((void**)&(((&___U3CU3Es__1_3))->___list_0), (void*)NULL);
+		___U3CU3E7__wrap1_3 = value;
+		Il2CppCodeGenWriteBarrier((void**)&(((&___U3CU3E7__wrap1_3))->___list_0), (void*)NULL);
 		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
-		Il2CppCodeGenWriteBarrier((void**)&(((&___U3CU3Es__1_3))->___current_3), (void*)NULL);
+		Il2CppCodeGenWriteBarrier((void**)&(((&___U3CU3E7__wrap1_3))->___current_3), (void*)NULL);
 		#endif
-	}
-
-	inline static int32_t get_offset_of_U3CloaderU3E5__2_4() { return static_cast<int32_t>(offsetof(U3CInitializeLoaderU3Ed__24_tBE52372328AAFF3147B0E3361196652E33780D08, ___U3CloaderU3E5__2_4)); }
-	inline XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B * get_U3CloaderU3E5__2_4() const { return ___U3CloaderU3E5__2_4; }
-	inline XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B ** get_address_of_U3CloaderU3E5__2_4() { return &___U3CloaderU3E5__2_4; }
-	inline void set_U3CloaderU3E5__2_4(XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B * value)
-	{
-		___U3CloaderU3E5__2_4 = value;
-		Il2CppCodeGenWriteBarrier((void**)(&___U3CloaderU3E5__2_4), (void*)value);
 	}
 };
 
@@ -1953,7 +1863,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Application_add_quitting_mB3FABD4514AA9F
 // System.Void UnityEngine.Object::DontDestroyOnLoad(UnityEngine.Object)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Object_DontDestroyOnLoad_m03007A68ABBA4CCD8C27B944964983395E7640F9 (Object_tF2F3778131EFF286AF62B7B013A170F95A91571A * ___target0, const RuntimeMethod* method);
 // UnityEngine.XR.Management.XRGeneralSettings UnityEngine.XR.Management.XRGeneralSettings::get_Instance()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042 * XRGeneralSettings_get_Instance_m8D7FC68414773249E7C8EEF06048916FD7E7D68D (const RuntimeMethod* method);
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042 * XRGeneralSettings_get_Instance_m8D7FC68414773249E7C8EEF06048916FD7E7D68D_inline (const RuntimeMethod* method);
 // System.Boolean UnityEngine.Object::op_Equality(UnityEngine.Object,UnityEngine.Object)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Object_op_Equality_mEE9EC7EB5C7DC3E95B94AB904E1986FC4D566D54 (Object_tF2F3778131EFF286AF62B7B013A170F95A91571A * ___x0, Object_tF2F3778131EFF286AF62B7B013A170F95A91571A * ___y1, const RuntimeMethod* method);
 // System.Void UnityEngine.XR.Management.XRGeneralSettings::DeInitXRSDK()
@@ -1961,15 +1871,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRGeneralSettings_DeInitXRSDK_m393413ABA
 // System.Void UnityEngine.XR.Management.XRGeneralSettings::StartXRSDK()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRGeneralSettings_StartXRSDK_mA126F57DFAB5A6EE2651ADB6DD28AB41C72DBED8 (XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042 * __this, const RuntimeMethod* method);
 // System.Boolean UnityEngine.XR.Management.XRGeneralSettings::get_InitManagerOnStart()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XRGeneralSettings_get_InitManagerOnStart_m21A3FAE9CDFED7D125E0794EFC2C2B18E3878E53 (XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042 * __this, const RuntimeMethod* method);
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool XRGeneralSettings_get_InitManagerOnStart_m21A3FAE9CDFED7D125E0794EFC2C2B18E3878E53_inline (XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042 * __this, const RuntimeMethod* method);
 // System.Void UnityEngine.XR.Management.XRGeneralSettings::InitXRSDK()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRGeneralSettings_InitXRSDK_m8D064A0726709F70957413174C7625C33140DA2C (XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042 * __this, const RuntimeMethod* method);
 // System.Void UnityEngine.Debug::LogError(System.Object)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Debug_LogError_m8850D65592770A364D494025FF3A73E8D4D70485 (RuntimeObject * ___message0, const RuntimeMethod* method);
 // System.Void UnityEngine.XR.Management.XRManagerSettings::set_automaticLoading(System.Boolean)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRManagerSettings_set_automaticLoading_m955E88785E48CD480FC0D2198F68AFAC419C7E53 (XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * __this, bool ___value0, const RuntimeMethod* method);
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void XRManagerSettings_set_automaticLoading_m955E88785E48CD480FC0D2198F68AFAC419C7E53_inline (XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * __this, bool ___value0, const RuntimeMethod* method);
 // System.Void UnityEngine.XR.Management.XRManagerSettings::set_automaticRunning(System.Boolean)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRManagerSettings_set_automaticRunning_mDD9D47FD94BD122FA725ED624D056108DAE22E0C (XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * __this, bool ___value0, const RuntimeMethod* method);
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void XRManagerSettings_set_automaticRunning_mDD9D47FD94BD122FA725ED624D056108DAE22E0C_inline (XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * __this, bool ___value0, const RuntimeMethod* method);
 // System.Void UnityEngine.XR.Management.XRManagerSettings::InitializeLoaderSync()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRManagerSettings_InitializeLoaderSync_m97C5BA258C318867D1B8B8183AAC454D5EAA23F5 (XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * __this, const RuntimeMethod* method);
 // System.Boolean UnityEngine.Object::op_Inequality(UnityEngine.Object,UnityEngine.Object)
@@ -2006,7 +1916,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRLoader__ctor_mA07711BD60D005274815F830
 // System.Void UnityEngine.Debug::LogWarning(System.Object)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Debug_LogWarning_m24085D883C9E74D7AB423F0625E13259923960E7 (RuntimeObject * ___message0, const RuntimeMethod* method);
 // System.Collections.Generic.List`1<UnityEngine.XR.Management.XRLoader> UnityEngine.XR.Management.XRManagerSettings::get_currentLoaders()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_t6331523A19E51FB87CA899920C03B10A48A562B0 * XRManagerSettings_get_currentLoaders_m1DF4A3AE134A1EE9FC00BB15522F2CDBBE5D9430 (XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * __this, const RuntimeMethod* method);
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR List_1_t6331523A19E51FB87CA899920C03B10A48A562B0 * XRManagerSettings_get_currentLoaders_m1DF4A3AE134A1EE9FC00BB15522F2CDBBE5D9430_inline (XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * __this, const RuntimeMethod* method);
 // System.Collections.Generic.List`1/Enumerator<!0> System.Collections.Generic.List`1<UnityEngine.XR.Management.XRLoader>::GetEnumerator()
 inline Enumerator_t5E925E051A8E0B9BEF75F1250A9B42E275E89FCF  List_1_GetEnumerator_m9F891CF9308557447A884247550828A4932787EC (List_1_t6331523A19E51FB87CA899920C03B10A48A562B0 * __this, const RuntimeMethod* method)
 {
@@ -2080,7 +1990,7 @@ inline void List_1_Clear_mCE56A79EA71D5FE0DE5FC8999626282CA04310DE (List_1_t6331
 // System.Boolean UnityEngine.XR.Management.XRManagerSettings::TryAddLoader(UnityEngine.XR.Management.XRLoader,System.Int32)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XRManagerSettings_TryAddLoader_mE3C59682B8C148AAE668477F15683EC97BA3718B (XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * __this, XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B * ___loader0, int32_t ___index1, const RuntimeMethod* method);
 // System.Void UnityEngine.XR.Management.XRManagerSettings::set_currentLoaders(System.Collections.Generic.List`1<UnityEngine.XR.Management.XRLoader>)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRManagerSettings_set_currentLoaders_mF3807937DC20F875F4EF6229CC624EAA28B07F54 (XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * __this, List_1_t6331523A19E51FB87CA899920C03B10A48A562B0 * ___value0, const RuntimeMethod* method);
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void XRManagerSettings_set_currentLoaders_mF3807937DC20F875F4EF6229CC624EAA28B07F54_inline (XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * __this, List_1_t6331523A19E51FB87CA899920C03B10A48A562B0 * ___value0, const RuntimeMethod* method);
 // UnityEngine.Rendering.GraphicsDeviceType UnityEngine.SystemInfo::get_graphicsDeviceType()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SystemInfo_get_graphicsDeviceType_mC207E6B2221AD5AB39831C2412FF7FBD2F43CC02 (const RuntimeMethod* method);
 // System.Int32 System.Collections.Generic.List`1<UnityEngine.Rendering.GraphicsDeviceType>::get_Count()
@@ -2098,9 +2008,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Object_get_name_m0C7BC870ED2F0DC5A2
 // System.String System.String::Format(System.String,System.Object,System.Object)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Format_m8D1CB0410C35E052A53AE957C914C841E54BAB66 (String_t* ___format0, RuntimeObject * ___arg01, RuntimeObject * ___arg12, const RuntimeMethod* method);
 // System.Boolean UnityEngine.XR.Management.XRManagerSettings::get_automaticLoading()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XRManagerSettings_get_automaticLoading_m2F854EC3F5A23B77C3819988414EEA070B3A067B (XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * __this, const RuntimeMethod* method);
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool XRManagerSettings_get_automaticLoading_m2F854EC3F5A23B77C3819988414EEA070B3A067B_inline (XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * __this, const RuntimeMethod* method);
 // System.Boolean UnityEngine.XR.Management.XRManagerSettings::get_automaticRunning()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XRManagerSettings_get_automaticRunning_m35A499E67629829BB4E89952FC3778D55D685890 (XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * __this, const RuntimeMethod* method);
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool XRManagerSettings_get_automaticRunning_m35A499E67629829BB4E89952FC3778D55D685890_inline (XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * __this, const RuntimeMethod* method);
 // System.Void System.Collections.Generic.List`1<UnityEngine.XR.Management.XRLoader>::.ctor()
 inline void List_1__ctor_mC89CC0C2318DA4814B4A860E7EDF82390819C439 (List_1_t6331523A19E51FB87CA899920C03B10A48A562B0 * __this, const RuntimeMethod* method)
 {
@@ -2135,20 +2045,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NotSupportedException__ctor_m3EA81A5B209
 // System.String UnityEngine.XR.Management.XRConfigurationDataAttribute::get_displayName()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XRConfigurationDataAttribute_get_displayName_mE3CA8CE22420D26CDEF10FBAC28E96056D2A6807 (XRConfigurationDataAttribute_tC94F83D607B934FF3F894802DF857C51AA165236 * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRConfigurationDataAttribute_get_displayName_mE3CA8CE22420D26CDEF10FBAC28E96056D2A6807_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRConfigurationDataAttribute_tC94F83D607B934FF3F894802DF857C51AA165236_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, XRConfigurationDataAttribute_get_displayName_mE3CA8CE22420D26CDEF10FBAC28E96056D2A6807_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 0));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Management + 1));
 	{
 		// public string displayName { get; set; }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 2));
 		String_t* L_0 = __this->get_U3CdisplayNameU3Ek__BackingField_0();
 		return L_0;
 	}
@@ -2156,21 +2054,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XRConfigurationDataAttribute_get_di
 // System.Void UnityEngine.XR.Management.XRConfigurationDataAttribute::set_displayName(System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRConfigurationDataAttribute_set_displayName_mFE7B985C02F56D827A5819BC7C622FEF8A34742E (XRConfigurationDataAttribute_tC94F83D607B934FF3F894802DF857C51AA165236 * __this, String_t* ___value0, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRConfigurationDataAttribute_set_displayName_mFE7B985C02F56D827A5819BC7C622FEF8A34742E_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRConfigurationDataAttribute_tC94F83D607B934FF3F894802DF857C51AA165236_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___value0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, XRConfigurationDataAttribute_set_displayName_mFE7B985C02F56D827A5819BC7C622FEF8A34742E_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 3));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Management + 4));
 	{
 		// public string displayName { get; set; }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 5));
 		String_t* L_0 = ___value0;
 		__this->set_U3CdisplayNameU3Ek__BackingField_0(L_0);
 		return;
@@ -2179,20 +2064,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRConfigurationDataAttribute_set_display
 // System.String UnityEngine.XR.Management.XRConfigurationDataAttribute::get_buildSettingsKey()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XRConfigurationDataAttribute_get_buildSettingsKey_m0E2C659E5049C4700D88265718DABE39625F4808 (XRConfigurationDataAttribute_tC94F83D607B934FF3F894802DF857C51AA165236 * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRConfigurationDataAttribute_get_buildSettingsKey_m0E2C659E5049C4700D88265718DABE39625F4808_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRConfigurationDataAttribute_tC94F83D607B934FF3F894802DF857C51AA165236_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, XRConfigurationDataAttribute_get_buildSettingsKey_m0E2C659E5049C4700D88265718DABE39625F4808_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 6));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Management + 7));
 	{
 		// public string buildSettingsKey { get; set; }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 8));
 		String_t* L_0 = __this->get_U3CbuildSettingsKeyU3Ek__BackingField_1();
 		return L_0;
 	}
@@ -2200,21 +2073,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XRConfigurationDataAttribute_get_bu
 // System.Void UnityEngine.XR.Management.XRConfigurationDataAttribute::set_buildSettingsKey(System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRConfigurationDataAttribute_set_buildSettingsKey_mB3C7DFD97AA98506013E603211DCABDE89694889 (XRConfigurationDataAttribute_tC94F83D607B934FF3F894802DF857C51AA165236 * __this, String_t* ___value0, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRConfigurationDataAttribute_set_buildSettingsKey_mB3C7DFD97AA98506013E603211DCABDE89694889_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRConfigurationDataAttribute_tC94F83D607B934FF3F894802DF857C51AA165236_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___value0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, XRConfigurationDataAttribute_set_buildSettingsKey_mB3C7DFD97AA98506013E603211DCABDE89694889_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 9));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Management + 10));
 	{
 		// public string buildSettingsKey { get; set; }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 11));
 		String_t* L_0 = ___value0;
 		__this->set_U3CbuildSettingsKeyU3Ek__BackingField_1(L_0);
 		return;
@@ -2223,65 +2083,26 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRConfigurationDataAttribute_set_buildSe
 // System.Void UnityEngine.XR.Management.XRConfigurationDataAttribute::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRConfigurationDataAttribute__ctor_m37A56C5A9B2814E993519016D189FA3AB8271E7B (XRConfigurationDataAttribute_tC94F83D607B934FF3F894802DF857C51AA165236 * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRConfigurationDataAttribute__ctor_m37A56C5A9B2814E993519016D189FA3AB8271E7B_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRConfigurationDataAttribute_tC94F83D607B934FF3F894802DF857C51AA165236_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, XRConfigurationDataAttribute__ctor_m37A56C5A9B2814E993519016D189FA3AB8271E7B_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 12));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Management + 13));
 	{
 		// private XRConfigurationDataAttribute() {}
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 14));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 17));
 		Attribute__ctor_m5C1862A7DFC2C25A4797A8C5F681FBB5CB53ECE1(__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 17));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 15));
 		// private XRConfigurationDataAttribute() {}
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 16));
 		return;
 	}
 }
 // System.Void UnityEngine.XR.Management.XRConfigurationDataAttribute::.ctor(System.String,System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRConfigurationDataAttribute__ctor_m8BC8EB57DFC926006F8E5F70E7A150F7711299BB (XRConfigurationDataAttribute_tC94F83D607B934FF3F894802DF857C51AA165236 * __this, String_t* ___displayName0, String_t* ___buildSettingsKey1, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRConfigurationDataAttribute__ctor_m8BC8EB57DFC926006F8E5F70E7A150F7711299BB_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRConfigurationDataAttribute_tC94F83D607B934FF3F894802DF857C51AA165236_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___displayName0), (&___buildSettingsKey1));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, XRConfigurationDataAttribute__ctor_m8BC8EB57DFC926006F8E5F70E7A150F7711299BB_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 18));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Management + 19));
 	{
 		// public XRConfigurationDataAttribute(string displayName, string buildSettingsKey)
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 20));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 25));
 		Attribute__ctor_m5C1862A7DFC2C25A4797A8C5F681FBB5CB53ECE1(__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 25));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 21));
 		// this.displayName = displayName;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 22));
 		String_t* L_0 = ___displayName0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 26));
 		XRConfigurationDataAttribute_set_displayName_mFE7B985C02F56D827A5819BC7C622FEF8A34742E_inline(__this, L_0, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 26));
 		// this.buildSettingsKey = buildSettingsKey;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 23));
 		String_t* L_1 = ___buildSettingsKey1;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 27));
 		XRConfigurationDataAttribute_set_buildSettingsKey_mB3C7DFD97AA98506013E603211DCABDE89694889_inline(__this, L_1, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 27));
 		// }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 24));
 		return;
 	}
 }
@@ -2296,59 +2117,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRConfigurationDataAttribute__ctor_m8BC8
 // UnityEngine.XR.Management.XRManagerSettings UnityEngine.XR.Management.XRGeneralSettings::get_Manager()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * XRGeneralSettings_get_Manager_m5E4819323E32CA8E97058B8ED282558779099544 (XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042 * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRGeneralSettings_get_Manager_m5E4819323E32CA8E97058B8ED282558779099544_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * V_0 = NULL;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, XRGeneralSettings_get_Manager_m5E4819323E32CA8E97058B8ED282558779099544_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 28));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Management + 29));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 30));
 		// get { return m_LoaderManagerInstance; }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 31));
 		XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * L_0 = __this->get_m_LoaderManagerInstance_6();
-		V_0 = L_0;
-		goto IL_000a;
-	}
-
-IL_000a:
-	{
-		// get { return m_LoaderManagerInstance; }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 32));
-		XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * L_1 = V_0;
-		return L_1;
+		return L_0;
 	}
 }
 // System.Void UnityEngine.XR.Management.XRGeneralSettings::set_Manager(UnityEngine.XR.Management.XRManagerSettings)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRGeneralSettings_set_Manager_mD03B32F78152AC3EE2DA737A037DA5895D325D29 (XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042 * __this, XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * ___value0, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRGeneralSettings_set_Manager_mD03B32F78152AC3EE2DA737A037DA5895D325D29_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___value0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, XRGeneralSettings_set_Manager_mD03B32F78152AC3EE2DA737A037DA5895D325D29_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 33));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Management + 34));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 35));
 		// set { m_LoaderManagerInstance = value; }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 36));
 		XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * L_0 = ___value0;
 		__this->set_m_LoaderManagerInstance_6(L_0);
 		// set { m_LoaderManagerInstance = value; }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 37));
 		return;
 	}
 }
@@ -2358,97 +2140,32 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR XRGeneralSettings_t32A12852D8662239F55902E9FD
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRGeneralSettings_get_Instance_m8D7FC68414773249E7C8EEF06048916FD7E7D68D_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042 * V_0 = NULL;
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, XRGeneralSettings_get_Instance_m8D7FC68414773249E7C8EEF06048916FD7E7D68D_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 38));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Management + 39));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 40));
 		// return s_RuntimeSettingsInstance;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 41));
 		IL2CPP_RUNTIME_CLASS_INIT(XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042_il2cpp_TypeInfo_var);
 		XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042 * L_0 = ((XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042_StaticFields*)il2cpp_codegen_static_fields_for(XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042_il2cpp_TypeInfo_var))->get_s_RuntimeSettingsInstance_5();
-		V_0 = L_0;
-		goto IL_0009;
-	}
-
-IL_0009:
-	{
-		// }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 42));
-		XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042 * L_1 = V_0;
-		return L_1;
+		return L_0;
 	}
 }
 // UnityEngine.XR.Management.XRManagerSettings UnityEngine.XR.Management.XRGeneralSettings::get_AssignedSettings()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * XRGeneralSettings_get_AssignedSettings_mA98F4DB18321E6DBFA016F5C3699614C66796541 (XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042 * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRGeneralSettings_get_AssignedSettings_mA98F4DB18321E6DBFA016F5C3699614C66796541_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * V_0 = NULL;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, XRGeneralSettings_get_AssignedSettings_mA98F4DB18321E6DBFA016F5C3699614C66796541_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 43));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Management + 44));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 45));
 		// return m_LoaderManagerInstance;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 46));
 		XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * L_0 = __this->get_m_LoaderManagerInstance_6();
-		V_0 = L_0;
-		goto IL_000a;
-	}
-
-IL_000a:
-	{
-		// }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 47));
-		XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * L_1 = V_0;
-		return L_1;
+		return L_0;
 	}
 }
 // System.Boolean UnityEngine.XR.Management.XRGeneralSettings::get_InitManagerOnStart()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XRGeneralSettings_get_InitManagerOnStart_m21A3FAE9CDFED7D125E0794EFC2C2B18E3878E53 (XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042 * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRGeneralSettings_get_InitManagerOnStart_m21A3FAE9CDFED7D125E0794EFC2C2B18E3878E53_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	bool V_0 = false;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, XRGeneralSettings_get_InitManagerOnStart_m21A3FAE9CDFED7D125E0794EFC2C2B18E3878E53_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 48));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Management + 49));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 50));
 		// return m_InitManagerOnStart;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 51));
 		bool L_0 = __this->get_m_InitManagerOnStart_7();
-		V_0 = L_0;
-		goto IL_000a;
-	}
-
-IL_000a:
-	{
-		// }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 52));
-		bool L_1 = V_0;
-		return L_1;
+		return L_0;
 	}
 }
 // System.Void UnityEngine.XR.Management.XRGeneralSettings::Awake()
@@ -2460,47 +2177,27 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRGeneralSettings_Awake_mA50DA38B1FA224B
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Action_tAF41423D285AE0862865348CF6CE51CD085ABBA6_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_tEB68BCBEB8EFD60F8043C67146DC05E7F50F374B_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tF2F3778131EFF286AF62B7B013A170F95A91571A_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRGeneralSettings_Awake_mA50DA38B1FA224BADC66F689593400F9F77C551E_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRGeneralSettings_Quit_m5C5E8099B3E4105FD09B06D1A15B0D7FB358BA70_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralADC37DF0257D7B87C604A97F0803D0370B8FD8C6);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, XRGeneralSettings_Awake_mA50DA38B1FA224BADC66F689593400F9F77C551E_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 53));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Management + 54));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 55));
 		// Debug.Log("XRGeneral Settings awakening...");
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 56));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 61));
 		IL2CPP_RUNTIME_CLASS_INIT(Debug_tEB68BCBEB8EFD60F8043C67146DC05E7F50F374B_il2cpp_TypeInfo_var);
 		Debug_Log_mC26E5AD0D8D156C7FFD173AA15827F69225E9DB8(_stringLiteralADC37DF0257D7B87C604A97F0803D0370B8FD8C6, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 61));
 		// s_RuntimeSettingsInstance = this;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 57));
 		IL2CPP_RUNTIME_CLASS_INIT(XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042_il2cpp_TypeInfo_var);
 		((XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042_StaticFields*)il2cpp_codegen_static_fields_for(XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042_il2cpp_TypeInfo_var))->set_s_RuntimeSettingsInstance_5(__this);
 		// Application.quitting += Quit;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 58));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 62));
 		Action_tAF41423D285AE0862865348CF6CE51CD085ABBA6 * L_0 = (Action_tAF41423D285AE0862865348CF6CE51CD085ABBA6 *)il2cpp_codegen_object_new(Action_tAF41423D285AE0862865348CF6CE51CD085ABBA6_il2cpp_TypeInfo_var);
 		Action__ctor_m07BE5EE8A629FBBA52AE6356D57A0D371BE2574B(L_0, NULL, (intptr_t)((intptr_t)XRGeneralSettings_Quit_m5C5E8099B3E4105FD09B06D1A15B0D7FB358BA70_RuntimeMethod_var), /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 62));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 63));
 		Application_add_quitting_mB3FABD4514AA9FED23136D80BF59FDCE00D0F9B7(L_0, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 63));
 		// DontDestroyOnLoad(s_RuntimeSettingsInstance);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 59));
 		XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042 * L_1 = ((XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042_StaticFields*)il2cpp_codegen_static_fields_for(XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042_il2cpp_TypeInfo_var))->get_s_RuntimeSettingsInstance_5();
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 64));
 		IL2CPP_RUNTIME_CLASS_INIT(Object_tF2F3778131EFF286AF62B7B013A170F95A91571A_il2cpp_TypeInfo_var);
 		Object_DontDestroyOnLoad_m03007A68ABBA4CCD8C27B944964983395E7640F9(L_1, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 64));
 		// }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 60));
 		return;
 	}
 }
@@ -2510,118 +2207,59 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRGeneralSettings_Quit_m5C5E8099B3E4105F
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tF2F3778131EFF286AF62B7B013A170F95A91571A_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRGeneralSettings_Quit_m5C5E8099B3E4105FD09B06D1A15B0D7FB358BA70_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042 * V_0 = NULL;
-	bool V_1 = false;
-	DECLARE_METHOD_LOCALS(methodExecutionContextLocals, (&V_0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, XRGeneralSettings_Quit_m5C5E8099B3E4105FD09B06D1A15B0D7FB358BA70_RuntimeMethod_var, NULL, NULL, methodExecutionContextLocals);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 65));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Management + 66));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 67));
 		// XRGeneralSettings instance = XRGeneralSettings.Instance;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 68));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 74));
 		IL2CPP_RUNTIME_CLASS_INIT(XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042_il2cpp_TypeInfo_var);
 		XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042 * L_0;
-		L_0 = XRGeneralSettings_get_Instance_m8D7FC68414773249E7C8EEF06048916FD7E7D68D(/*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 74));
+		L_0 = XRGeneralSettings_get_Instance_m8D7FC68414773249E7C8EEF06048916FD7E7D68D_inline(/*hidden argument*/NULL);
 		V_0 = L_0;
 		// if (instance == null)
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 69));
 		XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042 * L_1 = V_0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 75));
 		IL2CPP_RUNTIME_CLASS_INIT(Object_tF2F3778131EFF286AF62B7B013A170F95A91571A_il2cpp_TypeInfo_var);
 		bool L_2;
 		L_2 = Object_op_Equality_mEE9EC7EB5C7DC3E95B94AB904E1986FC4D566D54(L_1, (Object_tF2F3778131EFF286AF62B7B013A170F95A91571A *)NULL, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 75));
-		V_1 = L_2;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 70));
-		bool L_3 = V_1;
-		if (!L_3)
+		if (!L_2)
 		{
-			goto IL_0014;
+			goto IL_0010;
 		}
 	}
 	{
 		// return;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 71));
-		goto IL_001b;
+		return;
 	}
 
-IL_0014:
+IL_0010:
 	{
 		// instance.DeInitXRSDK();
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 72));
-		XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042 * L_4 = V_0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 76));
-		NullCheck(L_4);
-		XRGeneralSettings_DeInitXRSDK_m393413ABA4D5D4CA976ECB6AF2C04E81685E2183(L_4, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 76));
-	}
-
-IL_001b:
-	{
+		XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042 * L_3 = V_0;
+		NullCheck(L_3);
+		XRGeneralSettings_DeInitXRSDK_m393413ABA4D5D4CA976ECB6AF2C04E81685E2183(L_3, /*hidden argument*/NULL);
 		// }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 73));
 		return;
 	}
 }
 // System.Void UnityEngine.XR.Management.XRGeneralSettings::Start()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRGeneralSettings_Start_m192139B0BB00B8D23C6EEBB90290ABB6C4352F29 (XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042 * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRGeneralSettings_Start_m192139B0BB00B8D23C6EEBB90290ABB6C4352F29_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, XRGeneralSettings_Start_m192139B0BB00B8D23C6EEBB90290ABB6C4352F29_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 77));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Management + 78));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 79));
 		// StartXRSDK();
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 80));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 82));
 		XRGeneralSettings_StartXRSDK_mA126F57DFAB5A6EE2651ADB6DD28AB41C72DBED8(__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 82));
 		// }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 81));
 		return;
 	}
 }
 // System.Void UnityEngine.XR.Management.XRGeneralSettings::OnDestroy()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRGeneralSettings_OnDestroy_mADCE8F90BABF1629E10E8BCF6FA19388C169A430 (XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042 * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRGeneralSettings_OnDestroy_mADCE8F90BABF1629E10E8BCF6FA19388C169A430_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, XRGeneralSettings_OnDestroy_mADCE8F90BABF1629E10E8BCF6FA19388C169A430_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 83));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Management + 84));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 85));
 		// DeInitXRSDK();
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 86));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 88));
 		XRGeneralSettings_DeInitXRSDK_m393413ABA4D5D4CA976ECB6AF2C04E81685E2183(__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 88));
 		// }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 87));
 		return;
 	}
 }
@@ -2631,90 +2269,51 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRGeneralSettings_AttemptInitializeXRSDK
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tF2F3778131EFF286AF62B7B013A170F95A91571A_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRGeneralSettings_AttemptInitializeXRSDKOnLoad_m25C4FF6460E96AB85AD43A0FFFE4569E3618E196_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042 * V_0 = NULL;
-	bool V_1 = false;
-	DECLARE_METHOD_LOCALS(methodExecutionContextLocals, (&V_0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, XRGeneralSettings_AttemptInitializeXRSDKOnLoad_m25C4FF6460E96AB85AD43A0FFFE4569E3618E196_RuntimeMethod_var, NULL, NULL, methodExecutionContextLocals);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 89));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Management + 90));
-	int32_t G_B3_0 = 0;
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 91));
 		// XRGeneralSettings instance = XRGeneralSettings.Instance;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 92));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 98));
 		IL2CPP_RUNTIME_CLASS_INIT(XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042_il2cpp_TypeInfo_var);
 		XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042 * L_0;
-		L_0 = XRGeneralSettings_get_Instance_m8D7FC68414773249E7C8EEF06048916FD7E7D68D(/*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 98));
+		L_0 = XRGeneralSettings_get_Instance_m8D7FC68414773249E7C8EEF06048916FD7E7D68D_inline(/*hidden argument*/NULL);
 		V_0 = L_0;
 		// if (instance == null || !instance.InitManagerOnStart)
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 93));
 		XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042 * L_1 = V_0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 99));
 		IL2CPP_RUNTIME_CLASS_INIT(Object_tF2F3778131EFF286AF62B7B013A170F95A91571A_il2cpp_TypeInfo_var);
 		bool L_2;
 		L_2 = Object_op_Equality_mEE9EC7EB5C7DC3E95B94AB904E1986FC4D566D54(L_1, (Object_tF2F3778131EFF286AF62B7B013A170F95A91571A *)NULL, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 99));
 		if (L_2)
 		{
-			goto IL_001b;
+			goto IL_0017;
 		}
 	}
 	{
 		XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042 * L_3 = V_0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 100));
 		NullCheck(L_3);
 		bool L_4;
-		L_4 = XRGeneralSettings_get_InitManagerOnStart_m21A3FAE9CDFED7D125E0794EFC2C2B18E3878E53(L_3, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 100));
-		G_B3_0 = ((((int32_t)L_4) == ((int32_t)0))? 1 : 0);
-		goto IL_001c;
-	}
-
-IL_001b:
-	{
-		G_B3_0 = 1;
-	}
-
-IL_001c:
-	{
-		V_1 = (bool)G_B3_0;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 94));
-		bool L_5 = V_1;
-		if (!L_5)
+		L_4 = XRGeneralSettings_get_InitManagerOnStart_m21A3FAE9CDFED7D125E0794EFC2C2B18E3878E53_inline(L_3, /*hidden argument*/NULL);
+		if (L_4)
 		{
-			goto IL_0022;
+			goto IL_0018;
 		}
 	}
+
+IL_0017:
 	{
 		// return;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 95));
-		goto IL_0029;
+		return;
 	}
 
-IL_0022:
+IL_0018:
 	{
 		// instance.InitXRSDK();
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 96));
-		XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042 * L_6 = V_0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 101));
-		NullCheck(L_6);
-		XRGeneralSettings_InitXRSDK_m8D064A0726709F70957413174C7625C33140DA2C(L_6, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 101));
-	}
-
-IL_0029:
-	{
+		XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042 * L_5 = V_0;
+		NullCheck(L_5);
+		XRGeneralSettings_InitXRSDK_m8D064A0726709F70957413174C7625C33140DA2C(L_5, /*hidden argument*/NULL);
 		// }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 97));
 		return;
 	}
 }
@@ -2724,90 +2323,51 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRGeneralSettings_AttemptStartXRSDKOnBef
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tF2F3778131EFF286AF62B7B013A170F95A91571A_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRGeneralSettings_AttemptStartXRSDKOnBeforeSplashScreen_m69A4793D7DC90E31D4C00ABB34AB2F18DAFD107C_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042 * V_0 = NULL;
-	bool V_1 = false;
-	DECLARE_METHOD_LOCALS(methodExecutionContextLocals, (&V_0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, XRGeneralSettings_AttemptStartXRSDKOnBeforeSplashScreen_m69A4793D7DC90E31D4C00ABB34AB2F18DAFD107C_RuntimeMethod_var, NULL, NULL, methodExecutionContextLocals);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 102));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Management + 103));
-	int32_t G_B3_0 = 0;
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 104));
 		// XRGeneralSettings instance = XRGeneralSettings.Instance;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 105));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 111));
 		IL2CPP_RUNTIME_CLASS_INIT(XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042_il2cpp_TypeInfo_var);
 		XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042 * L_0;
-		L_0 = XRGeneralSettings_get_Instance_m8D7FC68414773249E7C8EEF06048916FD7E7D68D(/*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 111));
+		L_0 = XRGeneralSettings_get_Instance_m8D7FC68414773249E7C8EEF06048916FD7E7D68D_inline(/*hidden argument*/NULL);
 		V_0 = L_0;
 		// if (instance == null || !instance.InitManagerOnStart)
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 106));
 		XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042 * L_1 = V_0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 112));
 		IL2CPP_RUNTIME_CLASS_INIT(Object_tF2F3778131EFF286AF62B7B013A170F95A91571A_il2cpp_TypeInfo_var);
 		bool L_2;
 		L_2 = Object_op_Equality_mEE9EC7EB5C7DC3E95B94AB904E1986FC4D566D54(L_1, (Object_tF2F3778131EFF286AF62B7B013A170F95A91571A *)NULL, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 112));
 		if (L_2)
 		{
-			goto IL_001b;
+			goto IL_0017;
 		}
 	}
 	{
 		XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042 * L_3 = V_0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 113));
 		NullCheck(L_3);
 		bool L_4;
-		L_4 = XRGeneralSettings_get_InitManagerOnStart_m21A3FAE9CDFED7D125E0794EFC2C2B18E3878E53(L_3, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 113));
-		G_B3_0 = ((((int32_t)L_4) == ((int32_t)0))? 1 : 0);
-		goto IL_001c;
-	}
-
-IL_001b:
-	{
-		G_B3_0 = 1;
-	}
-
-IL_001c:
-	{
-		V_1 = (bool)G_B3_0;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 107));
-		bool L_5 = V_1;
-		if (!L_5)
+		L_4 = XRGeneralSettings_get_InitManagerOnStart_m21A3FAE9CDFED7D125E0794EFC2C2B18E3878E53_inline(L_3, /*hidden argument*/NULL);
+		if (L_4)
 		{
-			goto IL_0022;
+			goto IL_0018;
 		}
 	}
+
+IL_0017:
 	{
 		// return;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 108));
-		goto IL_0029;
+		return;
 	}
 
-IL_0022:
+IL_0018:
 	{
 		// instance.StartXRSDK();
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 109));
-		XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042 * L_6 = V_0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 114));
-		NullCheck(L_6);
-		XRGeneralSettings_StartXRSDK_mA126F57DFAB5A6EE2651ADB6DD28AB41C72DBED8(L_6, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 114));
-	}
-
-IL_0029:
-	{
+		XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042 * L_5 = V_0;
+		NullCheck(L_5);
+		XRGeneralSettings_StartXRSDK_mA126F57DFAB5A6EE2651ADB6DD28AB41C72DBED8(L_5, /*hidden argument*/NULL);
 		// }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 110));
 		return;
 	}
 }
@@ -2817,165 +2377,101 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRGeneralSettings_InitXRSDK_m8D064A07267
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_tEB68BCBEB8EFD60F8043C67146DC05E7F50F374B_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tF2F3778131EFF286AF62B7B013A170F95A91571A_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRGeneralSettings_InitXRSDK_m8D064A0726709F70957413174C7625C33140DA2C_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral315B698B2842E2D68111639F66C762E9B89D07CD);
 		s_Il2CppMethodInitialized = true;
 	}
-	bool V_0 = false;
-	bool V_1 = false;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, XRGeneralSettings_InitXRSDK_m8D064A0726709F70957413174C7625C33140DA2C_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 115));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Management + 116));
-	int32_t G_B4_0 = 0;
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 117));
 		// if (XRGeneralSettings.Instance == null || XRGeneralSettings.Instance.m_LoaderManagerInstance == null || XRGeneralSettings.Instance.m_InitManagerOnStart == false)
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 118));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 132));
 		IL2CPP_RUNTIME_CLASS_INIT(XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042_il2cpp_TypeInfo_var);
 		XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042 * L_0;
-		L_0 = XRGeneralSettings_get_Instance_m8D7FC68414773249E7C8EEF06048916FD7E7D68D(/*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 132));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 133));
+		L_0 = XRGeneralSettings_get_Instance_m8D7FC68414773249E7C8EEF06048916FD7E7D68D_inline(/*hidden argument*/NULL);
 		IL2CPP_RUNTIME_CLASS_INIT(Object_tF2F3778131EFF286AF62B7B013A170F95A91571A_il2cpp_TypeInfo_var);
 		bool L_1;
 		L_1 = Object_op_Equality_mEE9EC7EB5C7DC3E95B94AB904E1986FC4D566D54(L_0, (Object_tF2F3778131EFF286AF62B7B013A170F95A91571A *)NULL, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 133));
 		if (L_1)
 		{
-			goto IL_002f;
+			goto IL_002b;
 		}
 	}
 	{
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 134));
 		IL2CPP_RUNTIME_CLASS_INIT(XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042_il2cpp_TypeInfo_var);
 		XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042 * L_2;
-		L_2 = XRGeneralSettings_get_Instance_m8D7FC68414773249E7C8EEF06048916FD7E7D68D(/*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 134));
+		L_2 = XRGeneralSettings_get_Instance_m8D7FC68414773249E7C8EEF06048916FD7E7D68D_inline(/*hidden argument*/NULL);
 		NullCheck(L_2);
 		XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * L_3 = L_2->get_m_LoaderManagerInstance_6();
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 135));
 		IL2CPP_RUNTIME_CLASS_INIT(Object_tF2F3778131EFF286AF62B7B013A170F95A91571A_il2cpp_TypeInfo_var);
 		bool L_4;
 		L_4 = Object_op_Equality_mEE9EC7EB5C7DC3E95B94AB904E1986FC4D566D54(L_3, (Object_tF2F3778131EFF286AF62B7B013A170F95A91571A *)NULL, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 135));
 		if (L_4)
 		{
-			goto IL_002f;
+			goto IL_002b;
 		}
 	}
 	{
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 136));
 		IL2CPP_RUNTIME_CLASS_INIT(XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042_il2cpp_TypeInfo_var);
 		XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042 * L_5;
-		L_5 = XRGeneralSettings_get_Instance_m8D7FC68414773249E7C8EEF06048916FD7E7D68D(/*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 136));
+		L_5 = XRGeneralSettings_get_Instance_m8D7FC68414773249E7C8EEF06048916FD7E7D68D_inline(/*hidden argument*/NULL);
 		NullCheck(L_5);
 		bool L_6 = L_5->get_m_InitManagerOnStart_7();
-		G_B4_0 = ((((int32_t)L_6) == ((int32_t)0))? 1 : 0);
-		goto IL_0030;
-	}
-
-IL_002f:
-	{
-		G_B4_0 = 1;
-	}
-
-IL_0030:
-	{
-		V_0 = (bool)G_B4_0;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 119));
-		bool L_7 = V_0;
-		if (!L_7)
+		if (L_6)
 		{
-			goto IL_0036;
+			goto IL_002c;
 		}
 	}
+
+IL_002b:
 	{
 		// return;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 120));
-		goto IL_0091;
+		return;
 	}
 
-IL_0036:
+IL_002c:
 	{
 		// m_XRManager = XRGeneralSettings.Instance.m_LoaderManagerInstance;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 121));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 137));
 		IL2CPP_RUNTIME_CLASS_INIT(XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042_il2cpp_TypeInfo_var);
-		XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042 * L_8;
-		L_8 = XRGeneralSettings_get_Instance_m8D7FC68414773249E7C8EEF06048916FD7E7D68D(/*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 137));
-		NullCheck(L_8);
-		XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * L_9 = L_8->get_m_LoaderManagerInstance_6();
-		__this->set_m_XRManager_8(L_9);
+		XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042 * L_7;
+		L_7 = XRGeneralSettings_get_Instance_m8D7FC68414773249E7C8EEF06048916FD7E7D68D_inline(/*hidden argument*/NULL);
+		NullCheck(L_7);
+		XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * L_8 = L_7->get_m_LoaderManagerInstance_6();
+		__this->set_m_XRManager_8(L_8);
 		// if (m_XRManager == null)
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 122));
-		XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * L_10 = __this->get_m_XRManager_8();
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 138));
+		XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * L_9 = __this->get_m_XRManager_8();
 		IL2CPP_RUNTIME_CLASS_INIT(Object_tF2F3778131EFF286AF62B7B013A170F95A91571A_il2cpp_TypeInfo_var);
-		bool L_11;
-		L_11 = Object_op_Equality_mEE9EC7EB5C7DC3E95B94AB904E1986FC4D566D54(L_10, (Object_tF2F3778131EFF286AF62B7B013A170F95A91571A *)NULL, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 138));
-		V_1 = L_11;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 123));
-		bool L_12 = V_1;
-		if (!L_12)
+		bool L_10;
+		L_10 = Object_op_Equality_mEE9EC7EB5C7DC3E95B94AB904E1986FC4D566D54(L_9, (Object_tF2F3778131EFF286AF62B7B013A170F95A91571A *)NULL, /*hidden argument*/NULL);
+		if (!L_10)
 		{
-			goto IL_0064;
+			goto IL_0055;
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 124));
 		// Debug.LogError("Assigned GameObject for XR Management loading is invalid. No XR Providers will be automatically loaded.");
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 125));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 139));
 		IL2CPP_RUNTIME_CLASS_INIT(Debug_tEB68BCBEB8EFD60F8043C67146DC05E7F50F374B_il2cpp_TypeInfo_var);
 		Debug_LogError_m8850D65592770A364D494025FF3A73E8D4D70485(_stringLiteral315B698B2842E2D68111639F66C762E9B89D07CD, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 139));
 		// return;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 126));
-		goto IL_0091;
+		return;
 	}
 
-IL_0064:
+IL_0055:
 	{
 		// m_XRManager.automaticLoading = false;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 127));
-		XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * L_13 = __this->get_m_XRManager_8();
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 140));
-		NullCheck(L_13);
-		XRManagerSettings_set_automaticLoading_m955E88785E48CD480FC0D2198F68AFAC419C7E53(L_13, (bool)0, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 140));
+		XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * L_11 = __this->get_m_XRManager_8();
+		NullCheck(L_11);
+		XRManagerSettings_set_automaticLoading_m955E88785E48CD480FC0D2198F68AFAC419C7E53_inline(L_11, (bool)0, /*hidden argument*/NULL);
 		// m_XRManager.automaticRunning = false;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 128));
-		XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * L_14 = __this->get_m_XRManager_8();
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 141));
-		NullCheck(L_14);
-		XRManagerSettings_set_automaticRunning_mDD9D47FD94BD122FA725ED624D056108DAE22E0C(L_14, (bool)0, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 141));
+		XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * L_12 = __this->get_m_XRManager_8();
+		NullCheck(L_12);
+		XRManagerSettings_set_automaticRunning_mDD9D47FD94BD122FA725ED624D056108DAE22E0C_inline(L_12, (bool)0, /*hidden argument*/NULL);
 		// m_XRManager.InitializeLoaderSync();
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 129));
-		XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * L_15 = __this->get_m_XRManager_8();
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 142));
-		NullCheck(L_15);
-		XRManagerSettings_InitializeLoaderSync_m97C5BA258C318867D1B8B8183AAC454D5EAA23F5(L_15, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 142));
+		XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * L_13 = __this->get_m_XRManager_8();
+		NullCheck(L_13);
+		XRManagerSettings_InitializeLoaderSync_m97C5BA258C318867D1B8B8183AAC454D5EAA23F5(L_13, /*hidden argument*/NULL);
 		// m_ProviderIntialized = true;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 130));
 		__this->set_m_ProviderIntialized_9((bool)1);
-	}
-
-IL_0091:
-	{
 		// }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 131));
 		return;
 	}
 }
@@ -2985,83 +2481,45 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRGeneralSettings_StartXRSDK_mA126F57DFA
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tF2F3778131EFF286AF62B7B013A170F95A91571A_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRGeneralSettings_StartXRSDK_mA126F57DFAB5A6EE2651ADB6DD28AB41C72DBED8_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042_0_0_0_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	bool V_0 = false;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, XRGeneralSettings_StartXRSDK_mA126F57DFAB5A6EE2651ADB6DD28AB41C72DBED8_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 143));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Management + 144));
-	int32_t G_B3_0 = 0;
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 145));
 		// if (m_XRManager != null && m_XRManager.activeLoader != null)
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 146));
 		XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * L_0 = __this->get_m_XRManager_8();
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 153));
 		IL2CPP_RUNTIME_CLASS_INIT(Object_tF2F3778131EFF286AF62B7B013A170F95A91571A_il2cpp_TypeInfo_var);
 		bool L_1;
 		L_1 = Object_op_Inequality_mE1F187520BD83FB7D86A6D850710C4D42B864E90(L_0, (Object_tF2F3778131EFF286AF62B7B013A170F95A91571A *)NULL, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 153));
 		if (!L_1)
 		{
-			goto IL_0022;
+			goto IL_0033;
 		}
 	}
 	{
 		XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * L_2 = __this->get_m_XRManager_8();
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 154));
 		NullCheck(L_2);
 		XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B * L_3;
 		L_3 = XRManagerSettings_get_activeLoader_mB1950E58B1DD1774EB2798CEBA6D3C371CE8F1D8_inline(L_2, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 154));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 155));
 		IL2CPP_RUNTIME_CLASS_INIT(Object_tF2F3778131EFF286AF62B7B013A170F95A91571A_il2cpp_TypeInfo_var);
 		bool L_4;
 		L_4 = Object_op_Inequality_mE1F187520BD83FB7D86A6D850710C4D42B864E90(L_3, (Object_tF2F3778131EFF286AF62B7B013A170F95A91571A *)NULL, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 155));
-		G_B3_0 = ((int32_t)(L_4));
-		goto IL_0023;
-	}
-
-IL_0022:
-	{
-		G_B3_0 = 0;
-	}
-
-IL_0023:
-	{
-		V_0 = (bool)G_B3_0;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 147));
-		bool L_5 = V_0;
-		if (!L_5)
+		if (!L_4)
 		{
-			goto IL_003c;
+			goto IL_0033;
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 148));
 		// m_XRManager.StartSubsystems();
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 149));
-		XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * L_6 = __this->get_m_XRManager_8();
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 156));
-		NullCheck(L_6);
-		XRManagerSettings_StartSubsystems_mB9F502956C1FC6AD6D421CD36C3980B095B4282E(L_6, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 156));
+		XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * L_5 = __this->get_m_XRManager_8();
+		NullCheck(L_5);
+		XRManagerSettings_StartSubsystems_mB9F502956C1FC6AD6D421CD36C3980B095B4282E(L_5, /*hidden argument*/NULL);
 		// m_ProviderStarted = true;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 150));
 		__this->set_m_ProviderStarted_10((bool)1);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 151));
 	}
 
-IL_003c:
+IL_0033:
 	{
 		// }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 152));
 		return;
 	}
 }
@@ -3071,83 +2529,45 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRGeneralSettings_StopXRSDK_m5972F9B13CA
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tF2F3778131EFF286AF62B7B013A170F95A91571A_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRGeneralSettings_StopXRSDK_m5972F9B13CAF086DE0CCFD19E1D84C0D98EEDE9A_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042_0_0_0_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	bool V_0 = false;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, XRGeneralSettings_StopXRSDK_m5972F9B13CAF086DE0CCFD19E1D84C0D98EEDE9A_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 157));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Management + 158));
-	int32_t G_B3_0 = 0;
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 159));
 		// if (m_XRManager != null && m_XRManager.activeLoader != null)
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 160));
 		XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * L_0 = __this->get_m_XRManager_8();
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 167));
 		IL2CPP_RUNTIME_CLASS_INIT(Object_tF2F3778131EFF286AF62B7B013A170F95A91571A_il2cpp_TypeInfo_var);
 		bool L_1;
 		L_1 = Object_op_Inequality_mE1F187520BD83FB7D86A6D850710C4D42B864E90(L_0, (Object_tF2F3778131EFF286AF62B7B013A170F95A91571A *)NULL, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 167));
 		if (!L_1)
 		{
-			goto IL_0022;
+			goto IL_0033;
 		}
 	}
 	{
 		XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * L_2 = __this->get_m_XRManager_8();
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 168));
 		NullCheck(L_2);
 		XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B * L_3;
 		L_3 = XRManagerSettings_get_activeLoader_mB1950E58B1DD1774EB2798CEBA6D3C371CE8F1D8_inline(L_2, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 168));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 169));
 		IL2CPP_RUNTIME_CLASS_INIT(Object_tF2F3778131EFF286AF62B7B013A170F95A91571A_il2cpp_TypeInfo_var);
 		bool L_4;
 		L_4 = Object_op_Inequality_mE1F187520BD83FB7D86A6D850710C4D42B864E90(L_3, (Object_tF2F3778131EFF286AF62B7B013A170F95A91571A *)NULL, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 169));
-		G_B3_0 = ((int32_t)(L_4));
-		goto IL_0023;
-	}
-
-IL_0022:
-	{
-		G_B3_0 = 0;
-	}
-
-IL_0023:
-	{
-		V_0 = (bool)G_B3_0;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 161));
-		bool L_5 = V_0;
-		if (!L_5)
+		if (!L_4)
 		{
-			goto IL_003c;
+			goto IL_0033;
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 162));
 		// m_XRManager.StopSubsystems();
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 163));
-		XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * L_6 = __this->get_m_XRManager_8();
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 170));
-		NullCheck(L_6);
-		XRManagerSettings_StopSubsystems_m7FF3553EEF8C7AB1D58A3D9034A25D8C31D30FFC(L_6, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 170));
+		XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * L_5 = __this->get_m_XRManager_8();
+		NullCheck(L_5);
+		XRManagerSettings_StopSubsystems_m7FF3553EEF8C7AB1D58A3D9034A25D8C31D30FFC(L_5, /*hidden argument*/NULL);
 		// m_ProviderStarted = false;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 164));
 		__this->set_m_ProviderStarted_10((bool)0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 165));
 	}
 
-IL_003c:
+IL_0033:
 	{
 		// }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 166));
 		return;
 	}
 }
@@ -3157,122 +2577,57 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRGeneralSettings_DeInitXRSDK_m393413ABA
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tF2F3778131EFF286AF62B7B013A170F95A91571A_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRGeneralSettings_DeInitXRSDK_m393413ABA4D5D4CA976ECB6AF2C04E81685E2183_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042_0_0_0_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	bool V_0 = false;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, XRGeneralSettings_DeInitXRSDK_m393413ABA4D5D4CA976ECB6AF2C04E81685E2183_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 171));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Management + 172));
-	int32_t G_B3_0 = 0;
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 173));
 		// if (m_XRManager != null && m_XRManager.activeLoader != null)
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 174));
 		XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * L_0 = __this->get_m_XRManager_8();
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 182));
 		IL2CPP_RUNTIME_CLASS_INIT(Object_tF2F3778131EFF286AF62B7B013A170F95A91571A_il2cpp_TypeInfo_var);
 		bool L_1;
 		L_1 = Object_op_Inequality_mE1F187520BD83FB7D86A6D850710C4D42B864E90(L_0, (Object_tF2F3778131EFF286AF62B7B013A170F95A91571A *)NULL, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 182));
 		if (!L_1)
 		{
-			goto IL_0022;
+			goto IL_003a;
 		}
 	}
 	{
 		XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * L_2 = __this->get_m_XRManager_8();
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 183));
 		NullCheck(L_2);
 		XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B * L_3;
 		L_3 = XRManagerSettings_get_activeLoader_mB1950E58B1DD1774EB2798CEBA6D3C371CE8F1D8_inline(L_2, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 183));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 184));
 		IL2CPP_RUNTIME_CLASS_INIT(Object_tF2F3778131EFF286AF62B7B013A170F95A91571A_il2cpp_TypeInfo_var);
 		bool L_4;
 		L_4 = Object_op_Inequality_mE1F187520BD83FB7D86A6D850710C4D42B864E90(L_3, (Object_tF2F3778131EFF286AF62B7B013A170F95A91571A *)NULL, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 184));
-		G_B3_0 = ((int32_t)(L_4));
-		goto IL_0023;
-	}
-
-IL_0022:
-	{
-		G_B3_0 = 0;
-	}
-
-IL_0023:
-	{
-		V_0 = (bool)G_B3_0;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 175));
-		bool L_5 = V_0;
-		if (!L_5)
+		if (!L_4)
 		{
-			goto IL_0043;
+			goto IL_003a;
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 176));
 		// m_XRManager.DeinitializeLoader();
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 177));
-		XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * L_6 = __this->get_m_XRManager_8();
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 185));
-		NullCheck(L_6);
-		XRManagerSettings_DeinitializeLoader_m6AD4F079818DF78946C99AD8D49E3D343DAAF290(L_6, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 185));
+		XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * L_5 = __this->get_m_XRManager_8();
+		NullCheck(L_5);
+		XRManagerSettings_DeinitializeLoader_m6AD4F079818DF78946C99AD8D49E3D343DAAF290(L_5, /*hidden argument*/NULL);
 		// m_XRManager = null;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 178));
 		__this->set_m_XRManager_8((XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F *)NULL);
 		// m_ProviderIntialized = false;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 179));
 		__this->set_m_ProviderIntialized_9((bool)0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 180));
 	}
 
-IL_0043:
+IL_003a:
 	{
 		// }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 181));
 		return;
 	}
 }
 // System.Void UnityEngine.XR.Management.XRGeneralSettings::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRGeneralSettings__ctor_mD3A03E89F7FA70B2DB8E6E4EDF18EFBD24B312F2 (XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042 * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRGeneralSettings__ctor_mD3A03E89F7FA70B2DB8E6E4EDF18EFBD24B312F2_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, XRGeneralSettings__ctor_mD3A03E89F7FA70B2DB8E6E4EDF18EFBD24B312F2_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 186));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Management + 187));
-	{
-		// internal XRManagerSettings m_LoaderManagerInstance = null;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 188));
-		__this->set_m_LoaderManagerInstance_6((XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F *)NULL);
 		// internal bool m_InitManagerOnStart = true;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 189));
 		__this->set_m_InitManagerOnStart_7((bool)1);
-		// private XRManagerSettings m_XRManager = null;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 190));
-		__this->set_m_XRManager_8((XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F *)NULL);
-		// private bool m_ProviderIntialized = false;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 191));
-		__this->set_m_ProviderIntialized_9((bool)0);
-		// private bool m_ProviderStarted = false;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 192));
-		__this->set_m_ProviderStarted_10((bool)0);
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 193));
 		ScriptableObject__ctor_m8DAE6CDCFA34E16F2543B02CC3669669FF203063(__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 193));
 		return;
 	}
 }
@@ -3282,20 +2637,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRGeneralSettings__cctor_m1A0A5F4C74AB22
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRGeneralSettings__cctor_m1A0A5F4C74AB2262794AADF08D2CF0E27BAAD506_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral8A67FBC5ABA519008B443A3446FFD6458D968D4E);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, XRGeneralSettings__cctor_m1A0A5F4C74AB2262794AADF08D2CF0E27BAAD506_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 194));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Management + 195));
 	{
 		// public static string k_SettingsKey = "com.unity.xr.management.loader_settings";
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 196));
 		((XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042_StaticFields*)il2cpp_codegen_static_fields_for(XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042_il2cpp_TypeInfo_var))->set_k_SettingsKey_4(_stringLiteral8A67FBC5ABA519008B443A3446FFD6458D968D4E);
 		// internal static XRGeneralSettings s_RuntimeSettingsInstance = null;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 197));
 		((XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042_StaticFields*)il2cpp_codegen_static_fields_for(XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042_il2cpp_TypeInfo_var))->set_s_RuntimeSettingsInstance_5((XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042 *)NULL);
 		return;
 	}
@@ -3311,129 +2660,33 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRGeneralSettings__cctor_m1A0A5F4C74AB22
 // System.Boolean UnityEngine.XR.Management.XRLoader::Initialize()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XRLoader_Initialize_mDACAE27E5D38879E691DADB1462769CBE0484C04 (XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRLoader_Initialize_mDACAE27E5D38879E691DADB1462769CBE0484C04_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	bool V_0 = false;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, XRLoader_Initialize_mDACAE27E5D38879E691DADB1462769CBE0484C04_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 198));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Management + 199));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 200));
-		// public virtual bool Initialize() { return true; }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 201));
-		V_0 = (bool)1;
-		goto IL_0005;
-	}
-
-IL_0005:
 	{
 		// public virtual bool Initialize() { return true; }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 202));
-		bool L_0 = V_0;
-		return L_0;
+		return (bool)1;
 	}
 }
 // System.Boolean UnityEngine.XR.Management.XRLoader::Start()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XRLoader_Start_mE0B66E131569B4D440A52A84771BB9ADCF03FE84 (XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRLoader_Start_mE0B66E131569B4D440A52A84771BB9ADCF03FE84_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	bool V_0 = false;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, XRLoader_Start_mE0B66E131569B4D440A52A84771BB9ADCF03FE84_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 203));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Management + 204));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 205));
-		// public virtual bool Start() { return true; }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 206));
-		V_0 = (bool)1;
-		goto IL_0005;
-	}
-
-IL_0005:
 	{
 		// public virtual bool Start() { return true; }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 207));
-		bool L_0 = V_0;
-		return L_0;
+		return (bool)1;
 	}
 }
 // System.Boolean UnityEngine.XR.Management.XRLoader::Stop()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XRLoader_Stop_mBEE0CD2B4ADC3D207F286BC1DCDA05FA4CDECC7C (XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRLoader_Stop_mBEE0CD2B4ADC3D207F286BC1DCDA05FA4CDECC7C_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	bool V_0 = false;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, XRLoader_Stop_mBEE0CD2B4ADC3D207F286BC1DCDA05FA4CDECC7C_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 208));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Management + 209));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 210));
-		// public virtual bool Stop() { return true; }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 211));
-		V_0 = (bool)1;
-		goto IL_0005;
-	}
-
-IL_0005:
 	{
 		// public virtual bool Stop() { return true; }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 212));
-		bool L_0 = V_0;
-		return L_0;
+		return (bool)1;
 	}
 }
 // System.Boolean UnityEngine.XR.Management.XRLoader::Deinitialize()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XRLoader_Deinitialize_m2F552753A612D81962AA678C2A4672FBB01A9292 (XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRLoader_Deinitialize_m2F552753A612D81962AA678C2A4672FBB01A9292_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	bool V_0 = false;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, XRLoader_Deinitialize_m2F552753A612D81962AA678C2A4672FBB01A9292_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 213));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Management + 214));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 215));
-		// public virtual bool Deinitialize() { return true; }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 216));
-		V_0 = (bool)1;
-		goto IL_0005;
-	}
-
-IL_0005:
 	{
 		// public virtual bool Deinitialize() { return true; }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 217));
-		bool L_0 = V_0;
-		return L_0;
+		return (bool)1;
 	}
 }
 // System.Collections.Generic.List`1<UnityEngine.Rendering.GraphicsDeviceType> UnityEngine.XR.Management.XRLoader::GetSupportedGraphicsDeviceTypes(System.Boolean)
@@ -3443,49 +2696,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_t00813CFE30B665F36E8422B4070F39D77D700
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1__ctor_m668F9DF24A8F3F30F15BD07F3FB7418CAF4E098A_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_t00813CFE30B665F36E8422B4070F39D77D700541_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_t00813CFE30B665F36E8422B4070F39D77D700541_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRLoader_GetSupportedGraphicsDeviceTypes_m712F693E83D84188B540518910B0D797C52BC76C_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B_0_0_0_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	List_1_t00813CFE30B665F36E8422B4070F39D77D700541 * V_0 = NULL;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___buildingPlayer0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, XRLoader_GetSupportedGraphicsDeviceTypes_m712F693E83D84188B540518910B0D797C52BC76C_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 218));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Management + 219));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 220));
 		// return new List<GraphicsDeviceType>();
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 221));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 223));
 		List_1_t00813CFE30B665F36E8422B4070F39D77D700541 * L_0 = (List_1_t00813CFE30B665F36E8422B4070F39D77D700541 *)il2cpp_codegen_object_new(List_1_t00813CFE30B665F36E8422B4070F39D77D700541_il2cpp_TypeInfo_var);
 		List_1__ctor_m668F9DF24A8F3F30F15BD07F3FB7418CAF4E098A(L_0, /*hidden argument*/List_1__ctor_m668F9DF24A8F3F30F15BD07F3FB7418CAF4E098A_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 223));
-		V_0 = L_0;
-		goto IL_0009;
-	}
-
-IL_0009:
-	{
-		// }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 222));
-		List_1_t00813CFE30B665F36E8422B4070F39D77D700541 * L_1 = V_0;
-		return L_1;
+		return L_0;
 	}
 }
 // System.Void UnityEngine.XR.Management.XRLoader::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRLoader__ctor_mA07711BD60D005274815F8306CBCCABC8D6D6509 (XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRLoader__ctor_mA07711BD60D005274815F8306CBCCABC8D6D6509_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, XRLoader__ctor_mA07711BD60D005274815F8306CBCCABC8D6D6509_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		ScriptableObject__ctor_m8DAE6CDCFA34E16F2543B02CC3669669FF203063(__this, /*hidden argument*/NULL);
 		return;
@@ -3505,42 +2728,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XRLoaderHelper_Deinitialize_m618CFFA37B2
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2_Clear_m3E9517EA693253E3898958F8782F693D3159EBB7_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRLoaderHelper_Deinitialize_m618CFFA37B20197EBC745080E4594256877D82B2_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRLoaderHelper_t37A55C343AC31D25BB3EBD203DABFA357F51C013_0_0_0_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	bool V_0 = false;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, XRLoaderHelper_Deinitialize_m618CFFA37B20197EBC745080E4594256877D82B2_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 318));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Management + 319));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 320));
 		// m_SubsystemInstanceMap.Clear();
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 321));
 		Dictionary_2_t4F3B5B526335E16355EDBC766052AEAB07B1777B * L_0 = __this->get_m_SubsystemInstanceMap_4();
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 324));
 		NullCheck(L_0);
 		Dictionary_2_Clear_m3E9517EA693253E3898958F8782F693D3159EBB7(L_0, /*hidden argument*/Dictionary_2_Clear_m3E9517EA693253E3898958F8782F693D3159EBB7_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 324));
 		// return base.Deinitialize();
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 322));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 325));
 		bool L_1;
 		L_1 = XRLoader_Deinitialize_m2F552753A612D81962AA678C2A4672FBB01A9292(__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 325));
-		V_0 = L_1;
-		goto IL_0016;
-	}
-
-IL_0016:
-	{
-		// }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 323));
-		bool L_2 = V_0;
-		return L_2;
+		return L_1;
 	}
 }
 // System.Void UnityEngine.XR.Management.XRLoaderHelper::.ctor()
@@ -3551,25 +2750,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRLoaderHelper__ctor_mD27E0396EC4B11E208
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2__ctor_m3324CFB49A4472C773672F6836ED8E760AB1BF19_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2_t4F3B5B526335E16355EDBC766052AEAB07B1777B_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRLoaderHelper__ctor_mD27E0396EC4B11E208CF891642475B496CADAC9B_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRLoaderHelper_t37A55C343AC31D25BB3EBD203DABFA357F51C013_0_0_0_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, XRLoaderHelper__ctor_mD27E0396EC4B11E208CF891642475B496CADAC9B_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 326));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Management + 327));
 	{
 		// protected Dictionary<Type, ISubsystem> m_SubsystemInstanceMap = new Dictionary<Type, ISubsystem>();
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 328));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 329));
 		Dictionary_2_t4F3B5B526335E16355EDBC766052AEAB07B1777B * L_0 = (Dictionary_2_t4F3B5B526335E16355EDBC766052AEAB07B1777B *)il2cpp_codegen_object_new(Dictionary_2_t4F3B5B526335E16355EDBC766052AEAB07B1777B_il2cpp_TypeInfo_var);
 		Dictionary_2__ctor_m3324CFB49A4472C773672F6836ED8E760AB1BF19(L_0, /*hidden argument*/Dictionary_2__ctor_m3324CFB49A4472C773672F6836ED8E760AB1BF19_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 329));
 		__this->set_m_SubsystemInstanceMap_4(L_0);
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 330));
 		XRLoader__ctor_mA07711BD60D005274815F8306CBCCABC8D6D6509(__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 330));
 		return;
 	}
 }
@@ -3584,171 +2772,57 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRLoaderHelper__ctor_mD27E0396EC4B11E208
 // System.Boolean UnityEngine.XR.Management.XRManagerSettings::get_automaticLoading()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XRManagerSettings_get_automaticLoading_m2F854EC3F5A23B77C3819988414EEA070B3A067B (XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRManagerSettings_get_automaticLoading_m2F854EC3F5A23B77C3819988414EEA070B3A067B_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	bool V_0 = false;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, XRManagerSettings_get_automaticLoading_m2F854EC3F5A23B77C3819988414EEA070B3A067B_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 331));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Management + 332));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 333));
 		// get { return m_AutomaticLoading; }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 334));
 		bool L_0 = __this->get_m_AutomaticLoading_6();
-		V_0 = L_0;
-		goto IL_000a;
-	}
-
-IL_000a:
-	{
-		// get { return m_AutomaticLoading; }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 335));
-		bool L_1 = V_0;
-		return L_1;
+		return L_0;
 	}
 }
 // System.Void UnityEngine.XR.Management.XRManagerSettings::set_automaticLoading(System.Boolean)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRManagerSettings_set_automaticLoading_m955E88785E48CD480FC0D2198F68AFAC419C7E53 (XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * __this, bool ___value0, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRManagerSettings_set_automaticLoading_m955E88785E48CD480FC0D2198F68AFAC419C7E53_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___value0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, XRManagerSettings_set_automaticLoading_m955E88785E48CD480FC0D2198F68AFAC419C7E53_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 336));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Management + 337));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 338));
 		// set { m_AutomaticLoading = value; }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 339));
 		bool L_0 = ___value0;
 		__this->set_m_AutomaticLoading_6(L_0);
 		// set { m_AutomaticLoading = value; }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 340));
 		return;
 	}
 }
 // System.Boolean UnityEngine.XR.Management.XRManagerSettings::get_automaticRunning()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XRManagerSettings_get_automaticRunning_m35A499E67629829BB4E89952FC3778D55D685890 (XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRManagerSettings_get_automaticRunning_m35A499E67629829BB4E89952FC3778D55D685890_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	bool V_0 = false;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, XRManagerSettings_get_automaticRunning_m35A499E67629829BB4E89952FC3778D55D685890_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 341));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Management + 342));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 343));
 		// get { return m_AutomaticRunning; }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 344));
 		bool L_0 = __this->get_m_AutomaticRunning_7();
-		V_0 = L_0;
-		goto IL_000a;
-	}
-
-IL_000a:
-	{
-		// get { return m_AutomaticRunning; }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 345));
-		bool L_1 = V_0;
-		return L_1;
+		return L_0;
 	}
 }
 // System.Void UnityEngine.XR.Management.XRManagerSettings::set_automaticRunning(System.Boolean)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRManagerSettings_set_automaticRunning_mDD9D47FD94BD122FA725ED624D056108DAE22E0C (XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * __this, bool ___value0, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRManagerSettings_set_automaticRunning_mDD9D47FD94BD122FA725ED624D056108DAE22E0C_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___value0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, XRManagerSettings_set_automaticRunning_mDD9D47FD94BD122FA725ED624D056108DAE22E0C_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 346));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Management + 347));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 348));
 		// set { m_AutomaticRunning = value; }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 349));
 		bool L_0 = ___value0;
 		__this->set_m_AutomaticRunning_7(L_0);
 		// set { m_AutomaticRunning = value; }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 350));
 		return;
 	}
 }
 // System.Collections.Generic.List`1<UnityEngine.XR.Management.XRLoader> UnityEngine.XR.Management.XRManagerSettings::get_loaders()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_t6331523A19E51FB87CA899920C03B10A48A562B0 * XRManagerSettings_get_loaders_mEBFC514878CB5F85A0602F4075E5CBC2E36E89EA (XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_t6331523A19E51FB87CA899920C03B10A48A562B0_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRManagerSettings_get_loaders_mEBFC514878CB5F85A0602F4075E5CBC2E36E89EA_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	List_1_t6331523A19E51FB87CA899920C03B10A48A562B0 * V_0 = NULL;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, XRManagerSettings_get_loaders_mEBFC514878CB5F85A0602F4075E5CBC2E36E89EA_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 351));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Management + 352));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 353));
 		// get { return m_Loaders; }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 354));
 		List_1_t6331523A19E51FB87CA899920C03B10A48A562B0 * L_0 = __this->get_m_Loaders_8();
-		V_0 = L_0;
-		goto IL_000a;
-	}
-
-IL_000a:
-	{
-		// get { return m_Loaders; }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 355));
-		List_1_t6331523A19E51FB87CA899920C03B10A48A562B0 * L_1 = V_0;
-		return L_1;
+		return L_0;
 	}
 }
 // System.Collections.Generic.IReadOnlyList`1<UnityEngine.XR.Management.XRLoader> UnityEngine.XR.Management.XRManagerSettings::get_activeLoaders()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* XRManagerSettings_get_activeLoaders_m9F30D886C1EDE39B17981230C965EF1DA95F98F4 (XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRManagerSettings_get_activeLoaders_m9F30D886C1EDE39B17981230C965EF1DA95F98F4_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, XRManagerSettings_get_activeLoaders_m9F30D886C1EDE39B17981230C965EF1DA95F98F4_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 356));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Management + 357));
 	{
 		// public IReadOnlyList<XRLoader> activeLoaders => m_Loaders;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 358));
 		List_1_t6331523A19E51FB87CA899920C03B10A48A562B0 * L_0 = __this->get_m_Loaders_8();
 		return L_0;
 	}
@@ -3756,53 +2830,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* XRManagerSettings_get_activeLo
 // System.Boolean UnityEngine.XR.Management.XRManagerSettings::get_isInitializationComplete()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XRManagerSettings_get_isInitializationComplete_m1559C8B12004C52CBAC825FFE823C2C4DF7C719D (XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRManagerSettings_get_isInitializationComplete_m1559C8B12004C52CBAC825FFE823C2C4DF7C719D_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	bool V_0 = false;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, XRManagerSettings_get_isInitializationComplete_m1559C8B12004C52CBAC825FFE823C2C4DF7C719D_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 359));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Management + 360));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 361));
 		// get { return m_InitializationComplete; }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 362));
 		bool L_0 = __this->get_m_InitializationComplete_4();
-		V_0 = L_0;
-		goto IL_000a;
-	}
-
-IL_000a:
-	{
-		// get { return m_InitializationComplete; }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 363));
-		bool L_1 = V_0;
-		return L_1;
+		return L_0;
 	}
 }
 // UnityEngine.XR.Management.XRLoader UnityEngine.XR.Management.XRManagerSettings::get_activeLoader()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B * XRManagerSettings_get_activeLoader_mB1950E58B1DD1774EB2798CEBA6D3C371CE8F1D8 (XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRManagerSettings_get_activeLoader_mB1950E58B1DD1774EB2798CEBA6D3C371CE8F1D8_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, XRManagerSettings_get_activeLoader_mB1950E58B1DD1774EB2798CEBA6D3C371CE8F1D8_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 364));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Management + 365));
 	{
 		// public XRLoader activeLoader { get; private set; }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 366));
 		XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B * L_0 = __this->get_U3CactiveLoaderU3Ek__BackingField_10();
 		return L_0;
 	}
@@ -3810,21 +2848,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D
 // System.Void UnityEngine.XR.Management.XRManagerSettings::set_activeLoader(UnityEngine.XR.Management.XRLoader)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRManagerSettings_set_activeLoader_m77ACE8749C38314C5DA2A6A4F6551DDBC552EC72 (XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * __this, XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B * ___value0, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRManagerSettings_set_activeLoader_m77ACE8749C38314C5DA2A6A4F6551DDBC552EC72_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___value0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, XRManagerSettings_set_activeLoader_m77ACE8749C38314C5DA2A6A4F6551DDBC552EC72_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 367));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Management + 368));
 	{
 		// public XRLoader activeLoader { get; private set; }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 369));
 		XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B * L_0 = ___value0;
 		__this->set_U3CactiveLoaderU3Ek__BackingField_10(L_0);
 		return;
@@ -3836,248 +2861,155 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRManagerSettings_InitializeLoaderSync_m
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_tEB68BCBEB8EFD60F8043C67146DC05E7F50F374B_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_Dispose_m90A4F0B5CA0D3890D8D3E4676EE09E17B22AA9C7_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_MoveNext_m19D8DC887F99E56196FA26536373CE0E192D6741_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_get_Current_m7EF1367FE7BF714A357AD14CE9116844D666EAF8_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_t5E925E051A8E0B9BEF75F1250A9B42E275E89FCF_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_GetEnumerator_m9F891CF9308557447A884247550828A4932787EC_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tF2F3778131EFF286AF62B7B013A170F95A91571A_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRManagerSettings_InitializeLoaderSync_m97C5BA258C318867D1B8B8183AAC454D5EAA23F5_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral5C10A8C7ED5A1BA07E65C73073DD018933F7FDB6);
 		s_Il2CppMethodInitialized = true;
 	}
-	bool V_0 = false;
-	Enumerator_t5E925E051A8E0B9BEF75F1250A9B42E275E89FCF  V_1;
-	memset((&V_1), 0, sizeof(V_1));
-	XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B * V_2 = NULL;
-	bool V_3 = false;
-	bool V_4 = false;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_LOCALS(methodExecutionContextLocals, (&V_2));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, XRManagerSettings_InitializeLoaderSync_m97C5BA258C318867D1B8B8183AAC454D5EAA23F5_RuntimeMethod_var, methodExecutionContextThis, NULL, methodExecutionContextLocals);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 376));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Management + 377));
+	Enumerator_t5E925E051A8E0B9BEF75F1250A9B42E275E89FCF  V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B * V_1 = NULL;
 	Exception_t * __last_unhandled_exception = 0;
 	il2cpp::utils::ExceptionSupportStack<int32_t, 2> __leave_targets;
-	int32_t G_B8_0 = 0;
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 378));
 		// if (activeLoader != null)
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 379));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 404));
 		XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B * L_0;
 		L_0 = XRManagerSettings_get_activeLoader_mB1950E58B1DD1774EB2798CEBA6D3C371CE8F1D8_inline(__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 404));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 405));
 		IL2CPP_RUNTIME_CLASS_INIT(Object_tF2F3778131EFF286AF62B7B013A170F95A91571A_il2cpp_TypeInfo_var);
 		bool L_1;
 		L_1 = Object_op_Inequality_mE1F187520BD83FB7D86A6D850710C4D42B864E90(L_0, (Object_tF2F3778131EFF286AF62B7B013A170F95A91571A *)NULL, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 405));
-		V_0 = L_1;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 380));
-		bool L_2 = V_0;
-		if (!L_2)
+		if (!L_1)
 		{
-			goto IL_001f;
+			goto IL_0019;
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 381));
 		// Debug.LogWarning(
 		//     "XR Management has already initialized an active loader in this scene." +
 		//     "Please make sure to stop all subsystems and deinitialize the active loader before initializing a new one.");
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 382));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 406));
 		IL2CPP_RUNTIME_CLASS_INIT(Debug_tEB68BCBEB8EFD60F8043C67146DC05E7F50F374B_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m24085D883C9E74D7AB423F0625E13259923960E7(_stringLiteral5C10A8C7ED5A1BA07E65C73073DD018933F7FDB6, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 406));
 		// return;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 383));
-		goto IL_0091;
+		return;
 	}
 
-IL_001f:
+IL_0019:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 384));
 		// foreach (var loader in currentLoaders)
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 385));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 407));
-		List_1_t6331523A19E51FB87CA899920C03B10A48A562B0 * L_3;
-		L_3 = XRManagerSettings_get_currentLoaders_m1DF4A3AE134A1EE9FC00BB15522F2CDBBE5D9430(__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 407));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 408));
-		NullCheck(L_3);
-		Enumerator_t5E925E051A8E0B9BEF75F1250A9B42E275E89FCF  L_4;
-		L_4 = List_1_GetEnumerator_m9F891CF9308557447A884247550828A4932787EC(L_3, /*hidden argument*/List_1_GetEnumerator_m9F891CF9308557447A884247550828A4932787EC_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 408));
-		V_1 = L_4;
+		List_1_t6331523A19E51FB87CA899920C03B10A48A562B0 * L_2;
+		L_2 = XRManagerSettings_get_currentLoaders_m1DF4A3AE134A1EE9FC00BB15522F2CDBBE5D9430_inline(__this, /*hidden argument*/NULL);
+		NullCheck(L_2);
+		Enumerator_t5E925E051A8E0B9BEF75F1250A9B42E275E89FCF  L_3;
+		L_3 = List_1_GetEnumerator_m9F891CF9308557447A884247550828A4932787EC(L_2, /*hidden argument*/List_1_GetEnumerator_m9F891CF9308557447A884247550828A4932787EC_RuntimeMethod_var);
+		V_0 = L_3;
 	}
 
-IL_002c:
+IL_0025:
 	try
 	{ // begin try (depth: 1)
-		STORE_TRY_ID(methodExecutionContext, 0);
 		{
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 386));
-			goto IL_006f;
+			goto IL_0059;
 		}
 
-IL_002e:
+IL_0027:
 		{
 			// foreach (var loader in currentLoaders)
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 387));
-			STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 409));
-			XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B * L_5;
-			L_5 = Enumerator_get_Current_m7EF1367FE7BF714A357AD14CE9116844D666EAF8_inline((Enumerator_t5E925E051A8E0B9BEF75F1250A9B42E275E89FCF *)(&V_1), /*hidden argument*/Enumerator_get_Current_m7EF1367FE7BF714A357AD14CE9116844D666EAF8_RuntimeMethod_var);
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 409));
-			V_2 = L_5;
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 388));
+			XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B * L_4;
+			L_4 = Enumerator_get_Current_m7EF1367FE7BF714A357AD14CE9116844D666EAF8_inline((Enumerator_t5E925E051A8E0B9BEF75F1250A9B42E275E89FCF *)(&V_0), /*hidden argument*/Enumerator_get_Current_m7EF1367FE7BF714A357AD14CE9116844D666EAF8_RuntimeMethod_var);
+			V_1 = L_4;
 			// if (loader != null)
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 389));
-			XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B * L_6 = V_2;
-			STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 410));
+			XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B * L_5 = V_1;
 			IL2CPP_RUNTIME_CLASS_INIT(Object_tF2F3778131EFF286AF62B7B013A170F95A91571A_il2cpp_TypeInfo_var);
-			bool L_7;
-			L_7 = Object_op_Inequality_mE1F187520BD83FB7D86A6D850710C4D42B864E90(L_6, (Object_tF2F3778131EFF286AF62B7B013A170F95A91571A *)NULL, /*hidden argument*/NULL);
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 410));
-			V_3 = L_7;
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 390));
-			bool L_8 = V_3;
+			bool L_6;
+			L_6 = Object_op_Inequality_mE1F187520BD83FB7D86A6D850710C4D42B864E90(L_5, (Object_tF2F3778131EFF286AF62B7B013A170F95A91571A *)NULL, /*hidden argument*/NULL);
+			if (!L_6)
+			{
+				goto IL_0059;
+			}
+		}
+
+IL_0038:
+		{
+			// if (CheckGraphicsAPICompatibility(loader) && loader.Initialize())
+			XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B * L_7 = V_1;
+			bool L_8;
+			L_8 = XRManagerSettings_CheckGraphicsAPICompatibility_m0A5AABEC0CF864942733D746120B368C5605FA63(__this, L_7, /*hidden argument*/NULL);
 			if (!L_8)
 			{
-				goto IL_006e;
+				goto IL_0059;
 			}
 		}
 
-IL_0042:
+IL_0041:
 		{
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 391));
-			// if (CheckGraphicsAPICompatibility(loader) && loader.Initialize())
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 392));
-			XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B * L_9 = V_2;
-			STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 411));
+			XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B * L_9 = V_1;
+			NullCheck(L_9);
 			bool L_10;
-			L_10 = XRManagerSettings_CheckGraphicsAPICompatibility_m0A5AABEC0CF864942733D746120B368C5605FA63(__this, L_9, /*hidden argument*/NULL);
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 411));
+			L_10 = VirtFuncInvoker0< bool >::Invoke(4 /* System.Boolean UnityEngine.XR.Management.XRLoader::Initialize() */, L_9);
 			if (!L_10)
 			{
-				goto IL_0054;
+				goto IL_0059;
 			}
 		}
 
-IL_004c:
+IL_0049:
 		{
-			XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B * L_11 = V_2;
-			STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 412));
-			NullCheck(L_11);
-			bool L_12;
-			L_12 = VirtFuncInvoker0< bool >::Invoke(4 /* System.Boolean UnityEngine.XR.Management.XRLoader::Initialize() */, L_11);
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 412));
-			G_B8_0 = ((int32_t)(L_12));
-			goto IL_0055;
-		}
-
-IL_0054:
-		{
-			G_B8_0 = 0;
-		}
-
-IL_0055:
-		{
-			V_4 = (bool)G_B8_0;
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 393));
-			bool L_13 = V_4;
-			if (!L_13)
-			{
-				goto IL_006d;
-			}
-		}
-
-IL_005b:
-		{
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 394));
 			// activeLoader = loader;
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 395));
-			XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B * L_14 = V_2;
-			STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 413));
-			XRManagerSettings_set_activeLoader_m77ACE8749C38314C5DA2A6A4F6551DDBC552EC72_inline(__this, L_14, /*hidden argument*/NULL);
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 413));
+			XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B * L_11 = V_1;
+			XRManagerSettings_set_activeLoader_m77ACE8749C38314C5DA2A6A4F6551DDBC552EC72_inline(__this, L_11, /*hidden argument*/NULL);
 			// m_InitializationComplete = true;
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 396));
 			__this->set_m_InitializationComplete_4((bool)1);
 			// return;
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 397));
-			IL2CPP_LEAVE(0x91, FINALLY_007a);
+			IL2CPP_LEAVE(0x79, FINALLY_0064);
 		}
 
-IL_006d:
-		{
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 398));
-		}
-
-IL_006e:
-		{
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 399));
-		}
-
-IL_006f:
+IL_0059:
 		{
 			// foreach (var loader in currentLoaders)
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 400));
-			STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 414));
-			bool L_15;
-			L_15 = Enumerator_MoveNext_m19D8DC887F99E56196FA26536373CE0E192D6741((Enumerator_t5E925E051A8E0B9BEF75F1250A9B42E275E89FCF *)(&V_1), /*hidden argument*/Enumerator_MoveNext_m19D8DC887F99E56196FA26536373CE0E192D6741_RuntimeMethod_var);
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 414));
-			if (L_15)
+			bool L_12;
+			L_12 = Enumerator_MoveNext_m19D8DC887F99E56196FA26536373CE0E192D6741((Enumerator_t5E925E051A8E0B9BEF75F1250A9B42E275E89FCF *)(&V_0), /*hidden argument*/Enumerator_MoveNext_m19D8DC887F99E56196FA26536373CE0E192D6741_RuntimeMethod_var);
+			if (L_12)
 			{
-				goto IL_002e;
+				goto IL_0027;
 			}
 		}
 
-IL_0078:
+IL_0062:
 		{
-			IL2CPP_LEAVE(0x89, FINALLY_007a);
+			IL2CPP_LEAVE(0x72, FINALLY_0064);
 		}
 	} // end try (depth: 1)
 	catch(Il2CppExceptionWrapper& e)
 	{
 		__last_unhandled_exception = (Exception_t *)e.ex;
-		goto FINALLY_007a;
+		goto FINALLY_0064;
 	}
 
-FINALLY_007a:
+FINALLY_0064:
 	{ // begin finally (depth: 1)
-		STORE_TRY_ID(methodExecutionContext, -1);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 401));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 415));
-		Enumerator_Dispose_m90A4F0B5CA0D3890D8D3E4676EE09E17B22AA9C7((Enumerator_t5E925E051A8E0B9BEF75F1250A9B42E275E89FCF *)(&V_1), /*hidden argument*/Enumerator_Dispose_m90A4F0B5CA0D3890D8D3E4676EE09E17B22AA9C7_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 415));
-		IL2CPP_END_FINALLY(122)
+		Enumerator_Dispose_m90A4F0B5CA0D3890D8D3E4676EE09E17B22AA9C7((Enumerator_t5E925E051A8E0B9BEF75F1250A9B42E275E89FCF *)(&V_0), /*hidden argument*/Enumerator_Dispose_m90A4F0B5CA0D3890D8D3E4676EE09E17B22AA9C7_RuntimeMethod_var);
+		IL2CPP_END_FINALLY(100)
 	} // end finally (depth: 1)
-	IL2CPP_CLEANUP(122)
+	IL2CPP_CLEANUP(100)
 	{
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
-		IL2CPP_JUMP_TBL(0x91, IL_0091)
-		IL2CPP_JUMP_TBL(0x89, IL_0089)
+		IL2CPP_JUMP_TBL(0x79, IL_0079)
+		IL2CPP_JUMP_TBL(0x72, IL_0072)
 	}
 
-IL_0089:
+IL_0072:
 	{
 		// activeLoader = null;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 402));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 416));
 		XRManagerSettings_set_activeLoader_m77ACE8749C38314C5DA2A6A4F6551DDBC552EC72_inline(__this, (XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B *)NULL, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 416));
 	}
 
-IL_0091:
+IL_0079:
 	{
 		// }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 403));
 		return;
 	}
 }
@@ -4088,11 +3020,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* XRManagerSettings_InitializeLo
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CInitializeLoaderU3Ed__24_tBE52372328AAFF3147B0E3361196652E33780D08_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRManagerSettings_InitializeLoader_m92B987C89AF6F7E7D05718296243E0ED021FD6B3_RuntimeMethod_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, XRManagerSettings_InitializeLoader_m92B987C89AF6F7E7D05718296243E0ED021FD6B3_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		U3CInitializeLoaderU3Ed__24_tBE52372328AAFF3147B0E3361196652E33780D08 * L_0 = (U3CInitializeLoaderU3Ed__24_tBE52372328AAFF3147B0E3361196652E33780D08 *)il2cpp_codegen_object_new(U3CInitializeLoaderU3Ed__24_tBE52372328AAFF3147B0E3361196652E33780D08_il2cpp_TypeInfo_var);
 		U3CInitializeLoaderU3Ed__24__ctor_m0E4D3E9793A0D92D6A3C53D875CFBA384AFA280E(L_0, 0, /*hidden argument*/NULL);
@@ -4108,68 +3037,35 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XRManagerSettings_CheckLoaderRegistratio
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&HashSet_1_Contains_m3746B7839FD76045903DDEC97E4C798377AD286F_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_Contains_m1EF331FEB0E0402DDF0E134EBE2EC21114CEE5B0_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRManagerSettings_CheckLoaderRegistration_m9EA96D33F0815F4B6E02BEFA3CCABCAA0B57662F_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F_0_0_0_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	bool V_0 = false;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___loader0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, XRManagerSettings_CheckLoaderRegistration_m9EA96D33F0815F4B6E02BEFA3CCABCAA0B57662F_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 417));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Management + 418));
-	int32_t G_B3_0 = 0;
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 419));
 		// return m_RegisteredLoaders.Contains(loader) && !currentLoaders.Contains(loader);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 420));
 		HashSet_1_t0BB7AD0707F32BD77A251670A64E2F9355AC13F6 * L_0 = __this->get_m_RegisteredLoaders_9();
 		XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B * L_1 = ___loader0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 422));
 		NullCheck(L_0);
 		bool L_2;
 		L_2 = HashSet_1_Contains_m3746B7839FD76045903DDEC97E4C798377AD286F(L_0, L_1, /*hidden argument*/HashSet_1_Contains_m3746B7839FD76045903DDEC97E4C798377AD286F_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 422));
 		if (!L_2)
 		{
-			goto IL_0020;
+			goto IL_001e;
 		}
 	}
 	{
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 423));
 		List_1_t6331523A19E51FB87CA899920C03B10A48A562B0 * L_3;
-		L_3 = XRManagerSettings_get_currentLoaders_m1DF4A3AE134A1EE9FC00BB15522F2CDBBE5D9430(__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 423));
+		L_3 = XRManagerSettings_get_currentLoaders_m1DF4A3AE134A1EE9FC00BB15522F2CDBBE5D9430_inline(__this, /*hidden argument*/NULL);
 		XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B * L_4 = ___loader0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 424));
 		NullCheck(L_3);
 		bool L_5;
 		L_5 = List_1_Contains_m1EF331FEB0E0402DDF0E134EBE2EC21114CEE5B0(L_3, L_4, /*hidden argument*/List_1_Contains_m1EF331FEB0E0402DDF0E134EBE2EC21114CEE5B0_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 424));
-		G_B3_0 = ((((int32_t)L_5) == ((int32_t)0))? 1 : 0);
-		goto IL_0021;
+		return (bool)((((int32_t)L_5) == ((int32_t)0))? 1 : 0);
 	}
 
-IL_0020:
+IL_001e:
 	{
-		G_B3_0 = 0;
-	}
-
-IL_0021:
-	{
-		V_0 = (bool)G_B3_0;
-		goto IL_0024;
-	}
-
-IL_0024:
-	{
-		// }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 421));
-		bool L_6 = V_0;
-		return L_6;
+		return (bool)0;
 	}
 }
 // System.Boolean UnityEngine.XR.Management.XRManagerSettings::TryAddLoader(UnityEngine.XR.Management.XRLoader,System.Int32)
@@ -4178,157 +3074,87 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XRManagerSettings_TryAddLoader_mE3C59682
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_Add_m1206F9435068DE0A1227F38DA413669A9EC8BC60_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_Insert_mBA70A39CCCF24E3465AA5C1442812C88A2D8CD4E_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_get_Count_mDA8E3574C54D9AF9AAA40D8B4EA21135FC65C83F_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tF2F3778131EFF286AF62B7B013A170F95A91571A_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRManagerSettings_TryAddLoader_mE3C59682B8C148AAE668477F15683EC97BA3718B_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F_0_0_0_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	bool V_0 = false;
-	bool V_1 = false;
-	bool V_2 = false;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___loader0), (&___index1));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, XRManagerSettings_TryAddLoader_mE3C59682B8C148AAE668477F15683EC97BA3718B_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 425));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Management + 426));
-	int32_t G_B3_0 = 0;
-	int32_t G_B8_0 = 0;
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 427));
 		// if (loader == null || !CheckLoaderRegistration(loader))
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 428));
 		XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B * L_0 = ___loader0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 437));
 		IL2CPP_RUNTIME_CLASS_INIT(Object_tF2F3778131EFF286AF62B7B013A170F95A91571A_il2cpp_TypeInfo_var);
 		bool L_1;
 		L_1 = Object_op_Equality_mEE9EC7EB5C7DC3E95B94AB904E1986FC4D566D54(L_0, (Object_tF2F3778131EFF286AF62B7B013A170F95A91571A *)NULL, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 437));
 		if (L_1)
 		{
-			goto IL_0016;
+			goto IL_0012;
 		}
 	}
 	{
 		XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B * L_2 = ___loader0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 438));
 		bool L_3;
 		L_3 = XRManagerSettings_CheckLoaderRegistration_m9EA96D33F0815F4B6E02BEFA3CCABCAA0B57662F(__this, L_2, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 438));
-		G_B3_0 = ((((int32_t)L_3) == ((int32_t)0))? 1 : 0);
-		goto IL_0017;
-	}
-
-IL_0016:
-	{
-		G_B3_0 = 1;
-	}
-
-IL_0017:
-	{
-		V_0 = (bool)G_B3_0;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 429));
-		bool L_4 = V_0;
-		if (!L_4)
+		if (L_3)
 		{
-			goto IL_001f;
+			goto IL_0014;
 		}
 	}
+
+IL_0012:
 	{
 		// return false;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 430));
-		V_1 = (bool)0;
-		goto IL_005c;
+		return (bool)0;
 	}
 
-IL_001f:
+IL_0014:
 	{
 		// if (index < 0 || index >= currentLoaders.Count)
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 431));
+		int32_t L_4 = ___index1;
+		if ((((int32_t)L_4) < ((int32_t)0)))
+		{
+			goto IL_0026;
+		}
+	}
+	{
 		int32_t L_5 = ___index1;
-		if ((((int32_t)L_5) < ((int32_t)0)))
+		List_1_t6331523A19E51FB87CA899920C03B10A48A562B0 * L_6;
+		L_6 = XRManagerSettings_get_currentLoaders_m1DF4A3AE134A1EE9FC00BB15522F2CDBBE5D9430_inline(__this, /*hidden argument*/NULL);
+		NullCheck(L_6);
+		int32_t L_7;
+		L_7 = List_1_get_Count_mDA8E3574C54D9AF9AAA40D8B4EA21135FC65C83F_inline(L_6, /*hidden argument*/List_1_get_Count_mDA8E3574C54D9AF9AAA40D8B4EA21135FC65C83F_RuntimeMethod_var);
+		if ((((int32_t)L_5) < ((int32_t)L_7)))
 		{
-			goto IL_0036;
+			goto IL_0034;
 		}
 	}
-	{
-		int32_t L_6 = ___index1;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 439));
-		List_1_t6331523A19E51FB87CA899920C03B10A48A562B0 * L_7;
-		L_7 = XRManagerSettings_get_currentLoaders_m1DF4A3AE134A1EE9FC00BB15522F2CDBBE5D9430(__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 439));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 440));
-		NullCheck(L_7);
-		int32_t L_8;
-		L_8 = List_1_get_Count_mDA8E3574C54D9AF9AAA40D8B4EA21135FC65C83F_inline(L_7, /*hidden argument*/List_1_get_Count_mDA8E3574C54D9AF9AAA40D8B4EA21135FC65C83F_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 440));
-		G_B8_0 = ((((int32_t)((((int32_t)L_6) < ((int32_t)L_8))? 1 : 0)) == ((int32_t)0))? 1 : 0);
-		goto IL_0037;
-	}
 
-IL_0036:
-	{
-		G_B8_0 = 1;
-	}
-
-IL_0037:
-	{
-		V_2 = (bool)G_B8_0;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 432));
-		bool L_9 = V_2;
-		if (!L_9)
-		{
-			goto IL_004a;
-		}
-	}
+IL_0026:
 	{
 		// currentLoaders.Add(loader);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 433));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 441));
-		List_1_t6331523A19E51FB87CA899920C03B10A48A562B0 * L_10;
-		L_10 = XRManagerSettings_get_currentLoaders_m1DF4A3AE134A1EE9FC00BB15522F2CDBBE5D9430(__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 441));
-		XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B * L_11 = ___loader0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 442));
-		NullCheck(L_10);
-		List_1_Add_m1206F9435068DE0A1227F38DA413669A9EC8BC60(L_10, L_11, /*hidden argument*/List_1_Add_m1206F9435068DE0A1227F38DA413669A9EC8BC60_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 442));
-		goto IL_0058;
+		List_1_t6331523A19E51FB87CA899920C03B10A48A562B0 * L_8;
+		L_8 = XRManagerSettings_get_currentLoaders_m1DF4A3AE134A1EE9FC00BB15522F2CDBBE5D9430_inline(__this, /*hidden argument*/NULL);
+		XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B * L_9 = ___loader0;
+		NullCheck(L_8);
+		List_1_Add_m1206F9435068DE0A1227F38DA413669A9EC8BC60(L_8, L_9, /*hidden argument*/List_1_Add_m1206F9435068DE0A1227F38DA413669A9EC8BC60_RuntimeMethod_var);
+		goto IL_0041;
 	}
 
-IL_004a:
+IL_0034:
 	{
 		// currentLoaders.Insert(index, loader);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 434));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 443));
-		List_1_t6331523A19E51FB87CA899920C03B10A48A562B0 * L_12;
-		L_12 = XRManagerSettings_get_currentLoaders_m1DF4A3AE134A1EE9FC00BB15522F2CDBBE5D9430(__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 443));
-		int32_t L_13 = ___index1;
-		XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B * L_14 = ___loader0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 444));
-		NullCheck(L_12);
-		List_1_Insert_mBA70A39CCCF24E3465AA5C1442812C88A2D8CD4E(L_12, L_13, L_14, /*hidden argument*/List_1_Insert_mBA70A39CCCF24E3465AA5C1442812C88A2D8CD4E_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 444));
+		List_1_t6331523A19E51FB87CA899920C03B10A48A562B0 * L_10;
+		L_10 = XRManagerSettings_get_currentLoaders_m1DF4A3AE134A1EE9FC00BB15522F2CDBBE5D9430_inline(__this, /*hidden argument*/NULL);
+		int32_t L_11 = ___index1;
+		XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B * L_12 = ___loader0;
+		NullCheck(L_10);
+		List_1_Insert_mBA70A39CCCF24E3465AA5C1442812C88A2D8CD4E(L_10, L_11, L_12, /*hidden argument*/List_1_Insert_mBA70A39CCCF24E3465AA5C1442812C88A2D8CD4E_RuntimeMethod_var);
 	}
 
-IL_0058:
+IL_0041:
 	{
 		// return true;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 435));
-		V_1 = (bool)1;
-		goto IL_005c;
-	}
-
-IL_005c:
-	{
-		// }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 436));
-		bool L_15 = V_1;
-		return L_15;
+		return (bool)1;
 	}
 }
 // System.Boolean UnityEngine.XR.Management.XRManagerSettings::TryRemoveLoader(UnityEngine.XR.Management.XRLoader)
@@ -4337,73 +3163,38 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XRManagerSettings_TryRemoveLoader_m4866C
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_Contains_m1EF331FEB0E0402DDF0E134EBE2EC21114CEE5B0_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_Remove_m60EF64583D4A2159D8847CECE6668C505810914E_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRManagerSettings_TryRemoveLoader_m4866CC1097BFE346ACC11D833F7D4FE5C1A1D4EE_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F_0_0_0_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	bool V_0 = false;
-	bool V_1 = false;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___loader0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, XRManagerSettings_TryRemoveLoader_m4866CC1097BFE346ACC11D833F7D4FE5C1A1D4EE_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 445));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Management + 446));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 447));
 		// if (currentLoaders.Contains(loader))
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 448));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 453));
 		List_1_t6331523A19E51FB87CA899920C03B10A48A562B0 * L_0;
-		L_0 = XRManagerSettings_get_currentLoaders_m1DF4A3AE134A1EE9FC00BB15522F2CDBBE5D9430(__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 453));
+		L_0 = XRManagerSettings_get_currentLoaders_m1DF4A3AE134A1EE9FC00BB15522F2CDBBE5D9430_inline(__this, /*hidden argument*/NULL);
 		XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B * L_1 = ___loader0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 454));
 		NullCheck(L_0);
 		bool L_2;
 		L_2 = List_1_Contains_m1EF331FEB0E0402DDF0E134EBE2EC21114CEE5B0(L_0, L_1, /*hidden argument*/List_1_Contains_m1EF331FEB0E0402DDF0E134EBE2EC21114CEE5B0_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 454));
-		V_0 = L_2;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 449));
-		bool L_3 = V_0;
-		if (!L_3)
+		if (!L_2)
 		{
-			goto IL_0020;
+			goto IL_001b;
 		}
 	}
 	{
 		// return currentLoaders.Remove(loader);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 450));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 455));
-		List_1_t6331523A19E51FB87CA899920C03B10A48A562B0 * L_4;
-		L_4 = XRManagerSettings_get_currentLoaders_m1DF4A3AE134A1EE9FC00BB15522F2CDBBE5D9430(__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 455));
-		XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B * L_5 = ___loader0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 456));
-		NullCheck(L_4);
-		bool L_6;
-		L_6 = List_1_Remove_m60EF64583D4A2159D8847CECE6668C505810914E(L_4, L_5, /*hidden argument*/List_1_Remove_m60EF64583D4A2159D8847CECE6668C505810914E_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 456));
-		V_1 = L_6;
-		goto IL_0024;
+		List_1_t6331523A19E51FB87CA899920C03B10A48A562B0 * L_3;
+		L_3 = XRManagerSettings_get_currentLoaders_m1DF4A3AE134A1EE9FC00BB15522F2CDBBE5D9430_inline(__this, /*hidden argument*/NULL);
+		XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B * L_4 = ___loader0;
+		NullCheck(L_3);
+		bool L_5;
+		L_5 = List_1_Remove_m60EF64583D4A2159D8847CECE6668C505810914E(L_3, L_4, /*hidden argument*/List_1_Remove_m60EF64583D4A2159D8847CECE6668C505810914E_RuntimeMethod_var);
+		return L_5;
 	}
 
-IL_0020:
+IL_001b:
 	{
 		// return true;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 451));
-		V_1 = (bool)1;
-		goto IL_0024;
-	}
-
-IL_0024:
-	{
-		// }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 452));
-		bool L_7 = V_1;
-		return L_7;
+		return (bool)1;
 	}
 }
 // System.Boolean UnityEngine.XR.Management.XRManagerSettings::TrySetLoaders(System.Collections.Generic.List`1<UnityEngine.XR.Management.XRLoader>)
@@ -4412,19 +3203,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XRManagerSettings_TrySetLoaders_m8431B99
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_Dispose_m90A4F0B5CA0D3890D8D3E4676EE09E17B22AA9C7_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_MoveNext_m19D8DC887F99E56196FA26536373CE0E192D6741_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_get_Current_m7EF1367FE7BF714A357AD14CE9116844D666EAF8_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_t5E925E051A8E0B9BEF75F1250A9B42E275E89FCF_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_Clear_mCE56A79EA71D5FE0DE5FC8999626282CA04310DE_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_GetEnumerator_m9F891CF9308557447A884247550828A4932787EC_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1__ctor_m82ECFD0D827C0B490A570BBDF6CC9DE255D2F3E0_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_t6331523A19E51FB87CA899920C03B10A48A562B0_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_t6331523A19E51FB87CA899920C03B10A48A562B0_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRManagerSettings_TrySetLoaders_m8431B99D6193EFAAFAEA7983C80B4F36EB86D1FD_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F_0_0_0_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	List_1_t6331523A19E51FB87CA899920C03B10A48A562B0 * V_0 = NULL;
@@ -4432,160 +3217,106 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XRManagerSettings_TrySetLoaders_m8431B99
 	memset((&V_1), 0, sizeof(V_1));
 	XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B * V_2 = NULL;
 	bool V_3 = false;
-	bool V_4 = false;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___reorderedLoaders0));
-	DECLARE_METHOD_LOCALS(methodExecutionContextLocals, (&V_0), (&V_2));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, XRManagerSettings_TrySetLoaders_m8431B99D6193EFAAFAEA7983C80B4F36EB86D1FD_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, methodExecutionContextLocals);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 457));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Management + 458));
 	Exception_t * __last_unhandled_exception = 0;
 	il2cpp::utils::ExceptionSupportStack<int32_t, 2> __leave_targets;
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 459));
 		// var originalLoaders = new List<XRLoader>(activeLoaders);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 460));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 477));
 		RuntimeObject* L_0;
 		L_0 = XRManagerSettings_get_activeLoaders_m9F30D886C1EDE39B17981230C965EF1DA95F98F4_inline(__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 477));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 478));
 		List_1_t6331523A19E51FB87CA899920C03B10A48A562B0 * L_1 = (List_1_t6331523A19E51FB87CA899920C03B10A48A562B0 *)il2cpp_codegen_object_new(List_1_t6331523A19E51FB87CA899920C03B10A48A562B0_il2cpp_TypeInfo_var);
 		List_1__ctor_m82ECFD0D827C0B490A570BBDF6CC9DE255D2F3E0(L_1, L_0, /*hidden argument*/List_1__ctor_m82ECFD0D827C0B490A570BBDF6CC9DE255D2F3E0_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 478));
 		V_0 = L_1;
 		// currentLoaders.Clear();
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 461));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 479));
 		List_1_t6331523A19E51FB87CA899920C03B10A48A562B0 * L_2;
-		L_2 = XRManagerSettings_get_currentLoaders_m1DF4A3AE134A1EE9FC00BB15522F2CDBBE5D9430(__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 479));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 480));
+		L_2 = XRManagerSettings_get_currentLoaders_m1DF4A3AE134A1EE9FC00BB15522F2CDBBE5D9430_inline(__this, /*hidden argument*/NULL);
 		NullCheck(L_2);
 		List_1_Clear_mCE56A79EA71D5FE0DE5FC8999626282CA04310DE(L_2, /*hidden argument*/List_1_Clear_mCE56A79EA71D5FE0DE5FC8999626282CA04310DE_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 480));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 462));
 		// foreach (var loader in reorderedLoaders)
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 463));
 		List_1_t6331523A19E51FB87CA899920C03B10A48A562B0 * L_3 = ___reorderedLoaders0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 481));
 		NullCheck(L_3);
 		Enumerator_t5E925E051A8E0B9BEF75F1250A9B42E275E89FCF  L_4;
 		L_4 = List_1_GetEnumerator_m9F891CF9308557447A884247550828A4932787EC(L_3, /*hidden argument*/List_1_GetEnumerator_m9F891CF9308557447A884247550828A4932787EC_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 481));
 		V_1 = L_4;
 	}
 
-IL_0021:
+IL_001e:
 	try
 	{ // begin try (depth: 1)
-		STORE_TRY_ID(methodExecutionContext, 0);
 		{
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 464));
-			goto IL_004a;
+			goto IL_003d;
 		}
 
-IL_0023:
+IL_0020:
 		{
 			// foreach (var loader in reorderedLoaders)
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 465));
-			STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 482));
 			XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B * L_5;
 			L_5 = Enumerator_get_Current_m7EF1367FE7BF714A357AD14CE9116844D666EAF8_inline((Enumerator_t5E925E051A8E0B9BEF75F1250A9B42E275E89FCF *)(&V_1), /*hidden argument*/Enumerator_get_Current_m7EF1367FE7BF714A357AD14CE9116844D666EAF8_RuntimeMethod_var);
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 482));
 			V_2 = L_5;
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 466));
 			// if (!TryAddLoader(loader))
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 467));
 			XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B * L_6 = V_2;
-			STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 483));
 			bool L_7;
 			L_7 = XRManagerSettings_TryAddLoader_mE3C59682B8C148AAE668477F15683EC97BA3718B(__this, L_6, (-1), /*hidden argument*/NULL);
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 483));
-			V_3 = (bool)((((int32_t)L_7) == ((int32_t)0))? 1 : 0);
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 468));
-			bool L_8 = V_3;
-			if (!L_8)
+			if (L_7)
 			{
-				goto IL_0049;
+				goto IL_003d;
 			}
 		}
 
-IL_003b:
+IL_0032:
 		{
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 469));
 			// currentLoaders = originalLoaders;
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 470));
-			List_1_t6331523A19E51FB87CA899920C03B10A48A562B0 * L_9 = V_0;
-			STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 484));
-			XRManagerSettings_set_currentLoaders_mF3807937DC20F875F4EF6229CC624EAA28B07F54(__this, L_9, /*hidden argument*/NULL);
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 484));
+			List_1_t6331523A19E51FB87CA899920C03B10A48A562B0 * L_8 = V_0;
+			XRManagerSettings_set_currentLoaders_mF3807937DC20F875F4EF6229CC624EAA28B07F54_inline(__this, L_8, /*hidden argument*/NULL);
 			// return false;
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 471));
-			V_4 = (bool)0;
-			IL2CPP_LEAVE(0x69, FINALLY_0055);
+			V_3 = (bool)0;
+			IL2CPP_LEAVE(0x58, FINALLY_0048);
 		}
 
-IL_0049:
-		{
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 472));
-		}
-
-IL_004a:
+IL_003d:
 		{
 			// foreach (var loader in reorderedLoaders)
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 473));
-			STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 485));
-			bool L_10;
-			L_10 = Enumerator_MoveNext_m19D8DC887F99E56196FA26536373CE0E192D6741((Enumerator_t5E925E051A8E0B9BEF75F1250A9B42E275E89FCF *)(&V_1), /*hidden argument*/Enumerator_MoveNext_m19D8DC887F99E56196FA26536373CE0E192D6741_RuntimeMethod_var);
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 485));
-			if (L_10)
+			bool L_9;
+			L_9 = Enumerator_MoveNext_m19D8DC887F99E56196FA26536373CE0E192D6741((Enumerator_t5E925E051A8E0B9BEF75F1250A9B42E275E89FCF *)(&V_1), /*hidden argument*/Enumerator_MoveNext_m19D8DC887F99E56196FA26536373CE0E192D6741_RuntimeMethod_var);
+			if (L_9)
 			{
-				goto IL_0023;
+				goto IL_0020;
 			}
 		}
 
-IL_0053:
+IL_0046:
 		{
-			IL2CPP_LEAVE(0x64, FINALLY_0055);
+			IL2CPP_LEAVE(0x56, FINALLY_0048);
 		}
 	} // end try (depth: 1)
 	catch(Il2CppExceptionWrapper& e)
 	{
 		__last_unhandled_exception = (Exception_t *)e.ex;
-		goto FINALLY_0055;
+		goto FINALLY_0048;
 	}
 
-FINALLY_0055:
+FINALLY_0048:
 	{ // begin finally (depth: 1)
-		STORE_TRY_ID(methodExecutionContext, -1);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 474));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 486));
 		Enumerator_Dispose_m90A4F0B5CA0D3890D8D3E4676EE09E17B22AA9C7((Enumerator_t5E925E051A8E0B9BEF75F1250A9B42E275E89FCF *)(&V_1), /*hidden argument*/Enumerator_Dispose_m90A4F0B5CA0D3890D8D3E4676EE09E17B22AA9C7_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 486));
-		IL2CPP_END_FINALLY(85)
+		IL2CPP_END_FINALLY(72)
 	} // end finally (depth: 1)
-	IL2CPP_CLEANUP(85)
+	IL2CPP_CLEANUP(72)
 	{
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
-		IL2CPP_JUMP_TBL(0x69, IL_0069)
-		IL2CPP_JUMP_TBL(0x64, IL_0064)
+		IL2CPP_JUMP_TBL(0x58, IL_0058)
+		IL2CPP_JUMP_TBL(0x56, IL_0056)
 	}
 
-IL_0064:
+IL_0056:
 	{
 		// return true;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 475));
-		V_4 = (bool)1;
-		goto IL_0069;
+		return (bool)1;
 	}
 
-IL_0069:
+IL_0058:
 	{
 		// }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 476));
-		bool L_11 = V_4;
-		return L_11;
+		bool L_10 = V_3;
+		return L_10;
 	}
 }
 // System.Boolean UnityEngine.XR.Management.XRManagerSettings::CheckGraphicsAPICompatibility(UnityEngine.XR.Management.XRLoader)
@@ -4594,132 +3325,70 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XRManagerSettings_CheckGraphicsAPICompat
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_tEB68BCBEB8EFD60F8043C67146DC05E7F50F374B_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GraphicsDeviceType_t531071CD9311C868D1279D2550F83670D18FB779_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GraphicsDeviceType_t531071CD9311C868D1279D2550F83670D18FB779_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_Contains_mDEC6135EE93032A5029A986B35022BFD7B4379F4_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_get_Count_mDC5A0FFB7BA8225B30C2C7BE2AFC9895D9F4D597_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_t00813CFE30B665F36E8422B4070F39D77D700541_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRManagerSettings_CheckGraphicsAPICompatibility_m0A5AABEC0CF864942733D746120B368C5605FA63_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral6B8B436F01039B99374349DB664935E4E9FA600B);
 		s_Il2CppMethodInitialized = true;
 	}
 	int32_t V_0 = 0;
 	List_1_t00813CFE30B665F36E8422B4070F39D77D700541 * V_1 = NULL;
-	bool V_2 = false;
-	bool V_3 = false;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___loader0));
-	DECLARE_METHOD_LOCALS(methodExecutionContextLocals, (&V_0), (&V_1));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, XRManagerSettings_CheckGraphicsAPICompatibility_m0A5AABEC0CF864942733D746120B368C5605FA63_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, methodExecutionContextLocals);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 487));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Management + 488));
-	int32_t G_B3_0 = 0;
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 489));
 		// GraphicsDeviceType deviceType = SystemInfo.graphicsDeviceType;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 490));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 499));
 		int32_t L_0;
 		L_0 = SystemInfo_get_graphicsDeviceType_mC207E6B2221AD5AB39831C2412FF7FBD2F43CC02(/*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 499));
 		V_0 = L_0;
 		// List<GraphicsDeviceType> supportedDeviceTypes = loader.GetSupportedGraphicsDeviceTypes(false);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 491));
 		XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B * L_1 = ___loader0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 500));
 		NullCheck(L_1);
 		List_1_t00813CFE30B665F36E8422B4070F39D77D700541 * L_2;
 		L_2 = VirtFuncInvoker1< List_1_t00813CFE30B665F36E8422B4070F39D77D700541 *, bool >::Invoke(9 /* System.Collections.Generic.List`1<UnityEngine.Rendering.GraphicsDeviceType> UnityEngine.XR.Management.XRLoader::GetSupportedGraphicsDeviceTypes(System.Boolean) */, L_1, (bool)0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 500));
 		V_1 = L_2;
 		// if (supportedDeviceTypes.Count > 0 && !supportedDeviceTypes.Contains(deviceType))
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 492));
 		List_1_t00813CFE30B665F36E8422B4070F39D77D700541 * L_3 = V_1;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 501));
 		NullCheck(L_3);
 		int32_t L_4;
 		L_4 = List_1_get_Count_mDC5A0FFB7BA8225B30C2C7BE2AFC9895D9F4D597_inline(L_3, /*hidden argument*/List_1_get_Count_mDC5A0FFB7BA8225B30C2C7BE2AFC9895D9F4D597_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 501));
 		if ((((int32_t)L_4) <= ((int32_t)0)))
 		{
-			goto IL_0024;
+			goto IL_0044;
 		}
 	}
 	{
 		List_1_t00813CFE30B665F36E8422B4070F39D77D700541 * L_5 = V_1;
 		int32_t L_6 = V_0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 502));
 		NullCheck(L_5);
 		bool L_7;
 		L_7 = List_1_Contains_mDEC6135EE93032A5029A986B35022BFD7B4379F4(L_5, L_6, /*hidden argument*/List_1_Contains_mDEC6135EE93032A5029A986B35022BFD7B4379F4_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 502));
-		G_B3_0 = ((((int32_t)L_7) == ((int32_t)0))? 1 : 0);
-		goto IL_0025;
-	}
-
-IL_0024:
-	{
-		G_B3_0 = 0;
-	}
-
-IL_0025:
-	{
-		V_2 = (bool)G_B3_0;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 493));
-		bool L_8 = V_2;
-		if (!L_8)
+		if (L_7)
 		{
-			goto IL_0051;
+			goto IL_0044;
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 494));
 		// Debug.LogWarning(String.Format("The {0} does not support the initialized graphics device, {1}. Please change the preffered Graphics API in PlayerSettings. Attempting to start the next XR loader.", loader.name, deviceType.ToString()));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 495));
-		XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B * L_9 = ___loader0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 503));
-		NullCheck(L_9);
-		String_t* L_10;
-		L_10 = Object_get_name_m0C7BC870ED2F0DC5A2FB09628136CD7D1CB82CFB(L_9, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 503));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 504));
-		RuntimeObject * L_11 = Box(GraphicsDeviceType_t531071CD9311C868D1279D2550F83670D18FB779_il2cpp_TypeInfo_var, (&V_0));
-		NullCheck(L_11);
+		XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B * L_8 = ___loader0;
+		NullCheck(L_8);
+		String_t* L_9;
+		L_9 = Object_get_name_m0C7BC870ED2F0DC5A2FB09628136CD7D1CB82CFB(L_8, /*hidden argument*/NULL);
+		RuntimeObject * L_10 = Box(GraphicsDeviceType_t531071CD9311C868D1279D2550F83670D18FB779_il2cpp_TypeInfo_var, (&V_0));
+		NullCheck(L_10);
+		String_t* L_11;
+		L_11 = VirtFuncInvoker0< String_t* >::Invoke(3 /* System.String System.Object::ToString() */, L_10);
+		V_0 = *(int32_t*)UnBox(L_10);
 		String_t* L_12;
-		L_12 = VirtFuncInvoker0< String_t* >::Invoke(3 /* System.String System.Object::ToString() */, L_11);
-		V_0 = *(int32_t*)UnBox(L_11);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 504));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 505));
-		String_t* L_13;
-		L_13 = String_Format_m8D1CB0410C35E052A53AE957C914C841E54BAB66(_stringLiteral6B8B436F01039B99374349DB664935E4E9FA600B, L_10, L_12, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 505));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 506));
+		L_12 = String_Format_m8D1CB0410C35E052A53AE957C914C841E54BAB66(_stringLiteral6B8B436F01039B99374349DB664935E4E9FA600B, L_9, L_11, /*hidden argument*/NULL);
 		IL2CPP_RUNTIME_CLASS_INIT(Debug_tEB68BCBEB8EFD60F8043C67146DC05E7F50F374B_il2cpp_TypeInfo_var);
-		Debug_LogWarning_m24085D883C9E74D7AB423F0625E13259923960E7(L_13, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 506));
+		Debug_LogWarning_m24085D883C9E74D7AB423F0625E13259923960E7(L_12, /*hidden argument*/NULL);
 		// return false;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 496));
-		V_3 = (bool)0;
-		goto IL_0055;
+		return (bool)0;
 	}
 
-IL_0051:
+IL_0044:
 	{
 		// return true;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 497));
-		V_3 = (bool)1;
-		goto IL_0055;
-	}
-
-IL_0055:
-	{
-		// }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 498));
-		bool L_14 = V_3;
-		return L_14;
+		return (bool)1;
 	}
 }
 // System.Void UnityEngine.XR.Management.XRManagerSettings::StartSubsystems()
@@ -4728,89 +3397,54 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRManagerSettings_StartSubsystems_mB9F50
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_tEB68BCBEB8EFD60F8043C67146DC05E7F50F374B_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tF2F3778131EFF286AF62B7B013A170F95A91571A_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRManagerSettings_StartSubsystems_mB9F502956C1FC6AD6D421CD36C3980B095B4282E_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralAE0ABAD544C4FF6309990ACB67971500C1591984);
 		s_Il2CppMethodInitialized = true;
 	}
-	bool V_0 = false;
-	bool V_1 = false;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, XRManagerSettings_StartSubsystems_mB9F502956C1FC6AD6D421CD36C3980B095B4282E_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 507));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Management + 508));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 509));
 		// if (!m_InitializationComplete)
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 510));
 		bool L_0 = __this->get_m_InitializationComplete_4();
-		V_0 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 511));
-		bool L_1 = V_0;
-		if (!L_1)
+		if (L_0)
 		{
-			goto IL_001c;
+			goto IL_0013;
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 512));
 		// Debug.LogWarning(
 		//     "Call to StartSubsystems without an initialized manager." +
 		//     "Please make sure wait for initialization to complete before calling this API.");
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 513));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 521));
 		IL2CPP_RUNTIME_CLASS_INIT(Debug_tEB68BCBEB8EFD60F8043C67146DC05E7F50F374B_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m24085D883C9E74D7AB423F0625E13259923960E7(_stringLiteralAE0ABAD544C4FF6309990ACB67971500C1591984, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 521));
 		// return;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 514));
-		goto IL_003a;
+		return;
 	}
 
-IL_001c:
+IL_0013:
 	{
 		// if (activeLoader != null)
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 515));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 522));
-		XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B * L_2;
-		L_2 = XRManagerSettings_get_activeLoader_mB1950E58B1DD1774EB2798CEBA6D3C371CE8F1D8_inline(__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 522));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 523));
+		XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B * L_1;
+		L_1 = XRManagerSettings_get_activeLoader_mB1950E58B1DD1774EB2798CEBA6D3C371CE8F1D8_inline(__this, /*hidden argument*/NULL);
 		IL2CPP_RUNTIME_CLASS_INIT(Object_tF2F3778131EFF286AF62B7B013A170F95A91571A_il2cpp_TypeInfo_var);
-		bool L_3;
-		L_3 = Object_op_Inequality_mE1F187520BD83FB7D86A6D850710C4D42B864E90(L_2, (Object_tF2F3778131EFF286AF62B7B013A170F95A91571A *)NULL, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 523));
-		V_1 = L_3;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 516));
-		bool L_4 = V_1;
-		if (!L_4)
+		bool L_2;
+		L_2 = Object_op_Inequality_mE1F187520BD83FB7D86A6D850710C4D42B864E90(L_1, (Object_tF2F3778131EFF286AF62B7B013A170F95A91571A *)NULL, /*hidden argument*/NULL);
+		if (!L_2)
 		{
-			goto IL_003a;
+			goto IL_002d;
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 517));
 		// activeLoader.Start();
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 518));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 524));
-		XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B * L_5;
-		L_5 = XRManagerSettings_get_activeLoader_mB1950E58B1DD1774EB2798CEBA6D3C371CE8F1D8_inline(__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 524));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 525));
-		NullCheck(L_5);
-		bool L_6;
-		L_6 = VirtFuncInvoker0< bool >::Invoke(5 /* System.Boolean UnityEngine.XR.Management.XRLoader::Start() */, L_5);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 525));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 519));
+		XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B * L_3;
+		L_3 = XRManagerSettings_get_activeLoader_mB1950E58B1DD1774EB2798CEBA6D3C371CE8F1D8_inline(__this, /*hidden argument*/NULL);
+		NullCheck(L_3);
+		bool L_4;
+		L_4 = VirtFuncInvoker0< bool >::Invoke(5 /* System.Boolean UnityEngine.XR.Management.XRLoader::Start() */, L_3);
 	}
 
-IL_003a:
+IL_002d:
 	{
 		// }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 520));
 		return;
 	}
 }
@@ -4820,89 +3454,54 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRManagerSettings_StopSubsystems_m7FF355
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_tEB68BCBEB8EFD60F8043C67146DC05E7F50F374B_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tF2F3778131EFF286AF62B7B013A170F95A91571A_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRManagerSettings_StopSubsystems_m7FF3553EEF8C7AB1D58A3D9034A25D8C31D30FFC_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral46E098C88DA5E70C12C778EED75B14DE754DBDB6);
 		s_Il2CppMethodInitialized = true;
 	}
-	bool V_0 = false;
-	bool V_1 = false;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, XRManagerSettings_StopSubsystems_m7FF3553EEF8C7AB1D58A3D9034A25D8C31D30FFC_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 526));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Management + 527));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 528));
 		// if (!m_InitializationComplete)
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 529));
 		bool L_0 = __this->get_m_InitializationComplete_4();
-		V_0 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 530));
-		bool L_1 = V_0;
-		if (!L_1)
+		if (L_0)
 		{
-			goto IL_001c;
+			goto IL_0013;
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 531));
 		// Debug.LogWarning(
 		//     "Call to StopSubsystems without an initialized manager." +
 		//     "Please make sure wait for initialization to complete before calling this API.");
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 532));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 540));
 		IL2CPP_RUNTIME_CLASS_INIT(Debug_tEB68BCBEB8EFD60F8043C67146DC05E7F50F374B_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m24085D883C9E74D7AB423F0625E13259923960E7(_stringLiteral46E098C88DA5E70C12C778EED75B14DE754DBDB6, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 540));
 		// return;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 533));
-		goto IL_003a;
+		return;
 	}
 
-IL_001c:
+IL_0013:
 	{
 		// if (activeLoader != null)
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 534));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 541));
-		XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B * L_2;
-		L_2 = XRManagerSettings_get_activeLoader_mB1950E58B1DD1774EB2798CEBA6D3C371CE8F1D8_inline(__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 541));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 542));
+		XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B * L_1;
+		L_1 = XRManagerSettings_get_activeLoader_mB1950E58B1DD1774EB2798CEBA6D3C371CE8F1D8_inline(__this, /*hidden argument*/NULL);
 		IL2CPP_RUNTIME_CLASS_INIT(Object_tF2F3778131EFF286AF62B7B013A170F95A91571A_il2cpp_TypeInfo_var);
-		bool L_3;
-		L_3 = Object_op_Inequality_mE1F187520BD83FB7D86A6D850710C4D42B864E90(L_2, (Object_tF2F3778131EFF286AF62B7B013A170F95A91571A *)NULL, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 542));
-		V_1 = L_3;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 535));
-		bool L_4 = V_1;
-		if (!L_4)
+		bool L_2;
+		L_2 = Object_op_Inequality_mE1F187520BD83FB7D86A6D850710C4D42B864E90(L_1, (Object_tF2F3778131EFF286AF62B7B013A170F95A91571A *)NULL, /*hidden argument*/NULL);
+		if (!L_2)
 		{
-			goto IL_003a;
+			goto IL_002d;
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 536));
 		// activeLoader.Stop();
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 537));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 543));
-		XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B * L_5;
-		L_5 = XRManagerSettings_get_activeLoader_mB1950E58B1DD1774EB2798CEBA6D3C371CE8F1D8_inline(__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 543));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 544));
-		NullCheck(L_5);
-		bool L_6;
-		L_6 = VirtFuncInvoker0< bool >::Invoke(6 /* System.Boolean UnityEngine.XR.Management.XRLoader::Stop() */, L_5);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 544));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 538));
+		XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B * L_3;
+		L_3 = XRManagerSettings_get_activeLoader_mB1950E58B1DD1774EB2798CEBA6D3C371CE8F1D8_inline(__this, /*hidden argument*/NULL);
+		NullCheck(L_3);
+		bool L_4;
+		L_4 = VirtFuncInvoker0< bool >::Invoke(6 /* System.Boolean UnityEngine.XR.Management.XRLoader::Stop() */, L_3);
 	}
 
-IL_003a:
+IL_002d:
 	{
 		// }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 539));
 		return;
 	}
 }
@@ -4912,390 +3511,175 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRManagerSettings_DeinitializeLoader_m6A
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_tEB68BCBEB8EFD60F8043C67146DC05E7F50F374B_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tF2F3778131EFF286AF62B7B013A170F95A91571A_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRManagerSettings_DeinitializeLoader_m6AD4F079818DF78946C99AD8D49E3D343DAAF290_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral382C2D644BFA222F1F3E9ECB531AE6F3D95044FF);
 		s_Il2CppMethodInitialized = true;
 	}
-	bool V_0 = false;
-	bool V_1 = false;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, XRManagerSettings_DeinitializeLoader_m6AD4F079818DF78946C99AD8D49E3D343DAAF290_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 545));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Management + 546));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 547));
 		// if (!m_InitializationComplete)
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 548));
 		bool L_0 = __this->get_m_InitializationComplete_4();
-		V_0 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 549));
-		bool L_1 = V_0;
-		if (!L_1)
+		if (L_0)
 		{
-			goto IL_001c;
+			goto IL_0013;
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 550));
 		// Debug.LogWarning(
 		//     "Call to DeinitializeLoader without an initialized manager." +
 		//     "Please make sure wait for initialization to complete before calling this API.");
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 551));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 562));
 		IL2CPP_RUNTIME_CLASS_INIT(Debug_tEB68BCBEB8EFD60F8043C67146DC05E7F50F374B_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m24085D883C9E74D7AB423F0625E13259923960E7(_stringLiteral382C2D644BFA222F1F3E9ECB531AE6F3D95044FF, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 562));
 		// return;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 552));
-		goto IL_0050;
+		return;
 	}
 
-IL_001c:
+IL_0013:
 	{
 		// StopSubsystems();
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 553));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 563));
 		XRManagerSettings_StopSubsystems_m7FF3553EEF8C7AB1D58A3D9034A25D8C31D30FFC(__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 563));
 		// if (activeLoader != null)
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 554));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 564));
-		XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B * L_2;
-		L_2 = XRManagerSettings_get_activeLoader_mB1950E58B1DD1774EB2798CEBA6D3C371CE8F1D8_inline(__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 564));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 565));
+		XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B * L_1;
+		L_1 = XRManagerSettings_get_activeLoader_mB1950E58B1DD1774EB2798CEBA6D3C371CE8F1D8_inline(__this, /*hidden argument*/NULL);
 		IL2CPP_RUNTIME_CLASS_INIT(Object_tF2F3778131EFF286AF62B7B013A170F95A91571A_il2cpp_TypeInfo_var);
-		bool L_3;
-		L_3 = Object_op_Inequality_mE1F187520BD83FB7D86A6D850710C4D42B864E90(L_2, (Object_tF2F3778131EFF286AF62B7B013A170F95A91571A *)NULL, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 565));
-		V_1 = L_3;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 555));
-		bool L_4 = V_1;
-		if (!L_4)
+		bool L_2;
+		L_2 = Object_op_Inequality_mE1F187520BD83FB7D86A6D850710C4D42B864E90(L_1, (Object_tF2F3778131EFF286AF62B7B013A170F95A91571A *)NULL, /*hidden argument*/NULL);
+		if (!L_2)
 		{
-			goto IL_0049;
+			goto IL_003a;
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 556));
 		// activeLoader.Deinitialize();
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 557));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 566));
-		XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B * L_5;
-		L_5 = XRManagerSettings_get_activeLoader_mB1950E58B1DD1774EB2798CEBA6D3C371CE8F1D8_inline(__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 566));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 567));
-		NullCheck(L_5);
-		bool L_6;
-		L_6 = VirtFuncInvoker0< bool >::Invoke(7 /* System.Boolean UnityEngine.XR.Management.XRLoader::Deinitialize() */, L_5);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 567));
+		XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B * L_3;
+		L_3 = XRManagerSettings_get_activeLoader_mB1950E58B1DD1774EB2798CEBA6D3C371CE8F1D8_inline(__this, /*hidden argument*/NULL);
+		NullCheck(L_3);
+		bool L_4;
+		L_4 = VirtFuncInvoker0< bool >::Invoke(7 /* System.Boolean UnityEngine.XR.Management.XRLoader::Deinitialize() */, L_3);
 		// activeLoader = null;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 558));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 568));
 		XRManagerSettings_set_activeLoader_m77ACE8749C38314C5DA2A6A4F6551DDBC552EC72_inline(__this, (XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B *)NULL, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 568));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 559));
 	}
 
-IL_0049:
+IL_003a:
 	{
 		// m_InitializationComplete = false;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 560));
 		__this->set_m_InitializationComplete_4((bool)0);
-	}
-
-IL_0050:
-	{
 		// }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 561));
 		return;
 	}
 }
 // System.Void UnityEngine.XR.Management.XRManagerSettings::Start()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRManagerSettings_Start_mC3C0B0D138802215C7F3E441D5D517F875A4E582 (XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRManagerSettings_Start_mC3C0B0D138802215C7F3E441D5D517F875A4E582_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	bool V_0 = false;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, XRManagerSettings_Start_mC3C0B0D138802215C7F3E441D5D517F875A4E582_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 569));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Management + 570));
-	int32_t G_B3_0 = 0;
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 571));
 		// if (automaticLoading && automaticRunning)
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 572));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 578));
 		bool L_0;
-		L_0 = XRManagerSettings_get_automaticLoading_m2F854EC3F5A23B77C3819988414EEA070B3A067B(__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 578));
+		L_0 = XRManagerSettings_get_automaticLoading_m2F854EC3F5A23B77C3819988414EEA070B3A067B_inline(__this, /*hidden argument*/NULL);
 		if (!L_0)
 		{
-			goto IL_0011;
+			goto IL_0016;
 		}
 	}
 	{
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 579));
 		bool L_1;
-		L_1 = XRManagerSettings_get_automaticRunning_m35A499E67629829BB4E89952FC3778D55D685890(__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 579));
-		G_B3_0 = ((int32_t)(L_1));
-		goto IL_0012;
-	}
-
-IL_0011:
-	{
-		G_B3_0 = 0;
-	}
-
-IL_0012:
-	{
-		V_0 = (bool)G_B3_0;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 573));
-		bool L_2 = V_0;
-		if (!L_2)
+		L_1 = XRManagerSettings_get_automaticRunning_m35A499E67629829BB4E89952FC3778D55D685890_inline(__this, /*hidden argument*/NULL);
+		if (!L_1)
 		{
-			goto IL_001f;
+			goto IL_0016;
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 574));
 		// StartSubsystems();
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 575));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 580));
 		XRManagerSettings_StartSubsystems_mB9F502956C1FC6AD6D421CD36C3980B095B4282E(__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 580));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 576));
 	}
 
-IL_001f:
+IL_0016:
 	{
 		// }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 577));
 		return;
 	}
 }
 // System.Void UnityEngine.XR.Management.XRManagerSettings::OnDisable()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRManagerSettings_OnDisable_mA755DECB077780BDAB72067FBB69DB25452BC782 (XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRManagerSettings_OnDisable_mA755DECB077780BDAB72067FBB69DB25452BC782_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	bool V_0 = false;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, XRManagerSettings_OnDisable_mA755DECB077780BDAB72067FBB69DB25452BC782_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 581));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Management + 582));
-	int32_t G_B3_0 = 0;
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 583));
 		// if (automaticLoading && automaticRunning)
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 584));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 590));
 		bool L_0;
-		L_0 = XRManagerSettings_get_automaticLoading_m2F854EC3F5A23B77C3819988414EEA070B3A067B(__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 590));
+		L_0 = XRManagerSettings_get_automaticLoading_m2F854EC3F5A23B77C3819988414EEA070B3A067B_inline(__this, /*hidden argument*/NULL);
 		if (!L_0)
 		{
-			goto IL_0011;
+			goto IL_0016;
 		}
 	}
 	{
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 591));
 		bool L_1;
-		L_1 = XRManagerSettings_get_automaticRunning_m35A499E67629829BB4E89952FC3778D55D685890(__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 591));
-		G_B3_0 = ((int32_t)(L_1));
-		goto IL_0012;
-	}
-
-IL_0011:
-	{
-		G_B3_0 = 0;
-	}
-
-IL_0012:
-	{
-		V_0 = (bool)G_B3_0;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 585));
-		bool L_2 = V_0;
-		if (!L_2)
+		L_1 = XRManagerSettings_get_automaticRunning_m35A499E67629829BB4E89952FC3778D55D685890_inline(__this, /*hidden argument*/NULL);
+		if (!L_1)
 		{
-			goto IL_001f;
+			goto IL_0016;
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 586));
 		// StopSubsystems();
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 587));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 592));
 		XRManagerSettings_StopSubsystems_m7FF3553EEF8C7AB1D58A3D9034A25D8C31D30FFC(__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 592));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 588));
 	}
 
-IL_001f:
+IL_0016:
 	{
 		// }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 589));
 		return;
 	}
 }
 // System.Void UnityEngine.XR.Management.XRManagerSettings::OnDestroy()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRManagerSettings_OnDestroy_m1254BD5929E70938B2906C3E04A54BB6F2EAC793 (XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRManagerSettings_OnDestroy_m1254BD5929E70938B2906C3E04A54BB6F2EAC793_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	bool V_0 = false;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, XRManagerSettings_OnDestroy_m1254BD5929E70938B2906C3E04A54BB6F2EAC793_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 593));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Management + 594));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 595));
 		// if (automaticLoading)
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 596));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 602));
 		bool L_0;
-		L_0 = XRManagerSettings_get_automaticLoading_m2F854EC3F5A23B77C3819988414EEA070B3A067B(__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 602));
-		V_0 = L_0;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 597));
-		bool L_1 = V_0;
-		if (!L_1)
+		L_0 = XRManagerSettings_get_automaticLoading_m2F854EC3F5A23B77C3819988414EEA070B3A067B_inline(__this, /*hidden argument*/NULL);
+		if (!L_0)
 		{
-			goto IL_0014;
+			goto IL_000e;
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 598));
 		// DeinitializeLoader();
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 599));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 603));
 		XRManagerSettings_DeinitializeLoader_m6AD4F079818DF78946C99AD8D49E3D343DAAF290(__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 603));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 600));
 	}
 
-IL_0014:
+IL_000e:
 	{
 		// }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 601));
 		return;
 	}
 }
 // System.Collections.Generic.List`1<UnityEngine.XR.Management.XRLoader> UnityEngine.XR.Management.XRManagerSettings::get_currentLoaders()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_t6331523A19E51FB87CA899920C03B10A48A562B0 * XRManagerSettings_get_currentLoaders_m1DF4A3AE134A1EE9FC00BB15522F2CDBBE5D9430 (XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_t6331523A19E51FB87CA899920C03B10A48A562B0_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRManagerSettings_get_currentLoaders_m1DF4A3AE134A1EE9FC00BB15522F2CDBBE5D9430_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	List_1_t6331523A19E51FB87CA899920C03B10A48A562B0 * V_0 = NULL;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, XRManagerSettings_get_currentLoaders_m1DF4A3AE134A1EE9FC00BB15522F2CDBBE5D9430_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 604));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Management + 605));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 606));
 		// get { return m_Loaders; }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 607));
 		List_1_t6331523A19E51FB87CA899920C03B10A48A562B0 * L_0 = __this->get_m_Loaders_8();
-		V_0 = L_0;
-		goto IL_000a;
-	}
-
-IL_000a:
-	{
-		// get { return m_Loaders; }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 608));
-		List_1_t6331523A19E51FB87CA899920C03B10A48A562B0 * L_1 = V_0;
-		return L_1;
+		return L_0;
 	}
 }
 // System.Void UnityEngine.XR.Management.XRManagerSettings::set_currentLoaders(System.Collections.Generic.List`1<UnityEngine.XR.Management.XRLoader>)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRManagerSettings_set_currentLoaders_mF3807937DC20F875F4EF6229CC624EAA28B07F54 (XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * __this, List_1_t6331523A19E51FB87CA899920C03B10A48A562B0 * ___value0, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRManagerSettings_set_currentLoaders_mF3807937DC20F875F4EF6229CC624EAA28B07F54_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___value0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, XRManagerSettings_set_currentLoaders_mF3807937DC20F875F4EF6229CC624EAA28B07F54_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 609));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Management + 610));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 611));
 		// set { m_Loaders = value; }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 612));
 		List_1_t6331523A19E51FB87CA899920C03B10A48A562B0 * L_0 = ___value0;
 		__this->set_m_Loaders_8(L_0);
 		// set { m_Loaders = value; }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 613));
 		return;
 	}
 }
 // System.Collections.Generic.HashSet`1<UnityEngine.XR.Management.XRLoader> UnityEngine.XR.Management.XRManagerSettings::get_registeredLoaders()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR HashSet_1_t0BB7AD0707F32BD77A251670A64E2F9355AC13F6 * XRManagerSettings_get_registeredLoaders_mEDEE89F9BF880AA0C03BC4C6413CAA15264A7572 (XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&HashSet_1_t0BB7AD0707F32BD77A251670A64E2F9355AC13F6_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRManagerSettings_get_registeredLoaders_mEDEE89F9BF880AA0C03BC4C6413CAA15264A7572_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	HashSet_1_t0BB7AD0707F32BD77A251670A64E2F9355AC13F6 * V_0 = NULL;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, XRManagerSettings_get_registeredLoaders_mEDEE89F9BF880AA0C03BC4C6413CAA15264A7572_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 614));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Management + 615));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 616));
 		// get { return m_RegisteredLoaders; }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 617));
 		HashSet_1_t0BB7AD0707F32BD77A251670A64E2F9355AC13F6 * L_0 = __this->get_m_RegisteredLoaders_9();
-		V_0 = L_0;
-		goto IL_000a;
-	}
-
-IL_000a:
-	{
-		// get { return m_RegisteredLoaders; }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 618));
-		HashSet_1_t0BB7AD0707F32BD77A251670A64E2F9355AC13F6 * L_1 = V_0;
-		return L_1;
+		return L_0;
 	}
 }
 // System.Void UnityEngine.XR.Management.XRManagerSettings::.ctor()
@@ -5308,44 +3692,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRManagerSettings__ctor_m00CA8F7EAA0858E
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&HashSet_1_t0BB7AD0707F32BD77A251670A64E2F9355AC13F6_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1__ctor_mC89CC0C2318DA4814B4A860E7EDF82390819C439_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_t6331523A19E51FB87CA899920C03B10A48A562B0_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRManagerSettings__ctor_m00CA8F7EAA0858EC7F726043164C595B313A3881_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F_0_0_0_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, XRManagerSettings__ctor_m00CA8F7EAA0858EC7F726043164C595B313A3881_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 619));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Management + 620));
 	{
-		// bool m_InitializationComplete = false;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 621));
-		__this->set_m_InitializationComplete_4((bool)0);
-		// bool m_RequiresSettingsUpdate = false;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 622));
-		__this->set_m_RequiresSettingsUpdate_5((bool)0);
-		// bool m_AutomaticLoading = false;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 623));
-		__this->set_m_AutomaticLoading_6((bool)0);
-		// bool m_AutomaticRunning = false;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 624));
-		__this->set_m_AutomaticRunning_7((bool)0);
 		// List<XRLoader> m_Loaders = new List<XRLoader>();
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 625));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 627));
 		List_1_t6331523A19E51FB87CA899920C03B10A48A562B0 * L_0 = (List_1_t6331523A19E51FB87CA899920C03B10A48A562B0 *)il2cpp_codegen_object_new(List_1_t6331523A19E51FB87CA899920C03B10A48A562B0_il2cpp_TypeInfo_var);
 		List_1__ctor_mC89CC0C2318DA4814B4A860E7EDF82390819C439(L_0, /*hidden argument*/List_1__ctor_mC89CC0C2318DA4814B4A860E7EDF82390819C439_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 627));
 		__this->set_m_Loaders_8(L_0);
 		// HashSet<XRLoader> m_RegisteredLoaders = new HashSet<XRLoader>();
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 626));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 628));
 		HashSet_1_t0BB7AD0707F32BD77A251670A64E2F9355AC13F6 * L_1 = (HashSet_1_t0BB7AD0707F32BD77A251670A64E2F9355AC13F6 *)il2cpp_codegen_object_new(HashSet_1_t0BB7AD0707F32BD77A251670A64E2F9355AC13F6_il2cpp_TypeInfo_var);
 		HashSet_1__ctor_mB09B56AC059585C15C0A749AD8CA32F81FB35D69(L_1, /*hidden argument*/HashSet_1__ctor_mB09B56AC059585C15C0A749AD8CA32F81FB35D69_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 628));
 		__this->set_m_RegisteredLoaders_9(L_1);
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 629));
 		ScriptableObject__ctor_m8DAE6CDCFA34E16F2543B02CC3669669FF203063(__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 629));
 		return;
 	}
 }
@@ -5360,14 +3718,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRManagerSettings__ctor_m00CA8F7EAA0858E
 // System.Void UnityEngine.XR.Management.XRManagerSettings/<InitializeLoader>d__24::.ctor(System.Int32)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CInitializeLoaderU3Ed__24__ctor_m0E4D3E9793A0D92D6A3C53D875CFBA384AFA280E (U3CInitializeLoaderU3Ed__24_tBE52372328AAFF3147B0E3361196652E33780D08 * __this, int32_t ___U3CU3E1__state0, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CInitializeLoaderU3Ed__24__ctor_m0E4D3E9793A0D92D6A3C53D875CFBA384AFA280E_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, U3CInitializeLoaderU3Ed__24__ctor_m0E4D3E9793A0D92D6A3C53D875CFBA384AFA280E_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		Object__ctor_m88880E0413421D13FD95325EDCE231707CE1F405(__this, /*hidden argument*/NULL);
 		int32_t L_0 = ___U3CU3E1__state0;
@@ -5378,15 +3728,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CInitializeLoaderU3Ed__24__ctor_m0E4D3
 // System.Void UnityEngine.XR.Management.XRManagerSettings/<InitializeLoader>d__24::System.IDisposable.Dispose()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CInitializeLoaderU3Ed__24_System_IDisposable_Dispose_mAE9903D2BB332F700807D7E234E81A4C40175A43 (U3CInitializeLoaderU3Ed__24_tBE52372328AAFF3147B0E3361196652E33780D08 * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CInitializeLoaderU3Ed__24_System_IDisposable_Dispose_mAE9903D2BB332F700807D7E234E81A4C40175A43_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	int32_t V_0 = 0;
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, U3CInitializeLoaderU3Ed__24_System_IDisposable_Dispose_mAE9903D2BB332F700807D7E234E81A4C40175A43_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	Exception_t * __last_unhandled_exception = 0;
 	il2cpp::utils::ExceptionSupportStack<int32_t, 1> __leave_targets;
 	{
@@ -5395,59 +3737,44 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CInitializeLoaderU3Ed__24_System_IDisp
 		int32_t L_1 = V_0;
 		if ((((int32_t)L_1) == ((int32_t)((int32_t)-3))))
 		{
-			goto IL_0014;
+			goto IL_0010;
 		}
 	}
-	{
-		goto IL_000e;
-	}
-
-IL_000e:
 	{
 		int32_t L_2 = V_0;
-		if ((((int32_t)L_2) == ((int32_t)1)))
+		if ((!(((uint32_t)L_2) == ((uint32_t)1))))
 		{
-			goto IL_0014;
+			goto IL_001a;
 		}
 	}
-	{
-		goto IL_0020;
-	}
 
-IL_0014:
+IL_0010:
 	{
 	}
 
-IL_0015:
+IL_0011:
 	try
 	{ // begin try (depth: 1)
-		STORE_TRY_ID(methodExecutionContext, 0);
-		IL2CPP_LEAVE(0x1E, FINALLY_0017);
+		IL2CPP_LEAVE(0x1A, FINALLY_0013);
 	} // end try (depth: 1)
 	catch(Il2CppExceptionWrapper& e)
 	{
 		__last_unhandled_exception = (Exception_t *)e.ex;
-		goto FINALLY_0017;
+		goto FINALLY_0013;
 	}
 
-FINALLY_0017:
+FINALLY_0013:
 	{ // begin finally (depth: 1)
-		STORE_TRY_ID(methodExecutionContext, -1);
 		U3CInitializeLoaderU3Ed__24_U3CU3Em__Finally1_m4467023F4795A0DC8C12494E3AC3B2B463601578(__this, /*hidden argument*/NULL);
-		IL2CPP_END_FINALLY(23)
+		IL2CPP_END_FINALLY(19)
 	} // end finally (depth: 1)
-	IL2CPP_CLEANUP(23)
+	IL2CPP_CLEANUP(19)
 	{
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
-		IL2CPP_JUMP_TBL(0x1E, IL_001e)
+		IL2CPP_JUMP_TBL(0x1A, IL_001a)
 	}
 
-IL_001e:
-	{
-		goto IL_0020;
-	}
-
-IL_0020:
+IL_001a:
 	{
 		return;
 	}
@@ -5458,336 +3785,226 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CInitializeLoaderU3Ed__24_MoveNext_m97
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_tEB68BCBEB8EFD60F8043C67146DC05E7F50F374B_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_MoveNext_m19D8DC887F99E56196FA26536373CE0E192D6741_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_get_Current_m7EF1367FE7BF714A357AD14CE9116844D666EAF8_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Int32_tFDE5F8CD43D10453F6A2E0C77FE48C6CC7009046_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_GetEnumerator_m9F891CF9308557447A884247550828A4932787EC_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tF2F3778131EFF286AF62B7B013A170F95A91571A_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CInitializeLoaderU3Ed__24_MoveNext_m9733633A3CB4DF756000710D5FB8DDCA939BAA7C_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CInitializeLoaderU3Ed__24_tBE52372328AAFF3147B0E3361196652E33780D08_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral5C10A8C7ED5A1BA07E65C73073DD018933F7FDB6);
 		s_Il2CppMethodInitialized = true;
 	}
 	bool V_0 = false;
 	int32_t V_1 = 0;
-	bool V_2 = false;
-	bool V_3 = false;
-	bool V_4 = false;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, U3CInitializeLoaderU3Ed__24_MoveNext_m9733633A3CB4DF756000710D5FB8DDCA939BAA7C_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 630));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Management + 631));
+	XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * V_2 = NULL;
+	XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B * V_3 = NULL;
 	Exception_t * __last_unhandled_exception = 0;
 	il2cpp::utils::ExceptionSupportStack<int32_t, 5> __leave_targets;
-	int32_t G_B14_0 = 0;
 
 IL_0000:
 	try
 	{ // begin try (depth: 1)
-		STORE_TRY_ID(methodExecutionContext, 0);
 		{
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 632));
 			int32_t L_0 = __this->get_U3CU3E1__state_0();
 			V_1 = L_0;
-			int32_t L_1 = V_1;
-			if (!L_1)
-			{
-				goto IL_0012;
-			}
-		}
-
-IL_000a:
-		{
-			goto IL_000c;
-		}
-
-IL_000c:
-		{
+			XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * L_1 = __this->get_U3CU3E4__this_2();
+			V_2 = L_1;
 			int32_t L_2 = V_1;
-			if ((((int32_t)L_2) == ((int32_t)1)))
+			if (!L_2)
 			{
-				goto IL_0014;
+				goto IL_001f;
 			}
 		}
 
-IL_0010:
+IL_0011:
 		{
-			goto IL_0019;
+			int32_t L_3 = V_1;
+			if ((((int32_t)L_3) == ((int32_t)1)))
+			{
+				goto IL_00aa;
+			}
 		}
 
-IL_0012:
-		{
-			goto IL_0020;
-		}
-
-IL_0014:
-		{
-			goto IL_00f4;
-		}
-
-IL_0019:
+IL_0018:
 		{
 			V_0 = (bool)0;
-			goto IL_014b;
+			goto IL_00ed;
 		}
 
-IL_0020:
+IL_001f:
 		{
 			__this->set_U3CU3E1__state_0((-1));
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 633));
 			// if (activeLoader != null)
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 634));
-			XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * L_3 = __this->get_U3CU3E4__this_2();
-			STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 661));
-			NullCheck(L_3);
-			XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B * L_4;
-			L_4 = XRManagerSettings_get_activeLoader_mB1950E58B1DD1774EB2798CEBA6D3C371CE8F1D8_inline(L_3, /*hidden argument*/NULL);
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 661));
-			STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 662));
+			XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * L_4 = V_2;
+			NullCheck(L_4);
+			XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B * L_5;
+			L_5 = XRManagerSettings_get_activeLoader_mB1950E58B1DD1774EB2798CEBA6D3C371CE8F1D8_inline(L_4, /*hidden argument*/NULL);
 			IL2CPP_RUNTIME_CLASS_INIT(Object_tF2F3778131EFF286AF62B7B013A170F95A91571A_il2cpp_TypeInfo_var);
-			bool L_5;
-			L_5 = Object_op_Inequality_mE1F187520BD83FB7D86A6D850710C4D42B864E90(L_4, (Object_tF2F3778131EFF286AF62B7B013A170F95A91571A *)NULL, /*hidden argument*/NULL);
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 662));
-			V_2 = L_5;
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 635));
-			bool L_6 = V_2;
+			bool L_6;
+			L_6 = Object_op_Inequality_mE1F187520BD83FB7D86A6D850710C4D42B864E90(L_5, (Object_tF2F3778131EFF286AF62B7B013A170F95A91571A *)NULL, /*hidden argument*/NULL);
 			if (!L_6)
 			{
-				goto IL_0050;
+				goto IL_0045;
 			}
 		}
 
-IL_003d:
+IL_0034:
 		{
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 636));
 			// Debug.LogWarning(
 			//     "XR Management has already initialized an active loader in this scene." +
 			//     "Please make sure to stop all subsystems and deinitialize the active loader before initializing a new one.");
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 637));
-			STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 663));
 			IL2CPP_RUNTIME_CLASS_INIT(Debug_tEB68BCBEB8EFD60F8043C67146DC05E7F50F374B_il2cpp_TypeInfo_var);
 			Debug_LogWarning_m24085D883C9E74D7AB423F0625E13259923960E7(_stringLiteral5C10A8C7ED5A1BA07E65C73073DD018933F7FDB6, /*hidden argument*/NULL);
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 663));
 			// yield break;
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 638));
 			V_0 = (bool)0;
-			goto IL_014b;
+			goto IL_00ed;
 		}
 
-IL_0050:
+IL_0045:
 		{
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 639));
 			// foreach (var loader in currentLoaders)
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 640));
-			XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * L_7 = __this->get_U3CU3E4__this_2();
-			STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 664));
+			XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * L_7 = V_2;
 			NullCheck(L_7);
 			List_1_t6331523A19E51FB87CA899920C03B10A48A562B0 * L_8;
-			L_8 = XRManagerSettings_get_currentLoaders_m1DF4A3AE134A1EE9FC00BB15522F2CDBBE5D9430(L_7, /*hidden argument*/NULL);
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 664));
-			STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 665));
+			L_8 = XRManagerSettings_get_currentLoaders_m1DF4A3AE134A1EE9FC00BB15522F2CDBBE5D9430_inline(L_7, /*hidden argument*/NULL);
 			NullCheck(L_8);
 			Enumerator_t5E925E051A8E0B9BEF75F1250A9B42E275E89FCF  L_9;
 			L_9 = List_1_GetEnumerator_m9F891CF9308557447A884247550828A4932787EC(L_8, /*hidden argument*/List_1_GetEnumerator_m9F891CF9308557447A884247550828A4932787EC_RuntimeMethod_var);
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 665));
-			__this->set_U3CU3Es__1_3(L_9);
+			__this->set_U3CU3E7__wrap1_3(L_9);
 			__this->set_U3CU3E1__state_0(((int32_t)-3));
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 641));
-			goto IL_0104;
+			goto IL_00b2;
 		}
 
-IL_0074:
+IL_0060:
 		{
 			// foreach (var loader in currentLoaders)
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 642));
-			Enumerator_t5E925E051A8E0B9BEF75F1250A9B42E275E89FCF * L_10 = __this->get_address_of_U3CU3Es__1_3();
-			STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 666));
+			Enumerator_t5E925E051A8E0B9BEF75F1250A9B42E275E89FCF * L_10 = __this->get_address_of_U3CU3E7__wrap1_3();
 			XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B * L_11;
 			L_11 = Enumerator_get_Current_m7EF1367FE7BF714A357AD14CE9116844D666EAF8_inline((Enumerator_t5E925E051A8E0B9BEF75F1250A9B42E275E89FCF *)L_10, /*hidden argument*/Enumerator_get_Current_m7EF1367FE7BF714A357AD14CE9116844D666EAF8_RuntimeMethod_var);
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 666));
-			__this->set_U3CloaderU3E5__2_4(L_11);
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 643));
+			V_3 = L_11;
 			// if (loader != null)
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 644));
-			XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B * L_12 = __this->get_U3CloaderU3E5__2_4();
-			STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 667));
+			XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B * L_12 = V_3;
 			IL2CPP_RUNTIME_CLASS_INIT(Object_tF2F3778131EFF286AF62B7B013A170F95A91571A_il2cpp_TypeInfo_var);
 			bool L_13;
 			L_13 = Object_op_Inequality_mE1F187520BD83FB7D86A6D850710C4D42B864E90(L_12, (Object_tF2F3778131EFF286AF62B7B013A170F95A91571A *)NULL, /*hidden argument*/NULL);
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 667));
-			V_3 = L_13;
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 645));
-			bool L_14 = V_3;
-			if (!L_14)
+			if (!L_13)
 			{
-				goto IL_00e2;
+				goto IL_0098;
 			}
 		}
 
-IL_0096:
+IL_0075:
 		{
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 646));
 			// if (CheckGraphicsAPICompatibility(loader) && loader.Initialize())
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 647));
-			XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * L_15 = __this->get_U3CU3E4__this_2();
-			XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B * L_16 = __this->get_U3CloaderU3E5__2_4();
-			STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 668));
-			NullCheck(L_15);
-			bool L_17;
-			L_17 = XRManagerSettings_CheckGraphicsAPICompatibility_m0A5AABEC0CF864942733D746120B368C5605FA63(L_15, L_16, /*hidden argument*/NULL);
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 668));
-			if (!L_17)
+			XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * L_14 = V_2;
+			XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B * L_15 = V_3;
+			NullCheck(L_14);
+			bool L_16;
+			L_16 = XRManagerSettings_CheckGraphicsAPICompatibility_m0A5AABEC0CF864942733D746120B368C5605FA63(L_14, L_15, /*hidden argument*/NULL);
+			if (!L_16)
 			{
-				goto IL_00b7;
+				goto IL_0098;
 			}
+		}
+
+IL_007e:
+		{
+			XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B * L_17 = V_3;
+			NullCheck(L_17);
+			bool L_18;
+			L_18 = VirtFuncInvoker0< bool >::Invoke(4 /* System.Boolean UnityEngine.XR.Management.XRLoader::Initialize() */, L_17);
+			if (!L_18)
+			{
+				goto IL_0098;
+			}
+		}
+
+IL_0086:
+		{
+			// activeLoader = loader;
+			XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * L_19 = V_2;
+			XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B * L_20 = V_3;
+			NullCheck(L_19);
+			XRManagerSettings_set_activeLoader_m77ACE8749C38314C5DA2A6A4F6551DDBC552EC72_inline(L_19, L_20, /*hidden argument*/NULL);
+			// m_InitializationComplete = true;
+			XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * L_21 = V_2;
+			NullCheck(L_21);
+			L_21->set_m_InitializationComplete_4((bool)1);
+			// yield break;
+			V_0 = (bool)0;
+			goto IL_00c7;
+		}
+
+IL_0098:
+		{
+			// yield return null;
+			__this->set_U3CU3E2__current_1(NULL);
+			__this->set_U3CU3E1__state_0(1);
+			V_0 = (bool)1;
+			goto IL_00ed;
 		}
 
 IL_00aa:
 		{
-			XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B * L_18 = __this->get_U3CloaderU3E5__2_4();
-			STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 669));
-			NullCheck(L_18);
-			bool L_19;
-			L_19 = VirtFuncInvoker0< bool >::Invoke(4 /* System.Boolean UnityEngine.XR.Management.XRLoader::Initialize() */, L_18);
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 669));
-			G_B14_0 = ((int32_t)(L_19));
-			goto IL_00b8;
-		}
-
-IL_00b7:
-		{
-			G_B14_0 = 0;
-		}
-
-IL_00b8:
-		{
-			V_4 = (bool)G_B14_0;
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 648));
-			bool L_20 = V_4;
-			if (!L_20)
-			{
-				goto IL_00e1;
-			}
-		}
-
-IL_00be:
-		{
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 649));
-			// activeLoader = loader;
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 650));
-			XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * L_21 = __this->get_U3CU3E4__this_2();
-			XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B * L_22 = __this->get_U3CloaderU3E5__2_4();
-			STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 670));
-			NullCheck(L_21);
-			XRManagerSettings_set_activeLoader_m77ACE8749C38314C5DA2A6A4F6551DDBC552EC72_inline(L_21, L_22, /*hidden argument*/NULL);
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 670));
-			// m_InitializationComplete = true;
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 651));
-			XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * L_23 = __this->get_U3CU3E4__this_2();
-			NullCheck(L_23);
-			L_23->set_m_InitializationComplete_4((bool)1);
-			// yield break;
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 652));
-			V_0 = (bool)0;
-			goto IL_011d;
-		}
-
-IL_00e1:
-		{
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 653));
-		}
-
-IL_00e2:
-		{
-			// yield return null;
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 654));
-			__this->set_U3CU3E2__current_1(NULL);
-			__this->set_U3CU3E1__state_0(1);
-			V_0 = (bool)1;
-			goto IL_014b;
-		}
-
-IL_00f4:
-		{
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 655));
 			__this->set_U3CU3E1__state_0(((int32_t)-3));
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 656));
-			__this->set_U3CloaderU3E5__2_4((XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B *)NULL);
 		}
 
-IL_0104:
+IL_00b2:
 		{
 			// foreach (var loader in currentLoaders)
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 657));
-			Enumerator_t5E925E051A8E0B9BEF75F1250A9B42E275E89FCF * L_24 = __this->get_address_of_U3CU3Es__1_3();
-			STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 671));
-			bool L_25;
-			L_25 = Enumerator_MoveNext_m19D8DC887F99E56196FA26536373CE0E192D6741((Enumerator_t5E925E051A8E0B9BEF75F1250A9B42E275E89FCF *)L_24, /*hidden argument*/Enumerator_MoveNext_m19D8DC887F99E56196FA26536373CE0E192D6741_RuntimeMethod_var);
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 671));
-			if (L_25)
+			Enumerator_t5E925E051A8E0B9BEF75F1250A9B42E275E89FCF * L_22 = __this->get_address_of_U3CU3E7__wrap1_3();
+			bool L_23;
+			L_23 = Enumerator_MoveNext_m19D8DC887F99E56196FA26536373CE0E192D6741((Enumerator_t5E925E051A8E0B9BEF75F1250A9B42E275E89FCF *)L_22, /*hidden argument*/Enumerator_MoveNext_m19D8DC887F99E56196FA26536373CE0E192D6741_RuntimeMethod_var);
+			if (L_23)
 			{
-				goto IL_0074;
+				goto IL_0060;
 			}
 		}
 
-IL_0114:
+IL_00bf:
 		{
-			STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 672));
 			U3CInitializeLoaderU3Ed__24_U3CU3Em__Finally1_m4467023F4795A0DC8C12494E3AC3B2B463601578(__this, /*hidden argument*/NULL);
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 672));
-			goto IL_0126;
+			goto IL_00cf;
 		}
 
-IL_011d:
+IL_00c7:
 		{
-			STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 673));
 			U3CInitializeLoaderU3Ed__24_U3CU3Em__Finally1_m4467023F4795A0DC8C12494E3AC3B2B463601578(__this, /*hidden argument*/NULL);
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 673));
-			goto IL_014b;
+			goto IL_00ed;
 		}
 
-IL_0126:
+IL_00cf:
 		{
-			Enumerator_t5E925E051A8E0B9BEF75F1250A9B42E275E89FCF * L_26 = __this->get_address_of_U3CU3Es__1_3();
-			il2cpp_codegen_initobj(L_26, sizeof(Enumerator_t5E925E051A8E0B9BEF75F1250A9B42E275E89FCF ));
+			Enumerator_t5E925E051A8E0B9BEF75F1250A9B42E275E89FCF * L_24 = __this->get_address_of_U3CU3E7__wrap1_3();
+			il2cpp_codegen_initobj(L_24, sizeof(Enumerator_t5E925E051A8E0B9BEF75F1250A9B42E275E89FCF ));
 			// activeLoader = null;
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 658));
-			XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * L_27 = __this->get_U3CU3E4__this_2();
-			STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 674));
-			NullCheck(L_27);
-			XRManagerSettings_set_activeLoader_m77ACE8749C38314C5DA2A6A4F6551DDBC552EC72_inline(L_27, (XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B *)NULL, /*hidden argument*/NULL);
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 674));
+			XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * L_25 = V_2;
+			NullCheck(L_25);
+			XRManagerSettings_set_activeLoader_m77ACE8749C38314C5DA2A6A4F6551DDBC552EC72_inline(L_25, (XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B *)NULL, /*hidden argument*/NULL);
 			// }
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 659));
 			V_0 = (bool)0;
-			goto IL_014b;
+			goto IL_00ed;
 		}
 	} // end try (depth: 1)
 	catch(Il2CppExceptionWrapper& e)
 	{
 		__last_unhandled_exception = (Exception_t *)e.ex;
-		goto FAULT_0143;
+		goto FAULT_00e6;
 	}
 
-FAULT_0143:
+FAULT_00e6:
 	{ // begin fault (depth: 1)
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 660));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 675));
 		U3CInitializeLoaderU3Ed__24_System_IDisposable_Dispose_mAE9903D2BB332F700807D7E234E81A4C40175A43(__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 675));
-		IL2CPP_END_FINALLY(323)
+		IL2CPP_END_FINALLY(230)
 	} // end fault
-	IL2CPP_CLEANUP(323)
+	IL2CPP_CLEANUP(230)
 	{
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
 	}
 
-IL_014b:
+IL_00ed:
 	{
-		bool L_28 = V_0;
-		return L_28;
+		bool L_26 = V_0;
+		return L_26;
 	}
 }
 // System.Void UnityEngine.XR.Management.XRManagerSettings/<InitializeLoader>d__24::<>m__Finally1()
@@ -5797,14 +4014,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CInitializeLoaderU3Ed__24_U3CU3Em__Fin
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_Dispose_m90A4F0B5CA0D3890D8D3E4676EE09E17B22AA9C7_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CInitializeLoaderU3Ed__24_U3CU3Em__Finally1_m4467023F4795A0DC8C12494E3AC3B2B463601578_RuntimeMethod_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, U3CInitializeLoaderU3Ed__24_U3CU3Em__Finally1_m4467023F4795A0DC8C12494E3AC3B2B463601578_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		__this->set_U3CU3E1__state_0((-1));
-		Enumerator_t5E925E051A8E0B9BEF75F1250A9B42E275E89FCF * L_0 = __this->get_address_of_U3CU3Es__1_3();
+		Enumerator_t5E925E051A8E0B9BEF75F1250A9B42E275E89FCF * L_0 = __this->get_address_of_U3CU3E7__wrap1_3();
 		Enumerator_Dispose_m90A4F0B5CA0D3890D8D3E4676EE09E17B22AA9C7((Enumerator_t5E925E051A8E0B9BEF75F1250A9B42E275E89FCF *)L_0, /*hidden argument*/Enumerator_Dispose_m90A4F0B5CA0D3890D8D3E4676EE09E17B22AA9C7_RuntimeMethod_var);
 		return;
 	}
@@ -5812,14 +4026,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CInitializeLoaderU3Ed__24_U3CU3Em__Fin
 // System.Object UnityEngine.XR.Management.XRManagerSettings/<InitializeLoader>d__24::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject * U3CInitializeLoaderU3Ed__24_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mE9A5688D0D12E13F6D7A8061300CBFBB3A6E7ADC (U3CInitializeLoaderU3Ed__24_tBE52372328AAFF3147B0E3361196652E33780D08 * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CInitializeLoaderU3Ed__24_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mE9A5688D0D12E13F6D7A8061300CBFBB3A6E7ADC_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, U3CInitializeLoaderU3Ed__24_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mE9A5688D0D12E13F6D7A8061300CBFBB3A6E7ADC_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		RuntimeObject * L_0 = __this->get_U3CU3E2__current_1();
 		return L_0;
@@ -5828,14 +4034,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject * U3CInitializeLoaderU3Ed__24_S
 // System.Void UnityEngine.XR.Management.XRManagerSettings/<InitializeLoader>d__24::System.Collections.IEnumerator.Reset()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CInitializeLoaderU3Ed__24_System_Collections_IEnumerator_Reset_mF26C5E49F5BB327E51F87E0754220EDE1DB89FA5 (U3CInitializeLoaderU3Ed__24_tBE52372328AAFF3147B0E3361196652E33780D08 * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CInitializeLoaderU3Ed__24_System_Collections_IEnumerator_Reset_mF26C5E49F5BB327E51F87E0754220EDE1DB89FA5_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, U3CInitializeLoaderU3Ed__24_System_Collections_IEnumerator_Reset_mF26C5E49F5BB327E51F87E0754220EDE1DB89FA5_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		NotSupportedException_tB9D89F0E9470A2C423D239D7C68EE0CFD77F9339 * L_0 = (NotSupportedException_tB9D89F0E9470A2C423D239D7C68EE0CFD77F9339 *)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NotSupportedException_tB9D89F0E9470A2C423D239D7C68EE0CFD77F9339_il2cpp_TypeInfo_var)));
 		NotSupportedException__ctor_m3EA81A5B209A87C3ADA47443F2AFFF735E5256EE(L_0, /*hidden argument*/NULL);
@@ -5845,14 +4043,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CInitializeLoaderU3Ed__24_System_Colle
 // System.Object UnityEngine.XR.Management.XRManagerSettings/<InitializeLoader>d__24::System.Collections.IEnumerator.get_Current()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject * U3CInitializeLoaderU3Ed__24_System_Collections_IEnumerator_get_Current_mFFB71C0E0BA36427C8862A0F70949FBB4FB20A0D (U3CInitializeLoaderU3Ed__24_tBE52372328AAFF3147B0E3361196652E33780D08 * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CInitializeLoaderU3Ed__24_System_Collections_IEnumerator_get_Current_mFFB71C0E0BA36427C8862A0F70949FBB4FB20A0D_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, U3CInitializeLoaderU3Ed__24_System_Collections_IEnumerator_get_Current_mFFB71C0E0BA36427C8862A0F70949FBB4FB20A0D_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		RuntimeObject * L_0 = __this->get_U3CU3E2__current_1();
 		return L_0;
@@ -5863,21 +4053,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject * U3CInitializeLoaderU3Ed__24_S
 #endif
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void XRConfigurationDataAttribute_set_displayName_mFE7B985C02F56D827A5819BC7C622FEF8A34742E_inline (XRConfigurationDataAttribute_tC94F83D607B934FF3F894802DF857C51AA165236 * __this, String_t* ___value0, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRConfigurationDataAttribute_set_displayName_mFE7B985C02F56D827A5819BC7C622FEF8A34742E_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRConfigurationDataAttribute_tC94F83D607B934FF3F894802DF857C51AA165236_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___value0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, XRConfigurationDataAttribute_set_displayName_mFE7B985C02F56D827A5819BC7C622FEF8A34742E_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 3));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Management + 4));
 	{
 		// public string displayName { get; set; }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 5));
 		String_t* L_0 = ___value0;
 		__this->set_U3CdisplayNameU3Ek__BackingField_0(L_0);
 		return;
@@ -5885,63 +4062,76 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void XRConfigurationDataAttribute
 }
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void XRConfigurationDataAttribute_set_buildSettingsKey_mB3C7DFD97AA98506013E603211DCABDE89694889_inline (XRConfigurationDataAttribute_tC94F83D607B934FF3F894802DF857C51AA165236 * __this, String_t* ___value0, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRConfigurationDataAttribute_set_buildSettingsKey_mB3C7DFD97AA98506013E603211DCABDE89694889_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRConfigurationDataAttribute_tC94F83D607B934FF3F894802DF857C51AA165236_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___value0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, XRConfigurationDataAttribute_set_buildSettingsKey_mB3C7DFD97AA98506013E603211DCABDE89694889_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 9));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Management + 10));
 	{
 		// public string buildSettingsKey { get; set; }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 11));
 		String_t* L_0 = ___value0;
 		__this->set_U3CbuildSettingsKeyU3Ek__BackingField_1(L_0);
 		return;
 	}
 }
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B * XRManagerSettings_get_activeLoader_mB1950E58B1DD1774EB2798CEBA6D3C371CE8F1D8_inline (XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * __this, const RuntimeMethod* method)
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042 * XRGeneralSettings_get_Instance_m8D7FC68414773249E7C8EEF06048916FD7E7D68D_inline (const RuntimeMethod* method)
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRManagerSettings_get_activeLoader_mB1950E58B1DD1774EB2798CEBA6D3C371CE8F1D8_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F_0_0_0_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, XRManagerSettings_get_activeLoader_mB1950E58B1DD1774EB2798CEBA6D3C371CE8F1D8_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 364));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Management + 365));
+	{
+		// return s_RuntimeSettingsInstance;
+		IL2CPP_RUNTIME_CLASS_INIT(XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042_il2cpp_TypeInfo_var);
+		XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042 * L_0 = ((XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042_StaticFields*)il2cpp_codegen_static_fields_for(XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042_il2cpp_TypeInfo_var))->get_s_RuntimeSettingsInstance_5();
+		return L_0;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool XRGeneralSettings_get_InitManagerOnStart_m21A3FAE9CDFED7D125E0794EFC2C2B18E3878E53_inline (XRGeneralSettings_t32A12852D8662239F55902E9FD6A299201C04042 * __this, const RuntimeMethod* method)
+{
+	{
+		// return m_InitManagerOnStart;
+		bool L_0 = __this->get_m_InitManagerOnStart_7();
+		return L_0;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void XRManagerSettings_set_automaticLoading_m955E88785E48CD480FC0D2198F68AFAC419C7E53_inline (XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * __this, bool ___value0, const RuntimeMethod* method)
+{
+	{
+		// set { m_AutomaticLoading = value; }
+		bool L_0 = ___value0;
+		__this->set_m_AutomaticLoading_6(L_0);
+		// set { m_AutomaticLoading = value; }
+		return;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void XRManagerSettings_set_automaticRunning_mDD9D47FD94BD122FA725ED624D056108DAE22E0C_inline (XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * __this, bool ___value0, const RuntimeMethod* method)
+{
+	{
+		// set { m_AutomaticRunning = value; }
+		bool L_0 = ___value0;
+		__this->set_m_AutomaticRunning_7(L_0);
+		// set { m_AutomaticRunning = value; }
+		return;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B * XRManagerSettings_get_activeLoader_mB1950E58B1DD1774EB2798CEBA6D3C371CE8F1D8_inline (XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * __this, const RuntimeMethod* method)
+{
 	{
 		// public XRLoader activeLoader { get; private set; }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 366));
 		XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B * L_0 = __this->get_U3CactiveLoaderU3Ek__BackingField_10();
+		return L_0;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR List_1_t6331523A19E51FB87CA899920C03B10A48A562B0 * XRManagerSettings_get_currentLoaders_m1DF4A3AE134A1EE9FC00BB15522F2CDBBE5D9430_inline (XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * __this, const RuntimeMethod* method)
+{
+	{
+		// get { return m_Loaders; }
+		List_1_t6331523A19E51FB87CA899920C03B10A48A562B0 * L_0 = __this->get_m_Loaders_8();
 		return L_0;
 	}
 }
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void XRManagerSettings_set_activeLoader_m77ACE8749C38314C5DA2A6A4F6551DDBC552EC72_inline (XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * __this, XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B * ___value0, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRManagerSettings_set_activeLoader_m77ACE8749C38314C5DA2A6A4F6551DDBC552EC72_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___value0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, XRManagerSettings_set_activeLoader_m77ACE8749C38314C5DA2A6A4F6551DDBC552EC72_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 367));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Management + 368));
 	{
 		// public XRLoader activeLoader { get; private set; }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 369));
 		XRLoader_tE37B92C6B9CDD944DDF7AFF5704E9EB342D62F6B * L_0 = ___value0;
 		__this->set_U3CactiveLoaderU3Ek__BackingField_10(L_0);
 		return;
@@ -5949,34 +4139,40 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void XRManagerSettings_set_active
 }
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* XRManagerSettings_get_activeLoaders_m9F30D886C1EDE39B17981230C965EF1DA95F98F4_inline (XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRManagerSettings_get_activeLoaders_m9F30D886C1EDE39B17981230C965EF1DA95F98F4_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, XRManagerSettings_get_activeLoaders_m9F30D886C1EDE39B17981230C965EF1DA95F98F4_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 356));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Management + 357));
 	{
 		// public IReadOnlyList<XRLoader> activeLoaders => m_Loaders;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Management + 358));
 		List_1_t6331523A19E51FB87CA899920C03B10A48A562B0 * L_0 = __this->get_m_Loaders_8();
+		return L_0;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void XRManagerSettings_set_currentLoaders_mF3807937DC20F875F4EF6229CC624EAA28B07F54_inline (XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * __this, List_1_t6331523A19E51FB87CA899920C03B10A48A562B0 * ___value0, const RuntimeMethod* method)
+{
+	{
+		// set { m_Loaders = value; }
+		List_1_t6331523A19E51FB87CA899920C03B10A48A562B0 * L_0 = ___value0;
+		__this->set_m_Loaders_8(L_0);
+		// set { m_Loaders = value; }
+		return;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool XRManagerSettings_get_automaticLoading_m2F854EC3F5A23B77C3819988414EEA070B3A067B_inline (XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * __this, const RuntimeMethod* method)
+{
+	{
+		// get { return m_AutomaticLoading; }
+		bool L_0 = __this->get_m_AutomaticLoading_6();
+		return L_0;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool XRManagerSettings_get_automaticRunning_m35A499E67629829BB4E89952FC3778D55D685890_inline (XRManagerSettings_t8F274E413BAFFBB547DAD1B7E50EDD9D7B16E19F * __this, const RuntimeMethod* method)
+{
+	{
+		// get { return m_AutomaticRunning; }
+		bool L_0 = __this->get_m_AutomaticRunning_7();
 		return L_0;
 	}
 }
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject * Enumerator_get_Current_m9C4EBBD2108B51885E750F927D7936290C8E20EE_gshared_inline (Enumerator_tB6009981BD4E3881E3EC83627255A24198F902D6 * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_get_Current_m9C4EBBD2108B51885E750F927D7936290C8E20EE_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Enumerator_get_Current_m9C4EBBD2108B51885E750F927D7936290C8E20EE_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		RuntimeObject * L_0 = (RuntimeObject *)__this->get_current_3();
 		return (RuntimeObject *)L_0;
@@ -5984,14 +4180,6 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject * Enumerator_get_Cu
 }
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m5D847939ABB9A78203B062CAFFE975792174D00F_gshared_inline (List_1_t3F94120C77410A62EAE48421CF166B83AB95A2F5 * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_get_Count_m5D847939ABB9A78203B062CAFFE975792174D00F_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, List_1_get_Count_m5D847939ABB9A78203B062CAFFE975792174D00F_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		int32_t L_0 = (int32_t)__this->get__size_2();
 		return (int32_t)L_0;
@@ -5999,14 +4187,6 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m5D84793
 }
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m3632094BEC4410A1022FD0293E7BA88FC3B811A8_gshared_inline (List_1_tD9A0DAE3CF1F9450036B041168264AE0CEF1737A * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_get_Count_m3632094BEC4410A1022FD0293E7BA88FC3B811A8_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, List_1_get_Count_m3632094BEC4410A1022FD0293E7BA88FC3B811A8_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		int32_t L_0 = (int32_t)__this->get__size_2();
 		return (int32_t)L_0;

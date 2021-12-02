@@ -12,7 +12,6 @@
 
 
 
-extern const Il2CppDebuggerMetadataRegistration g_DebuggerMetadataRegistrationUnity_RenderPipeline_Universal_ShaderLibrary;
 extern const CustomAttributesCacheGenerator g_Unity_RenderPipeline_Universal_ShaderLibrary_AttributeGenerators[];
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_Unity_RenderPipeline_Universal_ShaderLibrary_CodeGenModule;
 const Il2CppCodeGenModule g_Unity_RenderPipeline_Universal_ShaderLibrary_CodeGenModule = 
@@ -29,7 +28,7 @@ const Il2CppCodeGenModule g_Unity_RenderPipeline_Universal_ShaderLibrary_CodeGen
 	NULL,
 	0,
 	NULL,
-	&g_DebuggerMetadataRegistrationUnity_RenderPipeline_Universal_ShaderLibrary,
+	NULL,
 	g_Unity_RenderPipeline_Universal_ShaderLibrary_AttributeGenerators,
 	NULL, // module initializer,
 	NULL,
