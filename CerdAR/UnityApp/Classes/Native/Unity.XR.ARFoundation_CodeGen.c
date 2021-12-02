@@ -903,1047 +903,1051 @@ extern void AROcclusionManager_TryAcquireHumanDepthCpuImage_mA91B236DA5A41148170
 extern void AROcclusionManager_get_environmentDepthTexture_mA34DEA652AEB27CE366DACD93FB88971F60BB87C (void);
 // 0x000001BE System.Boolean UnityEngine.XR.ARFoundation.AROcclusionManager::TryAcquireEnvironmentDepthCpuImage(UnityEngine.XR.ARSubsystems.XRCpuImage&)
 extern void AROcclusionManager_TryAcquireEnvironmentDepthCpuImage_m2B4EB51F4466225FBC1F906CF4617F3B761CAE06 (void);
-// 0x000001BF System.Void UnityEngine.XR.ARFoundation.AROcclusionManager::OnBeforeStart()
+// 0x000001BF System.Boolean UnityEngine.XR.ARFoundation.AROcclusionManager::TryAcquireRawEnvironmentDepthCpuImage(UnityEngine.XR.ARSubsystems.XRCpuImage&)
+extern void AROcclusionManager_TryAcquireRawEnvironmentDepthCpuImage_m2BFE53594A678531D03758D4EB2B4FC7E38B1C7C (void);
+// 0x000001C0 System.Boolean UnityEngine.XR.ARFoundation.AROcclusionManager::TryAcquireSmoothedEnvironmentDepthCpuImage(UnityEngine.XR.ARSubsystems.XRCpuImage&)
+extern void AROcclusionManager_TryAcquireSmoothedEnvironmentDepthCpuImage_m869197DE3690D4576E4D10EAA83D841CC86A0E82 (void);
+// 0x000001C1 System.Void UnityEngine.XR.ARFoundation.AROcclusionManager::OnBeforeStart()
 extern void AROcclusionManager_OnBeforeStart_m9FD2013EB16306C2210CD87B8C1E6F172197FAAE (void);
-// 0x000001C0 System.Void UnityEngine.XR.ARFoundation.AROcclusionManager::OnDisable()
+// 0x000001C2 System.Void UnityEngine.XR.ARFoundation.AROcclusionManager::OnDisable()
 extern void AROcclusionManager_OnDisable_mADE02A9F7F40229D1BAD066CD7CFC83F4F8628DC (void);
-// 0x000001C1 System.Void UnityEngine.XR.ARFoundation.AROcclusionManager::Update()
+// 0x000001C3 System.Void UnityEngine.XR.ARFoundation.AROcclusionManager::Update()
 extern void AROcclusionManager_Update_m2B2EA8E3B2DF77A247B4AFFFB0A53710831ECE57 (void);
-// 0x000001C2 System.Void UnityEngine.XR.ARFoundation.AROcclusionManager::ResetTextureInfos()
+// 0x000001C4 System.Void UnityEngine.XR.ARFoundation.AROcclusionManager::ResetTextureInfos()
 extern void AROcclusionManager_ResetTextureInfos_m7F46FE796297D00D2BEF2BD76094F4A6789FA681 (void);
-// 0x000001C3 System.Void UnityEngine.XR.ARFoundation.AROcclusionManager::UpdateTexturesInfos()
+// 0x000001C5 System.Void UnityEngine.XR.ARFoundation.AROcclusionManager::UpdateTexturesInfos()
 extern void AROcclusionManager_UpdateTexturesInfos_mB7F208BD346BC77DCFBD2DBB41C407756BB4CEFC (void);
-// 0x000001C4 System.Void UnityEngine.XR.ARFoundation.AROcclusionManager::InvokeFrameReceived()
+// 0x000001C6 System.Void UnityEngine.XR.ARFoundation.AROcclusionManager::InvokeFrameReceived()
 extern void AROcclusionManager_InvokeFrameReceived_m2BCF0ECC2AEE283325B2E236FFE3612A44659638 (void);
-// 0x000001C5 System.Void UnityEngine.XR.ARFoundation.AROcclusionManager::.ctor()
+// 0x000001C7 System.Void UnityEngine.XR.ARFoundation.AROcclusionManager::.ctor()
 extern void AROcclusionManager__ctor_m8D09E79697F06536D86DC5F1F640553F2A24FDB8 (void);
-// 0x000001C6 System.IntPtr UnityEngine.XR.ARFoundation.ARParticipant::get_nativePtr()
+// 0x000001C8 System.IntPtr UnityEngine.XR.ARFoundation.ARParticipant::get_nativePtr()
 extern void ARParticipant_get_nativePtr_m3D0679D319F5F6D110037EDF05D29305191B7826 (void);
-// 0x000001C7 System.Guid UnityEngine.XR.ARFoundation.ARParticipant::get_sessionId()
+// 0x000001C9 System.Guid UnityEngine.XR.ARFoundation.ARParticipant::get_sessionId()
 extern void ARParticipant_get_sessionId_mB0C3B9DC4F9D7F07F7F2EEBEB45DB18165008F9A (void);
-// 0x000001C8 System.Void UnityEngine.XR.ARFoundation.ARParticipant::.ctor()
+// 0x000001CA System.Void UnityEngine.XR.ARFoundation.ARParticipant::.ctor()
 extern void ARParticipant__ctor_m6CF147269DD5EBACB228D42FD74193F22B7EEA56 (void);
-// 0x000001C9 UnityEngine.GameObject UnityEngine.XR.ARFoundation.ARParticipantManager::get_participantPrefab()
+// 0x000001CB UnityEngine.GameObject UnityEngine.XR.ARFoundation.ARParticipantManager::get_participantPrefab()
 extern void ARParticipantManager_get_participantPrefab_m2EBD82EE82BACA6FBD17959C2AFAE75AEF82ECD6 (void);
-// 0x000001CA System.Void UnityEngine.XR.ARFoundation.ARParticipantManager::set_participantPrefab(UnityEngine.GameObject)
+// 0x000001CC System.Void UnityEngine.XR.ARFoundation.ARParticipantManager::set_participantPrefab(UnityEngine.GameObject)
 extern void ARParticipantManager_set_participantPrefab_m544541394943CA11B495B6DD81D4985B5D2448EE (void);
-// 0x000001CB System.Void UnityEngine.XR.ARFoundation.ARParticipantManager::add_participantsChanged(System.Action`1<UnityEngine.XR.ARFoundation.ARParticipantsChangedEventArgs>)
+// 0x000001CD System.Void UnityEngine.XR.ARFoundation.ARParticipantManager::add_participantsChanged(System.Action`1<UnityEngine.XR.ARFoundation.ARParticipantsChangedEventArgs>)
 extern void ARParticipantManager_add_participantsChanged_m896935397F35F4181D996F03CBC7370C9D96F1E3 (void);
-// 0x000001CC System.Void UnityEngine.XR.ARFoundation.ARParticipantManager::remove_participantsChanged(System.Action`1<UnityEngine.XR.ARFoundation.ARParticipantsChangedEventArgs>)
+// 0x000001CE System.Void UnityEngine.XR.ARFoundation.ARParticipantManager::remove_participantsChanged(System.Action`1<UnityEngine.XR.ARFoundation.ARParticipantsChangedEventArgs>)
 extern void ARParticipantManager_remove_participantsChanged_m10351B3D1E1B1EF022C899CFA63B327FD4101DDB (void);
-// 0x000001CD UnityEngine.XR.ARFoundation.ARParticipant UnityEngine.XR.ARFoundation.ARParticipantManager::GetParticipant(UnityEngine.XR.ARSubsystems.TrackableId)
+// 0x000001CF UnityEngine.XR.ARFoundation.ARParticipant UnityEngine.XR.ARFoundation.ARParticipantManager::GetParticipant(UnityEngine.XR.ARSubsystems.TrackableId)
 extern void ARParticipantManager_GetParticipant_m50819ED781959240961B21274ED39C6EB274C7B6 (void);
-// 0x000001CE UnityEngine.GameObject UnityEngine.XR.ARFoundation.ARParticipantManager::GetPrefab()
+// 0x000001D0 UnityEngine.GameObject UnityEngine.XR.ARFoundation.ARParticipantManager::GetPrefab()
 extern void ARParticipantManager_GetPrefab_m3CA925F72113EEC102196F4794DD61E7A08D0A4A (void);
-// 0x000001CF System.Void UnityEngine.XR.ARFoundation.ARParticipantManager::OnTrackablesChanged(System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARParticipant>,System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARParticipant>,System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARParticipant>)
+// 0x000001D1 System.Void UnityEngine.XR.ARFoundation.ARParticipantManager::OnTrackablesChanged(System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARParticipant>,System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARParticipant>,System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARParticipant>)
 extern void ARParticipantManager_OnTrackablesChanged_m82937E69E75D127731E196E3D3108618DD57AEE3 (void);
-// 0x000001D0 System.String UnityEngine.XR.ARFoundation.ARParticipantManager::get_gameObjectName()
+// 0x000001D2 System.String UnityEngine.XR.ARFoundation.ARParticipantManager::get_gameObjectName()
 extern void ARParticipantManager_get_gameObjectName_m8094F141550F884703D218EC78F793E2AF4381BD (void);
-// 0x000001D1 System.Void UnityEngine.XR.ARFoundation.ARParticipantManager::.ctor()
+// 0x000001D3 System.Void UnityEngine.XR.ARFoundation.ARParticipantManager::.ctor()
 extern void ARParticipantManager__ctor_m5257BF27214079564C0E43FE9A4C6A9F5EA8E7CB (void);
-// 0x000001D2 System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARParticipant> UnityEngine.XR.ARFoundation.ARParticipantsChangedEventArgs::get_added()
+// 0x000001D4 System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARParticipant> UnityEngine.XR.ARFoundation.ARParticipantsChangedEventArgs::get_added()
 extern void ARParticipantsChangedEventArgs_get_added_mD333BCC5C7ED052F0F5D44CEC2C2FD5124FED402 (void);
-// 0x000001D3 System.Void UnityEngine.XR.ARFoundation.ARParticipantsChangedEventArgs::set_added(System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARParticipant>)
+// 0x000001D5 System.Void UnityEngine.XR.ARFoundation.ARParticipantsChangedEventArgs::set_added(System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARParticipant>)
 extern void ARParticipantsChangedEventArgs_set_added_m11867D0CD2EBAAE3EE7101B7DB4863E9A95A2925 (void);
-// 0x000001D4 System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARParticipant> UnityEngine.XR.ARFoundation.ARParticipantsChangedEventArgs::get_updated()
+// 0x000001D6 System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARParticipant> UnityEngine.XR.ARFoundation.ARParticipantsChangedEventArgs::get_updated()
 extern void ARParticipantsChangedEventArgs_get_updated_m38E09FF31C8F56EA5140176ACA50B7E08B79C18C (void);
-// 0x000001D5 System.Void UnityEngine.XR.ARFoundation.ARParticipantsChangedEventArgs::set_updated(System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARParticipant>)
+// 0x000001D7 System.Void UnityEngine.XR.ARFoundation.ARParticipantsChangedEventArgs::set_updated(System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARParticipant>)
 extern void ARParticipantsChangedEventArgs_set_updated_m4DEC3E74DDB4E06FD12B2EB28FAF23BFA9A0BC1A (void);
-// 0x000001D6 System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARParticipant> UnityEngine.XR.ARFoundation.ARParticipantsChangedEventArgs::get_removed()
+// 0x000001D8 System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARParticipant> UnityEngine.XR.ARFoundation.ARParticipantsChangedEventArgs::get_removed()
 extern void ARParticipantsChangedEventArgs_get_removed_mC3785153DD817F19DE22C00E4DF6953029682BE4 (void);
-// 0x000001D7 System.Void UnityEngine.XR.ARFoundation.ARParticipantsChangedEventArgs::set_removed(System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARParticipant>)
+// 0x000001D9 System.Void UnityEngine.XR.ARFoundation.ARParticipantsChangedEventArgs::set_removed(System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARParticipant>)
 extern void ARParticipantsChangedEventArgs_set_removed_m4AFD915D6EA0D3DEE200D97329DADE2D8E10EA00 (void);
-// 0x000001D8 System.Void UnityEngine.XR.ARFoundation.ARParticipantsChangedEventArgs::.ctor(System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARParticipant>,System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARParticipant>,System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARParticipant>)
+// 0x000001DA System.Void UnityEngine.XR.ARFoundation.ARParticipantsChangedEventArgs::.ctor(System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARParticipant>,System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARParticipant>,System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARParticipant>)
 extern void ARParticipantsChangedEventArgs__ctor_m4909FDA4B70F723C388938457EDE226B6AD43832 (void);
-// 0x000001D9 System.Int32 UnityEngine.XR.ARFoundation.ARParticipantsChangedEventArgs::GetHashCode()
+// 0x000001DB System.Int32 UnityEngine.XR.ARFoundation.ARParticipantsChangedEventArgs::GetHashCode()
 extern void ARParticipantsChangedEventArgs_GetHashCode_m07F68F2573530351859BD586DC469F916A0181E1 (void);
-// 0x000001DA System.Boolean UnityEngine.XR.ARFoundation.ARParticipantsChangedEventArgs::Equals(System.Object)
+// 0x000001DC System.Boolean UnityEngine.XR.ARFoundation.ARParticipantsChangedEventArgs::Equals(System.Object)
 extern void ARParticipantsChangedEventArgs_Equals_m973121711815026231005C4C74DCBEBB2D97E9CF (void);
-// 0x000001DB System.Int32 UnityEngine.XR.ARFoundation.ARParticipantsChangedEventArgs::GetCount(System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARParticipant>)
+// 0x000001DD System.Int32 UnityEngine.XR.ARFoundation.ARParticipantsChangedEventArgs::GetCount(System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARParticipant>)
 extern void ARParticipantsChangedEventArgs_GetCount_mDF83CAB2FB042E3CADDE1D3B4953042479E17431 (void);
-// 0x000001DC System.String UnityEngine.XR.ARFoundation.ARParticipantsChangedEventArgs::ToString()
+// 0x000001DE System.String UnityEngine.XR.ARFoundation.ARParticipantsChangedEventArgs::ToString()
 extern void ARParticipantsChangedEventArgs_ToString_m91290FCC8E69031D406BAEA0522B8A4F7AFACA31 (void);
-// 0x000001DD System.Boolean UnityEngine.XR.ARFoundation.ARParticipantsChangedEventArgs::Equals(UnityEngine.XR.ARFoundation.ARParticipantsChangedEventArgs)
+// 0x000001DF System.Boolean UnityEngine.XR.ARFoundation.ARParticipantsChangedEventArgs::Equals(UnityEngine.XR.ARFoundation.ARParticipantsChangedEventArgs)
 extern void ARParticipantsChangedEventArgs_Equals_m454F06745844D7EF4BA9214E72ED1B8CF553F336 (void);
-// 0x000001DE System.Boolean UnityEngine.XR.ARFoundation.ARParticipantsChangedEventArgs::op_Equality(UnityEngine.XR.ARFoundation.ARParticipantsChangedEventArgs,UnityEngine.XR.ARFoundation.ARParticipantsChangedEventArgs)
+// 0x000001E0 System.Boolean UnityEngine.XR.ARFoundation.ARParticipantsChangedEventArgs::op_Equality(UnityEngine.XR.ARFoundation.ARParticipantsChangedEventArgs,UnityEngine.XR.ARFoundation.ARParticipantsChangedEventArgs)
 extern void ARParticipantsChangedEventArgs_op_Equality_m7600104C8E470B2069AD92ECD248563438370988 (void);
-// 0x000001DF System.Boolean UnityEngine.XR.ARFoundation.ARParticipantsChangedEventArgs::op_Inequality(UnityEngine.XR.ARFoundation.ARParticipantsChangedEventArgs,UnityEngine.XR.ARFoundation.ARParticipantsChangedEventArgs)
+// 0x000001E1 System.Boolean UnityEngine.XR.ARFoundation.ARParticipantsChangedEventArgs::op_Inequality(UnityEngine.XR.ARFoundation.ARParticipantsChangedEventArgs,UnityEngine.XR.ARFoundation.ARParticipantsChangedEventArgs)
 extern void ARParticipantsChangedEventArgs_op_Inequality_mB1FF7221080DC1DE65F774D457E77605ECDD8A37 (void);
-// 0x000001E0 System.Single UnityEngine.XR.ARFoundation.ARPlane::get_vertexChangedThreshold()
+// 0x000001E2 System.Single UnityEngine.XR.ARFoundation.ARPlane::get_vertexChangedThreshold()
 extern void ARPlane_get_vertexChangedThreshold_mAA60F671E3E504C8728555CA7CE9EE1622EF9288 (void);
-// 0x000001E1 System.Void UnityEngine.XR.ARFoundation.ARPlane::set_vertexChangedThreshold(System.Single)
+// 0x000001E3 System.Void UnityEngine.XR.ARFoundation.ARPlane::set_vertexChangedThreshold(System.Single)
 extern void ARPlane_set_vertexChangedThreshold_m04C245B86A30F5D34F9D470FB04AC8B8BBEA9A2D (void);
-// 0x000001E2 System.Void UnityEngine.XR.ARFoundation.ARPlane::add_boundaryChanged(System.Action`1<UnityEngine.XR.ARFoundation.ARPlaneBoundaryChangedEventArgs>)
+// 0x000001E4 System.Void UnityEngine.XR.ARFoundation.ARPlane::add_boundaryChanged(System.Action`1<UnityEngine.XR.ARFoundation.ARPlaneBoundaryChangedEventArgs>)
 extern void ARPlane_add_boundaryChanged_m2C6F18F6A876A0CDC182820725A38A534B988BEE (void);
-// 0x000001E3 System.Void UnityEngine.XR.ARFoundation.ARPlane::remove_boundaryChanged(System.Action`1<UnityEngine.XR.ARFoundation.ARPlaneBoundaryChangedEventArgs>)
+// 0x000001E5 System.Void UnityEngine.XR.ARFoundation.ARPlane::remove_boundaryChanged(System.Action`1<UnityEngine.XR.ARFoundation.ARPlaneBoundaryChangedEventArgs>)
 extern void ARPlane_remove_boundaryChanged_m806691C95E05CDBCB7637F6070F30860D9BF403B (void);
-// 0x000001E4 UnityEngine.Vector3 UnityEngine.XR.ARFoundation.ARPlane::get_normal()
+// 0x000001E6 UnityEngine.Vector3 UnityEngine.XR.ARFoundation.ARPlane::get_normal()
 extern void ARPlane_get_normal_m5D251614E45E0F89C3525A1EA8BF0A23B1FED8DB (void);
-// 0x000001E5 UnityEngine.XR.ARFoundation.ARPlane UnityEngine.XR.ARFoundation.ARPlane::get_subsumedBy()
+// 0x000001E7 UnityEngine.XR.ARFoundation.ARPlane UnityEngine.XR.ARFoundation.ARPlane::get_subsumedBy()
 extern void ARPlane_get_subsumedBy_m4A7A81ED11E4EF5CE7A82E9E3E1BF33620B8C4C3 (void);
-// 0x000001E6 System.Void UnityEngine.XR.ARFoundation.ARPlane::set_subsumedBy(UnityEngine.XR.ARFoundation.ARPlane)
+// 0x000001E8 System.Void UnityEngine.XR.ARFoundation.ARPlane::set_subsumedBy(UnityEngine.XR.ARFoundation.ARPlane)
 extern void ARPlane_set_subsumedBy_mF2FA42EB5816B76672003101C8F4E56698B6126A (void);
-// 0x000001E7 UnityEngine.XR.ARSubsystems.PlaneAlignment UnityEngine.XR.ARFoundation.ARPlane::get_alignment()
+// 0x000001E9 UnityEngine.XR.ARSubsystems.PlaneAlignment UnityEngine.XR.ARFoundation.ARPlane::get_alignment()
 extern void ARPlane_get_alignment_mE98AB13AA23A17118D57E28213955B32F96B7046 (void);
-// 0x000001E8 UnityEngine.XR.ARSubsystems.PlaneClassification UnityEngine.XR.ARFoundation.ARPlane::get_classification()
+// 0x000001EA UnityEngine.XR.ARSubsystems.PlaneClassification UnityEngine.XR.ARFoundation.ARPlane::get_classification()
 extern void ARPlane_get_classification_mE63F0D4D9B17E53D3F58F7A4BEDFF1DDE28C829E (void);
-// 0x000001E9 UnityEngine.Vector2 UnityEngine.XR.ARFoundation.ARPlane::get_centerInPlaneSpace()
+// 0x000001EB UnityEngine.Vector2 UnityEngine.XR.ARFoundation.ARPlane::get_centerInPlaneSpace()
 extern void ARPlane_get_centerInPlaneSpace_m243BBB28377DBE0039805A0E271B6BF0879FB437 (void);
-// 0x000001EA UnityEngine.Vector3 UnityEngine.XR.ARFoundation.ARPlane::get_center()
+// 0x000001EC UnityEngine.Vector3 UnityEngine.XR.ARFoundation.ARPlane::get_center()
 extern void ARPlane_get_center_mEDC87E2E4C5029D34515F17E9B2D80B9125B5484 (void);
-// 0x000001EB UnityEngine.Vector2 UnityEngine.XR.ARFoundation.ARPlane::get_extents()
+// 0x000001ED UnityEngine.Vector2 UnityEngine.XR.ARFoundation.ARPlane::get_extents()
 extern void ARPlane_get_extents_m15E7D52F5BBB68F8EF0871A573894309B1D9B623 (void);
-// 0x000001EC UnityEngine.Vector2 UnityEngine.XR.ARFoundation.ARPlane::get_size()
+// 0x000001EE UnityEngine.Vector2 UnityEngine.XR.ARFoundation.ARPlane::get_size()
 extern void ARPlane_get_size_m3848DFA43414D59474E29C8F4ED3DAB848A27D18 (void);
-// 0x000001ED UnityEngine.Plane UnityEngine.XR.ARFoundation.ARPlane::get_infinitePlane()
+// 0x000001EF UnityEngine.Plane UnityEngine.XR.ARFoundation.ARPlane::get_infinitePlane()
 extern void ARPlane_get_infinitePlane_mF31BA660A9854B85EBE1079763B6C3F702425963 (void);
-// 0x000001EE System.IntPtr UnityEngine.XR.ARFoundation.ARPlane::get_nativePtr()
+// 0x000001F0 System.IntPtr UnityEngine.XR.ARFoundation.ARPlane::get_nativePtr()
 extern void ARPlane_get_nativePtr_m83BE2C3F5EADF8CE66FCF7045A4AB318F91F97A9 (void);
-// 0x000001EF Unity.Collections.NativeArray`1<UnityEngine.Vector2> UnityEngine.XR.ARFoundation.ARPlane::get_boundary()
+// 0x000001F1 Unity.Collections.NativeArray`1<UnityEngine.Vector2> UnityEngine.XR.ARFoundation.ARPlane::get_boundary()
 extern void ARPlane_get_boundary_m36CBBE48CE6D88237DF3394250A83A69C4E7F391 (void);
-// 0x000001F0 System.Void UnityEngine.XR.ARFoundation.ARPlane::UpdateBoundary(UnityEngine.XR.ARSubsystems.XRPlaneSubsystem)
+// 0x000001F2 System.Void UnityEngine.XR.ARFoundation.ARPlane::UpdateBoundary(UnityEngine.XR.ARSubsystems.XRPlaneSubsystem)
 extern void ARPlane_UpdateBoundary_m2108B0805369F86A19E689A5FC3A403D78AB0396 (void);
-// 0x000001F1 System.Void UnityEngine.XR.ARFoundation.ARPlane::OnValidate()
+// 0x000001F3 System.Void UnityEngine.XR.ARFoundation.ARPlane::OnValidate()
 extern void ARPlane_OnValidate_mA4A9679E135EC8A45942CF35E2E5E90544D5383D (void);
-// 0x000001F2 System.Void UnityEngine.XR.ARFoundation.ARPlane::OnDestroy()
+// 0x000001F4 System.Void UnityEngine.XR.ARFoundation.ARPlane::OnDestroy()
 extern void ARPlane_OnDestroy_mD8358BCB71AFF7210A0612DB75707D8F0B3A5684 (void);
-// 0x000001F3 System.Void UnityEngine.XR.ARFoundation.ARPlane::CheckForBoundaryChanges()
+// 0x000001F5 System.Void UnityEngine.XR.ARFoundation.ARPlane::CheckForBoundaryChanges()
 extern void ARPlane_CheckForBoundaryChanges_m9C3F3B40C724A8F16196F81D8858AB67F33799F1 (void);
-// 0x000001F4 System.Void UnityEngine.XR.ARFoundation.ARPlane::CopyBoundaryAndSetChangedFlag()
+// 0x000001F6 System.Void UnityEngine.XR.ARFoundation.ARPlane::CopyBoundaryAndSetChangedFlag()
 extern void ARPlane_CopyBoundaryAndSetChangedFlag_m782C386656526707A27FFAA2AA43586205601346 (void);
-// 0x000001F5 System.Void UnityEngine.XR.ARFoundation.ARPlane::Update()
+// 0x000001F7 System.Void UnityEngine.XR.ARFoundation.ARPlane::Update()
 extern void ARPlane_Update_m11B70239AFD5ED715614EAAB6BF71C25D67ACE27 (void);
-// 0x000001F6 System.Void UnityEngine.XR.ARFoundation.ARPlane::.ctor()
+// 0x000001F8 System.Void UnityEngine.XR.ARFoundation.ARPlane::.ctor()
 extern void ARPlane__ctor_m0408A53F8E2054DB1A48292C0F80EC228711399A (void);
-// 0x000001F7 UnityEngine.XR.ARFoundation.ARPlane UnityEngine.XR.ARFoundation.ARPlaneBoundaryChangedEventArgs::get_plane()
+// 0x000001F9 UnityEngine.XR.ARFoundation.ARPlane UnityEngine.XR.ARFoundation.ARPlaneBoundaryChangedEventArgs::get_plane()
 extern void ARPlaneBoundaryChangedEventArgs_get_plane_mC91E64413E8593C0137A7C47485A1238180932A5 (void);
-// 0x000001F8 System.Void UnityEngine.XR.ARFoundation.ARPlaneBoundaryChangedEventArgs::set_plane(UnityEngine.XR.ARFoundation.ARPlane)
+// 0x000001FA System.Void UnityEngine.XR.ARFoundation.ARPlaneBoundaryChangedEventArgs::set_plane(UnityEngine.XR.ARFoundation.ARPlane)
 extern void ARPlaneBoundaryChangedEventArgs_set_plane_mEDFCCE4100F4480E53F3EE12F4F89DB7054AE6D4 (void);
-// 0x000001F9 System.Void UnityEngine.XR.ARFoundation.ARPlaneBoundaryChangedEventArgs::.ctor(UnityEngine.XR.ARFoundation.ARPlane)
+// 0x000001FB System.Void UnityEngine.XR.ARFoundation.ARPlaneBoundaryChangedEventArgs::.ctor(UnityEngine.XR.ARFoundation.ARPlane)
 extern void ARPlaneBoundaryChangedEventArgs__ctor_mCD138E5FFD74678A29B6A494550C428AE7344678 (void);
-// 0x000001FA System.Int32 UnityEngine.XR.ARFoundation.ARPlaneBoundaryChangedEventArgs::GetHashCode()
+// 0x000001FC System.Int32 UnityEngine.XR.ARFoundation.ARPlaneBoundaryChangedEventArgs::GetHashCode()
 extern void ARPlaneBoundaryChangedEventArgs_GetHashCode_m01011EEB2FAD823382934CDF5710CE259A212EB4 (void);
-// 0x000001FB System.Boolean UnityEngine.XR.ARFoundation.ARPlaneBoundaryChangedEventArgs::Equals(System.Object)
+// 0x000001FD System.Boolean UnityEngine.XR.ARFoundation.ARPlaneBoundaryChangedEventArgs::Equals(System.Object)
 extern void ARPlaneBoundaryChangedEventArgs_Equals_m9BBA8DDF067E8DC0BB0956C0BD4FF95B78C9DA1B (void);
-// 0x000001FC System.String UnityEngine.XR.ARFoundation.ARPlaneBoundaryChangedEventArgs::ToString()
+// 0x000001FE System.String UnityEngine.XR.ARFoundation.ARPlaneBoundaryChangedEventArgs::ToString()
 extern void ARPlaneBoundaryChangedEventArgs_ToString_mB9D8B3B3DD1965A75E8CBE0F1133DA0C4310D28F (void);
-// 0x000001FD System.Boolean UnityEngine.XR.ARFoundation.ARPlaneBoundaryChangedEventArgs::Equals(UnityEngine.XR.ARFoundation.ARPlaneBoundaryChangedEventArgs)
+// 0x000001FF System.Boolean UnityEngine.XR.ARFoundation.ARPlaneBoundaryChangedEventArgs::Equals(UnityEngine.XR.ARFoundation.ARPlaneBoundaryChangedEventArgs)
 extern void ARPlaneBoundaryChangedEventArgs_Equals_m8FCE506D26E362A259FD1E260648E9FA5C07B91D (void);
-// 0x000001FE System.Boolean UnityEngine.XR.ARFoundation.ARPlaneBoundaryChangedEventArgs::op_Equality(UnityEngine.XR.ARFoundation.ARPlaneBoundaryChangedEventArgs,UnityEngine.XR.ARFoundation.ARPlaneBoundaryChangedEventArgs)
+// 0x00000200 System.Boolean UnityEngine.XR.ARFoundation.ARPlaneBoundaryChangedEventArgs::op_Equality(UnityEngine.XR.ARFoundation.ARPlaneBoundaryChangedEventArgs,UnityEngine.XR.ARFoundation.ARPlaneBoundaryChangedEventArgs)
 extern void ARPlaneBoundaryChangedEventArgs_op_Equality_m9ABF547D07B973DEFD580E7AA575B5EB3CDC7B0C (void);
-// 0x000001FF System.Boolean UnityEngine.XR.ARFoundation.ARPlaneBoundaryChangedEventArgs::op_Inequality(UnityEngine.XR.ARFoundation.ARPlaneBoundaryChangedEventArgs,UnityEngine.XR.ARFoundation.ARPlaneBoundaryChangedEventArgs)
+// 0x00000201 System.Boolean UnityEngine.XR.ARFoundation.ARPlaneBoundaryChangedEventArgs::op_Inequality(UnityEngine.XR.ARFoundation.ARPlaneBoundaryChangedEventArgs,UnityEngine.XR.ARFoundation.ARPlaneBoundaryChangedEventArgs)
 extern void ARPlaneBoundaryChangedEventArgs_op_Inequality_mA8F50D5355F301CE6068DB238D44A0DE13C60FE6 (void);
-// 0x00000200 UnityEngine.GameObject UnityEngine.XR.ARFoundation.ARPlaneManager::get_planePrefab()
+// 0x00000202 UnityEngine.GameObject UnityEngine.XR.ARFoundation.ARPlaneManager::get_planePrefab()
 extern void ARPlaneManager_get_planePrefab_m3C00DB153DAE1813C0174CE0668913D2D2F74AE6 (void);
-// 0x00000201 System.Void UnityEngine.XR.ARFoundation.ARPlaneManager::set_planePrefab(UnityEngine.GameObject)
+// 0x00000203 System.Void UnityEngine.XR.ARFoundation.ARPlaneManager::set_planePrefab(UnityEngine.GameObject)
 extern void ARPlaneManager_set_planePrefab_m411D7254A8FF9891E6DCB7E1BE9C64052D4565FC (void);
-// 0x00000202 UnityEngine.XR.ARSubsystems.PlaneDetectionMode UnityEngine.XR.ARFoundation.ARPlaneManager::get_detectionMode()
+// 0x00000204 UnityEngine.XR.ARSubsystems.PlaneDetectionMode UnityEngine.XR.ARFoundation.ARPlaneManager::get_detectionMode()
 extern void ARPlaneManager_get_detectionMode_mFA03DF070244B75712F5EB76B01C56B6ECD9C92D (void);
-// 0x00000203 System.Void UnityEngine.XR.ARFoundation.ARPlaneManager::set_detectionMode(UnityEngine.XR.ARSubsystems.PlaneDetectionMode)
+// 0x00000205 System.Void UnityEngine.XR.ARFoundation.ARPlaneManager::set_detectionMode(UnityEngine.XR.ARSubsystems.PlaneDetectionMode)
 extern void ARPlaneManager_set_detectionMode_m9751E405615DF5749E5CABFF3AD5178A907AB540 (void);
-// 0x00000204 UnityEngine.XR.ARSubsystems.PlaneDetectionMode UnityEngine.XR.ARFoundation.ARPlaneManager::get_requestedDetectionMode()
+// 0x00000206 UnityEngine.XR.ARSubsystems.PlaneDetectionMode UnityEngine.XR.ARFoundation.ARPlaneManager::get_requestedDetectionMode()
 extern void ARPlaneManager_get_requestedDetectionMode_m7AB0F69B8A0EC9A8A76C1303621BF3932FF1B614 (void);
-// 0x00000205 System.Void UnityEngine.XR.ARFoundation.ARPlaneManager::set_requestedDetectionMode(UnityEngine.XR.ARSubsystems.PlaneDetectionMode)
+// 0x00000207 System.Void UnityEngine.XR.ARFoundation.ARPlaneManager::set_requestedDetectionMode(UnityEngine.XR.ARSubsystems.PlaneDetectionMode)
 extern void ARPlaneManager_set_requestedDetectionMode_mBAE613D44F9110CF01D898BC68AD02914AB23A6E (void);
-// 0x00000206 UnityEngine.XR.ARSubsystems.PlaneDetectionMode UnityEngine.XR.ARFoundation.ARPlaneManager::get_currentDetectionMode()
+// 0x00000208 UnityEngine.XR.ARSubsystems.PlaneDetectionMode UnityEngine.XR.ARFoundation.ARPlaneManager::get_currentDetectionMode()
 extern void ARPlaneManager_get_currentDetectionMode_m12AFC03E86949D9D354D68F340332ADDBD79E5DE (void);
-// 0x00000207 System.Void UnityEngine.XR.ARFoundation.ARPlaneManager::add_planesChanged(System.Action`1<UnityEngine.XR.ARFoundation.ARPlanesChangedEventArgs>)
+// 0x00000209 System.Void UnityEngine.XR.ARFoundation.ARPlaneManager::add_planesChanged(System.Action`1<UnityEngine.XR.ARFoundation.ARPlanesChangedEventArgs>)
 extern void ARPlaneManager_add_planesChanged_m785106C77BC4F503A9AB904E9BEF3EDCCF49FD27 (void);
-// 0x00000208 System.Void UnityEngine.XR.ARFoundation.ARPlaneManager::remove_planesChanged(System.Action`1<UnityEngine.XR.ARFoundation.ARPlanesChangedEventArgs>)
+// 0x0000020A System.Void UnityEngine.XR.ARFoundation.ARPlaneManager::remove_planesChanged(System.Action`1<UnityEngine.XR.ARFoundation.ARPlanesChangedEventArgs>)
 extern void ARPlaneManager_remove_planesChanged_mF9F02F508C2B19FFB3F6B5738B00C2C618B4C722 (void);
-// 0x00000209 UnityEngine.XR.ARFoundation.ARPlane UnityEngine.XR.ARFoundation.ARPlaneManager::GetPlane(UnityEngine.XR.ARSubsystems.TrackableId)
+// 0x0000020B UnityEngine.XR.ARFoundation.ARPlane UnityEngine.XR.ARFoundation.ARPlaneManager::GetPlane(UnityEngine.XR.ARSubsystems.TrackableId)
 extern void ARPlaneManager_GetPlane_m2863C99ED9ACEE22F720067A1E0AC6C55E743442 (void);
-// 0x0000020A Unity.Collections.NativeArray`1<UnityEngine.XR.ARSubsystems.XRRaycastHit> UnityEngine.XR.ARFoundation.ARPlaneManager::Raycast(UnityEngine.Ray,UnityEngine.XR.ARSubsystems.TrackableType,Unity.Collections.Allocator)
+// 0x0000020C Unity.Collections.NativeArray`1<UnityEngine.XR.ARSubsystems.XRRaycastHit> UnityEngine.XR.ARFoundation.ARPlaneManager::Raycast(UnityEngine.Ray,UnityEngine.XR.ARSubsystems.TrackableType,Unity.Collections.Allocator)
 extern void ARPlaneManager_Raycast_mAE3382E17ADFF506CF71B72705CF8C25AA264C79 (void);
-// 0x0000020B System.Single UnityEngine.XR.ARFoundation.ARPlaneManager::GetCrossDirection(UnityEngine.Vector2,UnityEngine.Vector2)
+// 0x0000020D System.Single UnityEngine.XR.ARFoundation.ARPlaneManager::GetCrossDirection(UnityEngine.Vector2,UnityEngine.Vector2)
 extern void ARPlaneManager_GetCrossDirection_m6929DD8D3045AC8AE5F9A816F94F7EBDB0470916 (void);
-// 0x0000020C System.Int32 UnityEngine.XR.ARFoundation.ARPlaneManager::WindingNumber(UnityEngine.Vector2,Unity.Collections.NativeArray`1<UnityEngine.Vector2>)
+// 0x0000020E System.Int32 UnityEngine.XR.ARFoundation.ARPlaneManager::WindingNumber(UnityEngine.Vector2,Unity.Collections.NativeArray`1<UnityEngine.Vector2>)
 extern void ARPlaneManager_WindingNumber_m37E0C9DBCC45AAC1CE645B13ED72C0A467886279 (void);
-// 0x0000020D UnityEngine.GameObject UnityEngine.XR.ARFoundation.ARPlaneManager::GetPrefab()
+// 0x0000020F UnityEngine.GameObject UnityEngine.XR.ARFoundation.ARPlaneManager::GetPrefab()
 extern void ARPlaneManager_GetPrefab_mAC046B2B1BF7CF3D5D0812982CD8697D9EEE15E6 (void);
-// 0x0000020E System.Void UnityEngine.XR.ARFoundation.ARPlaneManager::OnBeforeStart()
+// 0x00000210 System.Void UnityEngine.XR.ARFoundation.ARPlaneManager::OnBeforeStart()
 extern void ARPlaneManager_OnBeforeStart_m08A048DDE25E6E58DAB14D5A98FA967D335281FE (void);
-// 0x0000020F System.Void UnityEngine.XR.ARFoundation.ARPlaneManager::OnAfterSetSessionRelativeData(UnityEngine.XR.ARFoundation.ARPlane,UnityEngine.XR.ARSubsystems.BoundedPlane)
+// 0x00000211 System.Void UnityEngine.XR.ARFoundation.ARPlaneManager::OnAfterSetSessionRelativeData(UnityEngine.XR.ARFoundation.ARPlane,UnityEngine.XR.ARSubsystems.BoundedPlane)
 extern void ARPlaneManager_OnAfterSetSessionRelativeData_m29742CEC4DFD4C38531850D5BB294D187BBEE86B (void);
-// 0x00000210 System.Void UnityEngine.XR.ARFoundation.ARPlaneManager::OnTrackablesChanged(System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARPlane>,System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARPlane>,System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARPlane>)
+// 0x00000212 System.Void UnityEngine.XR.ARFoundation.ARPlaneManager::OnTrackablesChanged(System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARPlane>,System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARPlane>,System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARPlane>)
 extern void ARPlaneManager_OnTrackablesChanged_m35BB527E9A876CD709358974F404DF783B220C10 (void);
-// 0x00000211 System.String UnityEngine.XR.ARFoundation.ARPlaneManager::get_gameObjectName()
+// 0x00000213 System.String UnityEngine.XR.ARFoundation.ARPlaneManager::get_gameObjectName()
 extern void ARPlaneManager_get_gameObjectName_mA9589CB27F850045D5C9403B124C18E592E73D61 (void);
-// 0x00000212 System.Void UnityEngine.XR.ARFoundation.ARPlaneManager::OnEnable()
+// 0x00000214 System.Void UnityEngine.XR.ARFoundation.ARPlaneManager::OnEnable()
 extern void ARPlaneManager_OnEnable_m02B2D3772BF6CC084FA6BFA31B6939CB5199CF97 (void);
-// 0x00000213 System.Void UnityEngine.XR.ARFoundation.ARPlaneManager::OnDisable()
+// 0x00000215 System.Void UnityEngine.XR.ARFoundation.ARPlaneManager::OnDisable()
 extern void ARPlaneManager_OnDisable_mD54AB766B9285D5C673E54A2A3AEA7F37CC54882 (void);
-// 0x00000214 System.Void UnityEngine.XR.ARFoundation.ARPlaneManager::.ctor()
+// 0x00000216 System.Void UnityEngine.XR.ARFoundation.ARPlaneManager::.ctor()
 extern void ARPlaneManager__ctor_m620BF313F00F9BCAEB75096C558463FF98DD5FEF (void);
-// 0x00000215 System.Boolean UnityEngine.XR.ARFoundation.ARPlaneMeshGenerators::GenerateMesh(UnityEngine.Mesh,UnityEngine.Pose,Unity.Collections.NativeArray`1<UnityEngine.Vector2>,System.Single)
+// 0x00000217 System.Boolean UnityEngine.XR.ARFoundation.ARPlaneMeshGenerators::GenerateMesh(UnityEngine.Mesh,UnityEngine.Pose,Unity.Collections.NativeArray`1<UnityEngine.Vector2>,System.Single)
 extern void ARPlaneMeshGenerators_GenerateMesh_mC65957DD09D5DF63DD09B6067B5F9CEEEC60A100 (void);
-// 0x00000216 System.Void UnityEngine.XR.ARFoundation.ARPlaneMeshGenerators::GenerateUvs(System.Collections.Generic.List`1<UnityEngine.Vector2>,UnityEngine.Pose,System.Collections.Generic.List`1<UnityEngine.Vector3>)
+// 0x00000218 System.Void UnityEngine.XR.ARFoundation.ARPlaneMeshGenerators::GenerateUvs(System.Collections.Generic.List`1<UnityEngine.Vector2>,UnityEngine.Pose,System.Collections.Generic.List`1<UnityEngine.Vector3>)
 extern void ARPlaneMeshGenerators_GenerateUvs_m63AD50B08D0846EB2FE7D189E817B7CCE1D1CA2A (void);
-// 0x00000217 System.Boolean UnityEngine.XR.ARFoundation.ARPlaneMeshGenerators::GenerateIndices(System.Collections.Generic.List`1<System.Int32>,System.Collections.Generic.List`1<UnityEngine.Vector3>,System.Single)
+// 0x00000219 System.Boolean UnityEngine.XR.ARFoundation.ARPlaneMeshGenerators::GenerateIndices(System.Collections.Generic.List`1<System.Int32>,System.Collections.Generic.List`1<UnityEngine.Vector3>,System.Single)
 extern void ARPlaneMeshGenerators_GenerateIndices_m0884F6FE12A5E246AE457EE06D1614E9D35C40A7 (void);
-// 0x00000218 System.Void UnityEngine.XR.ARFoundation.ARPlaneMeshGenerators::.cctor()
+// 0x0000021A System.Void UnityEngine.XR.ARFoundation.ARPlaneMeshGenerators::.cctor()
 extern void ARPlaneMeshGenerators__cctor_mA2AD482799CBD56AC165BBAC69142C0EE97096B4 (void);
-// 0x00000219 UnityEngine.Mesh UnityEngine.XR.ARFoundation.ARPlaneMeshVisualizer::get_mesh()
+// 0x0000021B UnityEngine.Mesh UnityEngine.XR.ARFoundation.ARPlaneMeshVisualizer::get_mesh()
 extern void ARPlaneMeshVisualizer_get_mesh_m7E5CE302636B7C6F9578DBB9D0161CF96F5D7AB4 (void);
-// 0x0000021A System.Void UnityEngine.XR.ARFoundation.ARPlaneMeshVisualizer::set_mesh(UnityEngine.Mesh)
+// 0x0000021C System.Void UnityEngine.XR.ARFoundation.ARPlaneMeshVisualizer::set_mesh(UnityEngine.Mesh)
 extern void ARPlaneMeshVisualizer_set_mesh_mE140F46F7B4124CEABB9F1B8D146844437FE5C41 (void);
-// 0x0000021B UnityEngine.XR.ARSubsystems.TrackingState UnityEngine.XR.ARFoundation.ARPlaneMeshVisualizer::get_trackingStateVisibilityThreshold()
+// 0x0000021D UnityEngine.XR.ARSubsystems.TrackingState UnityEngine.XR.ARFoundation.ARPlaneMeshVisualizer::get_trackingStateVisibilityThreshold()
 extern void ARPlaneMeshVisualizer_get_trackingStateVisibilityThreshold_m18E888A83DEE56A30E28537AC82D78E698641D4D (void);
-// 0x0000021C System.Void UnityEngine.XR.ARFoundation.ARPlaneMeshVisualizer::set_trackingStateVisibilityThreshold(UnityEngine.XR.ARSubsystems.TrackingState)
+// 0x0000021E System.Void UnityEngine.XR.ARFoundation.ARPlaneMeshVisualizer::set_trackingStateVisibilityThreshold(UnityEngine.XR.ARSubsystems.TrackingState)
 extern void ARPlaneMeshVisualizer_set_trackingStateVisibilityThreshold_m1BDD26724E10D1A2E869BA9C0C6EB4BC38FC8E71 (void);
-// 0x0000021D System.Boolean UnityEngine.XR.ARFoundation.ARPlaneMeshVisualizer::get_hideSubsumed()
+// 0x0000021F System.Boolean UnityEngine.XR.ARFoundation.ARPlaneMeshVisualizer::get_hideSubsumed()
 extern void ARPlaneMeshVisualizer_get_hideSubsumed_mB1FC1C02D5A414A8BF250D4B5734570DC2BD16E7 (void);
-// 0x0000021E System.Void UnityEngine.XR.ARFoundation.ARPlaneMeshVisualizer::set_hideSubsumed(System.Boolean)
+// 0x00000220 System.Void UnityEngine.XR.ARFoundation.ARPlaneMeshVisualizer::set_hideSubsumed(System.Boolean)
 extern void ARPlaneMeshVisualizer_set_hideSubsumed_mC937A0C185FF24808B6BE1BB4DBA17DA339CBB03 (void);
-// 0x0000021F System.Void UnityEngine.XR.ARFoundation.ARPlaneMeshVisualizer::OnBoundaryChanged(UnityEngine.XR.ARFoundation.ARPlaneBoundaryChangedEventArgs)
+// 0x00000221 System.Void UnityEngine.XR.ARFoundation.ARPlaneMeshVisualizer::OnBoundaryChanged(UnityEngine.XR.ARFoundation.ARPlaneBoundaryChangedEventArgs)
 extern void ARPlaneMeshVisualizer_OnBoundaryChanged_mD8351E73EB50EA25B76AE4B34AF2F4D6EC6DAFF3 (void);
-// 0x00000220 System.Void UnityEngine.XR.ARFoundation.ARPlaneMeshVisualizer::DisableComponents()
+// 0x00000222 System.Void UnityEngine.XR.ARFoundation.ARPlaneMeshVisualizer::DisableComponents()
 extern void ARPlaneMeshVisualizer_DisableComponents_m9FD32662E3F810874B66E074B06C2A9995567387 (void);
-// 0x00000221 System.Void UnityEngine.XR.ARFoundation.ARPlaneMeshVisualizer::SetRendererEnabled(System.Boolean)
-// 0x00000222 System.Void UnityEngine.XR.ARFoundation.ARPlaneMeshVisualizer::SetVisible(System.Boolean)
+// 0x00000223 System.Void UnityEngine.XR.ARFoundation.ARPlaneMeshVisualizer::SetRendererEnabled(System.Boolean)
+// 0x00000224 System.Void UnityEngine.XR.ARFoundation.ARPlaneMeshVisualizer::SetVisible(System.Boolean)
 extern void ARPlaneMeshVisualizer_SetVisible_mCFE4013BD17B4922538374DFD89C5717FE8C1B1F (void);
-// 0x00000223 System.Void UnityEngine.XR.ARFoundation.ARPlaneMeshVisualizer::UpdateVisibility()
+// 0x00000225 System.Void UnityEngine.XR.ARFoundation.ARPlaneMeshVisualizer::UpdateVisibility()
 extern void ARPlaneMeshVisualizer_UpdateVisibility_m1F81FBFD5A513C75A9AFB8426782B76178672121 (void);
-// 0x00000224 System.Void UnityEngine.XR.ARFoundation.ARPlaneMeshVisualizer::Awake()
+// 0x00000226 System.Void UnityEngine.XR.ARFoundation.ARPlaneMeshVisualizer::Awake()
 extern void ARPlaneMeshVisualizer_Awake_m38B47CDFA66CAC55E120597A2C745424C78492B0 (void);
-// 0x00000225 System.Void UnityEngine.XR.ARFoundation.ARPlaneMeshVisualizer::OnEnable()
+// 0x00000227 System.Void UnityEngine.XR.ARFoundation.ARPlaneMeshVisualizer::OnEnable()
 extern void ARPlaneMeshVisualizer_OnEnable_mA7F75A39674737AEC66313CF4F3F4A9210034840 (void);
-// 0x00000226 System.Void UnityEngine.XR.ARFoundation.ARPlaneMeshVisualizer::OnDisable()
+// 0x00000228 System.Void UnityEngine.XR.ARFoundation.ARPlaneMeshVisualizer::OnDisable()
 extern void ARPlaneMeshVisualizer_OnDisable_mE542AD4800BA0FE7AE2F2E368AF2F46C426C5533 (void);
-// 0x00000227 System.Void UnityEngine.XR.ARFoundation.ARPlaneMeshVisualizer::Update()
+// 0x00000229 System.Void UnityEngine.XR.ARFoundation.ARPlaneMeshVisualizer::Update()
 extern void ARPlaneMeshVisualizer_Update_m98C87020EC822B160D3B62FB67EC169E4931CC8D (void);
-// 0x00000228 System.Void UnityEngine.XR.ARFoundation.ARPlaneMeshVisualizer::.ctor()
+// 0x0000022A System.Void UnityEngine.XR.ARFoundation.ARPlaneMeshVisualizer::.ctor()
 extern void ARPlaneMeshVisualizer__ctor_mC9399C82657A81411A5D6CECD94F27D1D6B8DDF5 (void);
-// 0x00000229 System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARPlane> UnityEngine.XR.ARFoundation.ARPlanesChangedEventArgs::get_added()
+// 0x0000022B System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARPlane> UnityEngine.XR.ARFoundation.ARPlanesChangedEventArgs::get_added()
 extern void ARPlanesChangedEventArgs_get_added_mD0CA0FB88C9F669580ED4BE0C9A3DA6E1333DA07 (void);
-// 0x0000022A System.Void UnityEngine.XR.ARFoundation.ARPlanesChangedEventArgs::set_added(System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARPlane>)
+// 0x0000022C System.Void UnityEngine.XR.ARFoundation.ARPlanesChangedEventArgs::set_added(System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARPlane>)
 extern void ARPlanesChangedEventArgs_set_added_mADE2BA0CDD14711F3576C51A04BC0A06CC4F0C37 (void);
-// 0x0000022B System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARPlane> UnityEngine.XR.ARFoundation.ARPlanesChangedEventArgs::get_updated()
+// 0x0000022D System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARPlane> UnityEngine.XR.ARFoundation.ARPlanesChangedEventArgs::get_updated()
 extern void ARPlanesChangedEventArgs_get_updated_m1EB6B86313D75F78C287B67BF2EA7A03468BB48E (void);
-// 0x0000022C System.Void UnityEngine.XR.ARFoundation.ARPlanesChangedEventArgs::set_updated(System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARPlane>)
+// 0x0000022E System.Void UnityEngine.XR.ARFoundation.ARPlanesChangedEventArgs::set_updated(System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARPlane>)
 extern void ARPlanesChangedEventArgs_set_updated_m186CC3DF36E1B28FE2B7CFB2F9C56E638C4A4F26 (void);
-// 0x0000022D System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARPlane> UnityEngine.XR.ARFoundation.ARPlanesChangedEventArgs::get_removed()
+// 0x0000022F System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARPlane> UnityEngine.XR.ARFoundation.ARPlanesChangedEventArgs::get_removed()
 extern void ARPlanesChangedEventArgs_get_removed_m771596586A99FE5593EF16233E7F3BA3603E0927 (void);
-// 0x0000022E System.Void UnityEngine.XR.ARFoundation.ARPlanesChangedEventArgs::set_removed(System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARPlane>)
+// 0x00000230 System.Void UnityEngine.XR.ARFoundation.ARPlanesChangedEventArgs::set_removed(System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARPlane>)
 extern void ARPlanesChangedEventArgs_set_removed_mE2BE624B870142F492E01AB6328B4D74E575228A (void);
-// 0x0000022F System.Void UnityEngine.XR.ARFoundation.ARPlanesChangedEventArgs::.ctor(System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARPlane>,System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARPlane>,System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARPlane>)
+// 0x00000231 System.Void UnityEngine.XR.ARFoundation.ARPlanesChangedEventArgs::.ctor(System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARPlane>,System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARPlane>,System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARPlane>)
 extern void ARPlanesChangedEventArgs__ctor_mE0D81BC682849CEF4267F2466246A42A451D7D3A (void);
-// 0x00000230 System.Int32 UnityEngine.XR.ARFoundation.ARPlanesChangedEventArgs::GetHashCode()
+// 0x00000232 System.Int32 UnityEngine.XR.ARFoundation.ARPlanesChangedEventArgs::GetHashCode()
 extern void ARPlanesChangedEventArgs_GetHashCode_m80CECC92973BF7AC233A66E338DFE888901E8C7F (void);
-// 0x00000231 System.Boolean UnityEngine.XR.ARFoundation.ARPlanesChangedEventArgs::Equals(System.Object)
+// 0x00000233 System.Boolean UnityEngine.XR.ARFoundation.ARPlanesChangedEventArgs::Equals(System.Object)
 extern void ARPlanesChangedEventArgs_Equals_m6EE7772274DE47C25AB57E32C1B4C0FAC78B48BF (void);
-// 0x00000232 System.String UnityEngine.XR.ARFoundation.ARPlanesChangedEventArgs::ToString()
+// 0x00000234 System.String UnityEngine.XR.ARFoundation.ARPlanesChangedEventArgs::ToString()
 extern void ARPlanesChangedEventArgs_ToString_m0175F0496B86842A452179E194FEAB0FC61A5D3E (void);
-// 0x00000233 System.Boolean UnityEngine.XR.ARFoundation.ARPlanesChangedEventArgs::Equals(UnityEngine.XR.ARFoundation.ARPlanesChangedEventArgs)
+// 0x00000235 System.Boolean UnityEngine.XR.ARFoundation.ARPlanesChangedEventArgs::Equals(UnityEngine.XR.ARFoundation.ARPlanesChangedEventArgs)
 extern void ARPlanesChangedEventArgs_Equals_mCB86F0483BA241F16D592B63E2DA15F7DA74778C (void);
-// 0x00000234 System.Boolean UnityEngine.XR.ARFoundation.ARPlanesChangedEventArgs::op_Equality(UnityEngine.XR.ARFoundation.ARPlanesChangedEventArgs,UnityEngine.XR.ARFoundation.ARPlanesChangedEventArgs)
+// 0x00000236 System.Boolean UnityEngine.XR.ARFoundation.ARPlanesChangedEventArgs::op_Equality(UnityEngine.XR.ARFoundation.ARPlanesChangedEventArgs,UnityEngine.XR.ARFoundation.ARPlanesChangedEventArgs)
 extern void ARPlanesChangedEventArgs_op_Equality_m075E0416B3FCEA98706D78DBAFE9AE73097D4217 (void);
-// 0x00000235 System.Boolean UnityEngine.XR.ARFoundation.ARPlanesChangedEventArgs::op_Inequality(UnityEngine.XR.ARFoundation.ARPlanesChangedEventArgs,UnityEngine.XR.ARFoundation.ARPlanesChangedEventArgs)
+// 0x00000237 System.Boolean UnityEngine.XR.ARFoundation.ARPlanesChangedEventArgs::op_Inequality(UnityEngine.XR.ARFoundation.ARPlanesChangedEventArgs,UnityEngine.XR.ARFoundation.ARPlanesChangedEventArgs)
 extern void ARPlanesChangedEventArgs_op_Inequality_mA05424504860DE444728003C1E660F316CBD95B8 (void);
-// 0x00000236 System.Void UnityEngine.XR.ARFoundation.ARPointCloud::add_updated(System.Action`1<UnityEngine.XR.ARFoundation.ARPointCloudUpdatedEventArgs>)
+// 0x00000238 System.Void UnityEngine.XR.ARFoundation.ARPointCloud::add_updated(System.Action`1<UnityEngine.XR.ARFoundation.ARPointCloudUpdatedEventArgs>)
 extern void ARPointCloud_add_updated_mEFAC9E959B232F72FDA6C66483DC1B1CF6D33FEC (void);
-// 0x00000237 System.Void UnityEngine.XR.ARFoundation.ARPointCloud::remove_updated(System.Action`1<UnityEngine.XR.ARFoundation.ARPointCloudUpdatedEventArgs>)
+// 0x00000239 System.Void UnityEngine.XR.ARFoundation.ARPointCloud::remove_updated(System.Action`1<UnityEngine.XR.ARFoundation.ARPointCloudUpdatedEventArgs>)
 extern void ARPointCloud_remove_updated_mCAA50F41B843248D9C92988928C1DDD2DDFAB7C2 (void);
-// 0x00000238 System.Nullable`1<Unity.Collections.NativeSlice`1<UnityEngine.Vector3>> UnityEngine.XR.ARFoundation.ARPointCloud::get_positions()
+// 0x0000023A System.Nullable`1<Unity.Collections.NativeSlice`1<UnityEngine.Vector3>> UnityEngine.XR.ARFoundation.ARPointCloud::get_positions()
 extern void ARPointCloud_get_positions_m95037B5137CE642184CF92E62CAF429A88DFED64 (void);
-// 0x00000239 System.Nullable`1<Unity.Collections.NativeSlice`1<System.UInt64>> UnityEngine.XR.ARFoundation.ARPointCloud::get_identifiers()
+// 0x0000023B System.Nullable`1<Unity.Collections.NativeSlice`1<System.UInt64>> UnityEngine.XR.ARFoundation.ARPointCloud::get_identifiers()
 extern void ARPointCloud_get_identifiers_m8A502508E7708AC0BCFEB5B63E30F528220129ED (void);
-// 0x0000023A System.Nullable`1<Unity.Collections.NativeArray`1<System.Single>> UnityEngine.XR.ARFoundation.ARPointCloud::get_confidenceValues()
+// 0x0000023C System.Nullable`1<Unity.Collections.NativeArray`1<System.Single>> UnityEngine.XR.ARFoundation.ARPointCloud::get_confidenceValues()
 extern void ARPointCloud_get_confidenceValues_m933CF410278ED5F2DC5374F50D64B0B6181CCED0 (void);
-// 0x0000023B System.Void UnityEngine.XR.ARFoundation.ARPointCloud::Update()
+// 0x0000023D System.Void UnityEngine.XR.ARFoundation.ARPointCloud::Update()
 extern void ARPointCloud_Update_mA0EFD0B2C8BA199CD3932F752AC698F218861E46 (void);
-// 0x0000023C System.Void UnityEngine.XR.ARFoundation.ARPointCloud::OnDestroy()
+// 0x0000023E System.Void UnityEngine.XR.ARFoundation.ARPointCloud::OnDestroy()
 extern void ARPointCloud_OnDestroy_mC9B02FD01871C1E1DE3BB58A5A1CEB19F902B1A5 (void);
-// 0x0000023D System.Void UnityEngine.XR.ARFoundation.ARPointCloud::UpdateData(UnityEngine.XR.ARSubsystems.XRDepthSubsystem)
+// 0x0000023F System.Void UnityEngine.XR.ARFoundation.ARPointCloud::UpdateData(UnityEngine.XR.ARSubsystems.XRDepthSubsystem)
 extern void ARPointCloud_UpdateData_m59A88A29AAE692EB5496CDC43A263DF8F40E1546 (void);
-// 0x0000023E System.Void UnityEngine.XR.ARFoundation.ARPointCloud::.ctor()
+// 0x00000240 System.Void UnityEngine.XR.ARFoundation.ARPointCloud::.ctor()
 extern void ARPointCloud__ctor_mFE17AF285FC7A8A32CE35175CDD92ACC5CA02051 (void);
-// 0x0000023F System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARPointCloud> UnityEngine.XR.ARFoundation.ARPointCloudChangedEventArgs::get_added()
+// 0x00000241 System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARPointCloud> UnityEngine.XR.ARFoundation.ARPointCloudChangedEventArgs::get_added()
 extern void ARPointCloudChangedEventArgs_get_added_m0C729336F6976A90A2324B4F937D76FB15F782AA (void);
-// 0x00000240 System.Void UnityEngine.XR.ARFoundation.ARPointCloudChangedEventArgs::set_added(System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARPointCloud>)
+// 0x00000242 System.Void UnityEngine.XR.ARFoundation.ARPointCloudChangedEventArgs::set_added(System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARPointCloud>)
 extern void ARPointCloudChangedEventArgs_set_added_m0ACF28F28D87F4F85AEF9D5A25ADBBF144011F56 (void);
-// 0x00000241 System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARPointCloud> UnityEngine.XR.ARFoundation.ARPointCloudChangedEventArgs::get_updated()
+// 0x00000243 System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARPointCloud> UnityEngine.XR.ARFoundation.ARPointCloudChangedEventArgs::get_updated()
 extern void ARPointCloudChangedEventArgs_get_updated_m805F77090DDD98DCE09440655C45F6AE0117E17B (void);
-// 0x00000242 System.Void UnityEngine.XR.ARFoundation.ARPointCloudChangedEventArgs::set_updated(System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARPointCloud>)
+// 0x00000244 System.Void UnityEngine.XR.ARFoundation.ARPointCloudChangedEventArgs::set_updated(System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARPointCloud>)
 extern void ARPointCloudChangedEventArgs_set_updated_m4253DD3BADEE6D38F8D354E8203BC406EE762438 (void);
-// 0x00000243 System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARPointCloud> UnityEngine.XR.ARFoundation.ARPointCloudChangedEventArgs::get_removed()
+// 0x00000245 System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARPointCloud> UnityEngine.XR.ARFoundation.ARPointCloudChangedEventArgs::get_removed()
 extern void ARPointCloudChangedEventArgs_get_removed_mDC85041E76FE7146152B633D6610843BA6951BE7 (void);
-// 0x00000244 System.Void UnityEngine.XR.ARFoundation.ARPointCloudChangedEventArgs::set_removed(System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARPointCloud>)
+// 0x00000246 System.Void UnityEngine.XR.ARFoundation.ARPointCloudChangedEventArgs::set_removed(System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARPointCloud>)
 extern void ARPointCloudChangedEventArgs_set_removed_mD2D666C6988100036A84B13FC862159E02660B81 (void);
-// 0x00000245 System.Void UnityEngine.XR.ARFoundation.ARPointCloudChangedEventArgs::.ctor(System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARPointCloud>,System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARPointCloud>,System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARPointCloud>)
+// 0x00000247 System.Void UnityEngine.XR.ARFoundation.ARPointCloudChangedEventArgs::.ctor(System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARPointCloud>,System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARPointCloud>,System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARPointCloud>)
 extern void ARPointCloudChangedEventArgs__ctor_m25C6F7F51596A783BD19258369C7B8EF105B34A4 (void);
-// 0x00000246 System.Int32 UnityEngine.XR.ARFoundation.ARPointCloudChangedEventArgs::GetHashCode()
+// 0x00000248 System.Int32 UnityEngine.XR.ARFoundation.ARPointCloudChangedEventArgs::GetHashCode()
 extern void ARPointCloudChangedEventArgs_GetHashCode_m32203B5DF16FF47E3E30446484E389CCFDD1C231 (void);
-// 0x00000247 System.Boolean UnityEngine.XR.ARFoundation.ARPointCloudChangedEventArgs::Equals(System.Object)
+// 0x00000249 System.Boolean UnityEngine.XR.ARFoundation.ARPointCloudChangedEventArgs::Equals(System.Object)
 extern void ARPointCloudChangedEventArgs_Equals_mF94BA249FB1E976B119BADBE25C141FFE373156D (void);
-// 0x00000248 System.String UnityEngine.XR.ARFoundation.ARPointCloudChangedEventArgs::ToString()
+// 0x0000024A System.String UnityEngine.XR.ARFoundation.ARPointCloudChangedEventArgs::ToString()
 extern void ARPointCloudChangedEventArgs_ToString_m956CA728D5F129C57ED4DE1E125B5513510C2589 (void);
-// 0x00000249 System.Boolean UnityEngine.XR.ARFoundation.ARPointCloudChangedEventArgs::Equals(UnityEngine.XR.ARFoundation.ARPointCloudChangedEventArgs)
+// 0x0000024B System.Boolean UnityEngine.XR.ARFoundation.ARPointCloudChangedEventArgs::Equals(UnityEngine.XR.ARFoundation.ARPointCloudChangedEventArgs)
 extern void ARPointCloudChangedEventArgs_Equals_mD36FBE917CA6DE75C0237040C98457ACF89A4A59 (void);
-// 0x0000024A System.Boolean UnityEngine.XR.ARFoundation.ARPointCloudChangedEventArgs::op_Equality(UnityEngine.XR.ARFoundation.ARPointCloudChangedEventArgs,UnityEngine.XR.ARFoundation.ARPointCloudChangedEventArgs)
+// 0x0000024C System.Boolean UnityEngine.XR.ARFoundation.ARPointCloudChangedEventArgs::op_Equality(UnityEngine.XR.ARFoundation.ARPointCloudChangedEventArgs,UnityEngine.XR.ARFoundation.ARPointCloudChangedEventArgs)
 extern void ARPointCloudChangedEventArgs_op_Equality_m1AB433F07FBA7781AA5D0A0B3DF4EF537793F180 (void);
-// 0x0000024B System.Boolean UnityEngine.XR.ARFoundation.ARPointCloudChangedEventArgs::op_Inequality(UnityEngine.XR.ARFoundation.ARPointCloudChangedEventArgs,UnityEngine.XR.ARFoundation.ARPointCloudChangedEventArgs)
+// 0x0000024D System.Boolean UnityEngine.XR.ARFoundation.ARPointCloudChangedEventArgs::op_Inequality(UnityEngine.XR.ARFoundation.ARPointCloudChangedEventArgs,UnityEngine.XR.ARFoundation.ARPointCloudChangedEventArgs)
 extern void ARPointCloudChangedEventArgs_op_Inequality_mF3B3B026E989237ACEB5886DA47E0ECEE2C98A57 (void);
-// 0x0000024C UnityEngine.GameObject UnityEngine.XR.ARFoundation.ARPointCloudManager::get_pointCloudPrefab()
+// 0x0000024E UnityEngine.GameObject UnityEngine.XR.ARFoundation.ARPointCloudManager::get_pointCloudPrefab()
 extern void ARPointCloudManager_get_pointCloudPrefab_m24F9057F1A708227453BA57F4E9F9EAB99E8A3AD (void);
-// 0x0000024D System.Void UnityEngine.XR.ARFoundation.ARPointCloudManager::set_pointCloudPrefab(UnityEngine.GameObject)
+// 0x0000024F System.Void UnityEngine.XR.ARFoundation.ARPointCloudManager::set_pointCloudPrefab(UnityEngine.GameObject)
 extern void ARPointCloudManager_set_pointCloudPrefab_m0EB28EB619BF919BAC7522E2596D28DDB44CBC52 (void);
-// 0x0000024E System.Void UnityEngine.XR.ARFoundation.ARPointCloudManager::add_pointCloudsChanged(System.Action`1<UnityEngine.XR.ARFoundation.ARPointCloudChangedEventArgs>)
+// 0x00000250 System.Void UnityEngine.XR.ARFoundation.ARPointCloudManager::add_pointCloudsChanged(System.Action`1<UnityEngine.XR.ARFoundation.ARPointCloudChangedEventArgs>)
 extern void ARPointCloudManager_add_pointCloudsChanged_m37B06DA95B8DC6F1E3332C4F1B9FF7F65CFC77ED (void);
-// 0x0000024F System.Void UnityEngine.XR.ARFoundation.ARPointCloudManager::remove_pointCloudsChanged(System.Action`1<UnityEngine.XR.ARFoundation.ARPointCloudChangedEventArgs>)
+// 0x00000251 System.Void UnityEngine.XR.ARFoundation.ARPointCloudManager::remove_pointCloudsChanged(System.Action`1<UnityEngine.XR.ARFoundation.ARPointCloudChangedEventArgs>)
 extern void ARPointCloudManager_remove_pointCloudsChanged_m652F0D3344D2FA28D5C2E6FA7D4713BC4566A772 (void);
-// 0x00000250 System.Void UnityEngine.XR.ARFoundation.ARPointCloudManager::OnEnable()
+// 0x00000252 System.Void UnityEngine.XR.ARFoundation.ARPointCloudManager::OnEnable()
 extern void ARPointCloudManager_OnEnable_mC281764A592E53862D0412550E653E27EB5CC17F (void);
-// 0x00000251 System.Void UnityEngine.XR.ARFoundation.ARPointCloudManager::OnDisable()
+// 0x00000253 System.Void UnityEngine.XR.ARFoundation.ARPointCloudManager::OnDisable()
 extern void ARPointCloudManager_OnDisable_m95E09360A66979F91544D16E1F33FB307AFF12B8 (void);
-// 0x00000252 UnityEngine.GameObject UnityEngine.XR.ARFoundation.ARPointCloudManager::GetPrefab()
+// 0x00000254 UnityEngine.GameObject UnityEngine.XR.ARFoundation.ARPointCloudManager::GetPrefab()
 extern void ARPointCloudManager_GetPrefab_m2FEF48D33252488504CF8F21BE025568D6E8FE91 (void);
-// 0x00000253 System.String UnityEngine.XR.ARFoundation.ARPointCloudManager::get_gameObjectName()
+// 0x00000255 System.String UnityEngine.XR.ARFoundation.ARPointCloudManager::get_gameObjectName()
 extern void ARPointCloudManager_get_gameObjectName_mF345518E30E2298EFBE0833205B9BC593B912037 (void);
-// 0x00000254 System.Void UnityEngine.XR.ARFoundation.ARPointCloudManager::OnAfterSetSessionRelativeData(UnityEngine.XR.ARFoundation.ARPointCloud,UnityEngine.XR.ARSubsystems.XRPointCloud)
+// 0x00000256 System.Void UnityEngine.XR.ARFoundation.ARPointCloudManager::OnAfterSetSessionRelativeData(UnityEngine.XR.ARFoundation.ARPointCloud,UnityEngine.XR.ARSubsystems.XRPointCloud)
 extern void ARPointCloudManager_OnAfterSetSessionRelativeData_m90A7548EB97DBB5834C3C2A1FEDFA876B684E57B (void);
-// 0x00000255 System.Void UnityEngine.XR.ARFoundation.ARPointCloudManager::OnTrackablesChanged(System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARPointCloud>,System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARPointCloud>,System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARPointCloud>)
+// 0x00000257 System.Void UnityEngine.XR.ARFoundation.ARPointCloudManager::OnTrackablesChanged(System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARPointCloud>,System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARPointCloud>,System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARPointCloud>)
 extern void ARPointCloudManager_OnTrackablesChanged_m4BF90646C01E5441A30A80D661BAB4AB12B2C113 (void);
-// 0x00000256 Unity.Collections.NativeArray`1<UnityEngine.XR.ARSubsystems.XRRaycastHit> UnityEngine.XR.ARFoundation.ARPointCloudManager::Raycast(UnityEngine.Ray,UnityEngine.XR.ARSubsystems.TrackableType,Unity.Collections.Allocator)
+// 0x00000258 Unity.Collections.NativeArray`1<UnityEngine.XR.ARSubsystems.XRRaycastHit> UnityEngine.XR.ARFoundation.ARPointCloudManager::Raycast(UnityEngine.Ray,UnityEngine.XR.ARSubsystems.TrackableType,Unity.Collections.Allocator)
 extern void ARPointCloudManager_Raycast_m10352D2C81AB4328FD7474F40DF577799C61E782 (void);
-// 0x00000257 System.Void UnityEngine.XR.ARFoundation.ARPointCloudManager::Append(Unity.Collections.NativeArray`1<T>&,Unity.Collections.NativeArray`1<T>,System.Int32,Unity.Collections.Allocator)
-// 0x00000258 System.Void UnityEngine.XR.ARFoundation.ARPointCloudManager::.ctor()
+// 0x00000259 System.Void UnityEngine.XR.ARFoundation.ARPointCloudManager::Append(Unity.Collections.NativeArray`1<T>&,Unity.Collections.NativeArray`1<T>,System.Int32,Unity.Collections.Allocator)
+// 0x0000025A System.Void UnityEngine.XR.ARFoundation.ARPointCloudManager::.ctor()
 extern void ARPointCloudManager__ctor_mB12543FD760FDB21BB80FF95CE79ABCB340D1C64 (void);
-// 0x00000259 System.Void UnityEngine.XR.ARFoundation.ARPointCloudManager/PointCloudRaycastJob::Execute(System.Int32)
+// 0x0000025B System.Void UnityEngine.XR.ARFoundation.ARPointCloudManager/PointCloudRaycastJob::Execute(System.Int32)
 extern void PointCloudRaycastJob_Execute_mB6A41993F9C4A8539D0B50BF36CAD134941D542C (void);
-// 0x0000025A System.Void UnityEngine.XR.ARFoundation.ARPointCloudManager/PointCloudRaycastCollectResultsJob::Execute()
+// 0x0000025C System.Void UnityEngine.XR.ARFoundation.ARPointCloudManager/PointCloudRaycastCollectResultsJob::Execute()
 extern void PointCloudRaycastCollectResultsJob_Execute_m8A9931AC6417DF29437C9DD8DA28775F9FC45EED (void);
-// 0x0000025B UnityEngine.Mesh UnityEngine.XR.ARFoundation.ARPointCloudMeshVisualizer::get_mesh()
+// 0x0000025D UnityEngine.Mesh UnityEngine.XR.ARFoundation.ARPointCloudMeshVisualizer::get_mesh()
 extern void ARPointCloudMeshVisualizer_get_mesh_mB7C8ECD439CD48030B57A9091E7B01194690946F (void);
-// 0x0000025C System.Void UnityEngine.XR.ARFoundation.ARPointCloudMeshVisualizer::set_mesh(UnityEngine.Mesh)
+// 0x0000025E System.Void UnityEngine.XR.ARFoundation.ARPointCloudMeshVisualizer::set_mesh(UnityEngine.Mesh)
 extern void ARPointCloudMeshVisualizer_set_mesh_m286F9317BCE2E82D968B17831B71AF52F03DEDC1 (void);
-// 0x0000025D System.Void UnityEngine.XR.ARFoundation.ARPointCloudMeshVisualizer::OnPointCloudChanged(UnityEngine.XR.ARFoundation.ARPointCloudUpdatedEventArgs)
+// 0x0000025F System.Void UnityEngine.XR.ARFoundation.ARPointCloudMeshVisualizer::OnPointCloudChanged(UnityEngine.XR.ARFoundation.ARPointCloudUpdatedEventArgs)
 extern void ARPointCloudMeshVisualizer_OnPointCloudChanged_m206187855BE4CEF419386E4756B1EEC123A6538E (void);
-// 0x0000025E System.Void UnityEngine.XR.ARFoundation.ARPointCloudMeshVisualizer::Awake()
+// 0x00000260 System.Void UnityEngine.XR.ARFoundation.ARPointCloudMeshVisualizer::Awake()
 extern void ARPointCloudMeshVisualizer_Awake_mEF8E7F10B297243F40CDD58A0065ABE3BE967F8F (void);
-// 0x0000025F System.Void UnityEngine.XR.ARFoundation.ARPointCloudMeshVisualizer::OnEnable()
+// 0x00000261 System.Void UnityEngine.XR.ARFoundation.ARPointCloudMeshVisualizer::OnEnable()
 extern void ARPointCloudMeshVisualizer_OnEnable_m76FD68B2845CB4D22E6F4F0D28B2E2A2211B48A9 (void);
-// 0x00000260 System.Void UnityEngine.XR.ARFoundation.ARPointCloudMeshVisualizer::OnDisable()
+// 0x00000262 System.Void UnityEngine.XR.ARFoundation.ARPointCloudMeshVisualizer::OnDisable()
 extern void ARPointCloudMeshVisualizer_OnDisable_mA2675ECE86C1E922DFE40E545464DCFE321158DB (void);
-// 0x00000261 System.Void UnityEngine.XR.ARFoundation.ARPointCloudMeshVisualizer::Update()
+// 0x00000263 System.Void UnityEngine.XR.ARFoundation.ARPointCloudMeshVisualizer::Update()
 extern void ARPointCloudMeshVisualizer_Update_mB741C4D9F324575EBD6266AD66831498B47CEC80 (void);
-// 0x00000262 System.Void UnityEngine.XR.ARFoundation.ARPointCloudMeshVisualizer::UpdateVisibility()
+// 0x00000264 System.Void UnityEngine.XR.ARFoundation.ARPointCloudMeshVisualizer::UpdateVisibility()
 extern void ARPointCloudMeshVisualizer_UpdateVisibility_m46F903F0C8F5FAE67764E923567896B033D5146F (void);
-// 0x00000263 System.Void UnityEngine.XR.ARFoundation.ARPointCloudMeshVisualizer::SetVisible(System.Boolean)
+// 0x00000265 System.Void UnityEngine.XR.ARFoundation.ARPointCloudMeshVisualizer::SetVisible(System.Boolean)
 extern void ARPointCloudMeshVisualizer_SetVisible_m4462FA7FAF3CA3D396830D4112F46438FFF27DEF (void);
-// 0x00000264 System.Void UnityEngine.XR.ARFoundation.ARPointCloudMeshVisualizer::.ctor()
+// 0x00000266 System.Void UnityEngine.XR.ARFoundation.ARPointCloudMeshVisualizer::.ctor()
 extern void ARPointCloudMeshVisualizer__ctor_m554874D343D9D4C61BA501458E55E943913C2BDD (void);
-// 0x00000265 System.Void UnityEngine.XR.ARFoundation.ARPointCloudMeshVisualizer::.cctor()
+// 0x00000267 System.Void UnityEngine.XR.ARFoundation.ARPointCloudMeshVisualizer::.cctor()
 extern void ARPointCloudMeshVisualizer__cctor_m261A06F6237345AE55C000D589CAB28B23FF7A34 (void);
-// 0x00000266 System.Void UnityEngine.XR.ARFoundation.ARPointCloudParticleVisualizer::OnPointCloudChanged(UnityEngine.XR.ARFoundation.ARPointCloudUpdatedEventArgs)
+// 0x00000268 System.Void UnityEngine.XR.ARFoundation.ARPointCloudParticleVisualizer::OnPointCloudChanged(UnityEngine.XR.ARFoundation.ARPointCloudUpdatedEventArgs)
 extern void ARPointCloudParticleVisualizer_OnPointCloudChanged_mF91AB94401E52F5D8095F238778E1ED5AB619DDC (void);
-// 0x00000267 System.Void UnityEngine.XR.ARFoundation.ARPointCloudParticleVisualizer::Awake()
+// 0x00000269 System.Void UnityEngine.XR.ARFoundation.ARPointCloudParticleVisualizer::Awake()
 extern void ARPointCloudParticleVisualizer_Awake_m8591B5DE531967FFB091C9CD4FC4CB4E176E45E3 (void);
-// 0x00000268 System.Void UnityEngine.XR.ARFoundation.ARPointCloudParticleVisualizer::OnEnable()
+// 0x0000026A System.Void UnityEngine.XR.ARFoundation.ARPointCloudParticleVisualizer::OnEnable()
 extern void ARPointCloudParticleVisualizer_OnEnable_mC57CC4E88FB1B5026C59D7ABC5392C19BAFF9701 (void);
-// 0x00000269 System.Void UnityEngine.XR.ARFoundation.ARPointCloudParticleVisualizer::OnDisable()
+// 0x0000026B System.Void UnityEngine.XR.ARFoundation.ARPointCloudParticleVisualizer::OnDisable()
 extern void ARPointCloudParticleVisualizer_OnDisable_m11E54298B1375B781119DDDA40DF543597CDA56E (void);
-// 0x0000026A System.Void UnityEngine.XR.ARFoundation.ARPointCloudParticleVisualizer::Update()
+// 0x0000026C System.Void UnityEngine.XR.ARFoundation.ARPointCloudParticleVisualizer::Update()
 extern void ARPointCloudParticleVisualizer_Update_mABCBD25C9D52A54AEC21BAEF08F9FB24307A86B4 (void);
-// 0x0000026B System.Void UnityEngine.XR.ARFoundation.ARPointCloudParticleVisualizer::UpdateVisibility()
+// 0x0000026D System.Void UnityEngine.XR.ARFoundation.ARPointCloudParticleVisualizer::UpdateVisibility()
 extern void ARPointCloudParticleVisualizer_UpdateVisibility_m97B7E0FA0DE6E89F67E545C5471A47B14E56354F (void);
-// 0x0000026C System.Void UnityEngine.XR.ARFoundation.ARPointCloudParticleVisualizer::SetVisible(System.Boolean)
+// 0x0000026E System.Void UnityEngine.XR.ARFoundation.ARPointCloudParticleVisualizer::SetVisible(System.Boolean)
 extern void ARPointCloudParticleVisualizer_SetVisible_m34E759E059A8D3A45FF172D45A07595864973757 (void);
-// 0x0000026D System.Void UnityEngine.XR.ARFoundation.ARPointCloudParticleVisualizer::.ctor()
+// 0x0000026F System.Void UnityEngine.XR.ARFoundation.ARPointCloudParticleVisualizer::.ctor()
 extern void ARPointCloudParticleVisualizer__ctor_m2AFD0BC5A13189D0F4B8AAC4C88EC140ECB59DD1 (void);
-// 0x0000026E System.Void UnityEngine.XR.ARFoundation.ARPointCloudParticleVisualizer::.cctor()
+// 0x00000270 System.Void UnityEngine.XR.ARFoundation.ARPointCloudParticleVisualizer::.cctor()
 extern void ARPointCloudParticleVisualizer__cctor_m55BF33CEA6EFCEDFD38FA9A392DD2C3FD35EB07C (void);
-// 0x0000026F System.Int32 UnityEngine.XR.ARFoundation.ARPointCloudUpdatedEventArgs::GetHashCode()
+// 0x00000271 System.Int32 UnityEngine.XR.ARFoundation.ARPointCloudUpdatedEventArgs::GetHashCode()
 extern void ARPointCloudUpdatedEventArgs_GetHashCode_m79A55AAB09CF20D3058EDF108535D5A7AF7E7CB4 (void);
-// 0x00000270 System.Boolean UnityEngine.XR.ARFoundation.ARPointCloudUpdatedEventArgs::Equals(System.Object)
+// 0x00000272 System.Boolean UnityEngine.XR.ARFoundation.ARPointCloudUpdatedEventArgs::Equals(System.Object)
 extern void ARPointCloudUpdatedEventArgs_Equals_m93CD6A765B5A6204C630884EDB8B5AFA6E1AA077 (void);
-// 0x00000271 System.Boolean UnityEngine.XR.ARFoundation.ARPointCloudUpdatedEventArgs::Equals(UnityEngine.XR.ARFoundation.ARPointCloudUpdatedEventArgs)
+// 0x00000273 System.Boolean UnityEngine.XR.ARFoundation.ARPointCloudUpdatedEventArgs::Equals(UnityEngine.XR.ARFoundation.ARPointCloudUpdatedEventArgs)
 extern void ARPointCloudUpdatedEventArgs_Equals_m85EFAABDF7E3FCBACB7AD805302ABAC6BF2000F7 (void);
-// 0x00000272 System.Boolean UnityEngine.XR.ARFoundation.ARPointCloudUpdatedEventArgs::op_Equality(UnityEngine.XR.ARFoundation.ARPointCloudUpdatedEventArgs,UnityEngine.XR.ARFoundation.ARPointCloudUpdatedEventArgs)
+// 0x00000274 System.Boolean UnityEngine.XR.ARFoundation.ARPointCloudUpdatedEventArgs::op_Equality(UnityEngine.XR.ARFoundation.ARPointCloudUpdatedEventArgs,UnityEngine.XR.ARFoundation.ARPointCloudUpdatedEventArgs)
 extern void ARPointCloudUpdatedEventArgs_op_Equality_m8D009413594EE103FB4598E2DFEAC6BF8F6FA0F8 (void);
-// 0x00000273 System.Boolean UnityEngine.XR.ARFoundation.ARPointCloudUpdatedEventArgs::op_Inequality(UnityEngine.XR.ARFoundation.ARPointCloudUpdatedEventArgs,UnityEngine.XR.ARFoundation.ARPointCloudUpdatedEventArgs)
+// 0x00000275 System.Boolean UnityEngine.XR.ARFoundation.ARPointCloudUpdatedEventArgs::op_Inequality(UnityEngine.XR.ARFoundation.ARPointCloudUpdatedEventArgs,UnityEngine.XR.ARFoundation.ARPointCloudUpdatedEventArgs)
 extern void ARPointCloudUpdatedEventArgs_op_Inequality_m868A6F2708FEC79FE331491D6EECDF4F16C7A82B (void);
-// 0x00000274 System.Void UnityEngine.XR.ARFoundation.ARPoseDriver::OnEnable()
+// 0x00000276 System.Void UnityEngine.XR.ARFoundation.ARPoseDriver::OnEnable()
 extern void ARPoseDriver_OnEnable_m4CF363539DE8829C4C61AE09CD2AF6709A402818 (void);
-// 0x00000275 System.Void UnityEngine.XR.ARFoundation.ARPoseDriver::OnDisable()
+// 0x00000277 System.Void UnityEngine.XR.ARFoundation.ARPoseDriver::OnDisable()
 extern void ARPoseDriver_OnDisable_m1607040D5924045B7775017AFFF5C7AF04BCDFBA (void);
-// 0x00000276 System.Void UnityEngine.XR.ARFoundation.ARPoseDriver::Update()
+// 0x00000278 System.Void UnityEngine.XR.ARFoundation.ARPoseDriver::Update()
 extern void ARPoseDriver_Update_m5AB64BF6DD47D8219284D3355127F4B981A70586 (void);
-// 0x00000277 System.Void UnityEngine.XR.ARFoundation.ARPoseDriver::OnBeforeRender()
+// 0x00000279 System.Void UnityEngine.XR.ARFoundation.ARPoseDriver::OnBeforeRender()
 extern void ARPoseDriver_OnBeforeRender_mFE069B31B36607003CC185498D5E39A6F4227838 (void);
-// 0x00000278 System.Void UnityEngine.XR.ARFoundation.ARPoseDriver::PerformUpdate()
+// 0x0000027A System.Void UnityEngine.XR.ARFoundation.ARPoseDriver::PerformUpdate()
 extern void ARPoseDriver_PerformUpdate_m1622A744D6B9B8B8407DC9ECB4B3C1C0EB120C63 (void);
-// 0x00000279 System.Void UnityEngine.XR.ARFoundation.ARPoseDriver::OnInputDeviceConnected(UnityEngine.XR.InputDevice)
+// 0x0000027B System.Void UnityEngine.XR.ARFoundation.ARPoseDriver::OnInputDeviceConnected(UnityEngine.XR.InputDevice)
 extern void ARPoseDriver_OnInputDeviceConnected_m9FC7B979E01897C30CE6A29F1A568F59C4A15068 (void);
-// 0x0000027A System.Void UnityEngine.XR.ARFoundation.ARPoseDriver::CheckConnectedDevice(UnityEngine.XR.InputDevice,System.Boolean)
+// 0x0000027C System.Void UnityEngine.XR.ARFoundation.ARPoseDriver::CheckConnectedDevice(UnityEngine.XR.InputDevice,System.Boolean)
 extern void ARPoseDriver_CheckConnectedDevice_m79F0F1BA26D8A444E26CC2A66718C048FD64F096 (void);
-// 0x0000027B UnityEngine.XR.ARFoundation.ARPoseDriver/NullablePose UnityEngine.XR.ARFoundation.ARPoseDriver::GetPoseData()
+// 0x0000027D UnityEngine.XR.ARFoundation.ARPoseDriver/NullablePose UnityEngine.XR.ARFoundation.ARPoseDriver::GetPoseData()
 extern void ARPoseDriver_GetPoseData_mD73767B4A41C576A343C4F09E3B7C700EF25AE9D (void);
-// 0x0000027C System.Void UnityEngine.XR.ARFoundation.ARPoseDriver::.ctor()
+// 0x0000027E System.Void UnityEngine.XR.ARFoundation.ARPoseDriver::.ctor()
 extern void ARPoseDriver__ctor_mDC919E8D461DA698AA8CFE0A2DF8E18E65990EBA (void);
-// 0x0000027D System.Void UnityEngine.XR.ARFoundation.ARPoseDriver::.cctor()
+// 0x0000027F System.Void UnityEngine.XR.ARFoundation.ARPoseDriver::.cctor()
 extern void ARPoseDriver__cctor_m0F6DD1D538D8F6B58E83EF69963A791CCBC08147 (void);
-// 0x0000027E System.IntPtr UnityEngine.XR.ARFoundation.ARRaycast::get_nativePtr()
+// 0x00000280 System.IntPtr UnityEngine.XR.ARFoundation.ARRaycast::get_nativePtr()
 extern void ARRaycast_get_nativePtr_mBFBD4341016CEE43EF6D2BEC4A00233C71653583 (void);
-// 0x0000027F System.Single UnityEngine.XR.ARFoundation.ARRaycast::get_distance()
+// 0x00000281 System.Single UnityEngine.XR.ARFoundation.ARRaycast::get_distance()
 extern void ARRaycast_get_distance_mB010898D359A5494CE80DE8373D7690B1B5BB06D (void);
-// 0x00000280 UnityEngine.XR.ARFoundation.ARPlane UnityEngine.XR.ARFoundation.ARRaycast::get_plane()
+// 0x00000282 UnityEngine.XR.ARFoundation.ARPlane UnityEngine.XR.ARFoundation.ARRaycast::get_plane()
 extern void ARRaycast_get_plane_mD994AB92D48D9E69C94A70473E23B04725B43663 (void);
-// 0x00000281 System.Void UnityEngine.XR.ARFoundation.ARRaycast::set_plane(UnityEngine.XR.ARFoundation.ARPlane)
+// 0x00000283 System.Void UnityEngine.XR.ARFoundation.ARRaycast::set_plane(UnityEngine.XR.ARFoundation.ARPlane)
 extern void ARRaycast_set_plane_mCA9E660D5C3168183D2DB52EAF433D1DB69EC5AF (void);
-// 0x00000282 System.Void UnityEngine.XR.ARFoundation.ARRaycast::add_updated(System.Action`1<UnityEngine.XR.ARFoundation.ARRaycastUpdatedEventArgs>)
+// 0x00000284 System.Void UnityEngine.XR.ARFoundation.ARRaycast::add_updated(System.Action`1<UnityEngine.XR.ARFoundation.ARRaycastUpdatedEventArgs>)
 extern void ARRaycast_add_updated_mA58AF75CDF5D15B24D56E79FBD17BFBBC9B76131 (void);
-// 0x00000283 System.Void UnityEngine.XR.ARFoundation.ARRaycast::remove_updated(System.Action`1<UnityEngine.XR.ARFoundation.ARRaycastUpdatedEventArgs>)
+// 0x00000285 System.Void UnityEngine.XR.ARFoundation.ARRaycast::remove_updated(System.Action`1<UnityEngine.XR.ARFoundation.ARRaycastUpdatedEventArgs>)
 extern void ARRaycast_remove_updated_mB5AE0EC23EA14B7331E507D9F4752A056E0AC2EA (void);
-// 0x00000284 System.Void UnityEngine.XR.ARFoundation.ARRaycast::OnAfterSetSessionRelativeData()
+// 0x00000286 System.Void UnityEngine.XR.ARFoundation.ARRaycast::OnAfterSetSessionRelativeData()
 extern void ARRaycast_OnAfterSetSessionRelativeData_m509CCE0B3BBDCDAA969901835228CC31C8DCB61D (void);
-// 0x00000285 System.Void UnityEngine.XR.ARFoundation.ARRaycast::Update()
+// 0x00000287 System.Void UnityEngine.XR.ARFoundation.ARRaycast::Update()
 extern void ARRaycast_Update_m28E30EED38FB607393D4B1524B8BFBADFCD55658 (void);
-// 0x00000286 System.Void UnityEngine.XR.ARFoundation.ARRaycast::.ctor()
+// 0x00000288 System.Void UnityEngine.XR.ARFoundation.ARRaycast::.ctor()
 extern void ARRaycast__ctor_m69DF5EC95EB5F88FF46324B6FAD7B97FE77CF80A (void);
-// 0x00000287 System.Void UnityEngine.XR.ARFoundation.ARRaycastHit::.ctor(UnityEngine.XR.ARSubsystems.XRRaycastHit,System.Single,UnityEngine.Transform)
+// 0x00000289 System.Void UnityEngine.XR.ARFoundation.ARRaycastHit::.ctor(UnityEngine.XR.ARSubsystems.XRRaycastHit,System.Single,UnityEngine.Transform)
 extern void ARRaycastHit__ctor_m56557E9D81A233D19CF3E91EC3F31D3B81595F99 (void);
-// 0x00000288 System.Void UnityEngine.XR.ARFoundation.ARRaycastHit::.ctor(UnityEngine.XR.ARSubsystems.XRRaycastHit,System.Single,UnityEngine.Transform,UnityEngine.XR.ARFoundation.ARTrackable)
+// 0x0000028A System.Void UnityEngine.XR.ARFoundation.ARRaycastHit::.ctor(UnityEngine.XR.ARSubsystems.XRRaycastHit,System.Single,UnityEngine.Transform,UnityEngine.XR.ARFoundation.ARTrackable)
 extern void ARRaycastHit__ctor_mC7110E7B31FCC610B0D6AF62CBF4BDCD33751C09 (void);
-// 0x00000289 System.Single UnityEngine.XR.ARFoundation.ARRaycastHit::get_distance()
+// 0x0000028B System.Single UnityEngine.XR.ARFoundation.ARRaycastHit::get_distance()
 extern void ARRaycastHit_get_distance_mED96EC43E8D177E5B912822DD5566A543BF995AB (void);
-// 0x0000028A UnityEngine.XR.ARSubsystems.TrackableType UnityEngine.XR.ARFoundation.ARRaycastHit::get_hitType()
+// 0x0000028C UnityEngine.XR.ARSubsystems.TrackableType UnityEngine.XR.ARFoundation.ARRaycastHit::get_hitType()
 extern void ARRaycastHit_get_hitType_m2932A3519CC493BB074A0CD73DAACD79643545D1 (void);
-// 0x0000028B UnityEngine.Pose UnityEngine.XR.ARFoundation.ARRaycastHit::get_pose()
+// 0x0000028D UnityEngine.Pose UnityEngine.XR.ARFoundation.ARRaycastHit::get_pose()
 extern void ARRaycastHit_get_pose_mB4D8BC45F23D9F2C2C8DCAFA88DB1221D76EF02B (void);
-// 0x0000028C UnityEngine.XR.ARSubsystems.TrackableId UnityEngine.XR.ARFoundation.ARRaycastHit::get_trackableId()
+// 0x0000028E UnityEngine.XR.ARSubsystems.TrackableId UnityEngine.XR.ARFoundation.ARRaycastHit::get_trackableId()
 extern void ARRaycastHit_get_trackableId_mCC2447AD8425B92F2E25E74812D6F50DE588D16A (void);
-// 0x0000028D UnityEngine.Pose UnityEngine.XR.ARFoundation.ARRaycastHit::get_sessionRelativePose()
+// 0x0000028F UnityEngine.Pose UnityEngine.XR.ARFoundation.ARRaycastHit::get_sessionRelativePose()
 extern void ARRaycastHit_get_sessionRelativePose_m496222B38CDAA9D976ECAFA7CE7ED77CA9E37DBA (void);
-// 0x0000028E System.Single UnityEngine.XR.ARFoundation.ARRaycastHit::get_sessionRelativeDistance()
+// 0x00000290 System.Single UnityEngine.XR.ARFoundation.ARRaycastHit::get_sessionRelativeDistance()
 extern void ARRaycastHit_get_sessionRelativeDistance_mAB451E73F54C60BF566269EE61D6A6FC22F4C524 (void);
-// 0x0000028F UnityEngine.XR.ARFoundation.ARTrackable UnityEngine.XR.ARFoundation.ARRaycastHit::get_trackable()
+// 0x00000291 UnityEngine.XR.ARFoundation.ARTrackable UnityEngine.XR.ARFoundation.ARRaycastHit::get_trackable()
 extern void ARRaycastHit_get_trackable_m0A2E4A67B074ACA0021869D6D8930D34A85F1D79 (void);
-// 0x00000290 System.Int32 UnityEngine.XR.ARFoundation.ARRaycastHit::GetHashCode()
+// 0x00000292 System.Int32 UnityEngine.XR.ARFoundation.ARRaycastHit::GetHashCode()
 extern void ARRaycastHit_GetHashCode_m659BE91F4F0039B4C81562344E13B9BB4454BE85 (void);
-// 0x00000291 System.Boolean UnityEngine.XR.ARFoundation.ARRaycastHit::Equals(System.Object)
+// 0x00000293 System.Boolean UnityEngine.XR.ARFoundation.ARRaycastHit::Equals(System.Object)
 extern void ARRaycastHit_Equals_m10EB8CE2C048C4C1FF0254C69C376B16553577E6 (void);
-// 0x00000292 System.Boolean UnityEngine.XR.ARFoundation.ARRaycastHit::Equals(UnityEngine.XR.ARFoundation.ARRaycastHit)
+// 0x00000294 System.Boolean UnityEngine.XR.ARFoundation.ARRaycastHit::Equals(UnityEngine.XR.ARFoundation.ARRaycastHit)
 extern void ARRaycastHit_Equals_m75D93284E7D73EDEF82038FA2C0BA7543DBF088D (void);
-// 0x00000293 System.Boolean UnityEngine.XR.ARFoundation.ARRaycastHit::op_Equality(UnityEngine.XR.ARFoundation.ARRaycastHit,UnityEngine.XR.ARFoundation.ARRaycastHit)
+// 0x00000295 System.Boolean UnityEngine.XR.ARFoundation.ARRaycastHit::op_Equality(UnityEngine.XR.ARFoundation.ARRaycastHit,UnityEngine.XR.ARFoundation.ARRaycastHit)
 extern void ARRaycastHit_op_Equality_m67E2C4C2693F9091BD266494B54197A0723C40B2 (void);
-// 0x00000294 System.Boolean UnityEngine.XR.ARFoundation.ARRaycastHit::op_Inequality(UnityEngine.XR.ARFoundation.ARRaycastHit,UnityEngine.XR.ARFoundation.ARRaycastHit)
+// 0x00000296 System.Boolean UnityEngine.XR.ARFoundation.ARRaycastHit::op_Inequality(UnityEngine.XR.ARFoundation.ARRaycastHit,UnityEngine.XR.ARFoundation.ARRaycastHit)
 extern void ARRaycastHit_op_Inequality_m3F9E833888AB7DEA38DBB255025CD4EF1929390C (void);
-// 0x00000295 System.Int32 UnityEngine.XR.ARFoundation.ARRaycastHit::CompareTo(UnityEngine.XR.ARFoundation.ARRaycastHit)
+// 0x00000297 System.Int32 UnityEngine.XR.ARFoundation.ARRaycastHit::CompareTo(UnityEngine.XR.ARFoundation.ARRaycastHit)
 extern void ARRaycastHit_CompareTo_m3B3E66B95BFC5CF7099F910BAAC6823403755514 (void);
-// 0x00000296 UnityEngine.GameObject UnityEngine.XR.ARFoundation.ARRaycastManager::get_raycastPrefab()
+// 0x00000298 UnityEngine.GameObject UnityEngine.XR.ARFoundation.ARRaycastManager::get_raycastPrefab()
 extern void ARRaycastManager_get_raycastPrefab_m1C25B3E344582D3D581C31EB92239E5D9D387AEC (void);
-// 0x00000297 System.Void UnityEngine.XR.ARFoundation.ARRaycastManager::set_raycastPrefab(UnityEngine.GameObject)
+// 0x00000299 System.Void UnityEngine.XR.ARFoundation.ARRaycastManager::set_raycastPrefab(UnityEngine.GameObject)
 extern void ARRaycastManager_set_raycastPrefab_m9F40ED082F528AF756FF04DD028DF40A78512DE4 (void);
-// 0x00000298 System.Boolean UnityEngine.XR.ARFoundation.ARRaycastManager::Raycast(UnityEngine.Vector2,System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARRaycastHit>,UnityEngine.XR.ARSubsystems.TrackableType)
+// 0x0000029A System.Boolean UnityEngine.XR.ARFoundation.ARRaycastManager::Raycast(UnityEngine.Vector2,System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARRaycastHit>,UnityEngine.XR.ARSubsystems.TrackableType)
 extern void ARRaycastManager_Raycast_mCC2851DAC2542C59528FCE21242231DFAF024650 (void);
-// 0x00000299 System.Boolean UnityEngine.XR.ARFoundation.ARRaycastManager::Raycast(UnityEngine.Ray,System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARRaycastHit>,UnityEngine.XR.ARSubsystems.TrackableType)
+// 0x0000029B System.Boolean UnityEngine.XR.ARFoundation.ARRaycastManager::Raycast(UnityEngine.Ray,System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARRaycastHit>,UnityEngine.XR.ARSubsystems.TrackableType)
 extern void ARRaycastManager_Raycast_m08DA1BF9999699DFC094F91B281B84A44F243E2C (void);
-// 0x0000029A UnityEngine.XR.ARFoundation.ARRaycast UnityEngine.XR.ARFoundation.ARRaycastManager::AddRaycast(UnityEngine.Vector2,System.Single)
+// 0x0000029C UnityEngine.XR.ARFoundation.ARRaycast UnityEngine.XR.ARFoundation.ARRaycastManager::AddRaycast(UnityEngine.Vector2,System.Single)
 extern void ARRaycastManager_AddRaycast_mC7DABC7FC09CF7622669790B22D97C08C787B11D (void);
-// 0x0000029B System.Void UnityEngine.XR.ARFoundation.ARRaycastManager::RemoveRaycast(UnityEngine.XR.ARFoundation.ARRaycast)
+// 0x0000029D System.Void UnityEngine.XR.ARFoundation.ARRaycastManager::RemoveRaycast(UnityEngine.XR.ARFoundation.ARRaycast)
 extern void ARRaycastManager_RemoveRaycast_m9171455192ECE274C5D19C15BB86C29AD9321A77 (void);
-// 0x0000029C UnityEngine.GameObject UnityEngine.XR.ARFoundation.ARRaycastManager::GetPrefab()
+// 0x0000029E UnityEngine.GameObject UnityEngine.XR.ARFoundation.ARRaycastManager::GetPrefab()
 extern void ARRaycastManager_GetPrefab_m74C14C1DF9446B86945F4D0419506B95B16F1903 (void);
-// 0x0000029D System.Void UnityEngine.XR.ARFoundation.ARRaycastManager::RegisterRaycaster(UnityEngine.XR.ARFoundation.IRaycaster)
+// 0x0000029F System.Void UnityEngine.XR.ARFoundation.ARRaycastManager::RegisterRaycaster(UnityEngine.XR.ARFoundation.IRaycaster)
 extern void ARRaycastManager_RegisterRaycaster_m483341201AF04DE1DAF54B223E45B3CD75ED4AFE (void);
-// 0x0000029E System.Void UnityEngine.XR.ARFoundation.ARRaycastManager::UnregisterRaycaster(UnityEngine.XR.ARFoundation.IRaycaster)
+// 0x000002A0 System.Void UnityEngine.XR.ARFoundation.ARRaycastManager::UnregisterRaycaster(UnityEngine.XR.ARFoundation.IRaycaster)
 extern void ARRaycastManager_UnregisterRaycaster_mBC2C92DC026598D8F2B6835A97A725525326F0DB (void);
-// 0x0000029F System.Void UnityEngine.XR.ARFoundation.ARRaycastManager::OnAfterStart()
+// 0x000002A1 System.Void UnityEngine.XR.ARFoundation.ARRaycastManager::OnAfterStart()
 extern void ARRaycastManager_OnAfterStart_mB047CA21B4220498B1583A84D1DA41995D7E6370 (void);
-// 0x000002A0 UnityEngine.Ray UnityEngine.XR.ARFoundation.ARRaycastManager::ScreenPointToSessionSpaceRay(UnityEngine.Vector2)
+// 0x000002A2 UnityEngine.Ray UnityEngine.XR.ARFoundation.ARRaycastManager::ScreenPointToSessionSpaceRay(UnityEngine.Vector2)
 extern void ARRaycastManager_ScreenPointToSessionSpaceRay_m7D68FA43BDD2972DA070E7DE05935AB6F7586240 (void);
-// 0x000002A1 Unity.Collections.NativeArray`1<UnityEngine.XR.ARSubsystems.XRRaycastHit> UnityEngine.XR.ARFoundation.ARRaycastManager::RaycastViewportAsRay(UnityEngine.Vector2,UnityEngine.XR.ARSubsystems.TrackableType,Unity.Collections.Allocator)
+// 0x000002A3 Unity.Collections.NativeArray`1<UnityEngine.XR.ARSubsystems.XRRaycastHit> UnityEngine.XR.ARFoundation.ARRaycastManager::RaycastViewportAsRay(UnityEngine.Vector2,UnityEngine.XR.ARSubsystems.TrackableType,Unity.Collections.Allocator)
 extern void ARRaycastManager_RaycastViewportAsRay_m15C127E7D6ED10D456B2C4C8571BB86CE1973C81 (void);
-// 0x000002A2 Unity.Collections.NativeArray`1<UnityEngine.XR.ARSubsystems.XRRaycastHit> UnityEngine.XR.ARFoundation.ARRaycastManager::RaycastViewport(UnityEngine.Vector2,UnityEngine.XR.ARSubsystems.TrackableType,Unity.Collections.Allocator)
+// 0x000002A4 Unity.Collections.NativeArray`1<UnityEngine.XR.ARSubsystems.XRRaycastHit> UnityEngine.XR.ARFoundation.ARRaycastManager::RaycastViewport(UnityEngine.Vector2,UnityEngine.XR.ARSubsystems.TrackableType,Unity.Collections.Allocator)
 extern void ARRaycastManager_RaycastViewport_mE0B2B4A53A3CAD20F00501F715DB4D266D3B55BF (void);
-// 0x000002A3 Unity.Collections.NativeArray`1<UnityEngine.XR.ARSubsystems.XRRaycastHit> UnityEngine.XR.ARFoundation.ARRaycastManager::RaycastRay(UnityEngine.Ray,UnityEngine.XR.ARSubsystems.TrackableType,Unity.Collections.Allocator)
+// 0x000002A5 Unity.Collections.NativeArray`1<UnityEngine.XR.ARSubsystems.XRRaycastHit> UnityEngine.XR.ARFoundation.ARRaycastManager::RaycastRay(UnityEngine.Ray,UnityEngine.XR.ARSubsystems.TrackableType,Unity.Collections.Allocator)
 extern void ARRaycastManager_RaycastRay_m4AE8E0B028B4126C87280B1CEE0A479D71EEF3B9 (void);
-// 0x000002A4 System.Int32 UnityEngine.XR.ARFoundation.ARRaycastManager::RaycastHitComparer(UnityEngine.XR.ARFoundation.ARRaycastHit,UnityEngine.XR.ARFoundation.ARRaycastHit)
+// 0x000002A6 System.Int32 UnityEngine.XR.ARFoundation.ARRaycastManager::RaycastHitComparer(UnityEngine.XR.ARFoundation.ARRaycastHit,UnityEngine.XR.ARFoundation.ARRaycastHit)
 extern void ARRaycastManager_RaycastHitComparer_mC2A9D36BC37C468BBE51196980393FC8916FB64F (void);
-// 0x000002A5 Unity.Collections.NativeArray`1<UnityEngine.XR.ARSubsystems.XRRaycastHit> UnityEngine.XR.ARFoundation.ARRaycastManager::RaycastFallback(UnityEngine.Ray,UnityEngine.XR.ARSubsystems.TrackableType,Unity.Collections.Allocator)
+// 0x000002A7 Unity.Collections.NativeArray`1<UnityEngine.XR.ARSubsystems.XRRaycastHit> UnityEngine.XR.ARFoundation.ARRaycastManager::RaycastFallback(UnityEngine.Ray,UnityEngine.XR.ARSubsystems.TrackableType,Unity.Collections.Allocator)
 extern void ARRaycastManager_RaycastFallback_m67FBA4A718FC08126B64E4895447FD4AF5C5B9CF (void);
-// 0x000002A6 System.Boolean UnityEngine.XR.ARFoundation.ARRaycastManager::TransformAndDisposeNativeHitResults(Unity.Collections.NativeArray`1<UnityEngine.XR.ARSubsystems.XRRaycastHit>,System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARRaycastHit>,UnityEngine.Vector3)
+// 0x000002A8 System.Boolean UnityEngine.XR.ARFoundation.ARRaycastManager::TransformAndDisposeNativeHitResults(Unity.Collections.NativeArray`1<UnityEngine.XR.ARSubsystems.XRRaycastHit>,System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARRaycastHit>,UnityEngine.Vector3)
 extern void ARRaycastManager_TransformAndDisposeNativeHitResults_m8A369C106CD89AD3BDEFBA51AC220D6E631E5438 (void);
-// 0x000002A7 System.Void UnityEngine.XR.ARFoundation.ARRaycastManager::OnAfterSetSessionRelativeData(UnityEngine.XR.ARFoundation.ARRaycast,UnityEngine.XR.ARSubsystems.XRRaycast)
+// 0x000002A9 System.Void UnityEngine.XR.ARFoundation.ARRaycastManager::OnAfterSetSessionRelativeData(UnityEngine.XR.ARFoundation.ARRaycast,UnityEngine.XR.ARSubsystems.XRRaycast)
 extern void ARRaycastManager_OnAfterSetSessionRelativeData_m7D3DADC477AC0DBDFFF3EB29E537B19EF8EBD763 (void);
-// 0x000002A8 System.String UnityEngine.XR.ARFoundation.ARRaycastManager::get_gameObjectName()
+// 0x000002AA System.String UnityEngine.XR.ARFoundation.ARRaycastManager::get_gameObjectName()
 extern void ARRaycastManager_get_gameObjectName_mDC542442BB59C94E84269051FE9F6D02176470EF (void);
-// 0x000002A9 System.Void UnityEngine.XR.ARFoundation.ARRaycastManager::.ctor()
+// 0x000002AB System.Void UnityEngine.XR.ARFoundation.ARRaycastManager::.ctor()
 extern void ARRaycastManager__ctor_m5318CB3E2A40E89FBB333ED540805A8C155FACEB (void);
-// 0x000002AA System.Void UnityEngine.XR.ARFoundation.ARRaycastManager::.cctor()
+// 0x000002AC System.Void UnityEngine.XR.ARFoundation.ARRaycastManager::.cctor()
 extern void ARRaycastManager__cctor_m4F7D8AFBCFB8EE07B9E991352AC74B843133A0DA (void);
-// 0x000002AB UnityEngine.XR.ARFoundation.ARRaycast UnityEngine.XR.ARFoundation.ARRaycastUpdatedEventArgs::get_raycast()
+// 0x000002AD UnityEngine.XR.ARFoundation.ARRaycast UnityEngine.XR.ARFoundation.ARRaycastUpdatedEventArgs::get_raycast()
 extern void ARRaycastUpdatedEventArgs_get_raycast_m0609B624800A5388048A79B439B4B38F5F2A885F (void);
-// 0x000002AC System.Void UnityEngine.XR.ARFoundation.ARRaycastUpdatedEventArgs::set_raycast(UnityEngine.XR.ARFoundation.ARRaycast)
+// 0x000002AE System.Void UnityEngine.XR.ARFoundation.ARRaycastUpdatedEventArgs::set_raycast(UnityEngine.XR.ARFoundation.ARRaycast)
 extern void ARRaycastUpdatedEventArgs_set_raycast_m7BE3386FAFCA2682E4B8ADDAAD3B0861CF7B6199 (void);
-// 0x000002AD System.Boolean UnityEngine.XR.ARFoundation.ARRaycastUpdatedEventArgs::Equals(UnityEngine.XR.ARFoundation.ARRaycastUpdatedEventArgs)
+// 0x000002AF System.Boolean UnityEngine.XR.ARFoundation.ARRaycastUpdatedEventArgs::Equals(UnityEngine.XR.ARFoundation.ARRaycastUpdatedEventArgs)
 extern void ARRaycastUpdatedEventArgs_Equals_m99C427C07FE659083820EF17D021D78BBE7E0B86 (void);
-// 0x000002AE System.Boolean UnityEngine.XR.ARFoundation.ARRaycastUpdatedEventArgs::Equals(System.Object)
+// 0x000002B0 System.Boolean UnityEngine.XR.ARFoundation.ARRaycastUpdatedEventArgs::Equals(System.Object)
 extern void ARRaycastUpdatedEventArgs_Equals_mAD79322F0D5530018B97925A99B19352DEB5A2F8 (void);
-// 0x000002AF System.Int32 UnityEngine.XR.ARFoundation.ARRaycastUpdatedEventArgs::GetHashCode()
+// 0x000002B1 System.Int32 UnityEngine.XR.ARFoundation.ARRaycastUpdatedEventArgs::GetHashCode()
 extern void ARRaycastUpdatedEventArgs_GetHashCode_mE8AEACE0EA29276661BD1CF7E212E3652833044F (void);
-// 0x000002B0 System.Boolean UnityEngine.XR.ARFoundation.ARRaycastUpdatedEventArgs::op_Equality(UnityEngine.XR.ARFoundation.ARRaycastUpdatedEventArgs,UnityEngine.XR.ARFoundation.ARRaycastUpdatedEventArgs)
+// 0x000002B2 System.Boolean UnityEngine.XR.ARFoundation.ARRaycastUpdatedEventArgs::op_Equality(UnityEngine.XR.ARFoundation.ARRaycastUpdatedEventArgs,UnityEngine.XR.ARFoundation.ARRaycastUpdatedEventArgs)
 extern void ARRaycastUpdatedEventArgs_op_Equality_mAAC78DB0A29C23038D6CFCA8E5A47BF897C1FDCA (void);
-// 0x000002B1 System.Boolean UnityEngine.XR.ARFoundation.ARRaycastUpdatedEventArgs::op_Inequality(UnityEngine.XR.ARFoundation.ARRaycastUpdatedEventArgs,UnityEngine.XR.ARFoundation.ARRaycastUpdatedEventArgs)
+// 0x000002B3 System.Boolean UnityEngine.XR.ARFoundation.ARRaycastUpdatedEventArgs::op_Inequality(UnityEngine.XR.ARFoundation.ARRaycastUpdatedEventArgs,UnityEngine.XR.ARFoundation.ARRaycastUpdatedEventArgs)
 extern void ARRaycastUpdatedEventArgs_op_Inequality_mA13957AFC0F81E45703C182D63B0E3D96F274C04 (void);
-// 0x000002B2 System.IntPtr UnityEngine.XR.ARFoundation.ARReferencePoint::get_nativePtr()
+// 0x000002B4 System.IntPtr UnityEngine.XR.ARFoundation.ARReferencePoint::get_nativePtr()
 extern void ARReferencePoint_get_nativePtr_m8D88DE6D62108CF2E140A3726BFED17C70DD9840 (void);
-// 0x000002B3 System.Guid UnityEngine.XR.ARFoundation.ARReferencePoint::get_sessionId()
+// 0x000002B5 System.Guid UnityEngine.XR.ARFoundation.ARReferencePoint::get_sessionId()
 extern void ARReferencePoint_get_sessionId_m8588DF4191E8CDDB10D98795FE3BD87F3371EC81 (void);
-// 0x000002B4 System.Void UnityEngine.XR.ARFoundation.ARReferencePoint::.ctor()
+// 0x000002B6 System.Void UnityEngine.XR.ARFoundation.ARReferencePoint::.ctor()
 extern void ARReferencePoint__ctor_m7AD07830147879EA9BCBCCA43A435B4E5CA73C36 (void);
-// 0x000002B5 UnityEngine.GameObject UnityEngine.XR.ARFoundation.ARReferencePointManager::get_referencePointPrefab()
+// 0x000002B7 UnityEngine.GameObject UnityEngine.XR.ARFoundation.ARReferencePointManager::get_referencePointPrefab()
 extern void ARReferencePointManager_get_referencePointPrefab_m01B1AA85559BBD136E2C395811E2572F20CAC324 (void);
-// 0x000002B6 System.Void UnityEngine.XR.ARFoundation.ARReferencePointManager::set_referencePointPrefab(UnityEngine.GameObject)
+// 0x000002B8 System.Void UnityEngine.XR.ARFoundation.ARReferencePointManager::set_referencePointPrefab(UnityEngine.GameObject)
 extern void ARReferencePointManager_set_referencePointPrefab_mD88E748D04A58449C9B82260955FB1C1246164D0 (void);
-// 0x000002B7 System.Void UnityEngine.XR.ARFoundation.ARReferencePointManager::add_referencePointsChanged(System.Action`1<UnityEngine.XR.ARFoundation.ARReferencePointsChangedEventArgs>)
+// 0x000002B9 System.Void UnityEngine.XR.ARFoundation.ARReferencePointManager::add_referencePointsChanged(System.Action`1<UnityEngine.XR.ARFoundation.ARReferencePointsChangedEventArgs>)
 extern void ARReferencePointManager_add_referencePointsChanged_mD53CC64BA5C94FB200EE3B215EFEFE7A58712C43 (void);
-// 0x000002B8 System.Void UnityEngine.XR.ARFoundation.ARReferencePointManager::remove_referencePointsChanged(System.Action`1<UnityEngine.XR.ARFoundation.ARReferencePointsChangedEventArgs>)
+// 0x000002BA System.Void UnityEngine.XR.ARFoundation.ARReferencePointManager::remove_referencePointsChanged(System.Action`1<UnityEngine.XR.ARFoundation.ARReferencePointsChangedEventArgs>)
 extern void ARReferencePointManager_remove_referencePointsChanged_mE59B3BBBEACF8D754071AC38AFD777227C1203D7 (void);
-// 0x000002B9 UnityEngine.XR.ARFoundation.ARReferencePoint UnityEngine.XR.ARFoundation.ARReferencePointManager::AddReferencePoint(UnityEngine.Pose)
+// 0x000002BB UnityEngine.XR.ARFoundation.ARReferencePoint UnityEngine.XR.ARFoundation.ARReferencePointManager::AddReferencePoint(UnityEngine.Pose)
 extern void ARReferencePointManager_AddReferencePoint_m0B214392DF16EBC02F4E5EF80380C2BBDEB513EA (void);
-// 0x000002BA UnityEngine.XR.ARFoundation.ARReferencePoint UnityEngine.XR.ARFoundation.ARReferencePointManager::AttachReferencePoint(UnityEngine.XR.ARFoundation.ARPlane,UnityEngine.Pose)
+// 0x000002BC UnityEngine.XR.ARFoundation.ARReferencePoint UnityEngine.XR.ARFoundation.ARReferencePointManager::AttachReferencePoint(UnityEngine.XR.ARFoundation.ARPlane,UnityEngine.Pose)
 extern void ARReferencePointManager_AttachReferencePoint_m87FE992F63559FF40FB39A1EEFF96C168E99D0E6 (void);
-// 0x000002BB System.Boolean UnityEngine.XR.ARFoundation.ARReferencePointManager::RemoveReferencePoint(UnityEngine.XR.ARFoundation.ARReferencePoint)
+// 0x000002BD System.Boolean UnityEngine.XR.ARFoundation.ARReferencePointManager::RemoveReferencePoint(UnityEngine.XR.ARFoundation.ARReferencePoint)
 extern void ARReferencePointManager_RemoveReferencePoint_m6D4E2D5BE7493745C06FBA7CE15D8596395C1A9F (void);
-// 0x000002BC UnityEngine.XR.ARFoundation.ARReferencePoint UnityEngine.XR.ARFoundation.ARReferencePointManager::GetReferencePoint(UnityEngine.XR.ARSubsystems.TrackableId)
+// 0x000002BE UnityEngine.XR.ARFoundation.ARReferencePoint UnityEngine.XR.ARFoundation.ARReferencePointManager::GetReferencePoint(UnityEngine.XR.ARSubsystems.TrackableId)
 extern void ARReferencePointManager_GetReferencePoint_mBE0AD10BD713FE49B6768A24463B2461C00483EE (void);
-// 0x000002BD UnityEngine.GameObject UnityEngine.XR.ARFoundation.ARReferencePointManager::GetPrefab()
+// 0x000002BF UnityEngine.GameObject UnityEngine.XR.ARFoundation.ARReferencePointManager::GetPrefab()
 extern void ARReferencePointManager_GetPrefab_m93F52818769E81F259F8D1403F9A91AA54643082 (void);
-// 0x000002BE System.String UnityEngine.XR.ARFoundation.ARReferencePointManager::get_gameObjectName()
+// 0x000002C0 System.String UnityEngine.XR.ARFoundation.ARReferencePointManager::get_gameObjectName()
 extern void ARReferencePointManager_get_gameObjectName_m3AAAB2C402D991501C1744A5FE874649C2AAC61D (void);
-// 0x000002BF System.Void UnityEngine.XR.ARFoundation.ARReferencePointManager::OnTrackablesChanged(System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARReferencePoint>,System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARReferencePoint>,System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARReferencePoint>)
+// 0x000002C1 System.Void UnityEngine.XR.ARFoundation.ARReferencePointManager::OnTrackablesChanged(System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARReferencePoint>,System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARReferencePoint>,System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARReferencePoint>)
 extern void ARReferencePointManager_OnTrackablesChanged_m4BF3546E1B8C6317445803C947FE8D848E36B2DF (void);
-// 0x000002C0 System.Void UnityEngine.XR.ARFoundation.ARReferencePointManager::.ctor()
+// 0x000002C2 System.Void UnityEngine.XR.ARFoundation.ARReferencePointManager::.ctor()
 extern void ARReferencePointManager__ctor_mE6C30981BC6D6D5FEF9677FDD78CCEEEC3A0CA78 (void);
-// 0x000002C1 System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARReferencePoint> UnityEngine.XR.ARFoundation.ARReferencePointsChangedEventArgs::get_added()
+// 0x000002C3 System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARReferencePoint> UnityEngine.XR.ARFoundation.ARReferencePointsChangedEventArgs::get_added()
 extern void ARReferencePointsChangedEventArgs_get_added_mB5391CD21E5E0AAF6441732E418F6B4F743BA654 (void);
-// 0x000002C2 System.Void UnityEngine.XR.ARFoundation.ARReferencePointsChangedEventArgs::set_added(System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARReferencePoint>)
+// 0x000002C4 System.Void UnityEngine.XR.ARFoundation.ARReferencePointsChangedEventArgs::set_added(System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARReferencePoint>)
 extern void ARReferencePointsChangedEventArgs_set_added_mE19E6138767F7CFBFCD0EC1FB2D1D8ABA2355079 (void);
-// 0x000002C3 System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARReferencePoint> UnityEngine.XR.ARFoundation.ARReferencePointsChangedEventArgs::get_updated()
+// 0x000002C5 System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARReferencePoint> UnityEngine.XR.ARFoundation.ARReferencePointsChangedEventArgs::get_updated()
 extern void ARReferencePointsChangedEventArgs_get_updated_mFE6795D2A4133523DFB5610DD381A23084A14932 (void);
-// 0x000002C4 System.Void UnityEngine.XR.ARFoundation.ARReferencePointsChangedEventArgs::set_updated(System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARReferencePoint>)
+// 0x000002C6 System.Void UnityEngine.XR.ARFoundation.ARReferencePointsChangedEventArgs::set_updated(System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARReferencePoint>)
 extern void ARReferencePointsChangedEventArgs_set_updated_m33BF9ECA005FF50F1253618A94E75313C5E8419A (void);
-// 0x000002C5 System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARReferencePoint> UnityEngine.XR.ARFoundation.ARReferencePointsChangedEventArgs::get_removed()
+// 0x000002C7 System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARReferencePoint> UnityEngine.XR.ARFoundation.ARReferencePointsChangedEventArgs::get_removed()
 extern void ARReferencePointsChangedEventArgs_get_removed_m852B8F1536DEDFDEB059B8C87C86D30ADDF4890E (void);
-// 0x000002C6 System.Void UnityEngine.XR.ARFoundation.ARReferencePointsChangedEventArgs::set_removed(System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARReferencePoint>)
+// 0x000002C8 System.Void UnityEngine.XR.ARFoundation.ARReferencePointsChangedEventArgs::set_removed(System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARReferencePoint>)
 extern void ARReferencePointsChangedEventArgs_set_removed_mB84B74719F47B759C903FBECCFECF2F4376140FA (void);
-// 0x000002C7 System.Void UnityEngine.XR.ARFoundation.ARReferencePointsChangedEventArgs::.ctor(System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARReferencePoint>,System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARReferencePoint>,System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARReferencePoint>)
+// 0x000002C9 System.Void UnityEngine.XR.ARFoundation.ARReferencePointsChangedEventArgs::.ctor(System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARReferencePoint>,System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARReferencePoint>,System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARReferencePoint>)
 extern void ARReferencePointsChangedEventArgs__ctor_m4DC8ED8A0352F7EFD78D548B539BBCB0E8442FEB (void);
-// 0x000002C8 System.Int32 UnityEngine.XR.ARFoundation.ARReferencePointsChangedEventArgs::GetHashCode()
+// 0x000002CA System.Int32 UnityEngine.XR.ARFoundation.ARReferencePointsChangedEventArgs::GetHashCode()
 extern void ARReferencePointsChangedEventArgs_GetHashCode_m27D4A6BF13AF37076D32EB3D785549E5A543302C (void);
-// 0x000002C9 System.Boolean UnityEngine.XR.ARFoundation.ARReferencePointsChangedEventArgs::Equals(System.Object)
+// 0x000002CB System.Boolean UnityEngine.XR.ARFoundation.ARReferencePointsChangedEventArgs::Equals(System.Object)
 extern void ARReferencePointsChangedEventArgs_Equals_m97EEF4D1487E424CFF7CB753A0FD0ECA92DDED67 (void);
-// 0x000002CA System.String UnityEngine.XR.ARFoundation.ARReferencePointsChangedEventArgs::ToString()
+// 0x000002CC System.String UnityEngine.XR.ARFoundation.ARReferencePointsChangedEventArgs::ToString()
 extern void ARReferencePointsChangedEventArgs_ToString_m867931BA4F884F5991CF89BFB5F675A5244C4408 (void);
-// 0x000002CB System.Boolean UnityEngine.XR.ARFoundation.ARReferencePointsChangedEventArgs::Equals(UnityEngine.XR.ARFoundation.ARReferencePointsChangedEventArgs)
+// 0x000002CD System.Boolean UnityEngine.XR.ARFoundation.ARReferencePointsChangedEventArgs::Equals(UnityEngine.XR.ARFoundation.ARReferencePointsChangedEventArgs)
 extern void ARReferencePointsChangedEventArgs_Equals_mFF8C64B924D17EC288663CFBC092CC060650CA0A (void);
-// 0x000002CC System.Boolean UnityEngine.XR.ARFoundation.ARReferencePointsChangedEventArgs::op_Equality(UnityEngine.XR.ARFoundation.ARReferencePointsChangedEventArgs,UnityEngine.XR.ARFoundation.ARReferencePointsChangedEventArgs)
+// 0x000002CE System.Boolean UnityEngine.XR.ARFoundation.ARReferencePointsChangedEventArgs::op_Equality(UnityEngine.XR.ARFoundation.ARReferencePointsChangedEventArgs,UnityEngine.XR.ARFoundation.ARReferencePointsChangedEventArgs)
 extern void ARReferencePointsChangedEventArgs_op_Equality_m5163F6861D49D351101461779D5358C96669EDAE (void);
-// 0x000002CD System.Boolean UnityEngine.XR.ARFoundation.ARReferencePointsChangedEventArgs::op_Inequality(UnityEngine.XR.ARFoundation.ARReferencePointsChangedEventArgs,UnityEngine.XR.ARFoundation.ARReferencePointsChangedEventArgs)
+// 0x000002CF System.Boolean UnityEngine.XR.ARFoundation.ARReferencePointsChangedEventArgs::op_Inequality(UnityEngine.XR.ARFoundation.ARReferencePointsChangedEventArgs,UnityEngine.XR.ARFoundation.ARReferencePointsChangedEventArgs)
 extern void ARReferencePointsChangedEventArgs_op_Inequality_m494F539A2DFD1310A818E94A48A5FFE438981215 (void);
-// 0x000002CE System.Boolean UnityEngine.XR.ARFoundation.ARSession::get_attemptUpdate()
+// 0x000002D0 System.Boolean UnityEngine.XR.ARFoundation.ARSession::get_attemptUpdate()
 extern void ARSession_get_attemptUpdate_m8A07979329A9676158CE1122FFFC573F9114A68A (void);
-// 0x000002CF System.Void UnityEngine.XR.ARFoundation.ARSession::set_attemptUpdate(System.Boolean)
+// 0x000002D1 System.Void UnityEngine.XR.ARFoundation.ARSession::set_attemptUpdate(System.Boolean)
 extern void ARSession_set_attemptUpdate_mB93F0042D4CA826181527CA915D7022A8607C515 (void);
-// 0x000002D0 System.Boolean UnityEngine.XR.ARFoundation.ARSession::get_matchFrameRate()
+// 0x000002D2 System.Boolean UnityEngine.XR.ARFoundation.ARSession::get_matchFrameRate()
 extern void ARSession_get_matchFrameRate_m52F8C79BE303168DC19A61E08957AC5E93367DC5 (void);
-// 0x000002D1 System.Void UnityEngine.XR.ARFoundation.ARSession::set_matchFrameRate(System.Boolean)
+// 0x000002D3 System.Void UnityEngine.XR.ARFoundation.ARSession::set_matchFrameRate(System.Boolean)
 extern void ARSession_set_matchFrameRate_mC6625E4B0C2EC397C541722463C6FA8385FF9B26 (void);
-// 0x000002D2 System.Boolean UnityEngine.XR.ARFoundation.ARSession::get_matchFrameRateEnabled()
+// 0x000002D4 System.Boolean UnityEngine.XR.ARFoundation.ARSession::get_matchFrameRateEnabled()
 extern void ARSession_get_matchFrameRateEnabled_m54F5C93DC7746648A7535FF28E14F49B3ADF92CD (void);
-// 0x000002D3 System.Boolean UnityEngine.XR.ARFoundation.ARSession::get_matchFrameRateRequested()
+// 0x000002D5 System.Boolean UnityEngine.XR.ARFoundation.ARSession::get_matchFrameRateRequested()
 extern void ARSession_get_matchFrameRateRequested_m87736EDEA3ADB050FCBB44A2E55A71FEF9364548 (void);
-// 0x000002D4 System.Void UnityEngine.XR.ARFoundation.ARSession::set_matchFrameRateRequested(System.Boolean)
+// 0x000002D6 System.Void UnityEngine.XR.ARFoundation.ARSession::set_matchFrameRateRequested(System.Boolean)
 extern void ARSession_set_matchFrameRateRequested_mDC93048F4E690E8DED853E885C8DFF3CE8346623 (void);
-// 0x000002D5 UnityEngine.XR.ARFoundation.TrackingMode UnityEngine.XR.ARFoundation.ARSession::get_requestedTrackingMode()
+// 0x000002D7 UnityEngine.XR.ARFoundation.TrackingMode UnityEngine.XR.ARFoundation.ARSession::get_requestedTrackingMode()
 extern void ARSession_get_requestedTrackingMode_m4F66072D778CF6008CAF3A8A0AC0B491435008AE (void);
-// 0x000002D6 System.Void UnityEngine.XR.ARFoundation.ARSession::set_requestedTrackingMode(UnityEngine.XR.ARFoundation.TrackingMode)
+// 0x000002D8 System.Void UnityEngine.XR.ARFoundation.ARSession::set_requestedTrackingMode(UnityEngine.XR.ARFoundation.TrackingMode)
 extern void ARSession_set_requestedTrackingMode_m88C66125B39BBD446153EF90805B9D68665EBECF (void);
-// 0x000002D7 UnityEngine.XR.ARFoundation.TrackingMode UnityEngine.XR.ARFoundation.ARSession::get_currentTrackingMode()
+// 0x000002D9 UnityEngine.XR.ARFoundation.TrackingMode UnityEngine.XR.ARFoundation.ARSession::get_currentTrackingMode()
 extern void ARSession_get_currentTrackingMode_m1AE17402BEB3E163983463AD5691FFA0EF47FFC3 (void);
-// 0x000002D8 System.Nullable`1<System.Int32> UnityEngine.XR.ARFoundation.ARSession::get_frameRate()
+// 0x000002DA System.Nullable`1<System.Int32> UnityEngine.XR.ARFoundation.ARSession::get_frameRate()
 extern void ARSession_get_frameRate_m8C253E2EB41BDEE414614EA4C31001F74343BD4F (void);
-// 0x000002D9 System.Void UnityEngine.XR.ARFoundation.ARSession::add_stateChanged(System.Action`1<UnityEngine.XR.ARFoundation.ARSessionStateChangedEventArgs>)
+// 0x000002DB System.Void UnityEngine.XR.ARFoundation.ARSession::add_stateChanged(System.Action`1<UnityEngine.XR.ARFoundation.ARSessionStateChangedEventArgs>)
 extern void ARSession_add_stateChanged_m0B11F34533799F3DB6B188D44AB356574954D3DF (void);
-// 0x000002DA System.Void UnityEngine.XR.ARFoundation.ARSession::remove_stateChanged(System.Action`1<UnityEngine.XR.ARFoundation.ARSessionStateChangedEventArgs>)
+// 0x000002DC System.Void UnityEngine.XR.ARFoundation.ARSession::remove_stateChanged(System.Action`1<UnityEngine.XR.ARFoundation.ARSessionStateChangedEventArgs>)
 extern void ARSession_remove_stateChanged_m2A25BD04AD425F21552A6057A35701600BEB9451 (void);
-// 0x000002DB UnityEngine.XR.ARFoundation.ARSessionState UnityEngine.XR.ARFoundation.ARSession::get_state()
+// 0x000002DD UnityEngine.XR.ARFoundation.ARSessionState UnityEngine.XR.ARFoundation.ARSession::get_state()
 extern void ARSession_get_state_m623161F1E2E5BA2752C821DD409880E6647CA130 (void);
-// 0x000002DC System.Void UnityEngine.XR.ARFoundation.ARSession::set_state(UnityEngine.XR.ARFoundation.ARSessionState)
+// 0x000002DE System.Void UnityEngine.XR.ARFoundation.ARSession::set_state(UnityEngine.XR.ARFoundation.ARSessionState)
 extern void ARSession_set_state_m74178050EEB5D0A2C787009344AB9C917C0AEEFB (void);
-// 0x000002DD UnityEngine.XR.ARSubsystems.NotTrackingReason UnityEngine.XR.ARFoundation.ARSession::get_notTrackingReason()
+// 0x000002DF UnityEngine.XR.ARSubsystems.NotTrackingReason UnityEngine.XR.ARFoundation.ARSession::get_notTrackingReason()
 extern void ARSession_get_notTrackingReason_m346D5BD4415CD34223970E3FAF019A78E86B606F (void);
-// 0x000002DE System.Void UnityEngine.XR.ARFoundation.ARSession::Reset()
+// 0x000002E0 System.Void UnityEngine.XR.ARFoundation.ARSession::Reset()
 extern void ARSession_Reset_m3C78CB4465887888EE1A5EEBCCD47E8D462A1116 (void);
-// 0x000002DF System.Void UnityEngine.XR.ARFoundation.ARSession::SetMatchFrameRateRequested(System.Boolean)
+// 0x000002E1 System.Void UnityEngine.XR.ARFoundation.ARSession::SetMatchFrameRateRequested(System.Boolean)
 extern void ARSession_SetMatchFrameRateRequested_mABECAD724B851AD673474DB26FDF256292EEBA3F (void);
-// 0x000002E0 System.Void UnityEngine.XR.ARFoundation.ARSession::WarnIfMultipleARSessions()
+// 0x000002E2 System.Void UnityEngine.XR.ARFoundation.ARSession::WarnIfMultipleARSessions()
 extern void ARSession_WarnIfMultipleARSessions_m193EF1C5A32379298AFA36D6637E924FD0E161A9 (void);
-// 0x000002E1 UnityEngine.XR.ARSubsystems.XRSessionSubsystem UnityEngine.XR.ARFoundation.ARSession::GetSubsystem()
+// 0x000002E3 UnityEngine.XR.ARSubsystems.XRSessionSubsystem UnityEngine.XR.ARFoundation.ARSession::GetSubsystem()
 extern void ARSession_GetSubsystem_m0721DA6041E5FDD2E29D741C678C16CD84F26B79 (void);
-// 0x000002E2 System.Collections.IEnumerator UnityEngine.XR.ARFoundation.ARSession::CheckAvailability()
+// 0x000002E4 System.Collections.IEnumerator UnityEngine.XR.ARFoundation.ARSession::CheckAvailability()
 extern void ARSession_CheckAvailability_mCC906561CCCE269C11B69D2216C39120563F00FD (void);
-// 0x000002E3 System.Collections.IEnumerator UnityEngine.XR.ARFoundation.ARSession::Install()
+// 0x000002E5 System.Collections.IEnumerator UnityEngine.XR.ARFoundation.ARSession::Install()
 extern void ARSession_Install_mF45AE40F0F8A22E4EEF960BEBD434A7F7591CA67 (void);
-// 0x000002E4 System.Void UnityEngine.XR.ARFoundation.ARSession::OnEnable()
+// 0x000002E6 System.Void UnityEngine.XR.ARFoundation.ARSession::OnEnable()
 extern void ARSession_OnEnable_mA368B8911A5ABF1EF0C44B636723D6981ABF4714 (void);
-// 0x000002E5 System.Collections.IEnumerator UnityEngine.XR.ARFoundation.ARSession::Initialize()
+// 0x000002E7 System.Collections.IEnumerator UnityEngine.XR.ARFoundation.ARSession::Initialize()
 extern void ARSession_Initialize_m0FE9C0B5D3007D3D127FFF52674255F4CCAFF808 (void);
-// 0x000002E6 System.Void UnityEngine.XR.ARFoundation.ARSession::StartSubsystem()
+// 0x000002E8 System.Void UnityEngine.XR.ARFoundation.ARSession::StartSubsystem()
 extern void ARSession_StartSubsystem_m4A470169DE740C623C2C770AEA105859493C0DA8 (void);
-// 0x000002E7 System.Void UnityEngine.XR.ARFoundation.ARSession::Awake()
+// 0x000002E9 System.Void UnityEngine.XR.ARFoundation.ARSession::Awake()
 extern void ARSession_Awake_m9024E982F0CD73C9C679A3DA6FAACE0FFCD39A34 (void);
-// 0x000002E8 System.Void UnityEngine.XR.ARFoundation.ARSession::Update()
+// 0x000002EA System.Void UnityEngine.XR.ARFoundation.ARSession::Update()
 extern void ARSession_Update_mF2C8C33579C2D606200802FE4F7668268DAD1828 (void);
-// 0x000002E9 System.Void UnityEngine.XR.ARFoundation.ARSession::OnApplicationPause(System.Boolean)
+// 0x000002EB System.Void UnityEngine.XR.ARFoundation.ARSession::OnApplicationPause(System.Boolean)
 extern void ARSession_OnApplicationPause_mEA4B2C6D69B1D3CB247CC36C219298F38FC42EBE (void);
-// 0x000002EA System.Void UnityEngine.XR.ARFoundation.ARSession::OnDisable()
+// 0x000002EC System.Void UnityEngine.XR.ARFoundation.ARSession::OnDisable()
 extern void ARSession_OnDisable_m2C35032CBD09545363AB5877C9CFDD89226931AD (void);
-// 0x000002EB System.Void UnityEngine.XR.ARFoundation.ARSession::OnDestroy()
+// 0x000002ED System.Void UnityEngine.XR.ARFoundation.ARSession::OnDestroy()
 extern void ARSession_OnDestroy_m494EC9644E21D53BCFB5BF1FB000477AA60116C9 (void);
-// 0x000002EC System.Void UnityEngine.XR.ARFoundation.ARSession::UpdateNotTrackingReason()
+// 0x000002EE System.Void UnityEngine.XR.ARFoundation.ARSession::UpdateNotTrackingReason()
 extern void ARSession_UpdateNotTrackingReason_m48F2669C645017758983AF46A48444849373849A (void);
-// 0x000002ED System.Void UnityEngine.XR.ARFoundation.ARSession::.ctor()
+// 0x000002EF System.Void UnityEngine.XR.ARFoundation.ARSession::.ctor()
 extern void ARSession__ctor_mA9A989B079A758DBA381FEECE8F3377F45F96E9C (void);
-// 0x000002EE System.Void UnityEngine.XR.ARFoundation.ARSession/<CheckAvailability>d__36::.ctor(System.Int32)
+// 0x000002F0 System.Void UnityEngine.XR.ARFoundation.ARSession/<CheckAvailability>d__36::.ctor(System.Int32)
 extern void U3CCheckAvailabilityU3Ed__36__ctor_mD438DF6FED1FDAA53F8808822709D6D0A85FD83C (void);
-// 0x000002EF System.Void UnityEngine.XR.ARFoundation.ARSession/<CheckAvailability>d__36::System.IDisposable.Dispose()
+// 0x000002F1 System.Void UnityEngine.XR.ARFoundation.ARSession/<CheckAvailability>d__36::System.IDisposable.Dispose()
 extern void U3CCheckAvailabilityU3Ed__36_System_IDisposable_Dispose_m6C25BBA7866C6842835BACB89C3A6F5BDED4F17C (void);
-// 0x000002F0 System.Boolean UnityEngine.XR.ARFoundation.ARSession/<CheckAvailability>d__36::MoveNext()
+// 0x000002F2 System.Boolean UnityEngine.XR.ARFoundation.ARSession/<CheckAvailability>d__36::MoveNext()
 extern void U3CCheckAvailabilityU3Ed__36_MoveNext_mC3CA5419494CA4024FB4319F7A06BDEA10534197 (void);
-// 0x000002F1 System.Object UnityEngine.XR.ARFoundation.ARSession/<CheckAvailability>d__36::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+// 0x000002F3 System.Object UnityEngine.XR.ARFoundation.ARSession/<CheckAvailability>d__36::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
 extern void U3CCheckAvailabilityU3Ed__36_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m75E9F2D11493AABBFB141840F093E785CD985A46 (void);
-// 0x000002F2 System.Void UnityEngine.XR.ARFoundation.ARSession/<CheckAvailability>d__36::System.Collections.IEnumerator.Reset()
+// 0x000002F4 System.Void UnityEngine.XR.ARFoundation.ARSession/<CheckAvailability>d__36::System.Collections.IEnumerator.Reset()
 extern void U3CCheckAvailabilityU3Ed__36_System_Collections_IEnumerator_Reset_mFD67F3ED8C4392588FDD725EDF87D524B44399A4 (void);
-// 0x000002F3 System.Object UnityEngine.XR.ARFoundation.ARSession/<CheckAvailability>d__36::System.Collections.IEnumerator.get_Current()
+// 0x000002F5 System.Object UnityEngine.XR.ARFoundation.ARSession/<CheckAvailability>d__36::System.Collections.IEnumerator.get_Current()
 extern void U3CCheckAvailabilityU3Ed__36_System_Collections_IEnumerator_get_Current_m918C4E2F2BBBADBCB2BA987EBA67994BEEDD09C2 (void);
-// 0x000002F4 System.Void UnityEngine.XR.ARFoundation.ARSession/<Install>d__37::.ctor(System.Int32)
+// 0x000002F6 System.Void UnityEngine.XR.ARFoundation.ARSession/<Install>d__37::.ctor(System.Int32)
 extern void U3CInstallU3Ed__37__ctor_m0124D0074385DF14B3AAA9BDD1154A8045EAA75E (void);
-// 0x000002F5 System.Void UnityEngine.XR.ARFoundation.ARSession/<Install>d__37::System.IDisposable.Dispose()
+// 0x000002F7 System.Void UnityEngine.XR.ARFoundation.ARSession/<Install>d__37::System.IDisposable.Dispose()
 extern void U3CInstallU3Ed__37_System_IDisposable_Dispose_m17EBC5D73D7F0B99CE2EB27FA895B9E1C4C0755D (void);
-// 0x000002F6 System.Boolean UnityEngine.XR.ARFoundation.ARSession/<Install>d__37::MoveNext()
+// 0x000002F8 System.Boolean UnityEngine.XR.ARFoundation.ARSession/<Install>d__37::MoveNext()
 extern void U3CInstallU3Ed__37_MoveNext_m6599DB70DBCC8E63D7A6DE273DBAF3B97F5149A3 (void);
-// 0x000002F7 System.Object UnityEngine.XR.ARFoundation.ARSession/<Install>d__37::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+// 0x000002F9 System.Object UnityEngine.XR.ARFoundation.ARSession/<Install>d__37::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
 extern void U3CInstallU3Ed__37_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m41B9506C156C83EBB7045BDBC6576C806EA60165 (void);
-// 0x000002F8 System.Void UnityEngine.XR.ARFoundation.ARSession/<Install>d__37::System.Collections.IEnumerator.Reset()
+// 0x000002FA System.Void UnityEngine.XR.ARFoundation.ARSession/<Install>d__37::System.Collections.IEnumerator.Reset()
 extern void U3CInstallU3Ed__37_System_Collections_IEnumerator_Reset_m372C5AFF3F7002778FF56271EB95D4E9A094B54D (void);
-// 0x000002F9 System.Object UnityEngine.XR.ARFoundation.ARSession/<Install>d__37::System.Collections.IEnumerator.get_Current()
+// 0x000002FB System.Object UnityEngine.XR.ARFoundation.ARSession/<Install>d__37::System.Collections.IEnumerator.get_Current()
 extern void U3CInstallU3Ed__37_System_Collections_IEnumerator_get_Current_m594A2784D98A8CDB08622DE3E10E8C5B59E3EB2D (void);
-// 0x000002FA System.Void UnityEngine.XR.ARFoundation.ARSession/<Initialize>d__39::.ctor(System.Int32)
+// 0x000002FC System.Void UnityEngine.XR.ARFoundation.ARSession/<Initialize>d__39::.ctor(System.Int32)
 extern void U3CInitializeU3Ed__39__ctor_m9B5EBF9AF917B1E386925FC000446FDD169752FB (void);
-// 0x000002FB System.Void UnityEngine.XR.ARFoundation.ARSession/<Initialize>d__39::System.IDisposable.Dispose()
+// 0x000002FD System.Void UnityEngine.XR.ARFoundation.ARSession/<Initialize>d__39::System.IDisposable.Dispose()
 extern void U3CInitializeU3Ed__39_System_IDisposable_Dispose_mF39DE31543DC5C613DEE4647650E5DCC17CFEE34 (void);
-// 0x000002FC System.Boolean UnityEngine.XR.ARFoundation.ARSession/<Initialize>d__39::MoveNext()
+// 0x000002FE System.Boolean UnityEngine.XR.ARFoundation.ARSession/<Initialize>d__39::MoveNext()
 extern void U3CInitializeU3Ed__39_MoveNext_m3C4AAB4CFCB4FD5EAE5E6673E90231244E6354F1 (void);
-// 0x000002FD System.Object UnityEngine.XR.ARFoundation.ARSession/<Initialize>d__39::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+// 0x000002FF System.Object UnityEngine.XR.ARFoundation.ARSession/<Initialize>d__39::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
 extern void U3CInitializeU3Ed__39_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m74344DD6CE5FC5A133E5D94D56E10E88F7F7C0F7 (void);
-// 0x000002FE System.Void UnityEngine.XR.ARFoundation.ARSession/<Initialize>d__39::System.Collections.IEnumerator.Reset()
+// 0x00000300 System.Void UnityEngine.XR.ARFoundation.ARSession/<Initialize>d__39::System.Collections.IEnumerator.Reset()
 extern void U3CInitializeU3Ed__39_System_Collections_IEnumerator_Reset_m3D381F59294296C8446E6856BE7C2978FC44C775 (void);
-// 0x000002FF System.Object UnityEngine.XR.ARFoundation.ARSession/<Initialize>d__39::System.Collections.IEnumerator.get_Current()
+// 0x00000301 System.Object UnityEngine.XR.ARFoundation.ARSession/<Initialize>d__39::System.Collections.IEnumerator.get_Current()
 extern void U3CInitializeU3Ed__39_System_Collections_IEnumerator_get_Current_m1DF9AE4070CC459D2D55E628DDA04B3E676E7034 (void);
-// 0x00000300 UnityEngine.Camera UnityEngine.XR.ARFoundation.ARSessionOrigin::get_camera()
+// 0x00000302 UnityEngine.Camera UnityEngine.XR.ARFoundation.ARSessionOrigin::get_camera()
 extern void ARSessionOrigin_get_camera_m06DE26C86E4FD1149361159F5609734F989C23D3 (void);
-// 0x00000301 System.Void UnityEngine.XR.ARFoundation.ARSessionOrigin::set_camera(UnityEngine.Camera)
+// 0x00000303 System.Void UnityEngine.XR.ARFoundation.ARSessionOrigin::set_camera(UnityEngine.Camera)
 extern void ARSessionOrigin_set_camera_m5280D9B057050AEB45F58F542F6CC81930D8D908 (void);
-// 0x00000302 UnityEngine.Transform UnityEngine.XR.ARFoundation.ARSessionOrigin::get_trackablesParent()
+// 0x00000304 UnityEngine.Transform UnityEngine.XR.ARFoundation.ARSessionOrigin::get_trackablesParent()
 extern void ARSessionOrigin_get_trackablesParent_mC232717A3F6993690E5A68E1CD17B25F7843C634 (void);
-// 0x00000303 System.Void UnityEngine.XR.ARFoundation.ARSessionOrigin::set_trackablesParent(UnityEngine.Transform)
+// 0x00000305 System.Void UnityEngine.XR.ARFoundation.ARSessionOrigin::set_trackablesParent(UnityEngine.Transform)
 extern void ARSessionOrigin_set_trackablesParent_mEDC8CC36C64F3478FE5CB37D306D41FC2D0AB7B4 (void);
-// 0x00000304 System.Void UnityEngine.XR.ARFoundation.ARSessionOrigin::add_trackablesParentTransformChanged(System.Action`1<UnityEngine.XR.ARFoundation.ARTrackablesParentTransformChangedEventArgs>)
+// 0x00000306 System.Void UnityEngine.XR.ARFoundation.ARSessionOrigin::add_trackablesParentTransformChanged(System.Action`1<UnityEngine.XR.ARFoundation.ARTrackablesParentTransformChangedEventArgs>)
 extern void ARSessionOrigin_add_trackablesParentTransformChanged_m9936C7B9DA33251D5DDF255C31CB9352F8F1A527 (void);
-// 0x00000305 System.Void UnityEngine.XR.ARFoundation.ARSessionOrigin::remove_trackablesParentTransformChanged(System.Action`1<UnityEngine.XR.ARFoundation.ARTrackablesParentTransformChangedEventArgs>)
+// 0x00000307 System.Void UnityEngine.XR.ARFoundation.ARSessionOrigin::remove_trackablesParentTransformChanged(System.Action`1<UnityEngine.XR.ARFoundation.ARTrackablesParentTransformChangedEventArgs>)
 extern void ARSessionOrigin_remove_trackablesParentTransformChanged_mAA1A639505243A4AC78177CC703EDE41F76AAE90 (void);
-// 0x00000306 UnityEngine.Transform UnityEngine.XR.ARFoundation.ARSessionOrigin::get_contentOffsetTransform()
+// 0x00000308 UnityEngine.Transform UnityEngine.XR.ARFoundation.ARSessionOrigin::get_contentOffsetTransform()
 extern void ARSessionOrigin_get_contentOffsetTransform_mA49736F93177F052B00CC6CEE06833F8D278CF59 (void);
-// 0x00000307 System.Void UnityEngine.XR.ARFoundation.ARSessionOrigin::MakeContentAppearAt(UnityEngine.Transform,UnityEngine.Vector3,UnityEngine.Quaternion)
+// 0x00000309 System.Void UnityEngine.XR.ARFoundation.ARSessionOrigin::MakeContentAppearAt(UnityEngine.Transform,UnityEngine.Vector3,UnityEngine.Quaternion)
 extern void ARSessionOrigin_MakeContentAppearAt_m741B35243FFD56004B8FEC762A7FE9759B4D6603 (void);
-// 0x00000308 System.Void UnityEngine.XR.ARFoundation.ARSessionOrigin::MakeContentAppearAt(UnityEngine.Transform,UnityEngine.Vector3)
+// 0x0000030A System.Void UnityEngine.XR.ARFoundation.ARSessionOrigin::MakeContentAppearAt(UnityEngine.Transform,UnityEngine.Vector3)
 extern void ARSessionOrigin_MakeContentAppearAt_m0BAF5FBD841FD67517431E8D81773968CE457608 (void);
-// 0x00000309 System.Void UnityEngine.XR.ARFoundation.ARSessionOrigin::MakeContentAppearAt(UnityEngine.Transform,UnityEngine.Quaternion)
+// 0x0000030B System.Void UnityEngine.XR.ARFoundation.ARSessionOrigin::MakeContentAppearAt(UnityEngine.Transform,UnityEngine.Quaternion)
 extern void ARSessionOrigin_MakeContentAppearAt_mE5B578D7C44877F95C526480F873124E60549CB0 (void);
-// 0x0000030A System.Void UnityEngine.XR.ARFoundation.ARSessionOrigin::Awake()
+// 0x0000030C System.Void UnityEngine.XR.ARFoundation.ARSessionOrigin::Awake()
 extern void ARSessionOrigin_Awake_m9EDF100DB525494EB21B07082DC5CACA63667DF6 (void);
-// 0x0000030B UnityEngine.Pose UnityEngine.XR.ARFoundation.ARSessionOrigin::GetCameraOriginPose()
+// 0x0000030D UnityEngine.Pose UnityEngine.XR.ARFoundation.ARSessionOrigin::GetCameraOriginPose()
 extern void ARSessionOrigin_GetCameraOriginPose_m796F542B04BE57748CFB98A759A6204FD3AAA7CC (void);
-// 0x0000030C System.Void UnityEngine.XR.ARFoundation.ARSessionOrigin::OnEnable()
+// 0x0000030E System.Void UnityEngine.XR.ARFoundation.ARSessionOrigin::OnEnable()
 extern void ARSessionOrigin_OnEnable_m5B3860FC541DC44A3F186C4E2F1CABB74F074D3A (void);
-// 0x0000030D System.Void UnityEngine.XR.ARFoundation.ARSessionOrigin::OnDisable()
+// 0x0000030F System.Void UnityEngine.XR.ARFoundation.ARSessionOrigin::OnDisable()
 extern void ARSessionOrigin_OnDisable_m09E783B9894438CE2B2B28603EDA70F860C1EDB4 (void);
-// 0x0000030E System.Void UnityEngine.XR.ARFoundation.ARSessionOrigin::OnBeforeRender()
+// 0x00000310 System.Void UnityEngine.XR.ARFoundation.ARSessionOrigin::OnBeforeRender()
 extern void ARSessionOrigin_OnBeforeRender_mB0B28F0BD8F27D7BD3499C8D55E19963C0D35547 (void);
-// 0x0000030F System.Void UnityEngine.XR.ARFoundation.ARSessionOrigin::.ctor()
+// 0x00000311 System.Void UnityEngine.XR.ARFoundation.ARSessionOrigin::.ctor()
 extern void ARSessionOrigin__ctor_m0E3C505EA0D5537EC2DCFB047C67BF39B6E334CF (void);
-// 0x00000310 UnityEngine.XR.ARFoundation.ARSessionState UnityEngine.XR.ARFoundation.ARSessionStateChangedEventArgs::get_state()
+// 0x00000312 UnityEngine.XR.ARFoundation.ARSessionState UnityEngine.XR.ARFoundation.ARSessionStateChangedEventArgs::get_state()
 extern void ARSessionStateChangedEventArgs_get_state_mDFCCADECEFE9356E4246B9BF912157F3EDD88796 (void);
-// 0x00000311 System.Void UnityEngine.XR.ARFoundation.ARSessionStateChangedEventArgs::set_state(UnityEngine.XR.ARFoundation.ARSessionState)
+// 0x00000313 System.Void UnityEngine.XR.ARFoundation.ARSessionStateChangedEventArgs::set_state(UnityEngine.XR.ARFoundation.ARSessionState)
 extern void ARSessionStateChangedEventArgs_set_state_mA9AB6CBFCAD476EC94E3642F5638BCC11B4A4B95 (void);
-// 0x00000312 System.Void UnityEngine.XR.ARFoundation.ARSessionStateChangedEventArgs::.ctor(UnityEngine.XR.ARFoundation.ARSessionState)
+// 0x00000314 System.Void UnityEngine.XR.ARFoundation.ARSessionStateChangedEventArgs::.ctor(UnityEngine.XR.ARFoundation.ARSessionState)
 extern void ARSessionStateChangedEventArgs__ctor_m6001FA2930CF6A8551451A20129E7827738E0AA9 (void);
-// 0x00000313 System.Int32 UnityEngine.XR.ARFoundation.ARSessionStateChangedEventArgs::GetHashCode()
+// 0x00000315 System.Int32 UnityEngine.XR.ARFoundation.ARSessionStateChangedEventArgs::GetHashCode()
 extern void ARSessionStateChangedEventArgs_GetHashCode_m00DDAFEED0CA796E059FBB5845B62DA16DA90BFF (void);
-// 0x00000314 System.Boolean UnityEngine.XR.ARFoundation.ARSessionStateChangedEventArgs::Equals(System.Object)
+// 0x00000316 System.Boolean UnityEngine.XR.ARFoundation.ARSessionStateChangedEventArgs::Equals(System.Object)
 extern void ARSessionStateChangedEventArgs_Equals_m55B6A7D08E747098F36B59A6B3CAA8DB392E3454 (void);
-// 0x00000315 System.String UnityEngine.XR.ARFoundation.ARSessionStateChangedEventArgs::ToString()
+// 0x00000317 System.String UnityEngine.XR.ARFoundation.ARSessionStateChangedEventArgs::ToString()
 extern void ARSessionStateChangedEventArgs_ToString_m415BD73E732AE375F1BDF0990604D5FA0DD87A44 (void);
-// 0x00000316 System.Boolean UnityEngine.XR.ARFoundation.ARSessionStateChangedEventArgs::Equals(UnityEngine.XR.ARFoundation.ARSessionStateChangedEventArgs)
+// 0x00000318 System.Boolean UnityEngine.XR.ARFoundation.ARSessionStateChangedEventArgs::Equals(UnityEngine.XR.ARFoundation.ARSessionStateChangedEventArgs)
 extern void ARSessionStateChangedEventArgs_Equals_mC4C56CAF33303BA032420A206F358AE4AEF4181A (void);
-// 0x00000317 System.Boolean UnityEngine.XR.ARFoundation.ARSessionStateChangedEventArgs::op_Equality(UnityEngine.XR.ARFoundation.ARSessionStateChangedEventArgs,UnityEngine.XR.ARFoundation.ARSessionStateChangedEventArgs)
+// 0x00000319 System.Boolean UnityEngine.XR.ARFoundation.ARSessionStateChangedEventArgs::op_Equality(UnityEngine.XR.ARFoundation.ARSessionStateChangedEventArgs,UnityEngine.XR.ARFoundation.ARSessionStateChangedEventArgs)
 extern void ARSessionStateChangedEventArgs_op_Equality_mDDC51ABC2C5323657A6E934AAC5098D2FCBC56B7 (void);
-// 0x00000318 System.Boolean UnityEngine.XR.ARFoundation.ARSessionStateChangedEventArgs::op_Inequality(UnityEngine.XR.ARFoundation.ARSessionStateChangedEventArgs,UnityEngine.XR.ARFoundation.ARSessionStateChangedEventArgs)
+// 0x0000031A System.Boolean UnityEngine.XR.ARFoundation.ARSessionStateChangedEventArgs::op_Inequality(UnityEngine.XR.ARFoundation.ARSessionStateChangedEventArgs,UnityEngine.XR.ARFoundation.ARSessionStateChangedEventArgs)
 extern void ARSessionStateChangedEventArgs_op_Inequality_m8CBC78CE2929A272A28F565EBE21DF58CF325731 (void);
-// 0x00000319 UnityEngine.XR.ARSubsystems.XRTextureDescriptor UnityEngine.XR.ARFoundation.ARTextureInfo::get_descriptor()
+// 0x0000031B UnityEngine.XR.ARSubsystems.XRTextureDescriptor UnityEngine.XR.ARFoundation.ARTextureInfo::get_descriptor()
 extern void ARTextureInfo_get_descriptor_m65509D502D7CC1BB6000A68A083260BAA269D188 (void);
-// 0x0000031A UnityEngine.Texture UnityEngine.XR.ARFoundation.ARTextureInfo::get_texture()
+// 0x0000031C UnityEngine.Texture UnityEngine.XR.ARFoundation.ARTextureInfo::get_texture()
 extern void ARTextureInfo_get_texture_m80E0A3E680A44DFA464736B5097AEAC460E03272 (void);
-// 0x0000031B System.Void UnityEngine.XR.ARFoundation.ARTextureInfo::.ctor(UnityEngine.XR.ARSubsystems.XRTextureDescriptor)
+// 0x0000031D System.Void UnityEngine.XR.ARFoundation.ARTextureInfo::.ctor(UnityEngine.XR.ARSubsystems.XRTextureDescriptor)
 extern void ARTextureInfo__ctor_mD41AC4E8F74111EA21E817750F971494A75BC9C6 (void);
-// 0x0000031C System.Void UnityEngine.XR.ARFoundation.ARTextureInfo::Reset()
+// 0x0000031E System.Void UnityEngine.XR.ARFoundation.ARTextureInfo::Reset()
 extern void ARTextureInfo_Reset_m377A147E742F6A52B1E3266FC70039F57B780CC5 (void);
-// 0x0000031D System.Void UnityEngine.XR.ARFoundation.ARTextureInfo::DestroyTexture()
+// 0x0000031F System.Void UnityEngine.XR.ARFoundation.ARTextureInfo::DestroyTexture()
 extern void ARTextureInfo_DestroyTexture_m843206A816FB81650629A5CECE2DB72F5E4B3A67 (void);
-// 0x0000031E UnityEngine.XR.ARFoundation.ARTextureInfo UnityEngine.XR.ARFoundation.ARTextureInfo::GetUpdatedTextureInfo(UnityEngine.XR.ARFoundation.ARTextureInfo,UnityEngine.XR.ARSubsystems.XRTextureDescriptor)
+// 0x00000320 UnityEngine.XR.ARFoundation.ARTextureInfo UnityEngine.XR.ARFoundation.ARTextureInfo::GetUpdatedTextureInfo(UnityEngine.XR.ARFoundation.ARTextureInfo,UnityEngine.XR.ARSubsystems.XRTextureDescriptor)
 extern void ARTextureInfo_GetUpdatedTextureInfo_m24A4132430A1C5D96E667DDD7C404B7AD712047D (void);
-// 0x0000031F UnityEngine.Texture UnityEngine.XR.ARFoundation.ARTextureInfo::CreateTexture(UnityEngine.XR.ARSubsystems.XRTextureDescriptor)
+// 0x00000321 UnityEngine.Texture UnityEngine.XR.ARFoundation.ARTextureInfo::CreateTexture(UnityEngine.XR.ARSubsystems.XRTextureDescriptor)
 extern void ARTextureInfo_CreateTexture_mD28DAF78E2B5F3B7CF60DE471315E823391C8BFD (void);
-// 0x00000320 System.Boolean UnityEngine.XR.ARFoundation.ARTextureInfo::IsSupported(UnityEngine.XR.ARSubsystems.XRTextureDescriptor)
+// 0x00000322 System.Boolean UnityEngine.XR.ARFoundation.ARTextureInfo::IsSupported(UnityEngine.XR.ARSubsystems.XRTextureDescriptor)
 extern void ARTextureInfo_IsSupported_m7438EFB6949D6AC744902B4A8FA625AAE5D1D1AB (void);
-// 0x00000321 System.Void UnityEngine.XR.ARFoundation.ARTextureInfo::Dispose()
+// 0x00000323 System.Void UnityEngine.XR.ARFoundation.ARTextureInfo::Dispose()
 extern void ARTextureInfo_Dispose_m5EEEAC94FEF213603964F7CBD128201BCD9773E8 (void);
-// 0x00000322 System.Int32 UnityEngine.XR.ARFoundation.ARTextureInfo::GetHashCode()
+// 0x00000324 System.Int32 UnityEngine.XR.ARFoundation.ARTextureInfo::GetHashCode()
 extern void ARTextureInfo_GetHashCode_mA38759BD69BD26A415464560D4AE6C36E6AF840D (void);
-// 0x00000323 System.Boolean UnityEngine.XR.ARFoundation.ARTextureInfo::Equals(UnityEngine.XR.ARFoundation.ARTextureInfo)
+// 0x00000325 System.Boolean UnityEngine.XR.ARFoundation.ARTextureInfo::Equals(UnityEngine.XR.ARFoundation.ARTextureInfo)
 extern void ARTextureInfo_Equals_mFA8520D4C622DEF292877840C73A87254E199C1C (void);
-// 0x00000324 System.Boolean UnityEngine.XR.ARFoundation.ARTextureInfo::Equals(System.Object)
+// 0x00000326 System.Boolean UnityEngine.XR.ARFoundation.ARTextureInfo::Equals(System.Object)
 extern void ARTextureInfo_Equals_m5912700F9441EE220F72E859EDF747F162A2C9BB (void);
-// 0x00000325 System.Boolean UnityEngine.XR.ARFoundation.ARTextureInfo::op_Equality(UnityEngine.XR.ARFoundation.ARTextureInfo,UnityEngine.XR.ARFoundation.ARTextureInfo)
+// 0x00000327 System.Boolean UnityEngine.XR.ARFoundation.ARTextureInfo::op_Equality(UnityEngine.XR.ARFoundation.ARTextureInfo,UnityEngine.XR.ARFoundation.ARTextureInfo)
 extern void ARTextureInfo_op_Equality_m14C72EB2847998ECB1E33295EC2967CAC80C409B (void);
-// 0x00000326 System.Boolean UnityEngine.XR.ARFoundation.ARTextureInfo::op_Inequality(UnityEngine.XR.ARFoundation.ARTextureInfo,UnityEngine.XR.ARFoundation.ARTextureInfo)
+// 0x00000328 System.Boolean UnityEngine.XR.ARFoundation.ARTextureInfo::op_Inequality(UnityEngine.XR.ARFoundation.ARTextureInfo,UnityEngine.XR.ARFoundation.ARTextureInfo)
 extern void ARTextureInfo_op_Inequality_m3C1FAE067837D7FEB8D6DFC698F1595E6BED47B9 (void);
-// 0x00000327 System.Void UnityEngine.XR.ARFoundation.ARTrackable::.ctor()
+// 0x00000329 System.Void UnityEngine.XR.ARFoundation.ARTrackable::.ctor()
 extern void ARTrackable__ctor_m7430516DC3D8985F9C8E2C82DAA05C2DAF4B90B1 (void);
-// 0x00000328 System.Boolean UnityEngine.XR.ARFoundation.ARTrackable`2::get_destroyOnRemoval()
-// 0x00000329 System.Void UnityEngine.XR.ARFoundation.ARTrackable`2::set_destroyOnRemoval(System.Boolean)
-// 0x0000032A UnityEngine.XR.ARSubsystems.TrackableId UnityEngine.XR.ARFoundation.ARTrackable`2::get_trackableId()
-// 0x0000032B UnityEngine.XR.ARSubsystems.TrackingState UnityEngine.XR.ARFoundation.ARTrackable`2::get_trackingState()
-// 0x0000032C System.Boolean UnityEngine.XR.ARFoundation.ARTrackable`2::get_pending()
-// 0x0000032D System.Void UnityEngine.XR.ARFoundation.ARTrackable`2::set_pending(System.Boolean)
-// 0x0000032E TSessionRelativeData UnityEngine.XR.ARFoundation.ARTrackable`2::get_sessionRelativeData()
-// 0x0000032F System.Void UnityEngine.XR.ARFoundation.ARTrackable`2::set_sessionRelativeData(TSessionRelativeData)
-// 0x00000330 System.Void UnityEngine.XR.ARFoundation.ARTrackable`2::OnAfterSetSessionRelativeData()
-// 0x00000331 System.Void UnityEngine.XR.ARFoundation.ARTrackable`2::SetSessionRelativeData(TSessionRelativeData)
-// 0x00000332 UnityEngine.Pose UnityEngine.XR.ARFoundation.ARTrackable`2::get_sessionRelativePose()
-// 0x00000333 System.Void UnityEngine.XR.ARFoundation.ARTrackable`2::.ctor()
-// 0x00000334 UnityEngine.XR.ARFoundation.ARTrackableManager`5<TSubsystem,TSubsystemDescriptor,TProvider,TSessionRelativeData,TTrackable> UnityEngine.XR.ARFoundation.ARTrackableManager`5::get_instance()
-// 0x00000335 System.Void UnityEngine.XR.ARFoundation.ARTrackableManager`5::set_instance(UnityEngine.XR.ARFoundation.ARTrackableManager`5<TSubsystem,TSubsystemDescriptor,TProvider,TSessionRelativeData,TTrackable>)
-// 0x00000336 UnityEngine.XR.ARFoundation.TrackableCollection`1<TTrackable> UnityEngine.XR.ARFoundation.ARTrackableManager`5::get_trackables()
-// 0x00000337 System.Void UnityEngine.XR.ARFoundation.ARTrackableManager`5::SetTrackablesActive(System.Boolean)
-// 0x00000338 UnityEngine.XR.ARFoundation.ARSessionOrigin UnityEngine.XR.ARFoundation.ARTrackableManager`5::get_sessionOrigin()
-// 0x00000339 System.Void UnityEngine.XR.ARFoundation.ARTrackableManager`5::set_sessionOrigin(UnityEngine.XR.ARFoundation.ARSessionOrigin)
-// 0x0000033A System.String UnityEngine.XR.ARFoundation.ARTrackableManager`5::get_gameObjectName()
-// 0x0000033B UnityEngine.GameObject UnityEngine.XR.ARFoundation.ARTrackableManager`5::GetPrefab()
-// 0x0000033C System.Void UnityEngine.XR.ARFoundation.ARTrackableManager`5::Awake()
-// 0x0000033D System.Void UnityEngine.XR.ARFoundation.ARTrackableManager`5::OnEnable()
-// 0x0000033E System.Void UnityEngine.XR.ARFoundation.ARTrackableManager`5::OnDisable()
-// 0x0000033F System.Boolean UnityEngine.XR.ARFoundation.ARTrackableManager`5::CanBeAddedToSubsystem(TTrackable)
-// 0x00000340 System.Void UnityEngine.XR.ARFoundation.ARTrackableManager`5::OnTrackablesParentTransformChanged(UnityEngine.XR.ARFoundation.ARTrackablesParentTransformChangedEventArgs)
-// 0x00000341 System.Void UnityEngine.XR.ARFoundation.ARTrackableManager`5::Update()
-// 0x00000342 System.Void UnityEngine.XR.ARFoundation.ARTrackableManager`5::OnTrackablesChanged(System.Collections.Generic.List`1<TTrackable>,System.Collections.Generic.List`1<TTrackable>,System.Collections.Generic.List`1<TTrackable>)
-// 0x00000343 System.Void UnityEngine.XR.ARFoundation.ARTrackableManager`5::OnCreateTrackable(TTrackable)
-// 0x00000344 System.Void UnityEngine.XR.ARFoundation.ARTrackableManager`5::OnAfterSetSessionRelativeData(TTrackable,TSessionRelativeData)
-// 0x00000345 TTrackable UnityEngine.XR.ARFoundation.ARTrackableManager`5::CreateTrackableImmediate(TSessionRelativeData)
-// 0x00000346 System.Boolean UnityEngine.XR.ARFoundation.ARTrackableManager`5::DestroyPendingTrackable(UnityEngine.XR.ARSubsystems.TrackableId)
-// 0x00000347 System.Void UnityEngine.XR.ARFoundation.ARTrackableManager`5::ClearAndSetCapacity(System.Collections.Generic.List`1<TTrackable>,System.Int32)
-// 0x00000348 System.String UnityEngine.XR.ARFoundation.ARTrackableManager`5::GetTrackableName(UnityEngine.XR.ARSubsystems.TrackableId)
-// 0x00000349 System.ValueTuple`2<UnityEngine.GameObject,System.Boolean> UnityEngine.XR.ARFoundation.ARTrackableManager`5::CreateGameObjectDeactivated()
-// 0x0000034A System.ValueTuple`2<UnityEngine.GameObject,System.Boolean> UnityEngine.XR.ARFoundation.ARTrackableManager`5::CreateGameObjectDeactivated(System.String)
-// 0x0000034B System.ValueTuple`2<UnityEngine.GameObject,System.Boolean> UnityEngine.XR.ARFoundation.ARTrackableManager`5::CreateGameObjectDeactivated(UnityEngine.XR.ARSubsystems.TrackableId)
-// 0x0000034C TTrackable UnityEngine.XR.ARFoundation.ARTrackableManager`5::CreateTrackable(TSessionRelativeData)
-// 0x0000034D System.Void UnityEngine.XR.ARFoundation.ARTrackableManager`5::SetSessionRelativeData(TTrackable,TSessionRelativeData)
-// 0x0000034E System.Void UnityEngine.XR.ARFoundation.ARTrackableManager`5::CreateTrackableFromExisting(TTrackable,TSessionRelativeData)
-// 0x0000034F TTrackable UnityEngine.XR.ARFoundation.ARTrackableManager`5::CreateOrUpdateTrackable(TSessionRelativeData)
-// 0x00000350 System.Void UnityEngine.XR.ARFoundation.ARTrackableManager`5::DestroyTrackable(TTrackable)
-// 0x00000351 System.Void UnityEngine.XR.ARFoundation.ARTrackableManager`5::.ctor()
-// 0x00000352 System.Void UnityEngine.XR.ARFoundation.ARTrackableManager`5::.cctor()
-// 0x00000353 UnityEngine.XR.ARFoundation.ARSessionOrigin UnityEngine.XR.ARFoundation.ARTrackablesParentTransformChangedEventArgs::get_sessionOrigin()
+// 0x0000032A System.Boolean UnityEngine.XR.ARFoundation.ARTrackable`2::get_destroyOnRemoval()
+// 0x0000032B System.Void UnityEngine.XR.ARFoundation.ARTrackable`2::set_destroyOnRemoval(System.Boolean)
+// 0x0000032C UnityEngine.XR.ARSubsystems.TrackableId UnityEngine.XR.ARFoundation.ARTrackable`2::get_trackableId()
+// 0x0000032D UnityEngine.XR.ARSubsystems.TrackingState UnityEngine.XR.ARFoundation.ARTrackable`2::get_trackingState()
+// 0x0000032E System.Boolean UnityEngine.XR.ARFoundation.ARTrackable`2::get_pending()
+// 0x0000032F System.Void UnityEngine.XR.ARFoundation.ARTrackable`2::set_pending(System.Boolean)
+// 0x00000330 TSessionRelativeData UnityEngine.XR.ARFoundation.ARTrackable`2::get_sessionRelativeData()
+// 0x00000331 System.Void UnityEngine.XR.ARFoundation.ARTrackable`2::set_sessionRelativeData(TSessionRelativeData)
+// 0x00000332 System.Void UnityEngine.XR.ARFoundation.ARTrackable`2::OnAfterSetSessionRelativeData()
+// 0x00000333 System.Void UnityEngine.XR.ARFoundation.ARTrackable`2::SetSessionRelativeData(TSessionRelativeData)
+// 0x00000334 UnityEngine.Pose UnityEngine.XR.ARFoundation.ARTrackable`2::get_sessionRelativePose()
+// 0x00000335 System.Void UnityEngine.XR.ARFoundation.ARTrackable`2::.ctor()
+// 0x00000336 UnityEngine.XR.ARFoundation.ARTrackableManager`5<TSubsystem,TSubsystemDescriptor,TProvider,TSessionRelativeData,TTrackable> UnityEngine.XR.ARFoundation.ARTrackableManager`5::get_instance()
+// 0x00000337 System.Void UnityEngine.XR.ARFoundation.ARTrackableManager`5::set_instance(UnityEngine.XR.ARFoundation.ARTrackableManager`5<TSubsystem,TSubsystemDescriptor,TProvider,TSessionRelativeData,TTrackable>)
+// 0x00000338 UnityEngine.XR.ARFoundation.TrackableCollection`1<TTrackable> UnityEngine.XR.ARFoundation.ARTrackableManager`5::get_trackables()
+// 0x00000339 System.Void UnityEngine.XR.ARFoundation.ARTrackableManager`5::SetTrackablesActive(System.Boolean)
+// 0x0000033A UnityEngine.XR.ARFoundation.ARSessionOrigin UnityEngine.XR.ARFoundation.ARTrackableManager`5::get_sessionOrigin()
+// 0x0000033B System.Void UnityEngine.XR.ARFoundation.ARTrackableManager`5::set_sessionOrigin(UnityEngine.XR.ARFoundation.ARSessionOrigin)
+// 0x0000033C System.String UnityEngine.XR.ARFoundation.ARTrackableManager`5::get_gameObjectName()
+// 0x0000033D UnityEngine.GameObject UnityEngine.XR.ARFoundation.ARTrackableManager`5::GetPrefab()
+// 0x0000033E System.Void UnityEngine.XR.ARFoundation.ARTrackableManager`5::Awake()
+// 0x0000033F System.Void UnityEngine.XR.ARFoundation.ARTrackableManager`5::OnEnable()
+// 0x00000340 System.Void UnityEngine.XR.ARFoundation.ARTrackableManager`5::OnDisable()
+// 0x00000341 System.Boolean UnityEngine.XR.ARFoundation.ARTrackableManager`5::CanBeAddedToSubsystem(TTrackable)
+// 0x00000342 System.Void UnityEngine.XR.ARFoundation.ARTrackableManager`5::OnTrackablesParentTransformChanged(UnityEngine.XR.ARFoundation.ARTrackablesParentTransformChangedEventArgs)
+// 0x00000343 System.Void UnityEngine.XR.ARFoundation.ARTrackableManager`5::Update()
+// 0x00000344 System.Void UnityEngine.XR.ARFoundation.ARTrackableManager`5::OnTrackablesChanged(System.Collections.Generic.List`1<TTrackable>,System.Collections.Generic.List`1<TTrackable>,System.Collections.Generic.List`1<TTrackable>)
+// 0x00000345 System.Void UnityEngine.XR.ARFoundation.ARTrackableManager`5::OnCreateTrackable(TTrackable)
+// 0x00000346 System.Void UnityEngine.XR.ARFoundation.ARTrackableManager`5::OnAfterSetSessionRelativeData(TTrackable,TSessionRelativeData)
+// 0x00000347 TTrackable UnityEngine.XR.ARFoundation.ARTrackableManager`5::CreateTrackableImmediate(TSessionRelativeData)
+// 0x00000348 System.Boolean UnityEngine.XR.ARFoundation.ARTrackableManager`5::DestroyPendingTrackable(UnityEngine.XR.ARSubsystems.TrackableId)
+// 0x00000349 System.Void UnityEngine.XR.ARFoundation.ARTrackableManager`5::ClearAndSetCapacity(System.Collections.Generic.List`1<TTrackable>,System.Int32)
+// 0x0000034A System.String UnityEngine.XR.ARFoundation.ARTrackableManager`5::GetTrackableName(UnityEngine.XR.ARSubsystems.TrackableId)
+// 0x0000034B System.ValueTuple`2<UnityEngine.GameObject,System.Boolean> UnityEngine.XR.ARFoundation.ARTrackableManager`5::CreateGameObjectDeactivated()
+// 0x0000034C System.ValueTuple`2<UnityEngine.GameObject,System.Boolean> UnityEngine.XR.ARFoundation.ARTrackableManager`5::CreateGameObjectDeactivated(System.String)
+// 0x0000034D System.ValueTuple`2<UnityEngine.GameObject,System.Boolean> UnityEngine.XR.ARFoundation.ARTrackableManager`5::CreateGameObjectDeactivated(UnityEngine.XR.ARSubsystems.TrackableId)
+// 0x0000034E TTrackable UnityEngine.XR.ARFoundation.ARTrackableManager`5::CreateTrackable(TSessionRelativeData)
+// 0x0000034F System.Void UnityEngine.XR.ARFoundation.ARTrackableManager`5::SetSessionRelativeData(TTrackable,TSessionRelativeData)
+// 0x00000350 System.Void UnityEngine.XR.ARFoundation.ARTrackableManager`5::CreateTrackableFromExisting(TTrackable,TSessionRelativeData)
+// 0x00000351 TTrackable UnityEngine.XR.ARFoundation.ARTrackableManager`5::CreateOrUpdateTrackable(TSessionRelativeData)
+// 0x00000352 System.Void UnityEngine.XR.ARFoundation.ARTrackableManager`5::DestroyTrackable(TTrackable)
+// 0x00000353 System.Void UnityEngine.XR.ARFoundation.ARTrackableManager`5::.ctor()
+// 0x00000354 System.Void UnityEngine.XR.ARFoundation.ARTrackableManager`5::.cctor()
+// 0x00000355 UnityEngine.XR.ARFoundation.ARSessionOrigin UnityEngine.XR.ARFoundation.ARTrackablesParentTransformChangedEventArgs::get_sessionOrigin()
 extern void ARTrackablesParentTransformChangedEventArgs_get_sessionOrigin_m4A650B7FFE29FC40DA7781843DF2AE744108FBBA (void);
-// 0x00000354 UnityEngine.Transform UnityEngine.XR.ARFoundation.ARTrackablesParentTransformChangedEventArgs::get_trackablesParent()
+// 0x00000356 UnityEngine.Transform UnityEngine.XR.ARFoundation.ARTrackablesParentTransformChangedEventArgs::get_trackablesParent()
 extern void ARTrackablesParentTransformChangedEventArgs_get_trackablesParent_m996D495C51CD1A26A40FB44EF841E824EF87711E (void);
-// 0x00000355 System.Void UnityEngine.XR.ARFoundation.ARTrackablesParentTransformChangedEventArgs::.ctor(UnityEngine.XR.ARFoundation.ARSessionOrigin,UnityEngine.Transform)
+// 0x00000357 System.Void UnityEngine.XR.ARFoundation.ARTrackablesParentTransformChangedEventArgs::.ctor(UnityEngine.XR.ARFoundation.ARSessionOrigin,UnityEngine.Transform)
 extern void ARTrackablesParentTransformChangedEventArgs__ctor_m45E72BC55106F4DFE8E9DBC77C2D33213203B2B6 (void);
-// 0x00000356 System.Boolean UnityEngine.XR.ARFoundation.ARTrackablesParentTransformChangedEventArgs::Equals(UnityEngine.XR.ARFoundation.ARTrackablesParentTransformChangedEventArgs)
+// 0x00000358 System.Boolean UnityEngine.XR.ARFoundation.ARTrackablesParentTransformChangedEventArgs::Equals(UnityEngine.XR.ARFoundation.ARTrackablesParentTransformChangedEventArgs)
 extern void ARTrackablesParentTransformChangedEventArgs_Equals_mEFECB01DA6949C437802A4E65FFC803FD0BBA603 (void);
-// 0x00000357 System.Boolean UnityEngine.XR.ARFoundation.ARTrackablesParentTransformChangedEventArgs::Equals(System.Object)
+// 0x00000359 System.Boolean UnityEngine.XR.ARFoundation.ARTrackablesParentTransformChangedEventArgs::Equals(System.Object)
 extern void ARTrackablesParentTransformChangedEventArgs_Equals_m31CF1D718EFE540CACA9C601CA7B9E2666AA2361 (void);
-// 0x00000358 System.Int32 UnityEngine.XR.ARFoundation.ARTrackablesParentTransformChangedEventArgs::GetHashCode()
+// 0x0000035A System.Int32 UnityEngine.XR.ARFoundation.ARTrackablesParentTransformChangedEventArgs::GetHashCode()
 extern void ARTrackablesParentTransformChangedEventArgs_GetHashCode_mCC1795A3F585FA0C88849C76D602A0B7F6A0F620 (void);
-// 0x00000359 System.Boolean UnityEngine.XR.ARFoundation.ARTrackablesParentTransformChangedEventArgs::op_Equality(UnityEngine.XR.ARFoundation.ARTrackablesParentTransformChangedEventArgs,UnityEngine.XR.ARFoundation.ARTrackablesParentTransformChangedEventArgs)
+// 0x0000035B System.Boolean UnityEngine.XR.ARFoundation.ARTrackablesParentTransformChangedEventArgs::op_Equality(UnityEngine.XR.ARFoundation.ARTrackablesParentTransformChangedEventArgs,UnityEngine.XR.ARFoundation.ARTrackablesParentTransformChangedEventArgs)
 extern void ARTrackablesParentTransformChangedEventArgs_op_Equality_m6E79369518D6C0B89C1511C594086A36BFCE7C50 (void);
-// 0x0000035A System.Boolean UnityEngine.XR.ARFoundation.ARTrackablesParentTransformChangedEventArgs::op_Inequality(UnityEngine.XR.ARFoundation.ARTrackablesParentTransformChangedEventArgs,UnityEngine.XR.ARFoundation.ARTrackablesParentTransformChangedEventArgs)
+// 0x0000035C System.Boolean UnityEngine.XR.ARFoundation.ARTrackablesParentTransformChangedEventArgs::op_Inequality(UnityEngine.XR.ARFoundation.ARTrackablesParentTransformChangedEventArgs,UnityEngine.XR.ARFoundation.ARTrackablesParentTransformChangedEventArgs)
 extern void ARTrackablesParentTransformChangedEventArgs_op_Inequality_m58C196B5CBF41353D816739F49C2A2C7B73A625D (void);
-// 0x0000035B UnityEngine.Vector2 UnityEngine.XR.ARFoundation.ARTrackedImage::get_extents()
+// 0x0000035D UnityEngine.Vector2 UnityEngine.XR.ARFoundation.ARTrackedImage::get_extents()
 extern void ARTrackedImage_get_extents_m4D67BE4155FE9AD5F894AB2E11E50F1631CC5A5C (void);
-// 0x0000035C UnityEngine.Vector2 UnityEngine.XR.ARFoundation.ARTrackedImage::get_size()
+// 0x0000035E UnityEngine.Vector2 UnityEngine.XR.ARFoundation.ARTrackedImage::get_size()
 extern void ARTrackedImage_get_size_m5988E5486BDC395B64B2745C3C0158586C2F086B (void);
-// 0x0000035D System.IntPtr UnityEngine.XR.ARFoundation.ARTrackedImage::get_nativePtr()
+// 0x0000035F System.IntPtr UnityEngine.XR.ARFoundation.ARTrackedImage::get_nativePtr()
 extern void ARTrackedImage_get_nativePtr_mFB1A73A3E4BA9636CF0024E32A75979B8F902C58 (void);
-// 0x0000035E UnityEngine.XR.ARSubsystems.XRReferenceImage UnityEngine.XR.ARFoundation.ARTrackedImage::get_referenceImage()
+// 0x00000360 UnityEngine.XR.ARSubsystems.XRReferenceImage UnityEngine.XR.ARFoundation.ARTrackedImage::get_referenceImage()
 extern void ARTrackedImage_get_referenceImage_m6061DE2D46F8060065B64EF3860A0B0085B569E4 (void);
-// 0x0000035F System.Void UnityEngine.XR.ARFoundation.ARTrackedImage::set_referenceImage(UnityEngine.XR.ARSubsystems.XRReferenceImage)
+// 0x00000361 System.Void UnityEngine.XR.ARFoundation.ARTrackedImage::set_referenceImage(UnityEngine.XR.ARSubsystems.XRReferenceImage)
 extern void ARTrackedImage_set_referenceImage_m7E07ABA1817FF3F5A24A925BAFFF9FC901B07B2C (void);
-// 0x00000360 System.Void UnityEngine.XR.ARFoundation.ARTrackedImage::.ctor()
+// 0x00000362 System.Void UnityEngine.XR.ARFoundation.ARTrackedImage::.ctor()
 extern void ARTrackedImage__ctor_m59026DA769B19FD2C0A90E140D066A56A5C060CD (void);
-// 0x00000361 UnityEngine.XR.ARSubsystems.IReferenceImageLibrary UnityEngine.XR.ARFoundation.ARTrackedImageManager::get_referenceLibrary()
+// 0x00000363 UnityEngine.XR.ARSubsystems.IReferenceImageLibrary UnityEngine.XR.ARFoundation.ARTrackedImageManager::get_referenceLibrary()
 extern void ARTrackedImageManager_get_referenceLibrary_m3E5AFA95A69BF9A99D7F6E39F6268B19DB96DF05 (void);
-// 0x00000362 System.Void UnityEngine.XR.ARFoundation.ARTrackedImageManager::set_referenceLibrary(UnityEngine.XR.ARSubsystems.IReferenceImageLibrary)
+// 0x00000364 System.Void UnityEngine.XR.ARFoundation.ARTrackedImageManager::set_referenceLibrary(UnityEngine.XR.ARSubsystems.IReferenceImageLibrary)
 extern void ARTrackedImageManager_set_referenceLibrary_m32C73485209F4ED4DE1C11644419CE8490C8FB80 (void);
-// 0x00000363 UnityEngine.XR.ARSubsystems.RuntimeReferenceImageLibrary UnityEngine.XR.ARFoundation.ARTrackedImageManager::CreateRuntimeLibrary(UnityEngine.XR.ARSubsystems.XRReferenceImageLibrary)
+// 0x00000365 UnityEngine.XR.ARSubsystems.RuntimeReferenceImageLibrary UnityEngine.XR.ARFoundation.ARTrackedImageManager::CreateRuntimeLibrary(UnityEngine.XR.ARSubsystems.XRReferenceImageLibrary)
 extern void ARTrackedImageManager_CreateRuntimeLibrary_mE6F4AD2482B22D65B4805FB695CA4FB71190539D (void);
-// 0x00000364 System.Int32 UnityEngine.XR.ARFoundation.ARTrackedImageManager::get_maxNumberOfMovingImages()
+// 0x00000366 System.Int32 UnityEngine.XR.ARFoundation.ARTrackedImageManager::get_maxNumberOfMovingImages()
 extern void ARTrackedImageManager_get_maxNumberOfMovingImages_mB412778B7B6B93FA75F37E100A6EABABD771D350 (void);
-// 0x00000365 System.Void UnityEngine.XR.ARFoundation.ARTrackedImageManager::set_maxNumberOfMovingImages(System.Int32)
+// 0x00000367 System.Void UnityEngine.XR.ARFoundation.ARTrackedImageManager::set_maxNumberOfMovingImages(System.Int32)
 extern void ARTrackedImageManager_set_maxNumberOfMovingImages_mF104632C138DB8F8A53AE5F3FC942FD70DAA1B32 (void);
-// 0x00000366 System.Boolean UnityEngine.XR.ARFoundation.ARTrackedImageManager::get_supportsMovingImages()
+// 0x00000368 System.Boolean UnityEngine.XR.ARFoundation.ARTrackedImageManager::get_supportsMovingImages()
 extern void ARTrackedImageManager_get_supportsMovingImages_mDE93B1B5873CAA58835C02D4BB02FB0B1EBFAEC3 (void);
-// 0x00000367 System.Int32 UnityEngine.XR.ARFoundation.ARTrackedImageManager::get_requestedMaxNumberOfMovingImages()
+// 0x00000369 System.Int32 UnityEngine.XR.ARFoundation.ARTrackedImageManager::get_requestedMaxNumberOfMovingImages()
 extern void ARTrackedImageManager_get_requestedMaxNumberOfMovingImages_mBE51959A2E1C36D5044863A46D494D8130D31FAD (void);
-// 0x00000368 System.Void UnityEngine.XR.ARFoundation.ARTrackedImageManager::set_requestedMaxNumberOfMovingImages(System.Int32)
+// 0x0000036A System.Void UnityEngine.XR.ARFoundation.ARTrackedImageManager::set_requestedMaxNumberOfMovingImages(System.Int32)
 extern void ARTrackedImageManager_set_requestedMaxNumberOfMovingImages_m620DD00138FA2EF1136F6958D20580FDD4E4941E (void);
-// 0x00000369 System.Int32 UnityEngine.XR.ARFoundation.ARTrackedImageManager::get_currentMaxNumberOfMovingImages()
+// 0x0000036B System.Int32 UnityEngine.XR.ARFoundation.ARTrackedImageManager::get_currentMaxNumberOfMovingImages()
 extern void ARTrackedImageManager_get_currentMaxNumberOfMovingImages_m9FD6CD1C161EE7AB48BE16F86401F83EFC124DA1 (void);
-// 0x0000036A UnityEngine.GameObject UnityEngine.XR.ARFoundation.ARTrackedImageManager::get_trackedImagePrefab()
+// 0x0000036C UnityEngine.GameObject UnityEngine.XR.ARFoundation.ARTrackedImageManager::get_trackedImagePrefab()
 extern void ARTrackedImageManager_get_trackedImagePrefab_m0C6A97AB9C591033452C9C87C703AA40B3926A2E (void);
-// 0x0000036B System.Void UnityEngine.XR.ARFoundation.ARTrackedImageManager::set_trackedImagePrefab(UnityEngine.GameObject)
+// 0x0000036D System.Void UnityEngine.XR.ARFoundation.ARTrackedImageManager::set_trackedImagePrefab(UnityEngine.GameObject)
 extern void ARTrackedImageManager_set_trackedImagePrefab_mE43DCEC6A2D1C022E5E66FE1A30B084845DC7214 (void);
-// 0x0000036C UnityEngine.GameObject UnityEngine.XR.ARFoundation.ARTrackedImageManager::GetPrefab()
+// 0x0000036E UnityEngine.GameObject UnityEngine.XR.ARFoundation.ARTrackedImageManager::GetPrefab()
 extern void ARTrackedImageManager_GetPrefab_m259C9B20F5D4C4BD4FBA350FD0DB2F13FA2089B5 (void);
-// 0x0000036D System.Void UnityEngine.XR.ARFoundation.ARTrackedImageManager::add_trackedImagesChanged(System.Action`1<UnityEngine.XR.ARFoundation.ARTrackedImagesChangedEventArgs>)
+// 0x0000036F System.Void UnityEngine.XR.ARFoundation.ARTrackedImageManager::add_trackedImagesChanged(System.Action`1<UnityEngine.XR.ARFoundation.ARTrackedImagesChangedEventArgs>)
 extern void ARTrackedImageManager_add_trackedImagesChanged_m72C17C9ECEEFADD229EA80CD20ED1254336F3D76 (void);
-// 0x0000036E System.Void UnityEngine.XR.ARFoundation.ARTrackedImageManager::remove_trackedImagesChanged(System.Action`1<UnityEngine.XR.ARFoundation.ARTrackedImagesChangedEventArgs>)
+// 0x00000370 System.Void UnityEngine.XR.ARFoundation.ARTrackedImageManager::remove_trackedImagesChanged(System.Action`1<UnityEngine.XR.ARFoundation.ARTrackedImagesChangedEventArgs>)
 extern void ARTrackedImageManager_remove_trackedImagesChanged_mE28AE7C3CD3F208C9891976125E8A0ED3641EDAF (void);
-// 0x0000036F System.String UnityEngine.XR.ARFoundation.ARTrackedImageManager::get_gameObjectName()
+// 0x00000371 System.String UnityEngine.XR.ARFoundation.ARTrackedImageManager::get_gameObjectName()
 extern void ARTrackedImageManager_get_gameObjectName_mEBE1ED68CFA81194DD5EFBC0FF7C52DE85FD87B4 (void);
-// 0x00000370 System.Void UnityEngine.XR.ARFoundation.ARTrackedImageManager::OnBeforeStart()
+// 0x00000372 System.Void UnityEngine.XR.ARFoundation.ARTrackedImageManager::OnBeforeStart()
 extern void ARTrackedImageManager_OnBeforeStart_m2ED33E858EE03D7F30FE9F306B1AAE309B405C39 (void);
-// 0x00000371 System.Boolean UnityEngine.XR.ARFoundation.ARTrackedImageManager::FindReferenceImage(System.Guid,UnityEngine.XR.ARSubsystems.XRReferenceImage&)
+// 0x00000373 System.Boolean UnityEngine.XR.ARFoundation.ARTrackedImageManager::FindReferenceImage(System.Guid,UnityEngine.XR.ARSubsystems.XRReferenceImage&)
 extern void ARTrackedImageManager_FindReferenceImage_m159B943C4F84780CBC4E2993DFFD2BD80D91AFEB (void);
-// 0x00000372 System.Void UnityEngine.XR.ARFoundation.ARTrackedImageManager::OnAfterSetSessionRelativeData(UnityEngine.XR.ARFoundation.ARTrackedImage,UnityEngine.XR.ARSubsystems.XRTrackedImage)
+// 0x00000374 System.Void UnityEngine.XR.ARFoundation.ARTrackedImageManager::OnAfterSetSessionRelativeData(UnityEngine.XR.ARFoundation.ARTrackedImage,UnityEngine.XR.ARSubsystems.XRTrackedImage)
 extern void ARTrackedImageManager_OnAfterSetSessionRelativeData_mC24823631EFC12D7401E7C2F820D0E1F21C15EE2 (void);
-// 0x00000373 System.Void UnityEngine.XR.ARFoundation.ARTrackedImageManager::OnTrackablesChanged(System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARTrackedImage>,System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARTrackedImage>,System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARTrackedImage>)
+// 0x00000375 System.Void UnityEngine.XR.ARFoundation.ARTrackedImageManager::OnTrackablesChanged(System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARTrackedImage>,System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARTrackedImage>,System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARTrackedImage>)
 extern void ARTrackedImageManager_OnTrackablesChanged_m38C06E8063BC9C259465DA535098A29B3B42FACE (void);
-// 0x00000374 System.Void UnityEngine.XR.ARFoundation.ARTrackedImageManager::UpdateReferenceImages(UnityEngine.XR.ARSubsystems.RuntimeReferenceImageLibrary)
+// 0x00000376 System.Void UnityEngine.XR.ARFoundation.ARTrackedImageManager::UpdateReferenceImages(UnityEngine.XR.ARSubsystems.RuntimeReferenceImageLibrary)
 extern void ARTrackedImageManager_UpdateReferenceImages_m84668F0656437965DD414E04C799BEACEAC1A2EC (void);
-// 0x00000375 System.Void UnityEngine.XR.ARFoundation.ARTrackedImageManager::.ctor()
+// 0x00000377 System.Void UnityEngine.XR.ARFoundation.ARTrackedImageManager::.ctor()
 extern void ARTrackedImageManager__ctor_m74844D223A56DCFA7F9904E527CBE7559EC631E0 (void);
-// 0x00000376 System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARTrackedImage> UnityEngine.XR.ARFoundation.ARTrackedImagesChangedEventArgs::get_added()
+// 0x00000378 System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARTrackedImage> UnityEngine.XR.ARFoundation.ARTrackedImagesChangedEventArgs::get_added()
 extern void ARTrackedImagesChangedEventArgs_get_added_m0E81E3C161242C2508B90BCC73605F551AD53B4E (void);
-// 0x00000377 System.Void UnityEngine.XR.ARFoundation.ARTrackedImagesChangedEventArgs::set_added(System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARTrackedImage>)
+// 0x00000379 System.Void UnityEngine.XR.ARFoundation.ARTrackedImagesChangedEventArgs::set_added(System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARTrackedImage>)
 extern void ARTrackedImagesChangedEventArgs_set_added_mCD60C22D4583687683AE015E8A1A020C6AB3C483 (void);
-// 0x00000378 System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARTrackedImage> UnityEngine.XR.ARFoundation.ARTrackedImagesChangedEventArgs::get_updated()
+// 0x0000037A System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARTrackedImage> UnityEngine.XR.ARFoundation.ARTrackedImagesChangedEventArgs::get_updated()
 extern void ARTrackedImagesChangedEventArgs_get_updated_mBEB295B97B6C25E4DC4447383F529C9E475E4041 (void);
-// 0x00000379 System.Void UnityEngine.XR.ARFoundation.ARTrackedImagesChangedEventArgs::set_updated(System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARTrackedImage>)
+// 0x0000037B System.Void UnityEngine.XR.ARFoundation.ARTrackedImagesChangedEventArgs::set_updated(System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARTrackedImage>)
 extern void ARTrackedImagesChangedEventArgs_set_updated_m9E648CAEC117BCEA4B6F04019EE298E67FEAF767 (void);
-// 0x0000037A System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARTrackedImage> UnityEngine.XR.ARFoundation.ARTrackedImagesChangedEventArgs::get_removed()
+// 0x0000037C System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARTrackedImage> UnityEngine.XR.ARFoundation.ARTrackedImagesChangedEventArgs::get_removed()
 extern void ARTrackedImagesChangedEventArgs_get_removed_mF4C9906743C7270B1AAD4B43E74CDB9CB5208E57 (void);
-// 0x0000037B System.Void UnityEngine.XR.ARFoundation.ARTrackedImagesChangedEventArgs::set_removed(System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARTrackedImage>)
+// 0x0000037D System.Void UnityEngine.XR.ARFoundation.ARTrackedImagesChangedEventArgs::set_removed(System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARTrackedImage>)
 extern void ARTrackedImagesChangedEventArgs_set_removed_m0E5F3A92E5B2BCF31D158AB8917713A3D9622509 (void);
-// 0x0000037C System.Void UnityEngine.XR.ARFoundation.ARTrackedImagesChangedEventArgs::.ctor(System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARTrackedImage>,System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARTrackedImage>,System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARTrackedImage>)
+// 0x0000037E System.Void UnityEngine.XR.ARFoundation.ARTrackedImagesChangedEventArgs::.ctor(System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARTrackedImage>,System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARTrackedImage>,System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARTrackedImage>)
 extern void ARTrackedImagesChangedEventArgs__ctor_mF538DBD6FD3B449C7B1B58F2DDD5376F77BAD0C7 (void);
-// 0x0000037D System.Int32 UnityEngine.XR.ARFoundation.ARTrackedImagesChangedEventArgs::GetHashCode()
+// 0x0000037F System.Int32 UnityEngine.XR.ARFoundation.ARTrackedImagesChangedEventArgs::GetHashCode()
 extern void ARTrackedImagesChangedEventArgs_GetHashCode_mAD9F7F4F2B5AC26FBEFE6DAF62BCF2D8F0C1535A (void);
-// 0x0000037E System.Boolean UnityEngine.XR.ARFoundation.ARTrackedImagesChangedEventArgs::Equals(System.Object)
+// 0x00000380 System.Boolean UnityEngine.XR.ARFoundation.ARTrackedImagesChangedEventArgs::Equals(System.Object)
 extern void ARTrackedImagesChangedEventArgs_Equals_mA71A641FE4371366C134DDB0DC89904137B578E6 (void);
-// 0x0000037F System.String UnityEngine.XR.ARFoundation.ARTrackedImagesChangedEventArgs::ToString()
+// 0x00000381 System.String UnityEngine.XR.ARFoundation.ARTrackedImagesChangedEventArgs::ToString()
 extern void ARTrackedImagesChangedEventArgs_ToString_mFB33AA8A3812346B39B9C36A39D9F2E4ACC84645 (void);
-// 0x00000380 System.Boolean UnityEngine.XR.ARFoundation.ARTrackedImagesChangedEventArgs::Equals(UnityEngine.XR.ARFoundation.ARTrackedImagesChangedEventArgs)
+// 0x00000382 System.Boolean UnityEngine.XR.ARFoundation.ARTrackedImagesChangedEventArgs::Equals(UnityEngine.XR.ARFoundation.ARTrackedImagesChangedEventArgs)
 extern void ARTrackedImagesChangedEventArgs_Equals_m941D158F4DA8F60409203BF41E42EBFDDAECEC40 (void);
-// 0x00000381 System.Boolean UnityEngine.XR.ARFoundation.ARTrackedImagesChangedEventArgs::op_Equality(UnityEngine.XR.ARFoundation.ARTrackedImagesChangedEventArgs,UnityEngine.XR.ARFoundation.ARTrackedImagesChangedEventArgs)
+// 0x00000383 System.Boolean UnityEngine.XR.ARFoundation.ARTrackedImagesChangedEventArgs::op_Equality(UnityEngine.XR.ARFoundation.ARTrackedImagesChangedEventArgs,UnityEngine.XR.ARFoundation.ARTrackedImagesChangedEventArgs)
 extern void ARTrackedImagesChangedEventArgs_op_Equality_mCF052C3FF8DFBB4AB0985A957E2DD99107F0D57A (void);
-// 0x00000382 System.Boolean UnityEngine.XR.ARFoundation.ARTrackedImagesChangedEventArgs::op_Inequality(UnityEngine.XR.ARFoundation.ARTrackedImagesChangedEventArgs,UnityEngine.XR.ARFoundation.ARTrackedImagesChangedEventArgs)
+// 0x00000384 System.Boolean UnityEngine.XR.ARFoundation.ARTrackedImagesChangedEventArgs::op_Inequality(UnityEngine.XR.ARFoundation.ARTrackedImagesChangedEventArgs,UnityEngine.XR.ARFoundation.ARTrackedImagesChangedEventArgs)
 extern void ARTrackedImagesChangedEventArgs_op_Inequality_mB854C0F817B66764D1F507034CF3237F2DE3AB6B (void);
-// 0x00000383 System.IntPtr UnityEngine.XR.ARFoundation.ARTrackedObject::get_nativePtr()
+// 0x00000385 System.IntPtr UnityEngine.XR.ARFoundation.ARTrackedObject::get_nativePtr()
 extern void ARTrackedObject_get_nativePtr_m3D8F57E576B15F9D84FE17327692549695049B66 (void);
-// 0x00000384 UnityEngine.XR.ARSubsystems.XRReferenceObject UnityEngine.XR.ARFoundation.ARTrackedObject::get_referenceObject()
+// 0x00000386 UnityEngine.XR.ARSubsystems.XRReferenceObject UnityEngine.XR.ARFoundation.ARTrackedObject::get_referenceObject()
 extern void ARTrackedObject_get_referenceObject_mD3BAE53E258A2D8BCECD3FA7DA40620B216F633D (void);
-// 0x00000385 System.Void UnityEngine.XR.ARFoundation.ARTrackedObject::set_referenceObject(UnityEngine.XR.ARSubsystems.XRReferenceObject)
+// 0x00000387 System.Void UnityEngine.XR.ARFoundation.ARTrackedObject::set_referenceObject(UnityEngine.XR.ARSubsystems.XRReferenceObject)
 extern void ARTrackedObject_set_referenceObject_m646DBBBCE7123CB97F8F14494FDC9545CE43B2C4 (void);
-// 0x00000386 System.Void UnityEngine.XR.ARFoundation.ARTrackedObject::.ctor()
+// 0x00000388 System.Void UnityEngine.XR.ARFoundation.ARTrackedObject::.ctor()
 extern void ARTrackedObject__ctor_m6548CBF5BBBAFAA04FD592B311E06FF4EC0D86AC (void);
-// 0x00000387 UnityEngine.XR.ARSubsystems.XRReferenceObjectLibrary UnityEngine.XR.ARFoundation.ARTrackedObjectManager::get_referenceLibrary()
+// 0x00000389 UnityEngine.XR.ARSubsystems.XRReferenceObjectLibrary UnityEngine.XR.ARFoundation.ARTrackedObjectManager::get_referenceLibrary()
 extern void ARTrackedObjectManager_get_referenceLibrary_m245AA00E4D4B159FE3209C1BB3D8EAC6DFC6AF3A (void);
-// 0x00000388 System.Void UnityEngine.XR.ARFoundation.ARTrackedObjectManager::set_referenceLibrary(UnityEngine.XR.ARSubsystems.XRReferenceObjectLibrary)
+// 0x0000038A System.Void UnityEngine.XR.ARFoundation.ARTrackedObjectManager::set_referenceLibrary(UnityEngine.XR.ARSubsystems.XRReferenceObjectLibrary)
 extern void ARTrackedObjectManager_set_referenceLibrary_mB6124E517E0677B1963A7A227149392C4786DFEB (void);
-// 0x00000389 UnityEngine.GameObject UnityEngine.XR.ARFoundation.ARTrackedObjectManager::get_trackedObjectPrefab()
+// 0x0000038B UnityEngine.GameObject UnityEngine.XR.ARFoundation.ARTrackedObjectManager::get_trackedObjectPrefab()
 extern void ARTrackedObjectManager_get_trackedObjectPrefab_mBF0A4202D8CFF096F877BAB2A6953B70B4B00E72 (void);
-// 0x0000038A System.Void UnityEngine.XR.ARFoundation.ARTrackedObjectManager::set_trackedObjectPrefab(UnityEngine.GameObject)
+// 0x0000038C System.Void UnityEngine.XR.ARFoundation.ARTrackedObjectManager::set_trackedObjectPrefab(UnityEngine.GameObject)
 extern void ARTrackedObjectManager_set_trackedObjectPrefab_mA40679C30B438D8AF9FA05FDEEA135EED5C64EC5 (void);
-// 0x0000038B UnityEngine.GameObject UnityEngine.XR.ARFoundation.ARTrackedObjectManager::GetPrefab()
+// 0x0000038D UnityEngine.GameObject UnityEngine.XR.ARFoundation.ARTrackedObjectManager::GetPrefab()
 extern void ARTrackedObjectManager_GetPrefab_mF3665311F759A3D44EAD8ECC7838F12FB84F6CE9 (void);
-// 0x0000038C System.Void UnityEngine.XR.ARFoundation.ARTrackedObjectManager::add_trackedObjectsChanged(System.Action`1<UnityEngine.XR.ARFoundation.ARTrackedObjectsChangedEventArgs>)
+// 0x0000038E System.Void UnityEngine.XR.ARFoundation.ARTrackedObjectManager::add_trackedObjectsChanged(System.Action`1<UnityEngine.XR.ARFoundation.ARTrackedObjectsChangedEventArgs>)
 extern void ARTrackedObjectManager_add_trackedObjectsChanged_m11F4065EA3966344E3085A077F1BD50151B8B8CC (void);
-// 0x0000038D System.Void UnityEngine.XR.ARFoundation.ARTrackedObjectManager::remove_trackedObjectsChanged(System.Action`1<UnityEngine.XR.ARFoundation.ARTrackedObjectsChangedEventArgs>)
+// 0x0000038F System.Void UnityEngine.XR.ARFoundation.ARTrackedObjectManager::remove_trackedObjectsChanged(System.Action`1<UnityEngine.XR.ARFoundation.ARTrackedObjectsChangedEventArgs>)
 extern void ARTrackedObjectManager_remove_trackedObjectsChanged_m0722B5D88D2DD8E568885131DEBDB81AB1C17478 (void);
-// 0x0000038E System.String UnityEngine.XR.ARFoundation.ARTrackedObjectManager::get_gameObjectName()
+// 0x00000390 System.String UnityEngine.XR.ARFoundation.ARTrackedObjectManager::get_gameObjectName()
 extern void ARTrackedObjectManager_get_gameObjectName_mD3FD6A63B17EAFCBD41A6A50115DCBEEA8CEF8B5 (void);
-// 0x0000038F System.Void UnityEngine.XR.ARFoundation.ARTrackedObjectManager::OnBeforeStart()
+// 0x00000391 System.Void UnityEngine.XR.ARFoundation.ARTrackedObjectManager::OnBeforeStart()
 extern void ARTrackedObjectManager_OnBeforeStart_mBA7AB86D61AC07221BE3C932335B3A2267245752 (void);
-// 0x00000390 System.Void UnityEngine.XR.ARFoundation.ARTrackedObjectManager::OnAfterSetSessionRelativeData(UnityEngine.XR.ARFoundation.ARTrackedObject,UnityEngine.XR.ARSubsystems.XRTrackedObject)
+// 0x00000392 System.Void UnityEngine.XR.ARFoundation.ARTrackedObjectManager::OnAfterSetSessionRelativeData(UnityEngine.XR.ARFoundation.ARTrackedObject,UnityEngine.XR.ARSubsystems.XRTrackedObject)
 extern void ARTrackedObjectManager_OnAfterSetSessionRelativeData_m526F730EB17625B6D11B71BDF3B7F6A979FB7FC4 (void);
-// 0x00000391 System.Void UnityEngine.XR.ARFoundation.ARTrackedObjectManager::OnTrackablesChanged(System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARTrackedObject>,System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARTrackedObject>,System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARTrackedObject>)
+// 0x00000393 System.Void UnityEngine.XR.ARFoundation.ARTrackedObjectManager::OnTrackablesChanged(System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARTrackedObject>,System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARTrackedObject>,System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARTrackedObject>)
 extern void ARTrackedObjectManager_OnTrackablesChanged_mC36D70CD858377804924066775C0BD40F050E8A0 (void);
-// 0x00000392 System.Void UnityEngine.XR.ARFoundation.ARTrackedObjectManager::UpdateReferenceObjects()
+// 0x00000394 System.Void UnityEngine.XR.ARFoundation.ARTrackedObjectManager::UpdateReferenceObjects()
 extern void ARTrackedObjectManager_UpdateReferenceObjects_mB77320716D6836FB2B19A5B0EA385EAD99D66D6D (void);
-// 0x00000393 System.Void UnityEngine.XR.ARFoundation.ARTrackedObjectManager::.ctor()
+// 0x00000395 System.Void UnityEngine.XR.ARFoundation.ARTrackedObjectManager::.ctor()
 extern void ARTrackedObjectManager__ctor_mC3ED28AE06DBE4A5C516EB8EC43AC3F96E207B1A (void);
-// 0x00000394 System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARTrackedObject> UnityEngine.XR.ARFoundation.ARTrackedObjectsChangedEventArgs::get_added()
+// 0x00000396 System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARTrackedObject> UnityEngine.XR.ARFoundation.ARTrackedObjectsChangedEventArgs::get_added()
 extern void ARTrackedObjectsChangedEventArgs_get_added_m747A90E293DEDF1EB53AFB6BB3483AC65E79060D (void);
-// 0x00000395 System.Void UnityEngine.XR.ARFoundation.ARTrackedObjectsChangedEventArgs::set_added(System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARTrackedObject>)
+// 0x00000397 System.Void UnityEngine.XR.ARFoundation.ARTrackedObjectsChangedEventArgs::set_added(System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARTrackedObject>)
 extern void ARTrackedObjectsChangedEventArgs_set_added_m0A6EBB4060BFAFBCE4FD8CFAB7650B0B6734D361 (void);
-// 0x00000396 System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARTrackedObject> UnityEngine.XR.ARFoundation.ARTrackedObjectsChangedEventArgs::get_updated()
+// 0x00000398 System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARTrackedObject> UnityEngine.XR.ARFoundation.ARTrackedObjectsChangedEventArgs::get_updated()
 extern void ARTrackedObjectsChangedEventArgs_get_updated_m25103ACF74EDC4CC13A65CE841EB0B4BA2EC6CD7 (void);
-// 0x00000397 System.Void UnityEngine.XR.ARFoundation.ARTrackedObjectsChangedEventArgs::set_updated(System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARTrackedObject>)
+// 0x00000399 System.Void UnityEngine.XR.ARFoundation.ARTrackedObjectsChangedEventArgs::set_updated(System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARTrackedObject>)
 extern void ARTrackedObjectsChangedEventArgs_set_updated_m0AD11C04AFD0D9177732ADBAB6F4BA90A81ECEB0 (void);
-// 0x00000398 System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARTrackedObject> UnityEngine.XR.ARFoundation.ARTrackedObjectsChangedEventArgs::get_removed()
+// 0x0000039A System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARTrackedObject> UnityEngine.XR.ARFoundation.ARTrackedObjectsChangedEventArgs::get_removed()
 extern void ARTrackedObjectsChangedEventArgs_get_removed_m5E38CAEC4F21B15878F4D4EB5490FED57D95446D (void);
-// 0x00000399 System.Void UnityEngine.XR.ARFoundation.ARTrackedObjectsChangedEventArgs::set_removed(System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARTrackedObject>)
+// 0x0000039B System.Void UnityEngine.XR.ARFoundation.ARTrackedObjectsChangedEventArgs::set_removed(System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARTrackedObject>)
 extern void ARTrackedObjectsChangedEventArgs_set_removed_m4C04A88DEE026C11913F1C3B34CAC84EDEB50D35 (void);
-// 0x0000039A System.Void UnityEngine.XR.ARFoundation.ARTrackedObjectsChangedEventArgs::.ctor(System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARTrackedObject>,System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARTrackedObject>,System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARTrackedObject>)
+// 0x0000039C System.Void UnityEngine.XR.ARFoundation.ARTrackedObjectsChangedEventArgs::.ctor(System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARTrackedObject>,System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARTrackedObject>,System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARTrackedObject>)
 extern void ARTrackedObjectsChangedEventArgs__ctor_mA48B5A6AC353009C41A5391BBF56A910A74C53D1 (void);
-// 0x0000039B System.Int32 UnityEngine.XR.ARFoundation.ARTrackedObjectsChangedEventArgs::GetHashCode()
+// 0x0000039D System.Int32 UnityEngine.XR.ARFoundation.ARTrackedObjectsChangedEventArgs::GetHashCode()
 extern void ARTrackedObjectsChangedEventArgs_GetHashCode_m84328982CB55137A773B038431287350CE36EF31 (void);
-// 0x0000039C System.Boolean UnityEngine.XR.ARFoundation.ARTrackedObjectsChangedEventArgs::Equals(System.Object)
+// 0x0000039E System.Boolean UnityEngine.XR.ARFoundation.ARTrackedObjectsChangedEventArgs::Equals(System.Object)
 extern void ARTrackedObjectsChangedEventArgs_Equals_m238B5491E5A062C6A577FFF46F963B13E4E61E60 (void);
-// 0x0000039D System.String UnityEngine.XR.ARFoundation.ARTrackedObjectsChangedEventArgs::ToString()
+// 0x0000039F System.String UnityEngine.XR.ARFoundation.ARTrackedObjectsChangedEventArgs::ToString()
 extern void ARTrackedObjectsChangedEventArgs_ToString_mD4FF710D115521BAE99BB835BC0396A47725D3A0 (void);
-// 0x0000039E System.Boolean UnityEngine.XR.ARFoundation.ARTrackedObjectsChangedEventArgs::Equals(UnityEngine.XR.ARFoundation.ARTrackedObjectsChangedEventArgs)
+// 0x000003A0 System.Boolean UnityEngine.XR.ARFoundation.ARTrackedObjectsChangedEventArgs::Equals(UnityEngine.XR.ARFoundation.ARTrackedObjectsChangedEventArgs)
 extern void ARTrackedObjectsChangedEventArgs_Equals_mB776FE4552F4F0C8E08C390C87AF45A2E0904E70 (void);
-// 0x0000039F System.Boolean UnityEngine.XR.ARFoundation.ARTrackedObjectsChangedEventArgs::op_Equality(UnityEngine.XR.ARFoundation.ARTrackedObjectsChangedEventArgs,UnityEngine.XR.ARFoundation.ARTrackedObjectsChangedEventArgs)
+// 0x000003A1 System.Boolean UnityEngine.XR.ARFoundation.ARTrackedObjectsChangedEventArgs::op_Equality(UnityEngine.XR.ARFoundation.ARTrackedObjectsChangedEventArgs,UnityEngine.XR.ARFoundation.ARTrackedObjectsChangedEventArgs)
 extern void ARTrackedObjectsChangedEventArgs_op_Equality_m921C9A9C2BC060365E5431D20556A5E7D607441E (void);
-// 0x000003A0 System.Boolean UnityEngine.XR.ARFoundation.ARTrackedObjectsChangedEventArgs::op_Inequality(UnityEngine.XR.ARFoundation.ARTrackedObjectsChangedEventArgs,UnityEngine.XR.ARFoundation.ARTrackedObjectsChangedEventArgs)
+// 0x000003A2 System.Boolean UnityEngine.XR.ARFoundation.ARTrackedObjectsChangedEventArgs::op_Inequality(UnityEngine.XR.ARFoundation.ARTrackedObjectsChangedEventArgs,UnityEngine.XR.ARFoundation.ARTrackedObjectsChangedEventArgs)
 extern void ARTrackedObjectsChangedEventArgs_op_Inequality_m2850CAB8C82E19F331FE7048C21734765A23EB24 (void);
-// 0x000003A1 System.Nullable`1<UnityEngine.XR.ARFoundation.DebugAssert/Message> UnityEngine.XR.ARFoundation.DebugAssert::That(System.Boolean)
+// 0x000003A3 System.Nullable`1<UnityEngine.XR.ARFoundation.DebugAssert/Message> UnityEngine.XR.ARFoundation.DebugAssert::That(System.Boolean)
 extern void DebugAssert_That_m804AA0D76514C27690DF231A6F7D50D17AA01018 (void);
-// 0x000003A2 System.Void UnityEngine.XR.ARFoundation.DebugAssert/Message::WithMessage(System.String)
+// 0x000003A4 System.Void UnityEngine.XR.ARFoundation.DebugAssert/Message::WithMessage(System.String)
 extern void Message_WithMessage_m08C475B239B69D3D84E6C75858C21CECAC023D90 (void);
-// 0x000003A3 System.Nullable`1<UnityEngine.XR.ARFoundation.DebugWarn/Message> UnityEngine.XR.ARFoundation.DebugWarn::WhenFalse(System.Boolean)
+// 0x000003A5 System.Nullable`1<UnityEngine.XR.ARFoundation.DebugWarn/Message> UnityEngine.XR.ARFoundation.DebugWarn::WhenFalse(System.Boolean)
 extern void DebugWarn_WhenFalse_mB237B44CBD48A72A87AC92F1EF8AB1D77ED16B04 (void);
-// 0x000003A4 System.Void UnityEngine.XR.ARFoundation.DebugWarn/Message::WithMessage(System.String)
+// 0x000003A6 System.Void UnityEngine.XR.ARFoundation.DebugWarn/Message::WithMessage(System.String)
 extern void Message_WithMessage_m549E441878C86CE7103F147EA3D40F02A6A90B2A (void);
-// 0x000003A5 UnityEngine.XR.ARFoundation.CameraFacingDirection UnityEngine.XR.ARFoundation.CameraModeExtensions::ToCameraFacingDirection(UnityEngine.XR.ARSubsystems.Feature)
+// 0x000003A7 UnityEngine.XR.ARFoundation.CameraFacingDirection UnityEngine.XR.ARFoundation.CameraModeExtensions::ToCameraFacingDirection(UnityEngine.XR.ARSubsystems.Feature)
 extern void CameraModeExtensions_ToCameraFacingDirection_m8E51B5C13A99F0BEFD079C78EC5BB33B50FA8859 (void);
-// 0x000003A6 UnityEngine.XR.ARSubsystems.Feature UnityEngine.XR.ARFoundation.CameraModeExtensions::ToFeature(UnityEngine.XR.ARFoundation.CameraFacingDirection)
+// 0x000003A8 UnityEngine.XR.ARSubsystems.Feature UnityEngine.XR.ARFoundation.CameraModeExtensions::ToFeature(UnityEngine.XR.ARFoundation.CameraFacingDirection)
 extern void CameraModeExtensions_ToFeature_m23F0D63646956FBC7B83CDAE946A6B5637429348 (void);
-// 0x000003A7 System.Int32 UnityEngine.XR.ARFoundation.HashCode::Combine(System.Int32,System.Int32)
-extern void HashCode_Combine_mB733DE32A13A557A4EBF6B13881920FACBCD7C8D (void);
-// 0x000003A8 System.Int32 UnityEngine.XR.ARFoundation.HashCode::ReferenceHash(System.Object)
-extern void HashCode_ReferenceHash_m8E89AD422634F94074CADFA2642183BF353D150F (void);
-// 0x000003A9 System.Int32 UnityEngine.XR.ARFoundation.HashCode::Combine(System.Int32,System.Int32,System.Int32)
-extern void HashCode_Combine_mE6B8F1B5170F1B7A7AC2B7EF8BF9739E96CAFB3D (void);
-// 0x000003AA System.Int32 UnityEngine.XR.ARFoundation.HashCode::Combine(System.Int32,System.Int32,System.Int32,System.Int32)
-extern void HashCode_Combine_mD76CDEE1565B93AFF8FDBE56E7C33C971BCB012F (void);
-// 0x000003AB System.Int32 UnityEngine.XR.ARFoundation.HashCode::Combine(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
-extern void HashCode_Combine_m094C794AC42B4F29B053CB401F35B3C4E9149845 (void);
-// 0x000003AC System.Int32 UnityEngine.XR.ARFoundation.HashCode::Combine(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
-extern void HashCode_Combine_mC00505F8D16F39BF52DAA9DBD7102084A12721FE (void);
-// 0x000003AD System.Int32 UnityEngine.XR.ARFoundation.HashCode::Combine(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
-extern void HashCode_Combine_m8D773A1FE69D9B61EC7F4485FCE59010F131E949 (void);
-// 0x000003AE System.Int32 UnityEngine.XR.ARFoundation.HashCode::Combine(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
-extern void HashCode_Combine_m4BEDD10A5E2B4876861EE905BFE9A0B53FC850A0 (void);
-// 0x000003AF Unity.Collections.NativeArray`1<UnityEngine.XR.ARSubsystems.XRRaycastHit> UnityEngine.XR.ARFoundation.IRaycaster::Raycast(UnityEngine.Ray,UnityEngine.XR.ARSubsystems.TrackableType,Unity.Collections.Allocator)
-// 0x000003B0 UnityEngine.XR.ARSubsystems.Feature UnityEngine.XR.ARFoundation.LightEstimationExtensions::ToFeature(UnityEngine.XR.ARFoundation.LightEstimation)
+// 0x000003A9 System.Int32 UnityEngine.XR.ARFoundation.HashCodeUtil::Combine(System.Int32,System.Int32)
+extern void HashCodeUtil_Combine_m25095617A1685F649533B152B93190745C54813E (void);
+// 0x000003AA System.Int32 UnityEngine.XR.ARFoundation.HashCodeUtil::ReferenceHash(System.Object)
+extern void HashCodeUtil_ReferenceHash_m9CB1EDB126F812CF4AF4344FBA6F26D7B64654C6 (void);
+// 0x000003AB System.Int32 UnityEngine.XR.ARFoundation.HashCodeUtil::Combine(System.Int32,System.Int32,System.Int32)
+extern void HashCodeUtil_Combine_mB03802A2DDB8C9A19949B7A43426F441EBE678C1 (void);
+// 0x000003AC System.Int32 UnityEngine.XR.ARFoundation.HashCodeUtil::Combine(System.Int32,System.Int32,System.Int32,System.Int32)
+extern void HashCodeUtil_Combine_m94526982FF5EB45B5FF0377F6A66B2D6FFE70DF8 (void);
+// 0x000003AD System.Int32 UnityEngine.XR.ARFoundation.HashCodeUtil::Combine(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
+extern void HashCodeUtil_Combine_m336E415D3666C336685F55559267E1EA4D0C0D76 (void);
+// 0x000003AE System.Int32 UnityEngine.XR.ARFoundation.HashCodeUtil::Combine(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
+extern void HashCodeUtil_Combine_mBAEC82F0F8A87B534237C4E5BE7DB1026532AAAC (void);
+// 0x000003AF System.Int32 UnityEngine.XR.ARFoundation.HashCodeUtil::Combine(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
+extern void HashCodeUtil_Combine_mB083EE88B5D46273A79A168854C9E9CAE135F895 (void);
+// 0x000003B0 System.Int32 UnityEngine.XR.ARFoundation.HashCodeUtil::Combine(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
+extern void HashCodeUtil_Combine_m95E9477DF696A687442DBC037E62FE2307A57CA8 (void);
+// 0x000003B1 Unity.Collections.NativeArray`1<UnityEngine.XR.ARSubsystems.XRRaycastHit> UnityEngine.XR.ARFoundation.IRaycaster::Raycast(UnityEngine.Ray,UnityEngine.XR.ARSubsystems.TrackableType,Unity.Collections.Allocator)
+// 0x000003B2 UnityEngine.XR.ARSubsystems.Feature UnityEngine.XR.ARFoundation.LightEstimationExtensions::ToFeature(UnityEngine.XR.ARFoundation.LightEstimation)
 extern void LightEstimationExtensions_ToFeature_m1C5B1B4FEBBB441F4481EADD707622E832001A21 (void);
-// 0x000003B1 UnityEngine.XR.ARFoundation.LightEstimation UnityEngine.XR.ARFoundation.LightEstimationExtensions::ToLightEstimation(UnityEngine.XR.ARSubsystems.Feature)
+// 0x000003B3 UnityEngine.XR.ARFoundation.LightEstimation UnityEngine.XR.ARFoundation.LightEstimationExtensions::ToLightEstimation(UnityEngine.XR.ARSubsystems.Feature)
 extern void LightEstimationExtensions_ToLightEstimation_m022B195AB923CE0C82AC347ACDAAAB0635C61228 (void);
-// 0x000003B2 UnityEngine.XR.ARFoundation.LightEstimation UnityEngine.XR.ARFoundation.LightEstimationExtensions::ToLightEstimation(UnityEngine.XR.ARSubsystems.LightEstimationMode)
+// 0x000003B4 UnityEngine.XR.ARFoundation.LightEstimation UnityEngine.XR.ARFoundation.LightEstimationExtensions::ToLightEstimation(UnityEngine.XR.ARSubsystems.LightEstimationMode)
 extern void LightEstimationExtensions_ToLightEstimation_mEBBACE7A3C1DE770BC15FFC56509E1ED90E4089A (void);
-// 0x000003B3 UnityEngine.XR.ARSubsystems.LightEstimationMode UnityEngine.XR.ARFoundation.LightEstimationExtensions::ToLightEstimationMode(UnityEngine.XR.ARFoundation.LightEstimation)
+// 0x000003B5 UnityEngine.XR.ARSubsystems.LightEstimationMode UnityEngine.XR.ARFoundation.LightEstimationExtensions::ToLightEstimationMode(UnityEngine.XR.ARFoundation.LightEstimation)
 extern void LightEstimationExtensions_ToLightEstimationMode_m6BB9187F997F4A42330DB33D5B591B03937A6525 (void);
-// 0x000003B4 UnityEngine.XR.Management.XRLoader UnityEngine.XR.ARFoundation.LoaderUtility::GetActiveLoader()
+// 0x000003B6 UnityEngine.XR.Management.XRLoader UnityEngine.XR.ARFoundation.LoaderUtility::GetActiveLoader()
 extern void LoaderUtility_GetActiveLoader_m114F6434EB97762C6E2E8ABF0EC2D9EFA840D529 (void);
-// 0x000003B5 System.Boolean UnityEngine.XR.ARFoundation.LoaderUtility::Initialize()
+// 0x000003B7 System.Boolean UnityEngine.XR.ARFoundation.LoaderUtility::Initialize()
 extern void LoaderUtility_Initialize_m7A222670A49C1BEC1A572CBDA020370A4B413FAA (void);
-// 0x000003B6 System.Boolean UnityEngine.XR.ARFoundation.LoaderUtility::Deinitialize()
+// 0x000003B8 System.Boolean UnityEngine.XR.ARFoundation.LoaderUtility::Deinitialize()
 extern void LoaderUtility_Deinitialize_m66EC0DF035AFA1B0D929CABB94E6FCDA5C69294A (void);
-// 0x000003B7 System.Int32 UnityEngine.XR.ARFoundation.MeshInfoComparer::Compare(UnityEngine.XR.MeshInfo,UnityEngine.XR.MeshInfo)
+// 0x000003B9 System.Int32 UnityEngine.XR.ARFoundation.MeshInfoComparer::Compare(UnityEngine.XR.MeshInfo,UnityEngine.XR.MeshInfo)
 extern void MeshInfoComparer_Compare_mAB2F68AF9CF8BB1C687F8AAF4C59D83345B5FF07 (void);
-// 0x000003B8 System.Void UnityEngine.XR.ARFoundation.MeshInfoComparer::.ctor()
+// 0x000003BA System.Void UnityEngine.XR.ARFoundation.MeshInfoComparer::.ctor()
 extern void MeshInfoComparer__ctor_m12DF2CFF1FDF87357F91E5D2789FA36ABF42C206 (void);
-// 0x000003B9 System.Void UnityEngine.XR.ARFoundation.MeshQueue::EnqueueUnique(UnityEngine.XR.MeshInfo)
+// 0x000003BB System.Void UnityEngine.XR.ARFoundation.MeshQueue::EnqueueUnique(UnityEngine.XR.MeshInfo)
 extern void MeshQueue_EnqueueUnique_m1AF788AA50D07825F861E041CF74DCD8A3F1A1AC (void);
-// 0x000003BA System.Int32 UnityEngine.XR.ARFoundation.MeshQueue::get_count()
+// 0x000003BC System.Int32 UnityEngine.XR.ARFoundation.MeshQueue::get_count()
 extern void MeshQueue_get_count_mC6E9B46FCAC16C339996626A889AA53C4EDAFA68 (void);
-// 0x000003BB System.Boolean UnityEngine.XR.ARFoundation.MeshQueue::TryDequeue(System.Collections.Generic.IReadOnlyDictionary`2<UnityEngine.XR.MeshId,UnityEngine.XR.MeshInfo>,UnityEngine.XR.MeshInfo&)
+// 0x000003BD System.Boolean UnityEngine.XR.ARFoundation.MeshQueue::TryDequeue(System.Collections.Generic.IReadOnlyDictionary`2<UnityEngine.XR.MeshId,UnityEngine.XR.MeshInfo>,UnityEngine.XR.MeshInfo&)
 extern void MeshQueue_TryDequeue_m76BAB4273296097581EC2089C9A7509A1AF25C71 (void);
-// 0x000003BC System.Boolean UnityEngine.XR.ARFoundation.MeshQueue::Remove(UnityEngine.XR.MeshId)
+// 0x000003BE System.Boolean UnityEngine.XR.ARFoundation.MeshQueue::Remove(UnityEngine.XR.MeshId)
 extern void MeshQueue_Remove_m7A260F342D3A2DBFBFA463B834748016D8976F3D (void);
-// 0x000003BD System.Void UnityEngine.XR.ARFoundation.MeshQueue::InsertNew(UnityEngine.XR.MeshInfo)
+// 0x000003BF System.Void UnityEngine.XR.ARFoundation.MeshQueue::InsertNew(UnityEngine.XR.MeshInfo)
 extern void MeshQueue_InsertNew_mB390E014ECF6EC679EAE14ACE80742DEB709B5A2 (void);
-// 0x000003BE System.Void UnityEngine.XR.ARFoundation.MeshQueue::UpdateExisting(UnityEngine.XR.MeshInfo)
+// 0x000003C0 System.Void UnityEngine.XR.ARFoundation.MeshQueue::UpdateExisting(UnityEngine.XR.MeshInfo)
 extern void MeshQueue_UpdateExisting_m707A12B6614E77760E0392BEC8B8A6602B9FADE5 (void);
-// 0x000003BF System.Void UnityEngine.XR.ARFoundation.MeshQueue::Clear()
+// 0x000003C1 System.Void UnityEngine.XR.ARFoundation.MeshQueue::Clear()
 extern void MeshQueue_Clear_mAFD123B4ACC59CEAE2E0877DD96724A52F5F1639 (void);
-// 0x000003C0 System.Void UnityEngine.XR.ARFoundation.MeshQueue::.ctor()
+// 0x000003C2 System.Void UnityEngine.XR.ARFoundation.MeshQueue::.ctor()
 extern void MeshQueue__ctor_m40618257EFDD8F7EC136BC96AE332094F5FDABFD (void);
-// 0x000003C1 Unity.Jobs.JobHandle UnityEngine.XR.ARFoundation.MutableRuntimeReferenceImageLibraryExtensions::ScheduleAddImageJob(UnityEngine.XR.ARSubsystems.MutableRuntimeReferenceImageLibrary,UnityEngine.Texture2D,System.String,System.Nullable`1<System.Single>,Unity.Jobs.JobHandle)
+// 0x000003C3 Unity.Jobs.JobHandle UnityEngine.XR.ARFoundation.MutableRuntimeReferenceImageLibraryExtensions::ScheduleAddImageJob(UnityEngine.XR.ARSubsystems.MutableRuntimeReferenceImageLibrary,UnityEngine.Texture2D,System.String,System.Nullable`1<System.Single>,Unity.Jobs.JobHandle)
 extern void MutableRuntimeReferenceImageLibraryExtensions_ScheduleAddImageJob_m9FB547116DFE3BA436A0D0BD2416D8842B68BDA9 (void);
-// 0x000003C2 UnityEngine.XR.ARSubsystems.AddReferenceImageJobState UnityEngine.XR.ARFoundation.MutableRuntimeReferenceImageLibraryExtensions::ScheduleAddImageWithValidationJob(UnityEngine.XR.ARSubsystems.MutableRuntimeReferenceImageLibrary,UnityEngine.Texture2D,System.String,System.Nullable`1<System.Single>,Unity.Jobs.JobHandle)
+// 0x000003C4 UnityEngine.XR.ARSubsystems.AddReferenceImageJobState UnityEngine.XR.ARFoundation.MutableRuntimeReferenceImageLibraryExtensions::ScheduleAddImageWithValidationJob(UnityEngine.XR.ARSubsystems.MutableRuntimeReferenceImageLibrary,UnityEngine.Texture2D,System.String,System.Nullable`1<System.Single>,Unity.Jobs.JobHandle)
 extern void MutableRuntimeReferenceImageLibraryExtensions_ScheduleAddImageWithValidationJob_m0A839BEE14803EEA773A9EC09D026D7568AF69C2 (void);
-// 0x000003C3 System.Void UnityEngine.XR.ARFoundation.MutableRuntimeReferenceImageLibraryExtensions/DeallocateJob::Execute()
+// 0x000003C5 System.Void UnityEngine.XR.ARFoundation.MutableRuntimeReferenceImageLibraryExtensions/DeallocateJob::Execute()
 extern void DeallocateJob_Execute_m21D3A3C5F6AFE15484CAFE4E175317A9F38533B1 (void);
-// 0x000003C4 System.Void UnityEngine.XR.ARFoundation.PlaneDetectionModeMaskAttribute::.ctor()
+// 0x000003C6 System.Void UnityEngine.XR.ARFoundation.PlaneDetectionModeMaskAttribute::.ctor()
 extern void PlaneDetectionModeMaskAttribute__ctor_m7D29BF65AB4C7AFAB629A57F74DE67ED29FFEB1C (void);
-// 0x000003C5 UnityEngine.Vector3 UnityEngine.XR.ARFoundation.PoseExtensions::InverseTransformPosition(UnityEngine.Pose,UnityEngine.Vector3)
+// 0x000003C7 UnityEngine.Vector3 UnityEngine.XR.ARFoundation.PoseExtensions::InverseTransformPosition(UnityEngine.Pose,UnityEngine.Vector3)
 extern void PoseExtensions_InverseTransformPosition_m0EA065613D03B0764D5F4268795B6FAF5DF9D37B (void);
-// 0x000003C6 UnityEngine.Vector3 UnityEngine.XR.ARFoundation.PoseExtensions::InverseTransformDirection(UnityEngine.Pose,UnityEngine.Vector3)
+// 0x000003C8 UnityEngine.Vector3 UnityEngine.XR.ARFoundation.PoseExtensions::InverseTransformDirection(UnityEngine.Pose,UnityEngine.Vector3)
 extern void PoseExtensions_InverseTransformDirection_mEFEE02ADD3B00D059F5952FDB837EC7DAE3D8391 (void);
-// 0x000003C7 System.Void UnityEngine.XR.ARFoundation.PoseExtensions::InverseTransformPositions(UnityEngine.Pose,System.Collections.Generic.List`1<UnityEngine.Vector3>)
+// 0x000003C9 System.Void UnityEngine.XR.ARFoundation.PoseExtensions::InverseTransformPositions(UnityEngine.Pose,System.Collections.Generic.List`1<UnityEngine.Vector3>)
 extern void PoseExtensions_InverseTransformPositions_m7B72AA90BCDBC5EEC9251F87E6E2FC9D10E18B2A (void);
-// 0x000003C8 TSubsystem UnityEngine.XR.ARFoundation.SubsystemLifecycleManager`3::get_subsystem()
-// 0x000003C9 System.Void UnityEngine.XR.ARFoundation.SubsystemLifecycleManager`3::set_subsystem(TSubsystem)
-// 0x000003CA TSubsystemDescriptor UnityEngine.XR.ARFoundation.SubsystemLifecycleManager`3::get_descriptor()
-// 0x000003CB TSubsystem UnityEngine.XR.ARFoundation.SubsystemLifecycleManager`3::GetActiveSubsystemInstance()
-// 0x000003CC System.Void UnityEngine.XR.ARFoundation.SubsystemLifecycleManager`3::EnsureSubsystemInstanceSet()
-// 0x000003CD System.Void UnityEngine.XR.ARFoundation.SubsystemLifecycleManager`3::OnEnable()
-// 0x000003CE System.Void UnityEngine.XR.ARFoundation.SubsystemLifecycleManager`3::OnDisable()
-// 0x000003CF System.Void UnityEngine.XR.ARFoundation.SubsystemLifecycleManager`3::OnDestroy()
-// 0x000003D0 System.Void UnityEngine.XR.ARFoundation.SubsystemLifecycleManager`3::OnBeforeStart()
-// 0x000003D1 System.Void UnityEngine.XR.ARFoundation.SubsystemLifecycleManager`3::OnAfterStart()
-// 0x000003D2 System.Void UnityEngine.XR.ARFoundation.SubsystemLifecycleManager`3::.ctor()
-// 0x000003D3 System.Void UnityEngine.XR.ARFoundation.SubsystemLifecycleManager`3::.cctor()
-// 0x000003D4 UnityEngine.XR.ARFoundation.TrackableCollection`1/Enumerator<TTrackable> UnityEngine.XR.ARFoundation.TrackableCollection`1::GetEnumerator()
-// 0x000003D5 System.Void UnityEngine.XR.ARFoundation.TrackableCollection`1::.ctor(System.Collections.Generic.Dictionary`2<UnityEngine.XR.ARSubsystems.TrackableId,TTrackable>)
-// 0x000003D6 System.Int32 UnityEngine.XR.ARFoundation.TrackableCollection`1::get_count()
-// 0x000003D7 TTrackable UnityEngine.XR.ARFoundation.TrackableCollection`1::get_Item(UnityEngine.XR.ARSubsystems.TrackableId)
-// 0x000003D8 System.Int32 UnityEngine.XR.ARFoundation.TrackableCollection`1::GetHashCode()
-// 0x000003D9 System.Boolean UnityEngine.XR.ARFoundation.TrackableCollection`1::Equals(System.Object)
-// 0x000003DA System.Boolean UnityEngine.XR.ARFoundation.TrackableCollection`1::Equals(UnityEngine.XR.ARFoundation.TrackableCollection`1<TTrackable>)
-// 0x000003DB System.Boolean UnityEngine.XR.ARFoundation.TrackableCollection`1::op_Equality(UnityEngine.XR.ARFoundation.TrackableCollection`1<TTrackable>,UnityEngine.XR.ARFoundation.TrackableCollection`1<TTrackable>)
-// 0x000003DC System.Boolean UnityEngine.XR.ARFoundation.TrackableCollection`1::op_Inequality(UnityEngine.XR.ARFoundation.TrackableCollection`1<TTrackable>,UnityEngine.XR.ARFoundation.TrackableCollection`1<TTrackable>)
-// 0x000003DD System.Boolean UnityEngine.XR.ARFoundation.TrackableCollection`1::TryGetTrackable(UnityEngine.XR.ARSubsystems.TrackableId,TTrackable&)
-// 0x000003DE System.Void UnityEngine.XR.ARFoundation.TrackableCollection`1/Enumerator::.ctor(System.Collections.Generic.Dictionary`2<UnityEngine.XR.ARSubsystems.TrackableId,TTrackable>)
-// 0x000003DF System.Boolean UnityEngine.XR.ARFoundation.TrackableCollection`1/Enumerator::MoveNext()
-// 0x000003E0 TTrackable UnityEngine.XR.ARFoundation.TrackableCollection`1/Enumerator::get_Current()
-// 0x000003E1 System.Void UnityEngine.XR.ARFoundation.TrackableCollection`1/Enumerator::Dispose()
-// 0x000003E2 UnityEngine.XR.ARSubsystems.Feature UnityEngine.XR.ARFoundation.TrackingModeExtensions::ToFeature(UnityEngine.XR.ARFoundation.TrackingMode)
+// 0x000003CA TSubsystem UnityEngine.XR.ARFoundation.SubsystemLifecycleManager`3::get_subsystem()
+// 0x000003CB System.Void UnityEngine.XR.ARFoundation.SubsystemLifecycleManager`3::set_subsystem(TSubsystem)
+// 0x000003CC TSubsystemDescriptor UnityEngine.XR.ARFoundation.SubsystemLifecycleManager`3::get_descriptor()
+// 0x000003CD TSubsystem UnityEngine.XR.ARFoundation.SubsystemLifecycleManager`3::GetActiveSubsystemInstance()
+// 0x000003CE System.Void UnityEngine.XR.ARFoundation.SubsystemLifecycleManager`3::EnsureSubsystemInstanceSet()
+// 0x000003CF System.Void UnityEngine.XR.ARFoundation.SubsystemLifecycleManager`3::OnEnable()
+// 0x000003D0 System.Void UnityEngine.XR.ARFoundation.SubsystemLifecycleManager`3::OnDisable()
+// 0x000003D1 System.Void UnityEngine.XR.ARFoundation.SubsystemLifecycleManager`3::OnDestroy()
+// 0x000003D2 System.Void UnityEngine.XR.ARFoundation.SubsystemLifecycleManager`3::OnBeforeStart()
+// 0x000003D3 System.Void UnityEngine.XR.ARFoundation.SubsystemLifecycleManager`3::OnAfterStart()
+// 0x000003D4 System.Void UnityEngine.XR.ARFoundation.SubsystemLifecycleManager`3::.ctor()
+// 0x000003D5 System.Void UnityEngine.XR.ARFoundation.SubsystemLifecycleManager`3::.cctor()
+// 0x000003D6 UnityEngine.XR.ARFoundation.TrackableCollection`1/Enumerator<TTrackable> UnityEngine.XR.ARFoundation.TrackableCollection`1::GetEnumerator()
+// 0x000003D7 System.Void UnityEngine.XR.ARFoundation.TrackableCollection`1::.ctor(System.Collections.Generic.Dictionary`2<UnityEngine.XR.ARSubsystems.TrackableId,TTrackable>)
+// 0x000003D8 System.Int32 UnityEngine.XR.ARFoundation.TrackableCollection`1::get_count()
+// 0x000003D9 TTrackable UnityEngine.XR.ARFoundation.TrackableCollection`1::get_Item(UnityEngine.XR.ARSubsystems.TrackableId)
+// 0x000003DA System.Int32 UnityEngine.XR.ARFoundation.TrackableCollection`1::GetHashCode()
+// 0x000003DB System.Boolean UnityEngine.XR.ARFoundation.TrackableCollection`1::Equals(System.Object)
+// 0x000003DC System.Boolean UnityEngine.XR.ARFoundation.TrackableCollection`1::Equals(UnityEngine.XR.ARFoundation.TrackableCollection`1<TTrackable>)
+// 0x000003DD System.Boolean UnityEngine.XR.ARFoundation.TrackableCollection`1::op_Equality(UnityEngine.XR.ARFoundation.TrackableCollection`1<TTrackable>,UnityEngine.XR.ARFoundation.TrackableCollection`1<TTrackable>)
+// 0x000003DE System.Boolean UnityEngine.XR.ARFoundation.TrackableCollection`1::op_Inequality(UnityEngine.XR.ARFoundation.TrackableCollection`1<TTrackable>,UnityEngine.XR.ARFoundation.TrackableCollection`1<TTrackable>)
+// 0x000003DF System.Boolean UnityEngine.XR.ARFoundation.TrackableCollection`1::TryGetTrackable(UnityEngine.XR.ARSubsystems.TrackableId,TTrackable&)
+// 0x000003E0 System.Void UnityEngine.XR.ARFoundation.TrackableCollection`1/Enumerator::.ctor(System.Collections.Generic.Dictionary`2<UnityEngine.XR.ARSubsystems.TrackableId,TTrackable>)
+// 0x000003E1 System.Boolean UnityEngine.XR.ARFoundation.TrackableCollection`1/Enumerator::MoveNext()
+// 0x000003E2 TTrackable UnityEngine.XR.ARFoundation.TrackableCollection`1/Enumerator::get_Current()
+// 0x000003E3 System.Void UnityEngine.XR.ARFoundation.TrackableCollection`1/Enumerator::Dispose()
+// 0x000003E4 UnityEngine.XR.ARSubsystems.Feature UnityEngine.XR.ARFoundation.TrackingModeExtensions::ToFeature(UnityEngine.XR.ARFoundation.TrackingMode)
 extern void TrackingModeExtensions_ToFeature_mC09F4526E4C8B7459305E10902A0698F8AD3F1BD (void);
-// 0x000003E3 UnityEngine.XR.ARFoundation.TrackingMode UnityEngine.XR.ARFoundation.TrackingModeExtensions::ToTrackingMode(UnityEngine.XR.ARSubsystems.Feature)
+// 0x000003E5 UnityEngine.XR.ARFoundation.TrackingMode UnityEngine.XR.ARFoundation.TrackingModeExtensions::ToTrackingMode(UnityEngine.XR.ARSubsystems.Feature)
 extern void TrackingModeExtensions_ToTrackingMode_m1AD1AC6E4580B57E09536930C4A107E61CB8912E (void);
-// 0x000003E4 UnityEngine.Ray UnityEngine.XR.ARFoundation.TransformExtensions::TransformRay(UnityEngine.Transform,UnityEngine.Ray)
+// 0x000003E6 UnityEngine.Ray UnityEngine.XR.ARFoundation.TransformExtensions::TransformRay(UnityEngine.Transform,UnityEngine.Ray)
 extern void TransformExtensions_TransformRay_mF980E6B805526F947D00C94FD1E354D20B987409 (void);
-// 0x000003E5 UnityEngine.Ray UnityEngine.XR.ARFoundation.TransformExtensions::InverseTransformRay(UnityEngine.Transform,UnityEngine.Ray)
+// 0x000003E7 UnityEngine.Ray UnityEngine.XR.ARFoundation.TransformExtensions::InverseTransformRay(UnityEngine.Transform,UnityEngine.Ray)
 extern void TransformExtensions_InverseTransformRay_m6C3083362DA474AF08321E73612E373771E5CA3A (void);
-// 0x000003E6 UnityEngine.Pose UnityEngine.XR.ARFoundation.TransformExtensions::TransformPose(UnityEngine.Transform,UnityEngine.Pose)
+// 0x000003E8 UnityEngine.Pose UnityEngine.XR.ARFoundation.TransformExtensions::TransformPose(UnityEngine.Transform,UnityEngine.Pose)
 extern void TransformExtensions_TransformPose_mD57F5882BD08CAFB48396780B469DA938E816A4B (void);
-// 0x000003E7 UnityEngine.Pose UnityEngine.XR.ARFoundation.TransformExtensions::InverseTransformPose(UnityEngine.Transform,UnityEngine.Pose)
+// 0x000003E9 UnityEngine.Pose UnityEngine.XR.ARFoundation.TransformExtensions::InverseTransformPose(UnityEngine.Transform,UnityEngine.Pose)
 extern void TransformExtensions_InverseTransformPose_m6143382A59744E50CB53B9718F8F21B18C692E4C (void);
-// 0x000003E8 System.Void UnityEngine.XR.ARFoundation.TransformExtensions::TransformPointList(UnityEngine.Transform,System.Collections.Generic.List`1<UnityEngine.Vector3>)
+// 0x000003EA System.Void UnityEngine.XR.ARFoundation.TransformExtensions::TransformPointList(UnityEngine.Transform,System.Collections.Generic.List`1<UnityEngine.Vector3>)
 extern void TransformExtensions_TransformPointList_m71D8C911521ACC540F5FF7FDCB8566D3AF1B89E3 (void);
-// 0x000003E9 System.Void UnityEngine.XR.ARFoundation.TransformExtensions::InverseTransformPointList(UnityEngine.Transform,System.Collections.Generic.List`1<UnityEngine.Vector3>)
+// 0x000003EB System.Void UnityEngine.XR.ARFoundation.TransformExtensions::InverseTransformPointList(UnityEngine.Transform,System.Collections.Generic.List`1<UnityEngine.Vector3>)
 extern void TransformExtensions_InverseTransformPointList_mD5CC3E6F146DE3DAF95FE2C8BFAE97284F746A8B (void);
-// 0x000003EA System.Void UnityEngine.XR.ARFoundation.TransformExtensions::SetLayerRecursively(UnityEngine.Transform,System.Int32)
+// 0x000003EC System.Void UnityEngine.XR.ARFoundation.TransformExtensions::SetLayerRecursively(UnityEngine.Transform,System.Int32)
 extern void TransformExtensions_SetLayerRecursively_mCB82F6FE7144E5AF8A38B97B05EB8DCC3D25ACF6 (void);
-static Il2CppMethodPointer s_methodPointers[1002] = 
+static Il2CppMethodPointer s_methodPointers[1004] = 
 {
 	EmbeddedAttribute__ctor_m6817CAA1F51E9FD5490289193CAC1B2604F9737B,
 	IsReadOnlyAttribute__ctor_m100DAF27CB32D081F71B1821014FFE215D7EC8A8,
@@ -2391,6 +2395,8 @@ static Il2CppMethodPointer s_methodPointers[1002] =
 	AROcclusionManager_TryAcquireHumanDepthCpuImage_mA91B236DA5A411481704DE75BA6307B9229B96A3,
 	AROcclusionManager_get_environmentDepthTexture_mA34DEA652AEB27CE366DACD93FB88971F60BB87C,
 	AROcclusionManager_TryAcquireEnvironmentDepthCpuImage_m2B4EB51F4466225FBC1F906CF4617F3B761CAE06,
+	AROcclusionManager_TryAcquireRawEnvironmentDepthCpuImage_m2BFE53594A678531D03758D4EB2B4FC7E38B1C7C,
+	AROcclusionManager_TryAcquireSmoothedEnvironmentDepthCpuImage_m869197DE3690D4576E4D10EAA83D841CC86A0E82,
 	AROcclusionManager_OnBeforeStart_m9FD2013EB16306C2210CD87B8C1E6F172197FAAE,
 	AROcclusionManager_OnDisable_mADE02A9F7F40229D1BAD066CD7CFC83F4F8628DC,
 	AROcclusionManager_Update_m2B2EA8E3B2DF77A247B4AFFFB0A53710831ECE57,
@@ -2879,14 +2885,14 @@ static Il2CppMethodPointer s_methodPointers[1002] =
 	Message_WithMessage_m549E441878C86CE7103F147EA3D40F02A6A90B2A,
 	CameraModeExtensions_ToCameraFacingDirection_m8E51B5C13A99F0BEFD079C78EC5BB33B50FA8859,
 	CameraModeExtensions_ToFeature_m23F0D63646956FBC7B83CDAE946A6B5637429348,
-	HashCode_Combine_mB733DE32A13A557A4EBF6B13881920FACBCD7C8D,
-	HashCode_ReferenceHash_m8E89AD422634F94074CADFA2642183BF353D150F,
-	HashCode_Combine_mE6B8F1B5170F1B7A7AC2B7EF8BF9739E96CAFB3D,
-	HashCode_Combine_mD76CDEE1565B93AFF8FDBE56E7C33C971BCB012F,
-	HashCode_Combine_m094C794AC42B4F29B053CB401F35B3C4E9149845,
-	HashCode_Combine_mC00505F8D16F39BF52DAA9DBD7102084A12721FE,
-	HashCode_Combine_m8D773A1FE69D9B61EC7F4485FCE59010F131E949,
-	HashCode_Combine_m4BEDD10A5E2B4876861EE905BFE9A0B53FC850A0,
+	HashCodeUtil_Combine_m25095617A1685F649533B152B93190745C54813E,
+	HashCodeUtil_ReferenceHash_m9CB1EDB126F812CF4AF4344FBA6F26D7B64654C6,
+	HashCodeUtil_Combine_mB03802A2DDB8C9A19949B7A43426F441EBE678C1,
+	HashCodeUtil_Combine_m94526982FF5EB45B5FF0377F6A66B2D6FFE70DF8,
+	HashCodeUtil_Combine_m336E415D3666C336685F55559267E1EA4D0C0D76,
+	HashCodeUtil_Combine_mBAEC82F0F8A87B534237C4E5BE7DB1026532AAAC,
+	HashCodeUtil_Combine_mB083EE88B5D46273A79A168854C9E9CAE135F895,
+	HashCodeUtil_Combine_m95E9477DF696A687442DBC037E62FE2307A57CA8,
 	NULL,
 	LightEstimationExtensions_ToFeature_m1C5B1B4FEBBB441F4481EADD707622E832001A21,
 	LightEstimationExtensions_ToLightEstimation_m022B195AB923CE0C82AC347ACDAAAB0635C61228,
@@ -3320,1133 +3326,1135 @@ static Il2CppTokenAdjustorThunkPair s_adjustorThunks[246] =
 	{ 0x0600019D, AROcclusionFrameEventArgs_GetHashCode_m1913E728DBD265D04FB2EDE098415C99EAC1871D_AdjustorThunk },
 	{ 0x0600019E, AROcclusionFrameEventArgs_Equals_m2E78D2E5177E8F2F3D240859E9A421DE2429B49A_AdjustorThunk },
 	{ 0x0600019F, AROcclusionFrameEventArgs_Equals_m99B05A140BC2607BD489137504826B37ABE6A0E9_AdjustorThunk },
-	{ 0x060001D2, ARParticipantsChangedEventArgs_get_added_mD333BCC5C7ED052F0F5D44CEC2C2FD5124FED402_AdjustorThunk },
-	{ 0x060001D3, ARParticipantsChangedEventArgs_set_added_m11867D0CD2EBAAE3EE7101B7DB4863E9A95A2925_AdjustorThunk },
-	{ 0x060001D4, ARParticipantsChangedEventArgs_get_updated_m38E09FF31C8F56EA5140176ACA50B7E08B79C18C_AdjustorThunk },
-	{ 0x060001D5, ARParticipantsChangedEventArgs_set_updated_m4DEC3E74DDB4E06FD12B2EB28FAF23BFA9A0BC1A_AdjustorThunk },
-	{ 0x060001D6, ARParticipantsChangedEventArgs_get_removed_mC3785153DD817F19DE22C00E4DF6953029682BE4_AdjustorThunk },
-	{ 0x060001D7, ARParticipantsChangedEventArgs_set_removed_m4AFD915D6EA0D3DEE200D97329DADE2D8E10EA00_AdjustorThunk },
-	{ 0x060001D8, ARParticipantsChangedEventArgs__ctor_m4909FDA4B70F723C388938457EDE226B6AD43832_AdjustorThunk },
-	{ 0x060001D9, ARParticipantsChangedEventArgs_GetHashCode_m07F68F2573530351859BD586DC469F916A0181E1_AdjustorThunk },
-	{ 0x060001DA, ARParticipantsChangedEventArgs_Equals_m973121711815026231005C4C74DCBEBB2D97E9CF_AdjustorThunk },
-	{ 0x060001DB, ARParticipantsChangedEventArgs_GetCount_mDF83CAB2FB042E3CADDE1D3B4953042479E17431_AdjustorThunk },
-	{ 0x060001DC, ARParticipantsChangedEventArgs_ToString_m91290FCC8E69031D406BAEA0522B8A4F7AFACA31_AdjustorThunk },
-	{ 0x060001DD, ARParticipantsChangedEventArgs_Equals_m454F06745844D7EF4BA9214E72ED1B8CF553F336_AdjustorThunk },
-	{ 0x060001F7, ARPlaneBoundaryChangedEventArgs_get_plane_mC91E64413E8593C0137A7C47485A1238180932A5_AdjustorThunk },
-	{ 0x060001F8, ARPlaneBoundaryChangedEventArgs_set_plane_mEDFCCE4100F4480E53F3EE12F4F89DB7054AE6D4_AdjustorThunk },
-	{ 0x060001F9, ARPlaneBoundaryChangedEventArgs__ctor_mCD138E5FFD74678A29B6A494550C428AE7344678_AdjustorThunk },
-	{ 0x060001FA, ARPlaneBoundaryChangedEventArgs_GetHashCode_m01011EEB2FAD823382934CDF5710CE259A212EB4_AdjustorThunk },
-	{ 0x060001FB, ARPlaneBoundaryChangedEventArgs_Equals_m9BBA8DDF067E8DC0BB0956C0BD4FF95B78C9DA1B_AdjustorThunk },
-	{ 0x060001FC, ARPlaneBoundaryChangedEventArgs_ToString_mB9D8B3B3DD1965A75E8CBE0F1133DA0C4310D28F_AdjustorThunk },
-	{ 0x060001FD, ARPlaneBoundaryChangedEventArgs_Equals_m8FCE506D26E362A259FD1E260648E9FA5C07B91D_AdjustorThunk },
-	{ 0x06000229, ARPlanesChangedEventArgs_get_added_mD0CA0FB88C9F669580ED4BE0C9A3DA6E1333DA07_AdjustorThunk },
-	{ 0x0600022A, ARPlanesChangedEventArgs_set_added_mADE2BA0CDD14711F3576C51A04BC0A06CC4F0C37_AdjustorThunk },
-	{ 0x0600022B, ARPlanesChangedEventArgs_get_updated_m1EB6B86313D75F78C287B67BF2EA7A03468BB48E_AdjustorThunk },
-	{ 0x0600022C, ARPlanesChangedEventArgs_set_updated_m186CC3DF36E1B28FE2B7CFB2F9C56E638C4A4F26_AdjustorThunk },
-	{ 0x0600022D, ARPlanesChangedEventArgs_get_removed_m771596586A99FE5593EF16233E7F3BA3603E0927_AdjustorThunk },
-	{ 0x0600022E, ARPlanesChangedEventArgs_set_removed_mE2BE624B870142F492E01AB6328B4D74E575228A_AdjustorThunk },
-	{ 0x0600022F, ARPlanesChangedEventArgs__ctor_mE0D81BC682849CEF4267F2466246A42A451D7D3A_AdjustorThunk },
-	{ 0x06000230, ARPlanesChangedEventArgs_GetHashCode_m80CECC92973BF7AC233A66E338DFE888901E8C7F_AdjustorThunk },
-	{ 0x06000231, ARPlanesChangedEventArgs_Equals_m6EE7772274DE47C25AB57E32C1B4C0FAC78B48BF_AdjustorThunk },
-	{ 0x06000232, ARPlanesChangedEventArgs_ToString_m0175F0496B86842A452179E194FEAB0FC61A5D3E_AdjustorThunk },
-	{ 0x06000233, ARPlanesChangedEventArgs_Equals_mCB86F0483BA241F16D592B63E2DA15F7DA74778C_AdjustorThunk },
-	{ 0x0600023F, ARPointCloudChangedEventArgs_get_added_m0C729336F6976A90A2324B4F937D76FB15F782AA_AdjustorThunk },
-	{ 0x06000240, ARPointCloudChangedEventArgs_set_added_m0ACF28F28D87F4F85AEF9D5A25ADBBF144011F56_AdjustorThunk },
-	{ 0x06000241, ARPointCloudChangedEventArgs_get_updated_m805F77090DDD98DCE09440655C45F6AE0117E17B_AdjustorThunk },
-	{ 0x06000242, ARPointCloudChangedEventArgs_set_updated_m4253DD3BADEE6D38F8D354E8203BC406EE762438_AdjustorThunk },
-	{ 0x06000243, ARPointCloudChangedEventArgs_get_removed_mDC85041E76FE7146152B633D6610843BA6951BE7_AdjustorThunk },
-	{ 0x06000244, ARPointCloudChangedEventArgs_set_removed_mD2D666C6988100036A84B13FC862159E02660B81_AdjustorThunk },
-	{ 0x06000245, ARPointCloudChangedEventArgs__ctor_m25C6F7F51596A783BD19258369C7B8EF105B34A4_AdjustorThunk },
-	{ 0x06000246, ARPointCloudChangedEventArgs_GetHashCode_m32203B5DF16FF47E3E30446484E389CCFDD1C231_AdjustorThunk },
-	{ 0x06000247, ARPointCloudChangedEventArgs_Equals_mF94BA249FB1E976B119BADBE25C141FFE373156D_AdjustorThunk },
-	{ 0x06000248, ARPointCloudChangedEventArgs_ToString_m956CA728D5F129C57ED4DE1E125B5513510C2589_AdjustorThunk },
-	{ 0x06000249, ARPointCloudChangedEventArgs_Equals_mD36FBE917CA6DE75C0237040C98457ACF89A4A59_AdjustorThunk },
-	{ 0x06000259, PointCloudRaycastJob_Execute_mB6A41993F9C4A8539D0B50BF36CAD134941D542C_AdjustorThunk },
-	{ 0x0600025A, PointCloudRaycastCollectResultsJob_Execute_m8A9931AC6417DF29437C9DD8DA28775F9FC45EED_AdjustorThunk },
-	{ 0x0600026F, ARPointCloudUpdatedEventArgs_GetHashCode_m79A55AAB09CF20D3058EDF108535D5A7AF7E7CB4_AdjustorThunk },
-	{ 0x06000270, ARPointCloudUpdatedEventArgs_Equals_m93CD6A765B5A6204C630884EDB8B5AFA6E1AA077_AdjustorThunk },
-	{ 0x06000271, ARPointCloudUpdatedEventArgs_Equals_m85EFAABDF7E3FCBACB7AD805302ABAC6BF2000F7_AdjustorThunk },
-	{ 0x06000287, ARRaycastHit__ctor_m56557E9D81A233D19CF3E91EC3F31D3B81595F99_AdjustorThunk },
-	{ 0x06000288, ARRaycastHit__ctor_mC7110E7B31FCC610B0D6AF62CBF4BDCD33751C09_AdjustorThunk },
-	{ 0x06000289, ARRaycastHit_get_distance_mED96EC43E8D177E5B912822DD5566A543BF995AB_AdjustorThunk },
-	{ 0x0600028A, ARRaycastHit_get_hitType_m2932A3519CC493BB074A0CD73DAACD79643545D1_AdjustorThunk },
-	{ 0x0600028B, ARRaycastHit_get_pose_mB4D8BC45F23D9F2C2C8DCAFA88DB1221D76EF02B_AdjustorThunk },
-	{ 0x0600028C, ARRaycastHit_get_trackableId_mCC2447AD8425B92F2E25E74812D6F50DE588D16A_AdjustorThunk },
-	{ 0x0600028D, ARRaycastHit_get_sessionRelativePose_m496222B38CDAA9D976ECAFA7CE7ED77CA9E37DBA_AdjustorThunk },
-	{ 0x0600028E, ARRaycastHit_get_sessionRelativeDistance_mAB451E73F54C60BF566269EE61D6A6FC22F4C524_AdjustorThunk },
-	{ 0x0600028F, ARRaycastHit_get_trackable_m0A2E4A67B074ACA0021869D6D8930D34A85F1D79_AdjustorThunk },
-	{ 0x06000290, ARRaycastHit_GetHashCode_m659BE91F4F0039B4C81562344E13B9BB4454BE85_AdjustorThunk },
-	{ 0x06000291, ARRaycastHit_Equals_m10EB8CE2C048C4C1FF0254C69C376B16553577E6_AdjustorThunk },
-	{ 0x06000292, ARRaycastHit_Equals_m75D93284E7D73EDEF82038FA2C0BA7543DBF088D_AdjustorThunk },
-	{ 0x06000295, ARRaycastHit_CompareTo_m3B3E66B95BFC5CF7099F910BAAC6823403755514_AdjustorThunk },
-	{ 0x060002AB, ARRaycastUpdatedEventArgs_get_raycast_m0609B624800A5388048A79B439B4B38F5F2A885F_AdjustorThunk },
-	{ 0x060002AC, ARRaycastUpdatedEventArgs_set_raycast_m7BE3386FAFCA2682E4B8ADDAAD3B0861CF7B6199_AdjustorThunk },
-	{ 0x060002AD, ARRaycastUpdatedEventArgs_Equals_m99C427C07FE659083820EF17D021D78BBE7E0B86_AdjustorThunk },
-	{ 0x060002AE, ARRaycastUpdatedEventArgs_Equals_mAD79322F0D5530018B97925A99B19352DEB5A2F8_AdjustorThunk },
-	{ 0x060002AF, ARRaycastUpdatedEventArgs_GetHashCode_mE8AEACE0EA29276661BD1CF7E212E3652833044F_AdjustorThunk },
-	{ 0x060002C1, ARReferencePointsChangedEventArgs_get_added_mB5391CD21E5E0AAF6441732E418F6B4F743BA654_AdjustorThunk },
-	{ 0x060002C2, ARReferencePointsChangedEventArgs_set_added_mE19E6138767F7CFBFCD0EC1FB2D1D8ABA2355079_AdjustorThunk },
-	{ 0x060002C3, ARReferencePointsChangedEventArgs_get_updated_mFE6795D2A4133523DFB5610DD381A23084A14932_AdjustorThunk },
-	{ 0x060002C4, ARReferencePointsChangedEventArgs_set_updated_m33BF9ECA005FF50F1253618A94E75313C5E8419A_AdjustorThunk },
-	{ 0x060002C5, ARReferencePointsChangedEventArgs_get_removed_m852B8F1536DEDFDEB059B8C87C86D30ADDF4890E_AdjustorThunk },
-	{ 0x060002C6, ARReferencePointsChangedEventArgs_set_removed_mB84B74719F47B759C903FBECCFECF2F4376140FA_AdjustorThunk },
-	{ 0x060002C7, ARReferencePointsChangedEventArgs__ctor_m4DC8ED8A0352F7EFD78D548B539BBCB0E8442FEB_AdjustorThunk },
-	{ 0x060002C8, ARReferencePointsChangedEventArgs_GetHashCode_m27D4A6BF13AF37076D32EB3D785549E5A543302C_AdjustorThunk },
-	{ 0x060002C9, ARReferencePointsChangedEventArgs_Equals_m97EEF4D1487E424CFF7CB753A0FD0ECA92DDED67_AdjustorThunk },
-	{ 0x060002CA, ARReferencePointsChangedEventArgs_ToString_m867931BA4F884F5991CF89BFB5F675A5244C4408_AdjustorThunk },
-	{ 0x060002CB, ARReferencePointsChangedEventArgs_Equals_mFF8C64B924D17EC288663CFBC092CC060650CA0A_AdjustorThunk },
-	{ 0x06000310, ARSessionStateChangedEventArgs_get_state_mDFCCADECEFE9356E4246B9BF912157F3EDD88796_AdjustorThunk },
-	{ 0x06000311, ARSessionStateChangedEventArgs_set_state_mA9AB6CBFCAD476EC94E3642F5638BCC11B4A4B95_AdjustorThunk },
-	{ 0x06000312, ARSessionStateChangedEventArgs__ctor_m6001FA2930CF6A8551451A20129E7827738E0AA9_AdjustorThunk },
-	{ 0x06000313, ARSessionStateChangedEventArgs_GetHashCode_m00DDAFEED0CA796E059FBB5845B62DA16DA90BFF_AdjustorThunk },
-	{ 0x06000314, ARSessionStateChangedEventArgs_Equals_m55B6A7D08E747098F36B59A6B3CAA8DB392E3454_AdjustorThunk },
-	{ 0x06000315, ARSessionStateChangedEventArgs_ToString_m415BD73E732AE375F1BDF0990604D5FA0DD87A44_AdjustorThunk },
-	{ 0x06000316, ARSessionStateChangedEventArgs_Equals_mC4C56CAF33303BA032420A206F358AE4AEF4181A_AdjustorThunk },
-	{ 0x06000319, ARTextureInfo_get_descriptor_m65509D502D7CC1BB6000A68A083260BAA269D188_AdjustorThunk },
-	{ 0x0600031A, ARTextureInfo_get_texture_m80E0A3E680A44DFA464736B5097AEAC460E03272_AdjustorThunk },
-	{ 0x0600031B, ARTextureInfo__ctor_mD41AC4E8F74111EA21E817750F971494A75BC9C6_AdjustorThunk },
-	{ 0x0600031C, ARTextureInfo_Reset_m377A147E742F6A52B1E3266FC70039F57B780CC5_AdjustorThunk },
-	{ 0x0600031D, ARTextureInfo_DestroyTexture_m843206A816FB81650629A5CECE2DB72F5E4B3A67_AdjustorThunk },
-	{ 0x06000321, ARTextureInfo_Dispose_m5EEEAC94FEF213603964F7CBD128201BCD9773E8_AdjustorThunk },
-	{ 0x06000322, ARTextureInfo_GetHashCode_mA38759BD69BD26A415464560D4AE6C36E6AF840D_AdjustorThunk },
-	{ 0x06000323, ARTextureInfo_Equals_mFA8520D4C622DEF292877840C73A87254E199C1C_AdjustorThunk },
-	{ 0x06000324, ARTextureInfo_Equals_m5912700F9441EE220F72E859EDF747F162A2C9BB_AdjustorThunk },
-	{ 0x06000353, ARTrackablesParentTransformChangedEventArgs_get_sessionOrigin_m4A650B7FFE29FC40DA7781843DF2AE744108FBBA_AdjustorThunk },
-	{ 0x06000354, ARTrackablesParentTransformChangedEventArgs_get_trackablesParent_m996D495C51CD1A26A40FB44EF841E824EF87711E_AdjustorThunk },
-	{ 0x06000355, ARTrackablesParentTransformChangedEventArgs__ctor_m45E72BC55106F4DFE8E9DBC77C2D33213203B2B6_AdjustorThunk },
-	{ 0x06000356, ARTrackablesParentTransformChangedEventArgs_Equals_mEFECB01DA6949C437802A4E65FFC803FD0BBA603_AdjustorThunk },
-	{ 0x06000357, ARTrackablesParentTransformChangedEventArgs_Equals_m31CF1D718EFE540CACA9C601CA7B9E2666AA2361_AdjustorThunk },
-	{ 0x06000358, ARTrackablesParentTransformChangedEventArgs_GetHashCode_mCC1795A3F585FA0C88849C76D602A0B7F6A0F620_AdjustorThunk },
-	{ 0x06000376, ARTrackedImagesChangedEventArgs_get_added_m0E81E3C161242C2508B90BCC73605F551AD53B4E_AdjustorThunk },
-	{ 0x06000377, ARTrackedImagesChangedEventArgs_set_added_mCD60C22D4583687683AE015E8A1A020C6AB3C483_AdjustorThunk },
-	{ 0x06000378, ARTrackedImagesChangedEventArgs_get_updated_mBEB295B97B6C25E4DC4447383F529C9E475E4041_AdjustorThunk },
-	{ 0x06000379, ARTrackedImagesChangedEventArgs_set_updated_m9E648CAEC117BCEA4B6F04019EE298E67FEAF767_AdjustorThunk },
-	{ 0x0600037A, ARTrackedImagesChangedEventArgs_get_removed_mF4C9906743C7270B1AAD4B43E74CDB9CB5208E57_AdjustorThunk },
-	{ 0x0600037B, ARTrackedImagesChangedEventArgs_set_removed_m0E5F3A92E5B2BCF31D158AB8917713A3D9622509_AdjustorThunk },
-	{ 0x0600037C, ARTrackedImagesChangedEventArgs__ctor_mF538DBD6FD3B449C7B1B58F2DDD5376F77BAD0C7_AdjustorThunk },
-	{ 0x0600037D, ARTrackedImagesChangedEventArgs_GetHashCode_mAD9F7F4F2B5AC26FBEFE6DAF62BCF2D8F0C1535A_AdjustorThunk },
-	{ 0x0600037E, ARTrackedImagesChangedEventArgs_Equals_mA71A641FE4371366C134DDB0DC89904137B578E6_AdjustorThunk },
-	{ 0x0600037F, ARTrackedImagesChangedEventArgs_ToString_mFB33AA8A3812346B39B9C36A39D9F2E4ACC84645_AdjustorThunk },
-	{ 0x06000380, ARTrackedImagesChangedEventArgs_Equals_m941D158F4DA8F60409203BF41E42EBFDDAECEC40_AdjustorThunk },
-	{ 0x06000394, ARTrackedObjectsChangedEventArgs_get_added_m747A90E293DEDF1EB53AFB6BB3483AC65E79060D_AdjustorThunk },
-	{ 0x06000395, ARTrackedObjectsChangedEventArgs_set_added_m0A6EBB4060BFAFBCE4FD8CFAB7650B0B6734D361_AdjustorThunk },
-	{ 0x06000396, ARTrackedObjectsChangedEventArgs_get_updated_m25103ACF74EDC4CC13A65CE841EB0B4BA2EC6CD7_AdjustorThunk },
-	{ 0x06000397, ARTrackedObjectsChangedEventArgs_set_updated_m0AD11C04AFD0D9177732ADBAB6F4BA90A81ECEB0_AdjustorThunk },
-	{ 0x06000398, ARTrackedObjectsChangedEventArgs_get_removed_m5E38CAEC4F21B15878F4D4EB5490FED57D95446D_AdjustorThunk },
-	{ 0x06000399, ARTrackedObjectsChangedEventArgs_set_removed_m4C04A88DEE026C11913F1C3B34CAC84EDEB50D35_AdjustorThunk },
-	{ 0x0600039A, ARTrackedObjectsChangedEventArgs__ctor_mA48B5A6AC353009C41A5391BBF56A910A74C53D1_AdjustorThunk },
-	{ 0x0600039B, ARTrackedObjectsChangedEventArgs_GetHashCode_m84328982CB55137A773B038431287350CE36EF31_AdjustorThunk },
-	{ 0x0600039C, ARTrackedObjectsChangedEventArgs_Equals_m238B5491E5A062C6A577FFF46F963B13E4E61E60_AdjustorThunk },
-	{ 0x0600039D, ARTrackedObjectsChangedEventArgs_ToString_mD4FF710D115521BAE99BB835BC0396A47725D3A0_AdjustorThunk },
-	{ 0x0600039E, ARTrackedObjectsChangedEventArgs_Equals_mB776FE4552F4F0C8E08C390C87AF45A2E0904E70_AdjustorThunk },
-	{ 0x060003A2, Message_WithMessage_m08C475B239B69D3D84E6C75858C21CECAC023D90_AdjustorThunk },
-	{ 0x060003A4, Message_WithMessage_m549E441878C86CE7103F147EA3D40F02A6A90B2A_AdjustorThunk },
-	{ 0x060003C3, DeallocateJob_Execute_m21D3A3C5F6AFE15484CAFE4E175317A9F38533B1_AdjustorThunk },
+	{ 0x060001D4, ARParticipantsChangedEventArgs_get_added_mD333BCC5C7ED052F0F5D44CEC2C2FD5124FED402_AdjustorThunk },
+	{ 0x060001D5, ARParticipantsChangedEventArgs_set_added_m11867D0CD2EBAAE3EE7101B7DB4863E9A95A2925_AdjustorThunk },
+	{ 0x060001D6, ARParticipantsChangedEventArgs_get_updated_m38E09FF31C8F56EA5140176ACA50B7E08B79C18C_AdjustorThunk },
+	{ 0x060001D7, ARParticipantsChangedEventArgs_set_updated_m4DEC3E74DDB4E06FD12B2EB28FAF23BFA9A0BC1A_AdjustorThunk },
+	{ 0x060001D8, ARParticipantsChangedEventArgs_get_removed_mC3785153DD817F19DE22C00E4DF6953029682BE4_AdjustorThunk },
+	{ 0x060001D9, ARParticipantsChangedEventArgs_set_removed_m4AFD915D6EA0D3DEE200D97329DADE2D8E10EA00_AdjustorThunk },
+	{ 0x060001DA, ARParticipantsChangedEventArgs__ctor_m4909FDA4B70F723C388938457EDE226B6AD43832_AdjustorThunk },
+	{ 0x060001DB, ARParticipantsChangedEventArgs_GetHashCode_m07F68F2573530351859BD586DC469F916A0181E1_AdjustorThunk },
+	{ 0x060001DC, ARParticipantsChangedEventArgs_Equals_m973121711815026231005C4C74DCBEBB2D97E9CF_AdjustorThunk },
+	{ 0x060001DD, ARParticipantsChangedEventArgs_GetCount_mDF83CAB2FB042E3CADDE1D3B4953042479E17431_AdjustorThunk },
+	{ 0x060001DE, ARParticipantsChangedEventArgs_ToString_m91290FCC8E69031D406BAEA0522B8A4F7AFACA31_AdjustorThunk },
+	{ 0x060001DF, ARParticipantsChangedEventArgs_Equals_m454F06745844D7EF4BA9214E72ED1B8CF553F336_AdjustorThunk },
+	{ 0x060001F9, ARPlaneBoundaryChangedEventArgs_get_plane_mC91E64413E8593C0137A7C47485A1238180932A5_AdjustorThunk },
+	{ 0x060001FA, ARPlaneBoundaryChangedEventArgs_set_plane_mEDFCCE4100F4480E53F3EE12F4F89DB7054AE6D4_AdjustorThunk },
+	{ 0x060001FB, ARPlaneBoundaryChangedEventArgs__ctor_mCD138E5FFD74678A29B6A494550C428AE7344678_AdjustorThunk },
+	{ 0x060001FC, ARPlaneBoundaryChangedEventArgs_GetHashCode_m01011EEB2FAD823382934CDF5710CE259A212EB4_AdjustorThunk },
+	{ 0x060001FD, ARPlaneBoundaryChangedEventArgs_Equals_m9BBA8DDF067E8DC0BB0956C0BD4FF95B78C9DA1B_AdjustorThunk },
+	{ 0x060001FE, ARPlaneBoundaryChangedEventArgs_ToString_mB9D8B3B3DD1965A75E8CBE0F1133DA0C4310D28F_AdjustorThunk },
+	{ 0x060001FF, ARPlaneBoundaryChangedEventArgs_Equals_m8FCE506D26E362A259FD1E260648E9FA5C07B91D_AdjustorThunk },
+	{ 0x0600022B, ARPlanesChangedEventArgs_get_added_mD0CA0FB88C9F669580ED4BE0C9A3DA6E1333DA07_AdjustorThunk },
+	{ 0x0600022C, ARPlanesChangedEventArgs_set_added_mADE2BA0CDD14711F3576C51A04BC0A06CC4F0C37_AdjustorThunk },
+	{ 0x0600022D, ARPlanesChangedEventArgs_get_updated_m1EB6B86313D75F78C287B67BF2EA7A03468BB48E_AdjustorThunk },
+	{ 0x0600022E, ARPlanesChangedEventArgs_set_updated_m186CC3DF36E1B28FE2B7CFB2F9C56E638C4A4F26_AdjustorThunk },
+	{ 0x0600022F, ARPlanesChangedEventArgs_get_removed_m771596586A99FE5593EF16233E7F3BA3603E0927_AdjustorThunk },
+	{ 0x06000230, ARPlanesChangedEventArgs_set_removed_mE2BE624B870142F492E01AB6328B4D74E575228A_AdjustorThunk },
+	{ 0x06000231, ARPlanesChangedEventArgs__ctor_mE0D81BC682849CEF4267F2466246A42A451D7D3A_AdjustorThunk },
+	{ 0x06000232, ARPlanesChangedEventArgs_GetHashCode_m80CECC92973BF7AC233A66E338DFE888901E8C7F_AdjustorThunk },
+	{ 0x06000233, ARPlanesChangedEventArgs_Equals_m6EE7772274DE47C25AB57E32C1B4C0FAC78B48BF_AdjustorThunk },
+	{ 0x06000234, ARPlanesChangedEventArgs_ToString_m0175F0496B86842A452179E194FEAB0FC61A5D3E_AdjustorThunk },
+	{ 0x06000235, ARPlanesChangedEventArgs_Equals_mCB86F0483BA241F16D592B63E2DA15F7DA74778C_AdjustorThunk },
+	{ 0x06000241, ARPointCloudChangedEventArgs_get_added_m0C729336F6976A90A2324B4F937D76FB15F782AA_AdjustorThunk },
+	{ 0x06000242, ARPointCloudChangedEventArgs_set_added_m0ACF28F28D87F4F85AEF9D5A25ADBBF144011F56_AdjustorThunk },
+	{ 0x06000243, ARPointCloudChangedEventArgs_get_updated_m805F77090DDD98DCE09440655C45F6AE0117E17B_AdjustorThunk },
+	{ 0x06000244, ARPointCloudChangedEventArgs_set_updated_m4253DD3BADEE6D38F8D354E8203BC406EE762438_AdjustorThunk },
+	{ 0x06000245, ARPointCloudChangedEventArgs_get_removed_mDC85041E76FE7146152B633D6610843BA6951BE7_AdjustorThunk },
+	{ 0x06000246, ARPointCloudChangedEventArgs_set_removed_mD2D666C6988100036A84B13FC862159E02660B81_AdjustorThunk },
+	{ 0x06000247, ARPointCloudChangedEventArgs__ctor_m25C6F7F51596A783BD19258369C7B8EF105B34A4_AdjustorThunk },
+	{ 0x06000248, ARPointCloudChangedEventArgs_GetHashCode_m32203B5DF16FF47E3E30446484E389CCFDD1C231_AdjustorThunk },
+	{ 0x06000249, ARPointCloudChangedEventArgs_Equals_mF94BA249FB1E976B119BADBE25C141FFE373156D_AdjustorThunk },
+	{ 0x0600024A, ARPointCloudChangedEventArgs_ToString_m956CA728D5F129C57ED4DE1E125B5513510C2589_AdjustorThunk },
+	{ 0x0600024B, ARPointCloudChangedEventArgs_Equals_mD36FBE917CA6DE75C0237040C98457ACF89A4A59_AdjustorThunk },
+	{ 0x0600025B, PointCloudRaycastJob_Execute_mB6A41993F9C4A8539D0B50BF36CAD134941D542C_AdjustorThunk },
+	{ 0x0600025C, PointCloudRaycastCollectResultsJob_Execute_m8A9931AC6417DF29437C9DD8DA28775F9FC45EED_AdjustorThunk },
+	{ 0x06000271, ARPointCloudUpdatedEventArgs_GetHashCode_m79A55AAB09CF20D3058EDF108535D5A7AF7E7CB4_AdjustorThunk },
+	{ 0x06000272, ARPointCloudUpdatedEventArgs_Equals_m93CD6A765B5A6204C630884EDB8B5AFA6E1AA077_AdjustorThunk },
+	{ 0x06000273, ARPointCloudUpdatedEventArgs_Equals_m85EFAABDF7E3FCBACB7AD805302ABAC6BF2000F7_AdjustorThunk },
+	{ 0x06000289, ARRaycastHit__ctor_m56557E9D81A233D19CF3E91EC3F31D3B81595F99_AdjustorThunk },
+	{ 0x0600028A, ARRaycastHit__ctor_mC7110E7B31FCC610B0D6AF62CBF4BDCD33751C09_AdjustorThunk },
+	{ 0x0600028B, ARRaycastHit_get_distance_mED96EC43E8D177E5B912822DD5566A543BF995AB_AdjustorThunk },
+	{ 0x0600028C, ARRaycastHit_get_hitType_m2932A3519CC493BB074A0CD73DAACD79643545D1_AdjustorThunk },
+	{ 0x0600028D, ARRaycastHit_get_pose_mB4D8BC45F23D9F2C2C8DCAFA88DB1221D76EF02B_AdjustorThunk },
+	{ 0x0600028E, ARRaycastHit_get_trackableId_mCC2447AD8425B92F2E25E74812D6F50DE588D16A_AdjustorThunk },
+	{ 0x0600028F, ARRaycastHit_get_sessionRelativePose_m496222B38CDAA9D976ECAFA7CE7ED77CA9E37DBA_AdjustorThunk },
+	{ 0x06000290, ARRaycastHit_get_sessionRelativeDistance_mAB451E73F54C60BF566269EE61D6A6FC22F4C524_AdjustorThunk },
+	{ 0x06000291, ARRaycastHit_get_trackable_m0A2E4A67B074ACA0021869D6D8930D34A85F1D79_AdjustorThunk },
+	{ 0x06000292, ARRaycastHit_GetHashCode_m659BE91F4F0039B4C81562344E13B9BB4454BE85_AdjustorThunk },
+	{ 0x06000293, ARRaycastHit_Equals_m10EB8CE2C048C4C1FF0254C69C376B16553577E6_AdjustorThunk },
+	{ 0x06000294, ARRaycastHit_Equals_m75D93284E7D73EDEF82038FA2C0BA7543DBF088D_AdjustorThunk },
+	{ 0x06000297, ARRaycastHit_CompareTo_m3B3E66B95BFC5CF7099F910BAAC6823403755514_AdjustorThunk },
+	{ 0x060002AD, ARRaycastUpdatedEventArgs_get_raycast_m0609B624800A5388048A79B439B4B38F5F2A885F_AdjustorThunk },
+	{ 0x060002AE, ARRaycastUpdatedEventArgs_set_raycast_m7BE3386FAFCA2682E4B8ADDAAD3B0861CF7B6199_AdjustorThunk },
+	{ 0x060002AF, ARRaycastUpdatedEventArgs_Equals_m99C427C07FE659083820EF17D021D78BBE7E0B86_AdjustorThunk },
+	{ 0x060002B0, ARRaycastUpdatedEventArgs_Equals_mAD79322F0D5530018B97925A99B19352DEB5A2F8_AdjustorThunk },
+	{ 0x060002B1, ARRaycastUpdatedEventArgs_GetHashCode_mE8AEACE0EA29276661BD1CF7E212E3652833044F_AdjustorThunk },
+	{ 0x060002C3, ARReferencePointsChangedEventArgs_get_added_mB5391CD21E5E0AAF6441732E418F6B4F743BA654_AdjustorThunk },
+	{ 0x060002C4, ARReferencePointsChangedEventArgs_set_added_mE19E6138767F7CFBFCD0EC1FB2D1D8ABA2355079_AdjustorThunk },
+	{ 0x060002C5, ARReferencePointsChangedEventArgs_get_updated_mFE6795D2A4133523DFB5610DD381A23084A14932_AdjustorThunk },
+	{ 0x060002C6, ARReferencePointsChangedEventArgs_set_updated_m33BF9ECA005FF50F1253618A94E75313C5E8419A_AdjustorThunk },
+	{ 0x060002C7, ARReferencePointsChangedEventArgs_get_removed_m852B8F1536DEDFDEB059B8C87C86D30ADDF4890E_AdjustorThunk },
+	{ 0x060002C8, ARReferencePointsChangedEventArgs_set_removed_mB84B74719F47B759C903FBECCFECF2F4376140FA_AdjustorThunk },
+	{ 0x060002C9, ARReferencePointsChangedEventArgs__ctor_m4DC8ED8A0352F7EFD78D548B539BBCB0E8442FEB_AdjustorThunk },
+	{ 0x060002CA, ARReferencePointsChangedEventArgs_GetHashCode_m27D4A6BF13AF37076D32EB3D785549E5A543302C_AdjustorThunk },
+	{ 0x060002CB, ARReferencePointsChangedEventArgs_Equals_m97EEF4D1487E424CFF7CB753A0FD0ECA92DDED67_AdjustorThunk },
+	{ 0x060002CC, ARReferencePointsChangedEventArgs_ToString_m867931BA4F884F5991CF89BFB5F675A5244C4408_AdjustorThunk },
+	{ 0x060002CD, ARReferencePointsChangedEventArgs_Equals_mFF8C64B924D17EC288663CFBC092CC060650CA0A_AdjustorThunk },
+	{ 0x06000312, ARSessionStateChangedEventArgs_get_state_mDFCCADECEFE9356E4246B9BF912157F3EDD88796_AdjustorThunk },
+	{ 0x06000313, ARSessionStateChangedEventArgs_set_state_mA9AB6CBFCAD476EC94E3642F5638BCC11B4A4B95_AdjustorThunk },
+	{ 0x06000314, ARSessionStateChangedEventArgs__ctor_m6001FA2930CF6A8551451A20129E7827738E0AA9_AdjustorThunk },
+	{ 0x06000315, ARSessionStateChangedEventArgs_GetHashCode_m00DDAFEED0CA796E059FBB5845B62DA16DA90BFF_AdjustorThunk },
+	{ 0x06000316, ARSessionStateChangedEventArgs_Equals_m55B6A7D08E747098F36B59A6B3CAA8DB392E3454_AdjustorThunk },
+	{ 0x06000317, ARSessionStateChangedEventArgs_ToString_m415BD73E732AE375F1BDF0990604D5FA0DD87A44_AdjustorThunk },
+	{ 0x06000318, ARSessionStateChangedEventArgs_Equals_mC4C56CAF33303BA032420A206F358AE4AEF4181A_AdjustorThunk },
+	{ 0x0600031B, ARTextureInfo_get_descriptor_m65509D502D7CC1BB6000A68A083260BAA269D188_AdjustorThunk },
+	{ 0x0600031C, ARTextureInfo_get_texture_m80E0A3E680A44DFA464736B5097AEAC460E03272_AdjustorThunk },
+	{ 0x0600031D, ARTextureInfo__ctor_mD41AC4E8F74111EA21E817750F971494A75BC9C6_AdjustorThunk },
+	{ 0x0600031E, ARTextureInfo_Reset_m377A147E742F6A52B1E3266FC70039F57B780CC5_AdjustorThunk },
+	{ 0x0600031F, ARTextureInfo_DestroyTexture_m843206A816FB81650629A5CECE2DB72F5E4B3A67_AdjustorThunk },
+	{ 0x06000323, ARTextureInfo_Dispose_m5EEEAC94FEF213603964F7CBD128201BCD9773E8_AdjustorThunk },
+	{ 0x06000324, ARTextureInfo_GetHashCode_mA38759BD69BD26A415464560D4AE6C36E6AF840D_AdjustorThunk },
+	{ 0x06000325, ARTextureInfo_Equals_mFA8520D4C622DEF292877840C73A87254E199C1C_AdjustorThunk },
+	{ 0x06000326, ARTextureInfo_Equals_m5912700F9441EE220F72E859EDF747F162A2C9BB_AdjustorThunk },
+	{ 0x06000355, ARTrackablesParentTransformChangedEventArgs_get_sessionOrigin_m4A650B7FFE29FC40DA7781843DF2AE744108FBBA_AdjustorThunk },
+	{ 0x06000356, ARTrackablesParentTransformChangedEventArgs_get_trackablesParent_m996D495C51CD1A26A40FB44EF841E824EF87711E_AdjustorThunk },
+	{ 0x06000357, ARTrackablesParentTransformChangedEventArgs__ctor_m45E72BC55106F4DFE8E9DBC77C2D33213203B2B6_AdjustorThunk },
+	{ 0x06000358, ARTrackablesParentTransformChangedEventArgs_Equals_mEFECB01DA6949C437802A4E65FFC803FD0BBA603_AdjustorThunk },
+	{ 0x06000359, ARTrackablesParentTransformChangedEventArgs_Equals_m31CF1D718EFE540CACA9C601CA7B9E2666AA2361_AdjustorThunk },
+	{ 0x0600035A, ARTrackablesParentTransformChangedEventArgs_GetHashCode_mCC1795A3F585FA0C88849C76D602A0B7F6A0F620_AdjustorThunk },
+	{ 0x06000378, ARTrackedImagesChangedEventArgs_get_added_m0E81E3C161242C2508B90BCC73605F551AD53B4E_AdjustorThunk },
+	{ 0x06000379, ARTrackedImagesChangedEventArgs_set_added_mCD60C22D4583687683AE015E8A1A020C6AB3C483_AdjustorThunk },
+	{ 0x0600037A, ARTrackedImagesChangedEventArgs_get_updated_mBEB295B97B6C25E4DC4447383F529C9E475E4041_AdjustorThunk },
+	{ 0x0600037B, ARTrackedImagesChangedEventArgs_set_updated_m9E648CAEC117BCEA4B6F04019EE298E67FEAF767_AdjustorThunk },
+	{ 0x0600037C, ARTrackedImagesChangedEventArgs_get_removed_mF4C9906743C7270B1AAD4B43E74CDB9CB5208E57_AdjustorThunk },
+	{ 0x0600037D, ARTrackedImagesChangedEventArgs_set_removed_m0E5F3A92E5B2BCF31D158AB8917713A3D9622509_AdjustorThunk },
+	{ 0x0600037E, ARTrackedImagesChangedEventArgs__ctor_mF538DBD6FD3B449C7B1B58F2DDD5376F77BAD0C7_AdjustorThunk },
+	{ 0x0600037F, ARTrackedImagesChangedEventArgs_GetHashCode_mAD9F7F4F2B5AC26FBEFE6DAF62BCF2D8F0C1535A_AdjustorThunk },
+	{ 0x06000380, ARTrackedImagesChangedEventArgs_Equals_mA71A641FE4371366C134DDB0DC89904137B578E6_AdjustorThunk },
+	{ 0x06000381, ARTrackedImagesChangedEventArgs_ToString_mFB33AA8A3812346B39B9C36A39D9F2E4ACC84645_AdjustorThunk },
+	{ 0x06000382, ARTrackedImagesChangedEventArgs_Equals_m941D158F4DA8F60409203BF41E42EBFDDAECEC40_AdjustorThunk },
+	{ 0x06000396, ARTrackedObjectsChangedEventArgs_get_added_m747A90E293DEDF1EB53AFB6BB3483AC65E79060D_AdjustorThunk },
+	{ 0x06000397, ARTrackedObjectsChangedEventArgs_set_added_m0A6EBB4060BFAFBCE4FD8CFAB7650B0B6734D361_AdjustorThunk },
+	{ 0x06000398, ARTrackedObjectsChangedEventArgs_get_updated_m25103ACF74EDC4CC13A65CE841EB0B4BA2EC6CD7_AdjustorThunk },
+	{ 0x06000399, ARTrackedObjectsChangedEventArgs_set_updated_m0AD11C04AFD0D9177732ADBAB6F4BA90A81ECEB0_AdjustorThunk },
+	{ 0x0600039A, ARTrackedObjectsChangedEventArgs_get_removed_m5E38CAEC4F21B15878F4D4EB5490FED57D95446D_AdjustorThunk },
+	{ 0x0600039B, ARTrackedObjectsChangedEventArgs_set_removed_m4C04A88DEE026C11913F1C3B34CAC84EDEB50D35_AdjustorThunk },
+	{ 0x0600039C, ARTrackedObjectsChangedEventArgs__ctor_mA48B5A6AC353009C41A5391BBF56A910A74C53D1_AdjustorThunk },
+	{ 0x0600039D, ARTrackedObjectsChangedEventArgs_GetHashCode_m84328982CB55137A773B038431287350CE36EF31_AdjustorThunk },
+	{ 0x0600039E, ARTrackedObjectsChangedEventArgs_Equals_m238B5491E5A062C6A577FFF46F963B13E4E61E60_AdjustorThunk },
+	{ 0x0600039F, ARTrackedObjectsChangedEventArgs_ToString_mD4FF710D115521BAE99BB835BC0396A47725D3A0_AdjustorThunk },
+	{ 0x060003A0, ARTrackedObjectsChangedEventArgs_Equals_mB776FE4552F4F0C8E08C390C87AF45A2E0904E70_AdjustorThunk },
+	{ 0x060003A4, Message_WithMessage_m08C475B239B69D3D84E6C75858C21CECAC023D90_AdjustorThunk },
+	{ 0x060003A6, Message_WithMessage_m549E441878C86CE7103F147EA3D40F02A6A90B2A_AdjustorThunk },
+	{ 0x060003C5, DeallocateJob_Execute_m21D3A3C5F6AFE15484CAFE4E175317A9F38533B1_AdjustorThunk },
 };
-static const int32_t s_InvokerIndices[1002] = 
+static const int32_t s_InvokerIndices[1004] = 
 {
-	4579,
-	4579,
-	4466,
-	4448,
-	4579,
-	4579,
-	4579,
-	4579,
-	4496,
-	3678,
-	3678,
-	3678,
-	2672,
-	3087,
-	1389,
-	3087,
-	3087,
-	2679,
-	4496,
-	4496,
-	1088,
-	4579,
-	4496,
-	3678,
-	4496,
-	3678,
-	4496,
-	3678,
-	1088,
-	4464,
-	3087,
-	4496,
-	2947,
-	6228,
-	6228,
-	4579,
-	1967,
-	4579,
-	3648,
-	1089,
-	1991,
-	2028,
-	3678,
-	7291,
-	4496,
-	4496,
-	4496,
-	4496,
-	4531,
-	3711,
-	4496,
-	3678,
-	4531,
-	4496,
-	4531,
-	7149,
-	4531,
-	4579,
-	4579,
-	4579,
-	4579,
-	4579,
-	4579,
-	4579,
-	4496,
-	3678,
-	4579,
-	4579,
-	7153,
-	3556,
-	3565,
-	1088,
-	4579,
-	7291,
-	4396,
-	3563,
-	4347,
-	3516,
-	4348,
-	3517,
-	4348,
-	3517,
-	4496,
-	3678,
-	4496,
-	3678,
-	4342,
-	3513,
-	4349,
-	3518,
-	4496,
-	3678,
-	4496,
-	3678,
-	4496,
-	3678,
-	4542,
-	3720,
-	4464,
-	3087,
-	4496,
-	2948,
-	6229,
-	6229,
-	4579,
-	4579,
-	4531,
-	3711,
-	4464,
-	3648,
-	4531,
-	4464,
-	3648,
-	4464,
-	4464,
-	3648,
-	4464,
-	3648,
-	4464,
-	4531,
-	3678,
-	3678,
-	4496,
-	2946,
-	2172,
-	4352,
-	3521,
-	2946,
-	2946,
-	4579,
-	4579,
-	4579,
-	4579,
-	4579,
-	3764,
-	4579,
-	7291,
-	4464,
-	3648,
-	4464,
-	3648,
-	4574,
-	4574,
-	4466,
-	4597,
-	4579,
-	4496,
-	4579,
-	3784,
-	4496,
-	4579,
-	4579,
-	4579,
-	4579,
-	4531,
-	3711,
-	4531,
-	4531,
-	3711,
-	4531,
-	4464,
-	3648,
-	4531,
-	3711,
-	4531,
-	4531,
-	3711,
-	4531,
-	4496,
-	3678,
-	3678,
-	3678,
-	2679,
-	875,
-	3087,
-	3087,
-	3087,
-	4496,
-	4496,
-	4579,
-	4579,
-	1088,
-	3678,
-	4579,
-	4579,
-	4579,
-	4496,
-	3678,
-	4496,
-	3678,
-	4496,
-	3678,
-	1088,
-	4464,
-	3087,
-	4496,
-	2951,
-	6232,
-	6232,
-	3678,
-	3678,
-	4316,
-	4316,
-	4308,
-	4315,
-	4466,
-	4496,
-	3678,
-	4496,
-	3678,
-	4496,
-	3678,
-	4579,
-	4579,
-	-1,
-	3678,
-	4579,
-	1988,
-	4579,
-	4496,
-	3678,
-	4464,
-	3648,
-	4464,
-	3648,
-	4464,
-	4464,
-	3678,
-	3678,
-	2679,
-	4579,
-	2001,
-	1088,
-	4496,
-	4496,
-	4579,
-	4496,
-	3678,
-	3711,
-	4579,
-	4579,
-	3559,
-	3576,
-	4579,
-	4579,
-	4579,
-	4579,
-	4496,
-	3678,
-	3678,
-	4464,
-	3087,
-	2952,
-	6233,
-	6233,
-	4496,
-	3678,
-	4496,
-	3678,
-	4496,
-	3678,
-	1088,
-	4464,
-	3087,
-	4496,
-	2953,
-	6234,
-	6234,
-	4496,
-	3678,
-	4496,
-	3678,
-	4496,
-	3678,
-	1088,
-	4464,
-	2954,
-	3087,
-	6235,
-	6235,
-	4496,
-	4506,
-	4542,
-	4322,
-	3678,
-	4496,
-	2671,
-	4579,
-	4579,
-	4579,
-	4531,
-	3711,
-	4531,
-	4531,
-	3711,
-	4531,
-	3711,
-	4531,
-	3711,
-	4531,
-	4531,
-	3711,
-	4531,
-	3711,
-	4531,
-	4496,
-	3678,
-	4496,
-	3678,
-	3678,
-	4496,
-	2679,
-	2173,
-	4579,
-	4579,
-	2002,
-	1088,
-	4579,
-	4496,
-	3678,
-	4579,
-	4579,
-	4579,
-	4496,
-	4579,
-	7291,
-	4349,
-	3518,
-	4349,
-	3518,
-	4340,
-	3511,
-	4349,
-	3518,
-	4349,
-	3518,
-	4349,
-	3518,
-	4340,
-	3511,
-	4351,
-	3520,
-	4350,
-	3519,
-	4464,
-	3087,
-	4496,
-	2956,
-	6236,
-	6236,
-	3297,
-	3297,
-	4496,
-	3678,
-	4542,
-	3720,
-	4531,
-	3711,
-	4531,
-	3711,
-	4531,
-	3711,
-	4531,
-	3711,
-	4464,
-	3648,
-	3678,
-	3678,
-	4496,
-	4496,
-	4579,
-	-1,
-	4496,
-	4579,
-	4579,
-	7256,
-	4579,
-	4579,
-	4579,
-	3663,
-	4579,
-	4579,
-	4579,
-	2679,
-	7121,
-	6929,
-	4579,
-	4579,
-	7291,
-	1294,
-	4579,
-	4496,
-	3678,
-	4496,
-	3678,
-	4496,
-	3678,
-	1088,
-	4464,
-	3087,
-	4496,
-	2957,
-	6237,
-	6237,
-	4496,
-	3678,
-	4496,
-	3678,
-	4496,
-	3678,
-	4496,
-	3678,
-	4464,
-	3087,
-	2958,
-	6238,
-	6238,
-	3678,
-	3678,
-	4464,
-	3648,
-	4464,
-	3648,
-	4464,
-	4464,
-	3648,
-	4464,
-	3648,
-	4464,
-	4464,
-	3648,
-	4464,
-	4531,
-	3711,
-	4531,
-	4464,
-	3648,
-	4464,
-	4496,
-	2946,
-	4496,
-	2946,
-	4496,
-	2946,
-	4496,
-	2946,
-	4579,
-	4579,
-	4579,
-	4579,
-	4579,
-	4579,
-	4579,
-	4466,
-	4448,
-	4579,
-	4496,
-	3678,
-	3678,
-	3678,
-	2679,
-	4496,
-	1088,
-	4496,
-	4579,
-	4496,
-	3678,
-	4496,
-	3678,
-	4496,
-	3678,
-	1088,
-	4464,
-	3087,
-	2465,
-	4496,
-	2959,
-	6239,
-	6239,
-	4542,
-	3720,
-	3678,
-	3678,
-	4574,
-	4496,
-	3678,
-	4464,
-	4464,
-	4572,
-	4574,
-	4572,
-	4572,
-	4500,
-	4466,
-	4315,
-	3678,
-	4579,
-	4579,
-	4579,
-	4579,
-	4579,
-	4579,
-	4496,
-	3678,
-	3678,
-	4464,
-	3087,
-	4496,
-	2960,
-	6240,
-	6240,
-	4496,
-	3678,
-	4464,
-	3648,
-	4464,
-	3648,
-	4464,
-	3678,
-	3678,
-	2679,
-	768,
-	6380,
-	6091,
-	4496,
-	4579,
-	1970,
-	1088,
-	4496,
-	4579,
-	4579,
-	4579,
-	5419,
-	5952,
-	5710,
-	7291,
-	4496,
-	3678,
-	4464,
-	3648,
-	4531,
-	3711,
-	3567,
-	4579,
-	-1,
-	3711,
-	4579,
-	4579,
-	4579,
-	4579,
-	4579,
-	4579,
-	4496,
-	3678,
-	4496,
-	3678,
-	4496,
-	3678,
-	1088,
-	4464,
-	3087,
-	4496,
-	2961,
-	6241,
-	6241,
-	3678,
-	3678,
-	4336,
-	4335,
-	4334,
-	4579,
-	4579,
-	3678,
-	4579,
-	4496,
-	3678,
-	4496,
-	3678,
-	4496,
-	3678,
-	1088,
-	4464,
-	3087,
-	4496,
-	2962,
-	6242,
-	6242,
-	4496,
-	3678,
-	3678,
-	3678,
-	4579,
-	4579,
-	4496,
-	4496,
-	2004,
-	1088,
-	768,
-	-1,
-	4579,
-	3648,
-	4579,
-	4496,
-	3678,
-	3570,
-	4579,
-	4579,
-	4579,
-	4579,
-	4579,
-	3711,
-	4579,
-	7291,
-	3570,
-	4579,
-	4579,
-	4579,
-	4579,
-	4579,
-	3711,
-	4579,
-	7291,
-	4464,
-	3087,
-	2963,
-	6243,
-	6243,
-	4579,
-	4579,
-	4579,
-	4579,
-	4579,
-	3640,
-	1653,
-	7304,
-	4579,
-	7291,
-	4466,
-	4542,
-	4496,
-	3678,
-	3678,
-	3678,
-	4579,
-	4579,
-	4579,
-	1149,
-	759,
-	4542,
-	4464,
-	4506,
-	4564,
-	4506,
-	4542,
-	4496,
-	4464,
-	3087,
-	2964,
-	6244,
-	6244,
-	2404,
-	4496,
-	3678,
-	993,
-	988,
-	1397,
-	3678,
-	4496,
-	3678,
-	3678,
-	4579,
-	2714,
-	769,
-	769,
-	768,
-	6068,
-	768,
-	934,
-	2005,
-	4496,
-	4579,
-	7291,
-	4496,
-	3678,
-	2965,
-	3087,
-	4464,
-	6245,
-	6245,
-	4466,
-	4448,
-	4579,
-	4496,
-	3678,
-	3678,
-	3678,
-	2672,
-	1389,
-	3087,
-	2679,
-	4496,
-	4496,
-	1088,
-	4579,
-	4496,
-	3678,
-	4496,
-	3678,
-	4496,
-	3678,
-	1088,
-	4464,
-	3087,
-	4496,
-	2968,
-	6248,
-	6248,
-	4531,
-	3711,
-	4531,
-	3711,
-	4531,
-	4531,
-	3711,
-	4464,
-	3648,
-	4464,
-	4346,
-	7153,
-	7153,
-	7243,
-	7149,
-	7243,
-	4579,
-	3711,
-	4579,
-	7256,
-	7256,
-	7256,
-	4579,
-	4496,
-	4579,
-	4579,
-	4579,
-	3711,
-	4579,
-	4579,
-	7291,
-	4579,
-	3648,
-	4579,
-	4531,
-	4496,
-	4579,
-	4496,
-	3648,
-	4579,
-	4531,
-	4496,
-	4579,
-	4496,
-	3648,
-	4579,
-	4531,
-	4496,
-	4579,
-	4496,
-	4496,
-	3678,
-	4496,
-	3678,
-	3678,
-	3678,
-	4496,
-	1106,
-	1997,
-	1989,
-	4579,
-	4506,
-	4579,
-	4579,
-	4579,
-	4579,
-	4464,
-	3648,
-	3648,
-	4464,
-	3087,
-	4496,
-	2969,
-	6249,
-	6249,
-	4597,
-	4496,
-	3784,
-	4579,
-	4579,
-	5999,
-	7052,
-	7096,
-	4579,
-	4464,
-	2970,
-	3087,
-	6250,
-	6250,
-	4579,
-	-1,
-	-1,
-	-1,
-	-1,
-	-1,
-	-1,
-	-1,
-	-1,
-	-1,
-	-1,
-	-1,
-	-1,
-	-1,
-	-1,
-	-1,
-	-1,
-	-1,
-	-1,
-	-1,
-	-1,
-	-1,
-	-1,
-	-1,
-	-1,
-	-1,
-	-1,
-	-1,
-	-1,
-	-1,
-	-1,
-	-1,
-	-1,
-	-1,
-	-1,
-	-1,
-	-1,
-	-1,
-	-1,
-	-1,
-	-1,
-	-1,
-	-1,
-	-1,
-	4496,
-	4496,
-	1987,
-	2971,
-	3087,
-	4464,
-	6251,
-	6251,
-	4572,
-	4572,
-	4466,
-	4594,
-	3780,
-	4579,
-	4496,
-	3678,
-	2671,
-	4464,
-	3648,
-	4531,
-	4464,
-	3648,
-	4464,
-	4496,
-	3678,
-	4496,
-	3678,
-	3678,
-	4496,
-	4579,
-	1442,
-	2008,
-	1088,
-	3678,
-	4579,
-	4496,
-	3678,
-	4496,
-	3678,
-	4496,
-	3678,
-	1088,
-	4464,
-	3087,
-	4496,
-	2972,
-	6252,
-	6252,
-	4466,
-	4595,
-	3781,
-	4579,
-	4496,
-	3678,
-	4496,
-	3678,
-	4496,
-	3678,
-	3678,
-	4496,
-	4579,
-	2009,
-	1088,
-	4579,
-	4579,
-	4496,
-	3678,
-	4496,
-	3678,
-	4496,
-	3678,
-	1088,
-	4464,
-	3087,
-	4496,
-	2973,
-	6253,
-	6253,
-	6724,
-	3678,
-	6726,
-	3678,
-	6868,
-	6899,
-	6073,
-	6881,
-	5589,
-	5244,
-	4887,
-	4792,
-	4755,
-	4725,
-	768,
-	6899,
-	6868,
-	6867,
-	6867,
-	7256,
-	7278,
-	7278,
-	1260,
-	4579,
-	3665,
-	4464,
-	1477,
-	3069,
-	3665,
-	3665,
-	4579,
-	4579,
-	4968,
-	4881,
-	4579,
-	4579,
-	6409,
-	6409,
-	6588,
-	-1,
-	-1,
-	-1,
-	-1,
-	-1,
-	-1,
-	-1,
-	-1,
-	-1,
-	-1,
-	-1,
-	-1,
-	-1,
-	-1,
-	-1,
-	-1,
-	-1,
-	-1,
-	-1,
-	-1,
-	-1,
-	-1,
-	-1,
-	-1,
-	-1,
-	-1,
-	6899,
-	6868,
-	6182,
-	6182,
-	6176,
-	6176,
-	6579,
-	6579,
+	3984,
+	3984,
+	3889,
+	3871,
+	3984,
+	3984,
+	3984,
+	3984,
+	3917,
+	3217,
+	3217,
+	3217,
+	2345,
+	2720,
+	1247,
+	2720,
+	2720,
+	2351,
+	3917,
+	3917,
+	985,
+	3984,
+	3917,
+	3217,
+	3917,
+	3217,
+	3917,
+	3217,
+	985,
+	3887,
+	2720,
+	3917,
+	2589,
+	5546,
+	5546,
+	3984,
+	1748,
+	3984,
+	3189,
+	986,
+	1770,
+	1806,
+	3217,
 	6575,
+	3917,
+	3917,
+	3917,
+	3917,
+	3950,
+	3247,
+	3917,
+	3217,
+	3950,
+	3917,
+	3950,
+	6438,
+	3950,
+	3984,
+	3984,
+	3984,
+	3984,
+	3984,
+	3984,
+	3984,
+	3917,
+	3217,
+	3984,
+	3984,
+	6442,
+	3110,
+	3119,
+	985,
+	3984,
+	6575,
+	3830,
+	3117,
+	3784,
+	3082,
+	3785,
+	3083,
+	3785,
+	3083,
+	3917,
+	3217,
+	3917,
+	3217,
+	3779,
+	3079,
+	3786,
+	3084,
+	3917,
+	3217,
+	3917,
+	3217,
+	3917,
+	3217,
+	3958,
+	3254,
+	3887,
+	2720,
+	3917,
+	2590,
+	5547,
+	5547,
+	3984,
+	3984,
+	3950,
+	3247,
+	3887,
+	3189,
+	3950,
+	3887,
+	3189,
+	3887,
+	3887,
+	3189,
+	3887,
+	3189,
+	3887,
+	3950,
+	3217,
+	3217,
+	3917,
+	2588,
+	1910,
+	3789,
+	3087,
+	2588,
+	2588,
+	3984,
+	3984,
+	3984,
+	3984,
+	3984,
+	3284,
+	3984,
+	6575,
+	3887,
+	3189,
+	3887,
+	3189,
+	3980,
+	3980,
+	3889,
+	4002,
+	3984,
+	3917,
+	3984,
+	3304,
+	3917,
+	3984,
+	3984,
+	3984,
+	3984,
+	3950,
+	3247,
+	3950,
+	3950,
+	3247,
+	3950,
+	3887,
+	3189,
+	3950,
+	3247,
+	3950,
+	3950,
+	3247,
+	3950,
+	3917,
+	3217,
+	3217,
+	3217,
+	2351,
+	796,
+	2720,
+	2720,
+	2720,
+	3917,
+	3917,
+	3984,
+	3984,
+	985,
+	3217,
+	3984,
+	3984,
+	3984,
+	3917,
+	3217,
+	3917,
+	3217,
+	3917,
+	3217,
+	985,
+	3887,
+	2720,
+	3917,
+	2593,
+	5550,
+	5550,
+	3217,
+	3217,
+	3754,
+	3754,
+	3746,
+	3753,
+	3889,
+	3917,
+	3217,
+	3917,
+	3217,
+	3917,
+	3217,
+	3984,
+	3984,
+	-1,
+	3217,
+	3984,
+	5895,
+	3984,
+	3917,
+	3217,
+	3887,
+	3189,
+	3887,
+	3189,
+	3887,
+	3887,
+	3217,
+	3217,
+	2351,
+	3984,
+	1780,
+	985,
+	3917,
+	3917,
+	3984,
+	3917,
+	3217,
+	3247,
+	3984,
+	3984,
+	3113,
+	3130,
+	3984,
+	3984,
+	3984,
+	3984,
+	3917,
+	3217,
+	3217,
+	3887,
+	2720,
+	2594,
+	5551,
+	5551,
+	3917,
+	3217,
+	3917,
+	3217,
+	3917,
+	3217,
+	985,
+	3887,
+	2720,
+	3917,
+	2595,
+	5552,
+	5552,
+	3917,
+	3217,
+	3917,
+	3217,
+	3917,
+	3217,
+	985,
+	3887,
+	2596,
+	2720,
+	5553,
+	5553,
+	3917,
+	3926,
+	3958,
+	3760,
+	3217,
+	3917,
+	2344,
+	3984,
+	3984,
+	3984,
+	3950,
+	3247,
+	3950,
+	3950,
+	3247,
+	3950,
+	3247,
+	3950,
+	3247,
+	3950,
+	3950,
+	3247,
+	3950,
+	3247,
+	3950,
+	3917,
+	3217,
+	3917,
+	3217,
+	3217,
+	3917,
+	2351,
+	1911,
+	3984,
+	3984,
+	1781,
+	985,
+	3984,
+	3917,
+	3217,
+	3984,
+	3984,
+	3984,
+	3917,
+	3984,
+	6575,
+	3786,
+	3084,
+	3786,
+	3084,
+	3777,
+	3077,
+	3786,
+	3084,
+	3786,
+	3084,
+	3786,
+	3084,
+	3777,
+	3077,
+	3788,
+	3086,
+	3787,
+	3085,
+	3887,
+	2720,
+	3917,
+	2598,
+	5554,
+	5554,
+	2906,
+	2906,
+	3917,
+	3217,
+	3958,
+	3254,
+	3950,
+	3247,
+	3950,
+	3247,
+	3950,
+	3247,
+	3950,
+	3247,
+	3887,
+	3189,
+	3217,
+	3217,
+	3917,
+	3917,
+	3984,
+	-1,
+	3917,
+	3984,
+	3984,
+	6540,
+	3984,
+	3984,
+	3984,
+	3202,
+	3984,
+	3984,
+	3984,
+	2351,
+	6411,
+	6227,
+	3984,
+	3984,
+	6575,
+	1158,
+	3984,
+	3917,
+	3217,
+	3917,
+	3217,
+	3917,
+	3217,
+	985,
+	3887,
+	2720,
+	3917,
+	2599,
+	5555,
+	5555,
+	3917,
+	3217,
+	3917,
+	3217,
+	3917,
+	3217,
+	3917,
+	3217,
+	3887,
+	2720,
+	2600,
+	5556,
+	5556,
+	3217,
+	3217,
+	3887,
+	3189,
+	3887,
+	3189,
+	3887,
+	3887,
+	3189,
+	3887,
+	3189,
+	3887,
+	3887,
+	3189,
+	3887,
+	3950,
+	3247,
+	3950,
+	3887,
+	3189,
+	3887,
+	3917,
+	2588,
+	3917,
+	2588,
+	3917,
+	2588,
+	3917,
+	2588,
+	2588,
+	2588,
+	3984,
+	3984,
+	3984,
+	3984,
+	3984,
+	3984,
+	3984,
+	3889,
+	3871,
+	3984,
+	3917,
+	3217,
+	3217,
+	3217,
+	2351,
+	3917,
+	985,
+	3917,
+	3984,
+	3917,
+	3217,
+	3917,
+	3217,
+	3917,
+	3217,
+	985,
+	3887,
+	2720,
+	2159,
+	3917,
+	2601,
+	5557,
+	5557,
+	3958,
+	3254,
+	3217,
+	3217,
+	3980,
+	3917,
+	3217,
+	3887,
+	3887,
+	3978,
+	3980,
+	3978,
+	3978,
+	3920,
+	3889,
+	3753,
+	3217,
+	3984,
+	3984,
+	3984,
+	3984,
+	3984,
+	3984,
+	3917,
+	3217,
+	3217,
+	3887,
+	2720,
+	3917,
+	2602,
+	5558,
+	5558,
+	3917,
+	3217,
+	3887,
+	3189,
+	3887,
+	3189,
+	3887,
+	3217,
+	3217,
+	2351,
+	702,
+	5694,
+	5412,
+	3917,
+	3984,
+	1750,
+	985,
+	3917,
+	3984,
+	3984,
+	3984,
+	4776,
+	5284,
+	5050,
+	6575,
+	3917,
+	3217,
+	3887,
+	3189,
+	3950,
+	3247,
+	3121,
+	3984,
+	-1,
+	3247,
+	3984,
+	3984,
+	3984,
+	3984,
+	3984,
+	3984,
+	3917,
+	3217,
+	3917,
+	3217,
+	3917,
+	3217,
+	985,
+	3887,
+	2720,
+	3917,
+	2603,
+	5559,
+	5559,
+	3217,
+	3217,
+	3774,
+	3773,
+	3772,
+	3984,
+	3984,
+	3217,
+	3984,
+	3917,
+	3217,
+	3917,
+	3217,
+	3917,
+	3217,
+	985,
+	3887,
+	2720,
+	3917,
+	2604,
+	5560,
+	5560,
+	3917,
+	3217,
+	3217,
+	3217,
+	3984,
+	3984,
+	3917,
+	3917,
+	1783,
+	985,
+	702,
+	-1,
+	3984,
+	3189,
+	3984,
+	3917,
+	3217,
+	3124,
+	3984,
+	3984,
+	3984,
+	3984,
+	3984,
+	3247,
+	3984,
+	6575,
+	3124,
+	3984,
+	3984,
+	3984,
+	3984,
+	3984,
+	3247,
+	3984,
+	6575,
+	3887,
+	2720,
+	2605,
+	5561,
+	5561,
+	3984,
+	3984,
+	3984,
+	3984,
+	3984,
+	3181,
+	1486,
+	6587,
+	3984,
+	6575,
+	3889,
+	3958,
+	3917,
+	3217,
+	3217,
+	3217,
+	3984,
+	3984,
+	3984,
+	1039,
+	697,
+	3958,
+	3887,
+	3926,
+	3971,
+	3926,
+	3958,
+	3917,
+	3887,
+	2720,
+	2606,
+	5562,
+	5562,
+	2105,
+	3917,
+	3217,
+	900,
+	895,
+	1254,
+	3217,
+	3917,
+	3217,
+	3217,
+	3984,
+	2384,
+	703,
+	703,
+	702,
+	5389,
+	702,
+	850,
+	1784,
+	3917,
+	3984,
+	6575,
+	3917,
+	3217,
+	2607,
+	2720,
+	3887,
+	5563,
+	5563,
+	3889,
+	3871,
+	3984,
+	3917,
+	3217,
+	3217,
+	3217,
+	2345,
+	1247,
+	2720,
+	2351,
+	3917,
+	3917,
+	985,
+	3984,
+	3917,
+	3217,
+	3917,
+	3217,
+	3917,
+	3217,
+	985,
+	3887,
+	2720,
+	3917,
+	2610,
+	5566,
+	5566,
+	3950,
+	3247,
+	3950,
+	3247,
+	3950,
+	3950,
+	3247,
+	3887,
+	3189,
+	3887,
+	3783,
+	6442,
+	6442,
+	6528,
+	6438,
+	6528,
+	3984,
+	3247,
+	3984,
+	6540,
+	6540,
+	6540,
+	3984,
+	3917,
+	3984,
+	3984,
+	3984,
+	3247,
+	3984,
+	3984,
+	6575,
+	3984,
+	3189,
+	3984,
+	3950,
+	3917,
+	3984,
+	3917,
+	3189,
+	3984,
+	3950,
+	3917,
+	3984,
+	3917,
+	3189,
+	3984,
+	3950,
+	3917,
+	3984,
+	3917,
+	3917,
+	3217,
+	3917,
+	3217,
+	3217,
+	3217,
+	3917,
+	1003,
+	1776,
+	1768,
+	3984,
+	3926,
+	3984,
+	3984,
+	3984,
+	3984,
+	3887,
+	3189,
+	3189,
+	3887,
+	2720,
+	3917,
+	2611,
+	5567,
+	5567,
+	4002,
+	3917,
+	3304,
+	3984,
+	3984,
+	5328,
+	6344,
+	6387,
+	3984,
+	3887,
+	2612,
+	2720,
+	5568,
+	5568,
+	3984,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	3917,
+	3917,
+	1767,
+	2613,
+	2720,
+	3887,
+	5569,
+	5569,
+	3978,
+	3978,
+	3889,
+	3999,
+	3300,
+	3984,
+	3917,
+	3217,
+	2344,
+	3887,
+	3189,
+	3950,
+	3887,
+	3189,
+	3887,
+	3917,
+	3217,
+	3917,
+	3217,
+	3217,
+	3917,
+	3984,
+	1290,
+	1787,
+	985,
+	3217,
+	3984,
+	3917,
+	3217,
+	3917,
+	3217,
+	3917,
+	3217,
+	985,
+	3887,
+	2720,
+	3917,
+	2614,
+	5570,
+	5570,
+	3889,
+	4000,
+	3301,
+	3984,
+	3917,
+	3217,
+	3917,
+	3217,
+	3917,
+	3217,
+	3217,
+	3917,
+	3984,
+	1788,
+	985,
+	3984,
+	3984,
+	3917,
+	3217,
+	3917,
+	3217,
+	3917,
+	3217,
+	985,
+	3887,
+	2720,
+	3917,
+	2615,
+	5571,
+	5571,
+	6036,
+	3217,
+	6038,
+	3217,
+	6169,
+	6200,
+	5394,
+	6182,
+	4935,
+	4615,
+	4269,
+	4175,
+	4139,
+	4115,
+	702,
+	6200,
+	6169,
+	6168,
+	6168,
+	6540,
+	6562,
+	6562,
+	1128,
+	3984,
+	3204,
+	3887,
+	1323,
+	2702,
+	3204,
+	3204,
+	3984,
+	3984,
+	4340,
+	4263,
+	3984,
+	3984,
+	5722,
+	5722,
+	5904,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	6200,
+	6169,
+	5500,
+	5500,
+	5494,
+	5494,
+	5894,
+	5894,
+	5890,
 };
 static const Il2CppTokenIndexMethodTuple s_reversePInvokeIndices[1] = 
 {
@@ -4461,131 +4469,130 @@ static const Il2CppTokenRangePair s_rgctxIndices[9] =
 	{ 0x02000061, { 107, 5 } },
 	{ 0x060000D7, { 0, 4 } },
 	{ 0x06000174, { 4, 2 } },
-	{ 0x06000221, { 6, 2 } },
-	{ 0x06000257, { 8, 6 } },
+	{ 0x06000223, { 6, 2 } },
+	{ 0x06000259, { 8, 6 } },
 };
 static const Il2CppRGCTXDefinition s_rgctxValues[112] = 
 {
-	{ (Il2CppRGCTXDataType)3, 20125 },
-	{ (Il2CppRGCTXDataType)3, 33287 },
-	{ (Il2CppRGCTXDataType)3, 20126 },
-	{ (Il2CppRGCTXDataType)3, 33262 },
-	{ (Il2CppRGCTXDataType)3, 32300 },
+	{ (Il2CppRGCTXDataType)3, 16063 },
+	{ (Il2CppRGCTXDataType)3, 27458 },
+	{ (Il2CppRGCTXDataType)3, 16064 },
+	{ (Il2CppRGCTXDataType)3, 27433 },
+	{ (Il2CppRGCTXDataType)3, 26580 },
 	{ (Il2CppRGCTXDataType)2, 1 },
-	{ (Il2CppRGCTXDataType)3, 32301 },
+	{ (Il2CppRGCTXDataType)3, 26581 },
 	{ (Il2CppRGCTXDataType)2, 2 },
-	{ (Il2CppRGCTXDataType)3, 20131 },
-	{ (Il2CppRGCTXDataType)3, 20127 },
-	{ (Il2CppRGCTXDataType)3, 20128 },
-	{ (Il2CppRGCTXDataType)2, 4254 },
-	{ (Il2CppRGCTXDataType)3, 20129 },
-	{ (Il2CppRGCTXDataType)3, 20130 },
-	{ (Il2CppRGCTXDataType)3, 686 },
-	{ (Il2CppRGCTXDataType)2, 516 },
-	{ (Il2CppRGCTXDataType)3, 687 },
-	{ (Il2CppRGCTXDataType)2, 1085 },
-	{ (Il2CppRGCTXDataType)2, 4786 },
-	{ (Il2CppRGCTXDataType)2, 4880 },
-	{ (Il2CppRGCTXDataType)3, 26931 },
-	{ (Il2CppRGCTXDataType)3, 258 },
-	{ (Il2CppRGCTXDataType)3, 26932 },
-	{ (Il2CppRGCTXDataType)3, 7701 },
-	{ (Il2CppRGCTXDataType)2, 1022 },
-	{ (Il2CppRGCTXDataType)3, 7700 },
-	{ (Il2CppRGCTXDataType)3, 260 },
-	{ (Il2CppRGCTXDataType)3, 26352 },
-	{ (Il2CppRGCTXDataType)3, 259 },
-	{ (Il2CppRGCTXDataType)3, 257 },
-	{ (Il2CppRGCTXDataType)3, 254 },
-	{ (Il2CppRGCTXDataType)3, 26351 },
-	{ (Il2CppRGCTXDataType)3, 692 },
-	{ (Il2CppRGCTXDataType)3, 5301 },
-	{ (Il2CppRGCTXDataType)3, 26353 },
-	{ (Il2CppRGCTXDataType)2, 515 },
-	{ (Il2CppRGCTXDataType)3, 693 },
-	{ (Il2CppRGCTXDataType)3, 691 },
-	{ (Il2CppRGCTXDataType)3, 26951 },
-	{ (Il2CppRGCTXDataType)3, 26839 },
-	{ (Il2CppRGCTXDataType)3, 20191 },
-	{ (Il2CppRGCTXDataType)3, 242 },
-	{ (Il2CppRGCTXDataType)3, 20190 },
-	{ (Il2CppRGCTXDataType)3, 7697 },
-	{ (Il2CppRGCTXDataType)3, 246 },
-	{ (Il2CppRGCTXDataType)3, 15504 },
-	{ (Il2CppRGCTXDataType)3, 7696 },
-	{ (Il2CppRGCTXDataType)2, 1885 },
-	{ (Il2CppRGCTXDataType)3, 26841 },
-	{ (Il2CppRGCTXDataType)3, 26840 },
-	{ (Il2CppRGCTXDataType)3, 5303 },
-	{ (Il2CppRGCTXDataType)3, 5302 },
-	{ (Il2CppRGCTXDataType)2, 4867 },
-	{ (Il2CppRGCTXDataType)3, 15508 },
-	{ (Il2CppRGCTXDataType)3, 253 },
-	{ (Il2CppRGCTXDataType)3, 15506 },
-	{ (Il2CppRGCTXDataType)3, 7699 },
-	{ (Il2CppRGCTXDataType)3, 248 },
-	{ (Il2CppRGCTXDataType)3, 7698 },
-	{ (Il2CppRGCTXDataType)2, 1886 },
-	{ (Il2CppRGCTXDataType)3, 5300 },
-	{ (Il2CppRGCTXDataType)3, 15505 },
-	{ (Il2CppRGCTXDataType)3, 15507 },
-	{ (Il2CppRGCTXDataType)3, 15509 },
-	{ (Il2CppRGCTXDataType)3, 256 },
-	{ (Il2CppRGCTXDataType)3, 249 },
-	{ (Il2CppRGCTXDataType)3, 243 },
-	{ (Il2CppRGCTXDataType)3, 250 },
-	{ (Il2CppRGCTXDataType)3, 244 },
-	{ (Il2CppRGCTXDataType)2, 1013 },
-	{ (Il2CppRGCTXDataType)3, 245 },
-	{ (Il2CppRGCTXDataType)3, 32735 },
-	{ (Il2CppRGCTXDataType)3, 32696 },
-	{ (Il2CppRGCTXDataType)3, 255 },
-	{ (Il2CppRGCTXDataType)3, 689 },
-	{ (Il2CppRGCTXDataType)3, 252 },
-	{ (Il2CppRGCTXDataType)3, 251 },
-	{ (Il2CppRGCTXDataType)3, 688 },
-	{ (Il2CppRGCTXDataType)3, 247 },
-	{ (Il2CppRGCTXDataType)3, 690 },
-	{ (Il2CppRGCTXDataType)2, 1769 },
-	{ (Il2CppRGCTXDataType)3, 5299 },
-	{ (Il2CppRGCTXDataType)3, 26347 },
-	{ (Il2CppRGCTXDataType)2, 3798 },
-	{ (Il2CppRGCTXDataType)3, 15503 },
-	{ (Il2CppRGCTXDataType)3, 26358 },
-	{ (Il2CppRGCTXDataType)2, 680 },
-	{ (Il2CppRGCTXDataType)3, 26469 },
-	{ (Il2CppRGCTXDataType)3, 34245 },
-	{ (Il2CppRGCTXDataType)1, 680 },
-	{ (Il2CppRGCTXDataType)3, 26355 },
-	{ (Il2CppRGCTXDataType)3, 26359 },
-	{ (Il2CppRGCTXDataType)3, 26354 },
-	{ (Il2CppRGCTXDataType)3, 26357 },
-	{ (Il2CppRGCTXDataType)3, 26356 },
-	{ (Il2CppRGCTXDataType)2, 3796 },
-	{ (Il2CppRGCTXDataType)3, 15502 },
-	{ (Il2CppRGCTXDataType)2, 4787 },
-	{ (Il2CppRGCTXDataType)2, 3779 },
-	{ (Il2CppRGCTXDataType)3, 15485 },
-	{ (Il2CppRGCTXDataType)2, 1881 },
-	{ (Il2CppRGCTXDataType)3, 7677 },
-	{ (Il2CppRGCTXDataType)3, 5296 },
-	{ (Il2CppRGCTXDataType)3, 5297 },
-	{ (Il2CppRGCTXDataType)2, 4879 },
-	{ (Il2CppRGCTXDataType)3, 26930 },
-	{ (Il2CppRGCTXDataType)3, 5295 },
-	{ (Il2CppRGCTXDataType)3, 5298 },
-	{ (Il2CppRGCTXDataType)3, 9504 },
-	{ (Il2CppRGCTXDataType)3, 9505 },
-	{ (Il2CppRGCTXDataType)3, 15111 },
-	{ (Il2CppRGCTXDataType)3, 9503 },
+	{ (Il2CppRGCTXDataType)3, 16069 },
+	{ (Il2CppRGCTXDataType)3, 16065 },
+	{ (Il2CppRGCTXDataType)3, 16066 },
+	{ (Il2CppRGCTXDataType)2, 3167 },
+	{ (Il2CppRGCTXDataType)3, 16067 },
+	{ (Il2CppRGCTXDataType)3, 16068 },
+	{ (Il2CppRGCTXDataType)3, 615 },
+	{ (Il2CppRGCTXDataType)2, 455 },
+	{ (Il2CppRGCTXDataType)3, 616 },
+	{ (Il2CppRGCTXDataType)2, 923 },
+	{ (Il2CppRGCTXDataType)2, 3629 },
+	{ (Il2CppRGCTXDataType)2, 3698 },
+	{ (Il2CppRGCTXDataType)3, 22144 },
+	{ (Il2CppRGCTXDataType)3, 192 },
+	{ (Il2CppRGCTXDataType)3, 22145 },
+	{ (Il2CppRGCTXDataType)3, 5785 },
+	{ (Il2CppRGCTXDataType)2, 885 },
+	{ (Il2CppRGCTXDataType)3, 5784 },
+	{ (Il2CppRGCTXDataType)3, 194 },
+	{ (Il2CppRGCTXDataType)3, 21692 },
+	{ (Il2CppRGCTXDataType)3, 193 },
+	{ (Il2CppRGCTXDataType)3, 191 },
+	{ (Il2CppRGCTXDataType)3, 188 },
+	{ (Il2CppRGCTXDataType)3, 21691 },
+	{ (Il2CppRGCTXDataType)3, 621 },
+	{ (Il2CppRGCTXDataType)3, 3818 },
+	{ (Il2CppRGCTXDataType)3, 21693 },
+	{ (Il2CppRGCTXDataType)2, 454 },
+	{ (Il2CppRGCTXDataType)3, 622 },
+	{ (Il2CppRGCTXDataType)3, 620 },
+	{ (Il2CppRGCTXDataType)3, 22161 },
+	{ (Il2CppRGCTXDataType)3, 22052 },
+	{ (Il2CppRGCTXDataType)3, 16125 },
+	{ (Il2CppRGCTXDataType)3, 176 },
+	{ (Il2CppRGCTXDataType)3, 16124 },
+	{ (Il2CppRGCTXDataType)3, 5781 },
+	{ (Il2CppRGCTXDataType)3, 180 },
+	{ (Il2CppRGCTXDataType)3, 12253 },
+	{ (Il2CppRGCTXDataType)3, 5780 },
+	{ (Il2CppRGCTXDataType)2, 1468 },
+	{ (Il2CppRGCTXDataType)3, 22054 },
+	{ (Il2CppRGCTXDataType)3, 22053 },
+	{ (Il2CppRGCTXDataType)3, 3820 },
+	{ (Il2CppRGCTXDataType)3, 3819 },
+	{ (Il2CppRGCTXDataType)2, 3685 },
+	{ (Il2CppRGCTXDataType)3, 12257 },
+	{ (Il2CppRGCTXDataType)3, 187 },
+	{ (Il2CppRGCTXDataType)3, 12255 },
+	{ (Il2CppRGCTXDataType)3, 5783 },
+	{ (Il2CppRGCTXDataType)3, 182 },
+	{ (Il2CppRGCTXDataType)3, 5782 },
+	{ (Il2CppRGCTXDataType)2, 1469 },
+	{ (Il2CppRGCTXDataType)3, 3817 },
+	{ (Il2CppRGCTXDataType)3, 12254 },
+	{ (Il2CppRGCTXDataType)3, 12256 },
+	{ (Il2CppRGCTXDataType)3, 12258 },
+	{ (Il2CppRGCTXDataType)3, 190 },
+	{ (Il2CppRGCTXDataType)3, 183 },
+	{ (Il2CppRGCTXDataType)3, 177 },
+	{ (Il2CppRGCTXDataType)3, 184 },
+	{ (Il2CppRGCTXDataType)3, 178 },
+	{ (Il2CppRGCTXDataType)2, 876 },
+	{ (Il2CppRGCTXDataType)3, 179 },
+	{ (Il2CppRGCTXDataType)3, 26945 },
+	{ (Il2CppRGCTXDataType)3, 26927 },
+	{ (Il2CppRGCTXDataType)3, 189 },
+	{ (Il2CppRGCTXDataType)3, 618 },
+	{ (Il2CppRGCTXDataType)3, 186 },
+	{ (Il2CppRGCTXDataType)3, 185 },
+	{ (Il2CppRGCTXDataType)3, 617 },
+	{ (Il2CppRGCTXDataType)3, 181 },
+	{ (Il2CppRGCTXDataType)3, 619 },
+	{ (Il2CppRGCTXDataType)2, 1377 },
+	{ (Il2CppRGCTXDataType)3, 3816 },
+	{ (Il2CppRGCTXDataType)3, 21687 },
+	{ (Il2CppRGCTXDataType)2, 2822 },
+	{ (Il2CppRGCTXDataType)3, 12252 },
+	{ (Il2CppRGCTXDataType)3, 21698 },
+	{ (Il2CppRGCTXDataType)2, 587 },
+	{ (Il2CppRGCTXDataType)3, 21809 },
+	{ (Il2CppRGCTXDataType)3, 28287 },
+	{ (Il2CppRGCTXDataType)1, 587 },
+	{ (Il2CppRGCTXDataType)3, 21695 },
+	{ (Il2CppRGCTXDataType)3, 21699 },
+	{ (Il2CppRGCTXDataType)3, 21694 },
+	{ (Il2CppRGCTXDataType)3, 21697 },
+	{ (Il2CppRGCTXDataType)3, 21696 },
+	{ (Il2CppRGCTXDataType)2, 2820 },
+	{ (Il2CppRGCTXDataType)3, 12251 },
+	{ (Il2CppRGCTXDataType)2, 3630 },
+	{ (Il2CppRGCTXDataType)2, 2806 },
+	{ (Il2CppRGCTXDataType)3, 12237 },
+	{ (Il2CppRGCTXDataType)2, 1465 },
+	{ (Il2CppRGCTXDataType)3, 5763 },
+	{ (Il2CppRGCTXDataType)3, 3813 },
+	{ (Il2CppRGCTXDataType)3, 3814 },
+	{ (Il2CppRGCTXDataType)2, 3697 },
+	{ (Il2CppRGCTXDataType)3, 22143 },
+	{ (Il2CppRGCTXDataType)3, 3812 },
+	{ (Il2CppRGCTXDataType)3, 3815 },
+	{ (Il2CppRGCTXDataType)3, 7266 },
+	{ (Il2CppRGCTXDataType)3, 7267 },
+	{ (Il2CppRGCTXDataType)3, 11973 },
+	{ (Il2CppRGCTXDataType)3, 7265 },
 };
-extern const Il2CppDebuggerMetadataRegistration g_DebuggerMetadataRegistrationUnity_XR_ARFoundation;
 extern const CustomAttributesCacheGenerator g_Unity_XR_ARFoundation_AttributeGenerators[];
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_Unity_XR_ARFoundation_CodeGenModule;
 const Il2CppCodeGenModule g_Unity_XR_ARFoundation_CodeGenModule = 
 {
 	"Unity.XR.ARFoundation.dll",
-	1002,
+	1004,
 	s_methodPointers,
 	246,
 	s_adjustorThunks,
@@ -4596,7 +4603,7 @@ const Il2CppCodeGenModule g_Unity_XR_ARFoundation_CodeGenModule =
 	s_rgctxIndices,
 	112,
 	s_rgctxValues,
-	&g_DebuggerMetadataRegistrationUnity_XR_ARFoundation,
+	NULL,
 	g_Unity_XR_ARFoundation_AttributeGenerators,
 	NULL, // module initializer,
 	NULL,

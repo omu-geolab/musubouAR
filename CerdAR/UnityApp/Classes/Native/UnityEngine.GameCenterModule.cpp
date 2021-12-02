@@ -136,7 +136,6 @@ struct Void_t700C6383A2A510C2CF4DD86DABD5CA9FF70ADAC5;
 // UnityEngine.SocialPlatforms.GameCenter.GameCenterPlatform/<>c__DisplayClass21_0
 struct U3CU3Ec__DisplayClass21_0_t640615F596448CA7D86AAC8EE3A104A2CE70A95A;
 
-IL2CPP_EXTERN_C Il2CppSequencePoint g_sequencePointsUnityEngine_GameCenterModule[];
 IL2CPP_EXTERN_C RuntimeClass* AchievementDescriptionU5BU5D_t954BACD501480D95EDB68166CB1F6DD9F07EB8D2_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* AchievementDescription_t6C56CB1D0F1F374C45EC0F65D5F1192C170B6506_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* AchievementU5BU5D_tCBFC160A3B2C7C045CB620E9C7234269217245F8_il2cpp_TypeInfo_var;
@@ -191,27 +190,6 @@ IL2CPP_EXTERN_C String_t* _stringLiteralF944DCD635F9801F7AC90A407FBC479964DEC024
 IL2CPP_EXTERN_C String_t* _stringLiteralFABA1134F66E53549701470F4075C6577B953CCA;
 IL2CPP_EXTERN_C String_t* _stringLiteralFD0688D658BDAA1EF7BA141817A3905C0BC5A278;
 IL2CPP_EXTERN_C String_t* _stringLiteralFF16DFE5E3F78763F7473407939171C7C65328F2;
-IL2CPP_EXTERN_C const RuntimeMethod* AchievementDescription_SetImage_mB1653A512095EE6A795031B009513071A559C248_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* AchievementDescription_ToString_m48909B3814359ED0FAF88F29F3B80C024F0C5D36_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* AchievementDescription__ctor_m5EA1DE335B7A97FCDE944FBFD2B979D870D3F37A_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* AchievementDescription_get_achievedDescription_m4901EFA817B61139B1A5284CAF14378A531B7537_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* AchievementDescription_get_hidden_m8FDE6EBDC27F05F8D04B53B4F044B5B06F2EDA0A_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* AchievementDescription_get_id_mD5FEE2DBF0C88887C99E3EDCD9BC65C32EFBAD4A_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* AchievementDescription_get_points_mCBD1A433E28AC73B7AECBE3E41FFDB6B335031AF_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* AchievementDescription_get_title_mF4E46C1A1BBF0087858BE6046604D00DB130E81F_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* AchievementDescription_get_unachievedDescription_m90706792FD9A6FD0BC4975E41E531F91AEC3F33C_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* AchievementDescription_set_id_m61C4DA5B9AD3353518524A8E34723CE7836D432E_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Achievement_ToString_m443278D0F151B7B9BAF041785378EFEAC98E6052_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Achievement__ctor_m570954380BDC68F860E558D037369D03269C72A4_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Achievement__ctor_m6BFE0E7DB18B35A485855AC3B1C0D4E25AB56C0C_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Achievement__ctor_m8E491BFB569F645FC9BF4CC8F58F5718C54901E0_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Achievement_get_completed_m26C3793203BC368F6A44678FEB4E8B94976DC66F_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Achievement_get_hidden_m732D2ED47F705384C1A8CA28E40AADE16944CD11_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Achievement_get_id_m39931C0B44D8A4948E12527FDE77C9211028267B_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Achievement_get_lastReportedDate_m0C90E0EB0392E57E70D62D2FB182527613BB285C_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Achievement_get_percentCompleted_m864BBAA8D955D724A506E62F6741B52D43F38F9D_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Achievement_set_id_m16A4091CBC207FB287FEFF608C5F45D9D21106A0_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Achievement_set_percentCompleted_mD433F22DBB60B94FD45CC2A73C9A22C93B0CB9CB_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Action_1_Invoke_m7C6C3C5F1764D999D845DB6F0D77A136F423A36F_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Action_1_Invoke_m95E5C9FC67F7B0BDC3CD5E00AC5D4C8A00C97AC5_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Action_1_Invoke_mA7A2177CF5EA8FD4A1BB48004EFF7FD908B6ECDD_RuntimeMethod_var;
@@ -221,146 +199,11 @@ IL2CPP_EXTERN_C const RuntimeMethod* Action_2_Invoke_m5925F52EF3E83724269790A53C
 IL2CPP_EXTERN_C const RuntimeMethod* Action_2__ctor_m8A8E912B906E34CBFEA15B86B6D30502102DE1D8_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_Dispose_m4DEA4ABF8AEB43CC9635DAFBD0DBBD013187BD3C_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_MoveNext_mCB5492B7D56FAAF15A6463839B9A80DD16DA33B4_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_get_Current_m9C4EBBD2108B51885E750F927D7936290C8E20EE_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_get_Current_mCB024BFF593508BA9B77C381B20D0942F0F533AA_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* GameCenterPlatform_AchievementCallbackWrapper_m752E3607DDB87BD4D46C63005991FA059EB34A34_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* GameCenterPlatform_AuthenticateCallbackWrapper_m589656EB520DF6FDBD4A01FEF3C81E01F5AAE2AB_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* GameCenterPlatform_ClearAchievementDescriptions_mA72C2A90928D81926EF8BCAB66F7150DE0E489CD_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* GameCenterPlatform_ClearFriends_m9B33314190B858DB062C30278B9588351B2424BC_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* GameCenterPlatform_ClearUsers_m242535F1ED28589D2C91D12CB1FB3330BBE116A1_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* GameCenterPlatform_CreateAchievement_mC8BE646E6BB63CCF284C62FABEE712BF7590DB1A_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* GameCenterPlatform_CreateLeaderboard_mC2B336F8C9569B3FD7059ED7861B208DD44B0EAB_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* GameCenterPlatform_GetLoading_m06F9588A6143126F03D9C0AAEAA853EC1C9FC3C1_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* GameCenterPlatform_LeaderboardCallbackWrapper_m1D0797D04EBCFC94424E7033C9E02D3DA4A8A4B1_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* GameCenterPlatform_LoadAchievementDescriptions_m72A5167A9328B903358163FC83A800B9FCEB9AD6_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* GameCenterPlatform_LoadAchievements_m63737CE0EF90F20A31DD1F43EE3D39D79836DF7F_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* GameCenterPlatform_LoadScores_m54BF2C6FAB4A19BC80B168F3BB985BDBAFA96A1B_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* GameCenterPlatform_LoadScores_mC191ABA1B69A13CC88A44AF25BD89E1D289CBF52_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* GameCenterPlatform_LoadUsers_m10FB18D65C6C997E1AB6F0BEB27891B0C1A4923C_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* GameCenterPlatform_PopulateLocalUser_m06D6DF4CD813CC6AB95B84289871700D99C4EF42_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* GameCenterPlatform_ProgressCallbackWrapper_m936927D783018BF2401D54CA92F8B968C2E3D2B9_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* GameCenterPlatform_ReportProgress_mD284779838DA024C5CA4EC40D1B2ECA25569D5C0_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* GameCenterPlatform_ReportScore_m2ACB935864BC415729EF552832518FA3FF890171_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* GameCenterPlatform_ResetAllAchievements_m0D1E0F3E02F0F8F11B2BC6259032DACD60C95E93_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* GameCenterPlatform_SafeClearArray_m3A96AB8175D512B8EECD0EB25B80769914D34D07_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* GameCenterPlatform_SafeSetUserImage_m346275823D7FDD78D062A4E746AE1C6D2A82F849_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* GameCenterPlatform_ScoreCallbackWrapper_m7F03AD845F9F4969A3ABCE49518FCBCFEB8D1F6A_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* GameCenterPlatform_ScoreLoaderCallbackWrapper_m8E18C1133A5C05CF4449F9D3FADE430BEBBF0DA1_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* GameCenterPlatform_SetAchievementDescriptionImage_mF30697C06E102BA695C5C0A8F1CA7DF665DA592C_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* GameCenterPlatform_SetAchievementDescription_mC153A5A1641CD0ACD697FCA5F8AE700E3AC5D556_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* GameCenterPlatform_SetFriendImage_m0345E60955A58236E7FAF8AFEB97609976891A27_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* GameCenterPlatform_SetFriends_m2C5398BD94DE525FC80494D147F1A66B134511D6_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* GameCenterPlatform_SetUserImage_m36FDEC3247298B1308E85BA4BFD1F8AAAD0E9E7E_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* GameCenterPlatform_SetUser_m67E0DEED2E11D8B4E1EFFB03AB95573F1418903C_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* GameCenterPlatform_ShowAchievementsUI_m425068FBB95E73A5E2C34A8045394F9583F27728_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* GameCenterPlatform_ShowDefaultAchievementCompletionBanner_mF2DF755184E4F2608334418643FD5FB1767B2825_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* GameCenterPlatform_ShowLeaderboardUI_m22ADB2F97963833741FE633EE2D9B332077A3458_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* GameCenterPlatform_ShowLeaderboardUI_m25410C4C825818ABC415F3231AFD4C0B3D80100C_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* GameCenterPlatform_TriggerAchievementDescriptionCallback_m2B6DE7A6A44E667D121C17D2F00EC3126E4F83FE_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* GameCenterPlatform_TriggerFriendsCallbackWrapper_mAAC5526F5A3C56F30959252B475576C305BB7D1B_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* GameCenterPlatform_TriggerResetAchievementCallback_m2E643A3EF41033D83DB9C85BE1090B88735209B4_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* GameCenterPlatform_TriggerUsersCallbackWrapper_mBF798F547F7094681E0B5B5FFEEE221DD7E4CC33_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* GameCenterPlatform_UnityEngine_SocialPlatforms_ISocialPlatform_Authenticate_m1906287A9BD6679297200FD68303DA2CA9BB4EFB_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* GameCenterPlatform_UnityEngine_SocialPlatforms_ISocialPlatform_Authenticate_m3ACFDDBE3CD2501B919983BEDF89463CE33572BE_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* GameCenterPlatform_UnityEngine_SocialPlatforms_ISocialPlatform_LoadFriends_m1DFD532E0674BB256884F22C83495D9FFBB66CB0_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* GameCenterPlatform_VerifyAuthentication_m9605DB240711AB73F461074D8B93F195E894554E_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* GameCenterPlatform__cctor_mE88589D1A6F81068B6E9E2E837C61535E74B4D72_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* GameCenterPlatform__ctor_m12106EF272A85BC20F2CA464C0A92DF42CAB375A_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* GameCenterPlatform_get_localUser_m7E985071FAA0B7393A5B2A056917DF06B41BD0A4_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* GcAchievementData_ToAchievement_mA3EFDC224A485DA99E1ED1CC90DEEB2CB68B539E_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* GcAchievementDescriptionData_ToAchievementDescription_m9942E64237B72699916331A3EED62FC8E0DB8B86_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* GcLeaderboard_Contains_m599B4319BA3FD351DC157B5E23D0489D8186279C_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* GcLeaderboard_Dispose_m54F8C8544A7F65898B6444B3EE11916153C20B6F_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* GcLeaderboard_Finalize_m0DA6F9152780D5EFC4EE884E5CAA6A469CE81E2A_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* GcLeaderboard_Internal_LoadScores_mDFC3A947F5DC0FC7EF83B6C5B605D93BC959675F_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* GcLeaderboard_Loading_m825936D6AB51CC355DAB8DAAF6177AC4ABBC78B2_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* GcLeaderboard_SetLocalScore_mB3EB59503BACFA37E9F112DB5E1906174C67AF32_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* GcLeaderboard_SetMaxRange_m9926B80DD3377EF7798718F0FD57587DADE4DC31_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* GcLeaderboard_SetScores_m0FE1B289E42EAF2415193FFA1BEAE3FE38AA6B4B_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* GcLeaderboard_SetTitle_m964511DCF53C69F7208CDC1DFD68885E2BCECF2A_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* GcLeaderboard__ctor_mC6DCBFD1A415763A634A19381C936254D8B2F4E7_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* GcScoreData_ToScore_m6B29510CCE935E2A67EAFC653CB4A0A4B8B32B49_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* GcUserProfileData_AddToArray_mA189B901FEF32E5CA9AF7DEB58D8143E87E41EC2_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* GcUserProfileData_ToUserProfile_m500A5A38D89D400333D9ED8D2005449AFEC91F24_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Leaderboard_GetUserFilter_m229A294CB0ED73326836FABAC438E517F6517550_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Leaderboard_SetLocalUserScore_m17939BC032AC6FDCC1152234807C50E97A72D600_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Leaderboard_SetMaxRange_m5D699FC22BC5BED04386C4B6D4661663B49FD3B4_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Leaderboard_SetScores_m2DB8C9FB943AD849B23FCEB56D76FAE4E11C2084_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Leaderboard_SetTitle_m5FE6EFFE4099E7BA2B7F1F6644B0A9E1C5A93627_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Leaderboard_ToString_mE59DCCF117736269AF0C6CD21876DB3448BD14ED_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Leaderboard__ctor_mC09955DEF2101303E698FC13E1BBFFA90B3365F4_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Leaderboard_get_id_m4A262BB19BCACE6C9B19874F5D68C777846C6CD6_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Leaderboard_get_range_mB9C6C91869423F791E017B71FCDB17A354585519_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Leaderboard_get_timeScope_mE1F4CBEBE4B2E1E6BD245E3BE518680F13BBF276_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Leaderboard_get_userScope_m8304E736582482D0E5705C109D95F0CEDF2EE54C_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Leaderboard_set_id_mC863AFBCE6B992935BCE9E8B567CDA40CCD94B42_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Leaderboard_set_range_m29352D47548D750E0E42EC9627C861C69D084444_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Leaderboard_set_timeScope_m36122610C955D05BD7FC713415CA78076986B901_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Leaderboard_set_userScope_m66BBCC760CDAF1C44639BD10E4D901EFD7C3F778_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_Add_mFBB409A3035BA1C75E9E4982F2E1BE5A1914141F_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_GetEnumerator_m6D8BF4BBA01F07B5A1439CF1CD3F9264423B1F73_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1__ctor_m48A6C9D0E3E9E9FA4529980A32F48C3AF5520CD8_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* LocalUser_SetAuthenticated_mCAFB7406BCB0A184B405E25695F280DA52EFE582_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* LocalUser_SetFriends_m54CD46805170EDB993E87E0A9FA3BF82A910E489_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* LocalUser_SetUnderage_mA767EE5BC8615E452A6CC57376CA9B9DA601386E_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* LocalUser__ctor_mE1D89C27BD5A6DAE982610A87A472E736644605A_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* LocalUser_get_authenticated_m7D219E0639A779F4527590E43E66F31C2A482BD1_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Range__ctor_mD7BBA6A816E8FBFDDC618308BC5D5882297443F8_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Score_ToString_mBE1B8E8846C633AAA58A0680C888F21915454FC4_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Score__ctor_m88494757EDE00B4CA1BE7027A1F84C82E09EC958_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Score__ctor_m94026C33B1E9EE0F31614511DB8F512E8A7A4FE3_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Score_get_leaderboardID_m079BDC75AED9D8C06DC36F78AC233171F023FB4F_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Score_get_value_m750646EDC0619A11179177F597C21374F13FCB9E_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Score_set_leaderboardID_m05255F12ADDC2FC6D7E9646CBAE68D2924E66F65_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Score_set_value_mFECF5E9D1928EEAE7E46F497CDA159549EEB74C4_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec__DisplayClass21_0_U3CUnityEngine_SocialPlatforms_ISocialPlatform_AuthenticateU3Eb__0_m4B82E8613D69236F6B072A688C556241D1CA9E5C_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec__DisplayClass21_0__ctor_mEAC1B8E5722EF1563CE164CE0A2C2EF061A3B65B_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* UserProfile_SetImage_m756E17B9BFE41D572C76A506E2BDA81A2D7D9605_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* UserProfile_SetLegacyUserID_m707552F7298E3A711C41FF8744C8309276E398A4_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* UserProfile_SetUserGameID_mF610AEAED6A05E06A24F1C2DC82EC8BD5CAAB4E0_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* UserProfile_SetUserID_mD1A6F3DEE1C2887A8EDF41444C1D13A2835DF719_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* UserProfile_SetUserName_m25580633F0CE2894355406F1F8C86CCEA3E79BBA_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* UserProfile_ToString_mE86E8A99DF0EE73C93A55624E890806213567924_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* UserProfile__ctor_m65DBFCC8D74A39E029B7EEBF5B24A8790C3668AA_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* UserProfile__ctor_m82A71921E766018566AFB09BCE3091C8F1055F39_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* UserProfile_get_id_m2C9612A3B81A7F76F86C4FE87AD4D3FADEF3E385_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* UserProfile_get_isFriend_m7ACC8963AD01FB384D215AF8C215DD93CB5322EA_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* UserProfile_get_state_mF93F969F5923A0A3528923E5A452138D00D4E248_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* UserProfile_get_userName_mB127337E5455C94299C39FB66C2965FF3421142E_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeType* AchievementDescription_t6C56CB1D0F1F374C45EC0F65D5F1192C170B6506_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* AchievementU5BU5D_tCBFC160A3B2C7C045CB620E9C7234269217245F8_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* Achievement_t43EB1469B011ADDEF59B6CB30044B878770D3565_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* DateTime_tEAF2CD16E071DF5441F40822E4CFE880E5245405_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* Double_t42821932CB52DE2057E685D0E1AF3DE5033D2181_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* Enumerator_t0CE4A07F744981B45029535658492977F0C12721_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* GcAchievementData_t5391FC501EEDA04D3C45DB4213CAE82CA9ED9C24_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* GcAchievementDescriptionData_tA9C8FD052A0FAD05F5C290DEC026DDF07E81AF9D_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* GcLeaderboard_t65BC1BB657B2E25E7BB1FBBB70ACDE29A3A64B72_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* GcScoreData_tAECE4DD4FB50D9F0B5504A41C1D95B028A5B28EC_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* GcUserProfileData_t18036AD9C18F55CBB882ABACD4DE2771EFFDF03D_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* IAchievementDescriptionU5BU5D_t3F1FEF5DBD0B433C8587E7A2BDD2EBCBC94E41E1_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* IAchievementU5BU5D_t40C1DF79365C403864C689D07CF1857A20C62226_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* IAchievement_t2BF5C828331510A60F01770EDA23C238D9AE8057_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* ILeaderboard_tC996640E43BF8EF5AA958F3BD43113D5A732B99B_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* ILocalUser_t835F1CCDE2ED60F6D514522949B6402B7D871F27_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* IScoreU5BU5D_t9FEEC91A3D90CD5770DA4EFB8DFCF5340A279C5A_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* IUserProfileU5BU5D_t4B36B0CF06DE6A00F5D6D0A015DC3E99B02FC65E_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* Int32_tFDE5F8CD43D10453F6A2E0C77FE48C6CC7009046_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* Int64_t378EE0D608BD3107E77238E85F30D2BBD46981F3_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* Leaderboard_tD587FC5E62BF8F6CC6AC0DF1ABB55D57A60CBE2D_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* LocalUser_t1719BEA57FDD71F6C7B280049E94071CD22D985D_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* Range_t70C133E51417BC822E878050C90A577A69B671DC_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* ScoreU5BU5D_t9262DBDF2A24DE1477F0AC5F217933ABDD6E3127_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* Score_tD70993CC66CCC9CDE0DAB2917533D8094F1E4119_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* String_t_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* TimeScope_t0FDB33C00FF0784F8194FEF48B2BD78C0F9A7759_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* U3CU3Ec__DisplayClass21_0_t640615F596448CA7D86AAC8EE3A104A2CE70A95A_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* UserProfile_tDA4AC2655C2C32774702DDA257938A108AB4C537_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* UserScope_t7EB5D79B9892B749665A462B4832F78C3F57A4C7_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* UserState_t9DD84F7007E65F0FF4D7FF0414BACE5E24D0EA08_0_0_0_var;
 struct Delegate_t_marshaled_com;
 struct Delegate_t_marshaled_pinvoke;
 
@@ -3017,44 +2860,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t UserProfile_get_state_mF93F969F5923A0
 // System.Void UnityEngine.SocialPlatforms.Impl.Achievement::.ctor(System.String,System.Double,System.Boolean,System.Boolean,System.DateTime)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Achievement__ctor_m6BFE0E7DB18B35A485855AC3B1C0D4E25AB56C0C (Achievement_t43EB1469B011ADDEF59B6CB30044B878770D3565 * __this, String_t* ___id0, double ___percentCompleted1, bool ___completed2, bool ___hidden3, DateTime_tEAF2CD16E071DF5441F40822E4CFE880E5245405  ___lastReportedDate4, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Achievement__ctor_m6BFE0E7DB18B35A485855AC3B1C0D4E25AB56C0C_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Achievement_t43EB1469B011ADDEF59B6CB30044B878770D3565_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___id0), (&___percentCompleted1), (&___completed2), (&___hidden3), (&___lastReportedDate4));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Achievement__ctor_m6BFE0E7DB18B35A485855AC3B1C0D4E25AB56C0C_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 117));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 118));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 119));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 127));
 		Object__ctor_m88880E0413421D13FD95325EDCE231707CE1F405(__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 127));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 120));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 121));
 		String_t* L_0 = ___id0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 128));
 		Achievement_set_id_m16A4091CBC207FB287FEFF608C5F45D9D21106A0_inline(__this, L_0, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 128));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 122));
 		double L_1 = ___percentCompleted1;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 129));
 		Achievement_set_percentCompleted_mD433F22DBB60B94FD45CC2A73C9A22C93B0CB9CB_inline(__this, L_1, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 129));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 123));
 		bool L_2 = ___completed2;
 		__this->set_m_Completed_0(L_2);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 124));
 		bool L_3 = ___hidden3;
 		__this->set_m_Hidden_1(L_3);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 125));
 		DateTime_tEAF2CD16E071DF5441F40822E4CFE880E5245405  L_4 = ___lastReportedDate4;
 		__this->set_m_LastReportedDate_2(L_4);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 126));
 		return;
 	}
 }
@@ -3064,41 +2881,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Achievement__ctor_m8E491BFB569F645FC9BF4
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Achievement__ctor_m8E491BFB569F645FC9BF4CC8F58F5718C54901E0_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Achievement_t43EB1469B011ADDEF59B6CB30044B878770D3565_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&DateTime_tEAF2CD16E071DF5441F40822E4CFE880E5245405_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___id0), (&___percent1));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Achievement__ctor_m8E491BFB569F645FC9BF4CC8F58F5718C54901E0_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 130));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 131));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 132));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 140));
 		Object__ctor_m88880E0413421D13FD95325EDCE231707CE1F405(__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 140));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 133));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 134));
 		String_t* L_0 = ___id0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 141));
 		Achievement_set_id_m16A4091CBC207FB287FEFF608C5F45D9D21106A0_inline(__this, L_0, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 141));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 135));
 		double L_1 = ___percent1;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 142));
 		Achievement_set_percentCompleted_mD433F22DBB60B94FD45CC2A73C9A22C93B0CB9CB_inline(__this, L_1, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 142));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 136));
 		__this->set_m_Hidden_1((bool)0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 137));
 		__this->set_m_Completed_0((bool)0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 138));
 		IL2CPP_RUNTIME_CLASS_INIT(DateTime_tEAF2CD16E071DF5441F40822E4CFE880E5245405_il2cpp_TypeInfo_var);
 		DateTime_tEAF2CD16E071DF5441F40822E4CFE880E5245405  L_2 = ((DateTime_tEAF2CD16E071DF5441F40822E4CFE880E5245405_StaticFields*)il2cpp_codegen_static_fields_for(DateTime_tEAF2CD16E071DF5441F40822E4CFE880E5245405_il2cpp_TypeInfo_var))->get_MinValue_31();
 		__this->set_m_LastReportedDate_2(L_2);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 139));
 		return;
 	}
 }
@@ -3108,22 +2904,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Achievement__ctor_m570954380BDC68F860E55
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Achievement__ctor_m570954380BDC68F860E558D037369D03269C72A4_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Achievement_t43EB1469B011ADDEF59B6CB30044B878770D3565_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral2C3323E6A37819D4C4AC310608DA4CF7FB13A968);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Achievement__ctor_m570954380BDC68F860E558D037369D03269C72A4_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 143));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 144));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 145));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 148));
 		Achievement__ctor_m8E491BFB569F645FC9BF4CC8F58F5718C54901E0(__this, _stringLiteral2C3323E6A37819D4C4AC310608DA4CF7FB13A968, (0.0), /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 148));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 146));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 147));
 		return;
 	}
 }
@@ -3133,13 +2918,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Achievement_ToString_m443278D0F151B
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Achievement_ToString_m443278D0F151B7B9BAF041785378EFEAC98E6052_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Achievement_t43EB1469B011ADDEF59B6CB30044B878770D3565_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&DateTime_tEAF2CD16E071DF5441F40822E4CFE880E5245405_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Double_t42821932CB52DE2057E685D0E1AF3DE5033D2181_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&String_t_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral960E5E7F211EFF3243DF14EDD1901DC9EF314D62);
 		s_Il2CppMethodInitialized = true;
 	}
@@ -3148,19 +2927,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Achievement_ToString_m443278D0F151B
 	DateTime_tEAF2CD16E071DF5441F40822E4CFE880E5245405  V_2;
 	memset((&V_2), 0, sizeof(V_2));
 	String_t* V_3 = NULL;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Achievement_ToString_m443278D0F151B7B9BAF041785378EFEAC98E6052_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 149));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 150));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 151));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 152));
 		StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A* L_0 = (StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A*)(StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A*)SZArrayNew(StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A_il2cpp_TypeInfo_var, (uint32_t)((int32_t)9));
 		StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A* L_1 = L_0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 154));
 		String_t* L_2;
 		L_2 = Achievement_get_id_m39931C0B44D8A4948E12527FDE77C9211028267B_inline(__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 154));
 		NullCheck(L_1);
 		ArrayElementTypeCheck (L_1, L_2);
 		(L_1)->SetAt(static_cast<il2cpp_array_size_t>(0), (String_t*)L_2);
@@ -3169,15 +2940,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Achievement_ToString_m443278D0F151B
 		ArrayElementTypeCheck (L_3, _stringLiteral960E5E7F211EFF3243DF14EDD1901DC9EF314D62);
 		(L_3)->SetAt(static_cast<il2cpp_array_size_t>(1), (String_t*)_stringLiteral960E5E7F211EFF3243DF14EDD1901DC9EF314D62);
 		StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A* L_4 = L_3;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 155));
 		double L_5;
 		L_5 = Achievement_get_percentCompleted_m864BBAA8D955D724A506E62F6741B52D43F38F9D_inline(__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 155));
 		V_0 = L_5;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 156));
 		String_t* L_6;
 		L_6 = Double_ToString_m87E4A4DC004A167CF0AE1F2D271BC20A708CE57D((double*)(&V_0), /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 156));
 		NullCheck(L_4);
 		ArrayElementTypeCheck (L_4, L_6);
 		(L_4)->SetAt(static_cast<il2cpp_array_size_t>(2), (String_t*)L_6);
@@ -3186,15 +2953,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Achievement_ToString_m443278D0F151B
 		ArrayElementTypeCheck (L_7, _stringLiteral960E5E7F211EFF3243DF14EDD1901DC9EF314D62);
 		(L_7)->SetAt(static_cast<il2cpp_array_size_t>(3), (String_t*)_stringLiteral960E5E7F211EFF3243DF14EDD1901DC9EF314D62);
 		StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A* L_8 = L_7;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 157));
 		bool L_9;
 		L_9 = Achievement_get_completed_m26C3793203BC368F6A44678FEB4E8B94976DC66F(__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 157));
 		V_1 = L_9;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 158));
 		String_t* L_10;
 		L_10 = Boolean_ToString_m59BB8456DD05A874BBD756E57EA8AD983287015C((bool*)(&V_1), /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 158));
 		NullCheck(L_8);
 		ArrayElementTypeCheck (L_8, L_10);
 		(L_8)->SetAt(static_cast<il2cpp_array_size_t>(4), (String_t*)L_10);
@@ -3203,15 +2966,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Achievement_ToString_m443278D0F151B
 		ArrayElementTypeCheck (L_11, _stringLiteral960E5E7F211EFF3243DF14EDD1901DC9EF314D62);
 		(L_11)->SetAt(static_cast<il2cpp_array_size_t>(5), (String_t*)_stringLiteral960E5E7F211EFF3243DF14EDD1901DC9EF314D62);
 		StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A* L_12 = L_11;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 159));
 		bool L_13;
 		L_13 = Achievement_get_hidden_m732D2ED47F705384C1A8CA28E40AADE16944CD11(__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 159));
 		V_1 = L_13;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 160));
 		String_t* L_14;
 		L_14 = Boolean_ToString_m59BB8456DD05A874BBD756E57EA8AD983287015C((bool*)(&V_1), /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 160));
 		NullCheck(L_12);
 		ArrayElementTypeCheck (L_12, L_14);
 		(L_12)->SetAt(static_cast<il2cpp_array_size_t>(6), (String_t*)L_14);
@@ -3220,29 +2979,22 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Achievement_ToString_m443278D0F151B
 		ArrayElementTypeCheck (L_15, _stringLiteral960E5E7F211EFF3243DF14EDD1901DC9EF314D62);
 		(L_15)->SetAt(static_cast<il2cpp_array_size_t>(7), (String_t*)_stringLiteral960E5E7F211EFF3243DF14EDD1901DC9EF314D62);
 		StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A* L_16 = L_15;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 161));
 		DateTime_tEAF2CD16E071DF5441F40822E4CFE880E5245405  L_17;
 		L_17 = Achievement_get_lastReportedDate_m0C90E0EB0392E57E70D62D2FB182527613BB285C(__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 161));
 		V_2 = L_17;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 162));
 		String_t* L_18;
 		L_18 = DateTime_ToString_m242888E500DFD8CD675BDC455BC696AF47813954((DateTime_tEAF2CD16E071DF5441F40822E4CFE880E5245405 *)(&V_2), /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 162));
 		NullCheck(L_16);
 		ArrayElementTypeCheck (L_16, L_18);
 		(L_16)->SetAt(static_cast<il2cpp_array_size_t>(8), (String_t*)L_18);
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 163));
 		String_t* L_19;
 		L_19 = String_Concat_mFEA7EFA1A6E75B96B1B7BC4526AAC864BFF83CC9(L_16, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 163));
 		V_3 = L_19;
 		goto IL_007d;
 	}
 
 IL_007d:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 153));
 		String_t* L_20 = V_3;
 		return L_20;
 	}
@@ -3250,19 +3002,7 @@ IL_007d:
 // System.String UnityEngine.SocialPlatforms.Impl.Achievement::get_id()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Achievement_get_id_m39931C0B44D8A4948E12527FDE77C9211028267B (Achievement_t43EB1469B011ADDEF59B6CB30044B878770D3565 * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Achievement_get_id_m39931C0B44D8A4948E12527FDE77C9211028267B_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Achievement_t43EB1469B011ADDEF59B6CB30044B878770D3565_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Achievement_get_id_m39931C0B44D8A4948E12527FDE77C9211028267B_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 164));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 165));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 166));
 		String_t* L_0 = __this->get_U3CidU3Ek__BackingField_3();
 		return L_0;
 	}
@@ -3270,20 +3010,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Achievement_get_id_m39931C0B44D8A49
 // System.Void UnityEngine.SocialPlatforms.Impl.Achievement::set_id(System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Achievement_set_id_m16A4091CBC207FB287FEFF608C5F45D9D21106A0 (Achievement_t43EB1469B011ADDEF59B6CB30044B878770D3565 * __this, String_t* ___value0, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Achievement_set_id_m16A4091CBC207FB287FEFF608C5F45D9D21106A0_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Achievement_t43EB1469B011ADDEF59B6CB30044B878770D3565_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___value0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Achievement_set_id_m16A4091CBC207FB287FEFF608C5F45D9D21106A0_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 167));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 168));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 169));
 		String_t* L_0 = ___value0;
 		__this->set_U3CidU3Ek__BackingField_3(L_0);
 		return;
@@ -3292,19 +3019,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Achievement_set_id_m16A4091CBC207FB287FE
 // System.Double UnityEngine.SocialPlatforms.Impl.Achievement::get_percentCompleted()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR double Achievement_get_percentCompleted_m864BBAA8D955D724A506E62F6741B52D43F38F9D (Achievement_t43EB1469B011ADDEF59B6CB30044B878770D3565 * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Achievement_get_percentCompleted_m864BBAA8D955D724A506E62F6741B52D43F38F9D_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Achievement_t43EB1469B011ADDEF59B6CB30044B878770D3565_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Achievement_get_percentCompleted_m864BBAA8D955D724A506E62F6741B52D43F38F9D_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 170));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 171));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 172));
 		double L_0 = __this->get_U3CpercentCompletedU3Ek__BackingField_4();
 		return L_0;
 	}
@@ -3312,20 +3027,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR double Achievement_get_percentCompleted_m864B
 // System.Void UnityEngine.SocialPlatforms.Impl.Achievement::set_percentCompleted(System.Double)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Achievement_set_percentCompleted_mD433F22DBB60B94FD45CC2A73C9A22C93B0CB9CB (Achievement_t43EB1469B011ADDEF59B6CB30044B878770D3565 * __this, double ___value0, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Achievement_set_percentCompleted_mD433F22DBB60B94FD45CC2A73C9A22C93B0CB9CB_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Achievement_t43EB1469B011ADDEF59B6CB30044B878770D3565_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___value0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Achievement_set_percentCompleted_mD433F22DBB60B94FD45CC2A73C9A22C93B0CB9CB_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 173));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 174));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 175));
 		double L_0 = ___value0;
 		__this->set_U3CpercentCompletedU3Ek__BackingField_4(L_0);
 		return;
@@ -3334,22 +3036,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Achievement_set_percentCompleted_mD433F2
 // System.Boolean UnityEngine.SocialPlatforms.Impl.Achievement::get_completed()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Achievement_get_completed_m26C3793203BC368F6A44678FEB4E8B94976DC66F (Achievement_t43EB1469B011ADDEF59B6CB30044B878770D3565 * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Achievement_get_completed_m26C3793203BC368F6A44678FEB4E8B94976DC66F_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Achievement_t43EB1469B011ADDEF59B6CB30044B878770D3565_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	bool V_0 = false;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Achievement_get_completed_m26C3793203BC368F6A44678FEB4E8B94976DC66F_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 176));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 177));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 178));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 179));
 		bool L_0 = __this->get_m_Completed_0();
 		V_0 = L_0;
 		goto IL_000a;
@@ -3357,7 +3045,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Achievement_get_completed_m26C3793203BC3
 
 IL_000a:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 180));
 		bool L_1 = V_0;
 		return L_1;
 	}
@@ -3365,22 +3052,8 @@ IL_000a:
 // System.Boolean UnityEngine.SocialPlatforms.Impl.Achievement::get_hidden()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Achievement_get_hidden_m732D2ED47F705384C1A8CA28E40AADE16944CD11 (Achievement_t43EB1469B011ADDEF59B6CB30044B878770D3565 * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Achievement_get_hidden_m732D2ED47F705384C1A8CA28E40AADE16944CD11_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Achievement_t43EB1469B011ADDEF59B6CB30044B878770D3565_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	bool V_0 = false;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Achievement_get_hidden_m732D2ED47F705384C1A8CA28E40AADE16944CD11_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 181));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 182));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 183));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 184));
 		bool L_0 = __this->get_m_Hidden_1();
 		V_0 = L_0;
 		goto IL_000a;
@@ -3388,7 +3061,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Achievement_get_hidden_m732D2ED47F705384
 
 IL_000a:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 185));
 		bool L_1 = V_0;
 		return L_1;
 	}
@@ -3396,23 +3068,9 @@ IL_000a:
 // System.DateTime UnityEngine.SocialPlatforms.Impl.Achievement::get_lastReportedDate()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DateTime_tEAF2CD16E071DF5441F40822E4CFE880E5245405  Achievement_get_lastReportedDate_m0C90E0EB0392E57E70D62D2FB182527613BB285C (Achievement_t43EB1469B011ADDEF59B6CB30044B878770D3565 * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Achievement_get_lastReportedDate_m0C90E0EB0392E57E70D62D2FB182527613BB285C_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Achievement_t43EB1469B011ADDEF59B6CB30044B878770D3565_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&DateTime_tEAF2CD16E071DF5441F40822E4CFE880E5245405_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	DateTime_tEAF2CD16E071DF5441F40822E4CFE880E5245405  V_0;
 	memset((&V_0), 0, sizeof(V_0));
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Achievement_get_lastReportedDate_m0C90E0EB0392E57E70D62D2FB182527613BB285C_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 186));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 187));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 188));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 189));
 		DateTime_tEAF2CD16E071DF5441F40822E4CFE880E5245405  L_0 = __this->get_m_LastReportedDate_2();
 		V_0 = L_0;
 		goto IL_000a;
@@ -3420,7 +3078,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DateTime_tEAF2CD16E071DF5441F40822E4CFE880E52
 
 IL_000a:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 190));
 		DateTime_tEAF2CD16E071DF5441F40822E4CFE880E5245405  L_1 = V_0;
 		return L_1;
 	}
@@ -3436,48 +3093,22 @@ IL_000a:
 // System.Void UnityEngine.SocialPlatforms.Impl.AchievementDescription::.ctor(System.String,System.String,UnityEngine.Texture2D,System.String,System.String,System.Boolean,System.Int32)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AchievementDescription__ctor_m5EA1DE335B7A97FCDE944FBFD2B979D870D3F37A (AchievementDescription_t6C56CB1D0F1F374C45EC0F65D5F1192C170B6506 * __this, String_t* ___id0, String_t* ___title1, Texture2D_t9B604D0D8E28032123641A7E7338FA872E2698BF * ___image2, String_t* ___achievedDescription3, String_t* ___unachievedDescription4, bool ___hidden5, int32_t ___points6, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AchievementDescription__ctor_m5EA1DE335B7A97FCDE944FBFD2B979D870D3F37A_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AchievementDescription_t6C56CB1D0F1F374C45EC0F65D5F1192C170B6506_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___id0), (&___title1), (&___image2), (&___achievedDescription3), (&___unachievedDescription4), (&___hidden5), (&___points6));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, AchievementDescription__ctor_m5EA1DE335B7A97FCDE944FBFD2B979D870D3F37A_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 191));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 192));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 193));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 203));
 		Object__ctor_m88880E0413421D13FD95325EDCE231707CE1F405(__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 203));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 194));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 195));
 		String_t* L_0 = ___id0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 204));
 		AchievementDescription_set_id_m61C4DA5B9AD3353518524A8E34723CE7836D432E_inline(__this, L_0, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 204));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 196));
 		String_t* L_1 = ___title1;
 		__this->set_m_Title_0(L_1);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 197));
 		Texture2D_t9B604D0D8E28032123641A7E7338FA872E2698BF * L_2 = ___image2;
 		__this->set_m_Image_1(L_2);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 198));
 		String_t* L_3 = ___achievedDescription3;
 		__this->set_m_AchievedDescription_2(L_3);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 199));
 		String_t* L_4 = ___unachievedDescription4;
 		__this->set_m_UnachievedDescription_3(L_4);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 200));
 		bool L_5 = ___hidden5;
 		__this->set_m_Hidden_4(L_5);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 201));
 		int32_t L_6 = ___points6;
 		__this->set_m_Points_5(L_6);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 202));
 		return;
 	}
 }
@@ -3487,31 +3118,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* AchievementDescription_ToString_m48
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AchievementDescription_ToString_m48909B3814359ED0FAF88F29F3B80C024F0C5D36_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AchievementDescription_t6C56CB1D0F1F374C45EC0F65D5F1192C170B6506_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Int32_tFDE5F8CD43D10453F6A2E0C77FE48C6CC7009046_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&String_t_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral960E5E7F211EFF3243DF14EDD1901DC9EF314D62);
 		s_Il2CppMethodInitialized = true;
 	}
 	int32_t V_0 = 0;
 	bool V_1 = false;
 	String_t* V_2 = NULL;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, AchievementDescription_ToString_m48909B3814359ED0FAF88F29F3B80C024F0C5D36_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 205));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 206));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 207));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 208));
 		StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A* L_0 = (StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A*)(StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A*)SZArrayNew(StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A_il2cpp_TypeInfo_var, (uint32_t)((int32_t)11));
 		StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A* L_1 = L_0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 210));
 		String_t* L_2;
 		L_2 = AchievementDescription_get_id_mD5FEE2DBF0C88887C99E3EDCD9BC65C32EFBAD4A_inline(__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 210));
 		NullCheck(L_1);
 		ArrayElementTypeCheck (L_1, L_2);
 		(L_1)->SetAt(static_cast<il2cpp_array_size_t>(0), (String_t*)L_2);
@@ -3520,10 +3138,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* AchievementDescription_ToString_m48
 		ArrayElementTypeCheck (L_3, _stringLiteral960E5E7F211EFF3243DF14EDD1901DC9EF314D62);
 		(L_3)->SetAt(static_cast<il2cpp_array_size_t>(1), (String_t*)_stringLiteral960E5E7F211EFF3243DF14EDD1901DC9EF314D62);
 		StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A* L_4 = L_3;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 211));
 		String_t* L_5;
 		L_5 = AchievementDescription_get_title_mF4E46C1A1BBF0087858BE6046604D00DB130E81F(__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 211));
 		NullCheck(L_4);
 		ArrayElementTypeCheck (L_4, L_5);
 		(L_4)->SetAt(static_cast<il2cpp_array_size_t>(2), (String_t*)L_5);
@@ -3532,10 +3148,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* AchievementDescription_ToString_m48
 		ArrayElementTypeCheck (L_6, _stringLiteral960E5E7F211EFF3243DF14EDD1901DC9EF314D62);
 		(L_6)->SetAt(static_cast<il2cpp_array_size_t>(3), (String_t*)_stringLiteral960E5E7F211EFF3243DF14EDD1901DC9EF314D62);
 		StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A* L_7 = L_6;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 212));
 		String_t* L_8;
 		L_8 = AchievementDescription_get_achievedDescription_m4901EFA817B61139B1A5284CAF14378A531B7537(__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 212));
 		NullCheck(L_7);
 		ArrayElementTypeCheck (L_7, L_8);
 		(L_7)->SetAt(static_cast<il2cpp_array_size_t>(4), (String_t*)L_8);
@@ -3544,10 +3158,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* AchievementDescription_ToString_m48
 		ArrayElementTypeCheck (L_9, _stringLiteral960E5E7F211EFF3243DF14EDD1901DC9EF314D62);
 		(L_9)->SetAt(static_cast<il2cpp_array_size_t>(5), (String_t*)_stringLiteral960E5E7F211EFF3243DF14EDD1901DC9EF314D62);
 		StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A* L_10 = L_9;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 213));
 		String_t* L_11;
 		L_11 = AchievementDescription_get_unachievedDescription_m90706792FD9A6FD0BC4975E41E531F91AEC3F33C(__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 213));
 		NullCheck(L_10);
 		ArrayElementTypeCheck (L_10, L_11);
 		(L_10)->SetAt(static_cast<il2cpp_array_size_t>(6), (String_t*)L_11);
@@ -3556,15 +3168,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* AchievementDescription_ToString_m48
 		ArrayElementTypeCheck (L_12, _stringLiteral960E5E7F211EFF3243DF14EDD1901DC9EF314D62);
 		(L_12)->SetAt(static_cast<il2cpp_array_size_t>(7), (String_t*)_stringLiteral960E5E7F211EFF3243DF14EDD1901DC9EF314D62);
 		StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A* L_13 = L_12;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 214));
 		int32_t L_14;
 		L_14 = AchievementDescription_get_points_mCBD1A433E28AC73B7AECBE3E41FFDB6B335031AF(__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 214));
 		V_0 = L_14;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 215));
 		String_t* L_15;
 		L_15 = Int32_ToString_m340C0A14D16799421EFDF8A81C8A16FA76D48411((int32_t*)(&V_0), /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 215));
 		NullCheck(L_13);
 		ArrayElementTypeCheck (L_13, L_15);
 		(L_13)->SetAt(static_cast<il2cpp_array_size_t>(8), (String_t*)L_15);
@@ -3573,29 +3181,22 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* AchievementDescription_ToString_m48
 		ArrayElementTypeCheck (L_16, _stringLiteral960E5E7F211EFF3243DF14EDD1901DC9EF314D62);
 		(L_16)->SetAt(static_cast<il2cpp_array_size_t>(((int32_t)9)), (String_t*)_stringLiteral960E5E7F211EFF3243DF14EDD1901DC9EF314D62);
 		StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A* L_17 = L_16;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 216));
 		bool L_18;
 		L_18 = AchievementDescription_get_hidden_m8FDE6EBDC27F05F8D04B53B4F044B5B06F2EDA0A(__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 216));
 		V_1 = L_18;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 217));
 		String_t* L_19;
 		L_19 = Boolean_ToString_m59BB8456DD05A874BBD756E57EA8AD983287015C((bool*)(&V_1), /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 217));
 		NullCheck(L_17);
 		ArrayElementTypeCheck (L_17, L_19);
 		(L_17)->SetAt(static_cast<il2cpp_array_size_t>(((int32_t)10)), (String_t*)L_19);
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 218));
 		String_t* L_20;
 		L_20 = String_Concat_mFEA7EFA1A6E75B96B1B7BC4526AAC864BFF83CC9(L_17, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 218));
 		V_2 = L_20;
 		goto IL_0080;
 	}
 
 IL_0080:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 209));
 		String_t* L_21 = V_2;
 		return L_21;
 	}
@@ -3603,43 +3204,16 @@ IL_0080:
 // System.Void UnityEngine.SocialPlatforms.Impl.AchievementDescription::SetImage(UnityEngine.Texture2D)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AchievementDescription_SetImage_mB1653A512095EE6A795031B009513071A559C248 (AchievementDescription_t6C56CB1D0F1F374C45EC0F65D5F1192C170B6506 * __this, Texture2D_t9B604D0D8E28032123641A7E7338FA872E2698BF * ___image0, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AchievementDescription_SetImage_mB1653A512095EE6A795031B009513071A559C248_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AchievementDescription_t6C56CB1D0F1F374C45EC0F65D5F1192C170B6506_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___image0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, AchievementDescription_SetImage_mB1653A512095EE6A795031B009513071A559C248_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 219));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 220));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 221));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 222));
 		Texture2D_t9B604D0D8E28032123641A7E7338FA872E2698BF * L_0 = ___image0;
 		__this->set_m_Image_1(L_0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 223));
 		return;
 	}
 }
 // System.String UnityEngine.SocialPlatforms.Impl.AchievementDescription::get_id()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* AchievementDescription_get_id_mD5FEE2DBF0C88887C99E3EDCD9BC65C32EFBAD4A (AchievementDescription_t6C56CB1D0F1F374C45EC0F65D5F1192C170B6506 * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AchievementDescription_get_id_mD5FEE2DBF0C88887C99E3EDCD9BC65C32EFBAD4A_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AchievementDescription_t6C56CB1D0F1F374C45EC0F65D5F1192C170B6506_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, AchievementDescription_get_id_mD5FEE2DBF0C88887C99E3EDCD9BC65C32EFBAD4A_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 224));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 225));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 226));
 		String_t* L_0 = __this->get_U3CidU3Ek__BackingField_6();
 		return L_0;
 	}
@@ -3647,20 +3221,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* AchievementDescription_get_id_mD5FE
 // System.Void UnityEngine.SocialPlatforms.Impl.AchievementDescription::set_id(System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AchievementDescription_set_id_m61C4DA5B9AD3353518524A8E34723CE7836D432E (AchievementDescription_t6C56CB1D0F1F374C45EC0F65D5F1192C170B6506 * __this, String_t* ___value0, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AchievementDescription_set_id_m61C4DA5B9AD3353518524A8E34723CE7836D432E_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AchievementDescription_t6C56CB1D0F1F374C45EC0F65D5F1192C170B6506_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___value0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, AchievementDescription_set_id_m61C4DA5B9AD3353518524A8E34723CE7836D432E_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 227));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 228));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 229));
 		String_t* L_0 = ___value0;
 		__this->set_U3CidU3Ek__BackingField_6(L_0);
 		return;
@@ -3669,22 +3230,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AchievementDescription_set_id_m61C4DA5B9
 // System.String UnityEngine.SocialPlatforms.Impl.AchievementDescription::get_title()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* AchievementDescription_get_title_mF4E46C1A1BBF0087858BE6046604D00DB130E81F (AchievementDescription_t6C56CB1D0F1F374C45EC0F65D5F1192C170B6506 * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AchievementDescription_get_title_mF4E46C1A1BBF0087858BE6046604D00DB130E81F_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AchievementDescription_t6C56CB1D0F1F374C45EC0F65D5F1192C170B6506_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&String_t_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	String_t* V_0 = NULL;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, AchievementDescription_get_title_mF4E46C1A1BBF0087858BE6046604D00DB130E81F_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 230));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 231));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 232));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 233));
 		String_t* L_0 = __this->get_m_Title_0();
 		V_0 = L_0;
 		goto IL_000a;
@@ -3692,7 +3239,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* AchievementDescription_get_title_mF
 
 IL_000a:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 234));
 		String_t* L_1 = V_0;
 		return L_1;
 	}
@@ -3700,22 +3246,8 @@ IL_000a:
 // System.String UnityEngine.SocialPlatforms.Impl.AchievementDescription::get_achievedDescription()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* AchievementDescription_get_achievedDescription_m4901EFA817B61139B1A5284CAF14378A531B7537 (AchievementDescription_t6C56CB1D0F1F374C45EC0F65D5F1192C170B6506 * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AchievementDescription_get_achievedDescription_m4901EFA817B61139B1A5284CAF14378A531B7537_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AchievementDescription_t6C56CB1D0F1F374C45EC0F65D5F1192C170B6506_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&String_t_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	String_t* V_0 = NULL;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, AchievementDescription_get_achievedDescription_m4901EFA817B61139B1A5284CAF14378A531B7537_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 235));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 236));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 237));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 238));
 		String_t* L_0 = __this->get_m_AchievedDescription_2();
 		V_0 = L_0;
 		goto IL_000a;
@@ -3723,7 +3255,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* AchievementDescription_get_achieved
 
 IL_000a:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 239));
 		String_t* L_1 = V_0;
 		return L_1;
 	}
@@ -3731,22 +3262,8 @@ IL_000a:
 // System.String UnityEngine.SocialPlatforms.Impl.AchievementDescription::get_unachievedDescription()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* AchievementDescription_get_unachievedDescription_m90706792FD9A6FD0BC4975E41E531F91AEC3F33C (AchievementDescription_t6C56CB1D0F1F374C45EC0F65D5F1192C170B6506 * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AchievementDescription_get_unachievedDescription_m90706792FD9A6FD0BC4975E41E531F91AEC3F33C_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AchievementDescription_t6C56CB1D0F1F374C45EC0F65D5F1192C170B6506_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&String_t_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	String_t* V_0 = NULL;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, AchievementDescription_get_unachievedDescription_m90706792FD9A6FD0BC4975E41E531F91AEC3F33C_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 240));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 241));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 242));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 243));
 		String_t* L_0 = __this->get_m_UnachievedDescription_3();
 		V_0 = L_0;
 		goto IL_000a;
@@ -3754,7 +3271,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* AchievementDescription_get_unachiev
 
 IL_000a:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 244));
 		String_t* L_1 = V_0;
 		return L_1;
 	}
@@ -3762,22 +3278,8 @@ IL_000a:
 // System.Boolean UnityEngine.SocialPlatforms.Impl.AchievementDescription::get_hidden()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool AchievementDescription_get_hidden_m8FDE6EBDC27F05F8D04B53B4F044B5B06F2EDA0A (AchievementDescription_t6C56CB1D0F1F374C45EC0F65D5F1192C170B6506 * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AchievementDescription_get_hidden_m8FDE6EBDC27F05F8D04B53B4F044B5B06F2EDA0A_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AchievementDescription_t6C56CB1D0F1F374C45EC0F65D5F1192C170B6506_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	bool V_0 = false;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, AchievementDescription_get_hidden_m8FDE6EBDC27F05F8D04B53B4F044B5B06F2EDA0A_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 245));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 246));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 247));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 248));
 		bool L_0 = __this->get_m_Hidden_4();
 		V_0 = L_0;
 		goto IL_000a;
@@ -3785,7 +3287,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool AchievementDescription_get_hidden_m8FDE6
 
 IL_000a:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 249));
 		bool L_1 = V_0;
 		return L_1;
 	}
@@ -3793,22 +3294,8 @@ IL_000a:
 // System.Int32 UnityEngine.SocialPlatforms.Impl.AchievementDescription::get_points()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t AchievementDescription_get_points_mCBD1A433E28AC73B7AECBE3E41FFDB6B335031AF (AchievementDescription_t6C56CB1D0F1F374C45EC0F65D5F1192C170B6506 * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AchievementDescription_get_points_mCBD1A433E28AC73B7AECBE3E41FFDB6B335031AF_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AchievementDescription_t6C56CB1D0F1F374C45EC0F65D5F1192C170B6506_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Int32_tFDE5F8CD43D10453F6A2E0C77FE48C6CC7009046_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	int32_t V_0 = 0;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, AchievementDescription_get_points_mCBD1A433E28AC73B7AECBE3E41FFDB6B335031AF_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 250));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 251));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 252));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 253));
 		int32_t L_0 = __this->get_m_Points_5();
 		V_0 = L_0;
 		goto IL_000a;
@@ -3816,7 +3303,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t AchievementDescription_get_points_mCB
 
 IL_000a:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 254));
 		int32_t L_1 = V_0;
 		return L_1;
 	}
@@ -3836,20 +3322,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameCenterPlatform_ClearAchievementDescr
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AchievementDescriptionU5BU5D_t954BACD501480D95EDB68166CB1F6DD9F07EB8D2_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_ClearAchievementDescriptions_mA72C2A90928D81926EF8BCAB66F7150DE0E489CD_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	bool V_0 = false;
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___size0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GameCenterPlatform_ClearAchievementDescriptions_mA72C2A90928D81926EF8BCAB66F7150DE0E489CD_RuntimeMethod_var, NULL, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 427));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 428));
 	int32_t G_B3_0 = 0;
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 429));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 430));
 		IL2CPP_RUNTIME_CLASS_INIT(GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var);
 		AchievementDescriptionU5BU5D_t954BACD501480D95EDB68166CB1F6DD9F07EB8D2* L_0 = ((GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_StaticFields*)il2cpp_codegen_static_fields_for(GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var))->get_s_adCache_1();
 		if (!L_0)
@@ -3874,7 +3352,6 @@ IL_0017:
 IL_0018:
 	{
 		V_0 = (bool)G_B3_0;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 431));
 		bool L_3 = V_0;
 		if (!L_3)
 		{
@@ -3882,7 +3359,6 @@ IL_0018:
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 432));
 		int32_t L_4 = ___size0;
 		AchievementDescriptionU5BU5D_t954BACD501480D95EDB68166CB1F6DD9F07EB8D2* L_5 = (AchievementDescriptionU5BU5D_t954BACD501480D95EDB68166CB1F6DD9F07EB8D2*)(AchievementDescriptionU5BU5D_t954BACD501480D95EDB68166CB1F6DD9F07EB8D2*)SZArrayNew(AchievementDescriptionU5BU5D_t954BACD501480D95EDB68166CB1F6DD9F07EB8D2_il2cpp_TypeInfo_var, (uint32_t)L_4);
 		IL2CPP_RUNTIME_CLASS_INIT(GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var);
@@ -3891,7 +3367,6 @@ IL_0018:
 
 IL_0027:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 433));
 		return;
 	}
 }
@@ -3901,28 +3376,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameCenterPlatform_SetAchievementDescrip
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_SetAchievementDescription_mC153A5A1641CD0ACD697FCA5F8AE700E3AC5D556_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___data0), (&___number1));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GameCenterPlatform_SetAchievementDescription_mC153A5A1641CD0ACD697FCA5F8AE700E3AC5D556_RuntimeMethod_var, NULL, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 434));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 435));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 436));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 437));
 		IL2CPP_RUNTIME_CLASS_INIT(GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var);
 		AchievementDescriptionU5BU5D_t954BACD501480D95EDB68166CB1F6DD9F07EB8D2* L_0 = ((GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_StaticFields*)il2cpp_codegen_static_fields_for(GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var))->get_s_adCache_1();
 		int32_t L_1 = ___number1;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 439));
 		AchievementDescription_t6C56CB1D0F1F374C45EC0F65D5F1192C170B6506 * L_2;
 		L_2 = GcAchievementDescriptionData_ToAchievementDescription_m9942E64237B72699916331A3EED62FC8E0DB8B86((GcAchievementDescriptionData_tA9C8FD052A0FAD05F5C290DEC026DDF07E81AF9D *)(&___data0), /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 439));
 		NullCheck(L_0);
 		ArrayElementTypeCheck (L_0, L_2);
 		(L_0)->SetAt(static_cast<il2cpp_array_size_t>(L_1), (AchievementDescription_t6C56CB1D0F1F374C45EC0F65D5F1192C170B6506 *)L_2);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 438));
 		return;
 	}
 }
@@ -3932,22 +3397,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameCenterPlatform_SetAchievementDescrip
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_tEB68BCBEB8EFD60F8043C67146DC05E7F50F374B_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_SetAchievementDescriptionImage_mF30697C06E102BA695C5C0A8F1CA7DF665DA592C_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral0EB9CEC404FAEC84F4591C2F0DAF1F030A3878B0);
 		s_Il2CppMethodInitialized = true;
 	}
 	bool V_0 = false;
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___texture0), (&___number1));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GameCenterPlatform_SetAchievementDescriptionImage_mF30697C06E102BA695C5C0A8F1CA7DF665DA592C_RuntimeMethod_var, NULL, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 440));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 441));
 	int32_t G_B3_0 = 0;
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 442));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 443));
 		IL2CPP_RUNTIME_CLASS_INIT(GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var);
 		AchievementDescriptionU5BU5D_t954BACD501480D95EDB68166CB1F6DD9F07EB8D2* L_0 = ((GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_StaticFields*)il2cpp_codegen_static_fields_for(GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var))->get_s_adCache_1();
 		NullCheck(L_0);
@@ -3971,7 +3428,6 @@ IL_0011:
 IL_0012:
 	{
 		V_0 = (bool)G_B3_0;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 444));
 		bool L_3 = V_0;
 		if (!L_3)
 		{
@@ -3979,19 +3435,13 @@ IL_0012:
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 445));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 446));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 450));
 		IL2CPP_RUNTIME_CLASS_INIT(Debug_tEB68BCBEB8EFD60F8043C67146DC05E7F50F374B_il2cpp_TypeInfo_var);
 		Debug_Log_mC26E5AD0D8D156C7FFD173AA15827F69225E9DB8(_stringLiteral0EB9CEC404FAEC84F4591C2F0DAF1F030A3878B0, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 450));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 447));
 		goto IL_0032;
 	}
 
 IL_0024:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 448));
 		IL2CPP_RUNTIME_CLASS_INIT(GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var);
 		AchievementDescriptionU5BU5D_t954BACD501480D95EDB68166CB1F6DD9F07EB8D2* L_4 = ((GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_StaticFields*)il2cpp_codegen_static_fields_for(GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var))->get_s_adCache_1();
 		int32_t L_5 = ___number1;
@@ -3999,15 +3449,12 @@ IL_0024:
 		int32_t L_6 = L_5;
 		AchievementDescription_t6C56CB1D0F1F374C45EC0F65D5F1192C170B6506 * L_7 = (L_4)->GetAt(static_cast<il2cpp_array_size_t>(L_6));
 		Texture2D_t9B604D0D8E28032123641A7E7338FA872E2698BF * L_8 = ___texture0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 451));
 		NullCheck(L_7);
 		AchievementDescription_SetImage_mB1653A512095EE6A795031B009513071A559C248(L_7, L_8, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 451));
 	}
 
 IL_0032:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 449));
 		return;
 	}
 }
@@ -4018,25 +3465,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameCenterPlatform_TriggerAchievementDes
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Action_1_Invoke_m7C6C3C5F1764D999D845DB6F0D77A136F423A36F_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_tEB68BCBEB8EFD60F8043C67146DC05E7F50F374B_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_TriggerAchievementDescriptionCallback_m2B6DE7A6A44E667D121C17D2F00EC3126E4F83FE_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IAchievementDescriptionU5BU5D_t3F1FEF5DBD0B433C8587E7A2BDD2EBCBC94E41E1_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralA2DEA6E90B0DC1F971A74DE11F62EA8333A737B9);
 		s_Il2CppMethodInitialized = true;
 	}
 	bool V_0 = false;
 	bool V_1 = false;
 	IAchievementDescriptionU5BU5D_t3F1FEF5DBD0B433C8587E7A2BDD2EBCBC94E41E1* V_2 = NULL;
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___callback0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GameCenterPlatform_TriggerAchievementDescriptionCallback_m2B6DE7A6A44E667D121C17D2F00EC3126E4F83FE_RuntimeMethod_var, NULL, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 452));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 453));
 	int32_t G_B3_0 = 0;
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 454));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 455));
 		Action_1_t6BE44411481D525A2A8991ACF188CB12B5635480 * L_0 = ___callback0;
 		if (!L_0)
 		{
@@ -4058,7 +3496,6 @@ IL_000e:
 IL_000f:
 	{
 		V_0 = (bool)G_B3_0;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 456));
 		bool L_2 = V_0;
 		if (!L_2)
 		{
@@ -4066,13 +3503,10 @@ IL_000f:
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 457));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 458));
 		IL2CPP_RUNTIME_CLASS_INIT(GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var);
 		AchievementDescriptionU5BU5D_t954BACD501480D95EDB68166CB1F6DD9F07EB8D2* L_3 = ((GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_StaticFields*)il2cpp_codegen_static_fields_for(GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var))->get_s_adCache_1();
 		NullCheck(L_3);
 		V_1 = (bool)((((int32_t)(((RuntimeArray*)L_3)->max_length)) == ((int32_t)0))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 459));
 		bool L_4 = V_1;
 		if (!L_4)
 		{
@@ -4080,31 +3514,23 @@ IL_000f:
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 460));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 464));
 		IL2CPP_RUNTIME_CLASS_INIT(Debug_tEB68BCBEB8EFD60F8043C67146DC05E7F50F374B_il2cpp_TypeInfo_var);
 		Debug_Log_mC26E5AD0D8D156C7FFD173AA15827F69225E9DB8(_stringLiteralA2DEA6E90B0DC1F971A74DE11F62EA8333A737B9, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 464));
 	}
 
 IL_002c:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 461));
 		Action_1_t6BE44411481D525A2A8991ACF188CB12B5635480 * L_5 = ___callback0;
 		IL2CPP_RUNTIME_CLASS_INIT(GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var);
 		AchievementDescriptionU5BU5D_t954BACD501480D95EDB68166CB1F6DD9F07EB8D2* L_6 = ((GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_StaticFields*)il2cpp_codegen_static_fields_for(GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var))->get_s_adCache_1();
 		V_2 = (IAchievementDescriptionU5BU5D_t3F1FEF5DBD0B433C8587E7A2BDD2EBCBC94E41E1*)L_6;
 		IAchievementDescriptionU5BU5D_t3F1FEF5DBD0B433C8587E7A2BDD2EBCBC94E41E1* L_7 = V_2;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 465));
 		NullCheck(L_5);
 		Action_1_Invoke_m7C6C3C5F1764D999D845DB6F0D77A136F423A36F(L_5, L_7, /*hidden argument*/Action_1_Invoke_m7C6C3C5F1764D999D845DB6F0D77A136F423A36F_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 465));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 462));
 	}
 
 IL_003b:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 463));
 		return;
 	}
 }
@@ -4115,31 +3541,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameCenterPlatform_AuthenticateCallbackW
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Action_2_Invoke_m5925F52EF3E83724269790A53C11A051658A2766_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_AuthenticateCallbackWrapper_m589656EB520DF6FDBD4A01FEF3C81E01F5AAE2AB_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	bool V_0 = false;
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___result0), (&___error1));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GameCenterPlatform_AuthenticateCallbackWrapper_m589656EB520DF6FDBD4A01FEF3C81E01F5AAE2AB_RuntimeMethod_var, NULL, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 466));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 467));
 	Action_2_t88E033566C44CCAAB72BD2C7604420B260FD3BF3 * G_B3_0 = NULL;
 	Action_2_t88E033566C44CCAAB72BD2C7604420B260FD3BF3 * G_B2_0 = NULL;
 	int32_t G_B4_0 = 0;
 	Action_2_t88E033566C44CCAAB72BD2C7604420B260FD3BF3 * G_B4_1 = NULL;
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 468));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 469));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 477));
 		IL2CPP_RUNTIME_CLASS_INIT(GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var);
 		GameCenterPlatform_PopulateLocalUser_m06D6DF4CD813CC6AB95B84289871700D99C4EF42(/*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 477));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 470));
 		Action_2_t88E033566C44CCAAB72BD2C7604420B260FD3BF3 * L_0 = ((GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_StaticFields*)il2cpp_codegen_static_fields_for(GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var))->get_s_AuthenticateCallback_0();
 		V_0 = (bool)((!(((RuntimeObject*)(Action_2_t88E033566C44CCAAB72BD2C7604420B260FD3BF3 *)L_0) <= ((RuntimeObject*)(RuntimeObject *)NULL)))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 471));
 		bool L_1 = V_0;
 		if (!L_1)
 		{
@@ -4147,8 +3561,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameCenterPlatform_AuthenticateCallbackW
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 472));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 473));
 		IL2CPP_RUNTIME_CLASS_INIT(GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var);
 		Action_2_t88E033566C44CCAAB72BD2C7604420B260FD3BF3 * L_2 = ((GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_StaticFields*)il2cpp_codegen_static_fields_for(GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var))->get_s_AuthenticateCallback_0();
 		int32_t L_3 = ___result0;
@@ -4174,19 +3586,14 @@ IL_0020:
 IL_0021:
 	{
 		String_t* L_4 = ___error1;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 478));
 		NullCheck(G_B4_1);
 		Action_2_Invoke_m5925F52EF3E83724269790A53C11A051658A2766(G_B4_1, (bool)G_B4_0, L_4, /*hidden argument*/Action_2_Invoke_m5925F52EF3E83724269790A53C11A051658A2766_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 478));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 474));
 		IL2CPP_RUNTIME_CLASS_INIT(GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var);
 		((GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_StaticFields*)il2cpp_codegen_static_fields_for(GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var))->set_s_AuthenticateCallback_0((Action_2_t88E033566C44CCAAB72BD2C7604420B260FD3BF3 *)NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 475));
 	}
 
 IL_002f:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 476));
 		return;
 	}
 }
@@ -4196,23 +3603,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameCenterPlatform_ClearFriends_m9B33314
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_ClearFriends_m9B33314190B858DB062C30278B9588351B2424BC_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___size0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GameCenterPlatform_ClearFriends_m9B33314190B858DB062C30278B9588351B2424BC_RuntimeMethod_var, NULL, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 479));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 480));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 481));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 482));
 		IL2CPP_RUNTIME_CLASS_INIT(GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var);
 		int32_t L_0 = ___size0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 484));
 		GameCenterPlatform_SafeClearArray_m3A96AB8175D512B8EECD0EB25B80769914D34D07((UserProfileU5BU5D_tAED4B41D0866F8A4C6D403C2074ACEC812A78769**)(((GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_StaticFields*)il2cpp_codegen_static_fields_for(GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var))->get_address_of_s_friends_2()), L_0, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 484));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 483));
 		return;
 	}
 }
@@ -4222,23 +3619,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameCenterPlatform_SetFriends_m2C5398BD9
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_SetFriends_m2C5398BD94DE525FC80494D147F1A66B134511D6_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___data0), (&___number1));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GameCenterPlatform_SetFriends_m2C5398BD94DE525FC80494D147F1A66B134511D6_RuntimeMethod_var, NULL, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 485));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 486));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 487));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 488));
 		IL2CPP_RUNTIME_CLASS_INIT(GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var);
 		int32_t L_0 = ___number1;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 490));
 		GcUserProfileData_AddToArray_mA189B901FEF32E5CA9AF7DEB58D8143E87E41EC2((GcUserProfileData_t18036AD9C18F55CBB882ABACD4DE2771EFFDF03D *)(&___data0), (UserProfileU5BU5D_tAED4B41D0866F8A4C6D403C2074ACEC812A78769**)(((GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_StaticFields*)il2cpp_codegen_static_fields_for(GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var))->get_address_of_s_friends_2()), L_0, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 490));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 489));
 		return;
 	}
 }
@@ -4248,24 +3635,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameCenterPlatform_SetFriendImage_m0345E
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_SetFriendImage_m0345E60955A58236E7FAF8AFEB97609976891A27_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___texture0), (&___number1));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GameCenterPlatform_SetFriendImage_m0345E60955A58236E7FAF8AFEB97609976891A27_RuntimeMethod_var, NULL, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 491));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 492));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 493));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 494));
 		IL2CPP_RUNTIME_CLASS_INIT(GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var);
 		Texture2D_t9B604D0D8E28032123641A7E7338FA872E2698BF * L_0 = ___texture0;
 		int32_t L_1 = ___number1;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 496));
 		GameCenterPlatform_SafeSetUserImage_m346275823D7FDD78D062A4E746AE1C6D2A82F849((UserProfileU5BU5D_tAED4B41D0866F8A4C6D403C2074ACEC812A78769**)(((GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_StaticFields*)il2cpp_codegen_static_fields_for(GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var))->get_address_of_s_friends_2()), L_0, L_1, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 496));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 495));
 		return;
 	}
 }
@@ -4276,30 +3653,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameCenterPlatform_TriggerFriendsCallbac
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Action_1_Invoke_m95E5C9FC67F7B0BDC3CD5E00AC5D4C8A00C97AC5_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_TriggerFriendsCallbackWrapper_mAAC5526F5A3C56F30959252B475576C305BB7D1B_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IUserProfileU5BU5D_t4B36B0CF06DE6A00F5D6D0A015DC3E99B02FC65E_0_0_0_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	bool V_0 = false;
 	IUserProfileU5BU5D_t4B36B0CF06DE6A00F5D6D0A015DC3E99B02FC65E* V_1 = NULL;
 	bool V_2 = false;
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___callback0), (&___result1));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GameCenterPlatform_TriggerFriendsCallbackWrapper_mAAC5526F5A3C56F30959252B475576C305BB7D1B_RuntimeMethod_var, NULL, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 497));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 498));
 	Action_1_tCE2D770918A65CAD277C08C4E8C05385EA267E83 * G_B5_0 = NULL;
 	Action_1_tCE2D770918A65CAD277C08C4E8C05385EA267E83 * G_B4_0 = NULL;
 	int32_t G_B6_0 = 0;
 	Action_1_tCE2D770918A65CAD277C08C4E8C05385EA267E83 * G_B6_1 = NULL;
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 499));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 500));
 		IL2CPP_RUNTIME_CLASS_INIT(GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var);
 		UserProfileU5BU5D_tAED4B41D0866F8A4C6D403C2074ACEC812A78769* L_0 = ((GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_StaticFields*)il2cpp_codegen_static_fields_for(GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var))->get_s_friends_2();
 		V_0 = (bool)((!(((RuntimeObject*)(UserProfileU5BU5D_tAED4B41D0866F8A4C6D403C2074ACEC812A78769*)L_0) <= ((RuntimeObject*)(RuntimeObject *)NULL)))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 501));
 		bool L_1 = V_0;
 		if (!L_1)
 		{
@@ -4307,24 +3674,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameCenterPlatform_TriggerFriendsCallbac
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 502));
 		IL2CPP_RUNTIME_CLASS_INIT(GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var);
 		LocalUser_t1719BEA57FDD71F6C7B280049E94071CD22D985D * L_2 = ((GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_StaticFields*)il2cpp_codegen_static_fields_for(GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var))->get_m_LocalUser_5();
 		UserProfileU5BU5D_tAED4B41D0866F8A4C6D403C2074ACEC812A78769* L_3 = ((GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_StaticFields*)il2cpp_codegen_static_fields_for(GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var))->get_s_friends_2();
 		V_1 = (IUserProfileU5BU5D_t4B36B0CF06DE6A00F5D6D0A015DC3E99B02FC65E*)L_3;
 		IUserProfileU5BU5D_t4B36B0CF06DE6A00F5D6D0A015DC3E99B02FC65E* L_4 = V_1;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 507));
 		NullCheck(L_2);
 		LocalUser_SetFriends_m54CD46805170EDB993E87E0A9FA3BF82A910E489(L_2, L_4, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 507));
 	}
 
 IL_001f:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 503));
 		Action_1_tCE2D770918A65CAD277C08C4E8C05385EA267E83 * L_5 = ___callback0;
 		V_2 = (bool)((!(((RuntimeObject*)(Action_1_tCE2D770918A65CAD277C08C4E8C05385EA267E83 *)L_5) <= ((RuntimeObject*)(RuntimeObject *)NULL)))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 504));
 		bool L_6 = V_2;
 		if (!L_6)
 		{
@@ -4332,7 +3694,6 @@ IL_001f:
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 505));
 		Action_1_tCE2D770918A65CAD277C08C4E8C05385EA267E83 * L_7 = ___callback0;
 		int32_t L_8 = ___result1;
 		G_B4_0 = L_7;
@@ -4356,15 +3717,12 @@ IL_002f:
 
 IL_0030:
 	{
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 508));
 		NullCheck(G_B6_1);
 		Action_1_Invoke_m95E5C9FC67F7B0BDC3CD5E00AC5D4C8A00C97AC5(G_B6_1, (bool)G_B6_0, /*hidden argument*/Action_1_Invoke_m95E5C9FC67F7B0BDC3CD5E00AC5D4C8A00C97AC5_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 508));
 	}
 
 IL_0036:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 506));
 		return;
 	}
 }
@@ -4374,14 +3732,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameCenterPlatform_AchievementCallbackWr
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AchievementU5BU5D_tCBFC160A3B2C7C045CB620E9C7234269217245F8_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AchievementU5BU5D_tCBFC160A3B2C7C045CB620E9C7234269217245F8_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Action_1_Invoke_mDF86C44E0ADACB34B3B7C5D612D877175F036EF3_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_tEB68BCBEB8EFD60F8043C67146DC05E7F50F374B_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_AchievementCallbackWrapper_m752E3607DDB87BD4D46C63005991FA059EB34A34_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IAchievementU5BU5D_t40C1DF79365C403864C689D07CF1857A20C62226_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Int32_tFDE5F8CD43D10453F6A2E0C77FE48C6CC7009046_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral882BAF03B0FD95D4EBE6743DD230FAF39A3ED9BC);
 		s_Il2CppMethodInitialized = true;
 	}
@@ -4391,17 +3744,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameCenterPlatform_AchievementCallbackWr
 	int32_t V_3 = 0;
 	bool V_4 = false;
 	IAchievementU5BU5D_t40C1DF79365C403864C689D07CF1857A20C62226* V_5 = NULL;
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___callback0), (&___result1));
-	DECLARE_METHOD_LOCALS(methodExecutionContextLocals, (&V_1), (&V_3));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GameCenterPlatform_AchievementCallbackWrapper_m752E3607DDB87BD4D46C63005991FA059EB34A34_RuntimeMethod_var, NULL, methodExecutionContextParameters, methodExecutionContextLocals);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 509));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 510));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 511));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 512));
 		Action_1_t7570552C35A220ADB9666809E4D57E4C10713634 * L_0 = ___callback0;
 		V_0 = (bool)((!(((RuntimeObject*)(Action_1_t7570552C35A220ADB9666809E4D57E4C10713634 *)L_0) <= ((RuntimeObject*)(RuntimeObject *)NULL)))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 513));
 		bool L_1 = V_0;
 		if (!L_1)
 		{
@@ -4409,12 +3754,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameCenterPlatform_AchievementCallbackWr
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 514));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 515));
 		GcAchievementDataU5BU5D_tCD72536D71151B9A7D34D91323DC731058903FC7* L_2 = ___result1;
 		NullCheck(L_2);
 		V_2 = (bool)((((int32_t)(((RuntimeArray*)L_2)->max_length)) == ((int32_t)0))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 516));
 		bool L_3 = V_2;
 		if (!L_3)
 		{
@@ -4422,54 +3764,42 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameCenterPlatform_AchievementCallbackWr
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 517));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 528));
 		IL2CPP_RUNTIME_CLASS_INIT(Debug_tEB68BCBEB8EFD60F8043C67146DC05E7F50F374B_il2cpp_TypeInfo_var);
 		Debug_Log_mC26E5AD0D8D156C7FFD173AA15827F69225E9DB8(_stringLiteral882BAF03B0FD95D4EBE6743DD230FAF39A3ED9BC, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 528));
 	}
 
 IL_001e:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 518));
 		GcAchievementDataU5BU5D_tCD72536D71151B9A7D34D91323DC731058903FC7* L_4 = ___result1;
 		NullCheck(L_4);
 		AchievementU5BU5D_tCBFC160A3B2C7C045CB620E9C7234269217245F8* L_5 = (AchievementU5BU5D_tCBFC160A3B2C7C045CB620E9C7234269217245F8*)(AchievementU5BU5D_tCBFC160A3B2C7C045CB620E9C7234269217245F8*)SZArrayNew(AchievementU5BU5D_tCBFC160A3B2C7C045CB620E9C7234269217245F8_il2cpp_TypeInfo_var, (uint32_t)((int32_t)((int32_t)(((RuntimeArray*)L_4)->max_length))));
 		V_1 = L_5;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 519));
 		V_3 = 0;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 520));
 		goto IL_003e;
 	}
 
 IL_002b:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 521));
 		AchievementU5BU5D_tCBFC160A3B2C7C045CB620E9C7234269217245F8* L_6 = V_1;
 		int32_t L_7 = V_3;
 		GcAchievementDataU5BU5D_tCD72536D71151B9A7D34D91323DC731058903FC7* L_8 = ___result1;
 		int32_t L_9 = V_3;
 		NullCheck(L_8);
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 529));
 		Achievement_t43EB1469B011ADDEF59B6CB30044B878770D3565 * L_10;
 		L_10 = GcAchievementData_ToAchievement_mA3EFDC224A485DA99E1ED1CC90DEEB2CB68B539E((GcAchievementData_t5391FC501EEDA04D3C45DB4213CAE82CA9ED9C24 *)((L_8)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_9))), /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 529));
 		NullCheck(L_6);
 		ArrayElementTypeCheck (L_6, L_10);
 		(L_6)->SetAt(static_cast<il2cpp_array_size_t>(L_7), (Achievement_t43EB1469B011ADDEF59B6CB30044B878770D3565 *)L_10);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 522));
 		int32_t L_11 = V_3;
 		V_3 = ((int32_t)il2cpp_codegen_add((int32_t)L_11, (int32_t)1));
 	}
 
 IL_003e:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 523));
 		int32_t L_12 = V_3;
 		GcAchievementDataU5BU5D_tCD72536D71151B9A7D34D91323DC731058903FC7* L_13 = ___result1;
 		NullCheck(L_13);
 		V_4 = (bool)((((int32_t)L_12) < ((int32_t)((int32_t)((int32_t)(((RuntimeArray*)L_13)->max_length)))))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 524));
 		bool L_14 = V_4;
 		if (L_14)
 		{
@@ -4477,21 +3807,16 @@ IL_003e:
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 525));
 		Action_1_t7570552C35A220ADB9666809E4D57E4C10713634 * L_15 = ___callback0;
 		AchievementU5BU5D_tCBFC160A3B2C7C045CB620E9C7234269217245F8* L_16 = V_1;
 		V_5 = (IAchievementU5BU5D_t40C1DF79365C403864C689D07CF1857A20C62226*)L_16;
 		IAchievementU5BU5D_t40C1DF79365C403864C689D07CF1857A20C62226* L_17 = V_5;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 530));
 		NullCheck(L_15);
 		Action_1_Invoke_mDF86C44E0ADACB34B3B7C5D612D877175F036EF3(L_15, L_17, /*hidden argument*/Action_1_Invoke_mDF86C44E0ADACB34B3B7C5D612D877175F036EF3_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 530));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 526));
 	}
 
 IL_0057:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 527));
 		return;
 	}
 }
@@ -4502,21 +3827,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameCenterPlatform_ProgressCallbackWrapp
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Action_1_Invoke_m95E5C9FC67F7B0BDC3CD5E00AC5D4C8A00C97AC5_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_ProgressCallbackWrapper_m936927D783018BF2401D54CA92F8B968C2E3D2B9_RuntimeMethod_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	bool V_0 = false;
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___callback0), (&___success1));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GameCenterPlatform_ProgressCallbackWrapper_m936927D783018BF2401D54CA92F8B968C2E3D2B9_RuntimeMethod_var, NULL, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 531));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 532));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 533));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 534));
 		Action_1_tCE2D770918A65CAD277C08C4E8C05385EA267E83 * L_0 = ___callback0;
 		V_0 = (bool)((!(((RuntimeObject*)(Action_1_tCE2D770918A65CAD277C08C4E8C05385EA267E83 *)L_0) <= ((RuntimeObject*)(RuntimeObject *)NULL)))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 535));
 		bool L_1 = V_0;
 		if (!L_1)
 		{
@@ -4524,18 +3840,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameCenterPlatform_ProgressCallbackWrapp
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 536));
 		Action_1_tCE2D770918A65CAD277C08C4E8C05385EA267E83 * L_2 = ___callback0;
 		bool L_3 = ___success1;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 538));
 		NullCheck(L_2);
 		Action_1_Invoke_m95E5C9FC67F7B0BDC3CD5E00AC5D4C8A00C97AC5(L_2, L_3, /*hidden argument*/Action_1_Invoke_m95E5C9FC67F7B0BDC3CD5E00AC5D4C8A00C97AC5_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 538));
 	}
 
 IL_0011:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 537));
 		return;
 	}
 }
@@ -4546,21 +3858,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameCenterPlatform_ScoreCallbackWrapper_
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Action_1_Invoke_m95E5C9FC67F7B0BDC3CD5E00AC5D4C8A00C97AC5_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_ScoreCallbackWrapper_m7F03AD845F9F4969A3ABCE49518FCBCFEB8D1F6A_RuntimeMethod_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	bool V_0 = false;
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___callback0), (&___success1));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GameCenterPlatform_ScoreCallbackWrapper_m7F03AD845F9F4969A3ABCE49518FCBCFEB8D1F6A_RuntimeMethod_var, NULL, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 539));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 540));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 541));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 542));
 		Action_1_tCE2D770918A65CAD277C08C4E8C05385EA267E83 * L_0 = ___callback0;
 		V_0 = (bool)((!(((RuntimeObject*)(Action_1_tCE2D770918A65CAD277C08C4E8C05385EA267E83 *)L_0) <= ((RuntimeObject*)(RuntimeObject *)NULL)))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 543));
 		bool L_1 = V_0;
 		if (!L_1)
 		{
@@ -4568,18 +3871,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameCenterPlatform_ScoreCallbackWrapper_
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 544));
 		Action_1_tCE2D770918A65CAD277C08C4E8C05385EA267E83 * L_2 = ___callback0;
 		bool L_3 = ___success1;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 546));
 		NullCheck(L_2);
 		Action_1_Invoke_m95E5C9FC67F7B0BDC3CD5E00AC5D4C8A00C97AC5(L_2, L_3, /*hidden argument*/Action_1_Invoke_m95E5C9FC67F7B0BDC3CD5E00AC5D4C8A00C97AC5_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 546));
 	}
 
 IL_0011:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 545));
 		return;
 	}
 }
@@ -4590,11 +3889,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameCenterPlatform_ScoreLoaderCallbackWr
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Action_1_Invoke_mA7A2177CF5EA8FD4A1BB48004EFF7FD908B6ECDD_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_ScoreLoaderCallbackWrapper_m8E18C1133A5C05CF4449F9D3FADE430BEBBF0DA1_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IScoreU5BU5D_t9FEEC91A3D90CD5770DA4EFB8DFCF5340A279C5A_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Int32_tFDE5F8CD43D10453F6A2E0C77FE48C6CC7009046_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ScoreU5BU5D_t9262DBDF2A24DE1477F0AC5F217933ABDD6E3127_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ScoreU5BU5D_t9262DBDF2A24DE1477F0AC5F217933ABDD6E3127_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
@@ -4603,17 +3897,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameCenterPlatform_ScoreLoaderCallbackWr
 	int32_t V_2 = 0;
 	bool V_3 = false;
 	IScoreU5BU5D_t9FEEC91A3D90CD5770DA4EFB8DFCF5340A279C5A* V_4 = NULL;
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___callback0), (&___result1));
-	DECLARE_METHOD_LOCALS(methodExecutionContextLocals, (&V_1), (&V_2));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GameCenterPlatform_ScoreLoaderCallbackWrapper_m8E18C1133A5C05CF4449F9D3FADE430BEBBF0DA1_RuntimeMethod_var, NULL, methodExecutionContextParameters, methodExecutionContextLocals);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 547));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 548));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 549));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 550));
 		Action_1_tB92B5B1B4250DFE4170303183808B95C5495CB10 * L_0 = ___callback0;
 		V_0 = (bool)((!(((RuntimeObject*)(Action_1_tB92B5B1B4250DFE4170303183808B95C5495CB10 *)L_0) <= ((RuntimeObject*)(RuntimeObject *)NULL)))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 551));
 		bool L_1 = V_0;
 		if (!L_1)
 		{
@@ -4621,46 +3907,36 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameCenterPlatform_ScoreLoaderCallbackWr
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 552));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 553));
 		GcScoreDataU5BU5D_t23A52711105AEEB9D50CE62EE09DD06826C3DD1D* L_2 = ___result1;
 		NullCheck(L_2);
 		ScoreU5BU5D_t9262DBDF2A24DE1477F0AC5F217933ABDD6E3127* L_3 = (ScoreU5BU5D_t9262DBDF2A24DE1477F0AC5F217933ABDD6E3127*)(ScoreU5BU5D_t9262DBDF2A24DE1477F0AC5F217933ABDD6E3127*)SZArrayNew(ScoreU5BU5D_t9262DBDF2A24DE1477F0AC5F217933ABDD6E3127_il2cpp_TypeInfo_var, (uint32_t)((int32_t)((int32_t)(((RuntimeArray*)L_2)->max_length))));
 		V_1 = L_3;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 554));
 		V_2 = 0;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 555));
 		goto IL_002a;
 	}
 
 IL_0017:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 556));
 		ScoreU5BU5D_t9262DBDF2A24DE1477F0AC5F217933ABDD6E3127* L_4 = V_1;
 		int32_t L_5 = V_2;
 		GcScoreDataU5BU5D_t23A52711105AEEB9D50CE62EE09DD06826C3DD1D* L_6 = ___result1;
 		int32_t L_7 = V_2;
 		NullCheck(L_6);
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 563));
 		Score_tD70993CC66CCC9CDE0DAB2917533D8094F1E4119 * L_8;
 		L_8 = GcScoreData_ToScore_m6B29510CCE935E2A67EAFC653CB4A0A4B8B32B49((GcScoreData_tAECE4DD4FB50D9F0B5504A41C1D95B028A5B28EC *)((L_6)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_7))), /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 563));
 		NullCheck(L_4);
 		ArrayElementTypeCheck (L_4, L_8);
 		(L_4)->SetAt(static_cast<il2cpp_array_size_t>(L_5), (Score_tD70993CC66CCC9CDE0DAB2917533D8094F1E4119 *)L_8);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 557));
 		int32_t L_9 = V_2;
 		V_2 = ((int32_t)il2cpp_codegen_add((int32_t)L_9, (int32_t)1));
 	}
 
 IL_002a:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 558));
 		int32_t L_10 = V_2;
 		GcScoreDataU5BU5D_t23A52711105AEEB9D50CE62EE09DD06826C3DD1D* L_11 = ___result1;
 		NullCheck(L_11);
 		V_3 = (bool)((((int32_t)L_10) < ((int32_t)((int32_t)((int32_t)(((RuntimeArray*)L_11)->max_length)))))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 559));
 		bool L_12 = V_3;
 		if (L_12)
 		{
@@ -4668,21 +3944,16 @@ IL_002a:
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 560));
 		Action_1_tB92B5B1B4250DFE4170303183808B95C5495CB10 * L_13 = ___callback0;
 		ScoreU5BU5D_t9262DBDF2A24DE1477F0AC5F217933ABDD6E3127* L_14 = V_1;
 		V_4 = (IScoreU5BU5D_t9FEEC91A3D90CD5770DA4EFB8DFCF5340A279C5A*)L_14;
 		IScoreU5BU5D_t9FEEC91A3D90CD5770DA4EFB8DFCF5340A279C5A* L_15 = V_4;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 564));
 		NullCheck(L_13);
 		Action_1_Invoke_mA7A2177CF5EA8FD4A1BB48004EFF7FD908B6ECDD(L_13, L_15, /*hidden argument*/Action_1_Invoke_mA7A2177CF5EA8FD4A1BB48004EFF7FD908B6ECDD_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 564));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 561));
 	}
 
 IL_0041:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 562));
 		return;
 	}
 }
@@ -4693,28 +3964,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameCenterPlatform_UnityEngine_SocialPla
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Action_1_Invoke_m95E5C9FC67F7B0BDC3CD5E00AC5D4C8A00C97AC5_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_UnityEngine_SocialPlatforms_ISocialPlatform_LoadFriends_m1DFD532E0674BB256884F22C83495D9FFBB66CB0_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	bool V_0 = false;
 	bool V_1 = false;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___user0), (&___callback1));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GameCenterPlatform_UnityEngine_SocialPlatforms_ISocialPlatform_LoadFriends_m1DFD532E0674BB256884F22C83495D9FFBB66CB0_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 565));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 566));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 567));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 568));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 577));
 		bool L_0;
 		L_0 = GameCenterPlatform_VerifyAuthentication_m9605DB240711AB73F461074D8B93F195E894554E(__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 577));
 		V_0 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 569));
 		bool L_1 = V_0;
 		if (!L_1)
 		{
@@ -4722,11 +3980,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameCenterPlatform_UnityEngine_SocialPla
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 570));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 571));
 		Action_1_tCE2D770918A65CAD277C08C4E8C05385EA267E83 * L_2 = ___callback1;
 		V_1 = (bool)((!(((RuntimeObject*)(Action_1_tCE2D770918A65CAD277C08C4E8C05385EA267E83 *)L_2) <= ((RuntimeObject*)(RuntimeObject *)NULL)))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 572));
 		bool L_3 = V_1;
 		if (!L_3)
 		{
@@ -4734,33 +3989,25 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameCenterPlatform_UnityEngine_SocialPla
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 573));
 		Action_1_tCE2D770918A65CAD277C08C4E8C05385EA267E83 * L_4 = ___callback1;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 578));
 		NullCheck(L_4);
 		Action_1_Invoke_m95E5C9FC67F7B0BDC3CD5E00AC5D4C8A00C97AC5(L_4, (bool)0, /*hidden argument*/Action_1_Invoke_m95E5C9FC67F7B0BDC3CD5E00AC5D4C8A00C97AC5_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 578));
 	}
 
 IL_001f:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 574));
 		goto IL_0028;
 	}
 
 IL_0021:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 575));
 		Action_1_tCE2D770918A65CAD277C08C4E8C05385EA267E83 * L_5 = ___callback1;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 579));
 		IL2CPP_RUNTIME_CLASS_INIT(GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var);
 		GameCenterPlatform_LoadFriends_mF485A93E33F5672A6EDDC74B856AD432FBF12803(L_5, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 579));
 	}
 
 IL_0028:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 576));
 		return;
 	}
 }
@@ -4772,44 +4019,25 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameCenterPlatform_UnityEngine_SocialPla
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Action_2__ctor_m8A8E912B906E34CBFEA15B86B6D30502102DE1D8_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Action_2_t88E033566C44CCAAB72BD2C7604420B260FD3BF3_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_UnityEngine_SocialPlatforms_ISocialPlatform_Authenticate_m1906287A9BD6679297200FD68303DA2CA9BB4EFB_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ISocialPlatform_t1C068CBA4F0B5F2B2EBC76E64A1DEC7CBFBED92D_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec__DisplayClass21_0_U3CUnityEngine_SocialPlatforms_ISocialPlatform_AuthenticateU3Eb__0_m4B82E8613D69236F6B072A688C556241D1CA9E5C_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec__DisplayClass21_0_t640615F596448CA7D86AAC8EE3A104A2CE70A95A_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec__DisplayClass21_0_t640615F596448CA7D86AAC8EE3A104A2CE70A95A_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	U3CU3Ec__DisplayClass21_0_t640615F596448CA7D86AAC8EE3A104A2CE70A95A * V_0 = NULL;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___user0), (&___callback1));
-	DECLARE_METHOD_LOCALS(methodExecutionContextLocals, (&V_0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GameCenterPlatform_UnityEngine_SocialPlatforms_ISocialPlatform_Authenticate_m1906287A9BD6679297200FD68303DA2CA9BB4EFB_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, methodExecutionContextLocals);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 580));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 581));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 582));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 586));
 		U3CU3Ec__DisplayClass21_0_t640615F596448CA7D86AAC8EE3A104A2CE70A95A * L_0 = (U3CU3Ec__DisplayClass21_0_t640615F596448CA7D86AAC8EE3A104A2CE70A95A *)il2cpp_codegen_object_new(U3CU3Ec__DisplayClass21_0_t640615F596448CA7D86AAC8EE3A104A2CE70A95A_il2cpp_TypeInfo_var);
 		U3CU3Ec__DisplayClass21_0__ctor_mEAC1B8E5722EF1563CE164CE0A2C2EF061A3B65B(L_0, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 586));
 		V_0 = L_0;
 		U3CU3Ec__DisplayClass21_0_t640615F596448CA7D86AAC8EE3A104A2CE70A95A * L_1 = V_0;
 		Action_1_tCE2D770918A65CAD277C08C4E8C05385EA267E83 * L_2 = ___callback1;
 		NullCheck(L_1);
 		L_1->set_callback_0(L_2);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 583));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 584));
 		RuntimeObject* L_3 = ___user0;
 		U3CU3Ec__DisplayClass21_0_t640615F596448CA7D86AAC8EE3A104A2CE70A95A * L_4 = V_0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 587));
 		Action_2_t88E033566C44CCAAB72BD2C7604420B260FD3BF3 * L_5 = (Action_2_t88E033566C44CCAAB72BD2C7604420B260FD3BF3 *)il2cpp_codegen_object_new(Action_2_t88E033566C44CCAAB72BD2C7604420B260FD3BF3_il2cpp_TypeInfo_var);
 		Action_2__ctor_m8A8E912B906E34CBFEA15B86B6D30502102DE1D8(L_5, L_4, (intptr_t)((intptr_t)U3CU3Ec__DisplayClass21_0_U3CUnityEngine_SocialPlatforms_ISocialPlatform_AuthenticateU3Eb__0_m4B82E8613D69236F6B072A688C556241D1CA9E5C_RuntimeMethod_var), /*hidden argument*/Action_2__ctor_m8A8E912B906E34CBFEA15B86B6D30502102DE1D8_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 587));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 588));
 		InterfaceActionInvoker2< RuntimeObject*, Action_2_t88E033566C44CCAAB72BD2C7604420B260FD3BF3 * >::Invoke(1 /* System.Void UnityEngine.SocialPlatforms.ISocialPlatform::Authenticate(UnityEngine.SocialPlatforms.ILocalUser,System.Action`2<System.Boolean,System.String>) */, ISocialPlatform_t1C068CBA4F0B5F2B2EBC76E64A1DEC7CBFBED92D_il2cpp_TypeInfo_var, __this, L_3, L_5);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 588));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 585));
 		return;
 	}
 }
@@ -4819,27 +4047,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameCenterPlatform_UnityEngine_SocialPla
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_UnityEngine_SocialPlatforms_ISocialPlatform_Authenticate_m3ACFDDBE3CD2501B919983BEDF89463CE33572BE_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___user0), (&___callback1));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GameCenterPlatform_UnityEngine_SocialPlatforms_ISocialPlatform_Authenticate_m3ACFDDBE3CD2501B919983BEDF89463CE33572BE_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 589));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 590));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 591));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 592));
 		Action_2_t88E033566C44CCAAB72BD2C7604420B260FD3BF3 * L_0 = ___callback1;
 		IL2CPP_RUNTIME_CLASS_INIT(GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var);
 		((GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_StaticFields*)il2cpp_codegen_static_fields_for(GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var))->set_s_AuthenticateCallback_0(L_0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 593));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 595));
 		GameCenterPlatform_Authenticate_mB8E4AEEB9851A5F0545980B87B72181CFF0B550C(/*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 595));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 594));
 		return;
 	}
 }
@@ -4849,11 +4064,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* GameCenterPlatform_get_localUs
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_get_localUser_m7E985071FAA0B7393A5B2A056917DF06B41BD0A4_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ILocalUser_t835F1CCDE2ED60F6D514522949B6402B7D871F27_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&LocalUser_t1719BEA57FDD71F6C7B280049E94071CD22D985D_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralF944DCD635F9801F7AC90A407FBC479964DEC024);
 		s_Il2CppMethodInitialized = true;
@@ -4861,18 +4072,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* GameCenterPlatform_get_localUs
 	bool V_0 = false;
 	bool V_1 = false;
 	RuntimeObject* V_2 = NULL;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GameCenterPlatform_get_localUser_m7E985071FAA0B7393A5B2A056917DF06B41BD0A4_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 596));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 597));
 	int32_t G_B5_0 = 0;
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 598));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 599));
 		IL2CPP_RUNTIME_CLASS_INIT(GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var);
 		LocalUser_t1719BEA57FDD71F6C7B280049E94071CD22D985D * L_0 = ((GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_StaticFields*)il2cpp_codegen_static_fields_for(GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var))->get_m_LocalUser_5();
 		V_0 = (bool)((((RuntimeObject*)(LocalUser_t1719BEA57FDD71F6C7B280049E94071CD22D985D *)L_0) == ((RuntimeObject*)(RuntimeObject *)NULL))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 600));
 		bool L_1 = V_0;
 		if (!L_1)
 		{
@@ -4880,23 +4084,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* GameCenterPlatform_get_localUs
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 601));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 607));
 		LocalUser_t1719BEA57FDD71F6C7B280049E94071CD22D985D * L_2 = (LocalUser_t1719BEA57FDD71F6C7B280049E94071CD22D985D *)il2cpp_codegen_object_new(LocalUser_t1719BEA57FDD71F6C7B280049E94071CD22D985D_il2cpp_TypeInfo_var);
 		LocalUser__ctor_mE1D89C27BD5A6DAE982610A87A472E736644605A(L_2, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 607));
 		IL2CPP_RUNTIME_CLASS_INIT(GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var);
 		((GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_StaticFields*)il2cpp_codegen_static_fields_for(GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var))->set_m_LocalUser_5(L_2);
 	}
 
 IL_0017:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 602));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 608));
 		IL2CPP_RUNTIME_CLASS_INIT(GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var);
 		bool L_3;
 		L_3 = GameCenterPlatform_GetAuthenticated_m8A876D69350A2F69A65D25DBE9A4FDAB04C51C4D(/*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 608));
 		if (!L_3)
 		{
 			goto IL_0034;
@@ -4905,15 +4103,11 @@ IL_0017:
 	{
 		IL2CPP_RUNTIME_CLASS_INIT(GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var);
 		LocalUser_t1719BEA57FDD71F6C7B280049E94071CD22D985D * L_4 = ((GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_StaticFields*)il2cpp_codegen_static_fields_for(GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var))->get_m_LocalUser_5();
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 609));
 		NullCheck(L_4);
 		String_t* L_5;
 		L_5 = UserProfile_get_id_m2C9612A3B81A7F76F86C4FE87AD4D3FADEF3E385(L_4, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 609));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 610));
 		bool L_6;
 		L_6 = String_op_Equality_m2B91EE68355F142F67095973D32EB5828B7B73CB(L_5, _stringLiteralF944DCD635F9801F7AC90A407FBC479964DEC024, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 610));
 		G_B5_0 = ((int32_t)(L_6));
 		goto IL_0035;
 	}
@@ -4926,7 +4120,6 @@ IL_0034:
 IL_0035:
 	{
 		V_1 = (bool)G_B5_0;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 603));
 		bool L_7 = V_1;
 		if (!L_7)
 		{
@@ -4934,16 +4127,12 @@ IL_0035:
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 604));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 611));
 		IL2CPP_RUNTIME_CLASS_INIT(GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var);
 		GameCenterPlatform_PopulateLocalUser_m06D6DF4CD813CC6AB95B84289871700D99C4EF42(/*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 611));
 	}
 
 IL_003f:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 605));
 		IL2CPP_RUNTIME_CLASS_INIT(GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var);
 		LocalUser_t1719BEA57FDD71F6C7B280049E94071CD22D985D * L_8 = ((GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_StaticFields*)il2cpp_codegen_static_fields_for(GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var))->get_m_LocalUser_5();
 		V_2 = L_8;
@@ -4952,7 +4141,6 @@ IL_003f:
 
 IL_0047:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 606));
 		RuntimeObject* L_9 = V_2;
 		return L_9;
 	}
@@ -4963,87 +4151,46 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameCenterPlatform_PopulateLocalUser_m06
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_PopulateLocalUser_m06D6DF4CD813CC6AB95B84289871700D99C4EF42_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GameCenterPlatform_PopulateLocalUser_m06D6DF4CD813CC6AB95B84289871700D99C4EF42_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 612));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 613));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 614));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 615));
 		IL2CPP_RUNTIME_CLASS_INIT(GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var);
 		LocalUser_t1719BEA57FDD71F6C7B280049E94071CD22D985D * L_0 = ((GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_StaticFields*)il2cpp_codegen_static_fields_for(GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var))->get_m_LocalUser_5();
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 623));
 		bool L_1;
 		L_1 = GameCenterPlatform_GetAuthenticated_m8A876D69350A2F69A65D25DBE9A4FDAB04C51C4D(/*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 623));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 624));
 		NullCheck(L_0);
 		LocalUser_SetAuthenticated_mCAFB7406BCB0A184B405E25695F280DA52EFE582(L_0, L_1, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 624));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 616));
 		LocalUser_t1719BEA57FDD71F6C7B280049E94071CD22D985D * L_2 = ((GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_StaticFields*)il2cpp_codegen_static_fields_for(GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var))->get_m_LocalUser_5();
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 625));
 		String_t* L_3;
 		L_3 = GameCenterPlatform_Internal_UserName_m7C31CCEE889F1F57D3B6670E15B269C341201F8A(/*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 625));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 626));
 		NullCheck(L_2);
 		UserProfile_SetUserName_m25580633F0CE2894355406F1F8C86CCEA3E79BBA(L_2, L_3, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 626));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 617));
 		LocalUser_t1719BEA57FDD71F6C7B280049E94071CD22D985D * L_4 = ((GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_StaticFields*)il2cpp_codegen_static_fields_for(GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var))->get_m_LocalUser_5();
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 627));
 		String_t* L_5;
 		L_5 = GameCenterPlatform_Internal_UserID_m6824E492EA2AB9A62D41799A4B1867E3BD0D2FD2(/*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 627));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 628));
 		NullCheck(L_4);
 		UserProfile_SetUserID_mD1A6F3DEE1C2887A8EDF41444C1D13A2835DF719(L_4, L_5, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 628));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 618));
 		LocalUser_t1719BEA57FDD71F6C7B280049E94071CD22D985D * L_6 = ((GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_StaticFields*)il2cpp_codegen_static_fields_for(GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var))->get_m_LocalUser_5();
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 629));
 		String_t* L_7;
 		L_7 = GameCenterPlatform_Internal_UserGameID_mBA46211C39FE80D6AA3861101144FADD41A5D04E(/*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 629));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 630));
 		NullCheck(L_6);
 		UserProfile_SetUserGameID_mF610AEAED6A05E06A24F1C2DC82EC8BD5CAAB4E0(L_6, L_7, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 630));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 619));
 		LocalUser_t1719BEA57FDD71F6C7B280049E94071CD22D985D * L_8 = ((GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_StaticFields*)il2cpp_codegen_static_fields_for(GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var))->get_m_LocalUser_5();
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 631));
 		String_t* L_9;
 		L_9 = GameCenterPlatform_Internal_LegacyUserID_mCC8B227725CC5C36B02A81C7DD02CC094A71113F(/*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 631));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 632));
 		NullCheck(L_8);
 		UserProfile_SetLegacyUserID_m707552F7298E3A711C41FF8744C8309276E398A4(L_8, L_9, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 632));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 620));
 		LocalUser_t1719BEA57FDD71F6C7B280049E94071CD22D985D * L_10 = ((GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_StaticFields*)il2cpp_codegen_static_fields_for(GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var))->get_m_LocalUser_5();
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 633));
 		bool L_11;
 		L_11 = GameCenterPlatform_GetIsUnderage_m7776069236A4DAC99BCFE0920155F901A18B1EC4(/*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 633));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 634));
 		NullCheck(L_10);
 		LocalUser_SetUnderage_mA767EE5BC8615E452A6CC57376CA9B9DA601386E(L_10, L_11, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 634));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 621));
 		LocalUser_t1719BEA57FDD71F6C7B280049E94071CD22D985D * L_12 = ((GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_StaticFields*)il2cpp_codegen_static_fields_for(GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var))->get_m_LocalUser_5();
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 635));
 		Texture2D_t9B604D0D8E28032123641A7E7338FA872E2698BF * L_13;
 		L_13 = GameCenterPlatform_GetUserImage_mA57365C677E0CB5B1C1B6B8E20361C9D58DA73C5(/*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 635));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 636));
 		NullCheck(L_12);
 		UserProfile_SetImage_m756E17B9BFE41D572C76A506E2BDA81A2D7D9605(L_12, L_13, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 636));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 622));
 		return;
 	}
 }
@@ -5055,30 +4202,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameCenterPlatform_LoadAchievementDescri
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AchievementDescriptionU5BU5D_t954BACD501480D95EDB68166CB1F6DD9F07EB8D2_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Action_1_Invoke_m7C6C3C5F1764D999D845DB6F0D77A136F423A36F_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_LoadAchievementDescriptions_m72A5167A9328B903358163FC83A800B9FCEB9AD6_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IAchievementDescriptionU5BU5D_t3F1FEF5DBD0B433C8587E7A2BDD2EBCBC94E41E1_0_0_0_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	bool V_0 = false;
 	bool V_1 = false;
 	IAchievementDescriptionU5BU5D_t3F1FEF5DBD0B433C8587E7A2BDD2EBCBC94E41E1* V_2 = NULL;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___callback0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GameCenterPlatform_LoadAchievementDescriptions_m72A5167A9328B903358163FC83A800B9FCEB9AD6_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 637));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 638));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 639));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 640));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 649));
 		bool L_0;
 		L_0 = GameCenterPlatform_VerifyAuthentication_m9605DB240711AB73F461074D8B93F195E894554E(__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 649));
 		V_0 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 641));
 		bool L_1 = V_0;
 		if (!L_1)
 		{
@@ -5086,11 +4219,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameCenterPlatform_LoadAchievementDescri
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 642));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 643));
 		Action_1_t6BE44411481D525A2A8991ACF188CB12B5635480 * L_2 = ___callback0;
 		V_1 = (bool)((!(((RuntimeObject*)(Action_1_t6BE44411481D525A2A8991ACF188CB12B5635480 *)L_2) <= ((RuntimeObject*)(RuntimeObject *)NULL)))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 644));
 		bool L_3 = V_1;
 		if (!L_3)
 		{
@@ -5098,36 +4228,28 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameCenterPlatform_LoadAchievementDescri
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 645));
 		Action_1_t6BE44411481D525A2A8991ACF188CB12B5635480 * L_4 = ___callback0;
 		AchievementDescriptionU5BU5D_t954BACD501480D95EDB68166CB1F6DD9F07EB8D2* L_5 = (AchievementDescriptionU5BU5D_t954BACD501480D95EDB68166CB1F6DD9F07EB8D2*)(AchievementDescriptionU5BU5D_t954BACD501480D95EDB68166CB1F6DD9F07EB8D2*)SZArrayNew(AchievementDescriptionU5BU5D_t954BACD501480D95EDB68166CB1F6DD9F07EB8D2_il2cpp_TypeInfo_var, (uint32_t)0);
 		V_2 = (IAchievementDescriptionU5BU5D_t3F1FEF5DBD0B433C8587E7A2BDD2EBCBC94E41E1*)L_5;
 		IAchievementDescriptionU5BU5D_t3F1FEF5DBD0B433C8587E7A2BDD2EBCBC94E41E1* L_6 = V_2;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 650));
 		NullCheck(L_4);
 		Action_1_Invoke_m7C6C3C5F1764D999D845DB6F0D77A136F423A36F(L_4, L_6, /*hidden argument*/Action_1_Invoke_m7C6C3C5F1764D999D845DB6F0D77A136F423A36F_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 650));
 	}
 
 IL_0026:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 646));
 		goto IL_002f;
 	}
 
 IL_0028:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 647));
 		Action_1_t6BE44411481D525A2A8991ACF188CB12B5635480 * L_7 = ___callback0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 651));
 		IL2CPP_RUNTIME_CLASS_INIT(GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var);
 		GameCenterPlatform_InternalLoadAchievementDescriptions_mEF3BDD5E9E1C4B53A18B2C848D526E695CDB94E4(L_7, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 651));
 	}
 
 IL_002f:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 648));
 		return;
 	}
 }
@@ -5138,28 +4260,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameCenterPlatform_ReportProgress_mD2847
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Action_1_Invoke_m95E5C9FC67F7B0BDC3CD5E00AC5D4C8A00C97AC5_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_ReportProgress_mD284779838DA024C5CA4EC40D1B2ECA25569D5C0_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	bool V_0 = false;
 	bool V_1 = false;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___id0), (&___progress1), (&___callback2));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GameCenterPlatform_ReportProgress_mD284779838DA024C5CA4EC40D1B2ECA25569D5C0_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 652));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 653));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 654));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 655));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 664));
 		bool L_0;
 		L_0 = GameCenterPlatform_VerifyAuthentication_m9605DB240711AB73F461074D8B93F195E894554E(__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 664));
 		V_0 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 656));
 		bool L_1 = V_0;
 		if (!L_1)
 		{
@@ -5167,11 +4276,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameCenterPlatform_ReportProgress_mD2847
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 657));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 658));
 		Action_1_tCE2D770918A65CAD277C08C4E8C05385EA267E83 * L_2 = ___callback2;
 		V_1 = (bool)((!(((RuntimeObject*)(Action_1_tCE2D770918A65CAD277C08C4E8C05385EA267E83 *)L_2) <= ((RuntimeObject*)(RuntimeObject *)NULL)))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 659));
 		bool L_3 = V_1;
 		if (!L_3)
 		{
@@ -5179,35 +4285,27 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameCenterPlatform_ReportProgress_mD2847
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 660));
 		Action_1_tCE2D770918A65CAD277C08C4E8C05385EA267E83 * L_4 = ___callback2;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 665));
 		NullCheck(L_4);
 		Action_1_Invoke_m95E5C9FC67F7B0BDC3CD5E00AC5D4C8A00C97AC5(L_4, (bool)0, /*hidden argument*/Action_1_Invoke_m95E5C9FC67F7B0BDC3CD5E00AC5D4C8A00C97AC5_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 665));
 	}
 
 IL_001f:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 661));
 		goto IL_002a;
 	}
 
 IL_0021:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 662));
 		String_t* L_5 = ___id0;
 		double L_6 = ___progress1;
 		Action_1_tCE2D770918A65CAD277C08C4E8C05385EA267E83 * L_7 = ___callback2;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 666));
 		IL2CPP_RUNTIME_CLASS_INIT(GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var);
 		GameCenterPlatform_InternalReportProgress_mE347276319A49E97397DEAA0726B6156746CD2D0(L_5, L_6, L_7, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 666));
 	}
 
 IL_002a:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 663));
 		return;
 	}
 }
@@ -5219,30 +4317,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameCenterPlatform_LoadAchievements_m637
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AchievementU5BU5D_tCBFC160A3B2C7C045CB620E9C7234269217245F8_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Action_1_Invoke_mDF86C44E0ADACB34B3B7C5D612D877175F036EF3_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_LoadAchievements_m63737CE0EF90F20A31DD1F43EE3D39D79836DF7F_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IAchievementU5BU5D_t40C1DF79365C403864C689D07CF1857A20C62226_0_0_0_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	bool V_0 = false;
 	bool V_1 = false;
 	IAchievementU5BU5D_t40C1DF79365C403864C689D07CF1857A20C62226* V_2 = NULL;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___callback0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GameCenterPlatform_LoadAchievements_m63737CE0EF90F20A31DD1F43EE3D39D79836DF7F_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 667));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 668));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 669));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 670));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 679));
 		bool L_0;
 		L_0 = GameCenterPlatform_VerifyAuthentication_m9605DB240711AB73F461074D8B93F195E894554E(__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 679));
 		V_0 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 671));
 		bool L_1 = V_0;
 		if (!L_1)
 		{
@@ -5250,11 +4334,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameCenterPlatform_LoadAchievements_m637
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 672));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 673));
 		Action_1_t7570552C35A220ADB9666809E4D57E4C10713634 * L_2 = ___callback0;
 		V_1 = (bool)((!(((RuntimeObject*)(Action_1_t7570552C35A220ADB9666809E4D57E4C10713634 *)L_2) <= ((RuntimeObject*)(RuntimeObject *)NULL)))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 674));
 		bool L_3 = V_1;
 		if (!L_3)
 		{
@@ -5262,36 +4343,28 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameCenterPlatform_LoadAchievements_m637
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 675));
 		Action_1_t7570552C35A220ADB9666809E4D57E4C10713634 * L_4 = ___callback0;
 		AchievementU5BU5D_tCBFC160A3B2C7C045CB620E9C7234269217245F8* L_5 = (AchievementU5BU5D_tCBFC160A3B2C7C045CB620E9C7234269217245F8*)(AchievementU5BU5D_tCBFC160A3B2C7C045CB620E9C7234269217245F8*)SZArrayNew(AchievementU5BU5D_tCBFC160A3B2C7C045CB620E9C7234269217245F8_il2cpp_TypeInfo_var, (uint32_t)0);
 		V_2 = (IAchievementU5BU5D_t40C1DF79365C403864C689D07CF1857A20C62226*)L_5;
 		IAchievementU5BU5D_t40C1DF79365C403864C689D07CF1857A20C62226* L_6 = V_2;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 680));
 		NullCheck(L_4);
 		Action_1_Invoke_mDF86C44E0ADACB34B3B7C5D612D877175F036EF3(L_4, L_6, /*hidden argument*/Action_1_Invoke_mDF86C44E0ADACB34B3B7C5D612D877175F036EF3_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 680));
 	}
 
 IL_0026:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 676));
 		goto IL_002f;
 	}
 
 IL_0028:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 677));
 		Action_1_t7570552C35A220ADB9666809E4D57E4C10713634 * L_7 = ___callback0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 681));
 		IL2CPP_RUNTIME_CLASS_INIT(GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var);
 		GameCenterPlatform_InternalLoadAchievements_mC483E963DB55E8CE904297B7A7D08BA872C8C5F0(L_7, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 681));
 	}
 
 IL_002f:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 678));
 		return;
 	}
 }
@@ -5302,28 +4375,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameCenterPlatform_ReportScore_m2ACB9358
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Action_1_Invoke_m95E5C9FC67F7B0BDC3CD5E00AC5D4C8A00C97AC5_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_ReportScore_m2ACB935864BC415729EF552832518FA3FF890171_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	bool V_0 = false;
 	bool V_1 = false;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___score0), (&___board1), (&___callback2));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GameCenterPlatform_ReportScore_m2ACB935864BC415729EF552832518FA3FF890171_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 682));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 683));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 684));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 685));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 694));
 		bool L_0;
 		L_0 = GameCenterPlatform_VerifyAuthentication_m9605DB240711AB73F461074D8B93F195E894554E(__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 694));
 		V_0 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 686));
 		bool L_1 = V_0;
 		if (!L_1)
 		{
@@ -5331,11 +4391,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameCenterPlatform_ReportScore_m2ACB9358
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 687));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 688));
 		Action_1_tCE2D770918A65CAD277C08C4E8C05385EA267E83 * L_2 = ___callback2;
 		V_1 = (bool)((!(((RuntimeObject*)(Action_1_tCE2D770918A65CAD277C08C4E8C05385EA267E83 *)L_2) <= ((RuntimeObject*)(RuntimeObject *)NULL)))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 689));
 		bool L_3 = V_1;
 		if (!L_3)
 		{
@@ -5343,35 +4400,27 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameCenterPlatform_ReportScore_m2ACB9358
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 690));
 		Action_1_tCE2D770918A65CAD277C08C4E8C05385EA267E83 * L_4 = ___callback2;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 695));
 		NullCheck(L_4);
 		Action_1_Invoke_m95E5C9FC67F7B0BDC3CD5E00AC5D4C8A00C97AC5(L_4, (bool)0, /*hidden argument*/Action_1_Invoke_m95E5C9FC67F7B0BDC3CD5E00AC5D4C8A00C97AC5_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 695));
 	}
 
 IL_001f:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 691));
 		goto IL_002a;
 	}
 
 IL_0021:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 692));
 		int64_t L_5 = ___score0;
 		String_t* L_6 = ___board1;
 		Action_1_tCE2D770918A65CAD277C08C4E8C05385EA267E83 * L_7 = ___callback2;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 696));
 		IL2CPP_RUNTIME_CLASS_INIT(GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var);
 		GameCenterPlatform_InternalReportScore_mAEE46DC335CB58B4B60855A1C0F417D0A2337FB7(L_5, L_6, L_7, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 696));
 	}
 
 IL_002a:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 693));
 		return;
 	}
 }
@@ -5382,31 +4431,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameCenterPlatform_LoadScores_mC191ABA1B
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Action_1_Invoke_mA7A2177CF5EA8FD4A1BB48004EFF7FD908B6ECDD_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_LoadScores_mC191ABA1B69A13CC88A44AF25BD89E1D289CBF52_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IScoreU5BU5D_t9FEEC91A3D90CD5770DA4EFB8DFCF5340A279C5A_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ScoreU5BU5D_t9262DBDF2A24DE1477F0AC5F217933ABDD6E3127_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	bool V_0 = false;
 	bool V_1 = false;
 	IScoreU5BU5D_t9FEEC91A3D90CD5770DA4EFB8DFCF5340A279C5A* V_2 = NULL;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___category0), (&___callback1));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GameCenterPlatform_LoadScores_mC191ABA1B69A13CC88A44AF25BD89E1D289CBF52_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 697));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 698));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 699));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 700));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 709));
 		bool L_0;
 		L_0 = GameCenterPlatform_VerifyAuthentication_m9605DB240711AB73F461074D8B93F195E894554E(__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 709));
 		V_0 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 701));
 		bool L_1 = V_0;
 		if (!L_1)
 		{
@@ -5414,11 +4449,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameCenterPlatform_LoadScores_mC191ABA1B
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 702));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 703));
 		Action_1_tB92B5B1B4250DFE4170303183808B95C5495CB10 * L_2 = ___callback1;
 		V_1 = (bool)((!(((RuntimeObject*)(Action_1_tB92B5B1B4250DFE4170303183808B95C5495CB10 *)L_2) <= ((RuntimeObject*)(RuntimeObject *)NULL)))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 704));
 		bool L_3 = V_1;
 		if (!L_3)
 		{
@@ -5426,37 +4458,29 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameCenterPlatform_LoadScores_mC191ABA1B
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 705));
 		Action_1_tB92B5B1B4250DFE4170303183808B95C5495CB10 * L_4 = ___callback1;
 		ScoreU5BU5D_t9262DBDF2A24DE1477F0AC5F217933ABDD6E3127* L_5 = (ScoreU5BU5D_t9262DBDF2A24DE1477F0AC5F217933ABDD6E3127*)(ScoreU5BU5D_t9262DBDF2A24DE1477F0AC5F217933ABDD6E3127*)SZArrayNew(ScoreU5BU5D_t9262DBDF2A24DE1477F0AC5F217933ABDD6E3127_il2cpp_TypeInfo_var, (uint32_t)0);
 		V_2 = (IScoreU5BU5D_t9FEEC91A3D90CD5770DA4EFB8DFCF5340A279C5A*)L_5;
 		IScoreU5BU5D_t9FEEC91A3D90CD5770DA4EFB8DFCF5340A279C5A* L_6 = V_2;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 710));
 		NullCheck(L_4);
 		Action_1_Invoke_mA7A2177CF5EA8FD4A1BB48004EFF7FD908B6ECDD(L_4, L_6, /*hidden argument*/Action_1_Invoke_mA7A2177CF5EA8FD4A1BB48004EFF7FD908B6ECDD_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 710));
 	}
 
 IL_0026:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 706));
 		goto IL_0030;
 	}
 
 IL_0028:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 707));
 		String_t* L_7 = ___category0;
 		Action_1_tB92B5B1B4250DFE4170303183808B95C5495CB10 * L_8 = ___callback1;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 711));
 		IL2CPP_RUNTIME_CLASS_INIT(GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var);
 		GameCenterPlatform_InternalLoadScores_m782C2E75372DB95426C859CA5BE221FFFE9787CF(L_7, L_8, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 711));
 	}
 
 IL_0030:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 708));
 		return;
 	}
 }
@@ -5467,17 +4491,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameCenterPlatform_LoadScores_m54BF2C6FA
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Action_1_Invoke_m95E5C9FC67F7B0BDC3CD5E00AC5D4C8A00C97AC5_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_LoadScores_m54BF2C6FAB4A19BC80B168F3BB985BDBAFA96A1B_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GcLeaderboard_t65BC1BB657B2E25E7BB1FBBB70ACDE29A3A64B72_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GcLeaderboard_t65BC1BB657B2E25E7BB1FBBB70ACDE29A3A64B72_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ILeaderboard_tC996640E43BF8EF5AA958F3BD43113D5A732B99B_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Leaderboard_tD587FC5E62BF8F6CC6AC0DF1ABB55D57A60CBE2D_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Leaderboard_tD587FC5E62BF8F6CC6AC0DF1ABB55D57A60CBE2D_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_Add_mFBB409A3035BA1C75E9E4982F2E1BE5A1914141F_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A_0_0_0_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	Leaderboard_tD587FC5E62BF8F6CC6AC0DF1ABB55D57A60CBE2D * V_0 = NULL;
@@ -5486,21 +4504,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameCenterPlatform_LoadScores_m54BF2C6FA
 	bool V_3 = false;
 	bool V_4 = false;
 	bool V_5 = false;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___board0), (&___callback1));
-	DECLARE_METHOD_LOCALS(methodExecutionContextLocals, (&V_0), (&V_1), (&V_2));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GameCenterPlatform_LoadScores_m54BF2C6FAB4A19BC80B168F3BB985BDBAFA96A1B_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, methodExecutionContextLocals);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 712));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 713));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 714));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 715));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 731));
 		bool L_0;
 		L_0 = GameCenterPlatform_VerifyAuthentication_m9605DB240711AB73F461074D8B93F195E894554E(__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 731));
 		V_3 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 716));
 		bool L_1 = V_3;
 		if (!L_1)
 		{
@@ -5508,11 +4515,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameCenterPlatform_LoadScores_m54BF2C6FA
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 717));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 718));
 		Action_1_tCE2D770918A65CAD277C08C4E8C05385EA267E83 * L_2 = ___callback1;
 		V_4 = (bool)((!(((RuntimeObject*)(Action_1_tCE2D770918A65CAD277C08C4E8C05385EA267E83 *)L_2) <= ((RuntimeObject*)(RuntimeObject *)NULL)))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 719));
 		bool L_3 = V_4;
 		if (!L_3)
 		{
@@ -5520,53 +4524,37 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameCenterPlatform_LoadScores_m54BF2C6FA
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 720));
 		Action_1_tCE2D770918A65CAD277C08C4E8C05385EA267E83 * L_4 = ___callback1;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 732));
 		NullCheck(L_4);
 		Action_1_Invoke_m95E5C9FC67F7B0BDC3CD5E00AC5D4C8A00C97AC5(L_4, (bool)0, /*hidden argument*/Action_1_Invoke_m95E5C9FC67F7B0BDC3CD5E00AC5D4C8A00C97AC5_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 732));
 	}
 
 IL_0021:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 721));
 		goto IL_0082;
 	}
 
 IL_0023:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 722));
 		RuntimeObject* L_5 = ___board0;
 		V_0 = ((Leaderboard_tD587FC5E62BF8F6CC6AC0DF1ABB55D57A60CBE2D *)CastclassClass((RuntimeObject*)L_5, Leaderboard_tD587FC5E62BF8F6CC6AC0DF1ABB55D57A60CBE2D_il2cpp_TypeInfo_var));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 723));
 		Leaderboard_tD587FC5E62BF8F6CC6AC0DF1ABB55D57A60CBE2D * L_6 = V_0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 733));
 		GcLeaderboard_t65BC1BB657B2E25E7BB1FBBB70ACDE29A3A64B72 * L_7 = (GcLeaderboard_t65BC1BB657B2E25E7BB1FBBB70ACDE29A3A64B72 *)il2cpp_codegen_object_new(GcLeaderboard_t65BC1BB657B2E25E7BB1FBBB70ACDE29A3A64B72_il2cpp_TypeInfo_var);
 		GcLeaderboard__ctor_mC6DCBFD1A415763A634A19381C936254D8B2F4E7(L_7, L_6, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 733));
 		V_1 = L_7;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 724));
 		IL2CPP_RUNTIME_CLASS_INIT(GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var);
 		List_1_t627B55426F2D664F47826CDA6CB351B3B8D8F400 * L_8 = ((GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_StaticFields*)il2cpp_codegen_static_fields_for(GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var))->get_m_GcBoards_6();
 		GcLeaderboard_t65BC1BB657B2E25E7BB1FBBB70ACDE29A3A64B72 * L_9 = V_1;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 734));
 		NullCheck(L_8);
 		List_1_Add_mFBB409A3035BA1C75E9E4982F2E1BE5A1914141F(L_8, L_9, /*hidden argument*/List_1_Add_mFBB409A3035BA1C75E9E4982F2E1BE5A1914141F_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 734));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 725));
 		Leaderboard_tD587FC5E62BF8F6CC6AC0DF1ABB55D57A60CBE2D * L_10 = V_0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 735));
 		NullCheck(L_10);
 		StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A* L_11;
 		L_11 = Leaderboard_GetUserFilter_m229A294CB0ED73326836FABAC438E517F6517550(L_10, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 735));
 		V_2 = L_11;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 726));
 		StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A* L_12 = V_2;
 		NullCheck(L_12);
 		V_5 = (bool)((((int32_t)(((RuntimeArray*)L_12)->max_length)) == ((int32_t)0))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 727));
 		bool L_13 = V_5;
 		if (!L_13)
 		{
@@ -5574,57 +4562,42 @@ IL_0023:
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 728));
 		V_2 = (StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A*)NULL;
 	}
 
 IL_0051:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 729));
 		GcLeaderboard_t65BC1BB657B2E25E7BB1FBBB70ACDE29A3A64B72 * L_14 = V_1;
 		RuntimeObject* L_15 = ___board0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 736));
 		NullCheck(L_15);
 		String_t* L_16;
 		L_16 = InterfaceFuncInvoker0< String_t* >::Invoke(0 /* System.String UnityEngine.SocialPlatforms.ILeaderboard::get_id() */, ILeaderboard_tC996640E43BF8EF5AA958F3BD43113D5A732B99B_il2cpp_TypeInfo_var, L_15);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 736));
 		RuntimeObject* L_17 = ___board0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 737));
 		NullCheck(L_17);
 		Range_t70C133E51417BC822E878050C90A577A69B671DC  L_18;
 		L_18 = InterfaceFuncInvoker0< Range_t70C133E51417BC822E878050C90A577A69B671DC  >::Invoke(2 /* UnityEngine.SocialPlatforms.Range UnityEngine.SocialPlatforms.ILeaderboard::get_range() */, ILeaderboard_tC996640E43BF8EF5AA958F3BD43113D5A732B99B_il2cpp_TypeInfo_var, L_17);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 737));
 		int32_t L_19 = L_18.get_from_0();
 		RuntimeObject* L_20 = ___board0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 738));
 		NullCheck(L_20);
 		Range_t70C133E51417BC822E878050C90A577A69B671DC  L_21;
 		L_21 = InterfaceFuncInvoker0< Range_t70C133E51417BC822E878050C90A577A69B671DC  >::Invoke(2 /* UnityEngine.SocialPlatforms.Range UnityEngine.SocialPlatforms.ILeaderboard::get_range() */, ILeaderboard_tC996640E43BF8EF5AA958F3BD43113D5A732B99B_il2cpp_TypeInfo_var, L_20);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 738));
 		int32_t L_22 = L_21.get_count_1();
 		StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A* L_23 = V_2;
 		RuntimeObject* L_24 = ___board0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 739));
 		NullCheck(L_24);
 		int32_t L_25;
 		L_25 = InterfaceFuncInvoker0< int32_t >::Invoke(1 /* UnityEngine.SocialPlatforms.UserScope UnityEngine.SocialPlatforms.ILeaderboard::get_userScope() */, ILeaderboard_tC996640E43BF8EF5AA958F3BD43113D5A732B99B_il2cpp_TypeInfo_var, L_24);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 739));
 		RuntimeObject* L_26 = ___board0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 740));
 		NullCheck(L_26);
 		int32_t L_27;
 		L_27 = InterfaceFuncInvoker0< int32_t >::Invoke(3 /* UnityEngine.SocialPlatforms.TimeScope UnityEngine.SocialPlatforms.ILeaderboard::get_timeScope() */, ILeaderboard_tC996640E43BF8EF5AA958F3BD43113D5A732B99B_il2cpp_TypeInfo_var, L_26);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 740));
 		Action_1_tCE2D770918A65CAD277C08C4E8C05385EA267E83 * L_28 = ___callback1;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 741));
 		NullCheck(L_14);
 		GcLeaderboard_Internal_LoadScores_mDFC3A947F5DC0FC7EF83B6C5B605D93BC959675F(L_14, L_16, L_19, L_22, L_23, L_25, L_27, L_28, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 741));
 	}
 
 IL_0082:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 730));
 		return;
 	}
 }
@@ -5635,21 +4608,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameCenterPlatform_LeaderboardCallbackWr
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Action_1_Invoke_m95E5C9FC67F7B0BDC3CD5E00AC5D4C8A00C97AC5_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_LeaderboardCallbackWrapper_m1D0797D04EBCFC94424E7033C9E02D3DA4A8A4B1_RuntimeMethod_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	bool V_0 = false;
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___callback0), (&___success1));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GameCenterPlatform_LeaderboardCallbackWrapper_m1D0797D04EBCFC94424E7033C9E02D3DA4A8A4B1_RuntimeMethod_var, NULL, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 742));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 743));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 744));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 745));
 		Action_1_tCE2D770918A65CAD277C08C4E8C05385EA267E83 * L_0 = ___callback0;
 		V_0 = (bool)((!(((RuntimeObject*)(Action_1_tCE2D770918A65CAD277C08C4E8C05385EA267E83 *)L_0) <= ((RuntimeObject*)(RuntimeObject *)NULL)))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 746));
 		bool L_1 = V_0;
 		if (!L_1)
 		{
@@ -5657,18 +4621,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameCenterPlatform_LeaderboardCallbackWr
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 747));
 		Action_1_tCE2D770918A65CAD277C08C4E8C05385EA267E83 * L_2 = ___callback0;
 		bool L_3 = ___success1;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 749));
 		NullCheck(L_2);
 		Action_1_Invoke_m95E5C9FC67F7B0BDC3CD5E00AC5D4C8A00C97AC5(L_2, L_3, /*hidden argument*/Action_1_Invoke_m95E5C9FC67F7B0BDC3CD5E00AC5D4C8A00C97AC5_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 749));
 	}
 
 IL_0011:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 748));
 		return;
 	}
 }
@@ -5678,15 +4638,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool GameCenterPlatform_GetLoading_m06F9588A6
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_Dispose_m4DEA4ABF8AEB43CC9635DAFBD0DBBD013187BD3C_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_MoveNext_mCB5492B7D56FAAF15A6463839B9A80DD16DA33B4_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_get_Current_mCB024BFF593508BA9B77C381B20D0942F0F533AA_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_t0CE4A07F744981B45029535658492977F0C12721_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_GetLoading_m06F9588A6143126F03D9C0AAEAA853EC1C9FC3C1_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GcLeaderboard_t65BC1BB657B2E25E7BB1FBBB70ACDE29A3A64B72_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Leaderboard_tD587FC5E62BF8F6CC6AC0DF1ABB55D57A60CBE2D_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_GetEnumerator_m6D8BF4BBA01F07B5A1439CF1CD3F9264423B1F73_RuntimeMethod_var);
 		s_Il2CppMethodInitialized = true;
@@ -5697,23 +4652,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool GameCenterPlatform_GetLoading_m06F9588A6
 	memset((&V_2), 0, sizeof(V_2));
 	GcLeaderboard_t65BC1BB657B2E25E7BB1FBBB70ACDE29A3A64B72 * V_3 = NULL;
 	bool V_4 = false;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___board0));
-	DECLARE_METHOD_LOCALS(methodExecutionContextLocals, (&V_3));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GameCenterPlatform_GetLoading_m06F9588A6143126F03D9C0AAEAA853EC1C9FC3C1_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, methodExecutionContextLocals);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 750));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 751));
 	Exception_t * __last_unhandled_exception = 0;
 	il2cpp::utils::ExceptionSupportStack<int32_t, 2> __leave_targets;
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 752));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 753));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 769));
 		bool L_0;
 		L_0 = GameCenterPlatform_VerifyAuthentication_m9605DB240711AB73F461074D8B93F195E894554E(__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 769));
 		V_0 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 754));
 		bool L_1 = V_0;
 		if (!L_1)
 		{
@@ -5721,53 +4665,38 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool GameCenterPlatform_GetLoading_m06F9588A6
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 755));
 		V_1 = (bool)0;
 		goto IL_0063;
 	}
 
 IL_0012:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 756));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 757));
 		IL2CPP_RUNTIME_CLASS_INIT(GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var);
 		List_1_t627B55426F2D664F47826CDA6CB351B3B8D8F400 * L_2 = ((GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_StaticFields*)il2cpp_codegen_static_fields_for(GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var))->get_m_GcBoards_6();
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 770));
 		NullCheck(L_2);
 		Enumerator_t0CE4A07F744981B45029535658492977F0C12721  L_3;
 		L_3 = List_1_GetEnumerator_m6D8BF4BBA01F07B5A1439CF1CD3F9264423B1F73(L_2, /*hidden argument*/List_1_GetEnumerator_m6D8BF4BBA01F07B5A1439CF1CD3F9264423B1F73_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 770));
 		V_2 = L_3;
 	}
 
 IL_001e:
 	try
 	{ // begin try (depth: 1)
-		STORE_TRY_ID(methodExecutionContext, 0);
 		{
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 758));
 			goto IL_0045;
 		}
 
 IL_0020:
 		{
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 759));
-			STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 771));
 			GcLeaderboard_t65BC1BB657B2E25E7BB1FBBB70ACDE29A3A64B72 * L_4;
 			L_4 = Enumerator_get_Current_mCB024BFF593508BA9B77C381B20D0942F0F533AA_inline((Enumerator_t0CE4A07F744981B45029535658492977F0C12721 *)(&V_2), /*hidden argument*/Enumerator_get_Current_mCB024BFF593508BA9B77C381B20D0942F0F533AA_RuntimeMethod_var);
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 771));
 			V_3 = L_4;
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 760));
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 761));
 			GcLeaderboard_t65BC1BB657B2E25E7BB1FBBB70ACDE29A3A64B72 * L_5 = V_3;
 			RuntimeObject* L_6 = ___board0;
-			STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 772));
 			NullCheck(L_5);
 			bool L_7;
 			L_7 = GcLeaderboard_Contains_m599B4319BA3FD351DC157B5E23D0489D8186279C(L_5, ((Leaderboard_tD587FC5E62BF8F6CC6AC0DF1ABB55D57A60CBE2D *)CastclassClass((RuntimeObject*)L_6, Leaderboard_tD587FC5E62BF8F6CC6AC0DF1ABB55D57A60CBE2D_il2cpp_TypeInfo_var)), /*hidden argument*/NULL);
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 772));
 			V_4 = L_7;
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 762));
 			bool L_8 = V_4;
 			if (!L_8)
 			{
@@ -5777,29 +4706,22 @@ IL_0020:
 
 IL_003b:
 		{
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 763));
 			GcLeaderboard_t65BC1BB657B2E25E7BB1FBBB70ACDE29A3A64B72 * L_9 = V_3;
-			STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 773));
 			NullCheck(L_9);
 			bool L_10;
 			L_10 = GcLeaderboard_Loading_m825936D6AB51CC355DAB8DAAF6177AC4ABBC78B2(L_9, /*hidden argument*/NULL);
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 773));
 			V_1 = L_10;
 			IL2CPP_LEAVE(0x63, FINALLY_0050);
 		}
 
 IL_0044:
 		{
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 764));
 		}
 
 IL_0045:
 		{
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 765));
-			STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 774));
 			bool L_11;
 			L_11 = Enumerator_MoveNext_mCB5492B7D56FAAF15A6463839B9A80DD16DA33B4((Enumerator_t0CE4A07F744981B45029535658492977F0C12721 *)(&V_2), /*hidden argument*/Enumerator_MoveNext_mCB5492B7D56FAAF15A6463839B9A80DD16DA33B4_RuntimeMethod_var);
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 774));
 			if (L_11)
 			{
 				goto IL_0020;
@@ -5819,11 +4741,7 @@ IL_004e:
 
 FINALLY_0050:
 	{ // begin finally (depth: 1)
-		STORE_TRY_ID(methodExecutionContext, -1);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 766));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 775));
 		Enumerator_Dispose_m4DEA4ABF8AEB43CC9635DAFBD0DBBD013187BD3C((Enumerator_t0CE4A07F744981B45029535658492977F0C12721 *)(&V_2), /*hidden argument*/Enumerator_Dispose_m4DEA4ABF8AEB43CC9635DAFBD0DBBD013187BD3C_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 775));
 		IL2CPP_END_FINALLY(80)
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(80)
@@ -5835,14 +4753,12 @@ FINALLY_0050:
 
 IL_005f:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 767));
 		V_1 = (bool)0;
 		goto IL_0063;
 	}
 
 IL_0063:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 768));
 		bool L_12 = V_1;
 		return L_12;
 	}
@@ -5853,34 +4769,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool GameCenterPlatform_VerifyAuthentication_
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_tEB68BCBEB8EFD60F8043C67146DC05E7F50F374B_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_VerifyAuthentication_m9605DB240711AB73F461074D8B93F195E894554E_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ILocalUser_t835F1CCDE2ED60F6D514522949B6402B7D871F27_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral697DAE71CF742F2932950075B1D260B4A087E7BA);
 		s_Il2CppMethodInitialized = true;
 	}
 	bool V_0 = false;
 	bool V_1 = false;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GameCenterPlatform_VerifyAuthentication_m9605DB240711AB73F461074D8B93F195E894554E_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 776));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 777));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 778));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 779));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 786));
 		RuntimeObject* L_0;
 		L_0 = GameCenterPlatform_get_localUser_m7E985071FAA0B7393A5B2A056917DF06B41BD0A4(__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 786));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 787));
 		NullCheck(L_0);
 		bool L_1;
 		L_1 = InterfaceFuncInvoker0< bool >::Invoke(0 /* System.Boolean UnityEngine.SocialPlatforms.ILocalUser::get_authenticated() */, ILocalUser_t835F1CCDE2ED60F6D514522949B6402B7D871F27_il2cpp_TypeInfo_var, L_0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 787));
 		V_0 = (bool)((((int32_t)L_1) == ((int32_t)0))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 780));
 		bool L_2 = V_0;
 		if (!L_2)
 		{
@@ -5888,27 +4790,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool GameCenterPlatform_VerifyAuthentication_
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 781));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 782));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 788));
 		IL2CPP_RUNTIME_CLASS_INIT(Debug_tEB68BCBEB8EFD60F8043C67146DC05E7F50F374B_il2cpp_TypeInfo_var);
 		Debug_Log_mC26E5AD0D8D156C7FFD173AA15827F69225E9DB8(_stringLiteral697DAE71CF742F2932950075B1D260B4A087E7BA, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 788));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 783));
 		V_1 = (bool)0;
 		goto IL_0027;
 	}
 
 IL_0023:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 784));
 		V_1 = (bool)1;
 		goto IL_0027;
 	}
 
 IL_0027:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 785));
 		bool L_3 = V_1;
 		return L_3;
 	}
@@ -5919,26 +4814,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameCenterPlatform_ShowAchievementsUI_m4
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_ShowAchievementsUI_m425068FBB95E73A5E2C34A8045394F9583F27728_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	bool V_0 = false;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GameCenterPlatform_ShowAchievementsUI_m425068FBB95E73A5E2C34A8045394F9583F27728_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 789));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 790));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 791));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 792));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 797));
 		bool L_0;
 		L_0 = GameCenterPlatform_VerifyAuthentication_m9605DB240711AB73F461074D8B93F195E894554E(__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 797));
 		V_0 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 793));
 		bool L_1 = V_0;
 		if (!L_1)
 		{
@@ -5946,22 +4829,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameCenterPlatform_ShowAchievementsUI_m4
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 794));
 		goto IL_0016;
 	}
 
 IL_0010:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 795));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 798));
 		IL2CPP_RUNTIME_CLASS_INIT(GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var);
 		GameCenterPlatform_Internal_ShowAchievementsUI_mC48635E42795B0F70BA5EAC29CDD5F3FEECF80D0(/*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 798));
 	}
 
 IL_0016:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 796));
 		return;
 	}
 }
@@ -5971,26 +4849,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameCenterPlatform_ShowLeaderboardUI_m25
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_ShowLeaderboardUI_m25410C4C825818ABC415F3231AFD4C0B3D80100C_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	bool V_0 = false;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GameCenterPlatform_ShowLeaderboardUI_m25410C4C825818ABC415F3231AFD4C0B3D80100C_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 799));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 800));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 801));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 802));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 807));
 		bool L_0;
 		L_0 = GameCenterPlatform_VerifyAuthentication_m9605DB240711AB73F461074D8B93F195E894554E(__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 807));
 		V_0 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 803));
 		bool L_1 = V_0;
 		if (!L_1)
 		{
@@ -5998,22 +4864,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameCenterPlatform_ShowLeaderboardUI_m25
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 804));
 		goto IL_0016;
 	}
 
 IL_0010:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 805));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 808));
 		IL2CPP_RUNTIME_CLASS_INIT(GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var);
 		GameCenterPlatform_Internal_ShowLeaderboardUI_m1902CC112F48CC4A35F3E0C170957D48016D8BF5(/*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 808));
 	}
 
 IL_0016:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 806));
 		return;
 	}
 }
@@ -6023,23 +4884,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameCenterPlatform_ClearUsers_m242535F1E
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_ClearUsers_m242535F1ED28589D2C91D12CB1FB3330BBE116A1_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___size0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GameCenterPlatform_ClearUsers_m242535F1ED28589D2C91D12CB1FB3330BBE116A1_RuntimeMethod_var, NULL, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 809));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 810));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 811));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 812));
 		IL2CPP_RUNTIME_CLASS_INIT(GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var);
 		int32_t L_0 = ___size0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 814));
 		GameCenterPlatform_SafeClearArray_m3A96AB8175D512B8EECD0EB25B80769914D34D07((UserProfileU5BU5D_tAED4B41D0866F8A4C6D403C2074ACEC812A78769**)(((GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_StaticFields*)il2cpp_codegen_static_fields_for(GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var))->get_address_of_s_users_3()), L_0, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 814));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 813));
 		return;
 	}
 }
@@ -6049,23 +4900,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameCenterPlatform_SetUser_m67E0DEED2E11
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_SetUser_m67E0DEED2E11D8B4E1EFFB03AB95573F1418903C_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___data0), (&___number1));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GameCenterPlatform_SetUser_m67E0DEED2E11D8B4E1EFFB03AB95573F1418903C_RuntimeMethod_var, NULL, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 815));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 816));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 817));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 818));
 		IL2CPP_RUNTIME_CLASS_INIT(GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var);
 		int32_t L_0 = ___number1;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 820));
 		GcUserProfileData_AddToArray_mA189B901FEF32E5CA9AF7DEB58D8143E87E41EC2((GcUserProfileData_t18036AD9C18F55CBB882ABACD4DE2771EFFDF03D *)(&___data0), (UserProfileU5BU5D_tAED4B41D0866F8A4C6D403C2074ACEC812A78769**)(((GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_StaticFields*)il2cpp_codegen_static_fields_for(GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var))->get_address_of_s_users_3()), L_0, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 820));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 819));
 		return;
 	}
 }
@@ -6075,24 +4916,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameCenterPlatform_SetUserImage_m36FDEC3
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_SetUserImage_m36FDEC3247298B1308E85BA4BFD1F8AAAD0E9E7E_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___texture0), (&___number1));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GameCenterPlatform_SetUserImage_m36FDEC3247298B1308E85BA4BFD1F8AAAD0E9E7E_RuntimeMethod_var, NULL, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 821));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 822));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 823));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 824));
 		IL2CPP_RUNTIME_CLASS_INIT(GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var);
 		Texture2D_t9B604D0D8E28032123641A7E7338FA872E2698BF * L_0 = ___texture0;
 		int32_t L_1 = ___number1;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 826));
 		GameCenterPlatform_SafeSetUserImage_m346275823D7FDD78D062A4E746AE1C6D2A82F849((UserProfileU5BU5D_tAED4B41D0866F8A4C6D403C2074ACEC812A78769**)(((GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_StaticFields*)il2cpp_codegen_static_fields_for(GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var))->get_address_of_s_users_3()), L_0, L_1, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 826));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 825));
 		return;
 	}
 }
@@ -6103,24 +4934,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameCenterPlatform_TriggerUsersCallbackW
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Action_1_Invoke_mE257927B32DAB50508A3C86C95CE80E50F47A280_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_TriggerUsersCallbackWrapper_mBF798F547F7094681E0B5B5FFEEE221DD7E4CC33_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IUserProfileU5BU5D_t4B36B0CF06DE6A00F5D6D0A015DC3E99B02FC65E_0_0_0_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	bool V_0 = false;
 	IUserProfileU5BU5D_t4B36B0CF06DE6A00F5D6D0A015DC3E99B02FC65E* V_1 = NULL;
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___callback0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GameCenterPlatform_TriggerUsersCallbackWrapper_mBF798F547F7094681E0B5B5FFEEE221DD7E4CC33_RuntimeMethod_var, NULL, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 827));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 828));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 829));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 830));
 		Action_1_t295B6E5FCC205AD4256A39EF521A1D2B51F4F371 * L_0 = ___callback0;
 		V_0 = (bool)((!(((RuntimeObject*)(Action_1_t295B6E5FCC205AD4256A39EF521A1D2B51F4F371 *)L_0) <= ((RuntimeObject*)(RuntimeObject *)NULL)))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 831));
 		bool L_1 = V_0;
 		if (!L_1)
 		{
@@ -6128,21 +4949,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameCenterPlatform_TriggerUsersCallbackW
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 832));
 		Action_1_t295B6E5FCC205AD4256A39EF521A1D2B51F4F371 * L_2 = ___callback0;
 		IL2CPP_RUNTIME_CLASS_INIT(GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var);
 		UserProfileU5BU5D_tAED4B41D0866F8A4C6D403C2074ACEC812A78769* L_3 = ((GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_StaticFields*)il2cpp_codegen_static_fields_for(GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var))->get_s_users_3();
 		V_1 = (IUserProfileU5BU5D_t4B36B0CF06DE6A00F5D6D0A015DC3E99B02FC65E*)L_3;
 		IUserProfileU5BU5D_t4B36B0CF06DE6A00F5D6D0A015DC3E99B02FC65E* L_4 = V_1;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 834));
 		NullCheck(L_2);
 		Action_1_Invoke_mE257927B32DAB50508A3C86C95CE80E50F47A280(L_2, L_4, /*hidden argument*/Action_1_Invoke_mE257927B32DAB50508A3C86C95CE80E50F47A280_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 834));
 	}
 
 IL_0017:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 833));
 		return;
 	}
 }
@@ -6153,31 +4970,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameCenterPlatform_LoadUsers_m10FB18D65C
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Action_1_Invoke_mE257927B32DAB50508A3C86C95CE80E50F47A280_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_LoadUsers_m10FB18D65C6C997E1AB6F0BEB27891B0C1A4923C_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IUserProfileU5BU5D_t4B36B0CF06DE6A00F5D6D0A015DC3E99B02FC65E_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UserProfileU5BU5D_tAED4B41D0866F8A4C6D403C2074ACEC812A78769_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	bool V_0 = false;
 	bool V_1 = false;
 	IUserProfileU5BU5D_t4B36B0CF06DE6A00F5D6D0A015DC3E99B02FC65E* V_2 = NULL;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___userIds0), (&___callback1));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GameCenterPlatform_LoadUsers_m10FB18D65C6C997E1AB6F0BEB27891B0C1A4923C_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 835));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 836));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 837));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 838));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 847));
 		bool L_0;
 		L_0 = GameCenterPlatform_VerifyAuthentication_m9605DB240711AB73F461074D8B93F195E894554E(__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 847));
 		V_0 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 839));
 		bool L_1 = V_0;
 		if (!L_1)
 		{
@@ -6185,11 +4988,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameCenterPlatform_LoadUsers_m10FB18D65C
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 840));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 841));
 		Action_1_t295B6E5FCC205AD4256A39EF521A1D2B51F4F371 * L_2 = ___callback1;
 		V_1 = (bool)((!(((RuntimeObject*)(Action_1_t295B6E5FCC205AD4256A39EF521A1D2B51F4F371 *)L_2) <= ((RuntimeObject*)(RuntimeObject *)NULL)))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 842));
 		bool L_3 = V_1;
 		if (!L_3)
 		{
@@ -6197,37 +4997,29 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameCenterPlatform_LoadUsers_m10FB18D65C
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 843));
 		Action_1_t295B6E5FCC205AD4256A39EF521A1D2B51F4F371 * L_4 = ___callback1;
 		UserProfileU5BU5D_tAED4B41D0866F8A4C6D403C2074ACEC812A78769* L_5 = (UserProfileU5BU5D_tAED4B41D0866F8A4C6D403C2074ACEC812A78769*)(UserProfileU5BU5D_tAED4B41D0866F8A4C6D403C2074ACEC812A78769*)SZArrayNew(UserProfileU5BU5D_tAED4B41D0866F8A4C6D403C2074ACEC812A78769_il2cpp_TypeInfo_var, (uint32_t)0);
 		V_2 = (IUserProfileU5BU5D_t4B36B0CF06DE6A00F5D6D0A015DC3E99B02FC65E*)L_5;
 		IUserProfileU5BU5D_t4B36B0CF06DE6A00F5D6D0A015DC3E99B02FC65E* L_6 = V_2;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 848));
 		NullCheck(L_4);
 		Action_1_Invoke_mE257927B32DAB50508A3C86C95CE80E50F47A280(L_4, L_6, /*hidden argument*/Action_1_Invoke_mE257927B32DAB50508A3C86C95CE80E50F47A280_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 848));
 	}
 
 IL_0026:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 844));
 		goto IL_0030;
 	}
 
 IL_0028:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 845));
 		StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A* L_7 = ___userIds0;
 		Action_1_t295B6E5FCC205AD4256A39EF521A1D2B51F4F371 * L_8 = ___callback1;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 849));
 		IL2CPP_RUNTIME_CLASS_INIT(GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var);
 		GameCenterPlatform_Internal_LoadUsers_m59FCA59D1367C1AA3B73768481CAF37DD189B9E6(L_7, L_8, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 849));
 	}
 
 IL_0030:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 846));
 		return;
 	}
 }
@@ -6237,9 +5029,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameCenterPlatform_SafeSetUserImage_m346
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_tEB68BCBEB8EFD60F8043C67146DC05E7F50F374B_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_SafeSetUserImage_m346275823D7FDD78D062A4E746AE1C6D2A82F849_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Texture2D_t9B604D0D8E28032123641A7E7338FA872E2698BF_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral023C61CBC6B5B20519E94C2D7DF0CAE83164CB4A);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralBBFFE2B018FE9C481B67387513F728E577370086);
@@ -6247,15 +5037,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameCenterPlatform_SafeSetUserImage_m346
 	}
 	bool V_0 = false;
 	bool V_1 = false;
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___array0), (&___texture1), (&___number2));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GameCenterPlatform_SafeSetUserImage_m346275823D7FDD78D062A4E746AE1C6D2A82F849_RuntimeMethod_var, NULL, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 850));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 851));
 	int32_t G_B3_0 = 0;
 	int32_t G_B8_0 = 0;
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 852));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 853));
 		UserProfileU5BU5D_tAED4B41D0866F8A4C6D403C2074ACEC812A78769** L_0 = ___array0;
 		UserProfileU5BU5D_tAED4B41D0866F8A4C6D403C2074ACEC812A78769* L_1 = *((UserProfileU5BU5D_tAED4B41D0866F8A4C6D403C2074ACEC812A78769**)L_0);
 		NullCheck(L_1);
@@ -6279,7 +5063,6 @@ IL_000e:
 IL_000f:
 	{
 		V_0 = (bool)G_B3_0;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 854));
 		bool L_4 = V_0;
 		if (!L_4)
 		{
@@ -6287,24 +5070,15 @@ IL_000f:
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 855));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 856));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 864));
 		IL2CPP_RUNTIME_CLASS_INIT(Debug_tEB68BCBEB8EFD60F8043C67146DC05E7F50F374B_il2cpp_TypeInfo_var);
 		Debug_Log_mC26E5AD0D8D156C7FFD173AA15827F69225E9DB8(_stringLiteral023C61CBC6B5B20519E94C2D7DF0CAE83164CB4A, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 864));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 857));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 865));
 		Texture2D_t9B604D0D8E28032123641A7E7338FA872E2698BF * L_5 = (Texture2D_t9B604D0D8E28032123641A7E7338FA872E2698BF *)il2cpp_codegen_object_new(Texture2D_t9B604D0D8E28032123641A7E7338FA872E2698BF_il2cpp_TypeInfo_var);
 		Texture2D__ctor_m7D64AB4C55A01F2EE57483FD9EF826607DF9E4B4(L_5, ((int32_t)76), ((int32_t)76), /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 865));
 		___texture1 = L_5;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 858));
 	}
 
 IL_002b:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 859));
 		UserProfileU5BU5D_tAED4B41D0866F8A4C6D403C2074ACEC812A78769** L_6 = ___array0;
 		UserProfileU5BU5D_tAED4B41D0866F8A4C6D403C2074ACEC812A78769* L_7 = *((UserProfileU5BU5D_tAED4B41D0866F8A4C6D403C2074ACEC812A78769**)L_6);
 		NullCheck(L_7);
@@ -6328,7 +5102,6 @@ IL_003b:
 IL_003c:
 	{
 		V_1 = (bool)G_B8_0;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 860));
 		bool L_10 = V_1;
 		if (!L_10)
 		{
@@ -6336,7 +5109,6 @@ IL_003c:
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 861));
 		UserProfileU5BU5D_tAED4B41D0866F8A4C6D403C2074ACEC812A78769** L_11 = ___array0;
 		UserProfileU5BU5D_tAED4B41D0866F8A4C6D403C2074ACEC812A78769* L_12 = *((UserProfileU5BU5D_tAED4B41D0866F8A4C6D403C2074ACEC812A78769**)L_11);
 		int32_t L_13 = ___number2;
@@ -6344,25 +5116,19 @@ IL_003c:
 		int32_t L_14 = L_13;
 		UserProfile_tDA4AC2655C2C32774702DDA257938A108AB4C537 * L_15 = (L_12)->GetAt(static_cast<il2cpp_array_size_t>(L_14));
 		Texture2D_t9B604D0D8E28032123641A7E7338FA872E2698BF * L_16 = ___texture1;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 866));
 		NullCheck(L_15);
 		UserProfile_SetImage_m756E17B9BFE41D572C76A506E2BDA81A2D7D9605(L_15, L_16, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 866));
 		goto IL_0058;
 	}
 
 IL_004d:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 862));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 867));
 		IL2CPP_RUNTIME_CLASS_INIT(Debug_tEB68BCBEB8EFD60F8043C67146DC05E7F50F374B_il2cpp_TypeInfo_var);
 		Debug_Log_mC26E5AD0D8D156C7FFD173AA15827F69225E9DB8(_stringLiteralBBFFE2B018FE9C481B67387513F728E577370086, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 867));
 	}
 
 IL_0058:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 863));
 		return;
 	}
 }
@@ -6372,20 +5138,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameCenterPlatform_SafeClearArray_m3A96A
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_SafeClearArray_m3A96AB8175D512B8EECD0EB25B80769914D34D07_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UserProfileU5BU5D_tAED4B41D0866F8A4C6D403C2074ACEC812A78769_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	bool V_0 = false;
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___array0), (&___size1));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GameCenterPlatform_SafeClearArray_m3A96AB8175D512B8EECD0EB25B80769914D34D07_RuntimeMethod_var, NULL, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 868));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 869));
 	int32_t G_B3_0 = 0;
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 870));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 871));
 		UserProfileU5BU5D_tAED4B41D0866F8A4C6D403C2074ACEC812A78769** L_0 = ___array0;
 		UserProfileU5BU5D_tAED4B41D0866F8A4C6D403C2074ACEC812A78769* L_1 = *((UserProfileU5BU5D_tAED4B41D0866F8A4C6D403C2074ACEC812A78769**)L_0);
 		if (!L_1)
@@ -6410,7 +5168,6 @@ IL_0011:
 IL_0012:
 	{
 		V_0 = (bool)G_B3_0;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 872));
 		bool L_5 = V_0;
 		if (!L_5)
 		{
@@ -6418,7 +5175,6 @@ IL_0012:
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 873));
 		UserProfileU5BU5D_tAED4B41D0866F8A4C6D403C2074ACEC812A78769** L_6 = ___array0;
 		int32_t L_7 = ___size1;
 		UserProfileU5BU5D_tAED4B41D0866F8A4C6D403C2074ACEC812A78769* L_8 = (UserProfileU5BU5D_tAED4B41D0866F8A4C6D403C2074ACEC812A78769*)(UserProfileU5BU5D_tAED4B41D0866F8A4C6D403C2074ACEC812A78769*)SZArrayNew(UserProfileU5BU5D_tAED4B41D0866F8A4C6D403C2074ACEC812A78769_il2cpp_TypeInfo_var, (uint32_t)L_7);
@@ -6428,7 +5184,6 @@ IL_0012:
 
 IL_001e:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 874));
 		return;
 	}
 }
@@ -6438,29 +5193,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* GameCenterPlatform_CreateLeade
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_CreateLeaderboard_mC2B336F8C9569B3FD7059ED7861B208DD44B0EAB_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ILeaderboard_tC996640E43BF8EF5AA958F3BD43113D5A732B99B_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Leaderboard_tD587FC5E62BF8F6CC6AC0DF1ABB55D57A60CBE2D_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Leaderboard_tD587FC5E62BF8F6CC6AC0DF1ABB55D57A60CBE2D_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	Leaderboard_tD587FC5E62BF8F6CC6AC0DF1ABB55D57A60CBE2D * V_0 = NULL;
 	RuntimeObject* V_1 = NULL;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_LOCALS(methodExecutionContextLocals, (&V_0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GameCenterPlatform_CreateLeaderboard_mC2B336F8C9569B3FD7059ED7861B208DD44B0EAB_RuntimeMethod_var, methodExecutionContextThis, NULL, methodExecutionContextLocals);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 875));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 876));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 877));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 878));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 881));
 		Leaderboard_tD587FC5E62BF8F6CC6AC0DF1ABB55D57A60CBE2D * L_0 = (Leaderboard_tD587FC5E62BF8F6CC6AC0DF1ABB55D57A60CBE2D *)il2cpp_codegen_object_new(Leaderboard_tD587FC5E62BF8F6CC6AC0DF1ABB55D57A60CBE2D_il2cpp_TypeInfo_var);
 		Leaderboard__ctor_mC09955DEF2101303E698FC13E1BBFFA90B3365F4(L_0, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 881));
 		V_0 = L_0;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 879));
 		Leaderboard_tD587FC5E62BF8F6CC6AC0DF1ABB55D57A60CBE2D * L_1 = V_0;
 		V_1 = L_1;
 		goto IL_000b;
@@ -6468,7 +5209,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* GameCenterPlatform_CreateLeade
 
 IL_000b:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 880));
 		RuntimeObject* L_2 = V_1;
 		return L_2;
 	}
@@ -6479,29 +5219,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* GameCenterPlatform_CreateAchie
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Achievement_t43EB1469B011ADDEF59B6CB30044B878770D3565_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Achievement_t43EB1469B011ADDEF59B6CB30044B878770D3565_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_CreateAchievement_mC8BE646E6BB63CCF284C62FABEE712BF7590DB1A_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IAchievement_t2BF5C828331510A60F01770EDA23C238D9AE8057_0_0_0_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	Achievement_t43EB1469B011ADDEF59B6CB30044B878770D3565 * V_0 = NULL;
 	RuntimeObject* V_1 = NULL;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_LOCALS(methodExecutionContextLocals, (&V_0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GameCenterPlatform_CreateAchievement_mC8BE646E6BB63CCF284C62FABEE712BF7590DB1A_RuntimeMethod_var, methodExecutionContextThis, NULL, methodExecutionContextLocals);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 882));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 883));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 884));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 885));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 888));
 		Achievement_t43EB1469B011ADDEF59B6CB30044B878770D3565 * L_0 = (Achievement_t43EB1469B011ADDEF59B6CB30044B878770D3565 *)il2cpp_codegen_object_new(Achievement_t43EB1469B011ADDEF59B6CB30044B878770D3565_il2cpp_TypeInfo_var);
 		Achievement__ctor_m570954380BDC68F860E558D037369D03269C72A4(L_0, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 888));
 		V_0 = L_0;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 886));
 		Achievement_t43EB1469B011ADDEF59B6CB30044B878770D3565 * L_1 = V_0;
 		V_1 = L_1;
 		goto IL_000b;
@@ -6509,7 +5235,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* GameCenterPlatform_CreateAchie
 
 IL_000b:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 887));
 		RuntimeObject* L_2 = V_1;
 		return L_2;
 	}
@@ -6521,23 +5246,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameCenterPlatform_TriggerResetAchieveme
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Action_1_Invoke_m95E5C9FC67F7B0BDC3CD5E00AC5D4C8A00C97AC5_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_TriggerResetAchievementCallback_m2E643A3EF41033D83DB9C85BE1090B88735209B4_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	bool V_0 = false;
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___result0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GameCenterPlatform_TriggerResetAchievementCallback_m2E643A3EF41033D83DB9C85BE1090B88735209B4_RuntimeMethod_var, NULL, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 889));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 890));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 891));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 892));
 		IL2CPP_RUNTIME_CLASS_INIT(GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var);
 		Action_1_tCE2D770918A65CAD277C08C4E8C05385EA267E83 * L_0 = ((GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_StaticFields*)il2cpp_codegen_static_fields_for(GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var))->get_s_ResetAchievements_4();
 		V_0 = (bool)((!(((RuntimeObject*)(Action_1_tCE2D770918A65CAD277C08C4E8C05385EA267E83 *)L_0) <= ((RuntimeObject*)(RuntimeObject *)NULL)))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 893));
 		bool L_1 = V_0;
 		if (!L_1)
 		{
@@ -6545,19 +5261,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameCenterPlatform_TriggerResetAchieveme
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 894));
 		IL2CPP_RUNTIME_CLASS_INIT(GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var);
 		Action_1_tCE2D770918A65CAD277C08C4E8C05385EA267E83 * L_2 = ((GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_StaticFields*)il2cpp_codegen_static_fields_for(GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var))->get_s_ResetAchievements_4();
 		bool L_3 = ___result0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 896));
 		NullCheck(L_2);
 		Action_1_Invoke_m95E5C9FC67F7B0BDC3CD5E00AC5D4C8A00C97AC5(L_2, L_3, /*hidden argument*/Action_1_Invoke_m95E5C9FC67F7B0BDC3CD5E00AC5D4C8A00C97AC5_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 896));
 	}
 
 IL_0019:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 895));
 		return;
 	}
 }
@@ -6745,25 +5457,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameCenterPlatform_ResetAllAchievements_
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_ResetAllAchievements_m0D1E0F3E02F0F8F11B2BC6259032DACD60C95E93_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___callback0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GameCenterPlatform_ResetAllAchievements_m0D1E0F3E02F0F8F11B2BC6259032DACD60C95E93_RuntimeMethod_var, NULL, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 897));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 898));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 899));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 900));
 		Action_1_tCE2D770918A65CAD277C08C4E8C05385EA267E83 * L_0 = ___callback0;
 		IL2CPP_RUNTIME_CLASS_INIT(GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var);
 		((GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_StaticFields*)il2cpp_codegen_static_fields_for(GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var))->set_s_ResetAchievements_4(L_0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 901));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 903));
 		GameCenterPlatform_ResetAllAchievements_mE9D28FB583D98AA4088C5F343547F0D6417CEFE1(/*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 903));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 902));
 		return;
 	}
 }
@@ -6773,23 +5474,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameCenterPlatform_ShowDefaultAchievemen
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_ShowDefaultAchievementCompletionBanner_mF2DF755184E4F2608334418643FD5FB1767B2825_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___value0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GameCenterPlatform_ShowDefaultAchievementCompletionBanner_mF2DF755184E4F2608334418643FD5FB1767B2825_RuntimeMethod_var, NULL, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 904));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 905));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 906));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 907));
 		bool L_0 = ___value0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 909));
 		IL2CPP_RUNTIME_CLASS_INIT(GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var);
 		GameCenterPlatform_ShowDefaultAchievementBanner_mF87D9C8A302CF0AD0A3111427040B689B5B613BE(L_0, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 909));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 908));
 		return;
 	}
 }
@@ -6799,24 +5490,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameCenterPlatform_ShowLeaderboardUI_m22
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_ShowLeaderboardUI_m22ADB2F97963833741FE633EE2D9B332077A3458_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___leaderboardID0), (&___timeScope1));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GameCenterPlatform_ShowLeaderboardUI_m22ADB2F97963833741FE633EE2D9B332077A3458_RuntimeMethod_var, NULL, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 910));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 911));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 912));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 913));
 		String_t* L_0 = ___leaderboardID0;
 		int32_t L_1 = ___timeScope1;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 915));
 		IL2CPP_RUNTIME_CLASS_INIT(GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var);
 		GameCenterPlatform_ShowSpecificLeaderboardUI_m1D82E3387839C941131D76AB186E98F48B5043EB(L_0, L_1, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 915));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 914));
 		return;
 	}
 }
@@ -6832,14 +5513,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameCenterPlatform_ShowSpecificLeaderboa
 // System.Void UnityEngine.SocialPlatforms.GameCenter.GameCenterPlatform::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameCenterPlatform__ctor_m12106EF272A85BC20F2CA464C0A92DF42CAB375A (GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72 * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform__ctor_m12106EF272A85BC20F2CA464C0A92DF42CAB375A_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GameCenterPlatform__ctor_m12106EF272A85BC20F2CA464C0A92DF42CAB375A_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		Object__ctor_m88880E0413421D13FD95325EDCE231707CE1F405(__this, /*hidden argument*/NULL);
 		return;
@@ -6852,31 +5525,21 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameCenterPlatform__cctor_mE88589D1A6F81
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AchievementDescriptionU5BU5D_t954BACD501480D95EDB68166CB1F6DD9F07EB8D2_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform__cctor_mE88589D1A6F81068B6E9E2E837C61535E74B4D72_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1__ctor_m48A6C9D0E3E9E9FA4529980A32F48C3AF5520CD8_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_t627B55426F2D664F47826CDA6CB351B3B8D8F400_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UserProfileU5BU5D_tAED4B41D0866F8A4C6D403C2074ACEC812A78769_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GameCenterPlatform__cctor_mE88589D1A6F81068B6E9E2E837C61535E74B4D72_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 916));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 917));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 918));
 		AchievementDescriptionU5BU5D_t954BACD501480D95EDB68166CB1F6DD9F07EB8D2* L_0 = (AchievementDescriptionU5BU5D_t954BACD501480D95EDB68166CB1F6DD9F07EB8D2*)(AchievementDescriptionU5BU5D_t954BACD501480D95EDB68166CB1F6DD9F07EB8D2*)SZArrayNew(AchievementDescriptionU5BU5D_t954BACD501480D95EDB68166CB1F6DD9F07EB8D2_il2cpp_TypeInfo_var, (uint32_t)0);
 		((GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_StaticFields*)il2cpp_codegen_static_fields_for(GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var))->set_s_adCache_1(L_0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 919));
 		UserProfileU5BU5D_tAED4B41D0866F8A4C6D403C2074ACEC812A78769* L_1 = (UserProfileU5BU5D_tAED4B41D0866F8A4C6D403C2074ACEC812A78769*)(UserProfileU5BU5D_tAED4B41D0866F8A4C6D403C2074ACEC812A78769*)SZArrayNew(UserProfileU5BU5D_tAED4B41D0866F8A4C6D403C2074ACEC812A78769_il2cpp_TypeInfo_var, (uint32_t)0);
 		((GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_StaticFields*)il2cpp_codegen_static_fields_for(GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var))->set_s_friends_2(L_1);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 920));
 		UserProfileU5BU5D_tAED4B41D0866F8A4C6D403C2074ACEC812A78769* L_2 = (UserProfileU5BU5D_tAED4B41D0866F8A4C6D403C2074ACEC812A78769*)(UserProfileU5BU5D_tAED4B41D0866F8A4C6D403C2074ACEC812A78769*)SZArrayNew(UserProfileU5BU5D_tAED4B41D0866F8A4C6D403C2074ACEC812A78769_il2cpp_TypeInfo_var, (uint32_t)0);
 		((GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_StaticFields*)il2cpp_codegen_static_fields_for(GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var))->set_s_users_3(L_2);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 921));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 922));
 		List_1_t627B55426F2D664F47826CDA6CB351B3B8D8F400 * L_3 = (List_1_t627B55426F2D664F47826CDA6CB351B3B8D8F400 *)il2cpp_codegen_object_new(List_1_t627B55426F2D664F47826CDA6CB351B3B8D8F400_il2cpp_TypeInfo_var);
 		List_1__ctor_m48A6C9D0E3E9E9FA4529980A32F48C3AF5520CD8(L_3, /*hidden argument*/List_1__ctor_m48A6C9D0E3E9E9FA4529980A32F48C3AF5520CD8_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 922));
 		((GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_StaticFields*)il2cpp_codegen_static_fields_for(GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72_il2cpp_TypeInfo_var))->set_m_GcBoards_6(L_3);
 		return;
 	}
@@ -6957,20 +5620,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Achievement_t43EB1469B011ADDEF59B6CB30044B878
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Achievement_t43EB1469B011ADDEF59B6CB30044B878770D3565_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Achievement_t43EB1469B011ADDEF59B6CB30044B878770D3565_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&DateTime_tEAF2CD16E071DF5441F40822E4CFE880E5245405_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GcAchievementData_ToAchievement_mA3EFDC224A485DA99E1ED1CC90DEEB2CB68B539E_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GcAchievementData_t5391FC501EEDA04D3C45DB4213CAE82CA9ED9C24_0_0_0_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	DateTime_tEAF2CD16E071DF5441F40822E4CFE880E5245405  V_0;
 	memset((&V_0), 0, sizeof(V_0));
 	Achievement_t43EB1469B011ADDEF59B6CB30044B878770D3565 * V_1 = NULL;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GcAchievementData_ToAchievement_mA3EFDC224A485DA99E1ED1CC90DEEB2CB68B539E_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 411));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 412));
 	double G_B2_0 = 0.0;
 	String_t* G_B2_1 = NULL;
 	double G_B1_0 = 0.0;
@@ -6989,8 +5644,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Achievement_t43EB1469B011ADDEF59B6CB30044B878
 	double G_B6_2 = 0.0;
 	String_t* G_B6_3 = NULL;
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 413));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 414));
 		String_t* L_0 = __this->get_m_Identifier_0();
 		double L_1 = __this->get_m_PercentCompleted_1();
 		int32_t L_2 = __this->get_m_Completed_2();
@@ -7049,28 +5702,21 @@ IL_0024:
 
 IL_0025:
 	{
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 416));
 		DateTime_tEAF2CD16E071DF5441F40822E4CFE880E5245405  L_4;
 		memset((&L_4), 0, sizeof(L_4));
 		DateTime__ctor_m0FFFFEA32E380156E1FB4224D50CD0B16707E61C((&L_4), ((int32_t)1970), 1, 1, 0, 0, 0, 0, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 416));
 		V_0 = L_4;
 		int32_t L_5 = __this->get_m_LastReportedDate_4();
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 417));
 		DateTime_tEAF2CD16E071DF5441F40822E4CFE880E5245405  L_6;
 		L_6 = DateTime_AddSeconds_mCA0940A7E7C3ED40A86532349B7D4CB3A0F0DEAF((DateTime_tEAF2CD16E071DF5441F40822E4CFE880E5245405 *)(&V_0), ((double)((double)L_5)), /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 417));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 418));
 		Achievement_t43EB1469B011ADDEF59B6CB30044B878770D3565 * L_7 = (Achievement_t43EB1469B011ADDEF59B6CB30044B878770D3565 *)il2cpp_codegen_object_new(Achievement_t43EB1469B011ADDEF59B6CB30044B878770D3565_il2cpp_TypeInfo_var);
 		Achievement__ctor_m6BFE0E7DB18B35A485855AC3B1C0D4E25AB56C0C(L_7, G_B6_3, G_B6_2, (bool)G_B6_1, (bool)G_B6_0, L_6, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 418));
 		V_1 = L_7;
 		goto IL_004c;
 	}
 
 IL_004c:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 415));
 		Achievement_t43EB1469B011ADDEF59B6CB30044B878770D3565 * L_8 = V_1;
 		return L_8;
 	}
@@ -7127,17 +5773,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AchievementDescription_t6C56CB1D0F1F374C45EC0
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AchievementDescription_t6C56CB1D0F1F374C45EC0F65D5F1192C170B6506_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AchievementDescription_t6C56CB1D0F1F374C45EC0F65D5F1192C170B6506_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GcAchievementDescriptionData_ToAchievementDescription_m9942E64237B72699916331A3EED62FC8E0DB8B86_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GcAchievementDescriptionData_tA9C8FD052A0FAD05F5C290DEC026DDF07E81AF9D_0_0_0_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	AchievementDescription_t6C56CB1D0F1F374C45EC0F65D5F1192C170B6506 * V_0 = NULL;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GcAchievementDescriptionData_ToAchievementDescription_m9942E64237B72699916331A3EED62FC8E0DB8B86_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 405));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 406));
 	String_t* G_B2_0 = NULL;
 	String_t* G_B2_1 = NULL;
 	Texture2D_t9B604D0D8E28032123641A7E7338FA872E2698BF * G_B2_2 = NULL;
@@ -7155,8 +5794,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AchievementDescription_t6C56CB1D0F1F374C45EC0
 	String_t* G_B3_4 = NULL;
 	String_t* G_B3_5 = NULL;
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 407));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 408));
 		String_t* L_0 = __this->get_m_Identifier_0();
 		String_t* L_1 = __this->get_m_Title_1();
 		Texture2D_t9B604D0D8E28032123641A7E7338FA872E2698BF * L_2 = __this->get_m_Image_2();
@@ -7201,17 +5838,14 @@ IL_002a:
 IL_002b:
 	{
 		int32_t L_6 = __this->get_m_Points_6();
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 410));
 		AchievementDescription_t6C56CB1D0F1F374C45EC0F65D5F1192C170B6506 * L_7 = (AchievementDescription_t6C56CB1D0F1F374C45EC0F65D5F1192C170B6506 *)il2cpp_codegen_object_new(AchievementDescription_t6C56CB1D0F1F374C45EC0F65D5F1192C170B6506_il2cpp_TypeInfo_var);
 		AchievementDescription__ctor_m5EA1DE335B7A97FCDE944FBFD2B979D870D3F37A(L_7, G_B3_5, G_B3_4, G_B3_3, G_B3_2, G_B3_1, (bool)G_B3_0, L_6, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 410));
 		V_0 = L_7;
 		goto IL_0039;
 	}
 
 IL_0039:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 409));
 		AchievementDescription_t6C56CB1D0F1F374C45EC0F65D5F1192C170B6506 * L_8 = V_0;
 		return L_8;
 	}
@@ -7265,60 +5899,25 @@ IL2CPP_EXTERN_C void GcLeaderboard_t65BC1BB657B2E25E7BB1FBBB70ACDE29A3A64B72_mar
 // System.Void UnityEngine.SocialPlatforms.GameCenter.GcLeaderboard::.ctor(UnityEngine.SocialPlatforms.Impl.Leaderboard)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GcLeaderboard__ctor_mC6DCBFD1A415763A634A19381C936254D8B2F4E7 (GcLeaderboard_t65BC1BB657B2E25E7BB1FBBB70ACDE29A3A64B72 * __this, Leaderboard_tD587FC5E62BF8F6CC6AC0DF1ABB55D57A60CBE2D * ___board0, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GcLeaderboard__ctor_mC6DCBFD1A415763A634A19381C936254D8B2F4E7_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GcLeaderboard_t65BC1BB657B2E25E7BB1FBBB70ACDE29A3A64B72_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___board0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GcLeaderboard__ctor_mC6DCBFD1A415763A634A19381C936254D8B2F4E7_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 927));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 928));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 929));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 933));
 		Object__ctor_m88880E0413421D13FD95325EDCE231707CE1F405(__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 933));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 930));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 931));
 		Leaderboard_tD587FC5E62BF8F6CC6AC0DF1ABB55D57A60CBE2D * L_0 = ___board0;
 		__this->set_m_GenericLeaderboard_1(L_0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 932));
 		return;
 	}
 }
 // System.Void UnityEngine.SocialPlatforms.GameCenter.GcLeaderboard::Finalize()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GcLeaderboard_Finalize_m0DA6F9152780D5EFC4EE884E5CAA6A469CE81E2A (GcLeaderboard_t65BC1BB657B2E25E7BB1FBBB70ACDE29A3A64B72 * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GcLeaderboard_Finalize_m0DA6F9152780D5EFC4EE884E5CAA6A469CE81E2A_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GcLeaderboard_t65BC1BB657B2E25E7BB1FBBB70ACDE29A3A64B72_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GcLeaderboard_Finalize_m0DA6F9152780D5EFC4EE884E5CAA6A469CE81E2A_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 934));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 935));
 	Exception_t * __last_unhandled_exception = 0;
 	il2cpp::utils::ExceptionSupportStack<int32_t, 1> __leave_targets;
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 936));
 	}
 
 IL_0001:
 	try
 	{ // begin try (depth: 1)
-		STORE_TRY_ID(methodExecutionContext, 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 937));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 938));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 941));
 		GcLeaderboard_Dispose_m54F8C8544A7F65898B6444B3EE11916153C20B6F(__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 941));
 		IL2CPP_LEAVE(0x13, FINALLY_000b);
 	} // end try (depth: 1)
 	catch(Il2CppExceptionWrapper& e)
@@ -7329,11 +5928,7 @@ IL_0001:
 
 FINALLY_000b:
 	{ // begin finally (depth: 1)
-		STORE_TRY_ID(methodExecutionContext, -1);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 939));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 942));
 		Object_Finalize_mC59C83CF4F7707E425FFA6362931C25D4C36676A(__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 942));
 		IL2CPP_END_FINALLY(11)
 	} // end finally (depth: 1)
 	IL2CPP_CLEANUP(11)
@@ -7344,30 +5939,14 @@ FINALLY_000b:
 
 IL_0013:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 940));
 		return;
 	}
 }
 // System.Boolean UnityEngine.SocialPlatforms.GameCenter.GcLeaderboard::Contains(UnityEngine.SocialPlatforms.Impl.Leaderboard)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool GcLeaderboard_Contains_m599B4319BA3FD351DC157B5E23D0489D8186279C (GcLeaderboard_t65BC1BB657B2E25E7BB1FBBB70ACDE29A3A64B72 * __this, Leaderboard_tD587FC5E62BF8F6CC6AC0DF1ABB55D57A60CBE2D * ___board0, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GcLeaderboard_Contains_m599B4319BA3FD351DC157B5E23D0489D8186279C_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GcLeaderboard_t65BC1BB657B2E25E7BB1FBBB70ACDE29A3A64B72_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	bool V_0 = false;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___board0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GcLeaderboard_Contains_m599B4319BA3FD351DC157B5E23D0489D8186279C_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 943));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 944));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 945));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 946));
 		Leaderboard_tD587FC5E62BF8F6CC6AC0DF1ABB55D57A60CBE2D * L_0 = __this->get_m_GenericLeaderboard_1();
 		Leaderboard_tD587FC5E62BF8F6CC6AC0DF1ABB55D57A60CBE2D * L_1 = ___board0;
 		V_0 = (bool)((((RuntimeObject*)(Leaderboard_tD587FC5E62BF8F6CC6AC0DF1ABB55D57A60CBE2D *)L_0) == ((RuntimeObject*)(Leaderboard_tD587FC5E62BF8F6CC6AC0DF1ABB55D57A60CBE2D *)L_1))? 1 : 0);
@@ -7376,7 +5955,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool GcLeaderboard_Contains_m599B4319BA3FD351
 
 IL_000d:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 947));
 		bool L_2 = V_0;
 		return L_2;
 	}
@@ -7387,12 +5965,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GcLeaderboard_SetScores_m0FE1B289E42EAF2
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GcLeaderboard_SetScores_m0FE1B289E42EAF2415193FFA1BEAE3FE38AA6B4B_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GcLeaderboard_t65BC1BB657B2E25E7BB1FBBB70ACDE29A3A64B72_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IScoreU5BU5D_t9FEEC91A3D90CD5770DA4EFB8DFCF5340A279C5A_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Int32_tFDE5F8CD43D10453F6A2E0C77FE48C6CC7009046_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ScoreU5BU5D_t9262DBDF2A24DE1477F0AC5F217933ABDD6E3127_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ScoreU5BU5D_t9262DBDF2A24DE1477F0AC5F217933ABDD6E3127_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
@@ -7401,18 +5973,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GcLeaderboard_SetScores_m0FE1B289E42EAF2
 	int32_t V_2 = 0;
 	bool V_3 = false;
 	IScoreU5BU5D_t9FEEC91A3D90CD5770DA4EFB8DFCF5340A279C5A* V_4 = NULL;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___scoreDatas0));
-	DECLARE_METHOD_LOCALS(methodExecutionContextLocals, (&V_1), (&V_2));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GcLeaderboard_SetScores_m0FE1B289E42EAF2415193FFA1BEAE3FE38AA6B4B_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, methodExecutionContextLocals);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 948));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 949));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 950));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 951));
 		Leaderboard_tD587FC5E62BF8F6CC6AC0DF1ABB55D57A60CBE2D * L_0 = __this->get_m_GenericLeaderboard_1();
 		V_0 = (bool)((!(((RuntimeObject*)(Leaderboard_tD587FC5E62BF8F6CC6AC0DF1ABB55D57A60CBE2D *)L_0) <= ((RuntimeObject*)(RuntimeObject *)NULL)))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 952));
 		bool L_1 = V_0;
 		if (!L_1)
 		{
@@ -7420,46 +5983,36 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GcLeaderboard_SetScores_m0FE1B289E42EAF2
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 953));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 954));
 		GcScoreDataU5BU5D_t23A52711105AEEB9D50CE62EE09DD06826C3DD1D* L_2 = ___scoreDatas0;
 		NullCheck(L_2);
 		ScoreU5BU5D_t9262DBDF2A24DE1477F0AC5F217933ABDD6E3127* L_3 = (ScoreU5BU5D_t9262DBDF2A24DE1477F0AC5F217933ABDD6E3127*)(ScoreU5BU5D_t9262DBDF2A24DE1477F0AC5F217933ABDD6E3127*)SZArrayNew(ScoreU5BU5D_t9262DBDF2A24DE1477F0AC5F217933ABDD6E3127_il2cpp_TypeInfo_var, (uint32_t)((int32_t)((int32_t)(((RuntimeArray*)L_2)->max_length))));
 		V_1 = L_3;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 955));
 		V_2 = 0;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 956));
 		goto IL_002f;
 	}
 
 IL_001c:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 957));
 		ScoreU5BU5D_t9262DBDF2A24DE1477F0AC5F217933ABDD6E3127* L_4 = V_1;
 		int32_t L_5 = V_2;
 		GcScoreDataU5BU5D_t23A52711105AEEB9D50CE62EE09DD06826C3DD1D* L_6 = ___scoreDatas0;
 		int32_t L_7 = V_2;
 		NullCheck(L_6);
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 964));
 		Score_tD70993CC66CCC9CDE0DAB2917533D8094F1E4119 * L_8;
 		L_8 = GcScoreData_ToScore_m6B29510CCE935E2A67EAFC653CB4A0A4B8B32B49((GcScoreData_tAECE4DD4FB50D9F0B5504A41C1D95B028A5B28EC *)((L_6)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_7))), /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 964));
 		NullCheck(L_4);
 		ArrayElementTypeCheck (L_4, L_8);
 		(L_4)->SetAt(static_cast<il2cpp_array_size_t>(L_5), (Score_tD70993CC66CCC9CDE0DAB2917533D8094F1E4119 *)L_8);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 958));
 		int32_t L_9 = V_2;
 		V_2 = ((int32_t)il2cpp_codegen_add((int32_t)L_9, (int32_t)1));
 	}
 
 IL_002f:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 959));
 		int32_t L_10 = V_2;
 		GcScoreDataU5BU5D_t23A52711105AEEB9D50CE62EE09DD06826C3DD1D* L_11 = ___scoreDatas0;
 		NullCheck(L_11);
 		V_3 = (bool)((((int32_t)L_10) < ((int32_t)((int32_t)((int32_t)(((RuntimeArray*)L_11)->max_length)))))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 960));
 		bool L_12 = V_3;
 		if (L_12)
 		{
@@ -7467,47 +6020,26 @@ IL_002f:
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 961));
 		Leaderboard_tD587FC5E62BF8F6CC6AC0DF1ABB55D57A60CBE2D * L_13 = __this->get_m_GenericLeaderboard_1();
 		ScoreU5BU5D_t9262DBDF2A24DE1477F0AC5F217933ABDD6E3127* L_14 = V_1;
 		V_4 = (IScoreU5BU5D_t9FEEC91A3D90CD5770DA4EFB8DFCF5340A279C5A*)L_14;
 		IScoreU5BU5D_t9FEEC91A3D90CD5770DA4EFB8DFCF5340A279C5A* L_15 = V_4;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 965));
 		NullCheck(L_13);
 		Leaderboard_SetScores_m2DB8C9FB943AD849B23FCEB56D76FAE4E11C2084(L_13, L_15, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 965));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 962));
 	}
 
 IL_004b:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 963));
 		return;
 	}
 }
 // System.Void UnityEngine.SocialPlatforms.GameCenter.GcLeaderboard::SetLocalScore(UnityEngine.SocialPlatforms.GameCenter.GcScoreData)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GcLeaderboard_SetLocalScore_mB3EB59503BACFA37E9F112DB5E1906174C67AF32 (GcLeaderboard_t65BC1BB657B2E25E7BB1FBBB70ACDE29A3A64B72 * __this, GcScoreData_tAECE4DD4FB50D9F0B5504A41C1D95B028A5B28EC  ___scoreData0, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GcLeaderboard_SetLocalScore_mB3EB59503BACFA37E9F112DB5E1906174C67AF32_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GcLeaderboard_t65BC1BB657B2E25E7BB1FBBB70ACDE29A3A64B72_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	bool V_0 = false;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___scoreData0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GcLeaderboard_SetLocalScore_mB3EB59503BACFA37E9F112DB5E1906174C67AF32_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 966));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 967));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 968));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 969));
 		Leaderboard_tD587FC5E62BF8F6CC6AC0DF1ABB55D57A60CBE2D * L_0 = __this->get_m_GenericLeaderboard_1();
 		V_0 = (bool)((!(((RuntimeObject*)(Leaderboard_tD587FC5E62BF8F6CC6AC0DF1ABB55D57A60CBE2D *)L_0) <= ((RuntimeObject*)(RuntimeObject *)NULL)))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 970));
 		bool L_1 = V_0;
 		if (!L_1)
 		{
@@ -7515,47 +6047,25 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GcLeaderboard_SetLocalScore_mB3EB59503BA
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 971));
 		Leaderboard_tD587FC5E62BF8F6CC6AC0DF1ABB55D57A60CBE2D * L_2 = __this->get_m_GenericLeaderboard_1();
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 973));
 		Score_tD70993CC66CCC9CDE0DAB2917533D8094F1E4119 * L_3;
 		L_3 = GcScoreData_ToScore_m6B29510CCE935E2A67EAFC653CB4A0A4B8B32B49((GcScoreData_tAECE4DD4FB50D9F0B5504A41C1D95B028A5B28EC *)(&___scoreData0), /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 973));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 974));
 		NullCheck(L_2);
 		Leaderboard_SetLocalUserScore_m17939BC032AC6FDCC1152234807C50E97A72D600(L_2, L_3, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 974));
 	}
 
 IL_0021:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 972));
 		return;
 	}
 }
 // System.Void UnityEngine.SocialPlatforms.GameCenter.GcLeaderboard::SetMaxRange(System.UInt32)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GcLeaderboard_SetMaxRange_m9926B80DD3377EF7798718F0FD57587DADE4DC31 (GcLeaderboard_t65BC1BB657B2E25E7BB1FBBB70ACDE29A3A64B72 * __this, uint32_t ___maxRange0, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GcLeaderboard_SetMaxRange_m9926B80DD3377EF7798718F0FD57587DADE4DC31_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GcLeaderboard_t65BC1BB657B2E25E7BB1FBBB70ACDE29A3A64B72_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	bool V_0 = false;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___maxRange0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GcLeaderboard_SetMaxRange_m9926B80DD3377EF7798718F0FD57587DADE4DC31_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 975));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 976));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 977));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 978));
 		Leaderboard_tD587FC5E62BF8F6CC6AC0DF1ABB55D57A60CBE2D * L_0 = __this->get_m_GenericLeaderboard_1();
 		V_0 = (bool)((!(((RuntimeObject*)(Leaderboard_tD587FC5E62BF8F6CC6AC0DF1ABB55D57A60CBE2D *)L_0) <= ((RuntimeObject*)(RuntimeObject *)NULL)))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 979));
 		bool L_1 = V_0;
 		if (!L_1)
 		{
@@ -7563,44 +6073,24 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GcLeaderboard_SetMaxRange_m9926B80DD3377
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 980));
 		Leaderboard_tD587FC5E62BF8F6CC6AC0DF1ABB55D57A60CBE2D * L_2 = __this->get_m_GenericLeaderboard_1();
 		uint32_t L_3 = ___maxRange0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 982));
 		NullCheck(L_2);
 		Leaderboard_SetMaxRange_m5D699FC22BC5BED04386C4B6D4661663B49FD3B4(L_2, L_3, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 982));
 	}
 
 IL_001b:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 981));
 		return;
 	}
 }
 // System.Void UnityEngine.SocialPlatforms.GameCenter.GcLeaderboard::SetTitle(System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GcLeaderboard_SetTitle_m964511DCF53C69F7208CDC1DFD68885E2BCECF2A (GcLeaderboard_t65BC1BB657B2E25E7BB1FBBB70ACDE29A3A64B72 * __this, String_t* ___title0, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GcLeaderboard_SetTitle_m964511DCF53C69F7208CDC1DFD68885E2BCECF2A_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GcLeaderboard_t65BC1BB657B2E25E7BB1FBBB70ACDE29A3A64B72_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	bool V_0 = false;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___title0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GcLeaderboard_SetTitle_m964511DCF53C69F7208CDC1DFD68885E2BCECF2A_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 983));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 984));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 985));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 986));
 		Leaderboard_tD587FC5E62BF8F6CC6AC0DF1ABB55D57A60CBE2D * L_0 = __this->get_m_GenericLeaderboard_1();
 		V_0 = (bool)((!(((RuntimeObject*)(Leaderboard_tD587FC5E62BF8F6CC6AC0DF1ABB55D57A60CBE2D *)L_0) <= ((RuntimeObject*)(RuntimeObject *)NULL)))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 987));
 		bool L_1 = V_0;
 		if (!L_1)
 		{
@@ -7608,39 +6098,21 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GcLeaderboard_SetTitle_m964511DCF53C69F7
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 988));
 		Leaderboard_tD587FC5E62BF8F6CC6AC0DF1ABB55D57A60CBE2D * L_2 = __this->get_m_GenericLeaderboard_1();
 		String_t* L_3 = ___title0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 990));
 		NullCheck(L_2);
 		Leaderboard_SetTitle_m5FE6EFFE4099E7BA2B7F1F6644B0A9E1C5A93627(L_2, L_3, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 990));
 	}
 
 IL_001b:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 989));
 		return;
 	}
 }
 // System.Void UnityEngine.SocialPlatforms.GameCenter.GcLeaderboard::Internal_LoadScores(System.String,System.Int32,System.Int32,System.String[],System.Int32,System.Int32,System.Object)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GcLeaderboard_Internal_LoadScores_mDFC3A947F5DC0FC7EF83B6C5B605D93BC959675F (GcLeaderboard_t65BC1BB657B2E25E7BB1FBBB70ACDE29A3A64B72 * __this, String_t* ___category0, int32_t ___from1, int32_t ___count2, StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A* ___userIDs3, int32_t ___playerScope4, int32_t ___timeScope5, RuntimeObject * ___callback6, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GcLeaderboard_Internal_LoadScores_mDFC3A947F5DC0FC7EF83B6C5B605D93BC959675F_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GcLeaderboard_t65BC1BB657B2E25E7BB1FBBB70ACDE29A3A64B72_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___category0), (&___from1), (&___count2), (&___userIDs3), (&___playerScope4), (&___timeScope5), (&___callback6));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GcLeaderboard_Internal_LoadScores_mDFC3A947F5DC0FC7EF83B6C5B605D93BC959675F_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 991));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 992));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 993));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 994));
 		String_t* L_0 = ___category0;
 		int32_t L_1 = ___from1;
 		int32_t L_2 = ___count2;
@@ -7648,12 +6120,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GcLeaderboard_Internal_LoadScores_mDFC3A
 		int32_t L_4 = ___playerScope4;
 		int32_t L_5 = ___timeScope5;
 		RuntimeObject * L_6 = ___callback6;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 996));
 		intptr_t L_7;
 		L_7 = GcLeaderboard_GcLeaderboard_LoadScores_mE4F307604F265C0C0EBB3D4F73C69CDDCD0C33EA(__this, L_0, L_1, L_2, L_3, L_4, L_5, L_6, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 996));
 		__this->set_m_InternalLeaderboard_0((intptr_t)L_7);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 995));
 		return;
 	}
 }
@@ -7670,34 +6139,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t GcLeaderboard_GcLeaderboard_LoadScor
 // System.Boolean UnityEngine.SocialPlatforms.GameCenter.GcLeaderboard::Loading()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool GcLeaderboard_Loading_m825936D6AB51CC355DAB8DAAF6177AC4ABBC78B2 (GcLeaderboard_t65BC1BB657B2E25E7BB1FBBB70ACDE29A3A64B72 * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GcLeaderboard_Loading_m825936D6AB51CC355DAB8DAAF6177AC4ABBC78B2_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GcLeaderboard_t65BC1BB657B2E25E7BB1FBBB70ACDE29A3A64B72_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	bool V_0 = false;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GcLeaderboard_Loading_m825936D6AB51CC355DAB8DAAF6177AC4ABBC78B2_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 997));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 998));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 999));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 1000));
 		intptr_t L_0 = __this->get_m_InternalLeaderboard_0();
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 1002));
 		bool L_1;
 		L_1 = GcLeaderboard_GcLeaderboard_Loading_m75421046282EED69E844C5A137EB4D1322934C1C((intptr_t)L_0, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 1002));
 		V_0 = L_1;
 		goto IL_000f;
 	}
 
 IL_000f:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 1001));
 		bool L_2 = V_0;
 		return L_2;
 	}
@@ -7718,25 +6170,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GcLeaderboard_Dispose_m54F8C8544A7F65898
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GcLeaderboard_Dispose_m54F8C8544A7F65898B6444B3EE11916153C20B6F_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GcLeaderboard_t65BC1BB657B2E25E7BB1FBBB70ACDE29A3A64B72_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IntPtr_t_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GcLeaderboard_Dispose_m54F8C8544A7F65898B6444B3EE11916153C20B6F_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 1003));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 1004));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 1005));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 1006));
 		intptr_t L_0 = __this->get_m_InternalLeaderboard_0();
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 1009));
 		GcLeaderboard_GcLeaderboard_Dispose_m45FAF5CB809CC8AA14C925CB11F23D6AD4DF407C((intptr_t)L_0, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 1009));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 1007));
 		__this->set_m_InternalLeaderboard_0((intptr_t)(0));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 1008));
 		return;
 	}
 }
@@ -7841,51 +6281,34 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Score_tD70993CC66CCC9CDE0DAB2917533D8094F1E41
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&DateTime_tEAF2CD16E071DF5441F40822E4CFE880E5245405_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GcScoreData_ToScore_m6B29510CCE935E2A67EAFC653CB4A0A4B8B32B49_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GcScoreData_tAECE4DD4FB50D9F0B5504A41C1D95B028A5B28EC_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Score_tD70993CC66CCC9CDE0DAB2917533D8094F1E4119_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Score_tD70993CC66CCC9CDE0DAB2917533D8094F1E4119_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	DateTime_tEAF2CD16E071DF5441F40822E4CFE880E5245405  V_0;
 	memset((&V_0), 0, sizeof(V_0));
 	Score_tD70993CC66CCC9CDE0DAB2917533D8094F1E4119 * V_1 = NULL;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GcScoreData_ToScore_m6B29510CCE935E2A67EAFC653CB4A0A4B8B32B49_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 419));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 420));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 421));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 422));
 		String_t* L_0 = __this->get_m_Category_0();
 		int32_t L_1 = __this->get_m_ValueHigh_2();
 		uint32_t L_2 = __this->get_m_ValueLow_1();
 		String_t* L_3 = __this->get_m_PlayerID_5();
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 424));
 		DateTime_tEAF2CD16E071DF5441F40822E4CFE880E5245405  L_4;
 		memset((&L_4), 0, sizeof(L_4));
 		DateTime__ctor_m0FFFFEA32E380156E1FB4224D50CD0B16707E61C((&L_4), ((int32_t)1970), 1, 1, 0, 0, 0, 0, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 424));
 		V_0 = L_4;
 		int32_t L_5 = __this->get_m_Date_3();
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 425));
 		DateTime_tEAF2CD16E071DF5441F40822E4CFE880E5245405  L_6;
 		L_6 = DateTime_AddSeconds_mCA0940A7E7C3ED40A86532349B7D4CB3A0F0DEAF((DateTime_tEAF2CD16E071DF5441F40822E4CFE880E5245405 *)(&V_0), ((double)((double)L_5)), /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 425));
 		String_t* L_7 = __this->get_m_FormattedValue_4();
 		int32_t L_8 = __this->get_m_Rank_6();
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 426));
 		Score_tD70993CC66CCC9CDE0DAB2917533D8094F1E4119 * L_9 = (Score_tD70993CC66CCC9CDE0DAB2917533D8094F1E4119 *)il2cpp_codegen_object_new(Score_tD70993CC66CCC9CDE0DAB2917533D8094F1E4119_il2cpp_TypeInfo_var);
 		Score__ctor_m94026C33B1E9EE0F31614511DB8F512E8A7A4FE3(L_9, L_0, ((int64_t)il2cpp_codegen_add((int64_t)((int64_t)((int64_t)((int64_t)((int64_t)L_1))<<(int32_t)((int32_t)32))), (int64_t)((int64_t)((uint64_t)L_2)))), L_3, L_6, L_7, L_8, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 426));
 		V_1 = L_9;
 		goto IL_0052;
 	}
 
 IL_0052:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 423));
 		Score_tD70993CC66CCC9CDE0DAB2917533D8094F1E4119 * L_10 = V_1;
 		return L_10;
 	}
@@ -7942,17 +6365,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR UserProfile_tDA4AC2655C2C32774702DDA257938A10
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GcUserProfileData_ToUserProfile_m500A5A38D89D400333D9ED8D2005449AFEC91F24_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GcUserProfileData_t18036AD9C18F55CBB882ABACD4DE2771EFFDF03D_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UserProfile_tDA4AC2655C2C32774702DDA257938A108AB4C537_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UserProfile_tDA4AC2655C2C32774702DDA257938A108AB4C537_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	UserProfile_tDA4AC2655C2C32774702DDA257938A108AB4C537 * V_0 = NULL;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GcUserProfileData_ToUserProfile_m500A5A38D89D400333D9ED8D2005449AFEC91F24_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 389));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 390));
 	String_t* G_B2_0 = NULL;
 	String_t* G_B2_1 = NULL;
 	String_t* G_B2_2 = NULL;
@@ -7964,8 +6380,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR UserProfile_tDA4AC2655C2C32774702DDA257938A10
 	String_t* G_B3_2 = NULL;
 	String_t* G_B3_3 = NULL;
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 391));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 392));
 		String_t* L_0 = __this->get_userName_0();
 		String_t* L_1 = __this->get_teamID_1();
 		String_t* L_2 = __this->get_gameID_2();
@@ -8000,17 +6414,14 @@ IL_001f:
 IL_0020:
 	{
 		Texture2D_t9B604D0D8E28032123641A7E7338FA872E2698BF * L_4 = __this->get_image_4();
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 394));
 		UserProfile_tDA4AC2655C2C32774702DDA257938A108AB4C537 * L_5 = (UserProfile_tDA4AC2655C2C32774702DDA257938A108AB4C537 *)il2cpp_codegen_object_new(UserProfile_tDA4AC2655C2C32774702DDA257938A108AB4C537_il2cpp_TypeInfo_var);
 		UserProfile__ctor_m82A71921E766018566AFB09BCE3091C8F1055F39(L_5, G_B3_3, G_B3_2, G_B3_1, (bool)G_B3_0, 3, L_4, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 394));
 		V_0 = L_5;
 		goto IL_002f;
 	}
 
 IL_002f:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 393));
 		UserProfile_tDA4AC2655C2C32774702DDA257938A108AB4C537 * L_6 = V_0;
 		return L_6;
 	}
@@ -8029,23 +6440,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GcUserProfileData_AddToArray_mA189B901FE
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_tEB68BCBEB8EFD60F8043C67146DC05E7F50F374B_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GcUserProfileData_AddToArray_mA189B901FEF32E5CA9AF7DEB58D8143E87E41EC2_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GcUserProfileData_t18036AD9C18F55CBB882ABACD4DE2771EFFDF03D_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral66A9B6842DC1D465CA5CFAF30DE6EDFAC6DF04E8);
 		s_Il2CppMethodInitialized = true;
 	}
 	bool V_0 = false;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___array0), (&___number1));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, GcUserProfileData_AddToArray_mA189B901FEF32E5CA9AF7DEB58D8143E87E41EC2_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 395));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 396));
 	int32_t G_B3_0 = 0;
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 397));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 398));
 		UserProfileU5BU5D_tAED4B41D0866F8A4C6D403C2074ACEC812A78769** L_0 = ___array0;
 		UserProfileU5BU5D_tAED4B41D0866F8A4C6D403C2074ACEC812A78769* L_1 = *((UserProfileU5BU5D_tAED4B41D0866F8A4C6D403C2074ACEC812A78769**)L_0);
 		NullCheck(L_1);
@@ -8069,7 +6470,6 @@ IL_0011:
 IL_0012:
 	{
 		V_0 = (bool)G_B3_0;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 399));
 		bool L_4 = V_0;
 		if (!L_4)
 		{
@@ -8077,14 +6477,11 @@ IL_0012:
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 400));
 		UserProfileU5BU5D_tAED4B41D0866F8A4C6D403C2074ACEC812A78769** L_5 = ___array0;
 		UserProfileU5BU5D_tAED4B41D0866F8A4C6D403C2074ACEC812A78769* L_6 = *((UserProfileU5BU5D_tAED4B41D0866F8A4C6D403C2074ACEC812A78769**)L_5);
 		int32_t L_7 = ___number1;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 403));
 		UserProfile_tDA4AC2655C2C32774702DDA257938A108AB4C537 * L_8;
 		L_8 = GcUserProfileData_ToUserProfile_m500A5A38D89D400333D9ED8D2005449AFEC91F24((GcUserProfileData_t18036AD9C18F55CBB882ABACD4DE2771EFFDF03D *)__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 403));
 		NullCheck(L_6);
 		ArrayElementTypeCheck (L_6, L_8);
 		(L_6)->SetAt(static_cast<il2cpp_array_size_t>(L_7), (UserProfile_tDA4AC2655C2C32774702DDA257938A108AB4C537 *)L_8);
@@ -8093,16 +6490,12 @@ IL_0012:
 
 IL_0022:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 401));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 404));
 		IL2CPP_RUNTIME_CLASS_INIT(Debug_tEB68BCBEB8EFD60F8043C67146DC05E7F50F374B_il2cpp_TypeInfo_var);
 		Debug_Log_mC26E5AD0D8D156C7FFD173AA15827F69225E9DB8(_stringLiteral66A9B6842DC1D465CA5CFAF30DE6EDFAC6DF04E8, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 404));
 	}
 
 IL_002d:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 402));
 		return;
 	}
 }
@@ -8126,9 +6519,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Leaderboard__ctor_mC09955DEF2101303E698F
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IScoreU5BU5D_t9FEEC91A3D90CD5770DA4EFB8DFCF5340A279C5A_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Leaderboard__ctor_mC09955DEF2101303E698FC13E1BBFFA90B3365F4_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Leaderboard_tD587FC5E62BF8F6CC6AC0DF1ABB55D57A60CBE2D_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ScoreU5BU5D_t9262DBDF2A24DE1477F0AC5F217933ABDD6E3127_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Score_tD70993CC66CCC9CDE0DAB2917533D8094F1E4119_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A_il2cpp_TypeInfo_var);
@@ -8136,58 +6526,27 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Leaderboard__ctor_mC09955DEF2101303E698F
 		s_Il2CppMethodInitialized = true;
 	}
 	IScoreU5BU5D_t9FEEC91A3D90CD5770DA4EFB8DFCF5340A279C5A* V_0 = NULL;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Leaderboard__ctor_mC09955DEF2101303E698FC13E1BBFFA90B3365F4_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 299));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 300));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 301));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 314));
 		Object__ctor_m88880E0413421D13FD95325EDCE231707CE1F405(__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 314));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 302));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 303));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 315));
 		Leaderboard_set_id_mC863AFBCE6B992935BCE9E8B567CDA40CCD94B42_inline(__this, _stringLiteral6DD798540816CF95355537E350E0B22DB63ACF5E, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 315));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 304));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 316));
 		Range_t70C133E51417BC822E878050C90A577A69B671DC  L_0;
 		memset((&L_0), 0, sizeof(L_0));
 		Range__ctor_mD7BBA6A816E8FBFDDC618308BC5D5882297443F8((&L_0), 1, ((int32_t)10), /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 316));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 317));
 		Leaderboard_set_range_m29352D47548D750E0E42EC9627C861C69D084444_inline(__this, L_0, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 317));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 305));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 318));
 		Leaderboard_set_userScope_m66BBCC760CDAF1C44639BD10E4D901EFD7C3F778_inline(__this, 0, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 318));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 306));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 319));
 		Leaderboard_set_timeScope_m36122610C955D05BD7FC713415CA78076986B901_inline(__this, 2, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 319));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 307));
 		__this->set_m_Loading_0((bool)0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 308));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 320));
 		Score_tD70993CC66CCC9CDE0DAB2917533D8094F1E4119 * L_1 = (Score_tD70993CC66CCC9CDE0DAB2917533D8094F1E4119 *)il2cpp_codegen_object_new(Score_tD70993CC66CCC9CDE0DAB2917533D8094F1E4119_il2cpp_TypeInfo_var);
 		Score__ctor_m88494757EDE00B4CA1BE7027A1F84C82E09EC958(L_1, _stringLiteral6DD798540816CF95355537E350E0B22DB63ACF5E, ((int64_t)((int64_t)0)), /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 320));
 		__this->set_m_LocalUserScore_1(L_1);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 309));
 		__this->set_m_MaxRange_2(0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 310));
 		ScoreU5BU5D_t9262DBDF2A24DE1477F0AC5F217933ABDD6E3127* L_2 = (ScoreU5BU5D_t9262DBDF2A24DE1477F0AC5F217933ABDD6E3127*)(ScoreU5BU5D_t9262DBDF2A24DE1477F0AC5F217933ABDD6E3127*)SZArrayNew(ScoreU5BU5D_t9262DBDF2A24DE1477F0AC5F217933ABDD6E3127_il2cpp_TypeInfo_var, (uint32_t)0);
 		V_0 = (IScoreU5BU5D_t9FEEC91A3D90CD5770DA4EFB8DFCF5340A279C5A*)L_2;
 		IScoreU5BU5D_t9FEEC91A3D90CD5770DA4EFB8DFCF5340A279C5A* L_3 = V_0;
 		__this->set_m_Scores_3(L_3);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 311));
 		__this->set_m_Title_4(_stringLiteral6DD798540816CF95355537E350E0B22DB63ACF5E);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 312));
 		StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A* L_4 = (StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A*)(StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A*)SZArrayNew(StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A_il2cpp_TypeInfo_var, (uint32_t)0);
 		__this->set_m_UserIDs_5(L_4);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 313));
 		return;
 	}
 }
@@ -8197,15 +6556,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Leaderboard_ToString_mE59DCCF117736
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Int32_tFDE5F8CD43D10453F6A2E0C77FE48C6CC7009046_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Leaderboard_ToString_mE59DCCF117736269AF0C6CD21876DB3448BD14ED_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Leaderboard_tD587FC5E62BF8F6CC6AC0DF1ABB55D57A60CBE2D_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Range_t70C133E51417BC822E878050C90A577A69B671DC_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&String_t_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&TimeScope_t0FDB33C00FF0784F8194FEF48B2BD78C0F9A7759_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&TimeScope_t0FDB33C00FF0784F8194FEF48B2BD78C0F9A7759_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UserScope_t7EB5D79B9892B749665A462B4832F78C3F57A4C7_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UserScope_t7EB5D79B9892B749665A462B4832F78C3F57A4C7_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral1273820123770263EB0C9B1F3C361D88BB39757C);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral4FEC6C4846D0D96A0075252A785C42336C923A3A);
@@ -8225,23 +6577,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Leaderboard_ToString_mE59DCCF117736
 	int32_t V_2 = 0;
 	int32_t V_3 = 0;
 	String_t* V_4 = NULL;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Leaderboard_ToString_mE59DCCF117736269AF0C6CD21876DB3448BD14ED_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 321));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 322));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 323));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 324));
 		StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A* L_0 = (StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A*)(StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A*)SZArrayNew(StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A_il2cpp_TypeInfo_var, (uint32_t)((int32_t)20));
 		StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A* L_1 = L_0;
 		NullCheck(L_1);
 		ArrayElementTypeCheck (L_1, _stringLiteralFF16DFE5E3F78763F7473407939171C7C65328F2);
 		(L_1)->SetAt(static_cast<il2cpp_array_size_t>(0), (String_t*)_stringLiteralFF16DFE5E3F78763F7473407939171C7C65328F2);
 		StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A* L_2 = L_1;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 326));
 		String_t* L_3;
 		L_3 = Leaderboard_get_id_m4A262BB19BCACE6C9B19874F5D68C777846C6CD6_inline(__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 326));
 		NullCheck(L_2);
 		ArrayElementTypeCheck (L_2, L_3);
 		(L_2)->SetAt(static_cast<il2cpp_array_size_t>(1), (String_t*)L_3);
@@ -8260,10 +6604,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Leaderboard_ToString_mE59DCCF117736
 		(L_7)->SetAt(static_cast<il2cpp_array_size_t>(4), (String_t*)_stringLiteralA0C1E38BE79F8142BF907FB75677A8AC15D1843A);
 		StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A* L_8 = L_7;
 		bool* L_9 = __this->get_address_of_m_Loading_0();
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 327));
 		String_t* L_10;
 		L_10 = Boolean_ToString_m59BB8456DD05A874BBD756E57EA8AD983287015C((bool*)L_9, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 327));
 		NullCheck(L_8);
 		ArrayElementTypeCheck (L_8, L_10);
 		(L_8)->SetAt(static_cast<il2cpp_array_size_t>(5), (String_t*)L_10);
@@ -8272,16 +6614,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Leaderboard_ToString_mE59DCCF117736
 		ArrayElementTypeCheck (L_11, _stringLiteral1273820123770263EB0C9B1F3C361D88BB39757C);
 		(L_11)->SetAt(static_cast<il2cpp_array_size_t>(6), (String_t*)_stringLiteral1273820123770263EB0C9B1F3C361D88BB39757C);
 		StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A* L_12 = L_11;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 328));
 		Range_t70C133E51417BC822E878050C90A577A69B671DC  L_13;
 		L_13 = Leaderboard_get_range_mB9C6C91869423F791E017B71FCDB17A354585519_inline(__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 328));
 		V_0 = L_13;
 		int32_t* L_14 = (&V_0)->get_address_of_from_0();
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 329));
 		String_t* L_15;
 		L_15 = Int32_ToString_m340C0A14D16799421EFDF8A81C8A16FA76D48411((int32_t*)L_14, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 329));
 		NullCheck(L_12);
 		ArrayElementTypeCheck (L_12, L_15);
 		(L_12)->SetAt(static_cast<il2cpp_array_size_t>(7), (String_t*)L_15);
@@ -8290,16 +6628,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Leaderboard_ToString_mE59DCCF117736
 		ArrayElementTypeCheck (L_16, _stringLiteralC18C9BB6DF0D5C60CE5A5D2D3D6111BEB6F8CCEB);
 		(L_16)->SetAt(static_cast<il2cpp_array_size_t>(8), (String_t*)_stringLiteralC18C9BB6DF0D5C60CE5A5D2D3D6111BEB6F8CCEB);
 		StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A* L_17 = L_16;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 330));
 		Range_t70C133E51417BC822E878050C90A577A69B671DC  L_18;
 		L_18 = Leaderboard_get_range_mB9C6C91869423F791E017B71FCDB17A354585519_inline(__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 330));
 		V_0 = L_18;
 		int32_t* L_19 = (&V_0)->get_address_of_count_1();
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 331));
 		String_t* L_20;
 		L_20 = Int32_ToString_m340C0A14D16799421EFDF8A81C8A16FA76D48411((int32_t*)L_19, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 331));
 		NullCheck(L_17);
 		ArrayElementTypeCheck (L_17, L_20);
 		(L_17)->SetAt(static_cast<il2cpp_array_size_t>(((int32_t)9)), (String_t*)L_20);
@@ -8309,10 +6643,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Leaderboard_ToString_mE59DCCF117736
 		(L_21)->SetAt(static_cast<il2cpp_array_size_t>(((int32_t)10)), (String_t*)_stringLiteralCC5F82AE0F16A83943027ABCFF930C191D836C24);
 		StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A* L_22 = L_21;
 		uint32_t* L_23 = __this->get_address_of_m_MaxRange_2();
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 332));
 		String_t* L_24;
 		L_24 = UInt32_ToString_mEB55F257429D34ED2BF41AE9567096F1F969B9A0((uint32_t*)L_23, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 332));
 		NullCheck(L_22);
 		ArrayElementTypeCheck (L_22, L_24);
 		(L_22)->SetAt(static_cast<il2cpp_array_size_t>(((int32_t)11)), (String_t*)L_24);
@@ -8324,10 +6656,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Leaderboard_ToString_mE59DCCF117736
 		IScoreU5BU5D_t9FEEC91A3D90CD5770DA4EFB8DFCF5340A279C5A* L_27 = __this->get_m_Scores_3();
 		NullCheck(L_27);
 		V_1 = ((int32_t)((int32_t)(((RuntimeArray*)L_27)->max_length)));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 333));
 		String_t* L_28;
 		L_28 = Int32_ToString_m340C0A14D16799421EFDF8A81C8A16FA76D48411((int32_t*)(&V_1), /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 333));
 		NullCheck(L_26);
 		ArrayElementTypeCheck (L_26, L_28);
 		(L_26)->SetAt(static_cast<il2cpp_array_size_t>(((int32_t)13)), (String_t*)L_28);
@@ -8336,18 +6666,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Leaderboard_ToString_mE59DCCF117736
 		ArrayElementTypeCheck (L_29, _stringLiteral4FEC6C4846D0D96A0075252A785C42336C923A3A);
 		(L_29)->SetAt(static_cast<il2cpp_array_size_t>(((int32_t)14)), (String_t*)_stringLiteral4FEC6C4846D0D96A0075252A785C42336C923A3A);
 		StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A* L_30 = L_29;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 334));
 		int32_t L_31;
 		L_31 = Leaderboard_get_userScope_m8304E736582482D0E5705C109D95F0CEDF2EE54C_inline(__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 334));
 		V_2 = L_31;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 335));
 		RuntimeObject * L_32 = Box(UserScope_t7EB5D79B9892B749665A462B4832F78C3F57A4C7_il2cpp_TypeInfo_var, (&V_2));
 		NullCheck(L_32);
 		String_t* L_33;
 		L_33 = VirtFuncInvoker0< String_t* >::Invoke(3 /* System.String System.Object::ToString() */, L_32);
 		V_2 = *(int32_t*)UnBox(L_32);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 335));
 		NullCheck(L_30);
 		ArrayElementTypeCheck (L_30, L_33);
 		(L_30)->SetAt(static_cast<il2cpp_array_size_t>(((int32_t)15)), (String_t*)L_33);
@@ -8356,18 +6682,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Leaderboard_ToString_mE59DCCF117736
 		ArrayElementTypeCheck (L_34, _stringLiteral5FE7915692E0675AD0BF063D16336FF430832152);
 		(L_34)->SetAt(static_cast<il2cpp_array_size_t>(((int32_t)16)), (String_t*)_stringLiteral5FE7915692E0675AD0BF063D16336FF430832152);
 		StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A* L_35 = L_34;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 336));
 		int32_t L_36;
 		L_36 = Leaderboard_get_timeScope_mE1F4CBEBE4B2E1E6BD245E3BE518680F13BBF276_inline(__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 336));
 		V_3 = L_36;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 337));
 		RuntimeObject * L_37 = Box(TimeScope_t0FDB33C00FF0784F8194FEF48B2BD78C0F9A7759_il2cpp_TypeInfo_var, (&V_3));
 		NullCheck(L_37);
 		String_t* L_38;
 		L_38 = VirtFuncInvoker0< String_t* >::Invoke(3 /* System.String System.Object::ToString() */, L_37);
 		V_3 = *(int32_t*)UnBox(L_37);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 337));
 		NullCheck(L_35);
 		ArrayElementTypeCheck (L_35, L_38);
 		(L_35)->SetAt(static_cast<il2cpp_array_size_t>(((int32_t)17)), (String_t*)L_38);
@@ -8379,24 +6701,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Leaderboard_ToString_mE59DCCF117736
 		StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A* L_41 = __this->get_m_UserIDs_5();
 		NullCheck(L_41);
 		V_1 = ((int32_t)((int32_t)(((RuntimeArray*)L_41)->max_length)));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 338));
 		String_t* L_42;
 		L_42 = Int32_ToString_m340C0A14D16799421EFDF8A81C8A16FA76D48411((int32_t*)(&V_1), /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 338));
 		NullCheck(L_40);
 		ArrayElementTypeCheck (L_40, L_42);
 		(L_40)->SetAt(static_cast<il2cpp_array_size_t>(((int32_t)19)), (String_t*)L_42);
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 339));
 		String_t* L_43;
 		L_43 = String_Concat_mFEA7EFA1A6E75B96B1B7BC4526AAC864BFF83CC9(L_40, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 339));
 		V_4 = L_43;
 		goto IL_011a;
 	}
 
 IL_011a:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 325));
 		String_t* L_44 = V_4;
 		return L_44;
 	}
@@ -8404,118 +6721,44 @@ IL_011a:
 // System.Void UnityEngine.SocialPlatforms.Impl.Leaderboard::SetLocalUserScore(UnityEngine.SocialPlatforms.IScore)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Leaderboard_SetLocalUserScore_m17939BC032AC6FDCC1152234807C50E97A72D600 (Leaderboard_tD587FC5E62BF8F6CC6AC0DF1ABB55D57A60CBE2D * __this, RuntimeObject* ___score0, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Leaderboard_SetLocalUserScore_m17939BC032AC6FDCC1152234807C50E97A72D600_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Leaderboard_tD587FC5E62BF8F6CC6AC0DF1ABB55D57A60CBE2D_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___score0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Leaderboard_SetLocalUserScore_m17939BC032AC6FDCC1152234807C50E97A72D600_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 340));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 341));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 342));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 343));
 		RuntimeObject* L_0 = ___score0;
 		__this->set_m_LocalUserScore_1(L_0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 344));
 		return;
 	}
 }
 // System.Void UnityEngine.SocialPlatforms.Impl.Leaderboard::SetMaxRange(System.UInt32)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Leaderboard_SetMaxRange_m5D699FC22BC5BED04386C4B6D4661663B49FD3B4 (Leaderboard_tD587FC5E62BF8F6CC6AC0DF1ABB55D57A60CBE2D * __this, uint32_t ___maxRange0, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Leaderboard_SetMaxRange_m5D699FC22BC5BED04386C4B6D4661663B49FD3B4_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Leaderboard_tD587FC5E62BF8F6CC6AC0DF1ABB55D57A60CBE2D_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___maxRange0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Leaderboard_SetMaxRange_m5D699FC22BC5BED04386C4B6D4661663B49FD3B4_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 345));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 346));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 347));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 348));
 		uint32_t L_0 = ___maxRange0;
 		__this->set_m_MaxRange_2(L_0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 349));
 		return;
 	}
 }
 // System.Void UnityEngine.SocialPlatforms.Impl.Leaderboard::SetScores(UnityEngine.SocialPlatforms.IScore[])
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Leaderboard_SetScores_m2DB8C9FB943AD849B23FCEB56D76FAE4E11C2084 (Leaderboard_tD587FC5E62BF8F6CC6AC0DF1ABB55D57A60CBE2D * __this, IScoreU5BU5D_t9FEEC91A3D90CD5770DA4EFB8DFCF5340A279C5A* ___scores0, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Leaderboard_SetScores_m2DB8C9FB943AD849B23FCEB56D76FAE4E11C2084_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Leaderboard_tD587FC5E62BF8F6CC6AC0DF1ABB55D57A60CBE2D_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___scores0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Leaderboard_SetScores_m2DB8C9FB943AD849B23FCEB56D76FAE4E11C2084_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 350));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 351));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 352));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 353));
 		IScoreU5BU5D_t9FEEC91A3D90CD5770DA4EFB8DFCF5340A279C5A* L_0 = ___scores0;
 		__this->set_m_Scores_3(L_0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 354));
 		return;
 	}
 }
 // System.Void UnityEngine.SocialPlatforms.Impl.Leaderboard::SetTitle(System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Leaderboard_SetTitle_m5FE6EFFE4099E7BA2B7F1F6644B0A9E1C5A93627 (Leaderboard_tD587FC5E62BF8F6CC6AC0DF1ABB55D57A60CBE2D * __this, String_t* ___title0, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Leaderboard_SetTitle_m5FE6EFFE4099E7BA2B7F1F6644B0A9E1C5A93627_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Leaderboard_tD587FC5E62BF8F6CC6AC0DF1ABB55D57A60CBE2D_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___title0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Leaderboard_SetTitle_m5FE6EFFE4099E7BA2B7F1F6644B0A9E1C5A93627_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 355));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 356));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 357));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 358));
 		String_t* L_0 = ___title0;
 		__this->set_m_Title_4(L_0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 359));
 		return;
 	}
 }
 // System.String[] UnityEngine.SocialPlatforms.Impl.Leaderboard::GetUserFilter()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A* Leaderboard_GetUserFilter_m229A294CB0ED73326836FABAC438E517F6517550 (Leaderboard_tD587FC5E62BF8F6CC6AC0DF1ABB55D57A60CBE2D * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Leaderboard_GetUserFilter_m229A294CB0ED73326836FABAC438E517F6517550_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Leaderboard_tD587FC5E62BF8F6CC6AC0DF1ABB55D57A60CBE2D_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A* V_0 = NULL;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Leaderboard_GetUserFilter_m229A294CB0ED73326836FABAC438E517F6517550_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 360));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 361));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 362));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 363));
 		StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A* L_0 = __this->get_m_UserIDs_5();
 		V_0 = L_0;
 		goto IL_000a;
@@ -8523,7 +6766,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE
 
 IL_000a:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 364));
 		StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A* L_1 = V_0;
 		return L_1;
 	}
@@ -8531,19 +6773,7 @@ IL_000a:
 // System.String UnityEngine.SocialPlatforms.Impl.Leaderboard::get_id()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Leaderboard_get_id_m4A262BB19BCACE6C9B19874F5D68C777846C6CD6 (Leaderboard_tD587FC5E62BF8F6CC6AC0DF1ABB55D57A60CBE2D * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Leaderboard_get_id_m4A262BB19BCACE6C9B19874F5D68C777846C6CD6_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Leaderboard_tD587FC5E62BF8F6CC6AC0DF1ABB55D57A60CBE2D_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Leaderboard_get_id_m4A262BB19BCACE6C9B19874F5D68C777846C6CD6_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 365));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 366));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 367));
 		String_t* L_0 = __this->get_U3CidU3Ek__BackingField_6();
 		return L_0;
 	}
@@ -8551,20 +6781,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Leaderboard_get_id_m4A262BB19BCACE6
 // System.Void UnityEngine.SocialPlatforms.Impl.Leaderboard::set_id(System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Leaderboard_set_id_mC863AFBCE6B992935BCE9E8B567CDA40CCD94B42 (Leaderboard_tD587FC5E62BF8F6CC6AC0DF1ABB55D57A60CBE2D * __this, String_t* ___value0, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Leaderboard_set_id_mC863AFBCE6B992935BCE9E8B567CDA40CCD94B42_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Leaderboard_tD587FC5E62BF8F6CC6AC0DF1ABB55D57A60CBE2D_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___value0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Leaderboard_set_id_mC863AFBCE6B992935BCE9E8B567CDA40CCD94B42_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 368));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 369));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 370));
 		String_t* L_0 = ___value0;
 		__this->set_U3CidU3Ek__BackingField_6(L_0);
 		return;
@@ -8573,19 +6790,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Leaderboard_set_id_mC863AFBCE6B992935BCE
 // UnityEngine.SocialPlatforms.UserScope UnityEngine.SocialPlatforms.Impl.Leaderboard::get_userScope()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Leaderboard_get_userScope_m8304E736582482D0E5705C109D95F0CEDF2EE54C (Leaderboard_tD587FC5E62BF8F6CC6AC0DF1ABB55D57A60CBE2D * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Leaderboard_get_userScope_m8304E736582482D0E5705C109D95F0CEDF2EE54C_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Leaderboard_tD587FC5E62BF8F6CC6AC0DF1ABB55D57A60CBE2D_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Leaderboard_get_userScope_m8304E736582482D0E5705C109D95F0CEDF2EE54C_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 371));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 372));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 373));
 		int32_t L_0 = __this->get_U3CuserScopeU3Ek__BackingField_7();
 		return L_0;
 	}
@@ -8593,20 +6798,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Leaderboard_get_userScope_m8304E73658
 // System.Void UnityEngine.SocialPlatforms.Impl.Leaderboard::set_userScope(UnityEngine.SocialPlatforms.UserScope)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Leaderboard_set_userScope_m66BBCC760CDAF1C44639BD10E4D901EFD7C3F778 (Leaderboard_tD587FC5E62BF8F6CC6AC0DF1ABB55D57A60CBE2D * __this, int32_t ___value0, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Leaderboard_set_userScope_m66BBCC760CDAF1C44639BD10E4D901EFD7C3F778_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Leaderboard_tD587FC5E62BF8F6CC6AC0DF1ABB55D57A60CBE2D_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___value0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Leaderboard_set_userScope_m66BBCC760CDAF1C44639BD10E4D901EFD7C3F778_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 374));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 375));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 376));
 		int32_t L_0 = ___value0;
 		__this->set_U3CuserScopeU3Ek__BackingField_7(L_0);
 		return;
@@ -8615,19 +6807,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Leaderboard_set_userScope_m66BBCC760CDAF
 // UnityEngine.SocialPlatforms.Range UnityEngine.SocialPlatforms.Impl.Leaderboard::get_range()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Range_t70C133E51417BC822E878050C90A577A69B671DC  Leaderboard_get_range_mB9C6C91869423F791E017B71FCDB17A354585519 (Leaderboard_tD587FC5E62BF8F6CC6AC0DF1ABB55D57A60CBE2D * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Leaderboard_get_range_mB9C6C91869423F791E017B71FCDB17A354585519_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Leaderboard_tD587FC5E62BF8F6CC6AC0DF1ABB55D57A60CBE2D_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Leaderboard_get_range_mB9C6C91869423F791E017B71FCDB17A354585519_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 377));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 378));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 379));
 		Range_t70C133E51417BC822E878050C90A577A69B671DC  L_0 = __this->get_U3CrangeU3Ek__BackingField_8();
 		return L_0;
 	}
@@ -8635,20 +6815,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Range_t70C133E51417BC822E878050C90A577A69B671
 // System.Void UnityEngine.SocialPlatforms.Impl.Leaderboard::set_range(UnityEngine.SocialPlatforms.Range)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Leaderboard_set_range_m29352D47548D750E0E42EC9627C861C69D084444 (Leaderboard_tD587FC5E62BF8F6CC6AC0DF1ABB55D57A60CBE2D * __this, Range_t70C133E51417BC822E878050C90A577A69B671DC  ___value0, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Leaderboard_set_range_m29352D47548D750E0E42EC9627C861C69D084444_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Leaderboard_tD587FC5E62BF8F6CC6AC0DF1ABB55D57A60CBE2D_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___value0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Leaderboard_set_range_m29352D47548D750E0E42EC9627C861C69D084444_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 380));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 381));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 382));
 		Range_t70C133E51417BC822E878050C90A577A69B671DC  L_0 = ___value0;
 		__this->set_U3CrangeU3Ek__BackingField_8(L_0);
 		return;
@@ -8657,19 +6824,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Leaderboard_set_range_m29352D47548D750E0
 // UnityEngine.SocialPlatforms.TimeScope UnityEngine.SocialPlatforms.Impl.Leaderboard::get_timeScope()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Leaderboard_get_timeScope_mE1F4CBEBE4B2E1E6BD245E3BE518680F13BBF276 (Leaderboard_tD587FC5E62BF8F6CC6AC0DF1ABB55D57A60CBE2D * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Leaderboard_get_timeScope_mE1F4CBEBE4B2E1E6BD245E3BE518680F13BBF276_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Leaderboard_tD587FC5E62BF8F6CC6AC0DF1ABB55D57A60CBE2D_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Leaderboard_get_timeScope_mE1F4CBEBE4B2E1E6BD245E3BE518680F13BBF276_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 383));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 384));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 385));
 		int32_t L_0 = __this->get_U3CtimeScopeU3Ek__BackingField_9();
 		return L_0;
 	}
@@ -8677,20 +6832,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Leaderboard_get_timeScope_mE1F4CBEBE4
 // System.Void UnityEngine.SocialPlatforms.Impl.Leaderboard::set_timeScope(UnityEngine.SocialPlatforms.TimeScope)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Leaderboard_set_timeScope_m36122610C955D05BD7FC713415CA78076986B901 (Leaderboard_tD587FC5E62BF8F6CC6AC0DF1ABB55D57A60CBE2D * __this, int32_t ___value0, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Leaderboard_set_timeScope_m36122610C955D05BD7FC713415CA78076986B901_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Leaderboard_tD587FC5E62BF8F6CC6AC0DF1ABB55D57A60CBE2D_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___value0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Leaderboard_set_timeScope_m36122610C955D05BD7FC713415CA78076986B901_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 386));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 387));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 388));
 		int32_t L_0 = ___value0;
 		__this->set_U3CtimeScopeU3Ek__BackingField_9(L_0);
 		return;
@@ -8710,127 +6852,53 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LocalUser__ctor_mE1D89C27BD5A6DAE982610A
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IUserProfileU5BU5D_t4B36B0CF06DE6A00F5D6D0A015DC3E99B02FC65E_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&LocalUser__ctor_mE1D89C27BD5A6DAE982610A87A472E736644605A_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&LocalUser_t1719BEA57FDD71F6C7B280049E94071CD22D985D_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UserProfileU5BU5D_tAED4B41D0866F8A4C6D403C2074ACEC812A78769_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	IUserProfileU5BU5D_t4B36B0CF06DE6A00F5D6D0A015DC3E99B02FC65E* V_0 = NULL;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, LocalUser__ctor_mE1D89C27BD5A6DAE982610A87A472E736644605A_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 6));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 7));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 8));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 14));
 		UserProfile__ctor_m65DBFCC8D74A39E029B7EEBF5B24A8790C3668AA(__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 14));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 9));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 10));
 		UserProfileU5BU5D_tAED4B41D0866F8A4C6D403C2074ACEC812A78769* L_0 = (UserProfileU5BU5D_tAED4B41D0866F8A4C6D403C2074ACEC812A78769*)(UserProfileU5BU5D_tAED4B41D0866F8A4C6D403C2074ACEC812A78769*)SZArrayNew(UserProfileU5BU5D_tAED4B41D0866F8A4C6D403C2074ACEC812A78769_il2cpp_TypeInfo_var, (uint32_t)0);
 		V_0 = (IUserProfileU5BU5D_t4B36B0CF06DE6A00F5D6D0A015DC3E99B02FC65E*)L_0;
 		IUserProfileU5BU5D_t4B36B0CF06DE6A00F5D6D0A015DC3E99B02FC65E* L_1 = V_0;
 		__this->set_m_Friends_7(L_1);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 11));
 		__this->set_m_Authenticated_8((bool)0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 12));
 		__this->set_m_Underage_9((bool)0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 13));
 		return;
 	}
 }
 // System.Void UnityEngine.SocialPlatforms.Impl.LocalUser::SetFriends(UnityEngine.SocialPlatforms.IUserProfile[])
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LocalUser_SetFriends_m54CD46805170EDB993E87E0A9FA3BF82A910E489 (LocalUser_t1719BEA57FDD71F6C7B280049E94071CD22D985D * __this, IUserProfileU5BU5D_t4B36B0CF06DE6A00F5D6D0A015DC3E99B02FC65E* ___friends0, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&LocalUser_SetFriends_m54CD46805170EDB993E87E0A9FA3BF82A910E489_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&LocalUser_t1719BEA57FDD71F6C7B280049E94071CD22D985D_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___friends0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, LocalUser_SetFriends_m54CD46805170EDB993E87E0A9FA3BF82A910E489_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 15));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 16));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 17));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 18));
 		IUserProfileU5BU5D_t4B36B0CF06DE6A00F5D6D0A015DC3E99B02FC65E* L_0 = ___friends0;
 		__this->set_m_Friends_7(L_0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 19));
 		return;
 	}
 }
 // System.Void UnityEngine.SocialPlatforms.Impl.LocalUser::SetAuthenticated(System.Boolean)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LocalUser_SetAuthenticated_mCAFB7406BCB0A184B405E25695F280DA52EFE582 (LocalUser_t1719BEA57FDD71F6C7B280049E94071CD22D985D * __this, bool ___value0, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&LocalUser_SetAuthenticated_mCAFB7406BCB0A184B405E25695F280DA52EFE582_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&LocalUser_t1719BEA57FDD71F6C7B280049E94071CD22D985D_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___value0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, LocalUser_SetAuthenticated_mCAFB7406BCB0A184B405E25695F280DA52EFE582_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 20));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 21));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 22));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 23));
 		bool L_0 = ___value0;
 		__this->set_m_Authenticated_8(L_0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 24));
 		return;
 	}
 }
 // System.Void UnityEngine.SocialPlatforms.Impl.LocalUser::SetUnderage(System.Boolean)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LocalUser_SetUnderage_mA767EE5BC8615E452A6CC57376CA9B9DA601386E (LocalUser_t1719BEA57FDD71F6C7B280049E94071CD22D985D * __this, bool ___value0, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&LocalUser_SetUnderage_mA767EE5BC8615E452A6CC57376CA9B9DA601386E_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&LocalUser_t1719BEA57FDD71F6C7B280049E94071CD22D985D_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___value0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, LocalUser_SetUnderage_mA767EE5BC8615E452A6CC57376CA9B9DA601386E_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 25));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 26));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 27));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 28));
 		bool L_0 = ___value0;
 		__this->set_m_Underage_9(L_0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 29));
 		return;
 	}
 }
 // System.Boolean UnityEngine.SocialPlatforms.Impl.LocalUser::get_authenticated()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool LocalUser_get_authenticated_m7D219E0639A779F4527590E43E66F31C2A482BD1 (LocalUser_t1719BEA57FDD71F6C7B280049E94071CD22D985D * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&LocalUser_get_authenticated_m7D219E0639A779F4527590E43E66F31C2A482BD1_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&LocalUser_t1719BEA57FDD71F6C7B280049E94071CD22D985D_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	bool V_0 = false;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, LocalUser_get_authenticated_m7D219E0639A779F4527590E43E66F31C2A482BD1_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 30));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 31));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 32));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 33));
 		bool L_0 = __this->get_m_Authenticated_8();
 		V_0 = L_0;
 		goto IL_000a;
@@ -8838,7 +6906,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool LocalUser_get_authenticated_m7D219E0639A
 
 IL_000a:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 34));
 		bool L_1 = V_0;
 		return L_1;
 	}
@@ -8854,27 +6921,11 @@ IL_000a:
 // System.Void UnityEngine.SocialPlatforms.Range::.ctor(System.Int32,System.Int32)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Range__ctor_mD7BBA6A816E8FBFDDC618308BC5D5882297443F8 (Range_t70C133E51417BC822E878050C90A577A69B671DC * __this, int32_t ___fromValue0, int32_t ___valueCount1, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Range__ctor_mD7BBA6A816E8FBFDDC618308BC5D5882297443F8_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Range_t70C133E51417BC822E878050C90A577A69B671DC_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___fromValue0), (&___valueCount1));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Range__ctor_mD7BBA6A816E8FBFDDC618308BC5D5882297443F8_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 0));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 1));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 2));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 3));
 		int32_t L_0 = ___fromValue0;
 		__this->set_from_0(L_0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 4));
 		int32_t L_1 = ___valueCount1;
 		__this->set_count_1(L_1);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 5));
 		return;
 	}
 }
@@ -8899,78 +6950,37 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Score__ctor_m88494757EDE00B4CA1BE7027A1F
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&DateTime_tEAF2CD16E071DF5441F40822E4CFE880E5245405_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Score__ctor_m88494757EDE00B4CA1BE7027A1F84C82E09EC958_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Score_tD70993CC66CCC9CDE0DAB2917533D8094F1E4119_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralF944DCD635F9801F7AC90A407FBC479964DEC024);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___leaderboardID0), (&___value1));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Score__ctor_m88494757EDE00B4CA1BE7027A1F84C82E09EC958_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 255));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 256));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 257));
 		String_t* L_0 = ___leaderboardID0;
 		int64_t L_1 = ___value1;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 260));
 		IL2CPP_RUNTIME_CLASS_INIT(DateTime_tEAF2CD16E071DF5441F40822E4CFE880E5245405_il2cpp_TypeInfo_var);
 		DateTime_tEAF2CD16E071DF5441F40822E4CFE880E5245405  L_2;
 		L_2 = DateTime_get_Now_mCAC695993D6E2C57B900C83BEF3F8B18BC4EBC2C(/*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 260));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 261));
 		Score__ctor_m94026C33B1E9EE0F31614511DB8F512E8A7A4FE3(__this, L_0, L_1, _stringLiteralF944DCD635F9801F7AC90A407FBC479964DEC024, L_2, _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709, (-1), /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 261));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 258));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 259));
 		return;
 	}
 }
 // System.Void UnityEngine.SocialPlatforms.Impl.Score::.ctor(System.String,System.Int64,System.String,System.DateTime,System.String,System.Int32)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Score__ctor_m94026C33B1E9EE0F31614511DB8F512E8A7A4FE3 (Score_tD70993CC66CCC9CDE0DAB2917533D8094F1E4119 * __this, String_t* ___leaderboardID0, int64_t ___value1, String_t* ___userID2, DateTime_tEAF2CD16E071DF5441F40822E4CFE880E5245405  ___date3, String_t* ___formattedValue4, int32_t ___rank5, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Score__ctor_m94026C33B1E9EE0F31614511DB8F512E8A7A4FE3_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Score_tD70993CC66CCC9CDE0DAB2917533D8094F1E4119_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___leaderboardID0), (&___value1), (&___userID2), (&___date3), (&___formattedValue4), (&___rank5));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Score__ctor_m94026C33B1E9EE0F31614511DB8F512E8A7A4FE3_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 262));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 263));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 264));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 273));
 		Object__ctor_m88880E0413421D13FD95325EDCE231707CE1F405(__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 273));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 265));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 266));
 		String_t* L_0 = ___leaderboardID0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 274));
 		Score_set_leaderboardID_m05255F12ADDC2FC6D7E9646CBAE68D2924E66F65_inline(__this, L_0, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 274));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 267));
 		int64_t L_1 = ___value1;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 275));
 		Score_set_value_mFECF5E9D1928EEAE7E46F497CDA159549EEB74C4_inline(__this, L_1, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 275));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 268));
 		String_t* L_2 = ___userID2;
 		__this->set_m_UserID_2(L_2);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 269));
 		DateTime_tEAF2CD16E071DF5441F40822E4CFE880E5245405  L_3 = ___date3;
 		__this->set_m_Date_0(L_3);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 270));
 		String_t* L_4 = ___formattedValue4;
 		__this->set_m_FormattedValue_1(L_4);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 271));
 		int32_t L_5 = ___rank5;
 		__this->set_m_Rank_3(L_5);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 272));
 		return;
 	}
 }
@@ -8980,11 +6990,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Score_ToString_mBE1B8E8846C633AAA58
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Int64_t378EE0D608BD3107E77238E85F30D2BBD46981F3_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Score_ToString_mBE1B8E8846C633AAA58A0680C888F21915454FC4_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Score_tD70993CC66CCC9CDE0DAB2917533D8094F1E4119_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&String_t_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral410946CD131353B68F194902EF06C27382525682);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralAFD46100DAA7F6D6A369D7A5F84A5FA79E317241);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralB5727DA2F60DABC5DD1D782B1F1DC1BDEA95E959);
@@ -8994,13 +7000,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Score_ToString_mBE1B8E8846C633AAA58
 	}
 	int64_t V_0 = 0;
 	String_t* V_1 = NULL;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Score_ToString_mBE1B8E8846C633AAA58A0680C888F21915454FC4_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 276));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 277));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 278));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 279));
 		StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A* L_0 = (StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A*)(StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A*)SZArrayNew(StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A_il2cpp_TypeInfo_var, (uint32_t)((int32_t)10));
 		StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A* L_1 = L_0;
 		NullCheck(L_1);
@@ -9008,10 +7008,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Score_ToString_mBE1B8E8846C633AAA58
 		(L_1)->SetAt(static_cast<il2cpp_array_size_t>(0), (String_t*)_stringLiteral410946CD131353B68F194902EF06C27382525682);
 		StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A* L_2 = L_1;
 		int32_t* L_3 = __this->get_address_of_m_Rank_3();
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 281));
 		String_t* L_4;
 		L_4 = Int32_ToString_m340C0A14D16799421EFDF8A81C8A16FA76D48411((int32_t*)L_3, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 281));
 		NullCheck(L_2);
 		ArrayElementTypeCheck (L_2, L_4);
 		(L_2)->SetAt(static_cast<il2cpp_array_size_t>(1), (String_t*)L_4);
@@ -9020,15 +7018,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Score_ToString_mBE1B8E8846C633AAA58
 		ArrayElementTypeCheck (L_5, _stringLiteralFD0688D658BDAA1EF7BA141817A3905C0BC5A278);
 		(L_5)->SetAt(static_cast<il2cpp_array_size_t>(2), (String_t*)_stringLiteralFD0688D658BDAA1EF7BA141817A3905C0BC5A278);
 		StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A* L_6 = L_5;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 282));
 		int64_t L_7;
 		L_7 = Score_get_value_m750646EDC0619A11179177F597C21374F13FCB9E_inline(__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 282));
 		V_0 = L_7;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 283));
 		String_t* L_8;
 		L_8 = Int64_ToString_m8AAA883F340993DCDF339C208F3416C3BA82589F((int64_t*)(&V_0), /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 283));
 		NullCheck(L_6);
 		ArrayElementTypeCheck (L_6, L_8);
 		(L_6)->SetAt(static_cast<il2cpp_array_size_t>(3), (String_t*)L_8);
@@ -9037,10 +7031,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Score_ToString_mBE1B8E8846C633AAA58
 		ArrayElementTypeCheck (L_9, _stringLiteralFABA1134F66E53549701470F4075C6577B953CCA);
 		(L_9)->SetAt(static_cast<il2cpp_array_size_t>(4), (String_t*)_stringLiteralFABA1134F66E53549701470F4075C6577B953CCA);
 		StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A* L_10 = L_9;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 284));
 		String_t* L_11;
 		L_11 = Score_get_leaderboardID_m079BDC75AED9D8C06DC36F78AC233171F023FB4F_inline(__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 284));
 		NullCheck(L_10);
 		ArrayElementTypeCheck (L_10, L_11);
 		(L_10)->SetAt(static_cast<il2cpp_array_size_t>(5), (String_t*)L_11);
@@ -9059,24 +7051,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Score_ToString_mBE1B8E8846C633AAA58
 		(L_15)->SetAt(static_cast<il2cpp_array_size_t>(8), (String_t*)_stringLiteralB5727DA2F60DABC5DD1D782B1F1DC1BDEA95E959);
 		StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A* L_16 = L_15;
 		DateTime_tEAF2CD16E071DF5441F40822E4CFE880E5245405 * L_17 = __this->get_address_of_m_Date_0();
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 285));
 		String_t* L_18;
 		L_18 = DateTime_ToString_m242888E500DFD8CD675BDC455BC696AF47813954((DateTime_tEAF2CD16E071DF5441F40822E4CFE880E5245405 *)L_17, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 285));
 		NullCheck(L_16);
 		ArrayElementTypeCheck (L_16, L_18);
 		(L_16)->SetAt(static_cast<il2cpp_array_size_t>(((int32_t)9)), (String_t*)L_18);
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 286));
 		String_t* L_19;
 		L_19 = String_Concat_mFEA7EFA1A6E75B96B1B7BC4526AAC864BFF83CC9(L_16, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 286));
 		V_1 = L_19;
 		goto IL_0078;
 	}
 
 IL_0078:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 280));
 		String_t* L_20 = V_1;
 		return L_20;
 	}
@@ -9084,19 +7071,7 @@ IL_0078:
 // System.String UnityEngine.SocialPlatforms.Impl.Score::get_leaderboardID()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Score_get_leaderboardID_m079BDC75AED9D8C06DC36F78AC233171F023FB4F (Score_tD70993CC66CCC9CDE0DAB2917533D8094F1E4119 * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Score_get_leaderboardID_m079BDC75AED9D8C06DC36F78AC233171F023FB4F_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Score_tD70993CC66CCC9CDE0DAB2917533D8094F1E4119_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Score_get_leaderboardID_m079BDC75AED9D8C06DC36F78AC233171F023FB4F_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 287));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 288));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 289));
 		String_t* L_0 = __this->get_U3CleaderboardIDU3Ek__BackingField_4();
 		return L_0;
 	}
@@ -9104,20 +7079,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Score_get_leaderboardID_m079BDC75AE
 // System.Void UnityEngine.SocialPlatforms.Impl.Score::set_leaderboardID(System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Score_set_leaderboardID_m05255F12ADDC2FC6D7E9646CBAE68D2924E66F65 (Score_tD70993CC66CCC9CDE0DAB2917533D8094F1E4119 * __this, String_t* ___value0, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Score_set_leaderboardID_m05255F12ADDC2FC6D7E9646CBAE68D2924E66F65_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Score_tD70993CC66CCC9CDE0DAB2917533D8094F1E4119_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___value0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Score_set_leaderboardID_m05255F12ADDC2FC6D7E9646CBAE68D2924E66F65_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 290));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 291));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 292));
 		String_t* L_0 = ___value0;
 		__this->set_U3CleaderboardIDU3Ek__BackingField_4(L_0);
 		return;
@@ -9126,19 +7088,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Score_set_leaderboardID_m05255F12ADDC2FC
 // System.Int64 UnityEngine.SocialPlatforms.Impl.Score::get_value()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int64_t Score_get_value_m750646EDC0619A11179177F597C21374F13FCB9E (Score_tD70993CC66CCC9CDE0DAB2917533D8094F1E4119 * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Score_get_value_m750646EDC0619A11179177F597C21374F13FCB9E_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Score_tD70993CC66CCC9CDE0DAB2917533D8094F1E4119_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Score_get_value_m750646EDC0619A11179177F597C21374F13FCB9E_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 293));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 294));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 295));
 		int64_t L_0 = __this->get_U3CvalueU3Ek__BackingField_5();
 		return L_0;
 	}
@@ -9146,20 +7096,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int64_t Score_get_value_m750646EDC0619A111791
 // System.Void UnityEngine.SocialPlatforms.Impl.Score::set_value(System.Int64)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Score_set_value_mFECF5E9D1928EEAE7E46F497CDA159549EEB74C4 (Score_tD70993CC66CCC9CDE0DAB2917533D8094F1E4119 * __this, int64_t ___value0, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Score_set_value_mFECF5E9D1928EEAE7E46F497CDA159549EEB74C4_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Score_tD70993CC66CCC9CDE0DAB2917533D8094F1E4119_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___value0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Score_set_value_mFECF5E9D1928EEAE7E46F497CDA159549EEB74C4_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 296));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 297));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 298));
 		int64_t L_0 = ___value0;
 		__this->set_U3CvalueU3Ek__BackingField_5(L_0);
 		return;
@@ -9188,82 +7125,40 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UserProfile__ctor_m65DBFCC8D74A39E029B7E
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Texture2D_t9B604D0D8E28032123641A7E7338FA872E2698BF_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UserProfile__ctor_m65DBFCC8D74A39E029B7EEBF5B24A8790C3668AA_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UserProfile_tDA4AC2655C2C32774702DDA257938A108AB4C537_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral5ECA19F316C4BF30DC6AFDC7822F68EDF20BDA1E);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralF944DCD635F9801F7AC90A407FBC479964DEC024);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, UserProfile__ctor_m65DBFCC8D74A39E029B7EEBF5B24A8790C3668AA_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 35));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 36));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 37));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 46));
 		Object__ctor_m88880E0413421D13FD95325EDCE231707CE1F405(__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 46));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 38));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 39));
 		__this->set_m_UserName_0(_stringLiteral5ECA19F316C4BF30DC6AFDC7822F68EDF20BDA1E);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 40));
 		__this->set_m_ID_1(_stringLiteralF944DCD635F9801F7AC90A407FBC479964DEC024);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 41));
 		__this->set_m_legacyID_2(_stringLiteralF944DCD635F9801F7AC90A407FBC479964DEC024);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 42));
 		__this->set_m_IsFriend_3((bool)0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 43));
 		__this->set_m_State_4(3);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 44));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 47));
 		Texture2D_t9B604D0D8E28032123641A7E7338FA872E2698BF * L_0 = (Texture2D_t9B604D0D8E28032123641A7E7338FA872E2698BF *)il2cpp_codegen_object_new(Texture2D_t9B604D0D8E28032123641A7E7338FA872E2698BF_il2cpp_TypeInfo_var);
 		Texture2D__ctor_m7D64AB4C55A01F2EE57483FD9EF826607DF9E4B4(L_0, ((int32_t)32), ((int32_t)32), /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 47));
 		__this->set_m_Image_5(L_0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 45));
 		return;
 	}
 }
 // System.Void UnityEngine.SocialPlatforms.Impl.UserProfile::.ctor(System.String,System.String,System.String,System.Boolean,UnityEngine.SocialPlatforms.UserState,UnityEngine.Texture2D)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UserProfile__ctor_m82A71921E766018566AFB09BCE3091C8F1055F39 (UserProfile_tDA4AC2655C2C32774702DDA257938A108AB4C537 * __this, String_t* ___name0, String_t* ___teamId1, String_t* ___gameId2, bool ___friend3, int32_t ___state4, Texture2D_t9B604D0D8E28032123641A7E7338FA872E2698BF * ___image5, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UserProfile__ctor_m82A71921E766018566AFB09BCE3091C8F1055F39_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UserProfile_tDA4AC2655C2C32774702DDA257938A108AB4C537_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___name0), (&___teamId1), (&___gameId2), (&___friend3), (&___state4), (&___image5));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, UserProfile__ctor_m82A71921E766018566AFB09BCE3091C8F1055F39_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 48));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 49));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 50));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 59));
 		Object__ctor_m88880E0413421D13FD95325EDCE231707CE1F405(__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 59));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 51));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 52));
 		String_t* L_0 = ___name0;
 		__this->set_m_UserName_0(L_0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 53));
 		String_t* L_1 = ___teamId1;
 		__this->set_m_ID_1(L_1);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 54));
 		String_t* L_2 = ___gameId2;
 		__this->set_m_gameID_6(L_2);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 55));
 		bool L_3 = ___friend3;
 		__this->set_m_IsFriend_3(L_3);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 56));
 		int32_t L_4 = ___state4;
 		__this->set_m_State_4(L_4);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 57));
 		Texture2D_t9B604D0D8E28032123641A7E7338FA872E2698BF * L_5 = ___image5;
 		__this->set_m_Image_5(L_5);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 58));
 		return;
 	}
 }
@@ -9273,12 +7168,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* UserProfile_ToString_mE86E8A99DF0EE
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&String_t_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UserProfile_ToString_mE86E8A99DF0EE73C93A55624E890806213567924_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UserProfile_tDA4AC2655C2C32774702DDA257938A108AB4C537_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UserState_t9DD84F7007E65F0FF4D7FF0414BACE5E24D0EA08_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UserState_t9DD84F7007E65F0FF4D7FF0414BACE5E24D0EA08_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral960E5E7F211EFF3243DF14EDD1901DC9EF314D62);
 		s_Il2CppMethodInitialized = true;
@@ -9286,19 +7176,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* UserProfile_ToString_mE86E8A99DF0EE
 	bool V_0 = false;
 	int32_t V_1 = 0;
 	String_t* V_2 = NULL;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, UserProfile_ToString_mE86E8A99DF0EE73C93A55624E890806213567924_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 60));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 61));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 62));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 63));
 		StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A* L_0 = (StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A*)(StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A*)SZArrayNew(StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A_il2cpp_TypeInfo_var, (uint32_t)7);
 		StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A* L_1 = L_0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 65));
 		String_t* L_2;
 		L_2 = UserProfile_get_id_m2C9612A3B81A7F76F86C4FE87AD4D3FADEF3E385(__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 65));
 		NullCheck(L_1);
 		ArrayElementTypeCheck (L_1, L_2);
 		(L_1)->SetAt(static_cast<il2cpp_array_size_t>(0), (String_t*)L_2);
@@ -9307,10 +7189,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* UserProfile_ToString_mE86E8A99DF0EE
 		ArrayElementTypeCheck (L_3, _stringLiteral960E5E7F211EFF3243DF14EDD1901DC9EF314D62);
 		(L_3)->SetAt(static_cast<il2cpp_array_size_t>(1), (String_t*)_stringLiteral960E5E7F211EFF3243DF14EDD1901DC9EF314D62);
 		StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A* L_4 = L_3;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 66));
 		String_t* L_5;
 		L_5 = UserProfile_get_userName_mB127337E5455C94299C39FB66C2965FF3421142E(__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 66));
 		NullCheck(L_4);
 		ArrayElementTypeCheck (L_4, L_5);
 		(L_4)->SetAt(static_cast<il2cpp_array_size_t>(2), (String_t*)L_5);
@@ -9319,15 +7199,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* UserProfile_ToString_mE86E8A99DF0EE
 		ArrayElementTypeCheck (L_6, _stringLiteral960E5E7F211EFF3243DF14EDD1901DC9EF314D62);
 		(L_6)->SetAt(static_cast<il2cpp_array_size_t>(3), (String_t*)_stringLiteral960E5E7F211EFF3243DF14EDD1901DC9EF314D62);
 		StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A* L_7 = L_6;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 67));
 		bool L_8;
 		L_8 = UserProfile_get_isFriend_m7ACC8963AD01FB384D215AF8C215DD93CB5322EA(__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 67));
 		V_0 = L_8;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 68));
 		String_t* L_9;
 		L_9 = Boolean_ToString_m59BB8456DD05A874BBD756E57EA8AD983287015C((bool*)(&V_0), /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 68));
 		NullCheck(L_7);
 		ArrayElementTypeCheck (L_7, L_9);
 		(L_7)->SetAt(static_cast<il2cpp_array_size_t>(4), (String_t*)L_9);
@@ -9336,32 +7212,25 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* UserProfile_ToString_mE86E8A99DF0EE
 		ArrayElementTypeCheck (L_10, _stringLiteral960E5E7F211EFF3243DF14EDD1901DC9EF314D62);
 		(L_10)->SetAt(static_cast<il2cpp_array_size_t>(5), (String_t*)_stringLiteral960E5E7F211EFF3243DF14EDD1901DC9EF314D62);
 		StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A* L_11 = L_10;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 69));
 		int32_t L_12;
 		L_12 = UserProfile_get_state_mF93F969F5923A0A3528923E5A452138D00D4E248(__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 69));
 		V_1 = L_12;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 70));
 		RuntimeObject * L_13 = Box(UserState_t9DD84F7007E65F0FF4D7FF0414BACE5E24D0EA08_il2cpp_TypeInfo_var, (&V_1));
 		NullCheck(L_13);
 		String_t* L_14;
 		L_14 = VirtFuncInvoker0< String_t* >::Invoke(3 /* System.String System.Object::ToString() */, L_13);
 		V_1 = *(int32_t*)UnBox(L_13);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 70));
 		NullCheck(L_11);
 		ArrayElementTypeCheck (L_11, L_14);
 		(L_11)->SetAt(static_cast<il2cpp_array_size_t>(6), (String_t*)L_14);
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 71));
 		String_t* L_15;
 		L_15 = String_Concat_mFEA7EFA1A6E75B96B1B7BC4526AAC864BFF83CC9(L_11, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 71));
 		V_2 = L_15;
 		goto IL_0061;
 	}
 
 IL_0061:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 64));
 		String_t* L_16 = V_2;
 		return L_16;
 	}
@@ -9369,142 +7238,53 @@ IL_0061:
 // System.Void UnityEngine.SocialPlatforms.Impl.UserProfile::SetUserName(System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UserProfile_SetUserName_m25580633F0CE2894355406F1F8C86CCEA3E79BBA (UserProfile_tDA4AC2655C2C32774702DDA257938A108AB4C537 * __this, String_t* ___name0, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UserProfile_SetUserName_m25580633F0CE2894355406F1F8C86CCEA3E79BBA_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UserProfile_tDA4AC2655C2C32774702DDA257938A108AB4C537_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___name0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, UserProfile_SetUserName_m25580633F0CE2894355406F1F8C86CCEA3E79BBA_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 72));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 73));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 74));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 75));
 		String_t* L_0 = ___name0;
 		__this->set_m_UserName_0(L_0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 76));
 		return;
 	}
 }
 // System.Void UnityEngine.SocialPlatforms.Impl.UserProfile::SetUserID(System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UserProfile_SetUserID_mD1A6F3DEE1C2887A8EDF41444C1D13A2835DF719 (UserProfile_tDA4AC2655C2C32774702DDA257938A108AB4C537 * __this, String_t* ___id0, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UserProfile_SetUserID_mD1A6F3DEE1C2887A8EDF41444C1D13A2835DF719_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UserProfile_tDA4AC2655C2C32774702DDA257938A108AB4C537_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___id0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, UserProfile_SetUserID_mD1A6F3DEE1C2887A8EDF41444C1D13A2835DF719_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 77));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 78));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 79));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 80));
 		String_t* L_0 = ___id0;
 		__this->set_m_ID_1(L_0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 81));
 		return;
 	}
 }
 // System.Void UnityEngine.SocialPlatforms.Impl.UserProfile::SetLegacyUserID(System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UserProfile_SetLegacyUserID_m707552F7298E3A711C41FF8744C8309276E398A4 (UserProfile_tDA4AC2655C2C32774702DDA257938A108AB4C537 * __this, String_t* ___id0, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UserProfile_SetLegacyUserID_m707552F7298E3A711C41FF8744C8309276E398A4_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UserProfile_tDA4AC2655C2C32774702DDA257938A108AB4C537_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___id0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, UserProfile_SetLegacyUserID_m707552F7298E3A711C41FF8744C8309276E398A4_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 82));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 83));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 84));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 85));
 		String_t* L_0 = ___id0;
 		__this->set_m_legacyID_2(L_0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 86));
 		return;
 	}
 }
 // System.Void UnityEngine.SocialPlatforms.Impl.UserProfile::SetUserGameID(System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UserProfile_SetUserGameID_mF610AEAED6A05E06A24F1C2DC82EC8BD5CAAB4E0 (UserProfile_tDA4AC2655C2C32774702DDA257938A108AB4C537 * __this, String_t* ___id0, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UserProfile_SetUserGameID_mF610AEAED6A05E06A24F1C2DC82EC8BD5CAAB4E0_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UserProfile_tDA4AC2655C2C32774702DDA257938A108AB4C537_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___id0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, UserProfile_SetUserGameID_mF610AEAED6A05E06A24F1C2DC82EC8BD5CAAB4E0_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 87));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 88));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 89));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 90));
 		String_t* L_0 = ___id0;
 		__this->set_m_gameID_6(L_0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 91));
 		return;
 	}
 }
 // System.Void UnityEngine.SocialPlatforms.Impl.UserProfile::SetImage(UnityEngine.Texture2D)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UserProfile_SetImage_m756E17B9BFE41D572C76A506E2BDA81A2D7D9605 (UserProfile_tDA4AC2655C2C32774702DDA257938A108AB4C537 * __this, Texture2D_t9B604D0D8E28032123641A7E7338FA872E2698BF * ___image0, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UserProfile_SetImage_m756E17B9BFE41D572C76A506E2BDA81A2D7D9605_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UserProfile_tDA4AC2655C2C32774702DDA257938A108AB4C537_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___image0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, UserProfile_SetImage_m756E17B9BFE41D572C76A506E2BDA81A2D7D9605_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 92));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 93));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 94));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 95));
 		Texture2D_t9B604D0D8E28032123641A7E7338FA872E2698BF * L_0 = ___image0;
 		__this->set_m_Image_5(L_0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 96));
 		return;
 	}
 }
 // System.String UnityEngine.SocialPlatforms.Impl.UserProfile::get_userName()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* UserProfile_get_userName_mB127337E5455C94299C39FB66C2965FF3421142E (UserProfile_tDA4AC2655C2C32774702DDA257938A108AB4C537 * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&String_t_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UserProfile_get_userName_mB127337E5455C94299C39FB66C2965FF3421142E_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UserProfile_tDA4AC2655C2C32774702DDA257938A108AB4C537_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	String_t* V_0 = NULL;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, UserProfile_get_userName_mB127337E5455C94299C39FB66C2965FF3421142E_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 97));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 98));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 99));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 100));
 		String_t* L_0 = __this->get_m_UserName_0();
 		V_0 = L_0;
 		goto IL_000a;
@@ -9512,7 +7292,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* UserProfile_get_userName_mB127337E5
 
 IL_000a:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 101));
 		String_t* L_1 = V_0;
 		return L_1;
 	}
@@ -9520,22 +7299,8 @@ IL_000a:
 // System.String UnityEngine.SocialPlatforms.Impl.UserProfile::get_id()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* UserProfile_get_id_m2C9612A3B81A7F76F86C4FE87AD4D3FADEF3E385 (UserProfile_tDA4AC2655C2C32774702DDA257938A108AB4C537 * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&String_t_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UserProfile_get_id_m2C9612A3B81A7F76F86C4FE87AD4D3FADEF3E385_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UserProfile_tDA4AC2655C2C32774702DDA257938A108AB4C537_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	String_t* V_0 = NULL;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, UserProfile_get_id_m2C9612A3B81A7F76F86C4FE87AD4D3FADEF3E385_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 102));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 103));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 104));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 105));
 		String_t* L_0 = __this->get_m_ID_1();
 		V_0 = L_0;
 		goto IL_000a;
@@ -9543,7 +7308,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* UserProfile_get_id_m2C9612A3B81A7F7
 
 IL_000a:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 106));
 		String_t* L_1 = V_0;
 		return L_1;
 	}
@@ -9551,22 +7315,8 @@ IL_000a:
 // System.Boolean UnityEngine.SocialPlatforms.Impl.UserProfile::get_isFriend()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool UserProfile_get_isFriend_m7ACC8963AD01FB384D215AF8C215DD93CB5322EA (UserProfile_tDA4AC2655C2C32774702DDA257938A108AB4C537 * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UserProfile_get_isFriend_m7ACC8963AD01FB384D215AF8C215DD93CB5322EA_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UserProfile_tDA4AC2655C2C32774702DDA257938A108AB4C537_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	bool V_0 = false;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, UserProfile_get_isFriend_m7ACC8963AD01FB384D215AF8C215DD93CB5322EA_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 107));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 108));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 109));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 110));
 		bool L_0 = __this->get_m_IsFriend_3();
 		V_0 = L_0;
 		goto IL_000a;
@@ -9574,7 +7324,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool UserProfile_get_isFriend_m7ACC8963AD01FB
 
 IL_000a:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 111));
 		bool L_1 = V_0;
 		return L_1;
 	}
@@ -9582,22 +7331,8 @@ IL_000a:
 // UnityEngine.SocialPlatforms.UserState UnityEngine.SocialPlatforms.Impl.UserProfile::get_state()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t UserProfile_get_state_mF93F969F5923A0A3528923E5A452138D00D4E248 (UserProfile_tDA4AC2655C2C32774702DDA257938A108AB4C537 * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UserProfile_get_state_mF93F969F5923A0A3528923E5A452138D00D4E248_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UserProfile_tDA4AC2655C2C32774702DDA257938A108AB4C537_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UserState_t9DD84F7007E65F0FF4D7FF0414BACE5E24D0EA08_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	int32_t V_0 = 0;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, UserProfile_get_state_mF93F969F5923A0A3528923E5A452138D00D4E248_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 112));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 113));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 114));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 115));
 		int32_t L_0 = __this->get_m_State_4();
 		V_0 = L_0;
 		goto IL_000a;
@@ -9605,7 +7340,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t UserProfile_get_state_mF93F969F5923A0
 
 IL_000a:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 116));
 		int32_t L_1 = V_0;
 		return L_1;
 	}
@@ -9637,14 +7371,6 @@ IL_000a:
 // System.Void UnityEngine.SocialPlatforms.GameCenter.GameCenterPlatform/<>c__DisplayClass21_0::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass21_0__ctor_mEAC1B8E5722EF1563CE164CE0A2C2EF061A3B65B (U3CU3Ec__DisplayClass21_0_t640615F596448CA7D86AAC8EE3A104A2CE70A95A * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec__DisplayClass21_0__ctor_mEAC1B8E5722EF1563CE164CE0A2C2EF061A3B65B_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, U3CU3Ec__DisplayClass21_0__ctor_mEAC1B8E5722EF1563CE164CE0A2C2EF061A3B65B_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		Object__ctor_m88880E0413421D13FD95325EDCE231707CE1F405(__this, /*hidden argument*/NULL);
 		return;
@@ -9657,23 +7383,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass21_0_U3CUnityEngine
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Action_1_Invoke_m95E5C9FC67F7B0BDC3CD5E00AC5D4C8A00C97AC5_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec__DisplayClass21_0_U3CUnityEngine_SocialPlatforms_ISocialPlatform_AuthenticateU3Eb__0_m4B82E8613D69236F6B072A688C556241D1CA9E5C_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec__DisplayClass21_0_t640615F596448CA7D86AAC8EE3A104A2CE70A95A_0_0_0_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___success0), (&___error1));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, U3CU3Ec__DisplayClass21_0_U3CUnityEngine_SocialPlatforms_ISocialPlatform_AuthenticateU3Eb__0_m4B82E8613D69236F6B072A688C556241D1CA9E5C_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 923));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 924));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 925));
 		Action_1_tCE2D770918A65CAD277C08C4E8C05385EA267E83 * L_0 = __this->get_callback_0();
 		bool L_1 = ___success0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 926));
 		NullCheck(L_0);
 		Action_1_Invoke_m95E5C9FC67F7B0BDC3CD5E00AC5D4C8A00C97AC5(L_0, L_1, /*hidden argument*/Action_1_Invoke_m95E5C9FC67F7B0BDC3CD5E00AC5D4C8A00C97AC5_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 926));
 		return;
 	}
 }
@@ -9682,20 +7398,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass21_0_U3CUnityEngine
 #endif
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Achievement_set_id_m16A4091CBC207FB287FEFF608C5F45D9D21106A0_inline (Achievement_t43EB1469B011ADDEF59B6CB30044B878770D3565 * __this, String_t* ___value0, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Achievement_set_id_m16A4091CBC207FB287FEFF608C5F45D9D21106A0_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Achievement_t43EB1469B011ADDEF59B6CB30044B878770D3565_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___value0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Achievement_set_id_m16A4091CBC207FB287FEFF608C5F45D9D21106A0_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 167));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 168));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 169));
 		String_t* L_0 = ___value0;
 		__this->set_U3CidU3Ek__BackingField_3(L_0);
 		return;
@@ -9703,20 +7406,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Achievement_set_id_m16A4091C
 }
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Achievement_set_percentCompleted_mD433F22DBB60B94FD45CC2A73C9A22C93B0CB9CB_inline (Achievement_t43EB1469B011ADDEF59B6CB30044B878770D3565 * __this, double ___value0, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Achievement_set_percentCompleted_mD433F22DBB60B94FD45CC2A73C9A22C93B0CB9CB_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Achievement_t43EB1469B011ADDEF59B6CB30044B878770D3565_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___value0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Achievement_set_percentCompleted_mD433F22DBB60B94FD45CC2A73C9A22C93B0CB9CB_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 173));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 174));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 175));
 		double L_0 = ___value0;
 		__this->set_U3CpercentCompletedU3Ek__BackingField_4(L_0);
 		return;
@@ -9724,58 +7414,21 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Achievement_set_percentCompl
 }
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* Achievement_get_id_m39931C0B44D8A4948E12527FDE77C9211028267B_inline (Achievement_t43EB1469B011ADDEF59B6CB30044B878770D3565 * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Achievement_get_id_m39931C0B44D8A4948E12527FDE77C9211028267B_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Achievement_t43EB1469B011ADDEF59B6CB30044B878770D3565_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Achievement_get_id_m39931C0B44D8A4948E12527FDE77C9211028267B_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 164));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 165));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 166));
 		String_t* L_0 = __this->get_U3CidU3Ek__BackingField_3();
 		return L_0;
 	}
 }
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR double Achievement_get_percentCompleted_m864BBAA8D955D724A506E62F6741B52D43F38F9D_inline (Achievement_t43EB1469B011ADDEF59B6CB30044B878770D3565 * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Achievement_get_percentCompleted_m864BBAA8D955D724A506E62F6741B52D43F38F9D_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Achievement_t43EB1469B011ADDEF59B6CB30044B878770D3565_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Achievement_get_percentCompleted_m864BBAA8D955D724A506E62F6741B52D43F38F9D_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 170));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 171));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 172));
 		double L_0 = __this->get_U3CpercentCompletedU3Ek__BackingField_4();
 		return L_0;
 	}
 }
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AchievementDescription_set_id_m61C4DA5B9AD3353518524A8E34723CE7836D432E_inline (AchievementDescription_t6C56CB1D0F1F374C45EC0F65D5F1192C170B6506 * __this, String_t* ___value0, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AchievementDescription_set_id_m61C4DA5B9AD3353518524A8E34723CE7836D432E_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AchievementDescription_t6C56CB1D0F1F374C45EC0F65D5F1192C170B6506_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___value0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, AchievementDescription_set_id_m61C4DA5B9AD3353518524A8E34723CE7836D432E_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 227));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 228));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 229));
 		String_t* L_0 = ___value0;
 		__this->set_U3CidU3Ek__BackingField_6(L_0);
 		return;
@@ -9783,39 +7436,14 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AchievementDescription_set_i
 }
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* AchievementDescription_get_id_mD5FEE2DBF0C88887C99E3EDCD9BC65C32EFBAD4A_inline (AchievementDescription_t6C56CB1D0F1F374C45EC0F65D5F1192C170B6506 * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AchievementDescription_get_id_mD5FEE2DBF0C88887C99E3EDCD9BC65C32EFBAD4A_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AchievementDescription_t6C56CB1D0F1F374C45EC0F65D5F1192C170B6506_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, AchievementDescription_get_id_mD5FEE2DBF0C88887C99E3EDCD9BC65C32EFBAD4A_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 224));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 225));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 226));
 		String_t* L_0 = __this->get_U3CidU3Ek__BackingField_6();
 		return L_0;
 	}
 }
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Leaderboard_set_id_mC863AFBCE6B992935BCE9E8B567CDA40CCD94B42_inline (Leaderboard_tD587FC5E62BF8F6CC6AC0DF1ABB55D57A60CBE2D * __this, String_t* ___value0, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Leaderboard_set_id_mC863AFBCE6B992935BCE9E8B567CDA40CCD94B42_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Leaderboard_tD587FC5E62BF8F6CC6AC0DF1ABB55D57A60CBE2D_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___value0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Leaderboard_set_id_mC863AFBCE6B992935BCE9E8B567CDA40CCD94B42_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 368));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 369));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 370));
 		String_t* L_0 = ___value0;
 		__this->set_U3CidU3Ek__BackingField_6(L_0);
 		return;
@@ -9823,20 +7451,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Leaderboard_set_id_mC863AFBC
 }
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Leaderboard_set_range_m29352D47548D750E0E42EC9627C861C69D084444_inline (Leaderboard_tD587FC5E62BF8F6CC6AC0DF1ABB55D57A60CBE2D * __this, Range_t70C133E51417BC822E878050C90A577A69B671DC  ___value0, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Leaderboard_set_range_m29352D47548D750E0E42EC9627C861C69D084444_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Leaderboard_tD587FC5E62BF8F6CC6AC0DF1ABB55D57A60CBE2D_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___value0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Leaderboard_set_range_m29352D47548D750E0E42EC9627C861C69D084444_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 380));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 381));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 382));
 		Range_t70C133E51417BC822E878050C90A577A69B671DC  L_0 = ___value0;
 		__this->set_U3CrangeU3Ek__BackingField_8(L_0);
 		return;
@@ -9844,20 +7459,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Leaderboard_set_range_m29352
 }
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Leaderboard_set_userScope_m66BBCC760CDAF1C44639BD10E4D901EFD7C3F778_inline (Leaderboard_tD587FC5E62BF8F6CC6AC0DF1ABB55D57A60CBE2D * __this, int32_t ___value0, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Leaderboard_set_userScope_m66BBCC760CDAF1C44639BD10E4D901EFD7C3F778_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Leaderboard_tD587FC5E62BF8F6CC6AC0DF1ABB55D57A60CBE2D_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___value0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Leaderboard_set_userScope_m66BBCC760CDAF1C44639BD10E4D901EFD7C3F778_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 374));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 375));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 376));
 		int32_t L_0 = ___value0;
 		__this->set_U3CuserScopeU3Ek__BackingField_7(L_0);
 		return;
@@ -9865,20 +7467,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Leaderboard_set_userScope_m6
 }
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Leaderboard_set_timeScope_m36122610C955D05BD7FC713415CA78076986B901_inline (Leaderboard_tD587FC5E62BF8F6CC6AC0DF1ABB55D57A60CBE2D * __this, int32_t ___value0, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Leaderboard_set_timeScope_m36122610C955D05BD7FC713415CA78076986B901_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Leaderboard_tD587FC5E62BF8F6CC6AC0DF1ABB55D57A60CBE2D_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___value0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Leaderboard_set_timeScope_m36122610C955D05BD7FC713415CA78076986B901_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 386));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 387));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 388));
 		int32_t L_0 = ___value0;
 		__this->set_U3CtimeScopeU3Ek__BackingField_9(L_0);
 		return;
@@ -9886,96 +7475,35 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Leaderboard_set_timeScope_m3
 }
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* Leaderboard_get_id_m4A262BB19BCACE6C9B19874F5D68C777846C6CD6_inline (Leaderboard_tD587FC5E62BF8F6CC6AC0DF1ABB55D57A60CBE2D * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Leaderboard_get_id_m4A262BB19BCACE6C9B19874F5D68C777846C6CD6_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Leaderboard_tD587FC5E62BF8F6CC6AC0DF1ABB55D57A60CBE2D_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Leaderboard_get_id_m4A262BB19BCACE6C9B19874F5D68C777846C6CD6_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 365));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 366));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 367));
 		String_t* L_0 = __this->get_U3CidU3Ek__BackingField_6();
 		return L_0;
 	}
 }
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Range_t70C133E51417BC822E878050C90A577A69B671DC  Leaderboard_get_range_mB9C6C91869423F791E017B71FCDB17A354585519_inline (Leaderboard_tD587FC5E62BF8F6CC6AC0DF1ABB55D57A60CBE2D * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Leaderboard_get_range_mB9C6C91869423F791E017B71FCDB17A354585519_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Leaderboard_tD587FC5E62BF8F6CC6AC0DF1ABB55D57A60CBE2D_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Leaderboard_get_range_mB9C6C91869423F791E017B71FCDB17A354585519_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 377));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 378));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 379));
 		Range_t70C133E51417BC822E878050C90A577A69B671DC  L_0 = __this->get_U3CrangeU3Ek__BackingField_8();
 		return L_0;
 	}
 }
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Leaderboard_get_userScope_m8304E736582482D0E5705C109D95F0CEDF2EE54C_inline (Leaderboard_tD587FC5E62BF8F6CC6AC0DF1ABB55D57A60CBE2D * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Leaderboard_get_userScope_m8304E736582482D0E5705C109D95F0CEDF2EE54C_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Leaderboard_tD587FC5E62BF8F6CC6AC0DF1ABB55D57A60CBE2D_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Leaderboard_get_userScope_m8304E736582482D0E5705C109D95F0CEDF2EE54C_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 371));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 372));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 373));
 		int32_t L_0 = __this->get_U3CuserScopeU3Ek__BackingField_7();
 		return L_0;
 	}
 }
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Leaderboard_get_timeScope_mE1F4CBEBE4B2E1E6BD245E3BE518680F13BBF276_inline (Leaderboard_tD587FC5E62BF8F6CC6AC0DF1ABB55D57A60CBE2D * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Leaderboard_get_timeScope_mE1F4CBEBE4B2E1E6BD245E3BE518680F13BBF276_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Leaderboard_tD587FC5E62BF8F6CC6AC0DF1ABB55D57A60CBE2D_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Leaderboard_get_timeScope_mE1F4CBEBE4B2E1E6BD245E3BE518680F13BBF276_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 383));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 384));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 385));
 		int32_t L_0 = __this->get_U3CtimeScopeU3Ek__BackingField_9();
 		return L_0;
 	}
 }
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Score_set_leaderboardID_m05255F12ADDC2FC6D7E9646CBAE68D2924E66F65_inline (Score_tD70993CC66CCC9CDE0DAB2917533D8094F1E4119 * __this, String_t* ___value0, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Score_set_leaderboardID_m05255F12ADDC2FC6D7E9646CBAE68D2924E66F65_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Score_tD70993CC66CCC9CDE0DAB2917533D8094F1E4119_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___value0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Score_set_leaderboardID_m05255F12ADDC2FC6D7E9646CBAE68D2924E66F65_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 290));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 291));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 292));
 		String_t* L_0 = ___value0;
 		__this->set_U3CleaderboardIDU3Ek__BackingField_4(L_0);
 		return;
@@ -9983,20 +7511,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Score_set_leaderboardID_m052
 }
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Score_set_value_mFECF5E9D1928EEAE7E46F497CDA159549EEB74C4_inline (Score_tD70993CC66CCC9CDE0DAB2917533D8094F1E4119 * __this, int64_t ___value0, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Score_set_value_mFECF5E9D1928EEAE7E46F497CDA159549EEB74C4_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Score_tD70993CC66CCC9CDE0DAB2917533D8094F1E4119_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___value0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Score_set_value_mFECF5E9D1928EEAE7E46F497CDA159549EEB74C4_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 296));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 297));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 298));
 		int64_t L_0 = ___value0;
 		__this->set_U3CvalueU3Ek__BackingField_5(L_0);
 		return;
@@ -10004,52 +7519,20 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Score_set_value_mFECF5E9D192
 }
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int64_t Score_get_value_m750646EDC0619A11179177F597C21374F13FCB9E_inline (Score_tD70993CC66CCC9CDE0DAB2917533D8094F1E4119 * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Score_get_value_m750646EDC0619A11179177F597C21374F13FCB9E_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Score_tD70993CC66CCC9CDE0DAB2917533D8094F1E4119_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Score_get_value_m750646EDC0619A11179177F597C21374F13FCB9E_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 293));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 294));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 295));
 		int64_t L_0 = __this->get_U3CvalueU3Ek__BackingField_5();
 		return L_0;
 	}
 }
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* Score_get_leaderboardID_m079BDC75AED9D8C06DC36F78AC233171F023FB4F_inline (Score_tD70993CC66CCC9CDE0DAB2917533D8094F1E4119 * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Score_get_leaderboardID_m079BDC75AED9D8C06DC36F78AC233171F023FB4F_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Score_tD70993CC66CCC9CDE0DAB2917533D8094F1E4119_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Score_get_leaderboardID_m079BDC75AED9D8C06DC36F78AC233171F023FB4F_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 287));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 288));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_GameCenterModule + 289));
 		String_t* L_0 = __this->get_U3CleaderboardIDU3Ek__BackingField_4();
 		return L_0;
 	}
 }
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject * Enumerator_get_Current_m9C4EBBD2108B51885E750F927D7936290C8E20EE_gshared_inline (Enumerator_tB6009981BD4E3881E3EC83627255A24198F902D6 * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_get_Current_m9C4EBBD2108B51885E750F927D7936290C8E20EE_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Enumerator_get_Current_m9C4EBBD2108B51885E750F927D7936290C8E20EE_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		RuntimeObject * L_0 = (RuntimeObject *)__this->get_current_3();
 		return (RuntimeObject *)L_0;

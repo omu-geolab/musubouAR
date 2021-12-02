@@ -58,8 +58,6 @@ struct Type_t;
 // System.Void
 struct Void_t700C6383A2A510C2CF4DD86DABD5CA9FF70ADAC5;
 
-IL2CPP_EXTERN_C Il2CppSequencePoint g_sequencePointsUnityEngine_CoreModule[];
-IL2CPP_EXTERN_C Il2CppSequencePoint g_sequencePointsUnity_XR_Samples_Multipeer[];
 IL2CPP_EXTERN_C RuntimeClass* ArgumentException_t505FA8C11E883F2D96C797AD9D396490794DEE00_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* ArgumentNullException_tFB5C4621957BC53A7D1B4FDD5C38B4D6E15DB8FB_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Exception_t_il2cpp_TypeInfo_var;
@@ -85,81 +83,28 @@ IL2CPP_EXTERN_C String_t* _stringLiteralB3D0E51DB188AD13A136177A7AB20B94F203CC1C
 IL2CPP_EXTERN_C String_t* _stringLiteralB3FDE45005CCEC81C2BA207B67478532CE7E6223;
 IL2CPP_EXTERN_C String_t* _stringLiteralF6EB0393565DAFF55E87E0BDA7A45A63DF963409;
 IL2CPP_EXTERN_C String_t* _stringLiteralF90CD66B6C5116C92B553B5DED6787B4C4909D91;
-IL2CPP_EXTERN_C const RuntimeMethod* IntPtr__ctor_mBB7AF6DA6350129AD6422DE474FD52F715CC0C40_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* MCSession_DequeueReceivedData_m689094C4EAEFC8E1A23388EC6D9A0121AD6484E2_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* MCSession_Dispose_m0649EDB1709EB49D0FEB9F835FB70306BD3A73D8_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* MCSession_Equals_m00C4E76C5FA9117F8E0D6ECDD0FEB2CB880E764F_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* MCSession_Equals_m7184D7A1F67F7D02C034113B8C5D2011B6833D0C_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* MCSession_GetHashCode_m1B6938BBD06191E9AFB095A33230A736A4AD901C_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* MCSession_SendToAllPeers_mC3DBF6A22974482CD90C2C8ED658DFD589930CE7_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* MCSession__ctor_m7E2C0B6D7447935121ABF3C4BD206ABC7120AC00_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* MCSession_get_ConnectedPeerCount_mB14D539699C746C456E2DFBCF452C0BE8641CC22_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* MCSession_get_Created_mEE1AE9DD32DD557D2B762FA06F5DF4C6CDDB15DB_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* MCSession_get_Enabled_m1116539FFD044BA661E91A9B8970117422EE38B8_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* MCSession_get_ReceivedDataQueueSize_m199D8B8ABC6D7521F1CE7968C3974DC5475CFDA7_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* MCSession_op_Equality_m5AA5B55CBDE67382E419A21F38947C35E20AAF7C_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* MCSession_op_Inequality_mEE4E80329A81192E45C18F62FCD96E436A930A27_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* MCSession_set_Enabled_mDD1492B6C6932AEB7FF8EC5E5FBD457118690336_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* NSData_CreateWithBytesNoCopy_m74ED2DC7FF6F7C2B4B7244FBEA92BD64E48E711A_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* NSData_CreateWithBytes_m119018E5FC2351E3FF75B26A8603416D41CC7ED9_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* NSData_Dispose_m9EFD027F4DF8B40A037E342029CE9AE7A67FF2D6_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* NSData_Equals_m7B6AC593157EC3796E072667EE92C952323AE759_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* NSData_Equals_mEA596C198AAEECD92CA6BE68DD515BE26EEB64F5_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* NSData_GetHashCode_mF8E9968597F15BFA0140A44E867D1C01CA7E7861_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* NSData__ctor_m7D9316BE449293BDF865CDF447E59C85D0893710_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* NSData_get_Bytes_m16886E88D8D4C5D57A0A31FE24867179EBF00EF2_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* NSData_get_Created_mBC33E9AB3B638F6D5B3CF08EF26FC8C87E85DE7D_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* NSData_get_Length_m62F648B9677C49BB2AF52EBA2944EF9EC835442D_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* NSData_op_Equality_mF026ABC60057DC593BE9AC043FC17DC036F24CB3_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* NSData_op_Inequality_m525EEAD0E5B72B1B88AB7AE6A6B0636A93598AD7_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* NSErrorException__ctor_m0CEF5BCC8180BD26BF1190DC6899C31B3410CAE0_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* NSErrorException_get_Code_mA94C4E389E056F7900322DD4DE99CD9FC5F2A3BD_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* NSErrorException_get_Description_m4E25B29F2FCDDC4F4D82A3363330C5957BD9A7F8_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* NSErrorException_set_Code_mED507AE25D3073C4BF328AF5FC9285288370D26D_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* NSErrorException_set_Description_m736FB8FD0E2B8653C364CE37DC0F23C91F63904D_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* NSError_Dispose_mEFEAD23C4358CD6E4666D48DBD03B95C8F7F9294_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* NSError_Equals_m4054629C6E20B80E9F85D678F1A4B02F1B8F3F90_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* NSError_Equals_m8155380BCA4336B168769A12E732FB8BEF1883A3_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* NSError_GetHashCode_mEB788CAF71B0E60D08DDE341F4E8CDE873014AC7_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* NSError_ToException_m357D2FD0AF8FDE7CC4EA3FED4E6665C6DCC1D5A8_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* NSError_get_Code_m4B7D86C78E6385D4C2487FC6CC71A871FB553C6A_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* NSError_get_Description_mB6D212A9C22451AD6E7E226C618F99B2B481F079_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* NSError_get_Valid_m7D6E8A8ADF43DEE1BA2786E19B5AB7F931E47CA1_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* NSError_op_Equality_m6BF4D475B59AA53D2BBCCFA8F7871C0815CDD177_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* NSError_op_Inequality_mD080C5B1482C6F6BC4F49168DE68A1066D58F27F_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* NSString_Dispose_m066AD20CDF39C3A7BF328EECF98552ED4C9515C8_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* NSString_Equals_m188888DE44AF9EFC18F411B6BBD00C0A9280D3A3_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* NSString_Equals_m595BAD260FFB10C5D9243C4E57157672BB7C36BD_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* NSString_GetHashCode_m461A620524216EE4CA3C33290A244C28DB81C5E8_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* NSString_Serialize_mEF0C5C17675E9D2CA7A0FA718C72C6C18D6BE901_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* NSString_ToString_mB7C226E11425871055349022B68D6D0EE44B8417_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* NSString__ctor_m8C8819213CA9FAF6CD8B75757872661D5863B947_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* NSString__ctor_mCAB42E3C04770B69F9E446AF948FEF9FE023AED0_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* NSString__ctor_mF2ADBE1A7EC317142FB3291215B15AE05C5CB63D_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* NSString_get_Created_m7DC809B2DECC36977993CEF646B7BE58A2F84232_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* NSString_get_Length_m25A0DE8F945C51B3D6C24FFA2FA01E77034A70FC_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* NSString_op_Equality_m2A270FA2EE83E6CD936F2707A6DFCC81202F84D9_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* NSString_op_Inequality_m5A4CE5BA814C3E8C2F49089BE7C2132EC307E52B_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* NativeApi_CFRelease_m7ED75C62FCA913F0649E432847FF1B5094D0B24B_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* NativeArrayUnsafeUtility_GetUnsafePtr_TisByte_t0111FAB8B8685667EDDAF77683F0D8F86B659056_mCA457AEBD49C3610DC1D6DA67E7DB972DE12AF19_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* NativeArray_1_Dispose_mD88EDF062EFB4B0E6C8F925B5A4E47E97E687342_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* NativeArray_1__ctor_mED2AEAAEFBBE3F20D8E424582434019D3F94F9EF_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* NativeSliceUnsafeUtility_ConvertExistingDataToNativeSlice_TisByte_t0111FAB8B8685667EDDAF77683F0D8F86B659056_mDE5B2797BB552EA649F8695FCDD33116A001ADD4_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* NativeSliceUnsafeUtility_GetUnsafePtr_TisByte_t0111FAB8B8685667EDDAF77683F0D8F86B659056_m48BDB55277094F65920898D8EF5953BB2D1138B4_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* NativeSlice_1_get_Length_mC04A811824226BCE2D1DEA9D8434BD1DA0E34B25_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* String_get_Length_m129FC0ADA02FECBED3C0B1A809AE84A5AEE1CF09_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeType* Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* Int64_t378EE0D608BD3107E77238E85F30D2BBD46981F3_0_0_0_var;
 IL2CPP_EXTERN_C const RuntimeType* MCSession_t81151C01DEFB5DA47FCB0EC5F477941EF29BB15B_0_0_0_var;
 IL2CPP_EXTERN_C const RuntimeType* NSData_t27227240875F34DEF760BD15736BBAAE45C2AD57_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* NSErrorException_tFF049C4B0C58F3D97BD1E636E31E3EAA4E06ACD6_0_0_0_var;
 IL2CPP_EXTERN_C const RuntimeType* NSError_tE9C5E6F16FD002838990C179DD0FD5530A67F25C_0_0_0_var;
 IL2CPP_EXTERN_C const RuntimeType* NSString_t82809DF63F200B683E2596807BD84CEDD7025E37_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* NativeArray_1_t3C2855C5B238E8C6739D4C17833F244B95C0F785_0_0_0_var;
 IL2CPP_EXTERN_C const RuntimeType* NativeSlice_1_tA05D3BC7EB042685CBFD3369ECB6140D114C911B_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* NativeSlice_1_tF548328F9A113A68C4CB880F74339084F9899CFB_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* String_t_0_0_0_var;
-IL2CPP_EXTERN_C const RuntimeType* VoidU2A_tC7FFEB695C165BD92A8656A0260E9CBC93892D9A_0_0_0_var;
 struct Exception_t_marshaled_com;
 struct Exception_t_marshaled_pinvoke;
 
@@ -1315,22 +1260,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool MCSession_get_Created_mEE1AE9DD32DD557D2
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IntPtr_t_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&MCSession_get_Created_mEE1AE9DD32DD557D2B762FA06F5DF4C6CDDB15DB_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&MCSession_t81151C01DEFB5DA47FCB0EC5F477941EF29BB15B_0_0_0_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, MCSession_get_Created_mEE1AE9DD32DD557D2B762FA06F5DF4C6CDDB15DB_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 0));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 1));
 	{
 		// public bool Created => m_Ptr != IntPtr.Zero;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 2));
 		intptr_t L_0 = __this->get_m_Ptr_0();
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 3));
 		bool L_1;
 		L_1 = IntPtr_op_Inequality_m212AF0E66AA81FEDC982B1C8A44ADDA24B995EB8((intptr_t)L_0, (intptr_t)(0), /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 3));
 		return L_1;
 	}
 }
@@ -1345,62 +1281,27 @@ IL2CPP_EXTERN_C  bool MCSession_get_Created_mEE1AE9DD32DD557D2B762FA06F5DF4C6CDD
 // System.Boolean Unity.iOS.Multipeer.MCSession::get_Enabled()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool MCSession_get_Enabled_m1116539FFD044BA661E91A9B8970117422EE38B8 (MCSession_t81151C01DEFB5DA47FCB0EC5F477941EF29BB15B * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&MCSession_get_Enabled_m1116539FFD044BA661E91A9B8970117422EE38B8_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&MCSession_t81151C01DEFB5DA47FCB0EC5F477941EF29BB15B_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	bool V_0 = false;
-	bool V_1 = false;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, MCSession_get_Enabled_m1116539FFD044BA661E91A9B8970117422EE38B8_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 4));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 5));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 6));
 		// if (!Created)
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 7));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 12));
 		bool L_0;
 		L_0 = MCSession_get_Created_mEE1AE9DD32DD557D2B762FA06F5DF4C6CDDB15DB((MCSession_t81151C01DEFB5DA47FCB0EC5F477941EF29BB15B *)__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 12));
-		V_0 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 8));
-		bool L_1 = V_0;
-		if (!L_1)
+		if (L_0)
 		{
-			goto IL_0012;
+			goto IL_000a;
 		}
 	}
 	{
 		// return false;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 9));
-		V_1 = (bool)0;
-		goto IL_0020;
+		return (bool)0;
 	}
 
-IL_0012:
+IL_000a:
 	{
 		// return GetEnabled(this);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 10));
-		MCSession_t81151C01DEFB5DA47FCB0EC5F477941EF29BB15B  L_2 = (*(MCSession_t81151C01DEFB5DA47FCB0EC5F477941EF29BB15B *)__this);
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 13));
-		bool L_3;
-		L_3 = MCSession_GetEnabled_m41D0A26F6C147D30B1C67478D66B2EC183E764F9(L_2, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 13));
-		V_1 = L_3;
-		goto IL_0020;
-	}
-
-IL_0020:
-	{
-		// }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 11));
-		bool L_4 = V_1;
-		return L_4;
+		MCSession_t81151C01DEFB5DA47FCB0EC5F477941EF29BB15B  L_1 = (*(MCSession_t81151C01DEFB5DA47FCB0EC5F477941EF29BB15B *)__this);
+		bool L_2;
+		L_2 = MCSession_GetEnabled_m41D0A26F6C147D30B1C67478D66B2EC183E764F9(L_1, /*hidden argument*/NULL);
+		return L_2;
 	}
 }
 IL2CPP_EXTERN_C  bool MCSession_get_Enabled_m1116539FFD044BA661E91A9B8970117422EE38B8_AdjustorThunk (RuntimeObject * __this, const RuntimeMethod* method)
@@ -1414,58 +1315,30 @@ IL2CPP_EXTERN_C  bool MCSession_get_Enabled_m1116539FFD044BA661E91A9B8970117422E
 // System.Void Unity.iOS.Multipeer.MCSession::set_Enabled(System.Boolean)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MCSession_set_Enabled_mDD1492B6C6932AEB7FF8EC5E5FBD457118690336 (MCSession_t81151C01DEFB5DA47FCB0EC5F477941EF29BB15B * __this, bool ___value0, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&MCSession_set_Enabled_mDD1492B6C6932AEB7FF8EC5E5FBD457118690336_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&MCSession_t81151C01DEFB5DA47FCB0EC5F477941EF29BB15B_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	bool V_0 = false;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___value0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, MCSession_set_Enabled_mDD1492B6C6932AEB7FF8EC5E5FBD457118690336_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 14));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 15));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 16));
 		// if (!Created && value)
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 17));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 22));
 		bool L_0;
 		L_0 = MCSession_get_Created_mEE1AE9DD32DD557D2B762FA06F5DF4C6CDDB15DB((MCSession_t81151C01DEFB5DA47FCB0EC5F477941EF29BB15B *)__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 22));
 		bool L_1 = ___value0;
-		V_0 = (bool)((int32_t)((int32_t)((((int32_t)L_0) == ((int32_t)0))? 1 : 0)&(int32_t)L_1));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 18));
-		bool L_2 = V_0;
-		if (!L_2)
+		if (!((int32_t)((int32_t)((((int32_t)L_0) == ((int32_t)0))? 1 : 0)&(int32_t)L_1)))
 		{
-			goto IL_0016;
+			goto IL_0013;
 		}
 	}
 	{
 		// throw new InvalidOperationException();
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 19));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 23));
-		InvalidOperationException_t10D3EE59AD28EC641ACEE05BCA4271A527E5ECAB * L_3 = (InvalidOperationException_t10D3EE59AD28EC641ACEE05BCA4271A527E5ECAB *)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&InvalidOperationException_t10D3EE59AD28EC641ACEE05BCA4271A527E5ECAB_il2cpp_TypeInfo_var)));
-		InvalidOperationException__ctor_m26BD2B620B5FBFA4376C16011C60E18A2EDC8E96(L_3, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 23));
-		IL2CPP_RAISE_MANAGED_EXCEPTION(L_3, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&MCSession_set_Enabled_mDD1492B6C6932AEB7FF8EC5E5FBD457118690336_RuntimeMethod_var)));
+		InvalidOperationException_t10D3EE59AD28EC641ACEE05BCA4271A527E5ECAB * L_2 = (InvalidOperationException_t10D3EE59AD28EC641ACEE05BCA4271A527E5ECAB *)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&InvalidOperationException_t10D3EE59AD28EC641ACEE05BCA4271A527E5ECAB_il2cpp_TypeInfo_var)));
+		InvalidOperationException__ctor_m26BD2B620B5FBFA4376C16011C60E18A2EDC8E96(L_2, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_2, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&MCSession_set_Enabled_mDD1492B6C6932AEB7FF8EC5E5FBD457118690336_RuntimeMethod_var)));
 	}
 
-IL_0016:
+IL_0013:
 	{
 		// SetEnabled(this, value);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 20));
-		MCSession_t81151C01DEFB5DA47FCB0EC5F477941EF29BB15B  L_4 = (*(MCSession_t81151C01DEFB5DA47FCB0EC5F477941EF29BB15B *)__this);
-		bool L_5 = ___value0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 24));
-		MCSession_SetEnabled_m4BD9EC560912F653DA3D152CFE277AC2B604539E(L_4, L_5, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 24));
+		MCSession_t81151C01DEFB5DA47FCB0EC5F477941EF29BB15B  L_3 = (*(MCSession_t81151C01DEFB5DA47FCB0EC5F477941EF29BB15B *)__this);
+		bool L_4 = ___value0;
+		MCSession_SetEnabled_m4BD9EC560912F653DA3D152CFE277AC2B604539E(L_3, L_4, /*hidden argument*/NULL);
 		// }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 21));
 		return;
 	}
 }
@@ -1478,167 +1351,108 @@ IL2CPP_EXTERN_C  void MCSession_set_Enabled_mDD1492B6C6932AEB7FF8EC5E5FBD4571186
 // System.Void Unity.iOS.Multipeer.MCSession::.ctor(System.String,System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MCSession__ctor_m7E2C0B6D7447935121ABF3C4BD206ABC7120AC00 (MCSession_t81151C01DEFB5DA47FCB0EC5F477941EF29BB15B * __this, String_t* ___peerName0, String_t* ___serviceType1, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&MCSession__ctor_m7E2C0B6D7447935121ABF3C4BD206ABC7120AC00_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&MCSession_t81151C01DEFB5DA47FCB0EC5F477941EF29BB15B_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSString_t82809DF63F200B683E2596807BD84CEDD7025E37_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	bool V_0 = false;
-	bool V_1 = false;
-	NSString_t82809DF63F200B683E2596807BD84CEDD7025E37  V_2;
-	memset((&V_2), 0, sizeof(V_2));
-	NSString_t82809DF63F200B683E2596807BD84CEDD7025E37  V_3;
-	memset((&V_3), 0, sizeof(V_3));
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___peerName0), (&___serviceType1));
-	DECLARE_METHOD_LOCALS(methodExecutionContextLocals, (&V_2), (&V_3));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, MCSession__ctor_m7E2C0B6D7447935121ABF3C4BD206ABC7120AC00_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, methodExecutionContextLocals);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 25));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 26));
+	NSString_t82809DF63F200B683E2596807BD84CEDD7025E37  V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	NSString_t82809DF63F200B683E2596807BD84CEDD7025E37  V_1;
+	memset((&V_1), 0, sizeof(V_1));
 	Exception_t * __last_unhandled_exception = 0;
-	il2cpp::utils::ExceptionSupportStack<int32_t, 2> __leave_targets;
+	il2cpp::utils::ExceptionSupportStack<int32_t, 1> __leave_targets;
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 27));
 		// if (peerName == null)
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 28));
 		String_t* L_0 = ___peerName0;
-		V_0 = (bool)((((RuntimeObject*)(String_t*)L_0) == ((RuntimeObject*)(RuntimeObject *)NULL))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 29));
-		bool L_1 = V_0;
-		if (!L_1)
+		if (L_0)
 		{
-			goto IL_0014;
+			goto IL_000e;
 		}
 	}
 	{
 		// throw new ArgumentNullException(nameof(peerName));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 30));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 43));
-		ArgumentNullException_tFB5C4621957BC53A7D1B4FDD5C38B4D6E15DB8FB * L_2 = (ArgumentNullException_tFB5C4621957BC53A7D1B4FDD5C38B4D6E15DB8FB *)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_tFB5C4621957BC53A7D1B4FDD5C38B4D6E15DB8FB_il2cpp_TypeInfo_var)));
-		ArgumentNullException__ctor_m81AB157B93BFE2FBFDB08B88F84B444293042F97(L_2, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral22C2F409084BA5C2C9F09297B54B614AE732FB01)), /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 43));
-		IL2CPP_RAISE_MANAGED_EXCEPTION(L_2, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&MCSession__ctor_m7E2C0B6D7447935121ABF3C4BD206ABC7120AC00_RuntimeMethod_var)));
+		ArgumentNullException_tFB5C4621957BC53A7D1B4FDD5C38B4D6E15DB8FB * L_1 = (ArgumentNullException_tFB5C4621957BC53A7D1B4FDD5C38B4D6E15DB8FB *)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_tFB5C4621957BC53A7D1B4FDD5C38B4D6E15DB8FB_il2cpp_TypeInfo_var)));
+		ArgumentNullException__ctor_m81AB157B93BFE2FBFDB08B88F84B444293042F97(L_1, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral22C2F409084BA5C2C9F09297B54B614AE732FB01)), /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_1, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&MCSession__ctor_m7E2C0B6D7447935121ABF3C4BD206ABC7120AC00_RuntimeMethod_var)));
 	}
 
-IL_0014:
+IL_000e:
 	{
 		// if (serviceType == null)
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 31));
-		String_t* L_3 = ___serviceType1;
-		V_1 = (bool)((((RuntimeObject*)(String_t*)L_3) == ((RuntimeObject*)(RuntimeObject *)NULL))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 32));
-		bool L_4 = V_1;
-		if (!L_4)
+		String_t* L_2 = ___serviceType1;
+		if (L_2)
 		{
-			goto IL_0027;
+			goto IL_001c;
 		}
 	}
 	{
 		// throw new ArgumentNullException(nameof(serviceType));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 33));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 44));
-		ArgumentNullException_tFB5C4621957BC53A7D1B4FDD5C38B4D6E15DB8FB * L_5 = (ArgumentNullException_tFB5C4621957BC53A7D1B4FDD5C38B4D6E15DB8FB *)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_tFB5C4621957BC53A7D1B4FDD5C38B4D6E15DB8FB_il2cpp_TypeInfo_var)));
-		ArgumentNullException__ctor_m81AB157B93BFE2FBFDB08B88F84B444293042F97(L_5, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral7CF07A82A6183049D3E36912C678E6C35C021BE3)), /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 44));
-		IL2CPP_RAISE_MANAGED_EXCEPTION(L_5, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&MCSession__ctor_m7E2C0B6D7447935121ABF3C4BD206ABC7120AC00_RuntimeMethod_var)));
+		ArgumentNullException_tFB5C4621957BC53A7D1B4FDD5C38B4D6E15DB8FB * L_3 = (ArgumentNullException_tFB5C4621957BC53A7D1B4FDD5C38B4D6E15DB8FB *)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_tFB5C4621957BC53A7D1B4FDD5C38B4D6E15DB8FB_il2cpp_TypeInfo_var)));
+		ArgumentNullException__ctor_m81AB157B93BFE2FBFDB08B88F84B444293042F97(L_3, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral7CF07A82A6183049D3E36912C678E6C35C021BE3)), /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_3, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&MCSession__ctor_m7E2C0B6D7447935121ABF3C4BD206ABC7120AC00_RuntimeMethod_var)));
 	}
 
-IL_0027:
+IL_001c:
 	{
 		// using (var peerName_NSString = new NSString(peerName))
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 34));
-		String_t* L_6 = ___peerName0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 45));
-		NSString__ctor_mCAB42E3C04770B69F9E446AF948FEF9FE023AED0((NSString_t82809DF63F200B683E2596807BD84CEDD7025E37 *)(&V_2), L_6, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 45));
+		String_t* L_4 = ___peerName0;
+		NSString__ctor_mCAB42E3C04770B69F9E446AF948FEF9FE023AED0((NSString_t82809DF63F200B683E2596807BD84CEDD7025E37 *)(&V_0), L_4, /*hidden argument*/NULL);
 	}
 
-IL_002f:
+IL_0024:
 	try
 	{ // begin try (depth: 1)
-		STORE_TRY_ID(methodExecutionContext, 0);
 		{
 			// using (var serviceType_NSString = new NSString(serviceType))
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 35));
-			String_t* L_7 = ___serviceType1;
-			STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 46));
-			NSString__ctor_mCAB42E3C04770B69F9E446AF948FEF9FE023AED0((NSString_t82809DF63F200B683E2596807BD84CEDD7025E37 *)(&V_3), L_7, /*hidden argument*/NULL);
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 46));
+			String_t* L_5 = ___serviceType1;
+			NSString__ctor_mCAB42E3C04770B69F9E446AF948FEF9FE023AED0((NSString_t82809DF63F200B683E2596807BD84CEDD7025E37 *)(&V_1), L_5, /*hidden argument*/NULL);
 		}
 
-IL_0037:
+IL_002c:
 		try
 		{ // begin try (depth: 2)
-			STORE_TRY_ID(methodExecutionContext, 1);
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 36));
 			// m_Ptr = InitWithName(peerName_NSString, serviceType_NSString);
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 37));
-			NSString_t82809DF63F200B683E2596807BD84CEDD7025E37  L_8 = V_2;
-			NSString_t82809DF63F200B683E2596807BD84CEDD7025E37  L_9 = V_3;
-			STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 47));
-			intptr_t L_10;
-			L_10 = MCSession_InitWithName_m6763B4B1F7421B48FA022B36A77ACF458F8B3843(L_8, L_9, /*hidden argument*/NULL);
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 47));
-			__this->set_m_Ptr_0((intptr_t)L_10);
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 38));
-			IL2CPP_LEAVE(0x57, FINALLY_0048);
+			NSString_t82809DF63F200B683E2596807BD84CEDD7025E37  L_6 = V_0;
+			NSString_t82809DF63F200B683E2596807BD84CEDD7025E37  L_7 = V_1;
+			intptr_t L_8;
+			L_8 = MCSession_InitWithName_m6763B4B1F7421B48FA022B36A77ACF458F8B3843(L_6, L_7, /*hidden argument*/NULL);
+			__this->set_m_Ptr_0((intptr_t)L_8);
+			// }
+			IL2CPP_LEAVE(0x57, FINALLY_003b);
 		} // end try (depth: 2)
 		catch(Il2CppExceptionWrapper& e)
 		{
 			__last_unhandled_exception = (Exception_t *)e.ex;
-			goto FINALLY_0048;
+			goto FINALLY_003b;
 		}
 
-FINALLY_0048:
+FINALLY_003b:
 		{ // begin finally (depth: 2)
-			STORE_TRY_ID(methodExecutionContext, 0);
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 39));
-			STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 48));
-			NSString_Dispose_m066AD20CDF39C3A7BF328EECF98552ED4C9515C8((NSString_t82809DF63F200B683E2596807BD84CEDD7025E37 *)(&V_3), /*hidden argument*/NULL);
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 48));
-			IL2CPP_END_FINALLY(72)
+			NSString_Dispose_m066AD20CDF39C3A7BF328EECF98552ED4C9515C8((NSString_t82809DF63F200B683E2596807BD84CEDD7025E37 *)(&V_1), /*hidden argument*/NULL);
+			IL2CPP_END_FINALLY(59)
 		} // end finally (depth: 2)
-		IL2CPP_CLEANUP(72)
+		IL2CPP_CLEANUP(59)
 		{
 			IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
-			IL2CPP_JUMP_TBL(0x57, IL_0057)
-		}
-
-IL_0057:
-		{
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 40));
-			IL2CPP_LEAVE(0x68, FINALLY_0059);
+			IL2CPP_END_CLEANUP(0x57, FINALLY_0049);
 		}
 	} // end try (depth: 1)
 	catch(Il2CppExceptionWrapper& e)
 	{
 		__last_unhandled_exception = (Exception_t *)e.ex;
-		goto FINALLY_0059;
+		goto FINALLY_0049;
 	}
 
-FINALLY_0059:
+FINALLY_0049:
 	{ // begin finally (depth: 1)
-		STORE_TRY_ID(methodExecutionContext, -1);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 41));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 49));
-		NSString_Dispose_m066AD20CDF39C3A7BF328EECF98552ED4C9515C8((NSString_t82809DF63F200B683E2596807BD84CEDD7025E37 *)(&V_2), /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 49));
-		IL2CPP_END_FINALLY(89)
+		NSString_Dispose_m066AD20CDF39C3A7BF328EECF98552ED4C9515C8((NSString_t82809DF63F200B683E2596807BD84CEDD7025E37 *)(&V_0), /*hidden argument*/NULL);
+		IL2CPP_END_FINALLY(73)
 	} // end finally (depth: 1)
-	IL2CPP_CLEANUP(89)
+	IL2CPP_CLEANUP(73)
 	{
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
-		IL2CPP_JUMP_TBL(0x68, IL_0068)
+		IL2CPP_JUMP_TBL(0x57, IL_0057)
 	}
 
-IL_0068:
+IL_0057:
 	{
 		// }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 42));
 		return;
 	}
 }
@@ -1651,172 +1465,110 @@ IL2CPP_EXTERN_C  void MCSession__ctor_m7E2C0B6D7447935121ABF3C4BD206ABC7120AC00_
 // System.Void Unity.iOS.Multipeer.MCSession::SendToAllPeers(Unity.iOS.Multipeer.NSData,Unity.iOS.Multipeer.MCSessionSendDataMode)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MCSession_SendToAllPeers_mC3DBF6A22974482CD90C2C8ED658DFD589930CE7 (MCSession_t81151C01DEFB5DA47FCB0EC5F477941EF29BB15B * __this, NSData_t27227240875F34DEF760BD15736BBAAE45C2AD57  ___data0, int32_t ___mode1, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&MCSession_SendToAllPeers_mC3DBF6A22974482CD90C2C8ED658DFD589930CE7_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&MCSession_t81151C01DEFB5DA47FCB0EC5F477941EF29BB15B_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSError_tE9C5E6F16FD002838990C179DD0FD5530A67F25C_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	bool V_0 = false;
-	bool V_1 = false;
-	NSError_tE9C5E6F16FD002838990C179DD0FD5530A67F25C  V_2;
-	memset((&V_2), 0, sizeof(V_2));
-	bool V_3 = false;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___data0), (&___mode1));
-	DECLARE_METHOD_LOCALS(methodExecutionContextLocals, (&V_2));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, MCSession_SendToAllPeers_mC3DBF6A22974482CD90C2C8ED658DFD589930CE7_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, methodExecutionContextLocals);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 50));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 51));
+	NSError_tE9C5E6F16FD002838990C179DD0FD5530A67F25C  V_0;
+	memset((&V_0), 0, sizeof(V_0));
 	Exception_t * __last_unhandled_exception = 0;
 	il2cpp::utils::ExceptionSupportStack<int32_t, 1> __leave_targets;
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 52));
 		// if (!Created)
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 53));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 67));
 		bool L_0;
 		L_0 = MCSession_get_Created_mEE1AE9DD32DD557D2B762FA06F5DF4C6CDDB15DB((MCSession_t81151C01DEFB5DA47FCB0EC5F477941EF29BB15B *)__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 67));
-		V_0 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 54));
-		bool L_1 = V_0;
-		if (!L_1)
+		if (L_0)
 		{
-			goto IL_0032;
+			goto IL_002c;
 		}
 	}
 	{
 		// throw new InvalidOperationException($"The {typeof(MCSession).Name} has not been created.");
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 55));
-		RuntimeTypeHandle_tC33965ADA3E041E0C94AF05E5CB527B56482CEF9  L_2 = { reinterpret_cast<intptr_t> (((RuntimeType*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&MCSession_t81151C01DEFB5DA47FCB0EC5F477941EF29BB15B_0_0_0_var))) };
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 68));
+		RuntimeTypeHandle_tC33965ADA3E041E0C94AF05E5CB527B56482CEF9  L_1 = { reinterpret_cast<intptr_t> (((RuntimeType*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&MCSession_t81151C01DEFB5DA47FCB0EC5F477941EF29BB15B_0_0_0_var))) };
 		IL2CPP_RUNTIME_CLASS_INIT(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Type_t_il2cpp_TypeInfo_var)));
-		Type_t * L_3;
-		L_3 = Type_GetTypeFromHandle_m8BB57524FF7F9DB1803BC561D2B3A4DBACEB385E(L_2, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 68));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 69));
-		NullCheck(L_3);
+		Type_t * L_2;
+		L_2 = Type_GetTypeFromHandle_m8BB57524FF7F9DB1803BC561D2B3A4DBACEB385E(L_1, /*hidden argument*/NULL);
+		NullCheck(L_2);
+		String_t* L_3;
+		L_3 = VirtFuncInvoker0< String_t* >::Invoke(7 /* System.String System.Reflection.MemberInfo::get_Name() */, L_2);
 		String_t* L_4;
-		L_4 = VirtFuncInvoker0< String_t* >::Invoke(7 /* System.String System.Reflection.MemberInfo::get_Name() */, L_3);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 69));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 70));
-		String_t* L_5;
-		L_5 = String_Concat_m89EAB4C6A96B0E5C3F87300D6BE78D386B9EFC44(((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral8F75ECDB116DCBBF6FC5A38C92B230BE664085FE)), L_4, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralB3FDE45005CCEC81C2BA207B67478532CE7E6223)), /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 70));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 71));
-		InvalidOperationException_t10D3EE59AD28EC641ACEE05BCA4271A527E5ECAB * L_6 = (InvalidOperationException_t10D3EE59AD28EC641ACEE05BCA4271A527E5ECAB *)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&InvalidOperationException_t10D3EE59AD28EC641ACEE05BCA4271A527E5ECAB_il2cpp_TypeInfo_var)));
-		InvalidOperationException__ctor_mC012CE552988309733C896F3FEA8249171E4402E(L_6, L_5, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 71));
-		IL2CPP_RAISE_MANAGED_EXCEPTION(L_6, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&MCSession_SendToAllPeers_mC3DBF6A22974482CD90C2C8ED658DFD589930CE7_RuntimeMethod_var)));
+		L_4 = String_Concat_m89EAB4C6A96B0E5C3F87300D6BE78D386B9EFC44(((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral8F75ECDB116DCBBF6FC5A38C92B230BE664085FE)), L_3, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralB3FDE45005CCEC81C2BA207B67478532CE7E6223)), /*hidden argument*/NULL);
+		InvalidOperationException_t10D3EE59AD28EC641ACEE05BCA4271A527E5ECAB * L_5 = (InvalidOperationException_t10D3EE59AD28EC641ACEE05BCA4271A527E5ECAB *)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&InvalidOperationException_t10D3EE59AD28EC641ACEE05BCA4271A527E5ECAB_il2cpp_TypeInfo_var)));
+		InvalidOperationException__ctor_mC012CE552988309733C896F3FEA8249171E4402E(L_5, L_4, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_5, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&MCSession_SendToAllPeers_mC3DBF6A22974482CD90C2C8ED658DFD589930CE7_RuntimeMethod_var)));
 	}
 
-IL_0032:
+IL_002c:
 	{
 		// if (!data.Created)
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 56));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 72));
-		bool L_7;
-		L_7 = NSData_get_Created_mBC33E9AB3B638F6D5B3CF08EF26FC8C87E85DE7D((NSData_t27227240875F34DEF760BD15736BBAAE45C2AD57 *)(&___data0), /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 72));
-		V_1 = (bool)((((int32_t)L_7) == ((int32_t)0))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 57));
-		bool L_8 = V_1;
-		if (!L_8)
+		bool L_6;
+		L_6 = NSData_get_Created_mBC33E9AB3B638F6D5B3CF08EF26FC8C87E85DE7D((NSData_t27227240875F34DEF760BD15736BBAAE45C2AD57 *)(&___data0), /*hidden argument*/NULL);
+		if (L_6)
 		{
-			goto IL_0050;
+			goto IL_0045;
 		}
 	}
 	{
 		// throw new ArgumentException($"'{nameof(data)}' is not valid.", nameof(data));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 58));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 73));
-		ArgumentException_t505FA8C11E883F2D96C797AD9D396490794DEE00 * L_9 = (ArgumentException_t505FA8C11E883F2D96C797AD9D396490794DEE00 *)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentException_t505FA8C11E883F2D96C797AD9D396490794DEE00_il2cpp_TypeInfo_var)));
-		ArgumentException__ctor_m71044C2110E357B71A1C30D2561C3F861AF1DC0D(L_9, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral0AB5CF6746FEB9225744EF27F35CAF7518665C8F)), ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralA44A39671D4B7FA8FBE50D795EAB52248D5C5469)), /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 73));
-		IL2CPP_RAISE_MANAGED_EXCEPTION(L_9, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&MCSession_SendToAllPeers_mC3DBF6A22974482CD90C2C8ED658DFD589930CE7_RuntimeMethod_var)));
+		ArgumentException_t505FA8C11E883F2D96C797AD9D396490794DEE00 * L_7 = (ArgumentException_t505FA8C11E883F2D96C797AD9D396490794DEE00 *)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentException_t505FA8C11E883F2D96C797AD9D396490794DEE00_il2cpp_TypeInfo_var)));
+		ArgumentException__ctor_m71044C2110E357B71A1C30D2561C3F861AF1DC0D(L_7, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral0AB5CF6746FEB9225744EF27F35CAF7518665C8F)), ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralA44A39671D4B7FA8FBE50D795EAB52248D5C5469)), /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_7, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&MCSession_SendToAllPeers_mC3DBF6A22974482CD90C2C8ED658DFD589930CE7_RuntimeMethod_var)));
 	}
 
-IL_0050:
+IL_0045:
 	{
 		// using (var error = SendToAllPeers(this, data, mode))
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 59));
-		MCSession_t81151C01DEFB5DA47FCB0EC5F477941EF29BB15B  L_10 = (*(MCSession_t81151C01DEFB5DA47FCB0EC5F477941EF29BB15B *)__this);
-		NSData_t27227240875F34DEF760BD15736BBAAE45C2AD57  L_11 = ___data0;
-		int32_t L_12 = ___mode1;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 74));
-		NSError_tE9C5E6F16FD002838990C179DD0FD5530A67F25C  L_13;
-		L_13 = MCSession_SendToAllPeers_m50FD35DA42671A9D83764C0BB4AD6D76643247B5(L_10, L_11, L_12, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 74));
-		V_2 = L_13;
+		MCSession_t81151C01DEFB5DA47FCB0EC5F477941EF29BB15B  L_8 = (*(MCSession_t81151C01DEFB5DA47FCB0EC5F477941EF29BB15B *)__this);
+		NSData_t27227240875F34DEF760BD15736BBAAE45C2AD57  L_9 = ___data0;
+		int32_t L_10 = ___mode1;
+		NSError_tE9C5E6F16FD002838990C179DD0FD5530A67F25C  L_11;
+		L_11 = MCSession_SendToAllPeers_m50FD35DA42671A9D83764C0BB4AD6D76643247B5(L_8, L_9, L_10, /*hidden argument*/NULL);
+		V_0 = L_11;
 	}
 
-IL_005e:
+IL_0053:
 	try
 	{ // begin try (depth: 1)
-		STORE_TRY_ID(methodExecutionContext, 0);
 		{
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 60));
 			// if (error.Valid)
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 61));
-			STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 75));
-			bool L_14;
-			L_14 = NSError_get_Valid_m7D6E8A8ADF43DEE1BA2786E19B5AB7F931E47CA1((NSError_tE9C5E6F16FD002838990C179DD0FD5530A67F25C *)(&V_2), /*hidden argument*/NULL);
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 75));
-			V_3 = L_14;
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 62));
-			bool L_15 = V_3;
-			if (!L_15)
+			bool L_12;
+			L_12 = NSError_get_Valid_m7D6E8A8ADF43DEE1BA2786E19B5AB7F931E47CA1((NSError_tE9C5E6F16FD002838990C179DD0FD5530A67F25C *)(&V_0), /*hidden argument*/NULL);
+			if (!L_12)
 			{
-				goto IL_0072;
+				goto IL_0064;
 			}
 		}
 
-IL_006a:
+IL_005c:
 		{
 			// throw error.ToException();
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 63));
-			STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 76));
-			NSErrorException_tFF049C4B0C58F3D97BD1E636E31E3EAA4E06ACD6 * L_16;
-			L_16 = NSError_ToException_m357D2FD0AF8FDE7CC4EA3FED4E6665C6DCC1D5A8((NSError_tE9C5E6F16FD002838990C179DD0FD5530A67F25C *)(&V_2), /*hidden argument*/NULL);
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 76));
-			IL2CPP_RAISE_MANAGED_EXCEPTION(L_16, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&MCSession_SendToAllPeers_mC3DBF6A22974482CD90C2C8ED658DFD589930CE7_RuntimeMethod_var)));
+			NSErrorException_tFF049C4B0C58F3D97BD1E636E31E3EAA4E06ACD6 * L_13;
+			L_13 = NSError_ToException_m357D2FD0AF8FDE7CC4EA3FED4E6665C6DCC1D5A8((NSError_tE9C5E6F16FD002838990C179DD0FD5530A67F25C *)(&V_0), /*hidden argument*/NULL);
+			IL2CPP_RAISE_MANAGED_EXCEPTION(L_13, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&MCSession_SendToAllPeers_mC3DBF6A22974482CD90C2C8ED658DFD589930CE7_RuntimeMethod_var)));
 		}
 
-IL_0072:
+IL_0064:
 		{
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 64));
-			IL2CPP_LEAVE(0x84, FINALLY_0075);
+			// }
+			IL2CPP_LEAVE(0x74, FINALLY_0066);
 		}
 	} // end try (depth: 1)
 	catch(Il2CppExceptionWrapper& e)
 	{
 		__last_unhandled_exception = (Exception_t *)e.ex;
-		goto FINALLY_0075;
+		goto FINALLY_0066;
 	}
 
-FINALLY_0075:
+FINALLY_0066:
 	{ // begin finally (depth: 1)
-		STORE_TRY_ID(methodExecutionContext, -1);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 65));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 77));
-		NSError_Dispose_mEFEAD23C4358CD6E4666D48DBD03B95C8F7F9294((NSError_tE9C5E6F16FD002838990C179DD0FD5530A67F25C *)(&V_2), /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 77));
-		IL2CPP_END_FINALLY(117)
+		NSError_Dispose_mEFEAD23C4358CD6E4666D48DBD03B95C8F7F9294((NSError_tE9C5E6F16FD002838990C179DD0FD5530A67F25C *)(&V_0), /*hidden argument*/NULL);
+		IL2CPP_END_FINALLY(102)
 	} // end finally (depth: 1)
-	IL2CPP_CLEANUP(117)
+	IL2CPP_CLEANUP(102)
 	{
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
-		IL2CPP_JUMP_TBL(0x84, IL_0084)
+		IL2CPP_JUMP_TBL(0x74, IL_0074)
 	}
 
-IL_0084:
+IL_0074:
 	{
 		// }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 66));
 		return;
 	}
 }
@@ -1829,25 +1581,11 @@ IL2CPP_EXTERN_C  void MCSession_SendToAllPeers_mC3DBF6A22974482CD90C2C8ED658DFD5
 // System.Int32 Unity.iOS.Multipeer.MCSession::get_ReceivedDataQueueSize()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t MCSession_get_ReceivedDataQueueSize_m199D8B8ABC6D7521F1CE7968C3974DC5475CFDA7 (MCSession_t81151C01DEFB5DA47FCB0EC5F477941EF29BB15B * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&MCSession_get_ReceivedDataQueueSize_m199D8B8ABC6D7521F1CE7968C3974DC5475CFDA7_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&MCSession_t81151C01DEFB5DA47FCB0EC5F477941EF29BB15B_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, MCSession_get_ReceivedDataQueueSize_m199D8B8ABC6D7521F1CE7968C3974DC5475CFDA7_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 78));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 79));
 	{
 		// public int ReceivedDataQueueSize => GetReceivedDataQueueSize(this);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 80));
 		MCSession_t81151C01DEFB5DA47FCB0EC5F477941EF29BB15B  L_0 = (*(MCSession_t81151C01DEFB5DA47FCB0EC5F477941EF29BB15B *)__this);
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 81));
 		int32_t L_1;
 		L_1 = MCSession_GetReceivedDataQueueSize_m83CDCACBBBCDC182EA0D94ED41D08CCD27D22043(L_0, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 81));
 		return L_1;
 	}
 }
@@ -1862,82 +1600,38 @@ IL2CPP_EXTERN_C  int32_t MCSession_get_ReceivedDataQueueSize_m199D8B8ABC6D7521F1
 // Unity.iOS.Multipeer.NSData Unity.iOS.Multipeer.MCSession::DequeueReceivedData()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR NSData_t27227240875F34DEF760BD15736BBAAE45C2AD57  MCSession_DequeueReceivedData_m689094C4EAEFC8E1A23388EC6D9A0121AD6484E2 (MCSession_t81151C01DEFB5DA47FCB0EC5F477941EF29BB15B * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&MCSession_DequeueReceivedData_m689094C4EAEFC8E1A23388EC6D9A0121AD6484E2_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&MCSession_t81151C01DEFB5DA47FCB0EC5F477941EF29BB15B_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSData_t27227240875F34DEF760BD15736BBAAE45C2AD57_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	bool V_0 = false;
-	NSData_t27227240875F34DEF760BD15736BBAAE45C2AD57  V_1;
-	memset((&V_1), 0, sizeof(V_1));
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, MCSession_DequeueReceivedData_m689094C4EAEFC8E1A23388EC6D9A0121AD6484E2_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 82));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 83));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 84));
 		// if (!Created)
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 85));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 90));
 		bool L_0;
 		L_0 = MCSession_get_Created_mEE1AE9DD32DD557D2B762FA06F5DF4C6CDDB15DB((MCSession_t81151C01DEFB5DA47FCB0EC5F477941EF29BB15B *)__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 90));
-		V_0 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 86));
-		bool L_1 = V_0;
-		if (!L_1)
+		if (L_0)
 		{
-			goto IL_0032;
+			goto IL_002c;
 		}
 	}
 	{
 		// throw new InvalidOperationException($"The {typeof(MCSession).Name} has not been created.");
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 87));
-		RuntimeTypeHandle_tC33965ADA3E041E0C94AF05E5CB527B56482CEF9  L_2 = { reinterpret_cast<intptr_t> (((RuntimeType*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&MCSession_t81151C01DEFB5DA47FCB0EC5F477941EF29BB15B_0_0_0_var))) };
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 91));
+		RuntimeTypeHandle_tC33965ADA3E041E0C94AF05E5CB527B56482CEF9  L_1 = { reinterpret_cast<intptr_t> (((RuntimeType*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&MCSession_t81151C01DEFB5DA47FCB0EC5F477941EF29BB15B_0_0_0_var))) };
 		IL2CPP_RUNTIME_CLASS_INIT(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Type_t_il2cpp_TypeInfo_var)));
-		Type_t * L_3;
-		L_3 = Type_GetTypeFromHandle_m8BB57524FF7F9DB1803BC561D2B3A4DBACEB385E(L_2, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 91));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 92));
-		NullCheck(L_3);
+		Type_t * L_2;
+		L_2 = Type_GetTypeFromHandle_m8BB57524FF7F9DB1803BC561D2B3A4DBACEB385E(L_1, /*hidden argument*/NULL);
+		NullCheck(L_2);
+		String_t* L_3;
+		L_3 = VirtFuncInvoker0< String_t* >::Invoke(7 /* System.String System.Reflection.MemberInfo::get_Name() */, L_2);
 		String_t* L_4;
-		L_4 = VirtFuncInvoker0< String_t* >::Invoke(7 /* System.String System.Reflection.MemberInfo::get_Name() */, L_3);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 92));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 93));
-		String_t* L_5;
-		L_5 = String_Concat_m89EAB4C6A96B0E5C3F87300D6BE78D386B9EFC44(((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral8F75ECDB116DCBBF6FC5A38C92B230BE664085FE)), L_4, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralB3FDE45005CCEC81C2BA207B67478532CE7E6223)), /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 93));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 94));
-		InvalidOperationException_t10D3EE59AD28EC641ACEE05BCA4271A527E5ECAB * L_6 = (InvalidOperationException_t10D3EE59AD28EC641ACEE05BCA4271A527E5ECAB *)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&InvalidOperationException_t10D3EE59AD28EC641ACEE05BCA4271A527E5ECAB_il2cpp_TypeInfo_var)));
-		InvalidOperationException__ctor_mC012CE552988309733C896F3FEA8249171E4402E(L_6, L_5, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 94));
-		IL2CPP_RAISE_MANAGED_EXCEPTION(L_6, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&MCSession_DequeueReceivedData_m689094C4EAEFC8E1A23388EC6D9A0121AD6484E2_RuntimeMethod_var)));
+		L_4 = String_Concat_m89EAB4C6A96B0E5C3F87300D6BE78D386B9EFC44(((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral8F75ECDB116DCBBF6FC5A38C92B230BE664085FE)), L_3, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralB3FDE45005CCEC81C2BA207B67478532CE7E6223)), /*hidden argument*/NULL);
+		InvalidOperationException_t10D3EE59AD28EC641ACEE05BCA4271A527E5ECAB * L_5 = (InvalidOperationException_t10D3EE59AD28EC641ACEE05BCA4271A527E5ECAB *)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&InvalidOperationException_t10D3EE59AD28EC641ACEE05BCA4271A527E5ECAB_il2cpp_TypeInfo_var)));
+		InvalidOperationException__ctor_mC012CE552988309733C896F3FEA8249171E4402E(L_5, L_4, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_5, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&MCSession_DequeueReceivedData_m689094C4EAEFC8E1A23388EC6D9A0121AD6484E2_RuntimeMethod_var)));
 	}
 
-IL_0032:
+IL_002c:
 	{
 		// return DequeueReceivedData(this);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 88));
-		MCSession_t81151C01DEFB5DA47FCB0EC5F477941EF29BB15B  L_7 = (*(MCSession_t81151C01DEFB5DA47FCB0EC5F477941EF29BB15B *)__this);
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 95));
-		NSData_t27227240875F34DEF760BD15736BBAAE45C2AD57  L_8;
-		L_8 = MCSession_DequeueReceivedData_mAD4AEFC8B04D14B2640C03AD26DD1E14E4065FB4(L_7, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 95));
-		V_1 = L_8;
-		goto IL_0040;
-	}
-
-IL_0040:
-	{
-		// }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 89));
-		NSData_t27227240875F34DEF760BD15736BBAAE45C2AD57  L_9 = V_1;
-		return L_9;
+		MCSession_t81151C01DEFB5DA47FCB0EC5F477941EF29BB15B  L_6 = (*(MCSession_t81151C01DEFB5DA47FCB0EC5F477941EF29BB15B *)__this);
+		NSData_t27227240875F34DEF760BD15736BBAAE45C2AD57  L_7;
+		L_7 = MCSession_DequeueReceivedData_mAD4AEFC8B04D14B2640C03AD26DD1E14E4065FB4(L_6, /*hidden argument*/NULL);
+		return L_7;
 	}
 }
 IL2CPP_EXTERN_C  NSData_t27227240875F34DEF760BD15736BBAAE45C2AD57  MCSession_DequeueReceivedData_m689094C4EAEFC8E1A23388EC6D9A0121AD6484E2_AdjustorThunk (RuntimeObject * __this, const RuntimeMethod* method)
@@ -1951,25 +1645,11 @@ IL2CPP_EXTERN_C  NSData_t27227240875F34DEF760BD15736BBAAE45C2AD57  MCSession_Deq
 // System.Int32 Unity.iOS.Multipeer.MCSession::get_ConnectedPeerCount()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t MCSession_get_ConnectedPeerCount_mB14D539699C746C456E2DFBCF452C0BE8641CC22 (MCSession_t81151C01DEFB5DA47FCB0EC5F477941EF29BB15B * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&MCSession_get_ConnectedPeerCount_mB14D539699C746C456E2DFBCF452C0BE8641CC22_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&MCSession_t81151C01DEFB5DA47FCB0EC5F477941EF29BB15B_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, MCSession_get_ConnectedPeerCount_mB14D539699C746C456E2DFBCF452C0BE8641CC22_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 96));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 97));
 	{
 		// public int ConnectedPeerCount => GetConnectedPeerCount(this);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 98));
 		MCSession_t81151C01DEFB5DA47FCB0EC5F477941EF29BB15B  L_0 = (*(MCSession_t81151C01DEFB5DA47FCB0EC5F477941EF29BB15B *)__this);
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 99));
 		int32_t L_1;
 		L_1 = MCSession_GetConnectedPeerCount_m4F0800115ADBB6C76B273C37BC4822AF21000996(L_0, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 99));
 		return L_1;
 	}
 }
@@ -1984,24 +1664,10 @@ IL2CPP_EXTERN_C  int32_t MCSession_get_ConnectedPeerCount_mB14D539699C746C456E2D
 // System.Void Unity.iOS.Multipeer.MCSession::Dispose()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MCSession_Dispose_m0649EDB1709EB49D0FEB9F835FB70306BD3A73D8 (MCSession_t81151C01DEFB5DA47FCB0EC5F477941EF29BB15B * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&MCSession_Dispose_m0649EDB1709EB49D0FEB9F835FB70306BD3A73D8_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&MCSession_t81151C01DEFB5DA47FCB0EC5F477941EF29BB15B_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, MCSession_Dispose_m0649EDB1709EB49D0FEB9F835FB70306BD3A73D8_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 100));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 101));
 	{
 		// public void Dispose() => NativeApi.CFRelease(ref m_Ptr);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 102));
 		intptr_t* L_0 = __this->get_address_of_m_Ptr_0();
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 103));
 		NativeApi_CFRelease_m7ED75C62FCA913F0649E432847FF1B5094D0B24B((intptr_t*)L_0, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 103));
 		return;
 	}
 }
@@ -2014,25 +1680,11 @@ IL2CPP_EXTERN_C  void MCSession_Dispose_m0649EDB1709EB49D0FEB9F835FB70306BD3A73D
 // System.Int32 Unity.iOS.Multipeer.MCSession::GetHashCode()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t MCSession_GetHashCode_m1B6938BBD06191E9AFB095A33230A736A4AD901C (MCSession_t81151C01DEFB5DA47FCB0EC5F477941EF29BB15B * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&MCSession_GetHashCode_m1B6938BBD06191E9AFB095A33230A736A4AD901C_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&MCSession_t81151C01DEFB5DA47FCB0EC5F477941EF29BB15B_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, MCSession_GetHashCode_m1B6938BBD06191E9AFB095A33230A736A4AD901C_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 104));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 105));
 	{
 		// public override int GetHashCode() => m_Ptr.GetHashCode();
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 106));
 		intptr_t* L_0 = __this->get_address_of_m_Ptr_0();
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 107));
 		int32_t L_1;
 		L_1 = IntPtr_GetHashCode_m55E65FB52EFE7C0EBC3C28E66A5D7542F3B1D35D((intptr_t*)L_0, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 107));
 		return L_1;
 	}
 }
@@ -2050,44 +1702,27 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool MCSession_Equals_m7184D7A1F67F7D02C03411
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&MCSession_Equals_m7184D7A1F67F7D02C034113B8C5D2011B6833D0C_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&MCSession_t81151C01DEFB5DA47FCB0EC5F477941EF29BB15B_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&MCSession_t81151C01DEFB5DA47FCB0EC5F477941EF29BB15B_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___obj0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, MCSession_Equals_m7184D7A1F67F7D02C034113B8C5D2011B6833D0C_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 108));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 109));
-	int32_t G_B3_0 = 0;
 	{
 		// public override bool Equals(object obj) => (obj is MCSession) && Equals((MCSession)obj);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 110));
 		RuntimeObject * L_0 = ___obj0;
 		if (!((RuntimeObject *)IsInstSealed((RuntimeObject*)L_0, MCSession_t81151C01DEFB5DA47FCB0EC5F477941EF29BB15B_il2cpp_TypeInfo_var)))
 		{
-			goto IL_0016;
+			goto IL_0015;
 		}
 	}
 	{
 		RuntimeObject * L_1 = ___obj0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 111));
 		bool L_2;
 		L_2 = MCSession_Equals_m00C4E76C5FA9117F8E0D6ECDD0FEB2CB880E764F((MCSession_t81151C01DEFB5DA47FCB0EC5F477941EF29BB15B *)__this, ((*(MCSession_t81151C01DEFB5DA47FCB0EC5F477941EF29BB15B *)((MCSession_t81151C01DEFB5DA47FCB0EC5F477941EF29BB15B *)UnBox(L_1, MCSession_t81151C01DEFB5DA47FCB0EC5F477941EF29BB15B_il2cpp_TypeInfo_var)))), /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 111));
-		G_B3_0 = ((int32_t)(L_2));
-		goto IL_0017;
+		return L_2;
 	}
 
-IL_0016:
+IL_0015:
 	{
-		G_B3_0 = 0;
-	}
-
-IL_0017:
-	{
-		return (bool)G_B3_0;
+		return (bool)0;
 	}
 }
 IL2CPP_EXTERN_C  bool MCSession_Equals_m7184D7A1F67F7D02C034113B8C5D2011B6833D0C_AdjustorThunk (RuntimeObject * __this, RuntimeObject * ___obj0, const RuntimeMethod* method)
@@ -2101,28 +1736,13 @@ IL2CPP_EXTERN_C  bool MCSession_Equals_m7184D7A1F67F7D02C034113B8C5D2011B6833D0C
 // System.Boolean Unity.iOS.Multipeer.MCSession::Equals(Unity.iOS.Multipeer.MCSession)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool MCSession_Equals_m00C4E76C5FA9117F8E0D6ECDD0FEB2CB880E764F (MCSession_t81151C01DEFB5DA47FCB0EC5F477941EF29BB15B * __this, MCSession_t81151C01DEFB5DA47FCB0EC5F477941EF29BB15B  ___other0, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&MCSession_Equals_m00C4E76C5FA9117F8E0D6ECDD0FEB2CB880E764F_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&MCSession_t81151C01DEFB5DA47FCB0EC5F477941EF29BB15B_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___other0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, MCSession_Equals_m00C4E76C5FA9117F8E0D6ECDD0FEB2CB880E764F_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 112));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 113));
 	{
 		// public bool Equals(MCSession other) => m_Ptr == other.m_Ptr;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 114));
 		intptr_t L_0 = __this->get_m_Ptr_0();
 		MCSession_t81151C01DEFB5DA47FCB0EC5F477941EF29BB15B  L_1 = ___other0;
 		intptr_t L_2 = L_1.get_m_Ptr_0();
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 115));
 		bool L_3;
 		L_3 = IntPtr_op_Equality_mD94F3FE43A65684EFF984A7B95E70D2520C0AC73((intptr_t)L_0, (intptr_t)L_2, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 115));
 		return L_3;
 	}
 }
@@ -2137,48 +1757,22 @@ IL2CPP_EXTERN_C  bool MCSession_Equals_m00C4E76C5FA9117F8E0D6ECDD0FEB2CB880E764F
 // System.Boolean Unity.iOS.Multipeer.MCSession::op_Equality(Unity.iOS.Multipeer.MCSession,Unity.iOS.Multipeer.MCSession)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool MCSession_op_Equality_m5AA5B55CBDE67382E419A21F38947C35E20AAF7C (MCSession_t81151C01DEFB5DA47FCB0EC5F477941EF29BB15B  ___lhs0, MCSession_t81151C01DEFB5DA47FCB0EC5F477941EF29BB15B  ___rhs1, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&MCSession_op_Equality_m5AA5B55CBDE67382E419A21F38947C35E20AAF7C_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___lhs0), (&___rhs1));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, MCSession_op_Equality_m5AA5B55CBDE67382E419A21F38947C35E20AAF7C_RuntimeMethod_var, NULL, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 116));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 117));
 	{
 		// public static bool operator==(MCSession lhs, MCSession rhs) => lhs.Equals(rhs);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 118));
 		MCSession_t81151C01DEFB5DA47FCB0EC5F477941EF29BB15B  L_0 = ___rhs1;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 119));
 		bool L_1;
 		L_1 = MCSession_Equals_m00C4E76C5FA9117F8E0D6ECDD0FEB2CB880E764F((MCSession_t81151C01DEFB5DA47FCB0EC5F477941EF29BB15B *)(&___lhs0), L_0, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 119));
 		return L_1;
 	}
 }
 // System.Boolean Unity.iOS.Multipeer.MCSession::op_Inequality(Unity.iOS.Multipeer.MCSession,Unity.iOS.Multipeer.MCSession)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool MCSession_op_Inequality_mEE4E80329A81192E45C18F62FCD96E436A930A27 (MCSession_t81151C01DEFB5DA47FCB0EC5F477941EF29BB15B  ___lhs0, MCSession_t81151C01DEFB5DA47FCB0EC5F477941EF29BB15B  ___rhs1, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&MCSession_op_Inequality_mEE4E80329A81192E45C18F62FCD96E436A930A27_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___lhs0), (&___rhs1));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, MCSession_op_Inequality_mEE4E80329A81192E45C18F62FCD96E436A930A27_RuntimeMethod_var, NULL, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 120));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 121));
 	{
 		// public static bool operator!=(MCSession lhs, MCSession rhs) => !lhs.Equals(rhs);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 122));
 		MCSession_t81151C01DEFB5DA47FCB0EC5F477941EF29BB15B  L_0 = ___rhs1;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 123));
 		bool L_1;
 		L_1 = MCSession_Equals_m00C4E76C5FA9117F8E0D6ECDD0FEB2CB880E764F((MCSession_t81151C01DEFB5DA47FCB0EC5F477941EF29BB15B *)(&___lhs0), L_0, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 123));
 		return (bool)((((int32_t)L_1) == ((int32_t)0))? 1 : 0);
 	}
 }
@@ -2270,21 +1864,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool MCSession_GetEnabled_m41D0A26F6C147D30B1
 // System.Void Unity.iOS.Multipeer.NSData::.ctor(System.IntPtr)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NSData__ctor_m7D9316BE449293BDF865CDF447E59C85D0893710 (NSData_t27227240875F34DEF760BD15736BBAAE45C2AD57 * __this, intptr_t ___existing0, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSData__ctor_m7D9316BE449293BDF865CDF447E59C85D0893710_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSData_t27227240875F34DEF760BD15736BBAAE45C2AD57_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___existing0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NSData__ctor_m7D9316BE449293BDF865CDF447E59C85D0893710_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 124));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 125));
 	{
 		// internal NSData(IntPtr existing) => m_Ptr = existing;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 126));
 		intptr_t L_0 = ___existing0;
 		__this->set_m_Ptr_0((intptr_t)L_0);
 		return;
@@ -2303,22 +1884,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool NSData_get_Created_mBC33E9AB3B638F6D5B3C
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IntPtr_t_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSData_get_Created_mBC33E9AB3B638F6D5B3CF08EF26FC8C87E85DE7D_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSData_t27227240875F34DEF760BD15736BBAAE45C2AD57_0_0_0_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NSData_get_Created_mBC33E9AB3B638F6D5B3CF08EF26FC8C87E85DE7D_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 127));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 128));
 	{
 		// public bool Created => m_Ptr != IntPtr.Zero;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 129));
 		intptr_t L_0 = __this->get_m_Ptr_0();
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 130));
 		bool L_1;
 		L_1 = IntPtr_op_Inequality_m212AF0E66AA81FEDC982B1C8A44ADDA24B995EB8((intptr_t)L_0, (intptr_t)(0), /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 130));
 		return L_1;
 	}
 }
@@ -2333,48 +1905,25 @@ IL2CPP_EXTERN_C  bool NSData_get_Created_mBC33E9AB3B638F6D5B3CF08EF26FC8C87E85DE
 // System.Int32 Unity.iOS.Multipeer.NSData::get_Length()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NSData_get_Length_m62F648B9677C49BB2AF52EBA2944EF9EC835442D (NSData_t27227240875F34DEF760BD15736BBAAE45C2AD57 * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSData_get_Length_m62F648B9677C49BB2AF52EBA2944EF9EC835442D_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSData_t27227240875F34DEF760BD15736BBAAE45C2AD57_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NSData_get_Length_m62F648B9677C49BB2AF52EBA2944EF9EC835442D_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 131));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 132));
-	int32_t G_B3_0 = 0;
 	{
 		// public int Length => Created ? GetLength(this) : 0;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 133));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 134));
 		bool L_0;
 		L_0 = NSData_get_Created_mBC33E9AB3B638F6D5B3CF08EF26FC8C87E85DE7D((NSData_t27227240875F34DEF760BD15736BBAAE45C2AD57 *)__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 134));
 		if (L_0)
 		{
-			goto IL_000b;
+			goto IL_000a;
 		}
 	}
 	{
-		G_B3_0 = 0;
-		goto IL_0016;
+		return 0;
 	}
 
-IL_000b:
+IL_000a:
 	{
 		NSData_t27227240875F34DEF760BD15736BBAAE45C2AD57  L_1 = (*(NSData_t27227240875F34DEF760BD15736BBAAE45C2AD57 *)__this);
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 135));
 		int32_t L_2;
 		L_2 = NSData_GetLength_mAC1DF6AE78E542CBF4DDC9D58A7653FF62B05196(L_1, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 135));
-		G_B3_0 = L_2;
-	}
-
-IL_0016:
-	{
-		return G_B3_0;
+		return L_2;
 	}
 }
 IL2CPP_EXTERN_C  int32_t NSData_get_Length_m62F648B9677C49BB2AF52EBA2944EF9EC835442D_AdjustorThunk (RuntimeObject * __this, const RuntimeMethod* method)
@@ -2391,97 +1940,53 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR NSData_t27227240875F34DEF760BD15736BBAAE45C2A
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSData_CreateWithBytes_m119018E5FC2351E3FF75B26A8603416D41CC7ED9_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSData_t27227240875F34DEF760BD15736BBAAE45C2AD57_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NativeSliceUnsafeUtility_GetUnsafePtr_TisByte_t0111FAB8B8685667EDDAF77683F0D8F86B659056_m48BDB55277094F65920898D8EF5953BB2D1138B4_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NativeSlice_1_get_Length_mC04A811824226BCE2D1DEA9D8434BD1DA0E34B25_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&VoidU2A_tC7FFEB695C165BD92A8656A0260E9CBC93892D9A_0_0_0_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	void* V_0 = NULL;
-	bool V_1 = false;
-	NSData_t27227240875F34DEF760BD15736BBAAE45C2AD57  V_2;
-	memset((&V_2), 0, sizeof(V_2));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___bytes0));
-	DECLARE_METHOD_LOCALS(methodExecutionContextLocals, (&V_0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NSData_CreateWithBytes_m119018E5FC2351E3FF75B26A8603416D41CC7ED9_RuntimeMethod_var, NULL, methodExecutionContextParameters, methodExecutionContextLocals);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 136));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 137));
+	void* G_B2_0 = NULL;
+	void* G_B1_0 = NULL;
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 138));
 		// var ptr = bytes.GetUnsafePtr();
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 139));
 		NativeSlice_1_tA05D3BC7EB042685CBFD3369ECB6140D114C911B  L_0 = ___bytes0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 145));
 		void* L_1;
 		L_1 = NativeSliceUnsafeUtility_GetUnsafePtr_TisByte_t0111FAB8B8685667EDDAF77683F0D8F86B659056_m48BDB55277094F65920898D8EF5953BB2D1138B4(L_0, /*hidden argument*/NativeSliceUnsafeUtility_GetUnsafePtr_TisByte_t0111FAB8B8685667EDDAF77683F0D8F86B659056_m48BDB55277094F65920898D8EF5953BB2D1138B4_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 145));
-		V_0 = (void*)L_1;
 		// if (ptr == null)
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 140));
-		void* L_2 = V_0;
-		V_1 = (bool)((((intptr_t)L_2) == ((intptr_t)((uintptr_t)0)))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 141));
-		bool L_3 = V_1;
-		if (!L_3)
+		void* L_2 = (void*)L_1;
+		G_B1_0 = L_2;
+		if ((!(((uintptr_t)L_2) == ((uintptr_t)((uintptr_t)0)))))
 		{
-			goto IL_003a;
+			G_B2_0 = L_2;
+			goto IL_0034;
 		}
 	}
 	{
 		// throw new ArgumentException($"The {typeof(NativeSlice<byte>).Name} is not valid.", nameof(bytes));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 142));
-		RuntimeTypeHandle_tC33965ADA3E041E0C94AF05E5CB527B56482CEF9  L_4 = { reinterpret_cast<intptr_t> (((RuntimeType*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NativeSlice_1_tA05D3BC7EB042685CBFD3369ECB6140D114C911B_0_0_0_var))) };
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 146));
+		RuntimeTypeHandle_tC33965ADA3E041E0C94AF05E5CB527B56482CEF9  L_3 = { reinterpret_cast<intptr_t> (((RuntimeType*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NativeSlice_1_tA05D3BC7EB042685CBFD3369ECB6140D114C911B_0_0_0_var))) };
 		IL2CPP_RUNTIME_CLASS_INIT(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Type_t_il2cpp_TypeInfo_var)));
-		Type_t * L_5;
-		L_5 = Type_GetTypeFromHandle_m8BB57524FF7F9DB1803BC561D2B3A4DBACEB385E(L_4, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 146));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 147));
-		NullCheck(L_5);
+		Type_t * L_4;
+		L_4 = Type_GetTypeFromHandle_m8BB57524FF7F9DB1803BC561D2B3A4DBACEB385E(L_3, /*hidden argument*/NULL);
+		NullCheck(L_4);
+		String_t* L_5;
+		L_5 = VirtFuncInvoker0< String_t* >::Invoke(7 /* System.String System.Reflection.MemberInfo::get_Name() */, L_4);
 		String_t* L_6;
-		L_6 = VirtFuncInvoker0< String_t* >::Invoke(7 /* System.String System.Reflection.MemberInfo::get_Name() */, L_5);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 147));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 148));
-		String_t* L_7;
-		L_7 = String_Concat_m89EAB4C6A96B0E5C3F87300D6BE78D386B9EFC44(((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral8F75ECDB116DCBBF6FC5A38C92B230BE664085FE)), L_6, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral38B7BEB93115FA6B40AA17D4C7C6E8B9D47BAEE7)), /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 148));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 149));
-		ArgumentException_t505FA8C11E883F2D96C797AD9D396490794DEE00 * L_8 = (ArgumentException_t505FA8C11E883F2D96C797AD9D396490794DEE00 *)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentException_t505FA8C11E883F2D96C797AD9D396490794DEE00_il2cpp_TypeInfo_var)));
-		ArgumentException__ctor_m71044C2110E357B71A1C30D2561C3F861AF1DC0D(L_8, L_7, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral77B615B8ED1ABB8FC1395D85A5AE524A9789D947)), /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 149));
-		IL2CPP_RAISE_MANAGED_EXCEPTION(L_8, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NSData_CreateWithBytes_m119018E5FC2351E3FF75B26A8603416D41CC7ED9_RuntimeMethod_var)));
+		L_6 = String_Concat_m89EAB4C6A96B0E5C3F87300D6BE78D386B9EFC44(((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral8F75ECDB116DCBBF6FC5A38C92B230BE664085FE)), L_5, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral38B7BEB93115FA6B40AA17D4C7C6E8B9D47BAEE7)), /*hidden argument*/NULL);
+		ArgumentException_t505FA8C11E883F2D96C797AD9D396490794DEE00 * L_7 = (ArgumentException_t505FA8C11E883F2D96C797AD9D396490794DEE00 *)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentException_t505FA8C11E883F2D96C797AD9D396490794DEE00_il2cpp_TypeInfo_var)));
+		ArgumentException__ctor_m71044C2110E357B71A1C30D2561C3F861AF1DC0D(L_7, L_6, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral77B615B8ED1ABB8FC1395D85A5AE524A9789D947)), /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_7, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NSData_CreateWithBytes_m119018E5FC2351E3FF75B26A8603416D41CC7ED9_RuntimeMethod_var)));
 	}
 
-IL_003a:
+IL_0034:
 	{
 		// return new NSData(CreateWithBytes(ptr, bytes.Length));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 143));
-		void* L_9 = V_0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 150));
-		int32_t L_10;
-		L_10 = NativeSlice_1_get_Length_mC04A811824226BCE2D1DEA9D8434BD1DA0E34B25_inline((NativeSlice_1_tA05D3BC7EB042685CBFD3369ECB6140D114C911B *)(&___bytes0), /*hidden argument*/NativeSlice_1_get_Length_mC04A811824226BCE2D1DEA9D8434BD1DA0E34B25_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 150));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 151));
-		intptr_t L_11;
-		L_11 = NSData_CreateWithBytes_m6B9C070B9F7BAAFA0DA90E8AA72F75F1583227BA((void*)(void*)L_9, L_10, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 151));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 152));
-		NSData_t27227240875F34DEF760BD15736BBAAE45C2AD57  L_12;
-		memset((&L_12), 0, sizeof(L_12));
-		NSData__ctor_m7D9316BE449293BDF865CDF447E59C85D0893710_inline((&L_12), (intptr_t)L_11, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 152));
-		V_2 = L_12;
-		goto IL_004f;
-	}
-
-IL_004f:
-	{
-		// }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 144));
-		NSData_t27227240875F34DEF760BD15736BBAAE45C2AD57  L_13 = V_2;
-		return L_13;
+		int32_t L_8;
+		L_8 = NativeSlice_1_get_Length_mC04A811824226BCE2D1DEA9D8434BD1DA0E34B25_inline((NativeSlice_1_tA05D3BC7EB042685CBFD3369ECB6140D114C911B *)(&___bytes0), /*hidden argument*/NativeSlice_1_get_Length_mC04A811824226BCE2D1DEA9D8434BD1DA0E34B25_RuntimeMethod_var);
+		intptr_t L_9;
+		L_9 = NSData_CreateWithBytes_m6B9C070B9F7BAAFA0DA90E8AA72F75F1583227BA((void*)(void*)G_B2_0, L_8, /*hidden argument*/NULL);
+		NSData_t27227240875F34DEF760BD15736BBAAE45C2AD57  L_10;
+		memset((&L_10), 0, sizeof(L_10));
+		NSData__ctor_m7D9316BE449293BDF865CDF447E59C85D0893710_inline((&L_10), (intptr_t)L_9, /*hidden argument*/NULL);
+		return L_10;
 	}
 }
 // Unity.iOS.Multipeer.NSData Unity.iOS.Multipeer.NSData::CreateWithBytesNoCopy(Unity.Collections.NativeSlice`1<System.Byte>)
@@ -2490,97 +1995,53 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR NSData_t27227240875F34DEF760BD15736BBAAE45C2A
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSData_CreateWithBytesNoCopy_m74ED2DC7FF6F7C2B4B7244FBEA92BD64E48E711A_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSData_t27227240875F34DEF760BD15736BBAAE45C2AD57_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NativeSliceUnsafeUtility_GetUnsafePtr_TisByte_t0111FAB8B8685667EDDAF77683F0D8F86B659056_m48BDB55277094F65920898D8EF5953BB2D1138B4_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NativeSlice_1_get_Length_mC04A811824226BCE2D1DEA9D8434BD1DA0E34B25_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&VoidU2A_tC7FFEB695C165BD92A8656A0260E9CBC93892D9A_0_0_0_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	void* V_0 = NULL;
-	bool V_1 = false;
-	NSData_t27227240875F34DEF760BD15736BBAAE45C2AD57  V_2;
-	memset((&V_2), 0, sizeof(V_2));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___bytes0));
-	DECLARE_METHOD_LOCALS(methodExecutionContextLocals, (&V_0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NSData_CreateWithBytesNoCopy_m74ED2DC7FF6F7C2B4B7244FBEA92BD64E48E711A_RuntimeMethod_var, NULL, methodExecutionContextParameters, methodExecutionContextLocals);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 153));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 154));
+	void* G_B2_0 = NULL;
+	void* G_B1_0 = NULL;
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 155));
 		// var ptr = bytes.GetUnsafePtr();
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 156));
 		NativeSlice_1_tA05D3BC7EB042685CBFD3369ECB6140D114C911B  L_0 = ___bytes0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 162));
 		void* L_1;
 		L_1 = NativeSliceUnsafeUtility_GetUnsafePtr_TisByte_t0111FAB8B8685667EDDAF77683F0D8F86B659056_m48BDB55277094F65920898D8EF5953BB2D1138B4(L_0, /*hidden argument*/NativeSliceUnsafeUtility_GetUnsafePtr_TisByte_t0111FAB8B8685667EDDAF77683F0D8F86B659056_m48BDB55277094F65920898D8EF5953BB2D1138B4_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 162));
-		V_0 = (void*)L_1;
 		// if (ptr == null)
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 157));
-		void* L_2 = V_0;
-		V_1 = (bool)((((intptr_t)L_2) == ((intptr_t)((uintptr_t)0)))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 158));
-		bool L_3 = V_1;
-		if (!L_3)
+		void* L_2 = (void*)L_1;
+		G_B1_0 = L_2;
+		if ((!(((uintptr_t)L_2) == ((uintptr_t)((uintptr_t)0)))))
 		{
-			goto IL_003a;
+			G_B2_0 = L_2;
+			goto IL_0034;
 		}
 	}
 	{
 		// throw new ArgumentException($"The {typeof(NativeSlice<byte>).Name} is not valid.", nameof(bytes));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 159));
-		RuntimeTypeHandle_tC33965ADA3E041E0C94AF05E5CB527B56482CEF9  L_4 = { reinterpret_cast<intptr_t> (((RuntimeType*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NativeSlice_1_tA05D3BC7EB042685CBFD3369ECB6140D114C911B_0_0_0_var))) };
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 163));
+		RuntimeTypeHandle_tC33965ADA3E041E0C94AF05E5CB527B56482CEF9  L_3 = { reinterpret_cast<intptr_t> (((RuntimeType*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NativeSlice_1_tA05D3BC7EB042685CBFD3369ECB6140D114C911B_0_0_0_var))) };
 		IL2CPP_RUNTIME_CLASS_INIT(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Type_t_il2cpp_TypeInfo_var)));
-		Type_t * L_5;
-		L_5 = Type_GetTypeFromHandle_m8BB57524FF7F9DB1803BC561D2B3A4DBACEB385E(L_4, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 163));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 164));
-		NullCheck(L_5);
+		Type_t * L_4;
+		L_4 = Type_GetTypeFromHandle_m8BB57524FF7F9DB1803BC561D2B3A4DBACEB385E(L_3, /*hidden argument*/NULL);
+		NullCheck(L_4);
+		String_t* L_5;
+		L_5 = VirtFuncInvoker0< String_t* >::Invoke(7 /* System.String System.Reflection.MemberInfo::get_Name() */, L_4);
 		String_t* L_6;
-		L_6 = VirtFuncInvoker0< String_t* >::Invoke(7 /* System.String System.Reflection.MemberInfo::get_Name() */, L_5);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 164));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 165));
-		String_t* L_7;
-		L_7 = String_Concat_m89EAB4C6A96B0E5C3F87300D6BE78D386B9EFC44(((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral8F75ECDB116DCBBF6FC5A38C92B230BE664085FE)), L_6, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral38B7BEB93115FA6B40AA17D4C7C6E8B9D47BAEE7)), /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 165));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 166));
-		ArgumentException_t505FA8C11E883F2D96C797AD9D396490794DEE00 * L_8 = (ArgumentException_t505FA8C11E883F2D96C797AD9D396490794DEE00 *)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentException_t505FA8C11E883F2D96C797AD9D396490794DEE00_il2cpp_TypeInfo_var)));
-		ArgumentException__ctor_m71044C2110E357B71A1C30D2561C3F861AF1DC0D(L_8, L_7, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral77B615B8ED1ABB8FC1395D85A5AE524A9789D947)), /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 166));
-		IL2CPP_RAISE_MANAGED_EXCEPTION(L_8, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NSData_CreateWithBytesNoCopy_m74ED2DC7FF6F7C2B4B7244FBEA92BD64E48E711A_RuntimeMethod_var)));
+		L_6 = String_Concat_m89EAB4C6A96B0E5C3F87300D6BE78D386B9EFC44(((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral8F75ECDB116DCBBF6FC5A38C92B230BE664085FE)), L_5, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral38B7BEB93115FA6B40AA17D4C7C6E8B9D47BAEE7)), /*hidden argument*/NULL);
+		ArgumentException_t505FA8C11E883F2D96C797AD9D396490794DEE00 * L_7 = (ArgumentException_t505FA8C11E883F2D96C797AD9D396490794DEE00 *)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentException_t505FA8C11E883F2D96C797AD9D396490794DEE00_il2cpp_TypeInfo_var)));
+		ArgumentException__ctor_m71044C2110E357B71A1C30D2561C3F861AF1DC0D(L_7, L_6, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral77B615B8ED1ABB8FC1395D85A5AE524A9789D947)), /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_7, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NSData_CreateWithBytesNoCopy_m74ED2DC7FF6F7C2B4B7244FBEA92BD64E48E711A_RuntimeMethod_var)));
 	}
 
-IL_003a:
+IL_0034:
 	{
 		// return new NSData(CreateWithBytesNoCopy(ptr, bytes.Length, false));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 160));
-		void* L_9 = V_0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 167));
-		int32_t L_10;
-		L_10 = NativeSlice_1_get_Length_mC04A811824226BCE2D1DEA9D8434BD1DA0E34B25_inline((NativeSlice_1_tA05D3BC7EB042685CBFD3369ECB6140D114C911B *)(&___bytes0), /*hidden argument*/NativeSlice_1_get_Length_mC04A811824226BCE2D1DEA9D8434BD1DA0E34B25_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 167));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 168));
-		intptr_t L_11;
-		L_11 = NSData_CreateWithBytesNoCopy_m36105AF062D9101593209EB7E2698B38C170F581((void*)(void*)L_9, L_10, (bool)0, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 168));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 169));
-		NSData_t27227240875F34DEF760BD15736BBAAE45C2AD57  L_12;
-		memset((&L_12), 0, sizeof(L_12));
-		NSData__ctor_m7D9316BE449293BDF865CDF447E59C85D0893710_inline((&L_12), (intptr_t)L_11, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 169));
-		V_2 = L_12;
-		goto IL_0050;
-	}
-
-IL_0050:
-	{
-		// }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 161));
-		NSData_t27227240875F34DEF760BD15736BBAAE45C2AD57  L_13 = V_2;
-		return L_13;
+		int32_t L_8;
+		L_8 = NativeSlice_1_get_Length_mC04A811824226BCE2D1DEA9D8434BD1DA0E34B25_inline((NativeSlice_1_tA05D3BC7EB042685CBFD3369ECB6140D114C911B *)(&___bytes0), /*hidden argument*/NativeSlice_1_get_Length_mC04A811824226BCE2D1DEA9D8434BD1DA0E34B25_RuntimeMethod_var);
+		intptr_t L_9;
+		L_9 = NSData_CreateWithBytesNoCopy_m36105AF062D9101593209EB7E2698B38C170F581((void*)(void*)G_B2_0, L_8, (bool)0, /*hidden argument*/NULL);
+		NSData_t27227240875F34DEF760BD15736BBAAE45C2AD57  L_10;
+		memset((&L_10), 0, sizeof(L_10));
+		NSData__ctor_m7D9316BE449293BDF865CDF447E59C85D0893710_inline((&L_10), (intptr_t)L_9, /*hidden argument*/NULL);
+		return L_10;
 	}
 }
 // Unity.Collections.NativeSlice`1<System.Byte> Unity.iOS.Multipeer.NSData::get_Bytes()
@@ -2589,89 +2050,46 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR NativeSlice_1_tA05D3BC7EB042685CBFD3369ECB614
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSData_get_Bytes_m16886E88D8D4C5D57A0A31FE24867179EBF00EF2_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSData_t27227240875F34DEF760BD15736BBAAE45C2AD57_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NativeSliceUnsafeUtility_ConvertExistingDataToNativeSlice_TisByte_t0111FAB8B8685667EDDAF77683F0D8F86B659056_mDE5B2797BB552EA649F8695FCDD33116A001ADD4_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NativeSlice_1_tA05D3BC7EB042685CBFD3369ECB6140D114C911B_0_0_0_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	bool V_0 = false;
-	NativeSlice_1_tA05D3BC7EB042685CBFD3369ECB6140D114C911B  V_1;
-	memset((&V_1), 0, sizeof(V_1));
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NSData_get_Bytes_m16886E88D8D4C5D57A0A31FE24867179EBF00EF2_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 170));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 171));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 172));
 		// if (!Created)
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 173));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 178));
 		bool L_0;
 		L_0 = NSData_get_Created_mBC33E9AB3B638F6D5B3CF08EF26FC8C87E85DE7D((NSData_t27227240875F34DEF760BD15736BBAAE45C2AD57 *)__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 178));
-		V_0 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 174));
-		bool L_1 = V_0;
-		if (!L_1)
+		if (L_0)
 		{
-			goto IL_0032;
+			goto IL_002c;
 		}
 	}
 	{
 		// throw new InvalidOperationException($"The {typeof(NSData).Name} has not been created.");
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 175));
-		RuntimeTypeHandle_tC33965ADA3E041E0C94AF05E5CB527B56482CEF9  L_2 = { reinterpret_cast<intptr_t> (((RuntimeType*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NSData_t27227240875F34DEF760BD15736BBAAE45C2AD57_0_0_0_var))) };
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 179));
+		RuntimeTypeHandle_tC33965ADA3E041E0C94AF05E5CB527B56482CEF9  L_1 = { reinterpret_cast<intptr_t> (((RuntimeType*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NSData_t27227240875F34DEF760BD15736BBAAE45C2AD57_0_0_0_var))) };
 		IL2CPP_RUNTIME_CLASS_INIT(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Type_t_il2cpp_TypeInfo_var)));
-		Type_t * L_3;
-		L_3 = Type_GetTypeFromHandle_m8BB57524FF7F9DB1803BC561D2B3A4DBACEB385E(L_2, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 179));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 180));
-		NullCheck(L_3);
+		Type_t * L_2;
+		L_2 = Type_GetTypeFromHandle_m8BB57524FF7F9DB1803BC561D2B3A4DBACEB385E(L_1, /*hidden argument*/NULL);
+		NullCheck(L_2);
+		String_t* L_3;
+		L_3 = VirtFuncInvoker0< String_t* >::Invoke(7 /* System.String System.Reflection.MemberInfo::get_Name() */, L_2);
 		String_t* L_4;
-		L_4 = VirtFuncInvoker0< String_t* >::Invoke(7 /* System.String System.Reflection.MemberInfo::get_Name() */, L_3);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 180));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 181));
-		String_t* L_5;
-		L_5 = String_Concat_m89EAB4C6A96B0E5C3F87300D6BE78D386B9EFC44(((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral8F75ECDB116DCBBF6FC5A38C92B230BE664085FE)), L_4, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralB3FDE45005CCEC81C2BA207B67478532CE7E6223)), /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 181));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 182));
-		InvalidOperationException_t10D3EE59AD28EC641ACEE05BCA4271A527E5ECAB * L_6 = (InvalidOperationException_t10D3EE59AD28EC641ACEE05BCA4271A527E5ECAB *)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&InvalidOperationException_t10D3EE59AD28EC641ACEE05BCA4271A527E5ECAB_il2cpp_TypeInfo_var)));
-		InvalidOperationException__ctor_mC012CE552988309733C896F3FEA8249171E4402E(L_6, L_5, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 182));
-		IL2CPP_RAISE_MANAGED_EXCEPTION(L_6, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NSData_get_Bytes_m16886E88D8D4C5D57A0A31FE24867179EBF00EF2_RuntimeMethod_var)));
+		L_4 = String_Concat_m89EAB4C6A96B0E5C3F87300D6BE78D386B9EFC44(((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral8F75ECDB116DCBBF6FC5A38C92B230BE664085FE)), L_3, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralB3FDE45005CCEC81C2BA207B67478532CE7E6223)), /*hidden argument*/NULL);
+		InvalidOperationException_t10D3EE59AD28EC641ACEE05BCA4271A527E5ECAB * L_5 = (InvalidOperationException_t10D3EE59AD28EC641ACEE05BCA4271A527E5ECAB *)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&InvalidOperationException_t10D3EE59AD28EC641ACEE05BCA4271A527E5ECAB_il2cpp_TypeInfo_var)));
+		InvalidOperationException__ctor_mC012CE552988309733C896F3FEA8249171E4402E(L_5, L_4, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_5, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NSData_get_Bytes_m16886E88D8D4C5D57A0A31FE24867179EBF00EF2_RuntimeMethod_var)));
 	}
 
-IL_0032:
+IL_002c:
 	{
 		// return NativeSliceUnsafeUtility.ConvertExistingDataToNativeSlice<byte>(GetBytes(this), 1, GetLength(this));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 176));
-		NSData_t27227240875F34DEF760BD15736BBAAE45C2AD57  L_7 = (*(NSData_t27227240875F34DEF760BD15736BBAAE45C2AD57 *)__this);
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 183));
-		void* L_8;
-		L_8 = NSData_GetBytes_m159E6126E0A45595859BC6BEF94678964B88C1C9(L_7, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 183));
-		NSData_t27227240875F34DEF760BD15736BBAAE45C2AD57  L_9 = (*(NSData_t27227240875F34DEF760BD15736BBAAE45C2AD57 *)__this);
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 184));
-		int32_t L_10;
-		L_10 = NSData_GetLength_mAC1DF6AE78E542CBF4DDC9D58A7653FF62B05196(L_9, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 184));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 185));
-		NativeSlice_1_tA05D3BC7EB042685CBFD3369ECB6140D114C911B  L_11;
-		L_11 = NativeSliceUnsafeUtility_ConvertExistingDataToNativeSlice_TisByte_t0111FAB8B8685667EDDAF77683F0D8F86B659056_mDE5B2797BB552EA649F8695FCDD33116A001ADD4((void*)(void*)L_8, 1, L_10, /*hidden argument*/NativeSliceUnsafeUtility_ConvertExistingDataToNativeSlice_TisByte_t0111FAB8B8685667EDDAF77683F0D8F86B659056_mDE5B2797BB552EA649F8695FCDD33116A001ADD4_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 185));
-		V_1 = L_11;
-		goto IL_0051;
-	}
-
-IL_0051:
-	{
-		// }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 177));
-		NativeSlice_1_tA05D3BC7EB042685CBFD3369ECB6140D114C911B  L_12 = V_1;
-		return L_12;
+		NSData_t27227240875F34DEF760BD15736BBAAE45C2AD57  L_6 = (*(NSData_t27227240875F34DEF760BD15736BBAAE45C2AD57 *)__this);
+		void* L_7;
+		L_7 = NSData_GetBytes_m159E6126E0A45595859BC6BEF94678964B88C1C9(L_6, /*hidden argument*/NULL);
+		NSData_t27227240875F34DEF760BD15736BBAAE45C2AD57  L_8 = (*(NSData_t27227240875F34DEF760BD15736BBAAE45C2AD57 *)__this);
+		int32_t L_9;
+		L_9 = NSData_GetLength_mAC1DF6AE78E542CBF4DDC9D58A7653FF62B05196(L_8, /*hidden argument*/NULL);
+		NativeSlice_1_tA05D3BC7EB042685CBFD3369ECB6140D114C911B  L_10;
+		L_10 = NativeSliceUnsafeUtility_ConvertExistingDataToNativeSlice_TisByte_t0111FAB8B8685667EDDAF77683F0D8F86B659056_mDE5B2797BB552EA649F8695FCDD33116A001ADD4((void*)(void*)L_7, 1, L_9, /*hidden argument*/NativeSliceUnsafeUtility_ConvertExistingDataToNativeSlice_TisByte_t0111FAB8B8685667EDDAF77683F0D8F86B659056_mDE5B2797BB552EA649F8695FCDD33116A001ADD4_RuntimeMethod_var);
+		return L_10;
 	}
 }
 IL2CPP_EXTERN_C  NativeSlice_1_tA05D3BC7EB042685CBFD3369ECB6140D114C911B  NSData_get_Bytes_m16886E88D8D4C5D57A0A31FE24867179EBF00EF2_AdjustorThunk (RuntimeObject * __this, const RuntimeMethod* method)
@@ -2685,24 +2103,10 @@ IL2CPP_EXTERN_C  NativeSlice_1_tA05D3BC7EB042685CBFD3369ECB6140D114C911B  NSData
 // System.Void Unity.iOS.Multipeer.NSData::Dispose()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NSData_Dispose_m9EFD027F4DF8B40A037E342029CE9AE7A67FF2D6 (NSData_t27227240875F34DEF760BD15736BBAAE45C2AD57 * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSData_Dispose_m9EFD027F4DF8B40A037E342029CE9AE7A67FF2D6_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSData_t27227240875F34DEF760BD15736BBAAE45C2AD57_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NSData_Dispose_m9EFD027F4DF8B40A037E342029CE9AE7A67FF2D6_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 186));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 187));
 	{
 		// public void Dispose() => NativeApi.CFRelease(ref m_Ptr);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 188));
 		intptr_t* L_0 = __this->get_address_of_m_Ptr_0();
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 189));
 		NativeApi_CFRelease_m7ED75C62FCA913F0649E432847FF1B5094D0B24B((intptr_t*)L_0, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 189));
 		return;
 	}
 }
@@ -2715,25 +2119,11 @@ IL2CPP_EXTERN_C  void NSData_Dispose_m9EFD027F4DF8B40A037E342029CE9AE7A67FF2D6_A
 // System.Int32 Unity.iOS.Multipeer.NSData::GetHashCode()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NSData_GetHashCode_mF8E9968597F15BFA0140A44E867D1C01CA7E7861 (NSData_t27227240875F34DEF760BD15736BBAAE45C2AD57 * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSData_GetHashCode_mF8E9968597F15BFA0140A44E867D1C01CA7E7861_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSData_t27227240875F34DEF760BD15736BBAAE45C2AD57_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NSData_GetHashCode_mF8E9968597F15BFA0140A44E867D1C01CA7E7861_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 190));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 191));
 	{
 		// public override int GetHashCode() => m_Ptr.GetHashCode();
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 192));
 		intptr_t* L_0 = __this->get_address_of_m_Ptr_0();
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 193));
 		int32_t L_1;
 		L_1 = IntPtr_GetHashCode_m55E65FB52EFE7C0EBC3C28E66A5D7542F3B1D35D((intptr_t*)L_0, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 193));
 		return L_1;
 	}
 }
@@ -2751,44 +2141,27 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool NSData_Equals_mEA596C198AAEECD92CA6BE68D
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSData_Equals_mEA596C198AAEECD92CA6BE68DD515BE26EEB64F5_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSData_t27227240875F34DEF760BD15736BBAAE45C2AD57_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSData_t27227240875F34DEF760BD15736BBAAE45C2AD57_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___obj0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NSData_Equals_mEA596C198AAEECD92CA6BE68DD515BE26EEB64F5_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 194));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 195));
-	int32_t G_B3_0 = 0;
 	{
 		// public override bool Equals(object obj) => (obj is NSData) && Equals((NSData)obj);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 196));
 		RuntimeObject * L_0 = ___obj0;
 		if (!((RuntimeObject *)IsInstSealed((RuntimeObject*)L_0, NSData_t27227240875F34DEF760BD15736BBAAE45C2AD57_il2cpp_TypeInfo_var)))
 		{
-			goto IL_0016;
+			goto IL_0015;
 		}
 	}
 	{
 		RuntimeObject * L_1 = ___obj0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 197));
 		bool L_2;
 		L_2 = NSData_Equals_m7B6AC593157EC3796E072667EE92C952323AE759((NSData_t27227240875F34DEF760BD15736BBAAE45C2AD57 *)__this, ((*(NSData_t27227240875F34DEF760BD15736BBAAE45C2AD57 *)((NSData_t27227240875F34DEF760BD15736BBAAE45C2AD57 *)UnBox(L_1, NSData_t27227240875F34DEF760BD15736BBAAE45C2AD57_il2cpp_TypeInfo_var)))), /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 197));
-		G_B3_0 = ((int32_t)(L_2));
-		goto IL_0017;
+		return L_2;
 	}
 
-IL_0016:
+IL_0015:
 	{
-		G_B3_0 = 0;
-	}
-
-IL_0017:
-	{
-		return (bool)G_B3_0;
+		return (bool)0;
 	}
 }
 IL2CPP_EXTERN_C  bool NSData_Equals_mEA596C198AAEECD92CA6BE68DD515BE26EEB64F5_AdjustorThunk (RuntimeObject * __this, RuntimeObject * ___obj0, const RuntimeMethod* method)
@@ -2802,28 +2175,13 @@ IL2CPP_EXTERN_C  bool NSData_Equals_mEA596C198AAEECD92CA6BE68DD515BE26EEB64F5_Ad
 // System.Boolean Unity.iOS.Multipeer.NSData::Equals(Unity.iOS.Multipeer.NSData)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool NSData_Equals_m7B6AC593157EC3796E072667EE92C952323AE759 (NSData_t27227240875F34DEF760BD15736BBAAE45C2AD57 * __this, NSData_t27227240875F34DEF760BD15736BBAAE45C2AD57  ___other0, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSData_Equals_m7B6AC593157EC3796E072667EE92C952323AE759_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSData_t27227240875F34DEF760BD15736BBAAE45C2AD57_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___other0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NSData_Equals_m7B6AC593157EC3796E072667EE92C952323AE759_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 198));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 199));
 	{
 		// public bool Equals(NSData other) => m_Ptr == other.m_Ptr;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 200));
 		intptr_t L_0 = __this->get_m_Ptr_0();
 		NSData_t27227240875F34DEF760BD15736BBAAE45C2AD57  L_1 = ___other0;
 		intptr_t L_2 = L_1.get_m_Ptr_0();
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 201));
 		bool L_3;
 		L_3 = IntPtr_op_Equality_mD94F3FE43A65684EFF984A7B95E70D2520C0AC73((intptr_t)L_0, (intptr_t)L_2, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 201));
 		return L_3;
 	}
 }
@@ -2838,48 +2196,22 @@ IL2CPP_EXTERN_C  bool NSData_Equals_m7B6AC593157EC3796E072667EE92C952323AE759_Ad
 // System.Boolean Unity.iOS.Multipeer.NSData::op_Equality(Unity.iOS.Multipeer.NSData,Unity.iOS.Multipeer.NSData)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool NSData_op_Equality_mF026ABC60057DC593BE9AC043FC17DC036F24CB3 (NSData_t27227240875F34DEF760BD15736BBAAE45C2AD57  ___lhs0, NSData_t27227240875F34DEF760BD15736BBAAE45C2AD57  ___rhs1, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSData_op_Equality_mF026ABC60057DC593BE9AC043FC17DC036F24CB3_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___lhs0), (&___rhs1));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NSData_op_Equality_mF026ABC60057DC593BE9AC043FC17DC036F24CB3_RuntimeMethod_var, NULL, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 202));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 203));
 	{
 		// public static bool operator==(NSData lhs, NSData rhs) => lhs.Equals(rhs);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 204));
 		NSData_t27227240875F34DEF760BD15736BBAAE45C2AD57  L_0 = ___rhs1;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 205));
 		bool L_1;
 		L_1 = NSData_Equals_m7B6AC593157EC3796E072667EE92C952323AE759((NSData_t27227240875F34DEF760BD15736BBAAE45C2AD57 *)(&___lhs0), L_0, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 205));
 		return L_1;
 	}
 }
 // System.Boolean Unity.iOS.Multipeer.NSData::op_Inequality(Unity.iOS.Multipeer.NSData,Unity.iOS.Multipeer.NSData)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool NSData_op_Inequality_m525EEAD0E5B72B1B88AB7AE6A6B0636A93598AD7 (NSData_t27227240875F34DEF760BD15736BBAAE45C2AD57  ___lhs0, NSData_t27227240875F34DEF760BD15736BBAAE45C2AD57  ___rhs1, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSData_op_Inequality_m525EEAD0E5B72B1B88AB7AE6A6B0636A93598AD7_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___lhs0), (&___rhs1));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NSData_op_Inequality_m525EEAD0E5B72B1B88AB7AE6A6B0636A93598AD7_RuntimeMethod_var, NULL, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 206));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 207));
 	{
 		// public static bool operator!=(NSData lhs, NSData rhs) => !lhs.Equals(rhs);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 208));
 		NSData_t27227240875F34DEF760BD15736BBAAE45C2AD57  L_0 = ___rhs1;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 209));
 		bool L_1;
 		L_1 = NSData_Equals_m7B6AC593157EC3796E072667EE92C952323AE759((NSData_t27227240875F34DEF760BD15736BBAAE45C2AD57 *)(&___lhs0), L_0, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 209));
 		return (bool)((((int32_t)L_1) == ((int32_t)0))? 1 : 0);
 	}
 }
@@ -2938,22 +2270,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool NSError_get_Valid_m7D6E8A8ADF43DEE1BA278
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IntPtr_t_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSError_get_Valid_m7D6E8A8ADF43DEE1BA2786E19B5AB7F931E47CA1_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSError_tE9C5E6F16FD002838990C179DD0FD5530A67F25C_0_0_0_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NSError_get_Valid_m7D6E8A8ADF43DEE1BA2786E19B5AB7F931E47CA1_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 210));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 211));
 	{
 		// public bool Valid => m_Ptr != IntPtr.Zero;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 212));
 		intptr_t L_0 = __this->get_m_Ptr_0();
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 213));
 		bool L_1;
 		L_1 = IntPtr_op_Inequality_m212AF0E66AA81FEDC982B1C8A44ADDA24B995EB8((intptr_t)L_0, (intptr_t)(0), /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 213));
 		return L_1;
 	}
 }
@@ -2971,43 +2294,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR NSErrorException_tFF049C4B0C58F3D97BD1E636E31
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSErrorException_tFF049C4B0C58F3D97BD1E636E31E3EAA4E06ACD6_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSErrorException_tFF049C4B0C58F3D97BD1E636E31E3EAA4E06ACD6_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSError_ToException_m357D2FD0AF8FDE7CC4EA3FED4E6665C6DCC1D5A8_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSError_tE9C5E6F16FD002838990C179DD0FD5530A67F25C_0_0_0_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	NSErrorException_tFF049C4B0C58F3D97BD1E636E31E3EAA4E06ACD6 * V_0 = NULL;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NSError_ToException_m357D2FD0AF8FDE7CC4EA3FED4E6665C6DCC1D5A8_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 214));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 215));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 216));
 		// return new NSErrorException(Code, Description);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 217));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 219));
 		int64_t L_0;
 		L_0 = NSError_get_Code_m4B7D86C78E6385D4C2487FC6CC71A871FB553C6A((NSError_tE9C5E6F16FD002838990C179DD0FD5530A67F25C *)__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 219));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 220));
 		String_t* L_1;
 		L_1 = NSError_get_Description_mB6D212A9C22451AD6E7E226C618F99B2B481F079((NSError_tE9C5E6F16FD002838990C179DD0FD5530A67F25C *)__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 220));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 221));
 		NSErrorException_tFF049C4B0C58F3D97BD1E636E31E3EAA4E06ACD6 * L_2 = (NSErrorException_tFF049C4B0C58F3D97BD1E636E31E3EAA4E06ACD6 *)il2cpp_codegen_object_new(NSErrorException_tFF049C4B0C58F3D97BD1E636E31E3EAA4E06ACD6_il2cpp_TypeInfo_var);
 		NSErrorException__ctor_m0CEF5BCC8180BD26BF1190DC6899C31B3410CAE0(L_2, L_0, L_1, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 221));
-		V_0 = L_2;
-		goto IL_0015;
-	}
-
-IL_0015:
-	{
-		// }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 218));
-		NSErrorException_tFF049C4B0C58F3D97BD1E636E31E3EAA4E06ACD6 * L_3 = V_0;
-		return L_3;
+		return L_2;
 	}
 }
 IL2CPP_EXTERN_C  NSErrorException_tFF049C4B0C58F3D97BD1E636E31E3EAA4E06ACD6 * NSError_ToException_m357D2FD0AF8FDE7CC4EA3FED4E6665C6DCC1D5A8_AdjustorThunk (RuntimeObject * __this, const RuntimeMethod* method)
@@ -3021,81 +2319,38 @@ IL2CPP_EXTERN_C  NSErrorException_tFF049C4B0C58F3D97BD1E636E31E3EAA4E06ACD6 * NS
 // System.Int64 Unity.iOS.Multipeer.NSError::get_Code()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int64_t NSError_get_Code_m4B7D86C78E6385D4C2487FC6CC71A871FB553C6A (NSError_tE9C5E6F16FD002838990C179DD0FD5530A67F25C * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Int64_t378EE0D608BD3107E77238E85F30D2BBD46981F3_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSError_get_Code_m4B7D86C78E6385D4C2487FC6CC71A871FB553C6A_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSError_tE9C5E6F16FD002838990C179DD0FD5530A67F25C_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	bool V_0 = false;
-	int64_t V_1 = 0;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NSError_get_Code_m4B7D86C78E6385D4C2487FC6CC71A871FB553C6A_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 222));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 223));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 224));
 		// if (!Valid)
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 225));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 230));
 		bool L_0;
 		L_0 = NSError_get_Valid_m7D6E8A8ADF43DEE1BA2786E19B5AB7F931E47CA1((NSError_tE9C5E6F16FD002838990C179DD0FD5530A67F25C *)__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 230));
-		V_0 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 226));
-		bool L_1 = V_0;
-		if (!L_1)
+		if (L_0)
 		{
-			goto IL_0032;
+			goto IL_002c;
 		}
 	}
 	{
 		// throw new InvalidOperationException($"The {typeof(NSError).Name} is not valid.");
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 227));
-		RuntimeTypeHandle_tC33965ADA3E041E0C94AF05E5CB527B56482CEF9  L_2 = { reinterpret_cast<intptr_t> (((RuntimeType*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NSError_tE9C5E6F16FD002838990C179DD0FD5530A67F25C_0_0_0_var))) };
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 231));
+		RuntimeTypeHandle_tC33965ADA3E041E0C94AF05E5CB527B56482CEF9  L_1 = { reinterpret_cast<intptr_t> (((RuntimeType*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NSError_tE9C5E6F16FD002838990C179DD0FD5530A67F25C_0_0_0_var))) };
 		IL2CPP_RUNTIME_CLASS_INIT(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Type_t_il2cpp_TypeInfo_var)));
-		Type_t * L_3;
-		L_3 = Type_GetTypeFromHandle_m8BB57524FF7F9DB1803BC561D2B3A4DBACEB385E(L_2, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 231));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 232));
-		NullCheck(L_3);
+		Type_t * L_2;
+		L_2 = Type_GetTypeFromHandle_m8BB57524FF7F9DB1803BC561D2B3A4DBACEB385E(L_1, /*hidden argument*/NULL);
+		NullCheck(L_2);
+		String_t* L_3;
+		L_3 = VirtFuncInvoker0< String_t* >::Invoke(7 /* System.String System.Reflection.MemberInfo::get_Name() */, L_2);
 		String_t* L_4;
-		L_4 = VirtFuncInvoker0< String_t* >::Invoke(7 /* System.String System.Reflection.MemberInfo::get_Name() */, L_3);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 232));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 233));
-		String_t* L_5;
-		L_5 = String_Concat_m89EAB4C6A96B0E5C3F87300D6BE78D386B9EFC44(((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral8F75ECDB116DCBBF6FC5A38C92B230BE664085FE)), L_4, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral38B7BEB93115FA6B40AA17D4C7C6E8B9D47BAEE7)), /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 233));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 234));
-		InvalidOperationException_t10D3EE59AD28EC641ACEE05BCA4271A527E5ECAB * L_6 = (InvalidOperationException_t10D3EE59AD28EC641ACEE05BCA4271A527E5ECAB *)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&InvalidOperationException_t10D3EE59AD28EC641ACEE05BCA4271A527E5ECAB_il2cpp_TypeInfo_var)));
-		InvalidOperationException__ctor_mC012CE552988309733C896F3FEA8249171E4402E(L_6, L_5, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 234));
-		IL2CPP_RAISE_MANAGED_EXCEPTION(L_6, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NSError_get_Code_m4B7D86C78E6385D4C2487FC6CC71A871FB553C6A_RuntimeMethod_var)));
+		L_4 = String_Concat_m89EAB4C6A96B0E5C3F87300D6BE78D386B9EFC44(((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral8F75ECDB116DCBBF6FC5A38C92B230BE664085FE)), L_3, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral38B7BEB93115FA6B40AA17D4C7C6E8B9D47BAEE7)), /*hidden argument*/NULL);
+		InvalidOperationException_t10D3EE59AD28EC641ACEE05BCA4271A527E5ECAB * L_5 = (InvalidOperationException_t10D3EE59AD28EC641ACEE05BCA4271A527E5ECAB *)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&InvalidOperationException_t10D3EE59AD28EC641ACEE05BCA4271A527E5ECAB_il2cpp_TypeInfo_var)));
+		InvalidOperationException__ctor_mC012CE552988309733C896F3FEA8249171E4402E(L_5, L_4, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_5, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NSError_get_Code_m4B7D86C78E6385D4C2487FC6CC71A871FB553C6A_RuntimeMethod_var)));
 	}
 
-IL_0032:
+IL_002c:
 	{
 		// return GetCode(this);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 228));
-		NSError_tE9C5E6F16FD002838990C179DD0FD5530A67F25C  L_7 = (*(NSError_tE9C5E6F16FD002838990C179DD0FD5530A67F25C *)__this);
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 235));
-		int64_t L_8;
-		L_8 = NSError_GetCode_m453288CBBEA797334FB78E79D717DABA4E0DA6DB(L_7, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 235));
-		V_1 = L_8;
-		goto IL_0040;
-	}
-
-IL_0040:
-	{
-		// }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 229));
-		int64_t L_9 = V_1;
-		return L_9;
+		NSError_tE9C5E6F16FD002838990C179DD0FD5530A67F25C  L_6 = (*(NSError_tE9C5E6F16FD002838990C179DD0FD5530A67F25C *)__this);
+		int64_t L_7;
+		L_7 = NSError_GetCode_m453288CBBEA797334FB78E79D717DABA4E0DA6DB(L_6, /*hidden argument*/NULL);
+		return L_7;
 	}
 }
 IL2CPP_EXTERN_C  int64_t NSError_get_Code_m4B7D86C78E6385D4C2487FC6CC71A871FB553C6A_AdjustorThunk (RuntimeObject * __this, const RuntimeMethod* method)
@@ -3109,121 +2364,76 @@ IL2CPP_EXTERN_C  int64_t NSError_get_Code_m4B7D86C78E6385D4C2487FC6CC71A871FB553
 // System.String Unity.iOS.Multipeer.NSError::get_Description()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* NSError_get_Description_mB6D212A9C22451AD6E7E226C618F99B2B481F079 (NSError_tE9C5E6F16FD002838990C179DD0FD5530A67F25C * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSError_get_Description_mB6D212A9C22451AD6E7E226C618F99B2B481F079_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSError_tE9C5E6F16FD002838990C179DD0FD5530A67F25C_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSString_t82809DF63F200B683E2596807BD84CEDD7025E37_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&String_t_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	bool V_0 = false;
-	NSString_t82809DF63F200B683E2596807BD84CEDD7025E37  V_1;
-	memset((&V_1), 0, sizeof(V_1));
-	String_t* V_2 = NULL;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_LOCALS(methodExecutionContextLocals, (&V_1));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NSError_get_Description_mB6D212A9C22451AD6E7E226C618F99B2B481F079_RuntimeMethod_var, methodExecutionContextThis, NULL, methodExecutionContextLocals);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 236));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 237));
+	NSString_t82809DF63F200B683E2596807BD84CEDD7025E37  V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	String_t* V_1 = NULL;
 	Exception_t * __last_unhandled_exception = 0;
 	il2cpp::utils::ExceptionSupportStack<int32_t, 1> __leave_targets;
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 238));
 		// if (!Valid)
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 239));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 247));
 		bool L_0;
 		L_0 = NSError_get_Valid_m7D6E8A8ADF43DEE1BA2786E19B5AB7F931E47CA1((NSError_tE9C5E6F16FD002838990C179DD0FD5530A67F25C *)__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 247));
-		V_0 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 240));
-		bool L_1 = V_0;
-		if (!L_1)
+		if (L_0)
 		{
-			goto IL_0032;
+			goto IL_002c;
 		}
 	}
 	{
 		// throw new InvalidOperationException($"The {typeof(NSError).Name} is not valid.");
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 241));
-		RuntimeTypeHandle_tC33965ADA3E041E0C94AF05E5CB527B56482CEF9  L_2 = { reinterpret_cast<intptr_t> (((RuntimeType*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NSError_tE9C5E6F16FD002838990C179DD0FD5530A67F25C_0_0_0_var))) };
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 248));
+		RuntimeTypeHandle_tC33965ADA3E041E0C94AF05E5CB527B56482CEF9  L_1 = { reinterpret_cast<intptr_t> (((RuntimeType*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NSError_tE9C5E6F16FD002838990C179DD0FD5530A67F25C_0_0_0_var))) };
 		IL2CPP_RUNTIME_CLASS_INIT(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Type_t_il2cpp_TypeInfo_var)));
-		Type_t * L_3;
-		L_3 = Type_GetTypeFromHandle_m8BB57524FF7F9DB1803BC561D2B3A4DBACEB385E(L_2, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 248));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 249));
-		NullCheck(L_3);
+		Type_t * L_2;
+		L_2 = Type_GetTypeFromHandle_m8BB57524FF7F9DB1803BC561D2B3A4DBACEB385E(L_1, /*hidden argument*/NULL);
+		NullCheck(L_2);
+		String_t* L_3;
+		L_3 = VirtFuncInvoker0< String_t* >::Invoke(7 /* System.String System.Reflection.MemberInfo::get_Name() */, L_2);
 		String_t* L_4;
-		L_4 = VirtFuncInvoker0< String_t* >::Invoke(7 /* System.String System.Reflection.MemberInfo::get_Name() */, L_3);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 249));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 250));
-		String_t* L_5;
-		L_5 = String_Concat_m89EAB4C6A96B0E5C3F87300D6BE78D386B9EFC44(((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral8F75ECDB116DCBBF6FC5A38C92B230BE664085FE)), L_4, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral38B7BEB93115FA6B40AA17D4C7C6E8B9D47BAEE7)), /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 250));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 251));
-		InvalidOperationException_t10D3EE59AD28EC641ACEE05BCA4271A527E5ECAB * L_6 = (InvalidOperationException_t10D3EE59AD28EC641ACEE05BCA4271A527E5ECAB *)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&InvalidOperationException_t10D3EE59AD28EC641ACEE05BCA4271A527E5ECAB_il2cpp_TypeInfo_var)));
-		InvalidOperationException__ctor_mC012CE552988309733C896F3FEA8249171E4402E(L_6, L_5, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 251));
-		IL2CPP_RAISE_MANAGED_EXCEPTION(L_6, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NSError_get_Description_mB6D212A9C22451AD6E7E226C618F99B2B481F079_RuntimeMethod_var)));
+		L_4 = String_Concat_m89EAB4C6A96B0E5C3F87300D6BE78D386B9EFC44(((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral8F75ECDB116DCBBF6FC5A38C92B230BE664085FE)), L_3, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral38B7BEB93115FA6B40AA17D4C7C6E8B9D47BAEE7)), /*hidden argument*/NULL);
+		InvalidOperationException_t10D3EE59AD28EC641ACEE05BCA4271A527E5ECAB * L_5 = (InvalidOperationException_t10D3EE59AD28EC641ACEE05BCA4271A527E5ECAB *)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&InvalidOperationException_t10D3EE59AD28EC641ACEE05BCA4271A527E5ECAB_il2cpp_TypeInfo_var)));
+		InvalidOperationException__ctor_mC012CE552988309733C896F3FEA8249171E4402E(L_5, L_4, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_5, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NSError_get_Description_mB6D212A9C22451AD6E7E226C618F99B2B481F079_RuntimeMethod_var)));
 	}
 
-IL_0032:
+IL_002c:
 	{
 		// using (var description = GetLocalizedDescription(this))
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 242));
-		NSError_tE9C5E6F16FD002838990C179DD0FD5530A67F25C  L_7 = (*(NSError_tE9C5E6F16FD002838990C179DD0FD5530A67F25C *)__this);
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 252));
-		NSString_t82809DF63F200B683E2596807BD84CEDD7025E37  L_8;
-		L_8 = NSError_GetLocalizedDescription_m70B8332E4A2B1D1BA0C03DC2910520DF635D9A7F(L_7, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 252));
-		V_1 = L_8;
+		NSError_tE9C5E6F16FD002838990C179DD0FD5530A67F25C  L_6 = (*(NSError_tE9C5E6F16FD002838990C179DD0FD5530A67F25C *)__this);
+		NSString_t82809DF63F200B683E2596807BD84CEDD7025E37  L_7;
+		L_7 = NSError_GetLocalizedDescription_m70B8332E4A2B1D1BA0C03DC2910520DF635D9A7F(L_6, /*hidden argument*/NULL);
+		V_0 = L_7;
 	}
 
-IL_003e:
+IL_0038:
 	try
 	{ // begin try (depth: 1)
-		STORE_TRY_ID(methodExecutionContext, 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 243));
 		// return description.ToString();
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 244));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 253));
-		String_t* L_9;
-		L_9 = NSString_ToString_mB7C226E11425871055349022B68D6D0EE44B8417((NSString_t82809DF63F200B683E2596807BD84CEDD7025E37 *)(&V_1), /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 253));
-		V_2 = L_9;
-		IL2CPP_LEAVE(0x5E, FINALLY_004f);
+		String_t* L_8;
+		L_8 = NSString_ToString_mB7C226E11425871055349022B68D6D0EE44B8417((NSString_t82809DF63F200B683E2596807BD84CEDD7025E37 *)(&V_0), /*hidden argument*/NULL);
+		V_1 = L_8;
+		IL2CPP_LEAVE(0x56, FINALLY_0048);
 	} // end try (depth: 1)
 	catch(Il2CppExceptionWrapper& e)
 	{
 		__last_unhandled_exception = (Exception_t *)e.ex;
-		goto FINALLY_004f;
+		goto FINALLY_0048;
 	}
 
-FINALLY_004f:
+FINALLY_0048:
 	{ // begin finally (depth: 1)
-		STORE_TRY_ID(methodExecutionContext, -1);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 245));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 254));
-		NSString_Dispose_m066AD20CDF39C3A7BF328EECF98552ED4C9515C8((NSString_t82809DF63F200B683E2596807BD84CEDD7025E37 *)(&V_1), /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 254));
-		IL2CPP_END_FINALLY(79)
+		NSString_Dispose_m066AD20CDF39C3A7BF328EECF98552ED4C9515C8((NSString_t82809DF63F200B683E2596807BD84CEDD7025E37 *)(&V_0), /*hidden argument*/NULL);
+		IL2CPP_END_FINALLY(72)
 	} // end finally (depth: 1)
-	IL2CPP_CLEANUP(79)
+	IL2CPP_CLEANUP(72)
 	{
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
-		IL2CPP_JUMP_TBL(0x5E, IL_005e)
+		IL2CPP_JUMP_TBL(0x56, IL_0056)
 	}
 
-IL_005e:
+IL_0056:
 	{
 		// }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 246));
-		String_t* L_10 = V_2;
-		return L_10;
+		String_t* L_9 = V_1;
+		return L_9;
 	}
 }
 IL2CPP_EXTERN_C  String_t* NSError_get_Description_mB6D212A9C22451AD6E7E226C618F99B2B481F079_AdjustorThunk (RuntimeObject * __this, const RuntimeMethod* method)
@@ -3237,24 +2447,10 @@ IL2CPP_EXTERN_C  String_t* NSError_get_Description_mB6D212A9C22451AD6E7E226C618F
 // System.Void Unity.iOS.Multipeer.NSError::Dispose()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NSError_Dispose_mEFEAD23C4358CD6E4666D48DBD03B95C8F7F9294 (NSError_tE9C5E6F16FD002838990C179DD0FD5530A67F25C * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSError_Dispose_mEFEAD23C4358CD6E4666D48DBD03B95C8F7F9294_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSError_tE9C5E6F16FD002838990C179DD0FD5530A67F25C_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NSError_Dispose_mEFEAD23C4358CD6E4666D48DBD03B95C8F7F9294_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 255));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 256));
 	{
 		// public void Dispose() => NativeApi.CFRelease(ref m_Ptr);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 257));
 		intptr_t* L_0 = __this->get_address_of_m_Ptr_0();
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 258));
 		NativeApi_CFRelease_m7ED75C62FCA913F0649E432847FF1B5094D0B24B((intptr_t*)L_0, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 258));
 		return;
 	}
 }
@@ -3267,25 +2463,11 @@ IL2CPP_EXTERN_C  void NSError_Dispose_mEFEAD23C4358CD6E4666D48DBD03B95C8F7F9294_
 // System.Int32 Unity.iOS.Multipeer.NSError::GetHashCode()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NSError_GetHashCode_mEB788CAF71B0E60D08DDE341F4E8CDE873014AC7 (NSError_tE9C5E6F16FD002838990C179DD0FD5530A67F25C * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSError_GetHashCode_mEB788CAF71B0E60D08DDE341F4E8CDE873014AC7_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSError_tE9C5E6F16FD002838990C179DD0FD5530A67F25C_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NSError_GetHashCode_mEB788CAF71B0E60D08DDE341F4E8CDE873014AC7_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 259));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 260));
 	{
 		// public override int GetHashCode() => m_Ptr.GetHashCode();
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 261));
 		intptr_t* L_0 = __this->get_address_of_m_Ptr_0();
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 262));
 		int32_t L_1;
 		L_1 = IntPtr_GetHashCode_m55E65FB52EFE7C0EBC3C28E66A5D7542F3B1D35D((intptr_t*)L_0, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 262));
 		return L_1;
 	}
 }
@@ -3303,44 +2485,27 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool NSError_Equals_m4054629C6E20B80E9F85D678
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSError_Equals_m4054629C6E20B80E9F85D678F1A4B02F1B8F3F90_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSError_tE9C5E6F16FD002838990C179DD0FD5530A67F25C_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSError_tE9C5E6F16FD002838990C179DD0FD5530A67F25C_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___obj0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NSError_Equals_m4054629C6E20B80E9F85D678F1A4B02F1B8F3F90_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 263));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 264));
-	int32_t G_B3_0 = 0;
 	{
 		// public override bool Equals(object obj) => (obj is NSError) && Equals((NSError)obj);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 265));
 		RuntimeObject * L_0 = ___obj0;
 		if (!((RuntimeObject *)IsInstSealed((RuntimeObject*)L_0, NSError_tE9C5E6F16FD002838990C179DD0FD5530A67F25C_il2cpp_TypeInfo_var)))
 		{
-			goto IL_0016;
+			goto IL_0015;
 		}
 	}
 	{
 		RuntimeObject * L_1 = ___obj0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 266));
 		bool L_2;
 		L_2 = NSError_Equals_m8155380BCA4336B168769A12E732FB8BEF1883A3((NSError_tE9C5E6F16FD002838990C179DD0FD5530A67F25C *)__this, ((*(NSError_tE9C5E6F16FD002838990C179DD0FD5530A67F25C *)((NSError_tE9C5E6F16FD002838990C179DD0FD5530A67F25C *)UnBox(L_1, NSError_tE9C5E6F16FD002838990C179DD0FD5530A67F25C_il2cpp_TypeInfo_var)))), /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 266));
-		G_B3_0 = ((int32_t)(L_2));
-		goto IL_0017;
+		return L_2;
 	}
 
-IL_0016:
+IL_0015:
 	{
-		G_B3_0 = 0;
-	}
-
-IL_0017:
-	{
-		return (bool)G_B3_0;
+		return (bool)0;
 	}
 }
 IL2CPP_EXTERN_C  bool NSError_Equals_m4054629C6E20B80E9F85D678F1A4B02F1B8F3F90_AdjustorThunk (RuntimeObject * __this, RuntimeObject * ___obj0, const RuntimeMethod* method)
@@ -3354,28 +2519,13 @@ IL2CPP_EXTERN_C  bool NSError_Equals_m4054629C6E20B80E9F85D678F1A4B02F1B8F3F90_A
 // System.Boolean Unity.iOS.Multipeer.NSError::Equals(Unity.iOS.Multipeer.NSError)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool NSError_Equals_m8155380BCA4336B168769A12E732FB8BEF1883A3 (NSError_tE9C5E6F16FD002838990C179DD0FD5530A67F25C * __this, NSError_tE9C5E6F16FD002838990C179DD0FD5530A67F25C  ___other0, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSError_Equals_m8155380BCA4336B168769A12E732FB8BEF1883A3_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSError_tE9C5E6F16FD002838990C179DD0FD5530A67F25C_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___other0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NSError_Equals_m8155380BCA4336B168769A12E732FB8BEF1883A3_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 267));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 268));
 	{
 		// public bool Equals(NSError other) => m_Ptr == other.m_Ptr;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 269));
 		intptr_t L_0 = __this->get_m_Ptr_0();
 		NSError_tE9C5E6F16FD002838990C179DD0FD5530A67F25C  L_1 = ___other0;
 		intptr_t L_2 = L_1.get_m_Ptr_0();
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 270));
 		bool L_3;
 		L_3 = IntPtr_op_Equality_mD94F3FE43A65684EFF984A7B95E70D2520C0AC73((intptr_t)L_0, (intptr_t)L_2, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 270));
 		return L_3;
 	}
 }
@@ -3390,48 +2540,22 @@ IL2CPP_EXTERN_C  bool NSError_Equals_m8155380BCA4336B168769A12E732FB8BEF1883A3_A
 // System.Boolean Unity.iOS.Multipeer.NSError::op_Equality(Unity.iOS.Multipeer.NSError,Unity.iOS.Multipeer.NSError)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool NSError_op_Equality_m6BF4D475B59AA53D2BBCCFA8F7871C0815CDD177 (NSError_tE9C5E6F16FD002838990C179DD0FD5530A67F25C  ___lhs0, NSError_tE9C5E6F16FD002838990C179DD0FD5530A67F25C  ___rhs1, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSError_op_Equality_m6BF4D475B59AA53D2BBCCFA8F7871C0815CDD177_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___lhs0), (&___rhs1));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NSError_op_Equality_m6BF4D475B59AA53D2BBCCFA8F7871C0815CDD177_RuntimeMethod_var, NULL, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 271));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 272));
 	{
 		// public static bool operator==(NSError lhs, NSError rhs) => lhs.Equals(rhs);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 273));
 		NSError_tE9C5E6F16FD002838990C179DD0FD5530A67F25C  L_0 = ___rhs1;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 274));
 		bool L_1;
 		L_1 = NSError_Equals_m8155380BCA4336B168769A12E732FB8BEF1883A3((NSError_tE9C5E6F16FD002838990C179DD0FD5530A67F25C *)(&___lhs0), L_0, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 274));
 		return L_1;
 	}
 }
 // System.Boolean Unity.iOS.Multipeer.NSError::op_Inequality(Unity.iOS.Multipeer.NSError,Unity.iOS.Multipeer.NSError)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool NSError_op_Inequality_mD080C5B1482C6F6BC4F49168DE68A1066D58F27F (NSError_tE9C5E6F16FD002838990C179DD0FD5530A67F25C  ___lhs0, NSError_tE9C5E6F16FD002838990C179DD0FD5530A67F25C  ___rhs1, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSError_op_Inequality_mD080C5B1482C6F6BC4F49168DE68A1066D58F27F_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___lhs0), (&___rhs1));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NSError_op_Inequality_mD080C5B1482C6F6BC4F49168DE68A1066D58F27F_RuntimeMethod_var, NULL, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 275));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 276));
 	{
 		// public static bool operator!=(NSError lhs, NSError rhs) => !lhs.Equals(rhs);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 277));
 		NSError_tE9C5E6F16FD002838990C179DD0FD5530A67F25C  L_0 = ___rhs1;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 278));
 		bool L_1;
 		L_1 = NSError_Equals_m8155380BCA4336B168769A12E732FB8BEF1883A3((NSError_tE9C5E6F16FD002838990C179DD0FD5530A67F25C *)(&___lhs0), L_0, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 278));
 		return (bool)((((int32_t)L_1) == ((int32_t)0))? 1 : 0);
 	}
 }
@@ -3471,66 +2595,34 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NSErrorException__ctor_m0CEF5BCC8180BD26
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Exception_t_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Int64_t378EE0D608BD3107E77238E85F30D2BBD46981F3_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSErrorException__ctor_m0CEF5BCC8180BD26BF1190DC6899C31B3410CAE0_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSErrorException_tFF049C4B0C58F3D97BD1E636E31E3EAA4E06ACD6_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralB3D0E51DB188AD13A136177A7AB20B94F203CC1C);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___code0), (&___description1));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NSErrorException__ctor_m0CEF5BCC8180BD26BF1190DC6899C31B3410CAE0_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 279));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 280));
 	{
 		// : base($"NSError {code}: {description}")
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 281));
 		int64_t L_0 = ___code0;
 		int64_t L_1 = L_0;
 		RuntimeObject * L_2 = Box(Int64_t378EE0D608BD3107E77238E85F30D2BBD46981F3_il2cpp_TypeInfo_var, &L_1);
 		String_t* L_3 = ___description1;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 286));
 		String_t* L_4;
 		L_4 = String_Format_m8D1CB0410C35E052A53AE957C914C841E54BAB66(_stringLiteralB3D0E51DB188AD13A136177A7AB20B94F203CC1C, L_2, L_3, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 286));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 287));
 		IL2CPP_RUNTIME_CLASS_INIT(Exception_t_il2cpp_TypeInfo_var);
 		Exception__ctor_m8ECDE8ACA7F2E0EF1144BD1200FB5DB2870B5F11(__this, L_4, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 287));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 282));
 		// Code = code;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 283));
 		int64_t L_5 = ___code0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 288));
 		NSErrorException_set_Code_mED507AE25D3073C4BF328AF5FC9285288370D26D_inline(__this, L_5, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 288));
 		// Description = description;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 284));
 		String_t* L_6 = ___description1;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 289));
 		NSErrorException_set_Description_m736FB8FD0E2B8653C364CE37DC0F23C91F63904D_inline(__this, L_6, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 289));
 		// }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 285));
 		return;
 	}
 }
 // System.Int64 Unity.iOS.Multipeer.NSErrorException::get_Code()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int64_t NSErrorException_get_Code_mA94C4E389E056F7900322DD4DE99CD9FC5F2A3BD (NSErrorException_tFF049C4B0C58F3D97BD1E636E31E3EAA4E06ACD6 * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSErrorException_get_Code_mA94C4E389E056F7900322DD4DE99CD9FC5F2A3BD_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSErrorException_tFF049C4B0C58F3D97BD1E636E31E3EAA4E06ACD6_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NSErrorException_get_Code_mA94C4E389E056F7900322DD4DE99CD9FC5F2A3BD_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 290));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 291));
 	{
 		// public long Code { get; private set; }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 292));
 		int64_t L_0 = __this->get_U3CCodeU3Ek__BackingField_17();
 		return L_0;
 	}
@@ -3538,21 +2630,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int64_t NSErrorException_get_Code_mA94C4E389E
 // System.Void Unity.iOS.Multipeer.NSErrorException::set_Code(System.Int64)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NSErrorException_set_Code_mED507AE25D3073C4BF328AF5FC9285288370D26D (NSErrorException_tFF049C4B0C58F3D97BD1E636E31E3EAA4E06ACD6 * __this, int64_t ___value0, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSErrorException_set_Code_mED507AE25D3073C4BF328AF5FC9285288370D26D_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSErrorException_tFF049C4B0C58F3D97BD1E636E31E3EAA4E06ACD6_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___value0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NSErrorException_set_Code_mED507AE25D3073C4BF328AF5FC9285288370D26D_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 293));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 294));
 	{
 		// public long Code { get; private set; }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 295));
 		int64_t L_0 = ___value0;
 		__this->set_U3CCodeU3Ek__BackingField_17(L_0);
 		return;
@@ -3561,20 +2640,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NSErrorException_set_Code_mED507AE25D307
 // System.String Unity.iOS.Multipeer.NSErrorException::get_Description()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* NSErrorException_get_Description_m4E25B29F2FCDDC4F4D82A3363330C5957BD9A7F8 (NSErrorException_tFF049C4B0C58F3D97BD1E636E31E3EAA4E06ACD6 * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSErrorException_get_Description_m4E25B29F2FCDDC4F4D82A3363330C5957BD9A7F8_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSErrorException_tFF049C4B0C58F3D97BD1E636E31E3EAA4E06ACD6_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NSErrorException_get_Description_m4E25B29F2FCDDC4F4D82A3363330C5957BD9A7F8_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 296));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 297));
 	{
 		// public string Description { get; private set; }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 298));
 		String_t* L_0 = __this->get_U3CDescriptionU3Ek__BackingField_18();
 		return L_0;
 	}
@@ -3582,21 +2649,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* NSErrorException_get_Description_m4
 // System.Void Unity.iOS.Multipeer.NSErrorException::set_Description(System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NSErrorException_set_Description_m736FB8FD0E2B8653C364CE37DC0F23C91F63904D (NSErrorException_tFF049C4B0C58F3D97BD1E636E31E3EAA4E06ACD6 * __this, String_t* ___value0, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSErrorException_set_Description_m736FB8FD0E2B8653C364CE37DC0F23C91F63904D_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSErrorException_tFF049C4B0C58F3D97BD1E636E31E3EAA4E06ACD6_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___value0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NSErrorException_set_Description_m736FB8FD0E2B8653C364CE37DC0F23C91F63904D_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 299));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 300));
 	{
 		// public string Description { get; private set; }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 301));
 		String_t* L_0 = ___value0;
 		__this->set_U3CDescriptionU3Ek__BackingField_18(L_0);
 		return;
@@ -3613,21 +2667,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NSErrorException_set_Description_m736FB8
 // System.Void Unity.iOS.Multipeer.NSString::.ctor(System.IntPtr)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NSString__ctor_mF2ADBE1A7EC317142FB3291215B15AE05C5CB63D (NSString_t82809DF63F200B683E2596807BD84CEDD7025E37 * __this, intptr_t ___existing0, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSString__ctor_mF2ADBE1A7EC317142FB3291215B15AE05C5CB63D_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSString_t82809DF63F200B683E2596807BD84CEDD7025E37_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___existing0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NSString__ctor_mF2ADBE1A7EC317142FB3291215B15AE05C5CB63D_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 302));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 303));
 	{
 		// internal NSString(IntPtr existing) => m_Ptr = existing;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 304));
 		intptr_t L_0 = ___existing0;
 		__this->set_m_Ptr_0((intptr_t)L_0);
 		return;
@@ -3642,32 +2683,15 @@ IL2CPP_EXTERN_C  void NSString__ctor_mF2ADBE1A7EC317142FB3291215B15AE05C5CB63D_A
 // System.Void Unity.iOS.Multipeer.NSString::.ctor(System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NSString__ctor_mCAB42E3C04770B69F9E446AF948FEF9FE023AED0 (NSString_t82809DF63F200B683E2596807BD84CEDD7025E37 * __this, String_t* ___text0, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSString__ctor_mCAB42E3C04770B69F9E446AF948FEF9FE023AED0_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSString_t82809DF63F200B683E2596807BD84CEDD7025E37_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___text0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NSString__ctor_mCAB42E3C04770B69F9E446AF948FEF9FE023AED0_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 305));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 306));
 	{
 		// public NSString(string text) => m_Ptr = CreateWithString(text, text.Length);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 307));
 		String_t* L_0 = ___text0;
 		String_t* L_1 = ___text0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 308));
 		NullCheck(L_1);
 		int32_t L_2;
 		L_2 = String_get_Length_m129FC0ADA02FECBED3C0B1A809AE84A5AEE1CF09_inline(L_1, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 308));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 309));
 		intptr_t L_3;
 		L_3 = NSString_CreateWithString_m9BFA8B51A03AF9C7DBC6257C3A3BEFBACB55E902(L_0, L_2, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 309));
 		__this->set_m_Ptr_0((intptr_t)L_3);
 		return;
 	}
@@ -3681,58 +2705,30 @@ IL2CPP_EXTERN_C  void NSString__ctor_mCAB42E3C04770B69F9E446AF948FEF9FE023AED0_A
 // System.Void Unity.iOS.Multipeer.NSString::.ctor(Unity.iOS.Multipeer.NSData)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NSString__ctor_m8C8819213CA9FAF6CD8B75757872661D5863B947 (NSString_t82809DF63F200B683E2596807BD84CEDD7025E37 * __this, NSData_t27227240875F34DEF760BD15736BBAAE45C2AD57  ___serializedString0, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSString__ctor_m8C8819213CA9FAF6CD8B75757872661D5863B947_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSString_t82809DF63F200B683E2596807BD84CEDD7025E37_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	bool V_0 = false;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___serializedString0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NSString__ctor_m8C8819213CA9FAF6CD8B75757872661D5863B947_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 310));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 311));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 312));
 		// if (!serializedString.Created)
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 313));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 318));
 		bool L_0;
 		L_0 = NSData_get_Created_mBC33E9AB3B638F6D5B3CF08EF26FC8C87E85DE7D((NSData_t27227240875F34DEF760BD15736BBAAE45C2AD57 *)(&___serializedString0), /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 318));
-		V_0 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 314));
-		bool L_1 = V_0;
-		if (!L_1)
+		if (L_0)
 		{
-			goto IL_001f;
+			goto IL_0019;
 		}
 	}
 	{
 		// throw new ArgumentException("The serialized string is not valid.", nameof(serializedString));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 315));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 319));
-		ArgumentException_t505FA8C11E883F2D96C797AD9D396490794DEE00 * L_2 = (ArgumentException_t505FA8C11E883F2D96C797AD9D396490794DEE00 *)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentException_t505FA8C11E883F2D96C797AD9D396490794DEE00_il2cpp_TypeInfo_var)));
-		ArgumentException__ctor_m71044C2110E357B71A1C30D2561C3F861AF1DC0D(L_2, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralF6EB0393565DAFF55E87E0BDA7A45A63DF963409)), ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralF90CD66B6C5116C92B553B5DED6787B4C4909D91)), /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 319));
-		IL2CPP_RAISE_MANAGED_EXCEPTION(L_2, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NSString__ctor_m8C8819213CA9FAF6CD8B75757872661D5863B947_RuntimeMethod_var)));
+		ArgumentException_t505FA8C11E883F2D96C797AD9D396490794DEE00 * L_1 = (ArgumentException_t505FA8C11E883F2D96C797AD9D396490794DEE00 *)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentException_t505FA8C11E883F2D96C797AD9D396490794DEE00_il2cpp_TypeInfo_var)));
+		ArgumentException__ctor_m71044C2110E357B71A1C30D2561C3F861AF1DC0D(L_1, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralF6EB0393565DAFF55E87E0BDA7A45A63DF963409)), ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralF90CD66B6C5116C92B553B5DED6787B4C4909D91)), /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_1, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NSString__ctor_m8C8819213CA9FAF6CD8B75757872661D5863B947_RuntimeMethod_var)));
 	}
 
-IL_001f:
+IL_0019:
 	{
 		// m_Ptr = Deserialize(serializedString);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 316));
-		NSData_t27227240875F34DEF760BD15736BBAAE45C2AD57  L_3 = ___serializedString0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 320));
-		intptr_t L_4;
-		L_4 = NSString_Deserialize_mB230DD436730634F23E4C6F21F176F0C71C46F0C(L_3, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 320));
-		__this->set_m_Ptr_0((intptr_t)L_4);
+		NSData_t27227240875F34DEF760BD15736BBAAE45C2AD57  L_2 = ___serializedString0;
+		intptr_t L_3;
+		L_3 = NSString_Deserialize_mB230DD436730634F23E4C6F21F176F0C71C46F0C(L_2, /*hidden argument*/NULL);
+		__this->set_m_Ptr_0((intptr_t)L_3);
 		// }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 317));
 		return;
 	}
 }
@@ -3749,22 +2745,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool NSString_get_Created_m7DC809B2DECC369779
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IntPtr_t_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSString_get_Created_m7DC809B2DECC36977993CEF646B7BE58A2F84232_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSString_t82809DF63F200B683E2596807BD84CEDD7025E37_0_0_0_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NSString_get_Created_m7DC809B2DECC36977993CEF646B7BE58A2F84232_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 321));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 322));
 	{
 		// public bool Created => m_Ptr != IntPtr.Zero;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 323));
 		intptr_t L_0 = __this->get_m_Ptr_0();
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 324));
 		bool L_1;
 		L_1 = IntPtr_op_Inequality_m212AF0E66AA81FEDC982B1C8A44ADDA24B995EB8((intptr_t)L_0, (intptr_t)(0), /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 324));
 		return L_1;
 	}
 }
@@ -3779,25 +2766,11 @@ IL2CPP_EXTERN_C  bool NSString_get_Created_m7DC809B2DECC36977993CEF646B7BE58A2F8
 // System.Int32 Unity.iOS.Multipeer.NSString::get_Length()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NSString_get_Length_m25A0DE8F945C51B3D6C24FFA2FA01E77034A70FC (NSString_t82809DF63F200B683E2596807BD84CEDD7025E37 * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSString_get_Length_m25A0DE8F945C51B3D6C24FFA2FA01E77034A70FC_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSString_t82809DF63F200B683E2596807BD84CEDD7025E37_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NSString_get_Length_m25A0DE8F945C51B3D6C24FFA2FA01E77034A70FC_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 325));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 326));
 	{
 		// public int Length => GetLength(this);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 327));
 		NSString_t82809DF63F200B683E2596807BD84CEDD7025E37  L_0 = (*(NSString_t82809DF63F200B683E2596807BD84CEDD7025E37 *)__this);
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 328));
 		int32_t L_1;
 		L_1 = NSString_GetLength_m22C5DB0B53C0A135CA4EF19E30B819FC79490E4B(L_0, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 328));
 		return L_1;
 	}
 }
@@ -3815,164 +2788,109 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* NSString_ToString_mB7C226E114258710
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Marshal_tEBAFAE20369FCB1B38C49C4E27A8D8C2C4B55058_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSString_ToString_mB7C226E11425871055349022B68D6D0EE44B8417_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSString_t82809DF63F200B683E2596807BD84CEDD7025E37_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NativeArrayUnsafeUtility_GetUnsafePtr_TisByte_t0111FAB8B8685667EDDAF77683F0D8F86B659056_mCA457AEBD49C3610DC1D6DA67E7DB972DE12AF19_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NativeArray_1_Dispose_mD88EDF062EFB4B0E6C8F925B5A4E47E97E687342_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NativeArray_1__ctor_mED2AEAAEFBBE3F20D8E424582434019D3F94F9EF_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NativeArray_1_t3C2855C5B238E8C6739D4C17833F244B95C0F785_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&String_t_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&String_t_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	bool V_0 = false;
+	NativeArray_1_t3C2855C5B238E8C6739D4C17833F244B95C0F785  V_0;
+	memset((&V_0), 0, sizeof(V_0));
 	String_t* V_1 = NULL;
-	NativeArray_1_t3C2855C5B238E8C6739D4C17833F244B95C0F785  V_2;
-	memset((&V_2), 0, sizeof(V_2));
-	bool V_3 = false;
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_LOCALS(methodExecutionContextLocals, (&V_2));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NSString_ToString_mB7C226E11425871055349022B68D6D0EE44B8417_RuntimeMethod_var, methodExecutionContextThis, NULL, methodExecutionContextLocals);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 329));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 330));
 	Exception_t * __last_unhandled_exception = 0;
 	il2cpp::utils::ExceptionSupportStack<int32_t, 2> __leave_targets;
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 331));
 		// if (!Created)
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 332));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 345));
 		bool L_0;
 		L_0 = NSString_get_Created_m7DC809B2DECC36977993CEF646B7BE58A2F84232((NSString_t82809DF63F200B683E2596807BD84CEDD7025E37 *)__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 345));
-		V_0 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 333));
-		bool L_1 = V_0;
-		if (!L_1)
+		if (L_0)
 		{
-			goto IL_0016;
+			goto IL_000e;
 		}
 	}
 	{
 		// return string.Empty;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 334));
-		String_t* L_2 = ((String_t_StaticFields*)il2cpp_codegen_static_fields_for(String_t_il2cpp_TypeInfo_var))->get_Empty_5();
-		V_1 = L_2;
-		goto IL_0079;
+		String_t* L_1 = ((String_t_StaticFields*)il2cpp_codegen_static_fields_for(String_t_il2cpp_TypeInfo_var))->get_Empty_5();
+		return L_1;
 	}
 
-IL_0016:
+IL_000e:
 	{
 		// using (var buffer = new NativeArray<byte>(GetLengthOfBytes(this), Allocator.TempJob, NativeArrayOptions.UninitializedMemory))
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 335));
-		NSString_t82809DF63F200B683E2596807BD84CEDD7025E37  L_3 = (*(NSString_t82809DF63F200B683E2596807BD84CEDD7025E37 *)__this);
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 346));
-		int32_t L_4;
-		L_4 = NSString_GetLengthOfBytes_mF6C3A37B0C0241AA334988EA15DAB8960D8EC6DA(L_3, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 346));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 347));
-		NativeArray_1__ctor_mED2AEAAEFBBE3F20D8E424582434019D3F94F9EF((NativeArray_1_t3C2855C5B238E8C6739D4C17833F244B95C0F785 *)(&V_2), L_4, 3, 0, /*hidden argument*/NativeArray_1__ctor_mED2AEAAEFBBE3F20D8E424582434019D3F94F9EF_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 347));
+		NSString_t82809DF63F200B683E2596807BD84CEDD7025E37  L_2 = (*(NSString_t82809DF63F200B683E2596807BD84CEDD7025E37 *)__this);
+		int32_t L_3;
+		L_3 = NSString_GetLengthOfBytes_mF6C3A37B0C0241AA334988EA15DAB8960D8EC6DA(L_2, /*hidden argument*/NULL);
+		NativeArray_1__ctor_mED2AEAAEFBBE3F20D8E424582434019D3F94F9EF((NativeArray_1_t3C2855C5B238E8C6739D4C17833F244B95C0F785 *)(&V_0), L_3, 3, 0, /*hidden argument*/NativeArray_1__ctor_mED2AEAAEFBBE3F20D8E424582434019D3F94F9EF_RuntimeMethod_var);
 	}
 
-IL_002a:
+IL_0022:
 	try
 	{ // begin try (depth: 1)
-		STORE_TRY_ID(methodExecutionContext, 0);
 		{
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 336));
 			// if (GetBytes(this, buffer.GetUnsafePtr(), buffer.Length))
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 337));
-			NSString_t82809DF63F200B683E2596807BD84CEDD7025E37  L_5 = (*(NSString_t82809DF63F200B683E2596807BD84CEDD7025E37 *)__this);
-			NativeArray_1_t3C2855C5B238E8C6739D4C17833F244B95C0F785  L_6 = V_2;
-			STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 348));
-			void* L_7;
-			L_7 = NativeArrayUnsafeUtility_GetUnsafePtr_TisByte_t0111FAB8B8685667EDDAF77683F0D8F86B659056_mCA457AEBD49C3610DC1D6DA67E7DB972DE12AF19(L_6, /*hidden argument*/NativeArrayUnsafeUtility_GetUnsafePtr_TisByte_t0111FAB8B8685667EDDAF77683F0D8F86B659056_mCA457AEBD49C3610DC1D6DA67E7DB972DE12AF19_RuntimeMethod_var);
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 348));
-			STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 349));
-			int32_t L_8;
-			L_8 = IL2CPP_NATIVEARRAY_GET_LENGTH(((NativeArray_1_t3C2855C5B238E8C6739D4C17833F244B95C0F785 *)(&V_2))->___m_Length_1);
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 349));
-			STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 350));
-			bool L_9;
-			L_9 = NSString_GetBytes_m8921FF328F69C3E8F30D349C95DAC3E4216AC628(L_5, (void*)(void*)L_7, L_8, /*hidden argument*/NULL);
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 350));
-			V_3 = L_9;
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 338));
-			bool L_10 = V_3;
-			if (!L_10)
+			NSString_t82809DF63F200B683E2596807BD84CEDD7025E37  L_4 = (*(NSString_t82809DF63F200B683E2596807BD84CEDD7025E37 *)__this);
+			NativeArray_1_t3C2855C5B238E8C6739D4C17833F244B95C0F785  L_5 = V_0;
+			void* L_6;
+			L_6 = NativeArrayUnsafeUtility_GetUnsafePtr_TisByte_t0111FAB8B8685667EDDAF77683F0D8F86B659056_mCA457AEBD49C3610DC1D6DA67E7DB972DE12AF19(L_5, /*hidden argument*/NativeArrayUnsafeUtility_GetUnsafePtr_TisByte_t0111FAB8B8685667EDDAF77683F0D8F86B659056_mCA457AEBD49C3610DC1D6DA67E7DB972DE12AF19_RuntimeMethod_var);
+			int32_t L_7;
+			L_7 = IL2CPP_NATIVEARRAY_GET_LENGTH(((NativeArray_1_t3C2855C5B238E8C6739D4C17833F244B95C0F785 *)(&V_0))->___m_Length_1);
+			bool L_8;
+			L_8 = NSString_GetBytes_m8921FF328F69C3E8F30D349C95DAC3E4216AC628(L_4, (void*)(void*)L_6, L_7, /*hidden argument*/NULL);
+			if (!L_8)
 			{
-				goto IL_0061;
+				goto IL_0055;
 			}
 		}
 
-IL_0047:
+IL_003c:
 		{
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 339));
 			// return Marshal.PtrToStringUni(new IntPtr(buffer.GetUnsafePtr()), Length);
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 340));
-			NativeArray_1_t3C2855C5B238E8C6739D4C17833F244B95C0F785  L_11 = V_2;
-			STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 351));
-			void* L_12;
-			L_12 = NativeArrayUnsafeUtility_GetUnsafePtr_TisByte_t0111FAB8B8685667EDDAF77683F0D8F86B659056_mCA457AEBD49C3610DC1D6DA67E7DB972DE12AF19(L_11, /*hidden argument*/NativeArrayUnsafeUtility_GetUnsafePtr_TisByte_t0111FAB8B8685667EDDAF77683F0D8F86B659056_mCA457AEBD49C3610DC1D6DA67E7DB972DE12AF19_RuntimeMethod_var);
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 351));
-			STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 352));
-			intptr_t L_13;
-			memset((&L_13), 0, sizeof(L_13));
-			IntPtr__ctor_mBB7AF6DA6350129AD6422DE474FD52F715CC0C40_inline((&L_13), (void*)(void*)L_12, /*hidden argument*/NULL);
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 352));
-			STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 353));
-			int32_t L_14;
-			L_14 = NSString_get_Length_m25A0DE8F945C51B3D6C24FFA2FA01E77034A70FC((NSString_t82809DF63F200B683E2596807BD84CEDD7025E37 *)__this, /*hidden argument*/NULL);
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 353));
-			STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 354));
+			NativeArray_1_t3C2855C5B238E8C6739D4C17833F244B95C0F785  L_9 = V_0;
+			void* L_10;
+			L_10 = NativeArrayUnsafeUtility_GetUnsafePtr_TisByte_t0111FAB8B8685667EDDAF77683F0D8F86B659056_mCA457AEBD49C3610DC1D6DA67E7DB972DE12AF19(L_9, /*hidden argument*/NativeArrayUnsafeUtility_GetUnsafePtr_TisByte_t0111FAB8B8685667EDDAF77683F0D8F86B659056_mCA457AEBD49C3610DC1D6DA67E7DB972DE12AF19_RuntimeMethod_var);
+			intptr_t L_11;
+			memset((&L_11), 0, sizeof(L_11));
+			IntPtr__ctor_mBB7AF6DA6350129AD6422DE474FD52F715CC0C40_inline((&L_11), (void*)(void*)L_10, /*hidden argument*/NULL);
+			int32_t L_12;
+			L_12 = NSString_get_Length_m25A0DE8F945C51B3D6C24FFA2FA01E77034A70FC((NSString_t82809DF63F200B683E2596807BD84CEDD7025E37 *)__this, /*hidden argument*/NULL);
 			IL2CPP_RUNTIME_CLASS_INIT(Marshal_tEBAFAE20369FCB1B38C49C4E27A8D8C2C4B55058_il2cpp_TypeInfo_var);
-			String_t* L_15;
-			L_15 = Marshal_PtrToStringUni_m10843BD3853A95DD27D4624A78A3B470032751E0((intptr_t)L_13, L_14, /*hidden argument*/NULL);
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 354));
-			V_1 = L_15;
-			IL2CPP_LEAVE(0x79, FINALLY_006a);
+			String_t* L_13;
+			L_13 = Marshal_PtrToStringUni_m10843BD3853A95DD27D4624A78A3B470032751E0((intptr_t)L_11, L_12, /*hidden argument*/NULL);
+			V_1 = L_13;
+			IL2CPP_LEAVE(0x6B, FINALLY_005d);
 		}
 
-IL_0061:
+IL_0055:
 		{
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 341));
 			// return string.Empty;
-			CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 342));
-			String_t* L_16 = ((String_t_StaticFields*)il2cpp_codegen_static_fields_for(String_t_il2cpp_TypeInfo_var))->get_Empty_5();
-			V_1 = L_16;
-			IL2CPP_LEAVE(0x79, FINALLY_006a);
+			String_t* L_14 = ((String_t_StaticFields*)il2cpp_codegen_static_fields_for(String_t_il2cpp_TypeInfo_var))->get_Empty_5();
+			V_1 = L_14;
+			IL2CPP_LEAVE(0x6B, FINALLY_005d);
 		}
 	} // end try (depth: 1)
 	catch(Il2CppExceptionWrapper& e)
 	{
 		__last_unhandled_exception = (Exception_t *)e.ex;
-		goto FINALLY_006a;
+		goto FINALLY_005d;
 	}
 
-FINALLY_006a:
+FINALLY_005d:
 	{ // begin finally (depth: 1)
-		STORE_TRY_ID(methodExecutionContext, -1);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 343));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 355));
-		NativeArray_1_Dispose_mD88EDF062EFB4B0E6C8F925B5A4E47E97E687342((NativeArray_1_t3C2855C5B238E8C6739D4C17833F244B95C0F785 *)(&V_2), /*hidden argument*/NativeArray_1_Dispose_mD88EDF062EFB4B0E6C8F925B5A4E47E97E687342_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 355));
-		IL2CPP_END_FINALLY(106)
+		NativeArray_1_Dispose_mD88EDF062EFB4B0E6C8F925B5A4E47E97E687342((NativeArray_1_t3C2855C5B238E8C6739D4C17833F244B95C0F785 *)(&V_0), /*hidden argument*/NativeArray_1_Dispose_mD88EDF062EFB4B0E6C8F925B5A4E47E97E687342_RuntimeMethod_var);
+		IL2CPP_END_FINALLY(93)
 	} // end finally (depth: 1)
-	IL2CPP_CLEANUP(106)
+	IL2CPP_CLEANUP(93)
 	{
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
-		IL2CPP_JUMP_TBL(0x79, IL_0079)
+		IL2CPP_JUMP_TBL(0x6B, IL_006b)
 	}
 
-IL_0079:
+IL_006b:
 	{
 		// }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 344));
-		String_t* L_17 = V_1;
-		return L_17;
+		String_t* L_15 = V_1;
+		return L_15;
 	}
 }
 IL2CPP_EXTERN_C  String_t* NSString_ToString_mB7C226E11425871055349022B68D6D0EE44B8417_AdjustorThunk (RuntimeObject * __this, const RuntimeMethod* method)
@@ -3986,82 +2904,38 @@ IL2CPP_EXTERN_C  String_t* NSString_ToString_mB7C226E11425871055349022B68D6D0EE4
 // Unity.iOS.Multipeer.NSData Unity.iOS.Multipeer.NSString::Serialize()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR NSData_t27227240875F34DEF760BD15736BBAAE45C2AD57  NSString_Serialize_mEF0C5C17675E9D2CA7A0FA718C72C6C18D6BE901 (NSString_t82809DF63F200B683E2596807BD84CEDD7025E37 * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSData_t27227240875F34DEF760BD15736BBAAE45C2AD57_0_0_0_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSString_Serialize_mEF0C5C17675E9D2CA7A0FA718C72C6C18D6BE901_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSString_t82809DF63F200B683E2596807BD84CEDD7025E37_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	bool V_0 = false;
-	NSData_t27227240875F34DEF760BD15736BBAAE45C2AD57  V_1;
-	memset((&V_1), 0, sizeof(V_1));
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NSString_Serialize_mEF0C5C17675E9D2CA7A0FA718C72C6C18D6BE901_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 356));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 357));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 358));
 		// if (!Created)
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 359));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 364));
 		bool L_0;
 		L_0 = NSString_get_Created_m7DC809B2DECC36977993CEF646B7BE58A2F84232((NSString_t82809DF63F200B683E2596807BD84CEDD7025E37 *)__this, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 364));
-		V_0 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 360));
-		bool L_1 = V_0;
-		if (!L_1)
+		if (L_0)
 		{
-			goto IL_0032;
+			goto IL_002c;
 		}
 	}
 	{
 		// throw new InvalidOperationException($"The {typeof(NSString).Name} has not been created.");
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 361));
-		RuntimeTypeHandle_tC33965ADA3E041E0C94AF05E5CB527B56482CEF9  L_2 = { reinterpret_cast<intptr_t> (((RuntimeType*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NSString_t82809DF63F200B683E2596807BD84CEDD7025E37_0_0_0_var))) };
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 365));
+		RuntimeTypeHandle_tC33965ADA3E041E0C94AF05E5CB527B56482CEF9  L_1 = { reinterpret_cast<intptr_t> (((RuntimeType*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NSString_t82809DF63F200B683E2596807BD84CEDD7025E37_0_0_0_var))) };
 		IL2CPP_RUNTIME_CLASS_INIT(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Type_t_il2cpp_TypeInfo_var)));
-		Type_t * L_3;
-		L_3 = Type_GetTypeFromHandle_m8BB57524FF7F9DB1803BC561D2B3A4DBACEB385E(L_2, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 365));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 366));
-		NullCheck(L_3);
+		Type_t * L_2;
+		L_2 = Type_GetTypeFromHandle_m8BB57524FF7F9DB1803BC561D2B3A4DBACEB385E(L_1, /*hidden argument*/NULL);
+		NullCheck(L_2);
+		String_t* L_3;
+		L_3 = VirtFuncInvoker0< String_t* >::Invoke(7 /* System.String System.Reflection.MemberInfo::get_Name() */, L_2);
 		String_t* L_4;
-		L_4 = VirtFuncInvoker0< String_t* >::Invoke(7 /* System.String System.Reflection.MemberInfo::get_Name() */, L_3);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 366));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 367));
-		String_t* L_5;
-		L_5 = String_Concat_m89EAB4C6A96B0E5C3F87300D6BE78D386B9EFC44(((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral8F75ECDB116DCBBF6FC5A38C92B230BE664085FE)), L_4, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralB3FDE45005CCEC81C2BA207B67478532CE7E6223)), /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 367));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 368));
-		InvalidOperationException_t10D3EE59AD28EC641ACEE05BCA4271A527E5ECAB * L_6 = (InvalidOperationException_t10D3EE59AD28EC641ACEE05BCA4271A527E5ECAB *)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&InvalidOperationException_t10D3EE59AD28EC641ACEE05BCA4271A527E5ECAB_il2cpp_TypeInfo_var)));
-		InvalidOperationException__ctor_mC012CE552988309733C896F3FEA8249171E4402E(L_6, L_5, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 368));
-		IL2CPP_RAISE_MANAGED_EXCEPTION(L_6, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NSString_Serialize_mEF0C5C17675E9D2CA7A0FA718C72C6C18D6BE901_RuntimeMethod_var)));
+		L_4 = String_Concat_m89EAB4C6A96B0E5C3F87300D6BE78D386B9EFC44(((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral8F75ECDB116DCBBF6FC5A38C92B230BE664085FE)), L_3, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralB3FDE45005CCEC81C2BA207B67478532CE7E6223)), /*hidden argument*/NULL);
+		InvalidOperationException_t10D3EE59AD28EC641ACEE05BCA4271A527E5ECAB * L_5 = (InvalidOperationException_t10D3EE59AD28EC641ACEE05BCA4271A527E5ECAB *)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&InvalidOperationException_t10D3EE59AD28EC641ACEE05BCA4271A527E5ECAB_il2cpp_TypeInfo_var)));
+		InvalidOperationException__ctor_mC012CE552988309733C896F3FEA8249171E4402E(L_5, L_4, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_5, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NSString_Serialize_mEF0C5C17675E9D2CA7A0FA718C72C6C18D6BE901_RuntimeMethod_var)));
 	}
 
-IL_0032:
+IL_002c:
 	{
 		// return Serialize(this);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 362));
-		NSString_t82809DF63F200B683E2596807BD84CEDD7025E37  L_7 = (*(NSString_t82809DF63F200B683E2596807BD84CEDD7025E37 *)__this);
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 369));
-		NSData_t27227240875F34DEF760BD15736BBAAE45C2AD57  L_8;
-		L_8 = NSString_Serialize_m677EE71C84D98E6868B98A3977F21ABAA489E2BC(L_7, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 369));
-		V_1 = L_8;
-		goto IL_0040;
-	}
-
-IL_0040:
-	{
-		// }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 363));
-		NSData_t27227240875F34DEF760BD15736BBAAE45C2AD57  L_9 = V_1;
-		return L_9;
+		NSString_t82809DF63F200B683E2596807BD84CEDD7025E37  L_6 = (*(NSString_t82809DF63F200B683E2596807BD84CEDD7025E37 *)__this);
+		NSData_t27227240875F34DEF760BD15736BBAAE45C2AD57  L_7;
+		L_7 = NSString_Serialize_m677EE71C84D98E6868B98A3977F21ABAA489E2BC(L_6, /*hidden argument*/NULL);
+		return L_7;
 	}
 }
 IL2CPP_EXTERN_C  NSData_t27227240875F34DEF760BD15736BBAAE45C2AD57  NSString_Serialize_mEF0C5C17675E9D2CA7A0FA718C72C6C18D6BE901_AdjustorThunk (RuntimeObject * __this, const RuntimeMethod* method)
@@ -4075,24 +2949,10 @@ IL2CPP_EXTERN_C  NSData_t27227240875F34DEF760BD15736BBAAE45C2AD57  NSString_Seri
 // System.Void Unity.iOS.Multipeer.NSString::Dispose()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NSString_Dispose_m066AD20CDF39C3A7BF328EECF98552ED4C9515C8 (NSString_t82809DF63F200B683E2596807BD84CEDD7025E37 * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSString_Dispose_m066AD20CDF39C3A7BF328EECF98552ED4C9515C8_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSString_t82809DF63F200B683E2596807BD84CEDD7025E37_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NSString_Dispose_m066AD20CDF39C3A7BF328EECF98552ED4C9515C8_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 370));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 371));
 	{
 		// public void Dispose() => NativeApi.CFRelease(ref m_Ptr);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 372));
 		intptr_t* L_0 = __this->get_address_of_m_Ptr_0();
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 373));
 		NativeApi_CFRelease_m7ED75C62FCA913F0649E432847FF1B5094D0B24B((intptr_t*)L_0, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 373));
 		return;
 	}
 }
@@ -4105,25 +2965,11 @@ IL2CPP_EXTERN_C  void NSString_Dispose_m066AD20CDF39C3A7BF328EECF98552ED4C9515C8
 // System.Int32 Unity.iOS.Multipeer.NSString::GetHashCode()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NSString_GetHashCode_m461A620524216EE4CA3C33290A244C28DB81C5E8 (NSString_t82809DF63F200B683E2596807BD84CEDD7025E37 * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSString_GetHashCode_m461A620524216EE4CA3C33290A244C28DB81C5E8_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSString_t82809DF63F200B683E2596807BD84CEDD7025E37_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NSString_GetHashCode_m461A620524216EE4CA3C33290A244C28DB81C5E8_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 374));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 375));
 	{
 		// public override int GetHashCode() => m_Ptr.GetHashCode();
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 376));
 		intptr_t* L_0 = __this->get_address_of_m_Ptr_0();
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 377));
 		int32_t L_1;
 		L_1 = IntPtr_GetHashCode_m55E65FB52EFE7C0EBC3C28E66A5D7542F3B1D35D((intptr_t*)L_0, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 377));
 		return L_1;
 	}
 }
@@ -4141,44 +2987,27 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool NSString_Equals_m188888DE44AF9EFC18F411B
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSString_Equals_m188888DE44AF9EFC18F411B6BBD00C0A9280D3A3_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSString_t82809DF63F200B683E2596807BD84CEDD7025E37_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSString_t82809DF63F200B683E2596807BD84CEDD7025E37_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___obj0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NSString_Equals_m188888DE44AF9EFC18F411B6BBD00C0A9280D3A3_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 378));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 379));
-	int32_t G_B3_0 = 0;
 	{
 		// public override bool Equals(object obj) => (obj is NSString) && Equals((NSString)obj);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 380));
 		RuntimeObject * L_0 = ___obj0;
 		if (!((RuntimeObject *)IsInstSealed((RuntimeObject*)L_0, NSString_t82809DF63F200B683E2596807BD84CEDD7025E37_il2cpp_TypeInfo_var)))
 		{
-			goto IL_0016;
+			goto IL_0015;
 		}
 	}
 	{
 		RuntimeObject * L_1 = ___obj0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 381));
 		bool L_2;
 		L_2 = NSString_Equals_m595BAD260FFB10C5D9243C4E57157672BB7C36BD((NSString_t82809DF63F200B683E2596807BD84CEDD7025E37 *)__this, ((*(NSString_t82809DF63F200B683E2596807BD84CEDD7025E37 *)((NSString_t82809DF63F200B683E2596807BD84CEDD7025E37 *)UnBox(L_1, NSString_t82809DF63F200B683E2596807BD84CEDD7025E37_il2cpp_TypeInfo_var)))), /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 381));
-		G_B3_0 = ((int32_t)(L_2));
-		goto IL_0017;
+		return L_2;
 	}
 
-IL_0016:
+IL_0015:
 	{
-		G_B3_0 = 0;
-	}
-
-IL_0017:
-	{
-		return (bool)G_B3_0;
+		return (bool)0;
 	}
 }
 IL2CPP_EXTERN_C  bool NSString_Equals_m188888DE44AF9EFC18F411B6BBD00C0A9280D3A3_AdjustorThunk (RuntimeObject * __this, RuntimeObject * ___obj0, const RuntimeMethod* method)
@@ -4192,28 +3021,13 @@ IL2CPP_EXTERN_C  bool NSString_Equals_m188888DE44AF9EFC18F411B6BBD00C0A9280D3A3_
 // System.Boolean Unity.iOS.Multipeer.NSString::Equals(Unity.iOS.Multipeer.NSString)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool NSString_Equals_m595BAD260FFB10C5D9243C4E57157672BB7C36BD (NSString_t82809DF63F200B683E2596807BD84CEDD7025E37 * __this, NSString_t82809DF63F200B683E2596807BD84CEDD7025E37  ___other0, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSString_Equals_m595BAD260FFB10C5D9243C4E57157672BB7C36BD_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSString_t82809DF63F200B683E2596807BD84CEDD7025E37_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___other0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NSString_Equals_m595BAD260FFB10C5D9243C4E57157672BB7C36BD_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 382));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 383));
 	{
 		// public bool Equals(NSString other) => m_Ptr == other.m_Ptr;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 384));
 		intptr_t L_0 = __this->get_m_Ptr_0();
 		NSString_t82809DF63F200B683E2596807BD84CEDD7025E37  L_1 = ___other0;
 		intptr_t L_2 = L_1.get_m_Ptr_0();
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 385));
 		bool L_3;
 		L_3 = IntPtr_op_Equality_mD94F3FE43A65684EFF984A7B95E70D2520C0AC73((intptr_t)L_0, (intptr_t)L_2, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 385));
 		return L_3;
 	}
 }
@@ -4228,48 +3042,22 @@ IL2CPP_EXTERN_C  bool NSString_Equals_m595BAD260FFB10C5D9243C4E57157672BB7C36BD_
 // System.Boolean Unity.iOS.Multipeer.NSString::op_Equality(Unity.iOS.Multipeer.NSString,Unity.iOS.Multipeer.NSString)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool NSString_op_Equality_m2A270FA2EE83E6CD936F2707A6DFCC81202F84D9 (NSString_t82809DF63F200B683E2596807BD84CEDD7025E37  ___lhs0, NSString_t82809DF63F200B683E2596807BD84CEDD7025E37  ___rhs1, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSString_op_Equality_m2A270FA2EE83E6CD936F2707A6DFCC81202F84D9_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___lhs0), (&___rhs1));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NSString_op_Equality_m2A270FA2EE83E6CD936F2707A6DFCC81202F84D9_RuntimeMethod_var, NULL, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 386));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 387));
 	{
 		// public static bool operator==(NSString lhs, NSString rhs) => lhs.Equals(rhs);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 388));
 		NSString_t82809DF63F200B683E2596807BD84CEDD7025E37  L_0 = ___rhs1;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 389));
 		bool L_1;
 		L_1 = NSString_Equals_m595BAD260FFB10C5D9243C4E57157672BB7C36BD((NSString_t82809DF63F200B683E2596807BD84CEDD7025E37 *)(&___lhs0), L_0, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 389));
 		return L_1;
 	}
 }
 // System.Boolean Unity.iOS.Multipeer.NSString::op_Inequality(Unity.iOS.Multipeer.NSString,Unity.iOS.Multipeer.NSString)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool NSString_op_Inequality_m5A4CE5BA814C3E8C2F49089BE7C2132EC307E52B (NSString_t82809DF63F200B683E2596807BD84CEDD7025E37  ___lhs0, NSString_t82809DF63F200B683E2596807BD84CEDD7025E37  ___rhs1, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSString_op_Inequality_m5A4CE5BA814C3E8C2F49089BE7C2132EC307E52B_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___lhs0), (&___rhs1));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NSString_op_Inequality_m5A4CE5BA814C3E8C2F49089BE7C2132EC307E52B_RuntimeMethod_var, NULL, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 390));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 391));
 	{
 		// public static bool operator!=(NSString lhs, NSString rhs) => !lhs.Equals(rhs);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 392));
 		NSString_t82809DF63F200B683E2596807BD84CEDD7025E37  L_0 = ___rhs1;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 393));
 		bool L_1;
 		L_1 = NSString_Equals_m595BAD260FFB10C5D9243C4E57157672BB7C36BD((NSString_t82809DF63F200B683E2596807BD84CEDD7025E37 *)(&___lhs0), L_0, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 393));
 		return (bool)((((int32_t)L_1) == ((int32_t)0))? 1 : 0);
 	}
 }
@@ -4355,27 +3143,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeApi_CFRelease_m7ED75C62FCA913F0649
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IntPtr_t_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NativeApi_CFRelease_m7ED75C62FCA913F0649E432847FF1B5094D0B24B_RuntimeMethod_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___ptr0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NativeApi_CFRelease_m7ED75C62FCA913F0649E432847FF1B5094D0B24B_RuntimeMethod_var, NULL, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 394));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 395));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 396));
 		// CFRelease(ptr);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 397));
 		intptr_t* L_0 = ___ptr0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 400));
 		NativeApi_CFRelease_mBCFA186C499C738DC6ED116ACBE9D7278B36E7EA((intptr_t)((*(L_0))), /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 400));
 		// ptr = IntPtr.Zero;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 398));
 		intptr_t* L_1 = ___ptr0;
 		*((intptr_t*)L_1) = (intptr_t)(0);
 		// }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 399));
 		return;
 	}
 }
@@ -4393,21 +3170,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeApi_CFRelease_mBCFA186C499C738DC6E
 #endif
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void NSData__ctor_m7D9316BE449293BDF865CDF447E59C85D0893710_inline (NSData_t27227240875F34DEF760BD15736BBAAE45C2AD57 * __this, intptr_t ___existing0, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSData__ctor_m7D9316BE449293BDF865CDF447E59C85D0893710_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSData_t27227240875F34DEF760BD15736BBAAE45C2AD57_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___existing0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NSData__ctor_m7D9316BE449293BDF865CDF447E59C85D0893710_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 124));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 125));
 	{
 		// internal NSData(IntPtr existing) => m_Ptr = existing;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 126));
 		intptr_t L_0 = ___existing0;
 		__this->set_m_Ptr_0((intptr_t)L_0);
 		return;
@@ -4415,21 +3179,8 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void NSData__ctor_m7D9316BE449293
 }
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void NSErrorException_set_Code_mED507AE25D3073C4BF328AF5FC9285288370D26D_inline (NSErrorException_tFF049C4B0C58F3D97BD1E636E31E3EAA4E06ACD6 * __this, int64_t ___value0, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSErrorException_set_Code_mED507AE25D3073C4BF328AF5FC9285288370D26D_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSErrorException_tFF049C4B0C58F3D97BD1E636E31E3EAA4E06ACD6_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___value0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NSErrorException_set_Code_mED507AE25D3073C4BF328AF5FC9285288370D26D_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 293));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 294));
 	{
 		// public long Code { get; private set; }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 295));
 		int64_t L_0 = ___value0;
 		__this->set_U3CCodeU3Ek__BackingField_17(L_0);
 		return;
@@ -4437,21 +3188,8 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void NSErrorException_set_Code_mE
 }
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void NSErrorException_set_Description_m736FB8FD0E2B8653C364CE37DC0F23C91F63904D_inline (NSErrorException_tFF049C4B0C58F3D97BD1E636E31E3EAA4E06ACD6 * __this, String_t* ___value0, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSErrorException_set_Description_m736FB8FD0E2B8653C364CE37DC0F23C91F63904D_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSErrorException_tFF049C4B0C58F3D97BD1E636E31E3EAA4E06ACD6_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___value0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NSErrorException_set_Description_m736FB8FD0E2B8653C364CE37DC0F23C91F63904D_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 299));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 300));
 	{
 		// public string Description { get; private set; }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 301));
 		String_t* L_0 = ___value0;
 		__this->set_U3CDescriptionU3Ek__BackingField_18(L_0);
 		return;
@@ -4459,21 +3197,8 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void NSErrorException_set_Descrip
 }
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void NSString__ctor_mF2ADBE1A7EC317142FB3291215B15AE05C5CB63D_inline (NSString_t82809DF63F200B683E2596807BD84CEDD7025E37 * __this, intptr_t ___existing0, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSString__ctor_mF2ADBE1A7EC317142FB3291215B15AE05C5CB63D_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NSString_t82809DF63F200B683E2596807BD84CEDD7025E37_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___existing0));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NSString__ctor_mF2ADBE1A7EC317142FB3291215B15AE05C5CB63D_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 302));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 303));
 	{
 		// internal NSString(IntPtr existing) => m_Ptr = existing;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_XR_Samples_Multipeer + 304));
 		intptr_t L_0 = ___existing0;
 		__this->set_m_Ptr_0((intptr_t)L_0);
 		return;
@@ -4481,14 +3206,6 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void NSString__ctor_mF2ADBE1A7EC3
 }
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t String_get_Length_m129FC0ADA02FECBED3C0B1A809AE84A5AEE1CF09_inline (String_t* __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&String_get_Length_m129FC0ADA02FECBED3C0B1A809AE84A5AEE1CF09_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, String_get_Length_m129FC0ADA02FECBED3C0B1A809AE84A5AEE1CF09_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		int32_t L_0 = __this->get_m_stringLength_0();
 		return L_0;
@@ -4496,14 +3213,6 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t String_get_Length_m129FC0
 }
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void IntPtr__ctor_mBB7AF6DA6350129AD6422DE474FD52F715CC0C40_inline (intptr_t* __this, void* ___value0, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IntPtr__ctor_mBB7AF6DA6350129AD6422DE474FD52F715CC0C40_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, IntPtr__ctor_mBB7AF6DA6350129AD6422DE474FD52F715CC0C40_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_PAUSE_POINT;
 	{
 		void* L_0 = ___value0;
 		*__this = ((intptr_t)L_0);
@@ -4512,19 +3221,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void IntPtr__ctor_mBB7AF6DA635012
 }
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t NativeSlice_1_get_Length_mC04A811824226BCE2D1DEA9D8434BD1DA0E34B25_gshared_inline (NativeSlice_1_tA05D3BC7EB042685CBFD3369ECB6140D114C911B * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NativeSlice_1_get_Length_mC04A811824226BCE2D1DEA9D8434BD1DA0E34B25_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NativeSlice_1_tF548328F9A113A68C4CB880F74339084F9899CFB_0_0_0_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
-	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, NativeSlice_1_get_Length_mC04A811824226BCE2D1DEA9D8434BD1DA0E34B25_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 526));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 527));
-	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 528));
 		int32_t L_0 = (int32_t)__this->get_m_Length_2();
 		return (int32_t)L_0;
 	}
