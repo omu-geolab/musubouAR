@@ -555,6 +555,8 @@ struct PointerEventData_tC6C1BEE9D4C8755A31DA7FC0C9A1F28A36456954;
 struct PrefabImagePairManager_t02A2EF0A6C8CCDBB935F9DF00EAFE57290E84349;
 // UnityEngine.XR.ARFoundation.Samples.ProjectileLauncher
 struct ProjectileLauncher_t5E5AD8A9F9DD6AAA1CFCBCC939860119C1BA7EFE;
+// QuitBehavior
+struct QuitBehavior_tC0D835FBBE2545B1044D32B32783CAA624235FA5;
 // DigitalRuby.RainMaker.RainCollision
 struct RainCollision_t685D4EB84ADAA19FA7C46D1DC6C322B9955FD81E;
 // DigitalRuby.RainMaker.RainScript
@@ -15803,6 +15805,15 @@ public:
 };
 
 
+// QuitBehavior
+struct  QuitBehavior_tC0D835FBBE2545B1044D32B32783CAA624235FA5  : public MonoBehaviour_t37A501200D970A8257124B0EAE00A0FF3DDC354A
+{
+public:
+
+public:
+};
+
+
 // DigitalRuby.RainMaker.RainCollision
 struct  RainCollision_t685D4EB84ADAA19FA7C46D1DC6C322B9955FD81E  : public MonoBehaviour_t37A501200D970A8257124B0EAE00A0FF3DDC354A
 {
@@ -21639,6 +21650,10 @@ inline Rigidbody_t101F2E2F9F16E765A77429B2DE4527D2047A887A * Component_GetCompon
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  Ray_get_direction_m2B31F86F19B64474A901B28D3808011AE7A13EFC (Ray_t2E9E67CC8B03EE6ED2BBF3D2C9C96DDF70E1D5E6 * __this, const RuntimeMethod* method);
 // System.Void UnityEngine.Rigidbody::set_velocity(UnityEngine.Vector3)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Rigidbody_set_velocity_m8DC0988916EB38DFD7D4584830B41D79140BF18D (Rigidbody_t101F2E2F9F16E765A77429B2DE4527D2047A887A * __this, Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  ___value0, const RuntimeMethod* method);
+// System.Void UnityEngine.Application::Unload()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Application_Unload_m9C24A6A57DB889FFB5C6F447BAA3FF192A04E885 (const RuntimeMethod* method);
+// System.Void UnityEngine.Application::Quit()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Application_Quit_m8D720E5092786C2EE32310D85FE61C253D3B1F2A (const RuntimeMethod* method);
 // System.Int32 UnityEngine.Random::Range(System.Int32,System.Int32)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Random_Range_m4B3A0037ACA057F33C94508F908546B9317D996A (int32_t ___minInclusive0, int32_t ___maxExclusive1, const RuntimeMethod* method);
 // System.Void UnityEngine.ParticleSystem/EmitParams::set_position(UnityEngine.Vector3)
@@ -31087,6 +31102,58 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ProjectileLauncher__ctor_m4B3DF202914A63
 	{
 		// float m_InitialSpeed = 25;
 		__this->set_m_InitialSpeed_5((25.0f));
+		MonoBehaviour__ctor_mC0995D847F6A95B1A553652636C38A2AA8B13BED(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void QuitBehavior::Start()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void QuitBehavior_Start_mC35A9690C2F0E124557EAE26CBC3A85BF344D84F (QuitBehavior_tC0D835FBBE2545B1044D32B32783CAA624235FA5 * __this, const RuntimeMethod* method)
+{
+	{
+		// }
+		return;
+	}
+}
+// System.Void QuitBehavior::Update()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void QuitBehavior_Update_m6691DE68363B980C048BCADEDB2BEF2FF1757111 (QuitBehavior_tC0D835FBBE2545B1044D32B32783CAA624235FA5 * __this, const RuntimeMethod* method)
+{
+	{
+		// }
+		return;
+	}
+}
+// System.Void QuitBehavior::OnButtonPressed()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void QuitBehavior_OnButtonPressed_m065E996ECA28CD5B3D867BB5EFD4A9C71AC45BD2 (QuitBehavior_tC0D835FBBE2545B1044D32B32783CAA624235FA5 * __this, const RuntimeMethod* method)
+{
+	{
+		// Application.Unload();
+		Application_Unload_m9C24A6A57DB889FFB5C6F447BAA3FF192A04E885(/*hidden argument*/NULL);
+		// }
+		return;
+	}
+}
+// System.Void QuitBehavior::OnQuit()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void QuitBehavior_OnQuit_m17EE985A514F9CAC4E09E2F608996097571C8B1D (QuitBehavior_tC0D835FBBE2545B1044D32B32783CAA624235FA5 * __this, const RuntimeMethod* method)
+{
+	{
+		// Application.Quit();
+		Application_Quit_m8D720E5092786C2EE32310D85FE61C253D3B1F2A(/*hidden argument*/NULL);
+		// }
+		return;
+	}
+}
+// System.Void QuitBehavior::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void QuitBehavior__ctor_mF05257F242D1BFC8A92FAA85B7A599DE8F772F47 (QuitBehavior_tC0D835FBBE2545B1044D32B32783CAA624235FA5 * __this, const RuntimeMethod* method)
+{
+	{
 		MonoBehaviour__ctor_mC0995D847F6A95B1A553652636C38A2AA8B13BED(__this, /*hidden argument*/NULL);
 		return;
 	}
