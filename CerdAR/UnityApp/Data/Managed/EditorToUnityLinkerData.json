@@ -566,6 +566,13 @@
         {
             "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
+            "fullManagedTypeName": "QuitBehavior",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
             "fullManagedTypeName": "RuleWaterController",
             "moduleName": "",
             "usedInScenes": []
@@ -833,6 +840,13 @@
             "managedAssemblyName": "Unity.RenderPipelines.Universal.Runtime.dll",
             "nativeClass": "",
             "fullManagedTypeName": "UnityEngine.Rendering.Universal.ChromaticAberration",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Unity.RenderPipelines.Universal.Runtime.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "UnityEngine.Rendering.Universal.DepthOfField",
             "moduleName": "",
             "usedInScenes": []
         },

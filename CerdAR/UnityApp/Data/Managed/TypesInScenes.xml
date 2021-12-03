@@ -56,6 +56,7 @@
 		<type fullname="DigitalRuby.RainMaker.RainScript" preserve="nothing"/>
 		<type fullname="Float" preserve="nothing"/>
 		<type fullname="FloodController" preserve="nothing"/>
+		<type fullname="QuitBehavior" preserve="nothing"/>
 		<type fullname="RuleWaterController" preserve="nothing"/>
 		<type fullname="UnityEngine.XR.ARFoundation.Samples.ARKitCoachingOverlay" preserve="nothing"/>
 		<type fullname="UnityEngine.XR.ARFoundation.Samples.BackButton" preserve="nothing"/>
@@ -101,6 +102,7 @@
 	<assembly fullname="Unity.RenderPipelines.Universal.Runtime">
 		<type fullname="UnityEngine.Rendering.Universal.Bloom" preserve="nothing"/>
 		<type fullname="UnityEngine.Rendering.Universal.ChromaticAberration" preserve="nothing"/>
+		<type fullname="UnityEngine.Rendering.Universal.DepthOfField" preserve="nothing"/>
 		<type fullname="UnityEngine.Rendering.Universal.ForwardRendererData" preserve="nothing"/>
 		<type fullname="UnityEngine.Rendering.Universal.LensDistortion" preserve="nothing"/>
 		<type fullname="UnityEngine.Rendering.Universal.PostProcessData" preserve="nothing"/>
