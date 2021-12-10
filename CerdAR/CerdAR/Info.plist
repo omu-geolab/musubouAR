@@ -21,7 +21,7 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>3</string>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>LSApplicationCategoryType</key>
 	<string></string>
 	<key>LSRequiresIPhoneOS</key>
@@ -61,21 +61,21 @@
 		</dict>
 	</dict>
 	<key>NSCameraUsageDescription</key>
-	<string>Camera Use</string>
+	<string>本アプリでは、周辺の防災施設や災害情報をAR表示するためにカメラを使用します</string>
 	<key>NSHealthClinicalHealthRecordsShareUsageDescription</key>
-	<string>Health Records Usage</string>
+	<string>HealthKitを活用し、Apple Watchで計測する生体情報（心拍数など）や行動情報（移動軌跡など）を収集し、自身のアクティビティを可視化することができます。この機能により、自身の体力の把握や、まち歩きのモチベーション向上につなげる目的があります</string>
 	<key>NSHealthShareUsageDescription</key>
-	<string>Health Share Usage</string>
+	<string>HealthKitを活用し、Apple Watchで計測する生体情報（心拍数など）や行動情報（移動軌跡など）を収集し、自身のアクティビティを可視化することができます。この機能により、自身の体力の把握や、まち歩きのモチベーション向上につなげる目的があります</string>
 	<key>NSHealthUpdateUsageDescription</key>
-	<string>Health Update Usage</string>
+	<string>HealthKitを活用し、Apple Watchで計測する生体情報（心拍数など）や行動情報（移動軌跡など）を収集し、自身のアクティビティを可視化することができます。この機能により、自身の体力の把握や、まち歩きのモチベーション向上につなげる目的があります</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>for arkit</string>
+	<string>ユーザーの位置をマップ上に表示します</string>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>常に許可</string>
 	<key>NSLocationUsageDescription</key>
-	<string>for arkit</string>
+	<string>ユーザーの位置をマップ上に表示します</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>ユーザーの位置をMKMapView上に表示します。</string>
+	<string>ユーザーの位置をマップ上に表示します</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>audio</string>
@@ -88,10 +88,6 @@
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
-	<key>UIRequiredDeviceCapabilities</key>
-	<array>
-		<string>armv7</string>
-	</array>
 	<key>UIRequiresFullScreen</key>
 	<true/>
 	<key>UISupportedInterfaceOrientations</key>
