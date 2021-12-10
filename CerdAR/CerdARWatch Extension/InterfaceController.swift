@@ -73,7 +73,7 @@ class InterfaceController: WKInterfaceController {
         content.title = title
         content.body = message
         content.sound = UNNotificationSound.default
-        let trigger = UNTimeIntervalNotificationTrigger.init(
+        _ = UNTimeIntervalNotificationTrigger.init(
           timeInterval: 5,
           repeats: false)
       

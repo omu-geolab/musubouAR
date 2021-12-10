@@ -100,7 +100,7 @@ class WorkoutManager: NSObject, HKWorkoutSessionDelegate, HKLiveWorkoutBuilderDe
     
     
     func startTimer() {
-        timer = ResumableTimer(interval: 1.0) { [weak self] in
+        timer = ResumableTimer(interval: 1.0) { [weak self ] in
             
         }
         timer?.start()

@@ -1009,7 +1009,6 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
      */
     @objc internal func onclick_Lidar(_ sender: UIButton) {
         playButtonSound()
-        Unity.shared.show()
     }
     
     /*

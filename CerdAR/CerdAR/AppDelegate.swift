@@ -37,7 +37,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //               window.makeKeyAndVisible()
 //             }
         self.window?.makeKeyAndVisible()
-        Unity.shared.setHostMainWindow(window)
         
         // Override point for customization after application launch.
         return true

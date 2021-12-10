@@ -48,10 +48,7 @@
 		F033F9F5219171DD008A3A2E /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F033F9F4219171DD008A3A2E /* ARViewController.swift */; };
 		F033F9F8219172E7008A3A2E /* MapboxARAnnotationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F033F9F7219172E7008A3A2E /* MapboxARAnnotationManager.swift */; };
 		F033F9FA219172EC008A3A2E /* MapboxARAnchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F033F9F9219172EC008A3A2E /* MapboxARAnchor.swift */; };
-		F03B8203268B1F8C003A6011 /* Unity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03B8202268B1F8C003A6011 /* Unity.swift */; };
-		F03B8238268C54DB003A6011 /* UnityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03B8237268C54DB003A6011 /* UnityViewController.swift */; };
 		F040A5A025B6C18300647A7F /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F040A59F25B6C18300647A7F /* LoadingView.swift */; };
-		F055A0B4268B236200034143 /* UnityFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F055A0B2268B236200034143 /* UnityFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F05A3C9A26048756002BC9E4 /* NodeAR.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05A3C9926048756002BC9E4 /* NodeAR.swift */; };
 		F060A95E25F212D300888F67 /* WorkoutDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F060A95D25F212D300888F67 /* WorkoutDetail.storyboard */; };
 		F060A96425F2134B00888F67 /* WorkoutDetaill.swift in Sources */ = {isa = PBXBuildFile; fileRef = F060A96325F2134B00888F67 /* WorkoutDetaill.swift */; };
@@ -149,17 +146,6 @@
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F033F9FE2191761D008A3A2E /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				F055A0B4268B236200034143 /* UnityFramework.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -220,8 +206,6 @@
 		F033F9F4219171DD008A3A2E /* ARViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
 		F033F9F7219172E7008A3A2E /* MapboxARAnnotationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapboxARAnnotationManager.swift; sourceTree = "<group>"; };
 		F033F9F9219172EC008A3A2E /* MapboxARAnchor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapboxARAnchor.swift; sourceTree = "<group>"; };
-		F03B8202268B1F8C003A6011 /* Unity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unity.swift; sourceTree = "<group>"; };
-		F03B8237268C54DB003A6011 /* UnityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnityViewController.swift; sourceTree = "<group>"; };
 		F040A59F25B6C18300647A7F /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		F054082921CB56E4009D8558 /* MapboxMobileEvents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapboxMobileEvents.framework; path = ../Carthage/Build/iOS/MapboxMobileEvents.framework; sourceTree = "<group>"; };
 		F054082B21CB56E9009D8558 /* MapboxSceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapboxSceneKit.framework; path = ../Carthage/Build/iOS/MapboxSceneKit.framework; sourceTree = "<group>"; };
@@ -401,7 +385,6 @@
 				AC2C52CF1D5805F70032B689 /* Assets.xcassets */,
 				F06D0D4B219C12CB0046747B /* SceneKit.scnassets */,
 				AC2C52D41D5805F70032B689 /* Info.plist */,
-				F03B8202268B1F8C003A6011 /* Unity.swift */,
 			);
 			path = CerdAR;
 			sourceTree = "<group>";
@@ -431,7 +414,6 @@
 				F0986D3125C10B2D00CB0FE6 /* TermsViewController.swift */,
 				F09088A325EC87B7008463C8 /* WorkoutViewController.swift */,
 				F060A96325F2134B00888F67 /* WorkoutDetaill.swift */,
-				F03B8237268C54DB003A6011 /* UnityViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -562,7 +544,6 @@
 				AC2C52BE1D5805F70032B689 /* Sources */,
 				AC2C52BF1D5805F70032B689 /* Frameworks */,
 				AC2C52C01D5805F70032B689 /* Resources */,
-				F033F9FE2191761D008A3A2E /* Embed Frameworks */,
 				F054082D21CB5719009D8558 /* ShellScript */,
 				6F6D3F79DA9D8C9AD3CA6370 /* [CP] Embed Pods Frameworks */,
 				F00A935E25D3BB5F00BC5D5A /* Embed Watch Content */,
@@ -911,7 +892,6 @@
 				F024796125DF77190019056B /* WorkoutService.swift in Sources */,
 				F060A98625F849E700888F67 /* ToggleButton.swift in Sources */,
 				F06D987622FA75E1001CCB9E /* SectionedSlider.swift in Sources */,
-				F03B8238268C54DB003A6011 /* UnityViewController.swift in Sources */,
 				F09088C725EE3C45008463C8 /* GradidentPolylineRenderer.swift in Sources */,
 				D3CF68DE1D91187D008B588E /* termsView.swift in Sources */,
 				ACEE245C1D8235FE00102E10 /* MakeTagImage.swift in Sources */,
@@ -931,7 +911,6 @@
 				D3CF68DD1D91187D008B588E /* detailView.swift in Sources */,
 				F060A99825F89ED100888F67 /* WorkoutData.swift in Sources */,
 				D37E86961E780A6A0030B01A /* Vibration.swift in Sources */,
-				F03B8203268B1F8C003A6011 /* Unity.swift in Sources */,
 				BF01B83E1F6FEECE001AC15E /* GISImageView.swift in Sources */,
 				AC2AB8F61DB778A10048931C /* Constant.swift in Sources */,
 				F05A3C9A26048756002BC9E4 /* NodeAR.swift in Sources */,
@@ -1057,7 +1036,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_BITCODE = NO;
+				ENABLE_BITCODE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1116,7 +1095,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_BITCODE = NO;
+				ENABLE_BITCODE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1145,13 +1124,13 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ND55MN997H;
-				ENABLE_BITCODE = NO;
+				CURRENT_PROJECT_VERSION = 5;
+				DEVELOPMENT_TEAM = 9F4BD2UBE2;
+				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/",
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = CerdAR/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -1159,8 +1138,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0;
-				PRODUCT_BUNDLE_IDENTIFIER = jp.co.apptec.cerdar;
+				MARKETING_VERSION = 3.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ocu.cerd-ar";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1179,13 +1158,13 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ND55MN997H;
-				ENABLE_BITCODE = NO;
+				CURRENT_PROJECT_VERSION = 5;
+				DEVELOPMENT_TEAM = 9F4BD2UBE2;
+				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/",
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = CerdAR/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -1193,8 +1172,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0;
-				PRODUCT_BUNDLE_IDENTIFIER = jp.co.apptec.cerdar;
+				MARKETING_VERSION = 3.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ocu.cerd-ar";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1209,7 +1188,7 @@
 			baseConfigurationReference = 0824046B153E46BAD010AE20 /* Pods-CerdARTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = ND55MN997H;
+				DEVELOPMENT_TEAM = 9F4BD2UBE2;
 				INFOPLIST_FILE = CerdARTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1229,7 +1208,7 @@
 			baseConfigurationReference = 8BC8BE4E33EDA949832C977C /* Pods-CerdARTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = ND55MN997H;
+				DEVELOPMENT_TEAM = 9F4BD2UBE2;
 				INFOPLIST_FILE = CerdARTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1249,7 +1228,7 @@
 			baseConfigurationReference = 4B78C49963F154A37F7F255D /* Pods-CerdAR-CerdARUITests.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
-				DEVELOPMENT_TEAM = ND55MN997H;
+				DEVELOPMENT_TEAM = 9F4BD2UBE2;
 				INFOPLIST_FILE = CerdARUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1269,7 +1248,7 @@
 			baseConfigurationReference = 476B6FE03EBBB1271C8ED10D /* Pods-CerdAR-CerdARUITests.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
-				DEVELOPMENT_TEAM = ND55MN997H;
+				DEVELOPMENT_TEAM = 9F4BD2UBE2;
 				INFOPLIST_FILE = CerdARUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1295,8 +1274,8 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_ENTITLEMENTS = "CerdARWatch Extension/CerdARWatch Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
-				DEVELOPMENT_TEAM = ND55MN997H;
+				CURRENT_PROJECT_VERSION = 5;
+				DEVELOPMENT_TEAM = 9F4BD2UBE2;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "CerdARWatch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1304,10 +1283,10 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 3.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = jp.co.apptec.cerdar.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = "ocu.cerd-ar.watchkitapp.watchkitextension";
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1329,8 +1308,8 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_ENTITLEMENTS = "CerdARWatch Extension/CerdARWatch Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
-				DEVELOPMENT_TEAM = ND55MN997H;
+				CURRENT_PROJECT_VERSION = 5;
+				DEVELOPMENT_TEAM = 9F4BD2UBE2;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "CerdARWatch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1338,9 +1317,9 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 3.0;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = jp.co.apptec.cerdar.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = "ocu.cerd-ar.watchkitapp.watchkitextension";
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1364,15 +1343,15 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
-				DEVELOPMENT_TEAM = ND55MN997H;
+				CURRENT_PROJECT_VERSION = 5;
+				DEVELOPMENT_TEAM = 9F4BD2UBE2;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				IBSC_MODULE = CerdARWatch_Extension;
 				INFOPLIST_FILE = CerdARWatch/Info.plist;
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 3.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = jp.co.apptec.cerdar.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = "ocu.cerd-ar.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1397,14 +1376,14 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
-				DEVELOPMENT_TEAM = ND55MN997H;
+				CURRENT_PROJECT_VERSION = 5;
+				DEVELOPMENT_TEAM = 9F4BD2UBE2;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				IBSC_MODULE = CerdARWatch_Extension;
 				INFOPLIST_FILE = CerdARWatch/Info.plist;
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 3.0;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = jp.co.apptec.cerdar.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = "ocu.cerd-ar.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
