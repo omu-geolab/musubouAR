@@ -44,7 +44,7 @@ CERD-ARは、身のまわりの防災関連情報や仮想的な災害情報を�
 
 ### CERD-ARの使い方 ###
 
-* [アプリのインストール方法について](https://bitbucket.org/nro2dai/cerd-ar/wiki/%E3%82%A2%E3%83%97%E3%83%AA%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E6%96%B9%E6%B3%95)
+* [アプリのビルド・インストール方法について](https://bitbucket.org/nro2dai/cerd-ar/wiki/%E3%82%A2%E3%83%97%E3%83%AA%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E6%96%B9%E6%B3%95(XCODE13.1%E7%94%A8))
 * [データのインポート方法について](https://bitbucket.org/nro2dai/cerd-ar/wiki/Data%20Import)（現在準備中）
 * [データファイル(GeoJSON)の詳細について](https://bitbucket.org/nro2dai/cerd-ar/wiki/GeoJSON)（現在準備中）
 * [アプリ用データ作成ツール（ベータ版）](https://cerd-ocu.github.io/CERD-ARmap/)
@@ -57,7 +57,6 @@ CERD-ARは、身のまわりの防災関連情報や仮想的な災害情報を�
 ### AppStore公開版 ###
 
 * [CERD-AR AppStore](https://apps.apple.com/jp/app/cerd-ar/id1222300758)
-＊現在、AppStoreには旧バージョンが公開されています。新バージョンの公開は2020年度1月を予定しています。
 
 ### 開発者 & 協力者 ###
 
