@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import GoogleSignIn
 //import CoreData
 //import SwiftUI
 
@@ -24,6 +25,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 UNUserNotificationCenter.current().delegate = self
             }
         }
+       
+//        GIDSignIn.sharedInstance.delegate = self
+//        GIDSignIn.sharedInstance?.restorePreviousSignIn()
         self.launchOptions = launchOptions
         let viewController: UIViewController = loadViewController()
         self.window = UIWindow(frame: UIScreen.main.bounds)
@@ -38,8 +42,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //             }
         self.window?.makeKeyAndVisible()
         Unity.shared.setHostMainWindow(window)
-        
-        // Override point for customization after application launch.
+        GIDSignIn.sharedInstance.restorePreviousSignIn { user, error in
+            if error != nil || user == nil {
+              // Show the app's signed-out state.
+            } else {
+              // Show the app's signed-in state.
+            }
+          }
+
         return true
     }
     
@@ -69,6 +79,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Saves changes in the application's managed object context before the application terminates.
         /////self.saveContext()
         WorkoutService.shared.send(key: "message", message:"end")
+    }
+    func application(_ app: UIApplication,open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+      var handled: Bool
+      handled = GIDSignIn.sharedInstance.handle(url)
+      if handled {
+        return true
+      }
+      return false
     }
     
 }

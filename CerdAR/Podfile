@@ -6,7 +6,9 @@ target 'CerdAR' do
   use_frameworks!
 
   # Pods for CerdAR
+  pod 'GoogleSignIn'
   pod 'Mapbox-iOS-SDK', '~> 6.3.0'
+  pod 'XMLCoder', '~> 0.12.0'
   target 'CerdARTests' do
     inherit! :search_paths
     # Pods for testing

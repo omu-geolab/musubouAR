@@ -181,7 +181,7 @@ class WorkoutService: NSObject, WCSessionDelegate {
     func startWatchApp(completion: @escaping (Bool)->Void) {
         configuration = HKWorkoutConfiguration()
         configuration?.activityType = .walking
-        configuration?.locationType = .outdoor
+        configuration?.locationType = .unknown
         guard let workoutConfiguration = configuration else { return }
         
         getActiveWCSession { (wcSession) in

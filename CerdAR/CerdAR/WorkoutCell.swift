@@ -9,9 +9,12 @@
 import UIKit
 import MapKit
 import HealthKit
-
+protocol WorkoutCellDelegate {
+    func send(workout:HKWorkout)
+}
 class WorkoutCell: UITableViewCell {
     var workout:HKWorkout?
+    var delegate: WorkoutCellDelegate?
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var totalTimeLabel: UILabel!
@@ -21,35 +24,14 @@ class WorkoutCell: UITableViewCell {
     @IBOutlet weak var paceLbabel: UILabel!
     @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var containView: UIView!
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-        print("awakeFromNib")
-//        containView.layer.shadowColor = UIColor.black.cgColor //影の色を決める
-//        containView.layer.shadowOpacity = 1 //影の色の透明度
-//        containView.layer.shadowRadius = 8 //影のぼかし
-//        containView.layer.shadowOffset = CGSize(width: 4, height: 4)
-//        containView.layer.masksToBounds = true
-//        containView.layer.cornerRadius = 20
-    }
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        
-        // Configure the view for the selected state
-    }
+    @IBOutlet weak var sendButton: UIButton!
     
     override func layoutSubviews() {
         super.layoutSubviews()
               let bottomSpace: CGFloat = 20.0 // Let's assume the space you want is 10
               self.contentView.frame = self.contentView.frame.inset(by: UIEdgeInsets(top: 5, left: 5, bottom: bottomSpace, right: 5))
     }
-    
-    @objc func tapped(_ sender: UITapGestureRecognizer){
-        if sender.state == .ended {
-            print("タップ")
-        }
-    }
+
     func render(){
         guard let workout = workout else {
             return
@@ -61,10 +43,6 @@ class WorkoutCell: UITableViewCell {
         self.layer.shadowRadius = 5 //影のぼかし
         self.layer.shadowOffset = CGSize(width: 0, height: 3)
 
-//        let tapGesture:UITapGestureRecognizer = UITapGestureRecognizer(
-//                       target: self,
-//                       action: #selector(WorkoutCell.tapped(_:)))
-//        self.addGestureRecognizer(tapGesture)
         DispatchQueue.main.async { [self] in
             self.mapView.removeOverlays(self.mapView.overlays)
             let span = MKCoordinateSpan(latitudeDelta: 20.0, longitudeDelta: 20.0)
@@ -107,6 +85,10 @@ class WorkoutCell: UITableViewCell {
       
     }
     
+    func setVisibleSendButton(isVisible: Bool){
+        self.sendButton.isHidden = !isVisible
+    }
+    
     func getHeartRateAverage(){
         
         guard let workout = workout else {
@@ -138,6 +120,14 @@ class WorkoutCell: UITableViewCell {
         
         
     }
+    @IBAction func sendToMusubou(_ sender: Any) {
+        guard let workout = workout else {
+            return
+        }
+        delegate?.send(workout: workout)
+        
+        
+    }
     func fetchLocations()  {
         guard let workout = workout else {
             return
@@ -160,9 +150,9 @@ class WorkoutCell: UITableViewCell {
                 let locationQuery = HKWorkoutRouteQuery(route: routeSample) {
                     (routeQuery, location, done, error) in
                     for item in location! {
-                        if(item.speed != -1){
+//                        if(item.speed != -1){
                             totalWorkouts.append(item)
-                        }
+//                        }
                     }
                     
                     if done {

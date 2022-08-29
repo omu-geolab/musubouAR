@@ -521,12 +521,12 @@ class ARViewController: UIViewController,detailViewDelegate {
         mapView.allowsRotating = false
         mapView.allowsZooming = false
         mapView.allowsScrolling = false
-//        #if DEBUG
-//        mapView.allowsTilting = true
-//        mapView.allowsRotating = true
-//        mapView.allowsZooming = true
-//        mapView.allowsScrolling = true
-//        #endif
+        #if DEBUG
+        mapView.allowsTilting = true
+        mapView.allowsRotating = true
+        mapView.allowsZooming = true
+        mapView.allowsScrolling = true
+        #endif
         mapView.showsUserHeadingIndicator =  true
         mapView.layer.shadowColor = UIColor.black.cgColor
         mapView.layer.shadowRadius = 5
@@ -959,8 +959,8 @@ extension ARViewController: CLLocationManagerDelegate{
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
 //        if let location = locations.last{
 //            altitude = location.altitude
-//            userLat = location.coordinate.latitude
-//            userLon = location.coordinate.longitude
+////            userLat = location.coordinate.latitude
+////            userLon = location.coordinate.longitude
 //            updateAllDistances()
 //            updateStatus()
 //        }
@@ -1078,11 +1078,11 @@ extension ARViewController: CLLocationManagerDelegate{
                 self.mapView.isHidden = true
             }
         }
-//        #if DEBUG
-//        DispatchQueue.main.async {
-//            self.mapView.isHidden = false
-//        }
-//        #endif
+        #if DEBUG
+        DispatchQueue.main.async {
+            self.mapView.isHidden = false
+        }
+        #endif
     }
     func updateOverlay( risk:Int){
         let size = self.sceneView.bounds.size
@@ -1537,6 +1537,8 @@ extension ARViewController: MGLMapViewDelegate {
         return false
     }
     func mapView(_ mapView: MGLMapView, regionDidChangeAnimated animated: Bool) {
+//                userLat = self.mapView.centerCoordinate.latitude
+//                userLon = self.mapView.centerCoordinate.longitude
         if mapView.zoomLevel >  levelZoomMap + 0.5 || mapView.zoomLevel <  levelZoomMap - 0.5 {
             levelZoomMap = mapView.zoomLevel
             DispatchQueue.main.async {

@@ -292,7 +292,7 @@ extension  WorkoutManager: CLLocationManagerDelegate  {
       
         if running {
             let filteredLocations = locations.filter { (location: CLLocation) -> Bool in
-                location.horizontalAccuracy <= 30.0
+                filterAndAddLocation(location)
             }
             guard !filteredLocations.isEmpty else { return }
             routeBuilder.insertRouteData(filteredLocations) { (success, error) in
@@ -304,6 +304,28 @@ extension  WorkoutManager: CLLocationManagerDelegate  {
     }
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
        print(manager.activityType.rawValue)
+    }
+    func filterAndAddLocation(_ location: CLLocation) -> Bool{
+        let age = -location.timestamp.timeIntervalSinceNow
+        
+        if age > 10{
+            print("Locaiton is old.")
+            return false
+        }
+        
+        if location.horizontalAccuracy < 0{
+            print("Latitidue and longitude values are invalid.")
+            return false
+        }
+        
+        if location.horizontalAccuracy > 50{
+            print("Accuracy is too low.")
+            return false
+        }
+        
+        print("Location quality is good enough.")
+        return true
+        
     }
 }
 let healthKitQuantityTypes: Set<HKQuantityType> = Set(arrayLiteral:
