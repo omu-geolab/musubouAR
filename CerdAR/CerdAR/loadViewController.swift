@@ -83,6 +83,7 @@ class loadViewController: UIViewController, termsViewDelegate, CLLocationManager
                 if let dir: NSString = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.allDomainsMask, true).first as NSString? {
                     
                     let pathFileName = dir.appendingPathComponent(fileName)
+                    print(pathFileName)
                     guard (try? Data(contentsOf: URL(fileURLWithPath: pathFileName))) != nil else {
                         
                         // ローカルにdata.json(geojson)が存在しない場合，サーバーからデータを取得する．
@@ -121,6 +122,7 @@ class loadViewController: UIViewController, termsViewDelegate, CLLocationManager
                 if let dir: NSString = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.allDomainsMask, true).first as NSString? {
                     
                     let pathFileName = dir.appendingPathComponent(fileName)
+                    print(pathFileName)
                     guard (try? Data(contentsOf: URL(fileURLWithPath: pathFileName))) == nil else {
                         let jsonData = try? Data(contentsOf: URL(fileURLWithPath: pathFileName))
                         json = JSON(data:jsonData!)

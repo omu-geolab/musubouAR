@@ -1,20 +1,46 @@
 PODS:
+  - AppAuth (1.4.0):
+    - AppAuth/Core (= 1.4.0)
+    - AppAuth/ExternalUserAgent (= 1.4.0)
+  - AppAuth/Core (1.4.0)
+  - AppAuth/ExternalUserAgent (1.4.0)
+  - GoogleSignIn (6.1.0):
+    - AppAuth (~> 1.4)
+    - GTMAppAuth (~> 1.0)
+    - GTMSessionFetcher/Core (~> 1.1)
+  - GTMAppAuth (1.2.2):
+    - AppAuth/Core (~> 1.4)
+    - GTMSessionFetcher/Core (~> 1.5)
+  - GTMSessionFetcher/Core (1.7.0)
   - Mapbox-iOS-SDK (6.3.0):
     - MapboxMobileEvents (~> 0.10.4)
-  - MapboxMobileEvents (0.10.7)
+  - MapboxMobileEvents (0.10.13)
+  - XMLCoder (0.12.0)
 
 DEPENDENCIES:
+  - GoogleSignIn
   - Mapbox-iOS-SDK (~> 6.3.0)
+  - XMLCoder (~> 0.12.0)
 
 SPEC REPOS:
   trunk:
+    - AppAuth
+    - GoogleSignIn
+    - GTMAppAuth
+    - GTMSessionFetcher
     - Mapbox-iOS-SDK
     - MapboxMobileEvents
+    - XMLCoder
 
 SPEC CHECKSUMS:
+  AppAuth: 31bcec809a638d7bd2f86ea8a52bd45f6e81e7c7
+  GoogleSignIn: c90b5bec45e780f54c6a8e1e3c182a86e3dda69d
+  GTMAppAuth: ad5c2b70b9a8689e1a04033c9369c4915bfcbe89
+  GTMSessionFetcher: 43748f93435c2aa068b1cbe39655aaf600652e91
   Mapbox-iOS-SDK: 2563ed87ead6ec08f1c2090873977b8a7be335a8
-  MapboxMobileEvents: d0a581dedd8f47411cc65ea520b965e83914316e
+  MapboxMobileEvents: e78db24b348f48e41e5895be7dc16e5b1bb43562
+  XMLCoder: f884dfa894a6f8b7dce465e4f6c02963bf17e028
 
-PODFILE CHECKSUM: f43224e89023b74d8a5de834c46931a9de07f36a
+PODFILE CHECKSUM: 03bb26c5bb1762e1bbd5144c075b8a2c24a9d25e
 
-COCOAPODS: 1.10.0
+COCOAPODS: 1.11.2

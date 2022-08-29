@@ -9,6 +9,7 @@
 import UIKit
 import MapKit
 import HealthKit
+import XMLCoder
 class WorkoutDetaill: UIViewController, MKMapViewDelegate {
 
     @IBOutlet weak var mapView: MKMapView!
@@ -16,7 +17,7 @@ class WorkoutDetaill: UIViewController, MKMapViewDelegate {
     var workout:HKWorkout?
     override func viewDidLoad() {
         super.viewDidLoad()
-        workout?.fetchCLLocations(completion: {data in
+        workout?.fetchCLLocations(completion: { data in
             if data.count > 1 {
                 self.locations = data
                 let runRoute = GradientPolyline(locations: data)

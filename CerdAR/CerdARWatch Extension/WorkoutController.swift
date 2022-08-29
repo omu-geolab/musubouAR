@@ -97,7 +97,7 @@ class WorkoutController: WKInterfaceController, HKWorkoutSessionDelegate, HKLive
     func workoutConfiguration() -> HKWorkoutConfiguration {
         
         let configuration = HKWorkoutConfiguration()
-        configuration.activityType = .running
+        configuration.activityType = .walking
         configuration.locationType = .outdoor
         
         return configuration

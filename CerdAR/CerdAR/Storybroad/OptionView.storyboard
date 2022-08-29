@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Option View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="OptionViewController" customModule="CerdAR" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc" customClass="GradientColorView" customModule="CerdAR" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VTi-Bm-zut">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8wY-IF-1XP">
+                                        <rect key="frame" x="30" y="30" width="354" height="758"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_CERD" translatesAutoresizingMaskIntoConstraints="NO" id="GIf-OF-dSo">
+                                                <rect key="frame" x="224" y="10" width="120" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="120" id="6Ft-9a-GYG"/>
+                                                    <constraint firstAttribute="height" constant="60" id="dtg-Mh-W7l"/>
+                                                </constraints>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vcH-Vm-oWQ">
+                                                <rect key="frame" x="67" y="269" width="220" height="80"/>
+                                                <color key="backgroundColor" red="0.30980392159999998" green="0.76078431369999999" blue="0.1019607843" alpha="0.14914334530861961" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="80" id="ig6-XJ-Bzb"/>
+                                                    <constraint firstAttribute="width" constant="220" id="n4O-ni-U6a"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <color key="tintColor" red="0.30980392159999998" green="0.76078431369999999" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="アプリ起動">
+                                                    <color key="titleColor" red="0.30980392159999998" green="0.76078431369999999" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="appStart:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="h6F-xZ-GXp"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="B1e-TP-uNi">
+                                                <rect key="frame" x="67" y="409" width="220" height="80"/>
+                                                <color key="backgroundColor" red="0.30980392159999998" green="0.76078431369999999" blue="0.1019607843" alpha="0.14914334530000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="80" id="G4U-4L-eK5"/>
+                                                    <constraint firstAttribute="width" constant="220" id="SKq-Xh-dlR"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                <color key="tintColor" red="0.30980392159999998" green="0.76078431369999999" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal">
+                                                    <string key="title">MUSUBOUに
+     ログイン</string>
+                                                    <color key="titleColor" red="0.30980392159999998" green="0.76078431369999999" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="loginStart:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="LBN-V3-fTj"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="GIf-OF-dSo" secondAttribute="trailing" constant="10" id="0gr-Ry-cZ4"/>
+                                            <constraint firstItem="B1e-TP-uNi" firstAttribute="centerX" secondItem="8wY-IF-1XP" secondAttribute="centerX" id="CuZ-WE-mPy"/>
+                                            <constraint firstItem="vcH-Vm-oWQ" firstAttribute="centerY" secondItem="8wY-IF-1XP" secondAttribute="centerY" constant="-70" id="N9S-Lo-wxF"/>
+                                            <constraint firstItem="B1e-TP-uNi" firstAttribute="centerY" secondItem="8wY-IF-1XP" secondAttribute="centerY" constant="70" id="cDF-ge-gDK"/>
+                                            <constraint firstItem="vcH-Vm-oWQ" firstAttribute="centerX" secondItem="8wY-IF-1XP" secondAttribute="centerX" id="jCN-w4-NEs"/>
+                                            <constraint firstItem="GIf-OF-dSo" firstAttribute="top" secondItem="8wY-IF-1XP" secondAttribute="top" constant="10" id="msg-KY-Jbw"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="8wY-IF-1XP" secondAttribute="trailing" constant="30" id="PW3-Jh-Kex"/>
+                                    <constraint firstItem="8wY-IF-1XP" firstAttribute="leading" secondItem="VTi-Bm-zut" secondAttribute="leading" constant="30" id="eXm-Fc-qQI"/>
+                                    <constraint firstAttribute="bottom" secondItem="8wY-IF-1XP" secondAttribute="bottom" constant="30" id="lno-k9-G6S"/>
+                                    <constraint firstItem="8wY-IF-1XP" firstAttribute="top" secondItem="VTi-Bm-zut" secondAttribute="top" constant="30" id="mE4-9a-Tyr"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="VTi-Bm-zut" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="9Fj-pR-63e"/>
+                            <constraint firstItem="VTi-Bm-zut" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="AZO-nF-zYr"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="VTi-Bm-zut" secondAttribute="trailing" id="cw5-Fc-kot"/>
+                            <constraint firstItem="VTi-Bm-zut" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="fph-O4-lLH"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                <color key="value" red="0.75686274509803919" green="1" blue="0.83137254901960778" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                <color key="value" red="1" green="1" blue="0.88235294117647056" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="startLocation">
+                                <real key="value" value="0.050000000000000003"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="horizontalMode" value="NO"/>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="diagonalMode" value="YES"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="endLocation">
+                                <real key="value" value="0.94999999999999996"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="35.491071428571423"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logo_CERD" width="691.5" height="302"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

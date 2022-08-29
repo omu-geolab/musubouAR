@@ -43,3 +43,5 @@ let heightMapAR = 200.0
 let widthMapAR = 200.0
 let kMapARAlpha = Float(0.9)
 var isSound = true
+var email = ""
+var isLogin = false

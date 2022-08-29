@@ -59,6 +59,20 @@ extension HKQuantitySample {
         
         return dic
     }
+    func toHK(unit:HKUnit) -> Dictionary<String,Any> {
+        let dic = [
+            "value":quantity.doubleValue(for: unit),
+            "sdate":startDate,
+            "edate":endDate,
+            "unit":unit.unitString,
+            "type":quantityType.description,
+            "description":quantity.description,
+            //            "device":device?.description ?? ""
+        ]
+        as [String : Any]
+        
+        return dic
+    }
 }
 extension Array {
     func toString(){
@@ -93,9 +107,9 @@ extension HKWorkout {
                 let locationQuery = HKWorkoutRouteQuery(route: routeSample) {
                     (routeQuery, location, done, error) in
                     for item in location! {
-                        if item.speed != -1 {
+//                        if item.speed != -1 {
                             totalWorkouts.append(item.toDictionary())
-                        }
+//                        }
                         
                     }
                     
@@ -131,9 +145,9 @@ extension HKWorkout {
                 let locationQuery = HKWorkoutRouteQuery(route: routeSample) {
                     (routeQuery, location, done, error) in
                     for item in location! {
-                        if item.speed != -1 {
+//                        if item.speed != -1 {
                             totalWorkouts.append(item)
-                        } 
+//                        }
                         
                     }
                     
@@ -154,8 +168,9 @@ extension CLLocation {
             "altitude":self.altitude,
             "latitude":self.coordinate.latitude,
             "longitude":self.coordinate.longitude,
-            "speed":self.speed
-        ]
+            "speed":self.speed,
+            "time":self.timestamp.toString(format: "yyyy-MM-dd HH:mm:ss Z") ?? ""
+        ] as [String : Any]
         return dic
     }
 }

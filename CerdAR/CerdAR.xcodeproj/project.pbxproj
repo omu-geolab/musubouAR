@@ -71,6 +71,11 @@
 		F071A3AC25C23B2E009D6E7D /* DetailViewIphone.xib in Resources */ = {isa = PBXBuildFile; fileRef = F071A3AB25C23B2E009D6E7D /* DetailViewIphone.xib */; };
 		F071A3F125CA3553009D6E7D /* OSMView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F071A3F025CA3553009D6E7D /* OSMView.storyboard */; };
 		F07C561721B4D12F004F760C /* rock.scnp in Resources */ = {isa = PBXBuildFile; fileRef = F07C561621B4D12F004F760C /* rock.scnp */; };
+		F081CE2227E2F3760017A687 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F081CE2127E2F3760017A687 /* UIViewExtension.swift */; };
+		F081CE2627E2FAF20017A687 /* OptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F081CE2527E2FAF10017A687 /* OptionViewController.swift */; };
+		F081CE2827E3003D0017A687 /* OptionView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F081CE2727E3003D0017A687 /* OptionView.storyboard */; };
+		F081CE2A27E3166C0017A687 /* LoginView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F081CE2927E3166C0017A687 /* LoginView.storyboard */; };
+		F081CE2C27E31EEE0017A687 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F081CE2B27E31EEE0017A687 /* LoginViewController.swift */; };
 		F08A2D3921CCE95500777CAC /* rain.scnp in Resources */ = {isa = PBXBuildFile; fileRef = F08A2D3821CCE95500777CAC /* rain.scnp */; };
 		F090887825E8B4CA008463C8 /* GPSService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F090887725E8B4CA008463C8 /* GPSService.swift */; };
 		F090888E25E8F449008463C8 /* WorkoutsView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F090888D25E8F449008463C8 /* WorkoutsView.storyboard */; };
@@ -83,6 +88,8 @@
 		F0986D2525B9660700CB0FE6 /* HealthKitSetupAssistant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0986D2425B9660700CB0FE6 /* HealthKitSetupAssistant.swift */; };
 		F0986D2C25C0F75200CB0FE6 /* TermsView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0986D2B25C0F75200CB0FE6 /* TermsView.storyboard */; };
 		F0986D3225C10B2D00CB0FE6 /* TermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0986D3125C10B2D00CB0FE6 /* TermsViewController.swift */; };
+		F09F7CA128657D0A0052E2D5 /* GPX.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09F7CA028657D0A0052E2D5 /* GPX.swift */; };
+		F09F7CA328657F5B0052E2D5 /* LocationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09F7CA228657F5B0052E2D5 /* LocationExtension.swift */; };
 		F0A3E61F21B78A7C0099812E /* smoke.png in Resources */ = {isa = PBXBuildFile; fileRef = F0A3E61D21B78A7C0099812E /* smoke.png */; };
 		F0A3E62021B78A7C0099812E /* smoke.scnp in Resources */ = {isa = PBXBuildFile; fileRef = F0A3E61E21B78A7C0099812E /* smoke.scnp */; };
 		F0B4EE3526BD67430062FC7D /* LinePolygon.geojson in Resources */ = {isa = PBXBuildFile; fileRef = F0B4EE3426BD67430062FC7D /* LinePolygon.geojson */; };
@@ -248,11 +255,16 @@
 		F071A3AB25C23B2E009D6E7D /* DetailViewIphone.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewIphone.xib; sourceTree = "<group>"; };
 		F071A3F025CA3553009D6E7D /* OSMView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OSMView.storyboard; sourceTree = "<group>"; };
 		F07C561621B4D12F004F760C /* rock.scnp */ = {isa = PBXFileReference; lastKnownFileType = file.scp; name = rock.scnp; path = CerdAR/SceneKit.scnassets/rock.scnp; sourceTree = "<group>"; };
+		F081CE2127E2F3760017A687 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		F081CE2527E2FAF10017A687 /* OptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionViewController.swift; sourceTree = "<group>"; };
+		F081CE2727E3003D0017A687 /* OptionView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OptionView.storyboard; sourceTree = "<group>"; };
+		F081CE2927E3166C0017A687 /* LoginView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginView.storyboard; sourceTree = "<group>"; };
+		F081CE2B27E31EEE0017A687 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F08A2D3821CCE95500777CAC /* rain.scnp */ = {isa = PBXFileReference; lastKnownFileType = file.scp; path = rain.scnp; sourceTree = "<group>"; };
 		F090887725E8B4CA008463C8 /* GPSService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPSService.swift; sourceTree = "<group>"; };
 		F090888D25E8F449008463C8 /* WorkoutsView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WorkoutsView.storyboard; sourceTree = "<group>"; };
 		F090889325E8F88F008463C8 /* WorkoutCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WorkoutCell.xib; sourceTree = "<group>"; };
-		F09088A325EC87B7008463C8 /* WorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutViewController.swift; sourceTree = "<group>"; };
+		F09088A325EC87B7008463C8 /* WorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		F09088B325ECAC7C008463C8 /* WorkoutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCell.swift; sourceTree = "<group>"; };
 		F09088C025EE3BDD008463C8 /* GradientPolyline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientPolyline.swift; sourceTree = "<group>"; };
 		F09088C625EE3C45008463C8 /* GradidentPolylineRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradidentPolylineRenderer.swift; sourceTree = "<group>"; };
@@ -261,6 +273,8 @@
 		F0986D2425B9660700CB0FE6 /* HealthKitSetupAssistant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthKitSetupAssistant.swift; sourceTree = "<group>"; };
 		F0986D2B25C0F75200CB0FE6 /* TermsView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TermsView.storyboard; sourceTree = "<group>"; };
 		F0986D3125C10B2D00CB0FE6 /* TermsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsViewController.swift; sourceTree = "<group>"; };
+		F09F7CA028657D0A0052E2D5 /* GPX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPX.swift; sourceTree = "<group>"; };
+		F09F7CA228657F5B0052E2D5 /* LocationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationExtension.swift; sourceTree = "<group>"; };
 		F0A3E61D21B78A7C0099812E /* smoke.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = smoke.png; path = CerdAR/SceneKit.scnassets/smoke.png; sourceTree = "<group>"; };
 		F0A3E61E21B78A7C0099812E /* smoke.scnp */ = {isa = PBXFileReference; lastKnownFileType = file.scp; name = smoke.scnp; path = CerdAR/SceneKit.scnassets/smoke.scnp; sourceTree = "<group>"; };
 		F0B4EE3426BD67430062FC7D /* LinePolygon.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = LinePolygon.geojson; sourceTree = "<group>"; };
@@ -432,6 +446,8 @@
 				F09088A325EC87B7008463C8 /* WorkoutViewController.swift */,
 				F060A96325F2134B00888F67 /* WorkoutDetaill.swift */,
 				F03B8237268C54DB003A6011 /* UnityViewController.swift */,
+				F081CE2527E2FAF10017A687 /* OptionViewController.swift */,
+				F081CE2B27E31EEE0017A687 /* LoginViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -527,6 +543,7 @@
 				F060A98525F849E700888F67 /* ToggleButton.swift */,
 				F060A99725F89ED100888F67 /* WorkoutData.swift */,
 				F060A9C32600774E00888F67 /* GradientColorView.swift */,
+				F09F7CA028657D0A0052E2D5 /* GPX.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -538,6 +555,8 @@
 				F071A3F025CA3553009D6E7D /* OSMView.storyboard */,
 				F090888D25E8F449008463C8 /* WorkoutsView.storyboard */,
 				F060A95D25F212D300888F67 /* WorkoutDetail.storyboard */,
+				F081CE2727E3003D0017A687 /* OptionView.storyboard */,
+				F081CE2927E3166C0017A687 /* LoginView.storyboard */,
 			);
 			path = Storybroad;
 			sourceTree = "<group>";
@@ -547,6 +566,8 @@
 			children = (
 				F0C1392825EF8996004E67CD /* DateExtension.swift */,
 				F0C1393225F0C177004E67CD /* ConstantsWorkout.swift */,
+				F081CE2127E2F3760017A687 /* UIViewExtension.swift */,
+				F09F7CA228657F5B0052E2D5 /* LocationExtension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -715,6 +736,7 @@
 				F071A3F125CA3553009D6E7D /* OSMView.storyboard in Resources */,
 				F023CFE922C33B4300E115F8 /* gis_data.json in Resources */,
 				7EE70E211DEAA1B6000FB537 /* sound_near.mp3 in Resources */,
+				F081CE2A27E3166C0017A687 /* LoginView.storyboard in Resources */,
 				AC2C52D31D5805F70032B689 /* LaunchScreen.storyboard in Resources */,
 				7EE70E1F1DEAA16A000FB537 /* sound_intrusion.mp3 in Resources */,
 				AC2C52D01D5805F70032B689 /* Assets.xcassets in Resources */,
@@ -722,6 +744,7 @@
 				AC2C52CB1D5805F70032B689 /* Main.storyboard in Resources */,
 				F07C561721B4D12F004F760C /* rock.scnp in Resources */,
 				F071A3AC25C23B2E009D6E7D /* DetailViewIphone.xib in Resources */,
+				F081CE2827E3003D0017A687 /* OptionView.storyboard in Resources */,
 				F090889425E8F88F008463C8 /* WorkoutCell.xib in Resources */,
 				F0A3E62021B78A7C0099812E /* smoke.scnp in Resources */,
 				F0986D2C25C0F75200CB0FE6 /* TermsView.storyboard in Resources */,
@@ -897,6 +920,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F081CE2C27E31EEE0017A687 /* LoginViewController.swift in Sources */,
 				F0986D3225C10B2D00CB0FE6 /* TermsViewController.swift in Sources */,
 				F0C1392925EF8996004E67CD /* DateExtension.swift in Sources */,
 				F0DF93B525EF2D860034C1A0 /* ExportWorkout.swift in Sources */,
@@ -913,6 +937,7 @@
 				F06D987622FA75E1001CCB9E /* SectionedSlider.swift in Sources */,
 				F03B8238268C54DB003A6011 /* UnityViewController.swift in Sources */,
 				F09088C725EE3C45008463C8 /* GradidentPolylineRenderer.swift in Sources */,
+				F081CE2627E2FAF20017A687 /* OptionViewController.swift in Sources */,
 				D3CF68DE1D91187D008B588E /* termsView.swift in Sources */,
 				ACEE245C1D8235FE00102E10 /* MakeTagImage.swift in Sources */,
 				F060A96425F2134B00888F67 /* WorkoutDetaill.swift in Sources */,
@@ -920,13 +945,16 @@
 				F0986D2525B9660700CB0FE6 /* HealthKitSetupAssistant.swift in Sources */,
 				F09088C125EE3BDD008463C8 /* GradientPolyline.swift in Sources */,
 				ACFD6E0C1DB474680006A765 /* loadViewController.swift in Sources */,
+				F09F7CA128657D0A0052E2D5 /* GPX.swift in Sources */,
 				F040A5A025B6C18300647A7F /* LoadingView.swift in Sources */,
 				F09088B425ECAC7C008463C8 /* WorkoutCell.swift in Sources */,
 				F00A92AB25CD244E00BC5D5A /* PlaySound.swift in Sources */,
 				F033F9F8219172E7008A3A2E /* MapboxARAnnotationManager.swift in Sources */,
 				F060A9C42600774E00888F67 /* GradientColorView.swift in Sources */,
 				F0C1393325F0C177004E67CD /* ConstantsWorkout.swift in Sources */,
+				F09F7CA328657F5B0052E2D5 /* LocationExtension.swift in Sources */,
 				F060A98C25F86A7100888F67 /* HeartView.swift in Sources */,
+				F081CE2227E2F3760017A687 /* UIViewExtension.swift in Sources */,
 				AC2C52C61D5805F70032B689 /* AppDelegate.swift in Sources */,
 				D3CF68DD1D91187D008B588E /* detailView.swift in Sources */,
 				F060A99825F89ED100888F67 /* WorkoutData.swift in Sources */,
