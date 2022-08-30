@@ -8,6 +8,7 @@
 		<type fullname="UnityEngine.Material" preserve="nothing"/>
 		<type fullname="UnityEngine.Texture" preserve="nothing"/>
 		<type fullname="UnityEngine.Texture2D" preserve="nothing"/>
+		<type fullname="UnityEngine.Sprite" preserve="nothing"/>
 		<type fullname="UnityEditor.UnityConnectSettings" preserve="nothing"/>
 		<type fullname="UnityEditor.VFXManager" preserve="nothing"/>
 		<type fullname="UnityEngine.ComputeShader" preserve="nothing"/>
@@ -49,7 +50,6 @@
 		<type fullname="UnityEngine.LightmapSettings" preserve="nothing"/>
 		<type fullname="UnityEngine.Font" preserve="nothing"/>
 		<type fullname="UnityEngine.Mesh" preserve="nothing"/>
-		<type fullname="UnityEngine.Sprite" preserve="nothing"/>
 		<type fullname="UnityEngine.CanvasRenderer" preserve="nothing"/>
 		<type fullname="UnityEngine.VFX.VisualEffectAsset" preserve="nothing"/>
 		<type fullname="UnityEngine.WindZone" preserve="nothing"/>
