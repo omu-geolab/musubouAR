@@ -111,7 +111,7 @@ IL2CPP_EXTERN_C_END
 #endif
 
 // <Module>
-struct  U3CModuleU3E_tBD55D819095BEB8CFBE9189C81CA6F594153328E 
+struct U3CModuleU3E_tBD55D819095BEB8CFBE9189C81CA6F594153328E 
 {
 public:
 
@@ -127,7 +127,7 @@ struct Il2CppArrayBounds;
 
 
 // UnityEngineInternal.Input.NativeInputSystem
-struct  NativeInputSystem_t572C01B054179054C92FCEFDB084BB5E8451BEA8  : public RuntimeObject
+struct NativeInputSystem_t572C01B054179054C92FCEFDB084BB5E8451BEA8  : public RuntimeObject
 {
 public:
 
@@ -186,7 +186,7 @@ public:
 
 
 // System.String
-struct  String_t  : public RuntimeObject
+struct String_t  : public RuntimeObject
 {
 public:
 	// System.Int32 System.String::m_stringLength
@@ -231,7 +231,7 @@ public:
 
 
 // System.ValueType
-struct  ValueType_tDBF999C1B75C48C68621878250DBF6CDBCF51E52  : public RuntimeObject
+struct ValueType_tDBF999C1B75C48C68621878250DBF6CDBCF51E52  : public RuntimeObject
 {
 public:
 
@@ -248,7 +248,7 @@ struct ValueType_tDBF999C1B75C48C68621878250DBF6CDBCF51E52_marshaled_com
 };
 
 // System.Boolean
-struct  Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37 
+struct Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37 
 {
 public:
 	// System.Boolean System.Boolean::m_value
@@ -294,7 +294,7 @@ public:
 
 
 // System.Double
-struct  Double_t42821932CB52DE2057E685D0E1AF3DE5033D2181 
+struct Double_t42821932CB52DE2057E685D0E1AF3DE5033D2181 
 {
 public:
 	// System.Double System.Double::m_value
@@ -328,7 +328,7 @@ public:
 
 
 // System.Enum
-struct  Enum_t23B90B40F60E677A8025267341651C94AE079CDA  : public ValueType_tDBF999C1B75C48C68621878250DBF6CDBCF51E52
+struct Enum_t23B90B40F60E677A8025267341651C94AE079CDA  : public ValueType_tDBF999C1B75C48C68621878250DBF6CDBCF51E52
 {
 public:
 
@@ -362,7 +362,7 @@ struct Enum_t23B90B40F60E677A8025267341651C94AE079CDA_marshaled_com
 };
 
 // System.Int32
-struct  Int32_tFDE5F8CD43D10453F6A2E0C77FE48C6CC7009046 
+struct Int32_tFDE5F8CD43D10453F6A2E0C77FE48C6CC7009046 
 {
 public:
 	// System.Int32 System.Int32::m_value
@@ -380,7 +380,7 @@ public:
 
 
 // System.Int64
-struct  Int64_t378EE0D608BD3107E77238E85F30D2BBD46981F3 
+struct Int64_t378EE0D608BD3107E77238E85F30D2BBD46981F3 
 {
 public:
 	// System.Int64 System.Int64::m_value
@@ -398,7 +398,7 @@ public:
 
 
 // System.IntPtr
-struct  IntPtr_t 
+struct IntPtr_t 
 {
 public:
 	// System.Void* System.IntPtr::m_value
@@ -432,7 +432,7 @@ public:
 
 
 // UnityEngineInternal.Input.NativeInputEventBuffer
-struct  NativeInputEventBuffer_t023B708C62AA03D87D92E48DC9C472FDAC4375B4 
+struct NativeInputEventBuffer_t023B708C62AA03D87D92E48DC9C472FDAC4375B4 
 {
 public:
 	union
@@ -540,7 +540,7 @@ public:
 
 
 // System.Single
-struct  Single_tE07797BA3C98D4CA9B5A19413C19A76688AB899E 
+struct Single_tE07797BA3C98D4CA9B5A19413C19A76688AB899E 
 {
 public:
 	// System.Single System.Single::m_value
@@ -558,7 +558,7 @@ public:
 
 
 // System.Void
-struct  Void_t700C6383A2A510C2CF4DD86DABD5CA9FF70ADAC5 
+struct Void_t700C6383A2A510C2CF4DD86DABD5CA9FF70ADAC5 
 {
 public:
 	union
@@ -574,7 +574,7 @@ public:
 
 
 // System.Delegate
-struct  Delegate_t  : public RuntimeObject
+struct Delegate_t  : public RuntimeObject
 {
 public:
 	// System.IntPtr System.Delegate::method_ptr
@@ -726,7 +726,7 @@ struct Delegate_t_marshaled_com
 };
 
 // System.Int32Enum
-struct  Int32Enum_t9B63F771913F2B6D586F1173B44A41FBE26F6B5C 
+struct Int32Enum_t9B63F771913F2B6D586F1173B44A41FBE26F6B5C 
 {
 public:
 	// System.Int32 System.Int32Enum::value__
@@ -744,7 +744,7 @@ public:
 
 
 // UnityEngineInternal.Input.NativeInputEventType
-struct  NativeInputEventType_tB3CDF49B057A87E6CBA3EB8C551A971D2B70C9E9 
+struct NativeInputEventType_tB3CDF49B057A87E6CBA3EB8C551A971D2B70C9E9 
 {
 public:
 	// System.Int32 UnityEngineInternal.Input.NativeInputEventType::value__
@@ -762,7 +762,7 @@ public:
 
 
 // UnityEngineInternal.Input.NativeInputUpdateType
-struct  NativeInputUpdateType_t4225BE835D53F0F56168B34BEF726468058A5C94 
+struct NativeInputUpdateType_t4225BE835D53F0F56168B34BEF726468058A5C94 
 {
 public:
 	// System.Int32 UnityEngineInternal.Input.NativeInputUpdateType::value__
@@ -780,7 +780,7 @@ public:
 
 
 // System.MulticastDelegate
-struct  MulticastDelegate_t  : public Delegate_t
+struct MulticastDelegate_t  : public Delegate_t
 {
 public:
 	// System.Delegate[] System.MulticastDelegate::delegates
@@ -809,7 +809,7 @@ struct MulticastDelegate_t_marshaled_com : public Delegate_t_marshaled_com
 };
 
 // UnityEngineInternal.Input.NativeInputEvent
-struct  NativeInputEvent_t21B4AB4BC38B4E147E82E91E29CE8877CF035FCD 
+struct NativeInputEvent_t21B4AB4BC38B4E147E82E91E29CE8877CF035FCD 
 {
 public:
 	union
@@ -940,7 +940,7 @@ public:
 
 
 // System.Action`1<UnityEngineInternal.Input.NativeInputUpdateType>
-struct  Action_1_t00E4A8EB7B3DEB920C557B08D67DF7101F4ADF69  : public MulticastDelegate_t
+struct Action_1_t00E4A8EB7B3DEB920C557B08D67DF7101F4ADF69  : public MulticastDelegate_t
 {
 public:
 
@@ -949,7 +949,7 @@ public:
 
 
 // System.Action`2<System.Int32,System.String>
-struct  Action_2_t0359A210F354A728FCD80F275D8CF192D61A98C5  : public MulticastDelegate_t
+struct Action_2_t0359A210F354A728FCD80F275D8CF192D61A98C5  : public MulticastDelegate_t
 {
 public:
 
@@ -958,7 +958,7 @@ public:
 
 
 // System.Func`2<UnityEngineInternal.Input.NativeInputUpdateType,System.Boolean>
-struct  Func_2_t9D79DEEDC6C6EC508B371394EC6976EDC57FB472  : public MulticastDelegate_t
+struct Func_2_t9D79DEEDC6C6EC508B371394EC6976EDC57FB472  : public MulticastDelegate_t
 {
 public:
 
@@ -967,7 +967,7 @@ public:
 
 
 // System.AsyncCallback
-struct  AsyncCallback_tA7921BEF974919C46FF8F9D9867C567B200BB0EA  : public MulticastDelegate_t
+struct AsyncCallback_tA7921BEF974919C46FF8F9D9867C567B200BB0EA  : public MulticastDelegate_t
 {
 public:
 
@@ -976,7 +976,7 @@ public:
 
 
 // UnityEngineInternal.Input.NativeUpdateCallback
-struct  NativeUpdateCallback_t617743B3361FE4B086E28DDB8EDB4A7AC2490FC6  : public MulticastDelegate_t
+struct NativeUpdateCallback_t617743B3361FE4B086E28DDB8EDB4A7AC2490FC6  : public MulticastDelegate_t
 {
 public:
 
@@ -1409,7 +1409,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeInputSystem_Update_m1A1F94B248C6B5
 IL2CPP_EXTERN_C  void DelegatePInvokeWrapper_NativeUpdateCallback_t617743B3361FE4B086E28DDB8EDB4A7AC2490FC6 (NativeUpdateCallback_t617743B3361FE4B086E28DDB8EDB4A7AC2490FC6 * __this, int32_t ___updateType0, NativeInputEventBuffer_t023B708C62AA03D87D92E48DC9C472FDAC4375B4 * ___buffer1, const RuntimeMethod* method)
 {
 	typedef void (DEFAULT_CALL *PInvokeFunc)(int32_t, NativeInputEventBuffer_t023B708C62AA03D87D92E48DC9C472FDAC4375B4 *);
-	PInvokeFunc il2cppPInvokeFunc = reinterpret_cast<PInvokeFunc>(il2cpp_codegen_get_method_pointer(((RuntimeDelegate*)__this)->method));
+	PInvokeFunc il2cppPInvokeFunc = reinterpret_cast<PInvokeFunc>(((RuntimeDelegate*)__this)->method->nativeFunction);
 
 	// Native function invocation
 	il2cppPInvokeFunc(___updateType0, ___buffer1);
@@ -1418,6 +1418,10 @@ IL2CPP_EXTERN_C  void DelegatePInvokeWrapper_NativeUpdateCallback_t617743B3361FE
 // System.Void UnityEngineInternal.Input.NativeUpdateCallback::.ctor(System.Object,System.IntPtr)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeUpdateCallback__ctor_mBCA97F21830E76C5C6422815CEA55013C19E30B6 (NativeUpdateCallback_t617743B3361FE4B086E28DDB8EDB4A7AC2490FC6 * __this, RuntimeObject * ___object0, intptr_t ___method1, const RuntimeMethod* method)
 {
+	if (___object0 == NULL && !MethodIsStatic((RuntimeMethod*)___method1))
+	{
+		il2cpp_codegen_raise_exception(il2cpp_codegen_get_argument_exception(NULL, "Delegate to an instance method cannot have null 'this'."), NULL);
+	}
 	__this->set_method_ptr_0(il2cpp_codegen_get_method_pointer((RuntimeMethod*)___method1));
 	__this->set_method_3(___method1);
 	__this->set_m_target_2(___object0);
@@ -1488,7 +1492,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeUpdateCallback_Invoke_m323D2546D5B
 			}
 			else
 			{
-				if (targetThis == NULL)
+				if (___parameterCount == 1)
 				{
 					typedef void (*FunctionPointerType) (RuntimeObject*, NativeInputEventBuffer_t023B708C62AA03D87D92E48DC9C472FDAC4375B4 *, const RuntimeMethod*);
 					((FunctionPointerType)targetMethodPointer)((RuntimeObject*)(reinterpret_cast<RuntimeObject*>(&___updateType0) - 1), ___buffer1, targetMethod);

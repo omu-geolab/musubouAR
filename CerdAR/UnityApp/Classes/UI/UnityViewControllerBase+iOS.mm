@@ -119,11 +119,28 @@ ScreenOrientation _currentOrientation;
 @end
 
 @implementation UnityDefaultViewController
+
+// these will be updated in one place where we "sync" UI side orientation handling to unity side
+NSUInteger _supportedOrientations;
+
+- (id)init
+{
+    if ((self = [super init]))
+    {
+        NSAssert(UnityShouldAutorotate(), @"UnityDefaultViewController should be used only if unity is set to autorotate");
+        _supportedOrientations = EnabledAutorotationInterfaceOrientations();
+    }
+    return self;
+}
+
+- (void)updateSupportedOrientations
+{
+    _supportedOrientations = EnabledAutorotationInterfaceOrientations();
+}
+
 - (NSUInteger)supportedInterfaceOrientations
 {
-    NSAssert(UnityShouldAutorotate(), @"UnityDefaultViewController should be used only if unity is set to autorotate");
-
-    return EnabledAutorotationInterfaceOrientations();
+    return _supportedOrientations;
 }
 
 @end
@@ -132,6 +149,11 @@ ScreenOrientation _currentOrientation;
 - (NSUInteger)supportedInterfaceOrientations
 {
     return 1 << UIInterfaceOrientationPortrait;
+}
+
+- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation
+{
+    return UIInterfaceOrientationPortrait;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -148,6 +170,11 @@ ScreenOrientation _currentOrientation;
     return 1 << UIInterfaceOrientationPortraitUpsideDown;
 }
 
+- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation
+{
+    return UIInterfaceOrientationPortraitUpsideDown;
+}
+
 - (void)viewWillAppear:(BOOL)animated
 {
     [GetAppController() updateAppOrientation: UIInterfaceOrientationPortraitUpsideDown];
@@ -160,6 +187,11 @@ ScreenOrientation _currentOrientation;
 - (NSUInteger)supportedInterfaceOrientations
 {
     return 1 << UIInterfaceOrientationLandscapeLeft;
+}
+
+- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation
+{
+    return UIInterfaceOrientationLandscapeLeft;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -176,6 +208,11 @@ ScreenOrientation _currentOrientation;
     return 1 << UIInterfaceOrientationLandscapeRight;
 }
 
+- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation
+{
+    return UIInterfaceOrientationLandscapeRight;
+}
+
 - (void)viewWillAppear:(BOOL)animated
 {
     [GetAppController() updateAppOrientation: UIInterfaceOrientationLandscapeRight];
@@ -190,7 +227,7 @@ NSUInteger EnabledAutorotationInterfaceOrientations()
 
     if (UnityIsOrientationEnabled(portrait))
         ret |= (1 << UIInterfaceOrientationPortrait);
-    if (UnityIsOrientationEnabled(portraitUpsideDown))
+    if (UnityDeviceSupportsUpsideDown() && UnityIsOrientationEnabled(portraitUpsideDown))
         ret |= (1 << UIInterfaceOrientationPortraitUpsideDown);
     if (UnityIsOrientationEnabled(landscapeLeft))
         ret |= (1 << UIInterfaceOrientationLandscapeRight);

@@ -225,7 +225,7 @@ IL2CPP_EXTERN_C_END
 
 
 // System.Collections.Generic.List`1<System.String>
-struct  List_1_t6C9F81EDBF0F4A31A9B0DA372D2EF34BDA3A1AF3  : public RuntimeObject
+struct List_1_t6C9F81EDBF0F4A31A9B0DA372D2EF34BDA3A1AF3  : public RuntimeObject
 {
 public:
 	// T[] System.Collections.Generic.List`1::_items
@@ -296,7 +296,7 @@ struct Il2CppArrayBounds;
 
 
 // UnityEngine.CustomYieldInstruction
-struct  CustomYieldInstruction_t4ED1543FBAA3143362854EB1867B42E5D190A5C7  : public RuntimeObject
+struct CustomYieldInstruction_t4ED1543FBAA3143362854EB1867B42E5D190A5C7  : public RuntimeObject
 {
 public:
 
@@ -305,7 +305,7 @@ public:
 
 
 // System.Reflection.MemberInfo
-struct  MemberInfo_t  : public RuntimeObject
+struct MemberInfo_t  : public RuntimeObject
 {
 public:
 
@@ -314,7 +314,7 @@ public:
 
 
 // System.String
-struct  String_t  : public RuntimeObject
+struct String_t  : public RuntimeObject
 {
 public:
 	// System.Int32 System.String::m_stringLength
@@ -359,7 +359,7 @@ public:
 
 
 // UnityEngine.SubsystemsImplementation.SubsystemProvider
-struct  SubsystemProvider_t39E89FB8DB1EF1D2B0AF93796AEDB19D76A665F9  : public RuntimeObject
+struct SubsystemProvider_t39E89FB8DB1EF1D2B0AF93796AEDB19D76A665F9  : public RuntimeObject
 {
 public:
 	// System.Boolean UnityEngine.SubsystemsImplementation.SubsystemProvider::m_Running
@@ -377,7 +377,7 @@ public:
 
 
 // System.ValueType
-struct  ValueType_tDBF999C1B75C48C68621878250DBF6CDBCF51E52  : public RuntimeObject
+struct ValueType_tDBF999C1B75C48C68621878250DBF6CDBCF51E52  : public RuntimeObject
 {
 public:
 
@@ -394,7 +394,7 @@ struct ValueType_tDBF999C1B75C48C68621878250DBF6CDBCF51E52_marshaled_com
 };
 
 // UnityEngine.XR.ARSubsystems.XRCpuImage/Api
-struct  Api_t7C92F00C6416A2C636A44AAC833C3773C567DC3E  : public RuntimeObject
+struct Api_t7C92F00C6416A2C636A44AAC833C3773C567DC3E  : public RuntimeObject
 {
 public:
 
@@ -403,7 +403,7 @@ public:
 
 
 // UnityEngine.SubsystemsImplementation.SubsystemProvider`1<UnityEngine.XR.ARSubsystems.XRObjectTrackingSubsystem>
-struct  SubsystemProvider_1_t71FE677A1A2F32123FE4C7868D5943892028AE12  : public SubsystemProvider_t39E89FB8DB1EF1D2B0AF93796AEDB19D76A665F9
+struct SubsystemProvider_1_t71FE677A1A2F32123FE4C7868D5943892028AE12  : public SubsystemProvider_t39E89FB8DB1EF1D2B0AF93796AEDB19D76A665F9
 {
 public:
 
@@ -412,7 +412,7 @@ public:
 
 
 // UnityEngine.SubsystemsImplementation.SubsystemProvider`1<UnityEngine.XR.ARSubsystems.XROcclusionSubsystem>
-struct  SubsystemProvider_1_t57D5C398A7A30AC3C3674CA126FAE612BC00F597  : public SubsystemProvider_t39E89FB8DB1EF1D2B0AF93796AEDB19D76A665F9
+struct SubsystemProvider_1_t57D5C398A7A30AC3C3674CA126FAE612BC00F597  : public SubsystemProvider_t39E89FB8DB1EF1D2B0AF93796AEDB19D76A665F9
 {
 public:
 
@@ -421,7 +421,7 @@ public:
 
 
 // UnityEngine.SubsystemsImplementation.SubsystemProvider`1<UnityEngine.XR.ARSubsystems.XRParticipantSubsystem>
-struct  SubsystemProvider_1_t3D6D4D936F16F3264F75D1BAB46A4A398F18F204  : public SubsystemProvider_t39E89FB8DB1EF1D2B0AF93796AEDB19D76A665F9
+struct SubsystemProvider_1_t3D6D4D936F16F3264F75D1BAB46A4A398F18F204  : public SubsystemProvider_t39E89FB8DB1EF1D2B0AF93796AEDB19D76A665F9
 {
 public:
 
@@ -430,7 +430,7 @@ public:
 
 
 // UnityEngine.SubsystemsImplementation.SubsystemProvider`1<UnityEngine.XR.ARSubsystems.XRPlaneSubsystem>
-struct  SubsystemProvider_1_tF2F3B0C041BDD07A00CD49B25AE6016B61F24816  : public SubsystemProvider_t39E89FB8DB1EF1D2B0AF93796AEDB19D76A665F9
+struct SubsystemProvider_1_tF2F3B0C041BDD07A00CD49B25AE6016B61F24816  : public SubsystemProvider_t39E89FB8DB1EF1D2B0AF93796AEDB19D76A665F9
 {
 public:
 
@@ -439,7 +439,7 @@ public:
 
 
 // UnityEngine.SubsystemsImplementation.SubsystemProvider`1<UnityEngine.XR.ARSubsystems.XRRaycastSubsystem>
-struct  SubsystemProvider_1_t7ACBE98539B067B19E2D5BCC2B852277F4A38875  : public SubsystemProvider_t39E89FB8DB1EF1D2B0AF93796AEDB19D76A665F9
+struct SubsystemProvider_1_t7ACBE98539B067B19E2D5BCC2B852277F4A38875  : public SubsystemProvider_t39E89FB8DB1EF1D2B0AF93796AEDB19D76A665F9
 {
 public:
 
@@ -448,7 +448,7 @@ public:
 
 
 // UnityEngine.SubsystemsImplementation.SubsystemProvider`1<UnityEngine.XR.ARSubsystems.XRReferencePointSubsystem>
-struct  SubsystemProvider_1_tA41ABDAA9644A18E81CC750DE7DDEA8EB6088742  : public SubsystemProvider_t39E89FB8DB1EF1D2B0AF93796AEDB19D76A665F9
+struct SubsystemProvider_1_tA41ABDAA9644A18E81CC750DE7DDEA8EB6088742  : public SubsystemProvider_t39E89FB8DB1EF1D2B0AF93796AEDB19D76A665F9
 {
 public:
 
@@ -457,7 +457,7 @@ public:
 
 
 // UnityEngine.SubsystemsImplementation.SubsystemProvider`1<UnityEngine.XR.ARSubsystems.XRSessionSubsystem>
-struct  SubsystemProvider_1_tFA56F133FD9BCE90A1C4C7D15FFE2571963D8DE4  : public SubsystemProvider_t39E89FB8DB1EF1D2B0AF93796AEDB19D76A665F9
+struct SubsystemProvider_1_tFA56F133FD9BCE90A1C4C7D15FFE2571963D8DE4  : public SubsystemProvider_t39E89FB8DB1EF1D2B0AF93796AEDB19D76A665F9
 {
 public:
 
@@ -466,7 +466,7 @@ public:
 
 
 // System.Boolean
-struct  Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37 
+struct Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37 
 {
 public:
 	// System.Boolean System.Boolean::m_value
@@ -512,7 +512,7 @@ public:
 
 
 // System.Enum
-struct  Enum_t23B90B40F60E677A8025267341651C94AE079CDA  : public ValueType_tDBF999C1B75C48C68621878250DBF6CDBCF51E52
+struct Enum_t23B90B40F60E677A8025267341651C94AE079CDA  : public ValueType_tDBF999C1B75C48C68621878250DBF6CDBCF51E52
 {
 public:
 
@@ -546,7 +546,7 @@ struct Enum_t23B90B40F60E677A8025267341651C94AE079CDA_marshaled_com
 };
 
 // System.Guid
-struct  Guid_t 
+struct Guid_t 
 {
 public:
 	// System.Int32 System.Guid::_a
@@ -713,7 +713,7 @@ public:
 
 
 // System.Int32
-struct  Int32_tFDE5F8CD43D10453F6A2E0C77FE48C6CC7009046 
+struct Int32_tFDE5F8CD43D10453F6A2E0C77FE48C6CC7009046 
 {
 public:
 	// System.Int32 System.Int32::m_value
@@ -731,7 +731,7 @@ public:
 
 
 // System.Int64
-struct  Int64_t378EE0D608BD3107E77238E85F30D2BBD46981F3 
+struct Int64_t378EE0D608BD3107E77238E85F30D2BBD46981F3 
 {
 public:
 	// System.Int64 System.Int64::m_value
@@ -749,7 +749,7 @@ public:
 
 
 // System.IntPtr
-struct  IntPtr_t 
+struct IntPtr_t 
 {
 public:
 	// System.Void* System.IntPtr::m_value
@@ -783,7 +783,7 @@ public:
 
 
 // UnityEngine.Quaternion
-struct  Quaternion_t6D28618CF65156D4A0AD747370DDFD0C514A31B4 
+struct Quaternion_t6D28618CF65156D4A0AD747370DDFD0C514A31B4 
 {
 public:
 	// System.Single UnityEngine.Quaternion::x
@@ -847,7 +847,7 @@ public:
 
 
 // UnityEngine.RectInt
-struct  RectInt_tE7B8105A280C1AC73A4157ED41F9B86C9BD91E49 
+struct RectInt_tE7B8105A280C1AC73A4157ED41F9B86C9BD91E49 
 {
 public:
 	// System.Int32 UnityEngine.RectInt::m_XMin
@@ -895,7 +895,7 @@ public:
 
 
 // System.Single
-struct  Single_tE07797BA3C98D4CA9B5A19413C19A76688AB899E 
+struct Single_tE07797BA3C98D4CA9B5A19413C19A76688AB899E 
 {
 public:
 	// System.Single System.Single::m_value
@@ -913,7 +913,7 @@ public:
 
 
 // UnityEngine.XR.ARSubsystems.TrackableId
-struct  TrackableId_t17A59B04292038BB1B77BEACD41221D2700BE90B 
+struct TrackableId_t17A59B04292038BB1B77BEACD41221D2700BE90B 
 {
 public:
 	// System.UInt64 UnityEngine.XR.ARSubsystems.TrackableId::m_SubId1
@@ -968,7 +968,7 @@ public:
 
 
 // UnityEngine.Vector2
-struct  Vector2_tBB32F2736AEC229A7BFBCE18197EC0F6AC7EC2D9 
+struct Vector2_tBB32F2736AEC229A7BFBCE18197EC0F6AC7EC2D9 
 {
 public:
 	// System.Single UnityEngine.Vector2::x
@@ -1082,7 +1082,7 @@ public:
 
 
 // UnityEngine.Vector2Int
-struct  Vector2Int_tF49F5C2443670DE126D9EC8DBE81D8F480EAA6E9 
+struct Vector2Int_tF49F5C2443670DE126D9EC8DBE81D8F480EAA6E9 
 {
 public:
 	// System.Int32 UnityEngine.Vector2Int::m_X
@@ -1176,7 +1176,7 @@ public:
 
 
 // UnityEngine.Vector3
-struct  Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E 
+struct Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E 
 {
 public:
 	// System.Single UnityEngine.Vector3::x
@@ -1320,7 +1320,7 @@ public:
 
 
 // System.Void
-struct  Void_t700C6383A2A510C2CF4DD86DABD5CA9FF70ADAC5 
+struct Void_t700C6383A2A510C2CF4DD86DABD5CA9FF70ADAC5 
 {
 public:
 	union
@@ -1336,7 +1336,7 @@ public:
 
 
 // UnityEngine.XR.ARSubsystems.XRObjectTrackingSubsystemDescriptor/Capabilities
-struct  Capabilities_tC6F329DD5C73C6B9E04BE77A3AE0E52390BD8685 
+struct Capabilities_tC6F329DD5C73C6B9E04BE77A3AE0E52390BD8685 
 {
 public:
 	union
@@ -1352,7 +1352,7 @@ public:
 
 
 // UnityEngine.XR.ARSubsystems.XRPlaneSubsystemDescriptor/Cinfo
-struct  Cinfo_tC49A76BF09DB3F926B17955E1B8D729DC9B272AD 
+struct Cinfo_tC49A76BF09DB3F926B17955E1B8D729DC9B272AD 
 {
 public:
 	// System.String UnityEngine.XR.ARSubsystems.XRPlaneSubsystemDescriptor/Cinfo::<id>k__BackingField
@@ -1480,7 +1480,7 @@ struct Cinfo_tC49A76BF09DB3F926B17955E1B8D729DC9B272AD_marshaled_com
 };
 
 // UnityEngine.XR.ARSubsystems.XRSessionSubsystemDescriptor/Cinfo
-struct  Cinfo_t2842A97DA95F40ECADDCA24A291B6114A3A5F71A 
+struct Cinfo_t2842A97DA95F40ECADDCA24A291B6114A3A5F71A 
 {
 public:
 	// System.Boolean UnityEngine.XR.ARSubsystems.XRSessionSubsystemDescriptor/Cinfo::<supportsInstall>k__BackingField
@@ -1572,7 +1572,7 @@ struct Cinfo_t2842A97DA95F40ECADDCA24A291B6114A3A5F71A_marshaled_com
 };
 
 // Unity.Collections.Allocator
-struct  Allocator_t9888223DEF4F46F3419ECFCCD0753599BEE52A05 
+struct Allocator_t9888223DEF4F46F3419ECFCCD0753599BEE52A05 
 {
 public:
 	// System.Int32 Unity.Collections.Allocator::value__
@@ -1590,7 +1590,7 @@ public:
 
 
 // System.Reflection.BindingFlags
-struct  BindingFlags_tAAAB07D9AC588F0D55D844E51D7035E96DF94733 
+struct BindingFlags_tAAAB07D9AC588F0D55D844E51D7035E96DF94733 
 {
 public:
 	// System.Int32 System.Reflection.BindingFlags::value__
@@ -1608,7 +1608,7 @@ public:
 
 
 // System.Delegate
-struct  Delegate_t  : public RuntimeObject
+struct Delegate_t  : public RuntimeObject
 {
 public:
 	// System.IntPtr System.Delegate::method_ptr
@@ -1760,7 +1760,7 @@ struct Delegate_t_marshaled_com
 };
 
 // UnityEngine.XR.ARSubsystems.EnvironmentDepthMode
-struct  EnvironmentDepthMode_t3510F9A630A7170A2481D60487384089E64D84C7 
+struct EnvironmentDepthMode_t3510F9A630A7170A2481D60487384089E64D84C7 
 {
 public:
 	// System.Int32 UnityEngine.XR.ARSubsystems.EnvironmentDepthMode::value__
@@ -1778,7 +1778,7 @@ public:
 
 
 // System.Exception
-struct  Exception_t  : public RuntimeObject
+struct Exception_t  : public RuntimeObject
 {
 public:
 	// System.String System.Exception::_className
@@ -2004,7 +2004,7 @@ struct Exception_t_marshaled_com
 };
 
 // UnityEngine.XR.ARSubsystems.Feature
-struct  Feature_t079F5923A4893A9E07B968C27F44AC5FCAC87C83 
+struct Feature_t079F5923A4893A9E07B968C27F44AC5FCAC87C83 
 {
 public:
 	// System.UInt64 UnityEngine.XR.ARSubsystems.Feature::value__
@@ -2022,7 +2022,7 @@ public:
 
 
 // UnityEngine.XR.ARSubsystems.HumanSegmentationDepthMode
-struct  HumanSegmentationDepthMode_tFF8EE69372C0D9890D3F0566DC0D2781CE584028 
+struct HumanSegmentationDepthMode_tFF8EE69372C0D9890D3F0566DC0D2781CE584028 
 {
 public:
 	// System.Int32 UnityEngine.XR.ARSubsystems.HumanSegmentationDepthMode::value__
@@ -2040,7 +2040,7 @@ public:
 
 
 // UnityEngine.XR.ARSubsystems.HumanSegmentationStencilMode
-struct  HumanSegmentationStencilMode_tB151C7AE42CB87D7EB7A0A12C759BD0BA03AC9DB 
+struct HumanSegmentationStencilMode_tB151C7AE42CB87D7EB7A0A12C759BD0BA03AC9DB 
 {
 public:
 	// System.Int32 UnityEngine.XR.ARSubsystems.HumanSegmentationStencilMode::value__
@@ -2058,7 +2058,7 @@ public:
 
 
 // System.Int32Enum
-struct  Int32Enum_t9B63F771913F2B6D586F1173B44A41FBE26F6B5C 
+struct Int32Enum_t9B63F771913F2B6D586F1173B44A41FBE26F6B5C 
 {
 public:
 	// System.Int32 System.Int32Enum::value__
@@ -2076,7 +2076,7 @@ public:
 
 
 // Unity.Collections.NativeArrayOptions
-struct  NativeArrayOptions_t181E2A9B49F6D62868DE6428E4CDF148AEF558E3 
+struct NativeArrayOptions_t181E2A9B49F6D62868DE6428E4CDF148AEF558E3 
 {
 public:
 	// System.Int32 Unity.Collections.NativeArrayOptions::value__
@@ -2094,7 +2094,7 @@ public:
 
 
 // UnityEngine.XR.ARSubsystems.NotTrackingReason
-struct  NotTrackingReason_t853CA5527FA4E156B45DD1BD3E3E978C78BC49A9 
+struct NotTrackingReason_t853CA5527FA4E156B45DD1BD3E3E978C78BC49A9 
 {
 public:
 	// System.Int32 UnityEngine.XR.ARSubsystems.NotTrackingReason::value__
@@ -2112,7 +2112,7 @@ public:
 
 
 // UnityEngine.Object
-struct  Object_tF2F3778131EFF286AF62B7B013A170F95A91571A  : public RuntimeObject
+struct Object_tF2F3778131EFF286AF62B7B013A170F95A91571A  : public RuntimeObject
 {
 public:
 	// System.IntPtr UnityEngine.Object::m_CachedPtr
@@ -2156,7 +2156,7 @@ struct Object_tF2F3778131EFF286AF62B7B013A170F95A91571A_marshaled_com
 };
 
 // UnityEngine.XR.ARSubsystems.OcclusionPreferenceMode
-struct  OcclusionPreferenceMode_tB85530C1AF1BD2CD83770B19A90C6D3F781EADC1 
+struct OcclusionPreferenceMode_tB85530C1AF1BD2CD83770B19A90C6D3F781EADC1 
 {
 public:
 	// System.Int32 UnityEngine.XR.ARSubsystems.OcclusionPreferenceMode::value__
@@ -2174,7 +2174,7 @@ public:
 
 
 // UnityEngine.XR.ARSubsystems.PlaneDetectionMode
-struct  PlaneDetectionMode_t22DC72CB3F42DDC9A2472A66F8119475357B48CD 
+struct PlaneDetectionMode_t22DC72CB3F42DDC9A2472A66F8119475357B48CD 
 {
 public:
 	// System.Int32 UnityEngine.XR.ARSubsystems.PlaneDetectionMode::value__
@@ -2192,7 +2192,7 @@ public:
 
 
 // UnityEngine.Pose
-struct  Pose_t9F30358E65733E60A1DC8682FDB7104F40C9434A 
+struct Pose_t9F30358E65733E60A1DC8682FDB7104F40C9434A 
 {
 public:
 	// UnityEngine.Vector3 UnityEngine.Pose::position
@@ -2236,7 +2236,7 @@ public:
 
 
 // UnityEngine.Ray
-struct  Ray_t2E9E67CC8B03EE6ED2BBF3D2C9C96DDF70E1D5E6 
+struct Ray_t2E9E67CC8B03EE6ED2BBF3D2C9C96DDF70E1D5E6 
 {
 public:
 	// UnityEngine.Vector3 UnityEngine.Ray::m_Origin
@@ -2264,7 +2264,7 @@ public:
 
 
 // System.RuntimeTypeHandle
-struct  RuntimeTypeHandle_tC33965ADA3E041E0C94AF05E5CB527B56482CEF9 
+struct RuntimeTypeHandle_tC33965ADA3E041E0C94AF05E5CB527B56482CEF9 
 {
 public:
 	// System.IntPtr System.RuntimeTypeHandle::value
@@ -2282,7 +2282,7 @@ public:
 
 
 // UnityEngine.ScreenOrientation
-struct  ScreenOrientation_tDD9EF2729A0D580721770597532935B0A7ADE020 
+struct ScreenOrientation_tDD9EF2729A0D580721770597532935B0A7ADE020 
 {
 public:
 	// System.Int32 UnityEngine.ScreenOrientation::value__
@@ -2300,7 +2300,7 @@ public:
 
 
 // UnityEngine.XR.ARSubsystems.SessionAvailability
-struct  SessionAvailability_tF5E98733E00C91772417EDEF3B3A6FA1DF653FCD 
+struct SessionAvailability_tF5E98733E00C91772417EDEF3B3A6FA1DF653FCD 
 {
 public:
 	// System.Int32 UnityEngine.XR.ARSubsystems.SessionAvailability::value__
@@ -2318,7 +2318,7 @@ public:
 
 
 // UnityEngine.XR.ARSubsystems.SessionInstallationStatus
-struct  SessionInstallationStatus_t5298F0EEA216D050FFE923AE490498BBF0792F7E 
+struct SessionInstallationStatus_t5298F0EEA216D050FFE923AE490498BBF0792F7E 
 {
 public:
 	// System.Int32 UnityEngine.XR.ARSubsystems.SessionInstallationStatus::value__
@@ -2336,7 +2336,7 @@ public:
 
 
 // UnityEngine.Rendering.TextureDimension
-struct  TextureDimension_tADCCB7C1D30E4D1182651BA9094B4DE61B63EACC 
+struct TextureDimension_tADCCB7C1D30E4D1182651BA9094B4DE61B63EACC 
 {
 public:
 	// System.Int32 UnityEngine.Rendering.TextureDimension::value__
@@ -2354,7 +2354,7 @@ public:
 
 
 // UnityEngine.TextureFormat
-struct  TextureFormat_tBED5388A0445FE978F97B41D247275B036407932 
+struct TextureFormat_tBED5388A0445FE978F97B41D247275B036407932 
 {
 public:
 	// System.Int32 UnityEngine.TextureFormat::value__
@@ -2372,7 +2372,7 @@ public:
 
 
 // UnityEngine.XR.ARSubsystems.TrackableType
-struct  TrackableType_t2352F7091A5BE0192C8D908019BA7481A347C85F 
+struct TrackableType_t2352F7091A5BE0192C8D908019BA7481A347C85F 
 {
 public:
 	// System.Int32 UnityEngine.XR.ARSubsystems.TrackableType::value__
@@ -2390,7 +2390,7 @@ public:
 
 
 // UnityEngine.XR.ARSubsystems.TrackingState
-struct  TrackingState_tB6996ED0D52D2A17DFACC90800705B81D370FC38 
+struct TrackingState_tB6996ED0D52D2A17DFACC90800705B81D370FC38 
 {
 public:
 	// System.Int32 UnityEngine.XR.ARSubsystems.TrackingState::value__
@@ -2408,7 +2408,7 @@ public:
 
 
 // UnityEngine.XR.ARSubsystems.XRCpuImage/AsyncConversionStatus
-struct  AsyncConversionStatus_t94171EDB7E6E25979DFCEF01F7B6EA6B8A5DAD42 
+struct AsyncConversionStatus_t94171EDB7E6E25979DFCEF01F7B6EA6B8A5DAD42 
 {
 public:
 	// System.Int32 UnityEngine.XR.ARSubsystems.XRCpuImage/AsyncConversionStatus::value__
@@ -2426,7 +2426,7 @@ public:
 
 
 // UnityEngine.XR.ARSubsystems.XRCpuImage/Format
-struct  Format_tC8D4CDE6941B0CAE3E1C07EC826E7E253846168A 
+struct Format_tC8D4CDE6941B0CAE3E1C07EC826E7E253846168A 
 {
 public:
 	// System.Int32 UnityEngine.XR.ARSubsystems.XRCpuImage/Format::value__
@@ -2444,7 +2444,7 @@ public:
 
 
 // UnityEngine.XR.ARSubsystems.XRCpuImage/Transformation
-struct  Transformation_t5812B66180F359977F76AB67CC9E923CF0B55938 
+struct Transformation_t5812B66180F359977F76AB67CC9E923CF0B55938 
 {
 public:
 	// System.Int32 UnityEngine.XR.ARSubsystems.XRCpuImage/Transformation::value__
@@ -2462,7 +2462,7 @@ public:
 
 
 // UnityEngine.XR.ARSubsystems.XRObjectTrackingSubsystem/Provider
-struct  Provider_t35977A2A0AA6C338BC9893668DD32F0294A9C01E  : public SubsystemProvider_1_t71FE677A1A2F32123FE4C7868D5943892028AE12
+struct Provider_t35977A2A0AA6C338BC9893668DD32F0294A9C01E  : public SubsystemProvider_1_t71FE677A1A2F32123FE4C7868D5943892028AE12
 {
 public:
 
@@ -2471,7 +2471,7 @@ public:
 
 
 // UnityEngine.XR.ARSubsystems.XROcclusionSubsystem/Provider
-struct  Provider_t5B60C630FB68EFEAB6FA2F3D9A732C144003B7FB  : public SubsystemProvider_1_t57D5C398A7A30AC3C3674CA126FAE612BC00F597
+struct Provider_t5B60C630FB68EFEAB6FA2F3D9A732C144003B7FB  : public SubsystemProvider_1_t57D5C398A7A30AC3C3674CA126FAE612BC00F597
 {
 public:
 
@@ -2480,7 +2480,7 @@ public:
 
 
 // UnityEngine.XR.ARSubsystems.XRParticipantSubsystem/Provider
-struct  Provider_t1D0BC515976D24FD30341AC456ACFCB2DE4A344E  : public SubsystemProvider_1_t3D6D4D936F16F3264F75D1BAB46A4A398F18F204
+struct Provider_t1D0BC515976D24FD30341AC456ACFCB2DE4A344E  : public SubsystemProvider_1_t3D6D4D936F16F3264F75D1BAB46A4A398F18F204
 {
 public:
 
@@ -2489,7 +2489,7 @@ public:
 
 
 // UnityEngine.XR.ARSubsystems.XRParticipantSubsystemDescriptor/Capabilities
-struct  Capabilities_t9DF0D3D327C4E491811A4DFCF21EBD355596C4D0 
+struct Capabilities_t9DF0D3D327C4E491811A4DFCF21EBD355596C4D0 
 {
 public:
 	// System.Int32 UnityEngine.XR.ARSubsystems.XRParticipantSubsystemDescriptor/Capabilities::value__
@@ -2507,7 +2507,7 @@ public:
 
 
 // UnityEngine.XR.ARSubsystems.XRPlaneSubsystem/Provider
-struct  Provider_t6CB5B1036B0AAED1379F3828D695A6942B72BA12  : public SubsystemProvider_1_tF2F3B0C041BDD07A00CD49B25AE6016B61F24816
+struct Provider_t6CB5B1036B0AAED1379F3828D695A6942B72BA12  : public SubsystemProvider_1_tF2F3B0C041BDD07A00CD49B25AE6016B61F24816
 {
 public:
 
@@ -2516,7 +2516,7 @@ public:
 
 
 // UnityEngine.XR.ARSubsystems.XRRaycastSubsystem/Provider
-struct  Provider_tF185BE0541D2066CD242583CEFE7709DD22DD227  : public SubsystemProvider_1_t7ACBE98539B067B19E2D5BCC2B852277F4A38875
+struct Provider_tF185BE0541D2066CD242583CEFE7709DD22DD227  : public SubsystemProvider_1_t7ACBE98539B067B19E2D5BCC2B852277F4A38875
 {
 public:
 
@@ -2525,7 +2525,7 @@ public:
 
 
 // UnityEngine.XR.ARSubsystems.XRReferencePointSubsystem/Provider
-struct  Provider_t7974F3BD624EC305575E361EE0BCAAA3DC5B253C  : public SubsystemProvider_1_tA41ABDAA9644A18E81CC750DE7DDEA8EB6088742
+struct Provider_t7974F3BD624EC305575E361EE0BCAAA3DC5B253C  : public SubsystemProvider_1_tA41ABDAA9644A18E81CC750DE7DDEA8EB6088742
 {
 public:
 
@@ -2534,7 +2534,7 @@ public:
 
 
 // UnityEngine.XR.ARSubsystems.XRSessionSubsystem/Provider
-struct  Provider_t4C3675997BB8AF3A6A32C3EC3C93C10E4D3E8D1A  : public SubsystemProvider_1_tFA56F133FD9BCE90A1C4C7D15FFE2571963D8DE4
+struct Provider_t4C3675997BB8AF3A6A32C3EC3C93C10E4D3E8D1A  : public SubsystemProvider_1_tFA56F133FD9BCE90A1C4C7D15FFE2571963D8DE4
 {
 public:
 
@@ -2543,7 +2543,7 @@ public:
 
 
 // UnityEngine.XR.ARSubsystems.XRCpuImage/Plane/Cinfo
-struct  Cinfo_t11C577CFE4A1D91F887A6423F6D1350DA45CA5FC 
+struct Cinfo_t11C577CFE4A1D91F887A6423F6D1350DA45CA5FC 
 {
 public:
 	// System.IntPtr UnityEngine.XR.ARSubsystems.XRCpuImage/Plane/Cinfo::m_DataPtr
@@ -2591,7 +2591,7 @@ public:
 
 
 // Unity.Collections.NativeArray`1<UnityEngine.XR.ARSubsystems.ConfigurationDescriptor>
-struct  NativeArray_1_tC9A9DFD8C5E8BBF71F83CBC0CCF7C4BC38E3A4CA 
+struct NativeArray_1_tC9A9DFD8C5E8BBF71F83CBC0CCF7C4BC38E3A4CA 
 {
 public:
 	// System.Void* Unity.Collections.NativeArray`1::m_Buffer
@@ -2629,7 +2629,7 @@ public:
 
 
 // Unity.Collections.NativeArray`1<UnityEngine.XR.ARSubsystems.TrackableId>
-struct  NativeArray_1_t991E9C764228B2B65D9688847CCDA8CE903F5D77 
+struct NativeArray_1_t991E9C764228B2B65D9688847CCDA8CE903F5D77 
 {
 public:
 	// System.Void* Unity.Collections.NativeArray`1::m_Buffer
@@ -2667,7 +2667,7 @@ public:
 
 
 // Unity.Collections.NativeArray`1<UnityEngine.Vector2>
-struct  NativeArray_1_t431C85F30275831D1F5D458AB73DFCE050693BC0 
+struct NativeArray_1_t431C85F30275831D1F5D458AB73DFCE050693BC0 
 {
 public:
 	// System.Void* Unity.Collections.NativeArray`1::m_Buffer
@@ -2705,7 +2705,7 @@ public:
 
 
 // Unity.Collections.NativeArray`1<UnityEngine.XR.ARSubsystems.XRRaycast>
-struct  NativeArray_1_t7CC8D0A91D6B929CE8AF86EF904CA11B5437074E 
+struct NativeArray_1_t7CC8D0A91D6B929CE8AF86EF904CA11B5437074E 
 {
 public:
 	// System.Void* Unity.Collections.NativeArray`1::m_Buffer
@@ -2743,7 +2743,7 @@ public:
 
 
 // Unity.Collections.NativeArray`1<UnityEngine.XR.ARSubsystems.XRRaycastHit>
-struct  NativeArray_1_t35F2E89DF840C06C68595E9289A07A26CBB07FCB 
+struct NativeArray_1_t35F2E89DF840C06C68595E9289A07A26CBB07FCB 
 {
 public:
 	// System.Void* Unity.Collections.NativeArray`1::m_Buffer
@@ -2781,7 +2781,7 @@ public:
 
 
 // Unity.Collections.NativeArray`1<UnityEngine.XR.ARSubsystems.XRTextureDescriptor>
-struct  NativeArray_1_t290DD5A348463DD4415AFE27775047312478F952 
+struct NativeArray_1_t290DD5A348463DD4415AFE27775047312478F952 
 {
 public:
 	// System.Void* Unity.Collections.NativeArray`1::m_Buffer
@@ -2819,7 +2819,7 @@ public:
 
 
 // UnityEngine.XR.ARSubsystems.Promise`1<UnityEngine.XR.ARSubsystems.SessionAvailability>
-struct  Promise_1_tB8B428F557CD6742430DB416C0B99C79CA1AA167  : public CustomYieldInstruction_t4ED1543FBAA3143362854EB1867B42E5D190A5C7
+struct Promise_1_tB8B428F557CD6742430DB416C0B99C79CA1AA167  : public CustomYieldInstruction_t4ED1543FBAA3143362854EB1867B42E5D190A5C7
 {
 public:
 	// T UnityEngine.XR.ARSubsystems.Promise`1::<result>k__BackingField
@@ -2847,7 +2847,7 @@ public:
 
 
 // UnityEngine.XR.ARSubsystems.Promise`1<UnityEngine.XR.ARSubsystems.SessionInstallationStatus>
-struct  Promise_1_tB8B3F3631C923F82F653F3D73D6B3082CF7CDD88  : public CustomYieldInstruction_t4ED1543FBAA3143362854EB1867B42E5D190A5C7
+struct Promise_1_tB8B3F3631C923F82F653F3D73D6B3082CF7CDD88  : public CustomYieldInstruction_t4ED1543FBAA3143362854EB1867B42E5D190A5C7
 {
 public:
 	// T UnityEngine.XR.ARSubsystems.Promise`1::<result>k__BackingField
@@ -2875,7 +2875,7 @@ public:
 
 
 // UnityEngine.XR.ARSubsystems.ConfigurationDescriptor
-struct  ConfigurationDescriptor_t5CD12F017FCCF861DC33D7C0D6F0121015DEEA78 
+struct ConfigurationDescriptor_t5CD12F017FCCF861DC33D7C0D6F0121015DEEA78 
 {
 public:
 	// System.IntPtr UnityEngine.XR.ARSubsystems.ConfigurationDescriptor::m_Identifier
@@ -2913,7 +2913,7 @@ public:
 
 
 // System.MulticastDelegate
-struct  MulticastDelegate_t  : public Delegate_t
+struct MulticastDelegate_t  : public Delegate_t
 {
 public:
 	// System.Delegate[] System.MulticastDelegate::delegates
@@ -2942,7 +2942,7 @@ struct MulticastDelegate_t_marshaled_com : public Delegate_t_marshaled_com
 };
 
 // UnityEngine.ScriptableObject
-struct  ScriptableObject_t4361E08CEBF052C650D3666C7CEC37EB31DE116A  : public Object_tF2F3778131EFF286AF62B7B013A170F95A91571A
+struct ScriptableObject_t4361E08CEBF052C650D3666C7CEC37EB31DE116A  : public Object_tF2F3778131EFF286AF62B7B013A170F95A91571A
 {
 public:
 
@@ -2959,7 +2959,7 @@ struct ScriptableObject_t4361E08CEBF052C650D3666C7CEC37EB31DE116A_marshaled_com 
 };
 
 // System.SystemException
-struct  SystemException_tC551B4D6EE3772B5F32C71EE8C719F4B43ECCC62  : public Exception_t
+struct SystemException_tC551B4D6EE3772B5F32C71EE8C719F4B43ECCC62  : public Exception_t
 {
 public:
 
@@ -2968,7 +2968,7 @@ public:
 
 
 // System.Type
-struct  Type_t  : public MemberInfo_t
+struct Type_t  : public MemberInfo_t
 {
 public:
 	// System.RuntimeTypeHandle System.Type::_impl
@@ -3068,7 +3068,7 @@ public:
 
 
 // UnityEngine.XR.ARSubsystems.XRRaycast
-struct  XRRaycast_tA18F9107EFF1D692E70EF15233BB6134A5F66C55 
+struct XRRaycast_tA18F9107EFF1D692E70EF15233BB6134A5F66C55 
 {
 public:
 	// UnityEngine.XR.ARSubsystems.TrackableId UnityEngine.XR.ARSubsystems.XRRaycast::m_TrackableId
@@ -3152,7 +3152,7 @@ public:
 
 
 // UnityEngine.XR.ARSubsystems.XRRaycastHit
-struct  XRRaycastHit_t94A3D13B245A9D0A7A7F2D0919DCAAC7C8DF8DDB 
+struct XRRaycastHit_t94A3D13B245A9D0A7A7F2D0919DCAAC7C8DF8DDB 
 {
 public:
 	// UnityEngine.XR.ARSubsystems.TrackableId UnityEngine.XR.ARSubsystems.XRRaycastHit::m_TrackableId
@@ -3216,7 +3216,7 @@ public:
 
 
 // UnityEngine.XR.ARSubsystems.XRReferencePoint
-struct  XRReferencePoint_tF3ACF949B4AE1EC67F527F5D30DD8B912A814634 
+struct XRReferencePoint_tF3ACF949B4AE1EC67F527F5D30DD8B912A814634 
 {
 public:
 	// UnityEngine.XR.ARSubsystems.TrackableId UnityEngine.XR.ARSubsystems.XRReferencePoint::m_Id
@@ -3290,7 +3290,7 @@ public:
 
 
 // UnityEngine.XR.ARSubsystems.XRSessionUpdateParams
-struct  XRSessionUpdateParams_t106E075C3B348969D6F3B634195F295CE47DB77F 
+struct XRSessionUpdateParams_t106E075C3B348969D6F3B634195F295CE47DB77F 
 {
 public:
 	// UnityEngine.ScreenOrientation UnityEngine.XR.ARSubsystems.XRSessionUpdateParams::<screenOrientation>k__BackingField
@@ -3318,7 +3318,7 @@ public:
 
 
 // UnityEngine.XR.ARSubsystems.XRTextureDescriptor
-struct  XRTextureDescriptor_t9CA857DCCC1208B74376787BE4F3008A01B29A57 
+struct XRTextureDescriptor_t9CA857DCCC1208B74376787BE4F3008A01B29A57 
 {
 public:
 	// System.IntPtr UnityEngine.XR.ARSubsystems.XRTextureDescriptor::m_NativeTexture
@@ -3406,7 +3406,7 @@ public:
 
 
 // UnityEngine.XR.ARSubsystems.XRCpuImage/Cinfo
-struct  Cinfo_t4E32E30AF6973611F1DD0F47FC041ED3A8775DA6 
+struct Cinfo_t4E32E30AF6973611F1DD0F47FC041ED3A8775DA6 
 {
 public:
 	// System.Int32 UnityEngine.XR.ARSubsystems.XRCpuImage/Cinfo::m_NativeHandle
@@ -3464,7 +3464,7 @@ public:
 
 
 // UnityEngine.XR.ARSubsystems.XRCpuImage/ConversionParams
-struct  ConversionParams_t3DDB9752BA823641A302D0783C14048D9B09B74A 
+struct ConversionParams_t3DDB9752BA823641A302D0783C14048D9B09B74A 
 {
 public:
 	// UnityEngine.RectInt UnityEngine.XR.ARSubsystems.XRCpuImage/ConversionParams::m_InputRect
@@ -3512,7 +3512,7 @@ public:
 
 
 // UnityEngine.XR.ARSubsystems.XRRaycastSubsystemDescriptor/Cinfo
-struct  Cinfo_tAC330BB49E2D0C7E18C66AB4018927A6EC856E01 
+struct Cinfo_tAC330BB49E2D0C7E18C66AB4018927A6EC856E01 
 {
 public:
 	// System.String UnityEngine.XR.ARSubsystems.XRRaycastSubsystemDescriptor/Cinfo::<id>k__BackingField
@@ -3628,7 +3628,7 @@ struct Cinfo_tAC330BB49E2D0C7E18C66AB4018927A6EC856E01_marshaled_com
 };
 
 // UnityEngine.XR.ARSubsystems.TrackableChanges`1<UnityEngine.XR.ARSubsystems.XRRaycast>
-struct  TrackableChanges_1_t092C2BBB89690C350B949DDFFA9F551F85536ED3 
+struct TrackableChanges_1_t092C2BBB89690C350B949DDFFA9F551F85536ED3 
 {
 public:
 	// System.Boolean UnityEngine.XR.ARSubsystems.TrackableChanges`1::<isCreated>k__BackingField
@@ -3676,7 +3676,7 @@ public:
 
 
 // System.AsyncCallback
-struct  AsyncCallback_tA7921BEF974919C46FF8F9D9867C567B200BB0EA  : public MulticastDelegate_t
+struct AsyncCallback_tA7921BEF974919C46FF8F9D9867C567B200BB0EA  : public MulticastDelegate_t
 {
 public:
 
@@ -3685,7 +3685,7 @@ public:
 
 
 // UnityEngine.XR.ARSubsystems.Configuration
-struct  Configuration_t29C11C7E576D64F717543048BDA1EBCEF0CF60C0 
+struct Configuration_t29C11C7E576D64F717543048BDA1EBCEF0CF60C0 
 {
 public:
 	// UnityEngine.XR.ARSubsystems.ConfigurationDescriptor UnityEngine.XR.ARSubsystems.Configuration::<descriptor>k__BackingField
@@ -3713,7 +3713,7 @@ public:
 
 
 // System.NotSupportedException
-struct  NotSupportedException_tB9D89F0E9470A2C423D239D7C68EE0CFD77F9339  : public SystemException_tC551B4D6EE3772B5F32C71EE8C719F4B43ECCC62
+struct NotSupportedException_tB9D89F0E9470A2C423D239D7C68EE0CFD77F9339  : public SystemException_tC551B4D6EE3772B5F32C71EE8C719F4B43ECCC62
 {
 public:
 
@@ -3722,7 +3722,7 @@ public:
 
 
 // UnityEngine.XR.ARSubsystems.XRReferenceObjectLibrary
-struct  XRReferenceObjectLibrary_t07704B2996E507F23EE3C99CFC3BB73A83C99A7C  : public ScriptableObject_t4361E08CEBF052C650D3666C7CEC37EB31DE116A
+struct XRReferenceObjectLibrary_t07704B2996E507F23EE3C99CFC3BB73A83C99A7C  : public ScriptableObject_t4361E08CEBF052C650D3666C7CEC37EB31DE116A
 {
 public:
 	// System.UInt64 UnityEngine.XR.ARSubsystems.XRReferenceObjectLibrary::m_GuidLow
@@ -3761,7 +3761,7 @@ public:
 
 
 // UnityEngine.XR.ARSubsystems.XRCpuImage/Api/OnImageRequestCompleteDelegate
-struct  OnImageRequestCompleteDelegate_t118FB01E93241BFD5BCA5BEF2A6FD082ACAAB4DD  : public MulticastDelegate_t
+struct OnImageRequestCompleteDelegate_t118FB01E93241BFD5BCA5BEF2A6FD082ACAAB4DD  : public MulticastDelegate_t
 {
 public:
 
@@ -6412,7 +6412,7 @@ IL2CPP_EXTERN_C  bool Cinfo_Equals_m515E1A8509A7C1472469FD535B7CBE5D58E45A78_Adj
 IL2CPP_EXTERN_C  void DelegatePInvokeWrapper_OnImageRequestCompleteDelegate_t118FB01E93241BFD5BCA5BEF2A6FD082ACAAB4DD (OnImageRequestCompleteDelegate_t118FB01E93241BFD5BCA5BEF2A6FD082ACAAB4DD * __this, int32_t ___status0, ConversionParams_t3DDB9752BA823641A302D0783C14048D9B09B74A  ___conversionParams1, intptr_t ___dataPtr2, int32_t ___dataLength3, intptr_t ___context4, const RuntimeMethod* method)
 {
 	typedef void (DEFAULT_CALL *PInvokeFunc)(int32_t, ConversionParams_t3DDB9752BA823641A302D0783C14048D9B09B74A , intptr_t, int32_t, intptr_t);
-	PInvokeFunc il2cppPInvokeFunc = reinterpret_cast<PInvokeFunc>(il2cpp_codegen_get_method_pointer(((RuntimeDelegate*)__this)->method));
+	PInvokeFunc il2cppPInvokeFunc = reinterpret_cast<PInvokeFunc>(((RuntimeDelegate*)__this)->method->nativeFunction);
 
 	// Native function invocation
 	il2cppPInvokeFunc(___status0, ___conversionParams1, ___dataPtr2, ___dataLength3, ___context4);
@@ -6421,6 +6421,10 @@ IL2CPP_EXTERN_C  void DelegatePInvokeWrapper_OnImageRequestCompleteDelegate_t118
 // System.Void UnityEngine.XR.ARSubsystems.XRCpuImage/Api/OnImageRequestCompleteDelegate::.ctor(System.Object,System.IntPtr)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OnImageRequestCompleteDelegate__ctor_mB4E3DC02E880D5890B499CFD8BC47B4C47CCD2BC (OnImageRequestCompleteDelegate_t118FB01E93241BFD5BCA5BEF2A6FD082ACAAB4DD * __this, RuntimeObject * ___object0, intptr_t ___method1, const RuntimeMethod* method)
 {
+	if (___object0 == NULL && !MethodIsStatic((RuntimeMethod*)___method1))
+	{
+		il2cpp_codegen_raise_exception(il2cpp_codegen_get_argument_exception(NULL, "Delegate to an instance method cannot have null 'this'."), NULL);
+	}
 	__this->set_method_ptr_0(il2cpp_codegen_get_method_pointer((RuntimeMethod*)___method1));
 	__this->set_method_3(___method1);
 	__this->set_m_target_2(___object0);
@@ -6491,7 +6495,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OnImageRequestCompleteDelegate_Invoke_mA
 			}
 			else
 			{
-				if (targetThis == NULL)
+				if (___parameterCount == 4)
 				{
 					typedef void (*FunctionPointerType) (RuntimeObject*, ConversionParams_t3DDB9752BA823641A302D0783C14048D9B09B74A , intptr_t, int32_t, intptr_t, const RuntimeMethod*);
 					((FunctionPointerType)targetMethodPointer)((RuntimeObject*)(reinterpret_cast<RuntimeObject*>(&___status0) - 1), ___conversionParams1, ___dataPtr2, ___dataLength3, ___context4, targetMethod);

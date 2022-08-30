@@ -201,7 +201,7 @@ static void* _ObservePlayerItemContext = (void*)0x2;
 - (BOOL)playToView:(VideoPlayerView*)view
 {
     return [self _playWithPrepareBlock:^() {
-        view.player = _player;
+        view.player = self->_player;
         return YES;
     }];
 }

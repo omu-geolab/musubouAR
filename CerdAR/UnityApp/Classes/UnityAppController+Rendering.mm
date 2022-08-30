@@ -96,8 +96,8 @@ static bool _enableRunLoopAcceptInput = false;
     _renderingInited = true;
 
     [self shouldAttachRenderDelegate];
-    [_renderDelegate mainDisplayInited: _mainDisplay.surface];
     [_unityView recreateRenderingSurface];
+    [_renderDelegate mainDisplayInited: _mainDisplay.surface];
 
     _mainDisplay.surface->allowScreenshot = 1;
 }
@@ -134,6 +134,12 @@ static bool _enableRunLoopAcceptInput = false;
         targetFPS = maxFPS;
 
     _enableRunLoopAcceptInput = (targetFPS == maxFPS && UnityDeviceCPUCount() > 1);
+
+#if UNITY_HAS_IOSSDK_15_0 && UNITY_HAS_TVOSSDK_15_0
+    if (@available(iOS 15.0, tvOS 15.0, *))
+        _displayLink.preferredFrameRateRange = CAFrameRateRangeMake(targetFPS, targetFPS, targetFPS);
+    else
+#endif
     _displayLink.preferredFramesPerSecond = targetFPS;
 }
 
@@ -165,11 +171,6 @@ extern "C" void UnityPresentContextCallback(struct UnityFrameStats const* unityF
 extern "C" void UnityFramerateChangeCallback(int targetFPS)
 {
     [GetAppController() callbackFramerateChange: targetFPS];
-}
-
-extern "C" void UnityInitMainScreenRenderingCallback()
-{
-    [GetAppController().mainDisplay initRendering];
 }
 
 static NSBundle*        _MetalBundle    = nil;

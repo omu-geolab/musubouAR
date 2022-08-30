@@ -44,7 +44,6 @@ UnityExternCall(void,               UnityDestroyDisplayLink);
 UnityExternCall(void,               UnityCleanupTrampoline);
 
 // UnityAppController+Rendering.mm
-UnityExternCall(void,             UnityInitMainScreenRenderingCallback);
 UnityExternCall(void,             UnityGfxInitedCallback);
 UnityExternCall(void,             UnityPresentContextCallback, UnityFrameStats const*);
 UnityExternCall(void,             UnityFramerateChangeCallback, int);
@@ -99,7 +98,7 @@ UnityExternCall(bool,             UnityRequestStoreReview);
 
 // Unity/AVCapture.mm
 UnityExternCall(int,              UnityGetAVCapturePermission, int);
-UnityExternCall(void,             UnityRequestAVCapturePermission, int);
+UnityExternCall(void,             UnityRequestAVCapturePermission, int, void*);
 
 // Unity/CameraCapture.mm
 typedef void(*UnityEnumVideoCaptureDevicesCallback)(void* udata, const char* name, int frontFacing, int autoFocusPointSupported, int kind, const int* resolutions, int resCount);
@@ -137,6 +136,7 @@ UnityExternCall(const char*,      UnitySystemLanguage);
 UnityExternCall(int,              UnityGetLowPowerModeEnabled);
 UnityExternCall(int,              UnityGetWantsSoftwareDimming);
 UnityExternCall(void,             UnitySetWantsSoftwareDimming, int);
+UnityExternCall(int,              UnityGetIosAppOnMac);
 
 // Unity/DisplayManager.mm
 UnityExternCall(void,             UnityActivateScreenForRendering, void*);

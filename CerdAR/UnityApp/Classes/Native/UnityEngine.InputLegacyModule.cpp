@@ -24,6 +24,8 @@ struct TouchU5BU5D_t07E3B79F1FB6673E4450CCF9D09FA79DD96692E2;
 struct HitInfoU5BU5D_t432774AD200329E637288BFACCD210774B7B5231;
 // UnityEngine.Camera
 struct Camera_tC44E094BAB53AFC8A014C6F9CFCE11F4FC38006C;
+// UnityEngine.Compass
+struct Compass_t022644CBBAC10ADEE9AAFF3C0B0EE4A9F82DAE2D;
 // UnityEngine.Display
 struct Display_t0A5D09F1F2EB8025FE40EE0F81E0D01BB47A9B44;
 // UnityEngine.GameObject
@@ -44,6 +46,7 @@ struct CameraCallback_tD9E7B69E561CE2EFDEEDB0E7F1406AC52247160D;
 struct DisplaysUpdatedDelegate_tC6A6AD44FAD98C9E28479FFF4BD3D9932458A6A1;
 
 IL2CPP_EXTERN_C RuntimeClass* CameraU5BU5D_tAF84B9EC9AF40F1B6294BCEBA82A1AD123A9D001_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* Compass_t022644CBBAC10ADEE9AAFF3C0B0EE4A9F82DAE2D_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Debug_tEB68BCBEB8EFD60F8043C67146DC05E7F50F374B_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Display_t0A5D09F1F2EB8025FE40EE0F81E0D01BB47A9B44_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* HitInfoU5BU5D_t432774AD200329E637288BFACCD210774B7B5231_il2cpp_TypeInfo_var;
@@ -76,7 +79,7 @@ IL2CPP_EXTERN_C_END
 #endif
 
 // <Module>
-struct  U3CModuleU3E_t2F6B72E5B55148A7B1DBD6B42B301AEC3ECE86DB 
+struct U3CModuleU3E_t2F6B72E5B55148A7B1DBD6B42B301AEC3ECE86DB 
 {
 public:
 
@@ -92,7 +95,16 @@ struct Il2CppArrayBounds;
 
 
 // UnityEngine.CameraRaycastHelper
-struct  CameraRaycastHelper_t2EB434C1BA2F4B7011FE16E77A471188901F1913  : public RuntimeObject
+struct CameraRaycastHelper_t2EB434C1BA2F4B7011FE16E77A471188901F1913  : public RuntimeObject
+{
+public:
+
+public:
+};
+
+
+// UnityEngine.Compass
+struct Compass_t022644CBBAC10ADEE9AAFF3C0B0EE4A9F82DAE2D  : public RuntimeObject
 {
 public:
 
@@ -101,7 +113,7 @@ public:
 
 
 // UnityEngine.Input
-struct  Input_t763D9CAB93E5035D6CE4D185D9B64D7F3F47202A  : public RuntimeObject
+struct Input_t763D9CAB93E5035D6CE4D185D9B64D7F3F47202A  : public RuntimeObject
 {
 public:
 
@@ -113,6 +125,8 @@ struct Input_t763D9CAB93E5035D6CE4D185D9B64D7F3F47202A_StaticFields
 public:
 	// UnityEngine.LocationService UnityEngine.Input::locationServiceInstance
 	LocationService_tDCB7C3AA7A10C4727D49676FD3A902F48C27F855 * ___locationServiceInstance_0;
+	// UnityEngine.Compass UnityEngine.Input::compassInstance
+	Compass_t022644CBBAC10ADEE9AAFF3C0B0EE4A9F82DAE2D * ___compassInstance_1;
 
 public:
 	inline static int32_t get_offset_of_locationServiceInstance_0() { return static_cast<int32_t>(offsetof(Input_t763D9CAB93E5035D6CE4D185D9B64D7F3F47202A_StaticFields, ___locationServiceInstance_0)); }
@@ -123,11 +137,20 @@ public:
 		___locationServiceInstance_0 = value;
 		Il2CppCodeGenWriteBarrier((void**)(&___locationServiceInstance_0), (void*)value);
 	}
+
+	inline static int32_t get_offset_of_compassInstance_1() { return static_cast<int32_t>(offsetof(Input_t763D9CAB93E5035D6CE4D185D9B64D7F3F47202A_StaticFields, ___compassInstance_1)); }
+	inline Compass_t022644CBBAC10ADEE9AAFF3C0B0EE4A9F82DAE2D * get_compassInstance_1() const { return ___compassInstance_1; }
+	inline Compass_t022644CBBAC10ADEE9AAFF3C0B0EE4A9F82DAE2D ** get_address_of_compassInstance_1() { return &___compassInstance_1; }
+	inline void set_compassInstance_1(Compass_t022644CBBAC10ADEE9AAFF3C0B0EE4A9F82DAE2D * value)
+	{
+		___compassInstance_1 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&___compassInstance_1), (void*)value);
+	}
 };
 
 
 // UnityEngine.LocationService
-struct  LocationService_tDCB7C3AA7A10C4727D49676FD3A902F48C27F855  : public RuntimeObject
+struct LocationService_tDCB7C3AA7A10C4727D49676FD3A902F48C27F855  : public RuntimeObject
 {
 public:
 
@@ -136,7 +159,7 @@ public:
 
 
 // UnityEngine.SendMouseEvents
-struct  SendMouseEvents_tCF069F9DE53C8E51B7AF505FC52F79DB84D81437  : public RuntimeObject
+struct SendMouseEvents_tCF069F9DE53C8E51B7AF505FC52F79DB84D81437  : public RuntimeObject
 {
 public:
 
@@ -205,7 +228,7 @@ public:
 
 
 // System.String
-struct  String_t  : public RuntimeObject
+struct String_t  : public RuntimeObject
 {
 public:
 	// System.Int32 System.String::m_stringLength
@@ -250,7 +273,7 @@ public:
 
 
 // System.ValueType
-struct  ValueType_tDBF999C1B75C48C68621878250DBF6CDBCF51E52  : public RuntimeObject
+struct ValueType_tDBF999C1B75C48C68621878250DBF6CDBCF51E52  : public RuntimeObject
 {
 public:
 
@@ -267,7 +290,7 @@ struct ValueType_tDBF999C1B75C48C68621878250DBF6CDBCF51E52_marshaled_com
 };
 
 // System.Boolean
-struct  Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37 
+struct Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37 
 {
 public:
 	// System.Boolean System.Boolean::m_value
@@ -313,7 +336,7 @@ public:
 
 
 // System.Enum
-struct  Enum_t23B90B40F60E677A8025267341651C94AE079CDA  : public ValueType_tDBF999C1B75C48C68621878250DBF6CDBCF51E52
+struct Enum_t23B90B40F60E677A8025267341651C94AE079CDA  : public ValueType_tDBF999C1B75C48C68621878250DBF6CDBCF51E52
 {
 public:
 
@@ -347,7 +370,7 @@ struct Enum_t23B90B40F60E677A8025267341651C94AE079CDA_marshaled_com
 };
 
 // System.Int32
-struct  Int32_tFDE5F8CD43D10453F6A2E0C77FE48C6CC7009046 
+struct Int32_tFDE5F8CD43D10453F6A2E0C77FE48C6CC7009046 
 {
 public:
 	// System.Int32 System.Int32::m_value
@@ -365,7 +388,7 @@ public:
 
 
 // System.IntPtr
-struct  IntPtr_t 
+struct IntPtr_t 
 {
 public:
 	// System.Void* System.IntPtr::m_value
@@ -399,7 +422,7 @@ public:
 
 
 // UnityEngine.LocationInfo
-struct  LocationInfo_t7FC872AE105FF29421AFC8BBEE071F6C36E44769 
+struct LocationInfo_t7FC872AE105FF29421AFC8BBEE071F6C36E44769 
 {
 public:
 	// System.Double UnityEngine.LocationInfo::m_Timestamp
@@ -467,7 +490,7 @@ public:
 
 
 // UnityEngine.Rect
-struct  Rect_t7D9187DB6339DBA5741C09B6CCEF2F54F1966878 
+struct Rect_t7D9187DB6339DBA5741C09B6CCEF2F54F1966878 
 {
 public:
 	// System.Single UnityEngine.Rect::m_XMin
@@ -515,7 +538,7 @@ public:
 
 
 // System.Single
-struct  Single_tE07797BA3C98D4CA9B5A19413C19A76688AB899E 
+struct Single_tE07797BA3C98D4CA9B5A19413C19A76688AB899E 
 {
 public:
 	// System.Single System.Single::m_value
@@ -533,7 +556,7 @@ public:
 
 
 // UnityEngine.Vector2
-struct  Vector2_tBB32F2736AEC229A7BFBCE18197EC0F6AC7EC2D9 
+struct Vector2_tBB32F2736AEC229A7BFBCE18197EC0F6AC7EC2D9 
 {
 public:
 	// System.Single UnityEngine.Vector2::x
@@ -647,7 +670,7 @@ public:
 
 
 // UnityEngine.Vector3
-struct  Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E 
+struct Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E 
 {
 public:
 	// System.Single UnityEngine.Vector3::x
@@ -791,7 +814,7 @@ public:
 
 
 // System.Void
-struct  Void_t700C6383A2A510C2CF4DD86DABD5CA9FF70ADAC5 
+struct Void_t700C6383A2A510C2CF4DD86DABD5CA9FF70ADAC5 
 {
 public:
 	union
@@ -807,7 +830,7 @@ public:
 
 
 // UnityEngine.SendMouseEvents/HitInfo
-struct  HitInfo_t74B96DDC302EB605CCC557B737A5C88EB67B57D6 
+struct HitInfo_t74B96DDC302EB605CCC557B737A5C88EB67B57D6 
 {
 public:
 	// UnityEngine.GameObject UnityEngine.SendMouseEvents/HitInfo::target
@@ -849,7 +872,7 @@ struct HitInfo_t74B96DDC302EB605CCC557B737A5C88EB67B57D6_marshaled_com
 };
 
 // UnityEngine.CameraClearFlags
-struct  CameraClearFlags_t5CCA5C0FD787D780C128B8B0D6ACC80BB41B1DE7 
+struct CameraClearFlags_t5CCA5C0FD787D780C128B8B0D6ACC80BB41B1DE7 
 {
 public:
 	// System.Int32 UnityEngine.CameraClearFlags::value__
@@ -867,7 +890,7 @@ public:
 
 
 // UnityEngine.Display
-struct  Display_t0A5D09F1F2EB8025FE40EE0F81E0D01BB47A9B44  : public RuntimeObject
+struct Display_t0A5D09F1F2EB8025FE40EE0F81E0D01BB47A9B44  : public RuntimeObject
 {
 public:
 	// System.IntPtr UnityEngine.Display::nativeDisplay
@@ -890,8 +913,10 @@ public:
 	DisplayU5BU5D_t3330058639C7A70B7B1FE7B4325E2B5D600CF4A6* ___displays_1;
 	// UnityEngine.Display UnityEngine.Display::_mainDisplay
 	Display_t0A5D09F1F2EB8025FE40EE0F81E0D01BB47A9B44 * ____mainDisplay_2;
+	// System.Int32 UnityEngine.Display::m_ActiveEditorGameViewTarget
+	int32_t ___m_ActiveEditorGameViewTarget_3;
 	// UnityEngine.Display/DisplaysUpdatedDelegate UnityEngine.Display::onDisplaysUpdated
-	DisplaysUpdatedDelegate_tC6A6AD44FAD98C9E28479FFF4BD3D9932458A6A1 * ___onDisplaysUpdated_3;
+	DisplaysUpdatedDelegate_tC6A6AD44FAD98C9E28479FFF4BD3D9932458A6A1 * ___onDisplaysUpdated_4;
 
 public:
 	inline static int32_t get_offset_of_displays_1() { return static_cast<int32_t>(offsetof(Display_t0A5D09F1F2EB8025FE40EE0F81E0D01BB47A9B44_StaticFields, ___displays_1)); }
@@ -912,19 +937,27 @@ public:
 		Il2CppCodeGenWriteBarrier((void**)(&____mainDisplay_2), (void*)value);
 	}
 
-	inline static int32_t get_offset_of_onDisplaysUpdated_3() { return static_cast<int32_t>(offsetof(Display_t0A5D09F1F2EB8025FE40EE0F81E0D01BB47A9B44_StaticFields, ___onDisplaysUpdated_3)); }
-	inline DisplaysUpdatedDelegate_tC6A6AD44FAD98C9E28479FFF4BD3D9932458A6A1 * get_onDisplaysUpdated_3() const { return ___onDisplaysUpdated_3; }
-	inline DisplaysUpdatedDelegate_tC6A6AD44FAD98C9E28479FFF4BD3D9932458A6A1 ** get_address_of_onDisplaysUpdated_3() { return &___onDisplaysUpdated_3; }
-	inline void set_onDisplaysUpdated_3(DisplaysUpdatedDelegate_tC6A6AD44FAD98C9E28479FFF4BD3D9932458A6A1 * value)
+	inline static int32_t get_offset_of_m_ActiveEditorGameViewTarget_3() { return static_cast<int32_t>(offsetof(Display_t0A5D09F1F2EB8025FE40EE0F81E0D01BB47A9B44_StaticFields, ___m_ActiveEditorGameViewTarget_3)); }
+	inline int32_t get_m_ActiveEditorGameViewTarget_3() const { return ___m_ActiveEditorGameViewTarget_3; }
+	inline int32_t* get_address_of_m_ActiveEditorGameViewTarget_3() { return &___m_ActiveEditorGameViewTarget_3; }
+	inline void set_m_ActiveEditorGameViewTarget_3(int32_t value)
 	{
-		___onDisplaysUpdated_3 = value;
-		Il2CppCodeGenWriteBarrier((void**)(&___onDisplaysUpdated_3), (void*)value);
+		___m_ActiveEditorGameViewTarget_3 = value;
+	}
+
+	inline static int32_t get_offset_of_onDisplaysUpdated_4() { return static_cast<int32_t>(offsetof(Display_t0A5D09F1F2EB8025FE40EE0F81E0D01BB47A9B44_StaticFields, ___onDisplaysUpdated_4)); }
+	inline DisplaysUpdatedDelegate_tC6A6AD44FAD98C9E28479FFF4BD3D9932458A6A1 * get_onDisplaysUpdated_4() const { return ___onDisplaysUpdated_4; }
+	inline DisplaysUpdatedDelegate_tC6A6AD44FAD98C9E28479FFF4BD3D9932458A6A1 ** get_address_of_onDisplaysUpdated_4() { return &___onDisplaysUpdated_4; }
+	inline void set_onDisplaysUpdated_4(DisplaysUpdatedDelegate_tC6A6AD44FAD98C9E28479FFF4BD3D9932458A6A1 * value)
+	{
+		___onDisplaysUpdated_4 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&___onDisplaysUpdated_4), (void*)value);
 	}
 };
 
 
 // UnityEngine.IMECompositionMode
-struct  IMECompositionMode_t8755B1BD5D22F5DE23A46F79403A234844D7A5C8 
+struct IMECompositionMode_t8755B1BD5D22F5DE23A46F79403A234844D7A5C8 
 {
 public:
 	// System.Int32 UnityEngine.IMECompositionMode::value__
@@ -942,7 +975,7 @@ public:
 
 
 // UnityEngine.KeyCode
-struct  KeyCode_t1D303F7D061BF4429872E9F109ADDBCB431671F4 
+struct KeyCode_t1D303F7D061BF4429872E9F109ADDBCB431671F4 
 {
 public:
 	// System.Int32 UnityEngine.KeyCode::value__
@@ -960,7 +993,7 @@ public:
 
 
 // UnityEngine.LocationServiceStatus
-struct  LocationServiceStatus_tD2BEAE4A2A42A9D0D4D859AE1C968D278D5ACF2F 
+struct LocationServiceStatus_tD2BEAE4A2A42A9D0D4D859AE1C968D278D5ACF2F 
 {
 public:
 	// System.Int32 UnityEngine.LocationServiceStatus::value__
@@ -978,7 +1011,7 @@ public:
 
 
 // UnityEngine.Object
-struct  Object_tF2F3778131EFF286AF62B7B013A170F95A91571A  : public RuntimeObject
+struct Object_tF2F3778131EFF286AF62B7B013A170F95A91571A  : public RuntimeObject
 {
 public:
 	// System.IntPtr UnityEngine.Object::m_CachedPtr
@@ -1022,7 +1055,7 @@ struct Object_tF2F3778131EFF286AF62B7B013A170F95A91571A_marshaled_com
 };
 
 // UnityEngine.Ray
-struct  Ray_t2E9E67CC8B03EE6ED2BBF3D2C9C96DDF70E1D5E6 
+struct Ray_t2E9E67CC8B03EE6ED2BBF3D2C9C96DDF70E1D5E6 
 {
 public:
 	// UnityEngine.Vector3 UnityEngine.Ray::m_Origin
@@ -1050,7 +1083,7 @@ public:
 
 
 // UnityEngine.SendMessageOptions
-struct  SendMessageOptions_t89E16D7B4FAECAF721478B06E56214F97438C61B 
+struct SendMessageOptions_t89E16D7B4FAECAF721478B06E56214F97438C61B 
 {
 public:
 	// System.Int32 UnityEngine.SendMessageOptions::value__
@@ -1068,7 +1101,7 @@ public:
 
 
 // UnityEngine.TouchPhase
-struct  TouchPhase_tB52B8A497547FB9575DE7975D13AC7D64C3A958A 
+struct TouchPhase_tB52B8A497547FB9575DE7975D13AC7D64C3A958A 
 {
 public:
 	// System.Int32 UnityEngine.TouchPhase::value__
@@ -1086,7 +1119,7 @@ public:
 
 
 // UnityEngine.TouchType
-struct  TouchType_t2EF726465ABD45681A6686BAC426814AA087C20F 
+struct TouchType_t2EF726465ABD45681A6686BAC426814AA087C20F 
 {
 public:
 	// System.Int32 UnityEngine.TouchType::value__
@@ -1103,8 +1136,66 @@ public:
 };
 
 
+// UnityEngine.LocationService/HeadingInfo
+struct HeadingInfo_t58242CE1DD5D968AC7C4A31032A29DD8C0203DE2 
+{
+public:
+	// System.Single UnityEngine.LocationService/HeadingInfo::magneticHeading
+	float ___magneticHeading_0;
+	// System.Single UnityEngine.LocationService/HeadingInfo::trueHeading
+	float ___trueHeading_1;
+	// System.Single UnityEngine.LocationService/HeadingInfo::headingAccuracy
+	float ___headingAccuracy_2;
+	// UnityEngine.Vector3 UnityEngine.LocationService/HeadingInfo::raw
+	Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  ___raw_3;
+	// System.Double UnityEngine.LocationService/HeadingInfo::timestamp
+	double ___timestamp_4;
+
+public:
+	inline static int32_t get_offset_of_magneticHeading_0() { return static_cast<int32_t>(offsetof(HeadingInfo_t58242CE1DD5D968AC7C4A31032A29DD8C0203DE2, ___magneticHeading_0)); }
+	inline float get_magneticHeading_0() const { return ___magneticHeading_0; }
+	inline float* get_address_of_magneticHeading_0() { return &___magneticHeading_0; }
+	inline void set_magneticHeading_0(float value)
+	{
+		___magneticHeading_0 = value;
+	}
+
+	inline static int32_t get_offset_of_trueHeading_1() { return static_cast<int32_t>(offsetof(HeadingInfo_t58242CE1DD5D968AC7C4A31032A29DD8C0203DE2, ___trueHeading_1)); }
+	inline float get_trueHeading_1() const { return ___trueHeading_1; }
+	inline float* get_address_of_trueHeading_1() { return &___trueHeading_1; }
+	inline void set_trueHeading_1(float value)
+	{
+		___trueHeading_1 = value;
+	}
+
+	inline static int32_t get_offset_of_headingAccuracy_2() { return static_cast<int32_t>(offsetof(HeadingInfo_t58242CE1DD5D968AC7C4A31032A29DD8C0203DE2, ___headingAccuracy_2)); }
+	inline float get_headingAccuracy_2() const { return ___headingAccuracy_2; }
+	inline float* get_address_of_headingAccuracy_2() { return &___headingAccuracy_2; }
+	inline void set_headingAccuracy_2(float value)
+	{
+		___headingAccuracy_2 = value;
+	}
+
+	inline static int32_t get_offset_of_raw_3() { return static_cast<int32_t>(offsetof(HeadingInfo_t58242CE1DD5D968AC7C4A31032A29DD8C0203DE2, ___raw_3)); }
+	inline Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  get_raw_3() const { return ___raw_3; }
+	inline Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E * get_address_of_raw_3() { return &___raw_3; }
+	inline void set_raw_3(Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  value)
+	{
+		___raw_3 = value;
+	}
+
+	inline static int32_t get_offset_of_timestamp_4() { return static_cast<int32_t>(offsetof(HeadingInfo_t58242CE1DD5D968AC7C4A31032A29DD8C0203DE2, ___timestamp_4)); }
+	inline double get_timestamp_4() const { return ___timestamp_4; }
+	inline double* get_address_of_timestamp_4() { return &___timestamp_4; }
+	inline void set_timestamp_4(double value)
+	{
+		___timestamp_4 = value;
+	}
+};
+
+
 // UnityEngine.Component
-struct  Component_t62FBC8D2420DA4BE9037AFE430740F6B3EECA684  : public Object_tF2F3778131EFF286AF62B7B013A170F95A91571A
+struct Component_t62FBC8D2420DA4BE9037AFE430740F6B3EECA684  : public Object_tF2F3778131EFF286AF62B7B013A170F95A91571A
 {
 public:
 
@@ -1113,7 +1204,7 @@ public:
 
 
 // UnityEngine.GameObject
-struct  GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319  : public Object_tF2F3778131EFF286AF62B7B013A170F95A91571A
+struct GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319  : public Object_tF2F3778131EFF286AF62B7B013A170F95A91571A
 {
 public:
 
@@ -1122,7 +1213,7 @@ public:
 
 
 // UnityEngine.Texture
-struct  Texture_t9FE0218A1EEDF266E8C85879FE123265CACC95AE  : public Object_tF2F3778131EFF286AF62B7B013A170F95A91571A
+struct Texture_t9FE0218A1EEDF266E8C85879FE123265CACC95AE  : public Object_tF2F3778131EFF286AF62B7B013A170F95A91571A
 {
 public:
 
@@ -1147,7 +1238,7 @@ public:
 
 
 // UnityEngine.Touch
-struct  Touch_tDEFED247540BCFA4AD452F1D37EEF4E09B4ACD8C 
+struct Touch_tDEFED247540BCFA4AD452F1D37EEF4E09B4ACD8C 
 {
 public:
 	// System.Int32 UnityEngine.Touch::m_FingerId
@@ -1295,7 +1386,7 @@ public:
 
 
 // UnityEngine.Behaviour
-struct  Behaviour_t1A3DDDCF73B4627928FBFE02ED52B7251777DBD9  : public Component_t62FBC8D2420DA4BE9037AFE430740F6B3EECA684
+struct Behaviour_t1A3DDDCF73B4627928FBFE02ED52B7251777DBD9  : public Component_t62FBC8D2420DA4BE9037AFE430740F6B3EECA684
 {
 public:
 
@@ -1304,7 +1395,7 @@ public:
 
 
 // UnityEngine.RenderTexture
-struct  RenderTexture_t5FE7A5B47EF962A0E8D7BEBA05E9FC87D49A1849  : public Texture_t9FE0218A1EEDF266E8C85879FE123265CACC95AE
+struct RenderTexture_t5FE7A5B47EF962A0E8D7BEBA05E9FC87D49A1849  : public Texture_t9FE0218A1EEDF266E8C85879FE123265CACC95AE
 {
 public:
 
@@ -1313,7 +1404,7 @@ public:
 
 
 // UnityEngine.Camera
-struct  Camera_tC44E094BAB53AFC8A014C6F9CFCE11F4FC38006C  : public Behaviour_t1A3DDDCF73B4627928FBFE02ED52B7251777DBD9
+struct Camera_tC44E094BAB53AFC8A014C6F9CFCE11F4FC38006C  : public Behaviour_t1A3DDDCF73B4627928FBFE02ED52B7251777DBD9
 {
 public:
 
@@ -1521,6 +1612,12 @@ public:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * CameraRaycastHelper_RaycastTry_Injected_mFAED8F3DC204691A92849F36D8BC69CFE68F43E8 (Camera_tC44E094BAB53AFC8A014C6F9CFCE11F4FC38006C * ___cam0, Ray_t2E9E67CC8B03EE6ED2BBF3D2C9C96DDF70E1D5E6 * ___ray1, float ___distance2, int32_t ___layerMask3, const RuntimeMethod* method);
 // UnityEngine.GameObject UnityEngine.CameraRaycastHelper::RaycastTry2D_Injected(UnityEngine.Camera,UnityEngine.Ray&,System.Single,System.Int32)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * CameraRaycastHelper_RaycastTry2D_Injected_m1AB3B5B899C17D5D6FC41D8F8CF2BE549F7D9F21 (Camera_tC44E094BAB53AFC8A014C6F9CFCE11F4FC38006C * ___cam0, Ray_t2E9E67CC8B03EE6ED2BBF3D2C9C96DDF70E1D5E6 * ___ray1, float ___distance2, int32_t ___layerMask3, const RuntimeMethod* method);
+// UnityEngine.LocationService/HeadingInfo UnityEngine.LocationService::GetLastHeading()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR HeadingInfo_t58242CE1DD5D968AC7C4A31032A29DD8C0203DE2  LocationService_GetLastHeading_m7530296212CF484DE1A071C43C8091AE3B80ADA4 (const RuntimeMethod* method);
+// System.Void UnityEngine.LocationService::SetHeadingUpdatesEnabled(System.Boolean)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LocationService_SetHeadingUpdatesEnabled_m499D46345A5A075EAF8A3FEA2BDCC2A408AA5E8D (bool ___value0, const RuntimeMethod* method);
+// System.Void System.Object::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Object__ctor_m88880E0413421D13FD95325EDCE231707CE1F405 (RuntimeObject * __this, const RuntimeMethod* method);
 // System.Void UnityEngine.Input::GetTouch_Injected(System.Int32,UnityEngine.Touch&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Input_GetTouch_Injected_m19710838FFBDDC3E60536B0932D3B5A392BE539D (int32_t ___index0, Touch_tDEFED247540BCFA4AD452F1D37EEF4E09B4ACD8C * ___ret1, const RuntimeMethod* method);
 // System.Boolean UnityEngine.Input::GetKeyInt(UnityEngine.KeyCode)
@@ -1537,6 +1634,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Input_get_compositionCursorPos_Injected_
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Input_set_compositionCursorPos_Injected_m4B961AC7900B41DDBFBA03BE2F65F49C030CCB4D (Vector2_tBB32F2736AEC229A7BFBCE18197EC0F6AC7EC2D9 * ___value0, const RuntimeMethod* method);
 // System.Void UnityEngine.LocationService::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LocationService__ctor_m56E613208DF3884D18A8B50E106F7358C334580C (LocationService_tDCB7C3AA7A10C4727D49676FD3A902F48C27F855 * __this, const RuntimeMethod* method);
+// System.Void UnityEngine.Compass::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Compass__ctor_m8EB48027E36FF0551820B2FC21916D87332D5DA1 (Compass_t022644CBBAC10ADEE9AAFF3C0B0EE4A9F82DAE2D * __this, const RuntimeMethod* method);
 // System.Int32 UnityEngine.Input::get_touchCount()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Input_get_touchCount_mE1A06AB1973E3456AE398B3CC5105F27CC7335D6 (const RuntimeMethod* method);
 // UnityEngine.Touch UnityEngine.Input::GetTouch(System.Int32)
@@ -1549,6 +1648,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float LocationInfo_get_longitude_mD0F77FFCF02
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float LocationInfo_get_altitude_m2EC063255D07139449D5D56D3FA24AEDAAE7A189 (LocationInfo_t7FC872AE105FF29421AFC8BBEE071F6C36E44769 * __this, const RuntimeMethod* method);
 // System.Void UnityEngine.LocationService::GetLastLocation_Injected(UnityEngine.LocationInfo&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LocationService_GetLastLocation_Injected_m1B2A33CE8025C6FC2FDF578B7B1082C9A2774088 (LocationInfo_t7FC872AE105FF29421AFC8BBEE071F6C36E44769 * ___ret0, const RuntimeMethod* method);
+// System.Void UnityEngine.LocationService::GetLastHeading_Injected(UnityEngine.LocationService/HeadingInfo&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LocationService_GetLastHeading_Injected_m4BE669A143FFC621E1E459BDE38B03583218AE3A (HeadingInfo_t58242CE1DD5D968AC7C4A31032A29DD8C0203DE2 * ___ret0, const RuntimeMethod* method);
+// System.Boolean UnityEngine.LocationService::IsServiceEnabledByUser()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool LocationService_IsServiceEnabledByUser_m766F0351241A31DF2D8F3D9BAFF757A2524F0AFC (const RuntimeMethod* method);
 // UnityEngine.LocationServiceStatus UnityEngine.LocationService::GetLocationStatus()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t LocationService_GetLocationStatus_m9B85B6CA1DFE35ECE0B86B6C4847E7B9842E0B5D (const RuntimeMethod* method);
 // UnityEngine.LocationServiceStatus UnityEngine.LocationService::get_status()
@@ -1565,8 +1668,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LocationService_SetDistanceFilter_m2DCEB
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LocationService_StartUpdatingLocation_m3F0A36410DA6F8FF49E3652072A8878BC0974C77 (const RuntimeMethod* method);
 // System.Void UnityEngine.LocationService::Start(System.Single,System.Single)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LocationService_Start_m625DBB1AF4D9E01C6DD790A2E536AC278072D53A (LocationService_tDCB7C3AA7A10C4727D49676FD3A902F48C27F855 * __this, float ___desiredAccuracyInMeters0, float ___updateDistanceInMeters1, const RuntimeMethod* method);
-// System.Void System.Object::.ctor()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Object__ctor_m88880E0413421D13FD95325EDCE231707CE1F405 (RuntimeObject * __this, const RuntimeMethod* method);
 // UnityEngine.Vector3 UnityEngine.Input::get_mousePosition()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  Input_get_mousePosition_m79528BC2F30C57054641F709C855130AE586AC0E (const RuntimeMethod* method);
 // System.Int32 UnityEngine.Camera::get_allCamerasCount()
@@ -1708,6 +1809,49 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameObject_tC000A2E1A7CF1E10FD7BA08863287C072
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+// System.Single UnityEngine.Compass::get_trueHeading()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Compass_get_trueHeading_m81777B4965C5057255EA53312EDF273EBA068F2B (Compass_t022644CBBAC10ADEE9AAFF3C0B0EE4A9F82DAE2D * __this, const RuntimeMethod* method)
+{
+	float V_0 = 0.0f;
+	{
+		HeadingInfo_t58242CE1DD5D968AC7C4A31032A29DD8C0203DE2  L_0;
+		L_0 = LocationService_GetLastHeading_m7530296212CF484DE1A071C43C8091AE3B80ADA4(/*hidden argument*/NULL);
+		float L_1 = L_0.get_trueHeading_1();
+		V_0 = L_1;
+		goto IL_000e;
+	}
+
+IL_000e:
+	{
+		float L_2 = V_0;
+		return L_2;
+	}
+}
+// System.Void UnityEngine.Compass::set_enabled(System.Boolean)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Compass_set_enabled_m487581253439E98D30E648EE4F0D1EA37B5C4740 (Compass_t022644CBBAC10ADEE9AAFF3C0B0EE4A9F82DAE2D * __this, bool ___value0, const RuntimeMethod* method)
+{
+	{
+		bool L_0 = ___value0;
+		LocationService_SetHeadingUpdatesEnabled_m499D46345A5A075EAF8A3FEA2BDCC2A408AA5E8D(L_0, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Compass::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Compass__ctor_m8EB48027E36FF0551820B2FC21916D87332D5DA1 (Compass_t022644CBBAC10ADEE9AAFF3C0B0EE4A9F82DAE2D * __this, const RuntimeMethod* method)
+{
+	{
+		Object__ctor_m88880E0413421D13FD95325EDCE231707CE1F405(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
@@ -1754,6 +1898,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Input_GetAxisRaw_mC07AC23FD8D04A69CDB07
 	if (!_il2cpp_icall_func)
 	_il2cpp_icall_func = (Input_GetAxisRaw_mC07AC23FD8D04A69CDB07C6399C93FFFAEB0FC5B_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Input::GetAxisRaw(System.String)");
 	float icallRetVal = _il2cpp_icall_func(___axisName0);
+	return icallRetVal;
+}
+// System.Boolean UnityEngine.Input::GetButton(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Input_GetButton_m95EE8314087068F3AA9CEF3C3F6A246D55C4734C (String_t* ___buttonName0, const RuntimeMethod* method)
+{
+	typedef bool (*Input_GetButton_m95EE8314087068F3AA9CEF3C3F6A246D55C4734C_ftn) (String_t*);
+	static Input_GetButton_m95EE8314087068F3AA9CEF3C3F6A246D55C4734C_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Input_GetButton_m95EE8314087068F3AA9CEF3C3F6A246D55C4734C_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Input::GetButton(System.String)");
+	bool icallRetVal = _il2cpp_icall_func(___buttonName0);
 	return icallRetVal;
 }
 // System.Boolean UnityEngine.Input::GetButtonDown(System.String)
@@ -1984,6 +2138,46 @@ IL_001f:
 		return L_4;
 	}
 }
+// UnityEngine.Compass UnityEngine.Input::get_compass()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Compass_t022644CBBAC10ADEE9AAFF3C0B0EE4A9F82DAE2D * Input_get_compass_mCF060AEBF0E1A08584ED9B861F88D27CEAEF55E0 (const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Compass_t022644CBBAC10ADEE9AAFF3C0B0EE4A9F82DAE2D_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Input_t763D9CAB93E5035D6CE4D185D9B64D7F3F47202A_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	bool V_0 = false;
+	Compass_t022644CBBAC10ADEE9AAFF3C0B0EE4A9F82DAE2D * V_1 = NULL;
+	{
+		Compass_t022644CBBAC10ADEE9AAFF3C0B0EE4A9F82DAE2D * L_0 = ((Input_t763D9CAB93E5035D6CE4D185D9B64D7F3F47202A_StaticFields*)il2cpp_codegen_static_fields_for(Input_t763D9CAB93E5035D6CE4D185D9B64D7F3F47202A_il2cpp_TypeInfo_var))->get_compassInstance_1();
+		V_0 = (bool)((((RuntimeObject*)(Compass_t022644CBBAC10ADEE9AAFF3C0B0EE4A9F82DAE2D *)L_0) == ((RuntimeObject*)(RuntimeObject *)NULL))? 1 : 0);
+		bool L_1 = V_0;
+		if (!L_1)
+		{
+			goto IL_0017;
+		}
+	}
+	{
+		Compass_t022644CBBAC10ADEE9AAFF3C0B0EE4A9F82DAE2D * L_2 = (Compass_t022644CBBAC10ADEE9AAFF3C0B0EE4A9F82DAE2D *)il2cpp_codegen_object_new(Compass_t022644CBBAC10ADEE9AAFF3C0B0EE4A9F82DAE2D_il2cpp_TypeInfo_var);
+		Compass__ctor_m8EB48027E36FF0551820B2FC21916D87332D5DA1(L_2, /*hidden argument*/NULL);
+		((Input_t763D9CAB93E5035D6CE4D185D9B64D7F3F47202A_StaticFields*)il2cpp_codegen_static_fields_for(Input_t763D9CAB93E5035D6CE4D185D9B64D7F3F47202A_il2cpp_TypeInfo_var))->set_compassInstance_1(L_2);
+	}
+
+IL_0017:
+	{
+		Compass_t022644CBBAC10ADEE9AAFF3C0B0EE4A9F82DAE2D * L_3 = ((Input_t763D9CAB93E5035D6CE4D185D9B64D7F3F47202A_StaticFields*)il2cpp_codegen_static_fields_for(Input_t763D9CAB93E5035D6CE4D185D9B64D7F3F47202A_il2cpp_TypeInfo_var))->get_compassInstance_1();
+		V_1 = L_3;
+		goto IL_001f;
+	}
+
+IL_001f:
+	{
+		Compass_t022644CBBAC10ADEE9AAFF3C0B0EE4A9F82DAE2D * L_4 = V_1;
+		return L_4;
+	}
+}
 // UnityEngine.Touch[] UnityEngine.Input::get_touches()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR TouchU5BU5D_t07E3B79F1FB6673E4450CCF9D09FA79DD96692E2* Input_get_touches_m26E3034CAE32931E59A480327A3CF4BFC2045E8F (const RuntimeMethod* method)
 {
@@ -2178,6 +2372,16 @@ IL2CPP_EXTERN_C  float LocationInfo_get_altitude_m2EC063255D07139449D5D56D3FA24A
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+// System.Boolean UnityEngine.LocationService::IsServiceEnabledByUser()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool LocationService_IsServiceEnabledByUser_m766F0351241A31DF2D8F3D9BAFF757A2524F0AFC (const RuntimeMethod* method)
+{
+	typedef bool (*LocationService_IsServiceEnabledByUser_m766F0351241A31DF2D8F3D9BAFF757A2524F0AFC_ftn) ();
+	static LocationService_IsServiceEnabledByUser_m766F0351241A31DF2D8F3D9BAFF757A2524F0AFC_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (LocationService_IsServiceEnabledByUser_m766F0351241A31DF2D8F3D9BAFF757A2524F0AFC_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.LocationService::IsServiceEnabledByUser()");
+	bool icallRetVal = _il2cpp_icall_func();
+	return icallRetVal;
+}
 // UnityEngine.LocationServiceStatus UnityEngine.LocationService::GetLocationStatus()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t LocationService_GetLocationStatus_m9B85B6CA1DFE35ECE0B86B6C4847E7B9842E0B5D (const RuntimeMethod* method)
 {
@@ -2225,6 +2429,43 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LocationService_StartUpdatingLocation_m3
 	if (!_il2cpp_icall_func)
 	_il2cpp_icall_func = (LocationService_StartUpdatingLocation_m3F0A36410DA6F8FF49E3652072A8878BC0974C77_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.LocationService::StartUpdatingLocation()");
 	_il2cpp_icall_func();
+}
+// UnityEngine.LocationService/HeadingInfo UnityEngine.LocationService::GetLastHeading()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR HeadingInfo_t58242CE1DD5D968AC7C4A31032A29DD8C0203DE2  LocationService_GetLastHeading_m7530296212CF484DE1A071C43C8091AE3B80ADA4 (const RuntimeMethod* method)
+{
+	HeadingInfo_t58242CE1DD5D968AC7C4A31032A29DD8C0203DE2  V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	{
+		LocationService_GetLastHeading_Injected_m4BE669A143FFC621E1E459BDE38B03583218AE3A((HeadingInfo_t58242CE1DD5D968AC7C4A31032A29DD8C0203DE2 *)(&V_0), /*hidden argument*/NULL);
+		HeadingInfo_t58242CE1DD5D968AC7C4A31032A29DD8C0203DE2  L_0 = V_0;
+		return L_0;
+	}
+}
+// System.Void UnityEngine.LocationService::SetHeadingUpdatesEnabled(System.Boolean)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LocationService_SetHeadingUpdatesEnabled_m499D46345A5A075EAF8A3FEA2BDCC2A408AA5E8D (bool ___value0, const RuntimeMethod* method)
+{
+	typedef void (*LocationService_SetHeadingUpdatesEnabled_m499D46345A5A075EAF8A3FEA2BDCC2A408AA5E8D_ftn) (bool);
+	static LocationService_SetHeadingUpdatesEnabled_m499D46345A5A075EAF8A3FEA2BDCC2A408AA5E8D_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (LocationService_SetHeadingUpdatesEnabled_m499D46345A5A075EAF8A3FEA2BDCC2A408AA5E8D_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.LocationService::SetHeadingUpdatesEnabled(System.Boolean)");
+	_il2cpp_icall_func(___value0);
+}
+// System.Boolean UnityEngine.LocationService::get_isEnabledByUser()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool LocationService_get_isEnabledByUser_mD26BB9D35EC9DE4B38F7771B5E910B14EFC2B00A (LocationService_tDCB7C3AA7A10C4727D49676FD3A902F48C27F855 * __this, const RuntimeMethod* method)
+{
+	bool V_0 = false;
+	{
+		bool L_0;
+		L_0 = LocationService_IsServiceEnabledByUser_m766F0351241A31DF2D8F3D9BAFF757A2524F0AFC(/*hidden argument*/NULL);
+		V_0 = L_0;
+		goto IL_0009;
+	}
+
+IL_0009:
+	{
+		bool L_1 = V_0;
+		return L_1;
+	}
 }
 // UnityEngine.LocationServiceStatus UnityEngine.LocationService::get_status()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t LocationService_get_status_m1E90C9991825BDF5A3AC066D97F9198568055C54 (LocationService_tDCB7C3AA7A10C4727D49676FD3A902F48C27F855 * __this, const RuntimeMethod* method)
@@ -2320,6 +2561,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LocationService_GetLastLocation_Injected
 	static LocationService_GetLastLocation_Injected_m1B2A33CE8025C6FC2FDF578B7B1082C9A2774088_ftn _il2cpp_icall_func;
 	if (!_il2cpp_icall_func)
 	_il2cpp_icall_func = (LocationService_GetLastLocation_Injected_m1B2A33CE8025C6FC2FDF578B7B1082C9A2774088_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.LocationService::GetLastLocation_Injected(UnityEngine.LocationInfo&)");
+	_il2cpp_icall_func(___ret0);
+}
+// System.Void UnityEngine.LocationService::GetLastHeading_Injected(UnityEngine.LocationService/HeadingInfo&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LocationService_GetLastHeading_Injected_m4BE669A143FFC621E1E459BDE38B03583218AE3A (HeadingInfo_t58242CE1DD5D968AC7C4A31032A29DD8C0203DE2 * ___ret0, const RuntimeMethod* method)
+{
+	typedef void (*LocationService_GetLastHeading_Injected_m4BE669A143FFC621E1E459BDE38B03583218AE3A_ftn) (HeadingInfo_t58242CE1DD5D968AC7C4A31032A29DD8C0203DE2 *);
+	static LocationService_GetLastHeading_Injected_m4BE669A143FFC621E1E459BDE38B03583218AE3A_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (LocationService_GetLastHeading_Injected_m4BE669A143FFC621E1E459BDE38B03583218AE3A_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.LocationService::GetLastHeading_Injected(UnityEngine.LocationService/HeadingInfo&)");
 	_il2cpp_icall_func(___ret0);
 }
 #ifdef __clang__
@@ -2600,7 +2850,7 @@ IL_00bc:
 	{
 		Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  L_38 = V_10;
 		float L_39 = L_38.get_z_4();
-		V_19 = ((int32_t)((int32_t)L_39));
+		V_19 = il2cpp_codegen_cast_double_to_int<int32_t>(L_39);
 		int32_t L_40 = V_19;
 		int32_t L_41 = V_9;
 		V_23 = (bool)((((int32_t)((((int32_t)L_40) == ((int32_t)L_41))? 1 : 0)) == ((int32_t)0))? 1 : 0);
@@ -3438,6 +3688,14 @@ IL2CPP_EXTERN_C  int32_t Touch_get_type_m33FB24B6A53A307E8AC9881ED3B483DD4B44C05
 	_returnValue = Touch_get_type_m33FB24B6A53A307E8AC9881ED3B483DD4B44C050(_thisAdjusted, method);
 	return _returnValue;
 }
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif

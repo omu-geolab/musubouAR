@@ -153,7 +153,7 @@ IL2CPP_EXTERN_C_END
 #endif
 
 // <Module>
-struct  U3CModuleU3E_t3CFE0CAC7C49A00CC76E839173CB7A9E7A53560A 
+struct U3CModuleU3E_t3CFE0CAC7C49A00CC76E839173CB7A9E7A53560A 
 {
 public:
 
@@ -169,7 +169,7 @@ struct Il2CppArrayBounds;
 
 
 // System.Attribute
-struct  Attribute_t037CA9D9F3B742C063DB364D2EEBBF9FC5772C71  : public RuntimeObject
+struct Attribute_t037CA9D9F3B742C063DB364D2EEBBF9FC5772C71  : public RuntimeObject
 {
 public:
 
@@ -178,7 +178,7 @@ public:
 
 
 // System.Globalization.CultureInfo
-struct  CultureInfo_t1B787142231DB79ABDCE0659823F908A040E9A98  : public RuntimeObject
+struct CultureInfo_t1B787142231DB79ABDCE0659823F908A040E9A98  : public RuntimeObject
 {
 public:
 	// System.Boolean System.Globalization.CultureInfo::m_isReadOnly
@@ -627,7 +627,7 @@ struct CultureInfo_t1B787142231DB79ABDCE0659823F908A040E9A98_marshaled_com
 };
 
 // System.String
-struct  String_t  : public RuntimeObject
+struct String_t  : public RuntimeObject
 {
 public:
 	// System.Int32 System.String::m_stringLength
@@ -672,7 +672,7 @@ public:
 
 
 // UnityEngine.UnityString
-struct  UnityString_t1F0FC4EA4EF5A9AAB2BF779CD416EB85F9F86609  : public RuntimeObject
+struct UnityString_t1F0FC4EA4EF5A9AAB2BF779CD416EB85F9F86609  : public RuntimeObject
 {
 public:
 
@@ -681,7 +681,7 @@ public:
 
 
 // System.ValueType
-struct  ValueType_tDBF999C1B75C48C68621878250DBF6CDBCF51E52  : public RuntimeObject
+struct ValueType_tDBF999C1B75C48C68621878250DBF6CDBCF51E52  : public RuntimeObject
 {
 public:
 
@@ -698,7 +698,7 @@ struct ValueType_tDBF999C1B75C48C68621878250DBF6CDBCF51E52_marshaled_com
 };
 
 // UnityEngine.AssetFileNameExtensionAttribute
-struct  AssetFileNameExtensionAttribute_tED45B2D2362BB4D5CDCA25F7C1E890AADAD6FA2D  : public Attribute_t037CA9D9F3B742C063DB364D2EEBBF9FC5772C71
+struct AssetFileNameExtensionAttribute_tED45B2D2362BB4D5CDCA25F7C1E890AADAD6FA2D  : public Attribute_t037CA9D9F3B742C063DB364D2EEBBF9FC5772C71
 {
 public:
 	// System.String UnityEngine.AssetFileNameExtensionAttribute::<preferredExtension>k__BackingField
@@ -728,7 +728,7 @@ public:
 
 
 // System.Boolean
-struct  Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37 
+struct Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37 
 {
 public:
 	// System.Boolean System.Boolean::m_value
@@ -774,7 +774,7 @@ public:
 
 
 // System.Enum
-struct  Enum_t23B90B40F60E677A8025267341651C94AE079CDA  : public ValueType_tDBF999C1B75C48C68621878250DBF6CDBCF51E52
+struct Enum_t23B90B40F60E677A8025267341651C94AE079CDA  : public ValueType_tDBF999C1B75C48C68621878250DBF6CDBCF51E52
 {
 public:
 
@@ -808,7 +808,7 @@ struct Enum_t23B90B40F60E677A8025267341651C94AE079CDA_marshaled_com
 };
 
 // UnityEngine.Bindings.IgnoreAttribute
-struct  IgnoreAttribute_tAB4906F0BB2E4FD1CAE2D8D21DFD776EA434E5CA  : public Attribute_t037CA9D9F3B742C063DB364D2EEBBF9FC5772C71
+struct IgnoreAttribute_tAB4906F0BB2E4FD1CAE2D8D21DFD776EA434E5CA  : public Attribute_t037CA9D9F3B742C063DB364D2EEBBF9FC5772C71
 {
 public:
 	// System.Boolean UnityEngine.Bindings.IgnoreAttribute::<DoesNotContributeToSize>k__BackingField
@@ -826,7 +826,7 @@ public:
 
 
 // System.IntPtr
-struct  IntPtr_t 
+struct IntPtr_t 
 {
 public:
 	// System.Void* System.IntPtr::m_value
@@ -860,7 +860,7 @@ public:
 
 
 // UnityEngine.Bindings.NativeAsStructAttribute
-struct  NativeAsStructAttribute_tB664BE8A337A63DCA81BC69418AC482FAD5CDB3E  : public Attribute_t037CA9D9F3B742C063DB364D2EEBBF9FC5772C71
+struct NativeAsStructAttribute_tB664BE8A337A63DCA81BC69418AC482FAD5CDB3E  : public Attribute_t037CA9D9F3B742C063DB364D2EEBBF9FC5772C71
 {
 public:
 
@@ -869,7 +869,7 @@ public:
 
 
 // UnityEngine.NativeClassAttribute
-struct  NativeClassAttribute_tBE8213A7A54307A9A771B70B38CB946BED926B0D  : public Attribute_t037CA9D9F3B742C063DB364D2EEBBF9FC5772C71
+struct NativeClassAttribute_tBE8213A7A54307A9A771B70B38CB946BED926B0D  : public Attribute_t037CA9D9F3B742C063DB364D2EEBBF9FC5772C71
 {
 public:
 	// System.String UnityEngine.NativeClassAttribute::<QualifiedNativeName>k__BackingField
@@ -899,7 +899,7 @@ public:
 
 
 // UnityEngine.Bindings.NativeConditionalAttribute
-struct  NativeConditionalAttribute_t659349956F06958D4D05443BD06FF5CDC767C88B  : public Attribute_t037CA9D9F3B742C063DB364D2EEBBF9FC5772C71
+struct NativeConditionalAttribute_t659349956F06958D4D05443BD06FF5CDC767C88B  : public Attribute_t037CA9D9F3B742C063DB364D2EEBBF9FC5772C71
 {
 public:
 	// System.String UnityEngine.Bindings.NativeConditionalAttribute::<Condition>k__BackingField
@@ -939,7 +939,7 @@ public:
 
 
 // UnityEngine.Bindings.NativeHeaderAttribute
-struct  NativeHeaderAttribute_t7F0E4B53790AA75CDB4C44E6D644267F8FE3066C  : public Attribute_t037CA9D9F3B742C063DB364D2EEBBF9FC5772C71
+struct NativeHeaderAttribute_t7F0E4B53790AA75CDB4C44E6D644267F8FE3066C  : public Attribute_t037CA9D9F3B742C063DB364D2EEBBF9FC5772C71
 {
 public:
 	// System.String UnityEngine.Bindings.NativeHeaderAttribute::<Header>k__BackingField
@@ -958,7 +958,7 @@ public:
 
 
 // UnityEngine.Bindings.NativeMethodAttribute
-struct  NativeMethodAttribute_t57F61ACA17BEC1260A06658ACD971B0009CC1866  : public Attribute_t037CA9D9F3B742C063DB364D2EEBBF9FC5772C71
+struct NativeMethodAttribute_t57F61ACA17BEC1260A06658ACD971B0009CC1866  : public Attribute_t037CA9D9F3B742C063DB364D2EEBBF9FC5772C71
 {
 public:
 	// System.String UnityEngine.Bindings.NativeMethodAttribute::<Name>k__BackingField
@@ -1017,7 +1017,7 @@ public:
 
 
 // UnityEngine.Bindings.NativeNameAttribute
-struct  NativeNameAttribute_tCEF3726869BD5ADC4600DDAC8DF0D4B5AAAF65F7  : public Attribute_t037CA9D9F3B742C063DB364D2EEBBF9FC5772C71
+struct NativeNameAttribute_tCEF3726869BD5ADC4600DDAC8DF0D4B5AAAF65F7  : public Attribute_t037CA9D9F3B742C063DB364D2EEBBF9FC5772C71
 {
 public:
 	// System.String UnityEngine.Bindings.NativeNameAttribute::<Name>k__BackingField
@@ -1036,7 +1036,7 @@ public:
 
 
 // UnityEngine.Bindings.NativeThrowsAttribute
-struct  NativeThrowsAttribute_tF59F2833BDD09C6C89298E603D5C3A598CC08137  : public Attribute_t037CA9D9F3B742C063DB364D2EEBBF9FC5772C71
+struct NativeThrowsAttribute_tF59F2833BDD09C6C89298E603D5C3A598CC08137  : public Attribute_t037CA9D9F3B742C063DB364D2EEBBF9FC5772C71
 {
 public:
 	// System.Boolean UnityEngine.Bindings.NativeThrowsAttribute::<ThrowsException>k__BackingField
@@ -1054,7 +1054,7 @@ public:
 
 
 // UnityEngine.Bindings.NativeWritableSelfAttribute
-struct  NativeWritableSelfAttribute_tFAFEEA81F742D3AFDA0A7A16F11C7E1E4DE4131A  : public Attribute_t037CA9D9F3B742C063DB364D2EEBBF9FC5772C71
+struct NativeWritableSelfAttribute_tFAFEEA81F742D3AFDA0A7A16F11C7E1E4DE4131A  : public Attribute_t037CA9D9F3B742C063DB364D2EEBBF9FC5772C71
 {
 public:
 	// System.Boolean UnityEngine.Bindings.NativeWritableSelfAttribute::<WritableSelf>k__BackingField
@@ -1072,7 +1072,7 @@ public:
 
 
 // UnityEngine.Bindings.NotNullAttribute
-struct  NotNullAttribute_t22E59D8061EE39B8A3F837C2245240C2466382FC  : public Attribute_t037CA9D9F3B742C063DB364D2EEBBF9FC5772C71
+struct NotNullAttribute_t22E59D8061EE39B8A3F837C2245240C2466382FC  : public Attribute_t037CA9D9F3B742C063DB364D2EEBBF9FC5772C71
 {
 public:
 	// System.String UnityEngine.Bindings.NotNullAttribute::<Exception>k__BackingField
@@ -1091,7 +1091,7 @@ public:
 
 
 // UnityEngine.Bindings.PreventReadOnlyInstanceModificationAttribute
-struct  PreventReadOnlyInstanceModificationAttribute_tE8D4FA7769A398DB777682CC73E6E7664F9DB1D7  : public Attribute_t037CA9D9F3B742C063DB364D2EEBBF9FC5772C71
+struct PreventReadOnlyInstanceModificationAttribute_tE8D4FA7769A398DB777682CC73E6E7664F9DB1D7  : public Attribute_t037CA9D9F3B742C063DB364D2EEBBF9FC5772C71
 {
 public:
 
@@ -1100,7 +1100,7 @@ public:
 
 
 // UnityEngine.Scripting.RequiredByNativeCodeAttribute
-struct  RequiredByNativeCodeAttribute_t855401D3C2EF3B44F4F1C3EE2DCD361CFC358D20  : public Attribute_t037CA9D9F3B742C063DB364D2EEBBF9FC5772C71
+struct RequiredByNativeCodeAttribute_t855401D3C2EF3B44F4F1C3EE2DCD361CFC358D20  : public Attribute_t037CA9D9F3B742C063DB364D2EEBBF9FC5772C71
 {
 public:
 	// System.String UnityEngine.Scripting.RequiredByNativeCodeAttribute::<Name>k__BackingField
@@ -1139,7 +1139,7 @@ public:
 
 
 // UnityEngine.ThreadAndSerializationSafeAttribute
-struct  ThreadAndSerializationSafeAttribute_t41719A461F31891B2536A2E4A1E983DD7E428E7B  : public Attribute_t037CA9D9F3B742C063DB364D2EEBBF9FC5772C71
+struct ThreadAndSerializationSafeAttribute_t41719A461F31891B2536A2E4A1E983DD7E428E7B  : public Attribute_t037CA9D9F3B742C063DB364D2EEBBF9FC5772C71
 {
 public:
 
@@ -1148,7 +1148,7 @@ public:
 
 
 // UnityEngine.UnityEngineModuleAssembly
-struct  UnityEngineModuleAssembly_t33CB058FDDDC458E384578147D6027BB1EC86CFF  : public Attribute_t037CA9D9F3B742C063DB364D2EEBBF9FC5772C71
+struct UnityEngineModuleAssembly_t33CB058FDDDC458E384578147D6027BB1EC86CFF  : public Attribute_t037CA9D9F3B742C063DB364D2EEBBF9FC5772C71
 {
 public:
 
@@ -1157,7 +1157,7 @@ public:
 
 
 // UnityEngine.Scripting.UsedByNativeCodeAttribute
-struct  UsedByNativeCodeAttribute_t604CF4E57FB3E7BCCCF0871A9B526472B2CDCB92  : public Attribute_t037CA9D9F3B742C063DB364D2EEBBF9FC5772C71
+struct UsedByNativeCodeAttribute_t604CF4E57FB3E7BCCCF0871A9B526472B2CDCB92  : public Attribute_t037CA9D9F3B742C063DB364D2EEBBF9FC5772C71
 {
 public:
 	// System.String UnityEngine.Scripting.UsedByNativeCodeAttribute::<Name>k__BackingField
@@ -1176,7 +1176,7 @@ public:
 
 
 // UnityEngine.Bindings.VisibleToOtherModulesAttribute
-struct  VisibleToOtherModulesAttribute_t7C36871C9AD251C033486E04A2FFCB7CFB830914  : public Attribute_t037CA9D9F3B742C063DB364D2EEBBF9FC5772C71
+struct VisibleToOtherModulesAttribute_t7C36871C9AD251C033486E04A2FFCB7CFB830914  : public Attribute_t037CA9D9F3B742C063DB364D2EEBBF9FC5772C71
 {
 public:
 
@@ -1185,7 +1185,7 @@ public:
 
 
 // System.Void
-struct  Void_t700C6383A2A510C2CF4DD86DABD5CA9FF70ADAC5 
+struct Void_t700C6383A2A510C2CF4DD86DABD5CA9FF70ADAC5 
 {
 public:
 	union
@@ -1201,7 +1201,7 @@ public:
 
 
 // UnityEngine.WritableAttribute
-struct  WritableAttribute_t00CD7A683EA83064B3741A90A772DD0DE1AF5103  : public Attribute_t037CA9D9F3B742C063DB364D2EEBBF9FC5772C71
+struct WritableAttribute_t00CD7A683EA83064B3741A90A772DD0DE1AF5103  : public Attribute_t037CA9D9F3B742C063DB364D2EEBBF9FC5772C71
 {
 public:
 
@@ -1210,7 +1210,7 @@ public:
 
 
 // UnityEngine.Bindings.CodegenOptions
-struct  CodegenOptions_t2D0BDBDCEFA8EC8B714E6F9E84A55557343398FA 
+struct CodegenOptions_t2D0BDBDCEFA8EC8B714E6F9E84A55557343398FA 
 {
 public:
 	// System.Int32 UnityEngine.Bindings.CodegenOptions::value__
@@ -1228,7 +1228,7 @@ public:
 
 
 // System.Exception
-struct  Exception_t  : public RuntimeObject
+struct Exception_t  : public RuntimeObject
 {
 public:
 	// System.String System.Exception::_className
@@ -1454,7 +1454,7 @@ struct Exception_t_marshaled_com
 };
 
 // UnityEngine.Bindings.FreeFunctionAttribute
-struct  FreeFunctionAttribute_tBB3B939D760190FEC84762F1BA94B99672613D03  : public NativeMethodAttribute_t57F61ACA17BEC1260A06658ACD971B0009CC1866
+struct FreeFunctionAttribute_tBB3B939D760190FEC84762F1BA94B99672613D03  : public NativeMethodAttribute_t57F61ACA17BEC1260A06658ACD971B0009CC1866
 {
 public:
 
@@ -1463,7 +1463,7 @@ public:
 
 
 // System.Globalization.NumberStyles
-struct  NumberStyles_t379EFBF2535E1C950DEC8042704BB663BF636594 
+struct NumberStyles_t379EFBF2535E1C950DEC8042704BB663BF636594 
 {
 public:
 	// System.Int32 System.Globalization.NumberStyles::value__
@@ -1481,7 +1481,7 @@ public:
 
 
 // UnityEngine.Bindings.StaticAccessorType
-struct  StaticAccessorType_tFA86A321ADAC16A48DF7FC82F8FBBE5F71D2DC4C 
+struct StaticAccessorType_tFA86A321ADAC16A48DF7FC82F8FBBE5F71D2DC4C 
 {
 public:
 	// System.Int32 UnityEngine.Bindings.StaticAccessorType::value__
@@ -1499,7 +1499,7 @@ public:
 
 
 // UnityEngine.Bindings.TargetType
-struct  TargetType_tBE103EBCFE59544A834B8108A56B2A91F7CBE1DF 
+struct TargetType_tBE103EBCFE59544A834B8108A56B2A91F7CBE1DF 
 {
 public:
 	// System.Int32 UnityEngine.Bindings.TargetType::value__
@@ -1517,7 +1517,7 @@ public:
 
 
 // UnityEngine.Bindings.ThreadSafeAttribute
-struct  ThreadSafeAttribute_t19BB6779619E58C8E3DF5198224E2BCB9E3D84B6  : public NativeMethodAttribute_t57F61ACA17BEC1260A06658ACD971B0009CC1866
+struct ThreadSafeAttribute_t19BB6779619E58C8E3DF5198224E2BCB9E3D84B6  : public NativeMethodAttribute_t57F61ACA17BEC1260A06658ACD971B0009CC1866
 {
 public:
 
@@ -1526,7 +1526,7 @@ public:
 
 
 // UnityEngine.Bindings.NativePropertyAttribute
-struct  NativePropertyAttribute_t300C37301B5C27B1EECB6CBE7EED16EEDA11975A  : public NativeMethodAttribute_t57F61ACA17BEC1260A06658ACD971B0009CC1866
+struct NativePropertyAttribute_t300C37301B5C27B1EECB6CBE7EED16EEDA11975A  : public NativeMethodAttribute_t57F61ACA17BEC1260A06658ACD971B0009CC1866
 {
 public:
 	// UnityEngine.Bindings.TargetType UnityEngine.Bindings.NativePropertyAttribute::<TargetType>k__BackingField
@@ -1544,7 +1544,7 @@ public:
 
 
 // UnityEngine.Bindings.NativeTypeAttribute
-struct  NativeTypeAttribute_t7A71B541B18D0BA1A9889E05D36CAC56CF9F48D9  : public Attribute_t037CA9D9F3B742C063DB364D2EEBBF9FC5772C71
+struct NativeTypeAttribute_t7A71B541B18D0BA1A9889E05D36CAC56CF9F48D9  : public Attribute_t037CA9D9F3B742C063DB364D2EEBBF9FC5772C71
 {
 public:
 	// System.String UnityEngine.Bindings.NativeTypeAttribute::<Header>k__BackingField
@@ -1584,7 +1584,7 @@ public:
 
 
 // System.Globalization.NumberFormatInfo
-struct  NumberFormatInfo_t58780B43B6A840C38FD10C50CDFE2128884CAD1D  : public RuntimeObject
+struct NumberFormatInfo_t58780B43B6A840C38FD10C50CDFE2128884CAD1D  : public RuntimeObject
 {
 public:
 	// System.Int32[] System.Globalization.NumberFormatInfo::numberGroupSizes
@@ -1968,7 +1968,7 @@ public:
 
 
 // UnityEngine.Bindings.StaticAccessorAttribute
-struct  StaticAccessorAttribute_t7A16FF0FA31E38510BBC8BCA5AE56C3E67D5A2BA  : public Attribute_t037CA9D9F3B742C063DB364D2EEBBF9FC5772C71
+struct StaticAccessorAttribute_t7A16FF0FA31E38510BBC8BCA5AE56C3E67D5A2BA  : public Attribute_t037CA9D9F3B742C063DB364D2EEBBF9FC5772C71
 {
 public:
 	// System.String UnityEngine.Bindings.StaticAccessorAttribute::<Name>k__BackingField
@@ -1997,7 +1997,7 @@ public:
 
 
 // System.SystemException
-struct  SystemException_tC551B4D6EE3772B5F32C71EE8C719F4B43ECCC62  : public Exception_t
+struct SystemException_tC551B4D6EE3772B5F32C71EE8C719F4B43ECCC62  : public Exception_t
 {
 public:
 
@@ -2006,7 +2006,7 @@ public:
 
 
 // System.ArgumentException
-struct  ArgumentException_t505FA8C11E883F2D96C797AD9D396490794DEE00  : public SystemException_tC551B4D6EE3772B5F32C71EE8C719F4B43ECCC62
+struct ArgumentException_t505FA8C11E883F2D96C797AD9D396490794DEE00  : public SystemException_tC551B4D6EE3772B5F32C71EE8C719F4B43ECCC62
 {
 public:
 	// System.String System.ArgumentException::m_paramName
@@ -2025,7 +2025,7 @@ public:
 
 
 // System.ArgumentNullException
-struct  ArgumentNullException_tFB5C4621957BC53A7D1B4FDD5C38B4D6E15DB8FB  : public ArgumentException_t505FA8C11E883F2D96C797AD9D396490794DEE00
+struct ArgumentNullException_tFB5C4621957BC53A7D1B4FDD5C38B4D6E15DB8FB  : public ArgumentException_t505FA8C11E883F2D96C797AD9D396490794DEE00
 {
 public:
 

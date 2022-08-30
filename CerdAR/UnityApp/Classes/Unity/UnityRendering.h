@@ -82,8 +82,8 @@ typedef struct UnityDisplaySurfaceBase
     UnityRenderBufferHandle systemColorBuffer;
     UnityRenderBufferHandle systemDepthBuffer;
 
-    void*               cvTextureCache;         // CVOpenGLESTextureCacheRef
-    void*               cvTextureCacheTexture;  // CVOpenGLESTextureRef
+    void*               cvTextureCache;         // CVMetalTextureCacheRef
+    void*               cvTextureCacheTexture;  // CVMetalTextureRef
     void*               cvPixelBuffer;          // CVPixelBufferRef
 
     unsigned            targetW, targetH;
@@ -106,7 +106,16 @@ typedef struct UnityDisplaySurfaceBase
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wmissing-declarations"
 
-#define kUnityNumOffscreenSurfaces 2
+// on iOS/tvOS: we render to the drawable directly
+//              and we need proxy only to delay acquiring drawable until we actually want to render to the "backbuffer"
+//              thus just one proxy and it will be marked as "empty" (we only need it to query texture params, like extents)
+// on macOS:    we render to the offscreen RT and blit to the drawable, thus we need several proxy RT
+//              and all of them will be full blown textures (with GPU backing)
+#if PLATFORM_OSX
+    #define kUnityNumOffscreenSurfaces 2
+#else
+    #define kUnityNumOffscreenSurfaces 1
+#endif
 
 // GLES display surface
 START_STRUCT(UnityDisplaySurfaceGLES, UnityDisplaySurfaceBase)
@@ -148,10 +157,11 @@ OBJC_OBJECT_PTR MTLCommandBufferRef presentCB;
 OBJC_OBJECT_PTR CAMetalDrawableRef  drawable;
 
 OBJC_OBJECT_PTR MTLTextureRef       drawableProxyRT[kUnityNumOffscreenSurfaces];
+int                                 drawableProxyNeedsClear[kUnityNumOffscreenSurfaces];    // [bool] Tracks whether the drawableProxy requires a clear after initial creation
 
-// These are used on a Mac with drawableProxyRT when off-screen rendering is used
-volatile int32_t                    bufferCompleted;
-volatile int32_t                    bufferSwap;
+// This is used on a Mac with drawableProxyRT when off-screen rendering is used
+int                                 proxySwaps;         // Counts times proxy RTs have swapped since surface recreated
+int                                 proxyReady;         // [bool] Proxy RT has swapped since last present; frame ended
 
 OBJC_OBJECT_PTR MTLTextureRef       systemColorRB;
 OBJC_OBJECT_PTR MTLTextureRef       targetColorRT;

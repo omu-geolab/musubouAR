@@ -229,7 +229,7 @@ IL2CPP_EXTERN_C_END
 #endif
 
 // <Module>
-struct  U3CModuleU3E_tFAA9E074DCFFF466D21223A3D56A3524B4C3F69C 
+struct U3CModuleU3E_tFAA9E074DCFFF466D21223A3D56A3524B4C3F69C 
 {
 public:
 
@@ -241,7 +241,7 @@ public:
 
 
 // System.Collections.Generic.List`1<UnityEngine.SocialPlatforms.GameCenter.GcLeaderboard>
-struct  List_1_t627B55426F2D664F47826CDA6CB351B3B8D8F400  : public RuntimeObject
+struct List_1_t627B55426F2D664F47826CDA6CB351B3B8D8F400  : public RuntimeObject
 {
 public:
 	// T[] System.Collections.Generic.List`1::_items
@@ -308,7 +308,7 @@ public:
 
 
 // UnityEngine.SocialPlatforms.Impl.AchievementDescription
-struct  AchievementDescription_t6C56CB1D0F1F374C45EC0F65D5F1192C170B6506  : public RuntimeObject
+struct AchievementDescription_t6C56CB1D0F1F374C45EC0F65D5F1192C170B6506  : public RuntimeObject
 {
 public:
 	// System.String UnityEngine.SocialPlatforms.Impl.AchievementDescription::m_Title
@@ -395,7 +395,7 @@ struct Il2CppArrayBounds;
 
 
 // UnityEngine.SocialPlatforms.GameCenter.GameCenterPlatform
-struct  GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72  : public RuntimeObject
+struct GameCenterPlatform_t358F709563A6FC9DFBF500151EDAEC05EBBA6F72  : public RuntimeObject
 {
 public:
 
@@ -487,7 +487,7 @@ public:
 
 
 // System.String
-struct  String_t  : public RuntimeObject
+struct String_t  : public RuntimeObject
 {
 public:
 	// System.Int32 System.String::m_stringLength
@@ -532,7 +532,7 @@ public:
 
 
 // System.ValueType
-struct  ValueType_tDBF999C1B75C48C68621878250DBF6CDBCF51E52  : public RuntimeObject
+struct ValueType_tDBF999C1B75C48C68621878250DBF6CDBCF51E52  : public RuntimeObject
 {
 public:
 
@@ -549,7 +549,7 @@ struct ValueType_tDBF999C1B75C48C68621878250DBF6CDBCF51E52_marshaled_com
 };
 
 // UnityEngine.SocialPlatforms.GameCenter.GameCenterPlatform/<>c__DisplayClass21_0
-struct  U3CU3Ec__DisplayClass21_0_t640615F596448CA7D86AAC8EE3A104A2CE70A95A  : public RuntimeObject
+struct U3CU3Ec__DisplayClass21_0_t640615F596448CA7D86AAC8EE3A104A2CE70A95A  : public RuntimeObject
 {
 public:
 	// System.Action`1<System.Boolean> UnityEngine.SocialPlatforms.GameCenter.GameCenterPlatform/<>c__DisplayClass21_0::callback
@@ -568,7 +568,7 @@ public:
 
 
 // System.Collections.Generic.List`1/Enumerator<UnityEngine.SocialPlatforms.GameCenter.GcLeaderboard>
-struct  Enumerator_t0CE4A07F744981B45029535658492977F0C12721 
+struct Enumerator_t0CE4A07F744981B45029535658492977F0C12721 
 {
 public:
 	// System.Collections.Generic.List`1<T> System.Collections.Generic.List`1/Enumerator::list
@@ -618,7 +618,7 @@ public:
 
 
 // System.Collections.Generic.List`1/Enumerator<System.Object>
-struct  Enumerator_tB6009981BD4E3881E3EC83627255A24198F902D6 
+struct Enumerator_tB6009981BD4E3881E3EC83627255A24198F902D6 
 {
 public:
 	// System.Collections.Generic.List`1<T> System.Collections.Generic.List`1/Enumerator::list
@@ -668,7 +668,7 @@ public:
 
 
 // System.Boolean
-struct  Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37 
+struct Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37 
 {
 public:
 	// System.Boolean System.Boolean::m_value
@@ -714,7 +714,7 @@ public:
 
 
 // System.DateTime
-struct  DateTime_tEAF2CD16E071DF5441F40822E4CFE880E5245405 
+struct DateTime_tEAF2CD16E071DF5441F40822E4CFE880E5245405 
 {
 public:
 	// System.UInt64 System.DateTime::dateData
@@ -780,7 +780,7 @@ public:
 
 
 // System.Double
-struct  Double_t42821932CB52DE2057E685D0E1AF3DE5033D2181 
+struct Double_t42821932CB52DE2057E685D0E1AF3DE5033D2181 
 {
 public:
 	// System.Double System.Double::m_value
@@ -814,7 +814,7 @@ public:
 
 
 // System.Enum
-struct  Enum_t23B90B40F60E677A8025267341651C94AE079CDA  : public ValueType_tDBF999C1B75C48C68621878250DBF6CDBCF51E52
+struct Enum_t23B90B40F60E677A8025267341651C94AE079CDA  : public ValueType_tDBF999C1B75C48C68621878250DBF6CDBCF51E52
 {
 public:
 
@@ -848,7 +848,7 @@ struct Enum_t23B90B40F60E677A8025267341651C94AE079CDA_marshaled_com
 };
 
 // UnityEngine.SocialPlatforms.GameCenter.GcAchievementData
-struct  GcAchievementData_t5391FC501EEDA04D3C45DB4213CAE82CA9ED9C24 
+struct GcAchievementData_t5391FC501EEDA04D3C45DB4213CAE82CA9ED9C24 
 {
 public:
 	// System.String UnityEngine.SocialPlatforms.GameCenter.GcAchievementData::m_Identifier
@@ -925,7 +925,7 @@ struct GcAchievementData_t5391FC501EEDA04D3C45DB4213CAE82CA9ED9C24_marshaled_com
 };
 
 // UnityEngine.SocialPlatforms.GameCenter.GcAchievementDescriptionData
-struct  GcAchievementDescriptionData_tA9C8FD052A0FAD05F5C290DEC026DDF07E81AF9D 
+struct GcAchievementDescriptionData_tA9C8FD052A0FAD05F5C290DEC026DDF07E81AF9D 
 {
 public:
 	// System.String UnityEngine.SocialPlatforms.GameCenter.GcAchievementDescriptionData::m_Identifier
@@ -1030,7 +1030,7 @@ struct GcAchievementDescriptionData_tA9C8FD052A0FAD05F5C290DEC026DDF07E81AF9D_ma
 };
 
 // UnityEngine.SocialPlatforms.GameCenter.GcScoreData
-struct  GcScoreData_tAECE4DD4FB50D9F0B5504A41C1D95B028A5B28EC 
+struct GcScoreData_tAECE4DD4FB50D9F0B5504A41C1D95B028A5B28EC 
 {
 public:
 	// System.String UnityEngine.SocialPlatforms.GameCenter.GcScoreData::m_Category
@@ -1133,7 +1133,7 @@ struct GcScoreData_tAECE4DD4FB50D9F0B5504A41C1D95B028A5B28EC_marshaled_com
 };
 
 // UnityEngine.SocialPlatforms.GameCenter.GcUserProfileData
-struct  GcUserProfileData_t18036AD9C18F55CBB882ABACD4DE2771EFFDF03D 
+struct GcUserProfileData_t18036AD9C18F55CBB882ABACD4DE2771EFFDF03D 
 {
 public:
 	// System.String UnityEngine.SocialPlatforms.GameCenter.GcUserProfileData::userName
@@ -1213,7 +1213,7 @@ struct GcUserProfileData_t18036AD9C18F55CBB882ABACD4DE2771EFFDF03D_marshaled_com
 };
 
 // System.Int32
-struct  Int32_tFDE5F8CD43D10453F6A2E0C77FE48C6CC7009046 
+struct Int32_tFDE5F8CD43D10453F6A2E0C77FE48C6CC7009046 
 {
 public:
 	// System.Int32 System.Int32::m_value
@@ -1231,7 +1231,7 @@ public:
 
 
 // System.Int64
-struct  Int64_t378EE0D608BD3107E77238E85F30D2BBD46981F3 
+struct Int64_t378EE0D608BD3107E77238E85F30D2BBD46981F3 
 {
 public:
 	// System.Int64 System.Int64::m_value
@@ -1249,7 +1249,7 @@ public:
 
 
 // System.IntPtr
-struct  IntPtr_t 
+struct IntPtr_t 
 {
 public:
 	// System.Void* System.IntPtr::m_value
@@ -1283,7 +1283,7 @@ public:
 
 
 // UnityEngine.SocialPlatforms.Range
-struct  Range_t70C133E51417BC822E878050C90A577A69B671DC 
+struct Range_t70C133E51417BC822E878050C90A577A69B671DC 
 {
 public:
 	// System.Int32 UnityEngine.SocialPlatforms.Range::from
@@ -1311,7 +1311,7 @@ public:
 
 
 // System.UInt32
-struct  UInt32_tE60352A06233E4E69DD198BCC67142159F686B15 
+struct UInt32_tE60352A06233E4E69DD198BCC67142159F686B15 
 {
 public:
 	// System.UInt32 System.UInt32::m_value
@@ -1329,7 +1329,7 @@ public:
 
 
 // System.Void
-struct  Void_t700C6383A2A510C2CF4DD86DABD5CA9FF70ADAC5 
+struct Void_t700C6383A2A510C2CF4DD86DABD5CA9FF70ADAC5 
 {
 public:
 	union
@@ -1345,7 +1345,7 @@ public:
 
 
 // UnityEngine.SocialPlatforms.Impl.Achievement
-struct  Achievement_t43EB1469B011ADDEF59B6CB30044B878770D3565  : public RuntimeObject
+struct Achievement_t43EB1469B011ADDEF59B6CB30044B878770D3565  : public RuntimeObject
 {
 public:
 	// System.Boolean UnityEngine.SocialPlatforms.Impl.Achievement::m_Completed
@@ -1404,7 +1404,7 @@ public:
 
 
 // System.Delegate
-struct  Delegate_t  : public RuntimeObject
+struct Delegate_t  : public RuntimeObject
 {
 public:
 	// System.IntPtr System.Delegate::method_ptr
@@ -1556,7 +1556,7 @@ struct Delegate_t_marshaled_com
 };
 
 // UnityEngine.SocialPlatforms.GameCenter.GcLeaderboard
-struct  GcLeaderboard_t65BC1BB657B2E25E7BB1FBBB70ACDE29A3A64B72  : public RuntimeObject
+struct GcLeaderboard_t65BC1BB657B2E25E7BB1FBBB70ACDE29A3A64B72  : public RuntimeObject
 {
 public:
 	// System.IntPtr UnityEngine.SocialPlatforms.GameCenter.GcLeaderboard::m_InternalLeaderboard
@@ -1597,7 +1597,7 @@ struct GcLeaderboard_t65BC1BB657B2E25E7BB1FBBB70ACDE29A3A64B72_marshaled_com
 };
 
 // UnityEngine.Object
-struct  Object_tF2F3778131EFF286AF62B7B013A170F95A91571A  : public RuntimeObject
+struct Object_tF2F3778131EFF286AF62B7B013A170F95A91571A  : public RuntimeObject
 {
 public:
 	// System.IntPtr UnityEngine.Object::m_CachedPtr
@@ -1641,7 +1641,7 @@ struct Object_tF2F3778131EFF286AF62B7B013A170F95A91571A_marshaled_com
 };
 
 // UnityEngine.SocialPlatforms.Impl.Score
-struct  Score_tD70993CC66CCC9CDE0DAB2917533D8094F1E4119  : public RuntimeObject
+struct Score_tD70993CC66CCC9CDE0DAB2917533D8094F1E4119  : public RuntimeObject
 {
 public:
 	// System.DateTime UnityEngine.SocialPlatforms.Impl.Score::m_Date
@@ -1712,7 +1712,7 @@ public:
 
 
 // UnityEngine.SocialPlatforms.TimeScope
-struct  TimeScope_t0FDB33C00FF0784F8194FEF48B2BD78C0F9A7759 
+struct TimeScope_t0FDB33C00FF0784F8194FEF48B2BD78C0F9A7759 
 {
 public:
 	// System.Int32 UnityEngine.SocialPlatforms.TimeScope::value__
@@ -1730,7 +1730,7 @@ public:
 
 
 // UnityEngine.SocialPlatforms.UserScope
-struct  UserScope_t7EB5D79B9892B749665A462B4832F78C3F57A4C7 
+struct UserScope_t7EB5D79B9892B749665A462B4832F78C3F57A4C7 
 {
 public:
 	// System.Int32 UnityEngine.SocialPlatforms.UserScope::value__
@@ -1748,7 +1748,7 @@ public:
 
 
 // UnityEngine.SocialPlatforms.UserState
-struct  UserState_t9DD84F7007E65F0FF4D7FF0414BACE5E24D0EA08 
+struct UserState_t9DD84F7007E65F0FF4D7FF0414BACE5E24D0EA08 
 {
 public:
 	// System.Int32 UnityEngine.SocialPlatforms.UserState::value__
@@ -1766,7 +1766,7 @@ public:
 
 
 // UnityEngine.SocialPlatforms.Impl.Leaderboard
-struct  Leaderboard_tD587FC5E62BF8F6CC6AC0DF1ABB55D57A60CBE2D  : public RuntimeObject
+struct Leaderboard_tD587FC5E62BF8F6CC6AC0DF1ABB55D57A60CBE2D  : public RuntimeObject
 {
 public:
 	// System.Boolean UnityEngine.SocialPlatforms.Impl.Leaderboard::m_Loading
@@ -1879,7 +1879,7 @@ public:
 
 
 // System.MulticastDelegate
-struct  MulticastDelegate_t  : public Delegate_t
+struct MulticastDelegate_t  : public Delegate_t
 {
 public:
 	// System.Delegate[] System.MulticastDelegate::delegates
@@ -1908,7 +1908,7 @@ struct MulticastDelegate_t_marshaled_com : public Delegate_t_marshaled_com
 };
 
 // UnityEngine.Texture
-struct  Texture_t9FE0218A1EEDF266E8C85879FE123265CACC95AE  : public Object_tF2F3778131EFF286AF62B7B013A170F95A91571A
+struct Texture_t9FE0218A1EEDF266E8C85879FE123265CACC95AE  : public Object_tF2F3778131EFF286AF62B7B013A170F95A91571A
 {
 public:
 
@@ -1933,7 +1933,7 @@ public:
 
 
 // UnityEngine.SocialPlatforms.Impl.UserProfile
-struct  UserProfile_tDA4AC2655C2C32774702DDA257938A108AB4C537  : public RuntimeObject
+struct UserProfile_tDA4AC2655C2C32774702DDA257938A108AB4C537  : public RuntimeObject
 {
 public:
 	// System.String UnityEngine.SocialPlatforms.Impl.UserProfile::m_UserName
@@ -2016,7 +2016,7 @@ public:
 
 
 // System.Action`1<UnityEngine.SocialPlatforms.IAchievement[]>
-struct  Action_1_t7570552C35A220ADB9666809E4D57E4C10713634  : public MulticastDelegate_t
+struct Action_1_t7570552C35A220ADB9666809E4D57E4C10713634  : public MulticastDelegate_t
 {
 public:
 
@@ -2025,7 +2025,7 @@ public:
 
 
 // System.Action`1<UnityEngine.SocialPlatforms.IAchievementDescription[]>
-struct  Action_1_t6BE44411481D525A2A8991ACF188CB12B5635480  : public MulticastDelegate_t
+struct Action_1_t6BE44411481D525A2A8991ACF188CB12B5635480  : public MulticastDelegate_t
 {
 public:
 
@@ -2034,7 +2034,7 @@ public:
 
 
 // System.Action`1<UnityEngine.SocialPlatforms.IScore[]>
-struct  Action_1_tB92B5B1B4250DFE4170303183808B95C5495CB10  : public MulticastDelegate_t
+struct Action_1_tB92B5B1B4250DFE4170303183808B95C5495CB10  : public MulticastDelegate_t
 {
 public:
 
@@ -2043,7 +2043,7 @@ public:
 
 
 // System.Action`1<UnityEngine.SocialPlatforms.IUserProfile[]>
-struct  Action_1_t295B6E5FCC205AD4256A39EF521A1D2B51F4F371  : public MulticastDelegate_t
+struct Action_1_t295B6E5FCC205AD4256A39EF521A1D2B51F4F371  : public MulticastDelegate_t
 {
 public:
 
@@ -2052,7 +2052,7 @@ public:
 
 
 // System.Action`1<System.Boolean>
-struct  Action_1_tCE2D770918A65CAD277C08C4E8C05385EA267E83  : public MulticastDelegate_t
+struct Action_1_tCE2D770918A65CAD277C08C4E8C05385EA267E83  : public MulticastDelegate_t
 {
 public:
 
@@ -2061,7 +2061,7 @@ public:
 
 
 // System.Action`2<System.Boolean,System.String>
-struct  Action_2_t88E033566C44CCAAB72BD2C7604420B260FD3BF3  : public MulticastDelegate_t
+struct Action_2_t88E033566C44CCAAB72BD2C7604420B260FD3BF3  : public MulticastDelegate_t
 {
 public:
 
@@ -2070,7 +2070,7 @@ public:
 
 
 // UnityEngine.SocialPlatforms.Impl.LocalUser
-struct  LocalUser_t1719BEA57FDD71F6C7B280049E94071CD22D985D  : public UserProfile_tDA4AC2655C2C32774702DDA257938A108AB4C537
+struct LocalUser_t1719BEA57FDD71F6C7B280049E94071CD22D985D  : public UserProfile_tDA4AC2655C2C32774702DDA257938A108AB4C537
 {
 public:
 	// UnityEngine.SocialPlatforms.IUserProfile[] UnityEngine.SocialPlatforms.Impl.LocalUser::m_Friends
@@ -2109,7 +2109,7 @@ public:
 
 
 // UnityEngine.Texture2D
-struct  Texture2D_t9B604D0D8E28032123641A7E7338FA872E2698BF  : public Texture_t9FE0218A1EEDF266E8C85879FE123265CACC95AE
+struct Texture2D_t9B604D0D8E28032123641A7E7338FA872E2698BF  : public Texture_t9FE0218A1EEDF266E8C85879FE123265CACC95AE
 {
 public:
 

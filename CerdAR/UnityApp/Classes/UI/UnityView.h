@@ -56,3 +56,4 @@ void ReportSafeAreaChangeForView(UIView* view);
 // Computes safe area for a view in Unity coordinate system (origin of the view
 // is bottom-left, as compared to standard top-left)
 CGRect ComputeSafeArea(UIView* view);
+CGSize GetCutoutToScreenRatio();

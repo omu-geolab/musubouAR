@@ -68,6 +68,18 @@ extern "C" void UnitySetWantsSoftwareDimming(int enabled)
 #endif
 }
 
+extern "C" int UnityGetIosAppOnMac()
+{
+#if (PLATFORM_IOS && defined(__IPHONE_14_0)) || (PLATFORM_TVOS && defined(__TVOS_14_0))
+    if (@available(iOS 14, tvOS 14, *))
+        return [[NSProcessInfo processInfo] isiOSAppOnMac] ? 1 : 0;
+    else
+        return 0;
+#else
+    return 0;
+#endif
+}
+
 extern "C" int UnityAdTrackingEnabled()
 {
     bool _AdTrackingEnabled = false;
@@ -232,6 +244,11 @@ DeviceTableEntry DeviceTable[] =
     { iPhone, 13, 2, 2, deviceiPhone12 },
     { iPhone, 13, 3, 3, deviceiPhone12Pro },
     { iPhone, 13, 4, 4, deviceiPhone12ProMax },
+    { iPhone, 14, 4, 4, deviceiPhone13Mini },
+    { iPhone, 14, 5, 5, deviceiPhone13 },
+    { iPhone, 14, 2, 2, deviceiPhone13Pro },
+    { iPhone, 14, 3, 3, deviceiPhone13ProMax },
+    { iPhone, 14, 6, 6, deviceiPhoneSE3Gen },
 
     { iPod, 4, 1, 1, deviceiPodTouch4Gen },
     { iPod, 5, 1, 1, deviceiPodTouch5Gen },
@@ -243,12 +260,14 @@ DeviceTableEntry DeviceTable[] =
     { iPad, 4, 7, 9, deviceiPadMini3Gen },
     { iPad, 5, 1, 2, deviceiPadMini4Gen },
     { iPad, 11, 1, 2, deviceiPadMini5Gen },
+    { iPad, 14, 1, 2, deviceiPadMini6Gen },
     { iPad, 2, 1, 4, deviceiPad2Gen },
     { iPad, 3, 1, 3, deviceiPad3Gen },
     { iPad, 3, 4, 6, deviceiPad4Gen },
     { iPad, 6, 11, 12, deviceiPad5Gen },
     { iPad, 7, 5, 6, deviceiPad6Gen },
     { iPad, 7, 11, 12, deviceiPad7Gen },
+    { iPad, 12, 1, 2, deviceiPad9Gen },
     { iPad, 4, 1, 3, deviceiPadAir1 },
     { iPad, 5, 3, 4, deviceiPadAir2 },
     { iPad, 11, 3, 4, deviceiPadAir3Gen },
@@ -258,13 +277,17 @@ DeviceTableEntry DeviceTable[] =
     { iPad, 7, 3, 4, deviceiPadPro10Inch2Gen },
     { iPad, 8, 1, 4, deviceiPadPro11Inch },
     { iPad, 8, 9, 10, deviceiPadPro11Inch2Gen },
+    { iPad, 13, 6, 7, deviceiPadPro11Inch3Gen },
     { iPad, 8, 5, 8, deviceiPadPro3Gen },
     { iPad, 8, 11, 12, deviceiPadPro4Gen },
+    { iPad, 13, 10, 11, deviceiPadPro5Gen },
     { iPad, 11, 6, 7, deviceiPad8Gen },
     { iPad, 13, 1, 2, deviceiPadAir4Gen },
+    { iPad, 13, 16, 17, deviceiPadAir5Gen },
 
-    { AppleTV, 5, 3, 3, deviceAppleTV1Gen },
-    { AppleTV, 6, 2, 2, deviceAppleTV2Gen }
+    { AppleTV, 5, 3, 3, deviceAppleTVHD },
+    { AppleTV, 6, 2, 2, deviceAppleTV4K },
+    { AppleTV, 11, 1, 1, deviceAppleTV4K2Gen }
 };
 
 extern "C" int ParseDeviceGeneration(const char* model)
@@ -332,17 +355,25 @@ extern "C" int UnityDeviceGeneration()
     return _DeviceGeneration;
 }
 
-extern "C" int UnityDeviceSupportsUpsideDown()
+// Currently a manual process to add devices that have a cutout (notch). If you add one here you need to also update UnityView GetCutoutToScreenRatio()
+extern "C" int UnityDeviceHasCutout()
 {
     switch (UnityDeviceGeneration())
     {
-        // devices without home button
         case deviceiPhoneX: case deviceiPhoneXS: case deviceiPhoneXSMax: case deviceiPhoneXR:
         case deviceiPhone11: case deviceiPhone11Pro: case deviceiPhone11ProMax:
-            return 0;
-        default:
+        case deviceiPhone12: case deviceiPhone12Mini: case deviceiPhone12Pro: case deviceiPhone12ProMax:
+        case deviceiPhone13: case deviceiPhone13Mini: case deviceiPhone13Pro: case deviceiPhone13ProMax:
             return 1;
+        default:
+            return 0;
     }
+}
+
+// Devices with a cutout do not support Portrait UpsideDown orientation.
+extern "C" int UnityDeviceSupportsUpsideDown()
+{
+    return UnityDeviceHasCutout() ? 0 : 1;
 }
 
 extern "C" int UnityDeviceSupportedOrientations()
@@ -395,6 +426,7 @@ extern "C" float UnityDeviceDPI()
             case deviceiPhoneXR:
             case deviceiPhone11:
             case deviceiPhoneSE2Gen:
+            case deviceiPhoneSE3Gen:
                 _DeviceDPI = 326.0f; break;
             case deviceiPhone6Plus:
             case deviceiPhone6SPlus:
@@ -407,11 +439,15 @@ extern "C" float UnityDeviceDPI()
             case deviceiPhone11Pro:
             case deviceiPhone11ProMax:
             case deviceiPhone12ProMax:
+            case deviceiPhone13ProMax:
                 _DeviceDPI = 458.0f; break;
             case deviceiPhone12:
             case deviceiPhone12Pro:
+            case deviceiPhone13:
+            case deviceiPhone13Pro:
                 _DeviceDPI = 460.0f; break;
             case deviceiPhone12Mini:
+            case deviceiPhone13Mini:
                 _DeviceDPI = 476.0f; break;
 
             // iPad
@@ -431,9 +467,13 @@ extern "C" float UnityDeviceDPI()
             case deviceiPadPro11Inch:
             case deviceiPadPro3Gen:
             case deviceiPadPro11Inch2Gen:
+            case deviceiPadPro11Inch3Gen:
             case deviceiPadPro4Gen:
+            case deviceiPadPro5Gen:
             case deviceiPad8Gen:
             case deviceiPadAir4Gen:
+            case deviceiPad9Gen:
+            case deviceiPadAir5Gen:
                 _DeviceDPI = 264.0f; break;
             case deviceiPad7Gen:
                 _DeviceDPI = 326.0f; break;
@@ -445,6 +485,7 @@ extern "C" float UnityDeviceDPI()
             case deviceiPadMini3Gen:
             case deviceiPadMini4Gen:
             case deviceiPadMini5Gen:
+            case deviceiPadMini6Gen:
                 _DeviceDPI = 326.0f; break;
 
             // iPod

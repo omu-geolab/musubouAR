@@ -162,7 +162,7 @@ IL2CPP_EXTERN_C_END
 #endif
 
 // <Module>
-struct  U3CModuleU3E_t7D657B68C133361A594C708A6FD672221623F690 
+struct U3CModuleU3E_t7D657B68C133361A594C708A6FD672221623F690 
 {
 public:
 
@@ -174,7 +174,7 @@ public:
 
 
 // System.Collections.Generic.List`1<UnityEngine.IntegratedSubsystem>
-struct  List_1_t2DAF7481782912A6F8E6180AC19B83A5EEFEE9EF  : public RuntimeObject
+struct List_1_t2DAF7481782912A6F8E6180AC19B83A5EEFEE9EF  : public RuntimeObject
 {
 public:
 	// T[] System.Collections.Generic.List`1::_items
@@ -241,7 +241,7 @@ public:
 
 
 // System.Collections.Generic.List`1<UnityEngine.IntegratedSubsystemDescriptor>
-struct  List_1_t13B7F19BE124BF950C29583D073B7D2174DCA122  : public RuntimeObject
+struct List_1_t13B7F19BE124BF950C29583D073B7D2174DCA122  : public RuntimeObject
 {
 public:
 	// T[] System.Collections.Generic.List`1::_items
@@ -308,7 +308,7 @@ public:
 
 
 // System.Collections.Generic.List`1<System.Object>
-struct  List_1_t3F94120C77410A62EAE48421CF166B83AB95A2F5  : public RuntimeObject
+struct List_1_t3F94120C77410A62EAE48421CF166B83AB95A2F5  : public RuntimeObject
 {
 public:
 	// T[] System.Collections.Generic.List`1::_items
@@ -375,7 +375,7 @@ public:
 
 
 // System.Collections.Generic.List`1<UnityEngine.Subsystem>
-struct  List_1_t58BB84B47855540E6D2640B387506E01436DCF82  : public RuntimeObject
+struct List_1_t58BB84B47855540E6D2640B387506E01436DCF82  : public RuntimeObject
 {
 public:
 	// T[] System.Collections.Generic.List`1::_items
@@ -442,7 +442,7 @@ public:
 
 
 // System.Collections.Generic.List`1<UnityEngine.SubsystemDescriptor>
-struct  List_1_t32E50BD66297C6541AEA401E1C13D4EC530CC56B  : public RuntimeObject
+struct List_1_t32E50BD66297C6541AEA401E1C13D4EC530CC56B  : public RuntimeObject
 {
 public:
 	// T[] System.Collections.Generic.List`1::_items
@@ -509,7 +509,7 @@ public:
 
 
 // System.Collections.Generic.List`1<UnityEngine.SubsystemsImplementation.SubsystemDescriptorWithProvider>
-struct  List_1_t4DCA5C48F3390AC8CD79C7AD8D0963D5DAE5CF2E  : public RuntimeObject
+struct List_1_t4DCA5C48F3390AC8CD79C7AD8D0963D5DAE5CF2E  : public RuntimeObject
 {
 public:
 	// T[] System.Collections.Generic.List`1::_items
@@ -576,7 +576,7 @@ public:
 
 
 // System.Collections.Generic.List`1<UnityEngine.SubsystemsImplementation.SubsystemWithProvider>
-struct  List_1_t6E613DAFFAFE896B759F1C5260D6234F04C9DD41  : public RuntimeObject
+struct List_1_t6E613DAFFAFE896B759F1C5260D6234F04C9DD41  : public RuntimeObject
 {
 public:
 	// T[] System.Collections.Generic.List`1::_items
@@ -647,7 +647,7 @@ struct Il2CppArrayBounds;
 
 
 // UnityEngine.Internal_SubsystemDescriptors
-struct  Internal_SubsystemDescriptors_tE02B181DE901DC42D96F1726BD97F696190A08B5  : public RuntimeObject
+struct Internal_SubsystemDescriptors_tE02B181DE901DC42D96F1726BD97F696190A08B5  : public RuntimeObject
 {
 public:
 
@@ -656,7 +656,7 @@ public:
 
 
 // System.Reflection.MemberInfo
-struct  MemberInfo_t  : public RuntimeObject
+struct MemberInfo_t  : public RuntimeObject
 {
 public:
 
@@ -665,7 +665,7 @@ public:
 
 
 // System.String
-struct  String_t  : public RuntimeObject
+struct String_t  : public RuntimeObject
 {
 public:
 	// System.Int32 System.String::m_stringLength
@@ -710,7 +710,7 @@ public:
 
 
 // UnityEngine.Subsystem
-struct  Subsystem_t2D97454A946149D608974CB6B674F5F5C613A6A4  : public RuntimeObject
+struct Subsystem_t2D97454A946149D608974CB6B674F5F5C613A6A4  : public RuntimeObject
 {
 public:
 
@@ -719,7 +719,7 @@ public:
 
 
 // UnityEngine.SubsystemBindings
-struct  SubsystemBindings_t138255E27DD11AC3A0E02BBF59BFCFAAAC914A33  : public RuntimeObject
+struct SubsystemBindings_t138255E27DD11AC3A0E02BBF59BFCFAAAC914A33  : public RuntimeObject
 {
 public:
 
@@ -728,7 +728,7 @@ public:
 
 
 // UnityEngine.SubsystemDescriptor
-struct  SubsystemDescriptor_tF663011CB44AB1D342821BBEF7B6811E799A7245  : public RuntimeObject
+struct SubsystemDescriptor_tF663011CB44AB1D342821BBEF7B6811E799A7245  : public RuntimeObject
 {
 public:
 	// System.String UnityEngine.SubsystemDescriptor::<id>k__BackingField
@@ -747,7 +747,7 @@ public:
 
 
 // UnityEngine.SubsystemDescriptorBindings
-struct  SubsystemDescriptorBindings_t76C3E565A7953CD735CB10C1EF0B2DA8734DD795  : public RuntimeObject
+struct SubsystemDescriptorBindings_t76C3E565A7953CD735CB10C1EF0B2DA8734DD795  : public RuntimeObject
 {
 public:
 
@@ -756,7 +756,7 @@ public:
 
 
 // UnityEngine.SubsystemsImplementation.SubsystemDescriptorStore
-struct  SubsystemDescriptorStore_tE5D99C3159868DE6506269CB6B830621F8BC31A6  : public RuntimeObject
+struct SubsystemDescriptorStore_tE5D99C3159868DE6506269CB6B830621F8BC31A6  : public RuntimeObject
 {
 public:
 
@@ -804,7 +804,7 @@ public:
 
 
 // UnityEngine.SubsystemsImplementation.SubsystemDescriptorWithProvider
-struct  SubsystemDescriptorWithProvider_t32DD334657CFBA22F2FBA399258B087104A29C3E  : public RuntimeObject
+struct SubsystemDescriptorWithProvider_t32DD334657CFBA22F2FBA399258B087104A29C3E  : public RuntimeObject
 {
 public:
 	// System.String UnityEngine.SubsystemsImplementation.SubsystemDescriptorWithProvider::<id>k__BackingField
@@ -845,7 +845,7 @@ public:
 
 
 // UnityEngine.SubsystemManager
-struct  SubsystemManager_t4397CEF2ED795CB9B3DDBA2BB468BCB6B45B76D9  : public RuntimeObject
+struct SubsystemManager_t4397CEF2ED795CB9B3DDBA2BB468BCB6B45B76D9  : public RuntimeObject
 {
 public:
 
@@ -937,7 +937,7 @@ public:
 
 
 // UnityEngine.SubsystemsImplementation.SubsystemProvider
-struct  SubsystemProvider_t39E89FB8DB1EF1D2B0AF93796AEDB19D76A665F9  : public RuntimeObject
+struct SubsystemProvider_t39E89FB8DB1EF1D2B0AF93796AEDB19D76A665F9  : public RuntimeObject
 {
 public:
 	// System.Boolean UnityEngine.SubsystemsImplementation.SubsystemProvider::m_Running
@@ -955,7 +955,7 @@ public:
 
 
 // UnityEngine.SubsystemsImplementation.SubsystemWithProvider
-struct  SubsystemWithProvider_t1C1868CF8676F5596C1AD20A7CE69BDF7C7DE73E  : public RuntimeObject
+struct SubsystemWithProvider_t1C1868CF8676F5596C1AD20A7CE69BDF7C7DE73E  : public RuntimeObject
 {
 public:
 	// System.Boolean UnityEngine.SubsystemsImplementation.SubsystemWithProvider::<running>k__BackingField
@@ -984,7 +984,7 @@ public:
 
 
 // System.ValueType
-struct  ValueType_tDBF999C1B75C48C68621878250DBF6CDBCF51E52  : public RuntimeObject
+struct ValueType_tDBF999C1B75C48C68621878250DBF6CDBCF51E52  : public RuntimeObject
 {
 public:
 
@@ -1001,7 +1001,7 @@ struct ValueType_tDBF999C1B75C48C68621878250DBF6CDBCF51E52_marshaled_com
 };
 
 // System.Collections.Generic.List`1/Enumerator<UnityEngine.IntegratedSubsystem>
-struct  Enumerator_tCF86CE3FF03B86F9FF1AB5746DF9DEE36DCAD59D 
+struct Enumerator_tCF86CE3FF03B86F9FF1AB5746DF9DEE36DCAD59D 
 {
 public:
 	// System.Collections.Generic.List`1<T> System.Collections.Generic.List`1/Enumerator::list
@@ -1051,7 +1051,7 @@ public:
 
 
 // System.Collections.Generic.List`1/Enumerator<UnityEngine.IntegratedSubsystemDescriptor>
-struct  Enumerator_t743A52D99B71AF8E5AB3809E59FF43C7108E85D9 
+struct Enumerator_t743A52D99B71AF8E5AB3809E59FF43C7108E85D9 
 {
 public:
 	// System.Collections.Generic.List`1<T> System.Collections.Generic.List`1/Enumerator::list
@@ -1101,7 +1101,7 @@ public:
 
 
 // System.Collections.Generic.List`1/Enumerator<System.Object>
-struct  Enumerator_tB6009981BD4E3881E3EC83627255A24198F902D6 
+struct Enumerator_tB6009981BD4E3881E3EC83627255A24198F902D6 
 {
 public:
 	// System.Collections.Generic.List`1<T> System.Collections.Generic.List`1/Enumerator::list
@@ -1151,7 +1151,7 @@ public:
 
 
 // System.Collections.Generic.List`1/Enumerator<UnityEngine.SubsystemsImplementation.SubsystemWithProvider>
-struct  Enumerator_t019989D57D9D016D96679D1838F0D0C84367523E 
+struct Enumerator_t019989D57D9D016D96679D1838F0D0C84367523E 
 {
 public:
 	// System.Collections.Generic.List`1<T> System.Collections.Generic.List`1/Enumerator::list
@@ -1201,7 +1201,7 @@ public:
 
 
 // System.Boolean
-struct  Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37 
+struct Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37 
 {
 public:
 	// System.Boolean System.Boolean::m_value
@@ -1247,7 +1247,7 @@ public:
 
 
 // System.Enum
-struct  Enum_t23B90B40F60E677A8025267341651C94AE079CDA  : public ValueType_tDBF999C1B75C48C68621878250DBF6CDBCF51E52
+struct Enum_t23B90B40F60E677A8025267341651C94AE079CDA  : public ValueType_tDBF999C1B75C48C68621878250DBF6CDBCF51E52
 {
 public:
 
@@ -1281,7 +1281,7 @@ struct Enum_t23B90B40F60E677A8025267341651C94AE079CDA_marshaled_com
 };
 
 // System.Int32
-struct  Int32_tFDE5F8CD43D10453F6A2E0C77FE48C6CC7009046 
+struct Int32_tFDE5F8CD43D10453F6A2E0C77FE48C6CC7009046 
 {
 public:
 	// System.Int32 System.Int32::m_value
@@ -1299,7 +1299,7 @@ public:
 
 
 // System.IntPtr
-struct  IntPtr_t 
+struct IntPtr_t 
 {
 public:
 	// System.Void* System.IntPtr::m_value
@@ -1333,7 +1333,7 @@ public:
 
 
 // System.Void
-struct  Void_t700C6383A2A510C2CF4DD86DABD5CA9FF70ADAC5 
+struct Void_t700C6383A2A510C2CF4DD86DABD5CA9FF70ADAC5 
 {
 public:
 	union
@@ -1349,7 +1349,7 @@ public:
 
 
 // System.Reflection.BindingFlags
-struct  BindingFlags_tAAAB07D9AC588F0D55D844E51D7035E96DF94733 
+struct BindingFlags_tAAAB07D9AC588F0D55D844E51D7035E96DF94733 
 {
 public:
 	// System.Int32 System.Reflection.BindingFlags::value__
@@ -1367,7 +1367,7 @@ public:
 
 
 // System.Delegate
-struct  Delegate_t  : public RuntimeObject
+struct Delegate_t  : public RuntimeObject
 {
 public:
 	// System.IntPtr System.Delegate::method_ptr
@@ -1519,7 +1519,7 @@ struct Delegate_t_marshaled_com
 };
 
 // UnityEngine.IntegratedSubsystem
-struct  IntegratedSubsystem_t8FB3A371F812CF9521903AC016C64E95C7412002  : public RuntimeObject
+struct IntegratedSubsystem_t8FB3A371F812CF9521903AC016C64E95C7412002  : public RuntimeObject
 {
 public:
 	// System.IntPtr UnityEngine.IntegratedSubsystem::m_Ptr
@@ -1560,7 +1560,7 @@ struct IntegratedSubsystem_t8FB3A371F812CF9521903AC016C64E95C7412002_marshaled_c
 };
 
 // UnityEngine.IntegratedSubsystemDescriptor
-struct  IntegratedSubsystemDescriptor_tDC8AF8E5B67B983E4492D784A419F01693926D7A  : public RuntimeObject
+struct IntegratedSubsystemDescriptor_tDC8AF8E5B67B983E4492D784A419F01693926D7A  : public RuntimeObject
 {
 public:
 	// System.IntPtr UnityEngine.IntegratedSubsystemDescriptor::m_Ptr
@@ -1588,7 +1588,7 @@ struct IntegratedSubsystemDescriptor_tDC8AF8E5B67B983E4492D784A419F01693926D7A_m
 };
 
 // System.RuntimeTypeHandle
-struct  RuntimeTypeHandle_tC33965ADA3E041E0C94AF05E5CB527B56482CEF9 
+struct RuntimeTypeHandle_tC33965ADA3E041E0C94AF05E5CB527B56482CEF9 
 {
 public:
 	// System.IntPtr System.RuntimeTypeHandle::value
@@ -1606,7 +1606,7 @@ public:
 
 
 // System.MulticastDelegate
-struct  MulticastDelegate_t  : public Delegate_t
+struct MulticastDelegate_t  : public Delegate_t
 {
 public:
 	// System.Delegate[] System.MulticastDelegate::delegates
@@ -1635,7 +1635,7 @@ struct MulticastDelegate_t_marshaled_com : public Delegate_t_marshaled_com
 };
 
 // System.Type
-struct  Type_t  : public MemberInfo_t
+struct Type_t  : public MemberInfo_t
 {
 public:
 	// System.RuntimeTypeHandle System.Type::_impl
@@ -1735,7 +1735,7 @@ public:
 
 
 // System.Action
-struct  Action_tAF41423D285AE0862865348CF6CE51CD085ABBA6  : public MulticastDelegate_t
+struct Action_tAF41423D285AE0862865348CF6CE51CD085ABBA6  : public MulticastDelegate_t
 {
 public:
 

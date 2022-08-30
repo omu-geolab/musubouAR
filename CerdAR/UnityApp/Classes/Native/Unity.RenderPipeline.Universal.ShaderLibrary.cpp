@@ -25,7 +25,7 @@ IL2CPP_EXTERN_C_END
 #endif
 
 // <Module>
-struct  U3CModuleU3E_t08EBFE290E9E1E0771C2606786B788FB829862C2 
+struct U3CModuleU3E_t08EBFE290E9E1E0771C2606786B788FB829862C2 
 {
 public:
 
@@ -41,7 +41,7 @@ struct Il2CppArrayBounds;
 
 
 // UnityEngine.Rendering.Universal.ShaderInput
-struct  ShaderInput_tEB47D1433D19D73B84AB6DC9EC6EFEFDEA50B60C  : public RuntimeObject
+struct ShaderInput_tEB47D1433D19D73B84AB6DC9EC6EFEFDEA50B60C  : public RuntimeObject
 {
 public:
 
@@ -50,7 +50,7 @@ public:
 
 
 // System.ValueType
-struct  ValueType_tDBF999C1B75C48C68621878250DBF6CDBCF51E52  : public RuntimeObject
+struct ValueType_tDBF999C1B75C48C68621878250DBF6CDBCF51E52  : public RuntimeObject
 {
 public:
 
@@ -67,7 +67,7 @@ struct ValueType_tDBF999C1B75C48C68621878250DBF6CDBCF51E52_marshaled_com
 };
 
 // UnityEngine.Matrix4x4
-struct  Matrix4x4_tDE7FF4F2E2EA284F6EFE00D627789D0E5B8B4461 
+struct Matrix4x4_tDE7FF4F2E2EA284F6EFE00D627789D0E5B8B4461 
 {
 public:
 	// System.Single UnityEngine.Matrix4x4::m00
@@ -261,7 +261,7 @@ public:
 
 
 // UnityEngine.Vector4
-struct  Vector4_tA56A37FC5661BCC89C3DDC24BE12BA5BCB6A02C7 
+struct Vector4_tA56A37FC5661BCC89C3DDC24BE12BA5BCB6A02C7 
 {
 public:
 	// System.Single UnityEngine.Vector4::x
@@ -355,7 +355,7 @@ public:
 
 
 // UnityEngine.Rendering.Universal.ShaderInput/LightData
-struct  LightData_t8C139E4D07ED1FF86DF198773F7F41736AE9B135 
+struct LightData_t8C139E4D07ED1FF86DF198773F7F41736AE9B135 
 {
 public:
 	// UnityEngine.Vector4 UnityEngine.Rendering.Universal.ShaderInput/LightData::position
@@ -413,7 +413,7 @@ public:
 
 
 // UnityEngine.Rendering.Universal.ShaderInput/ShadowData
-struct  ShadowData_t5ACDE96DE7C04AEE2981172CB8996A5E66ED3701 
+struct ShadowData_t5ACDE96DE7C04AEE2981172CB8996A5E66ED3701 
 {
 public:
 	// UnityEngine.Matrix4x4 UnityEngine.Rendering.Universal.ShaderInput/ShadowData::worldToShadowMatrix

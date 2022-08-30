@@ -43,57 +43,78 @@ static double GetTimeInSeconds()
     size_t sizeOfKeyboardCommands = baseLayout.length + numpadLayout.length + upperCaseLetters.length + 11;
     NSMutableArray* commands = [NSMutableArray arrayWithCapacity: sizeOfKeyboardCommands];
 
+    void (^addKey)(NSString *keyName, UIKeyModifierFlags modifierFlags) = ^(NSString *keyName, UIKeyModifierFlags modifierFlags)
+    {
+        UIKeyCommand* command = [UIKeyCommand keyCommandWithInput: keyName modifierFlags: modifierFlags action: @selector(handleCommand:)];
+#if UNITY_HAS_IOSSDK_15_0
+        if (@available(iOS 15.0, *))
+            command.wantsPriorityOverSystemBehavior = YES;
+#endif
+        [commands addObject:command];
+    };
+
     for (NSInteger i = 0; i < baseLayout.length; ++i)
     {
         NSString* input = [baseLayout substringWithRange: NSMakeRange(i, 1)];
-        [commands addObject: [UIKeyCommand keyCommandWithInput: input modifierFlags: kNilOptions action: @selector(handleCommand:)]];
+        addKey(input, kNilOptions);
     }
     for (NSInteger i = 0; i < numpadLayout.length; ++i)
     {
         NSString* input = [numpadLayout substringWithRange: NSMakeRange(i, 1)];
-        [commands addObject: [UIKeyCommand keyCommandWithInput: input modifierFlags: UIKeyModifierNumericPad action: @selector(handleCommand:)]];
+        addKey(input, UIKeyModifierNumericPad);
     }
-
     for (NSInteger i = 0; i < upperCaseLetters.length; ++i)
     {
         NSString* input = [upperCaseLetters substringWithRange: NSMakeRange(i, 1)];
-        [commands addObject: [UIKeyCommand keyCommandWithInput: input modifierFlags: UIKeyModifierShift action: @selector(handleCommand:)]];
+        addKey(input, UIKeyModifierShift);
     }
 
     // pageUp, pageDown
-    [commands addObject: [UIKeyCommand keyCommandWithInput: @"UIKeyInputPageUp" modifierFlags: kNilOptions action: @selector(handleCommand:)]];
-    [commands addObject: [UIKeyCommand keyCommandWithInput: @"UIKeyInputPageDown" modifierFlags: kNilOptions action: @selector(handleCommand:)]];
+    addKey(@"UIKeyInputPageUp", kNilOptions);
+    addKey(@"UIKeyInputPageDown", kNilOptions);
 
     // up, down, left, right, esc
-    [commands addObject: [UIKeyCommand keyCommandWithInput: UIKeyInputUpArrow modifierFlags: kNilOptions action: @selector(handleCommand:)]];
-    [commands addObject: [UIKeyCommand keyCommandWithInput: UIKeyInputDownArrow modifierFlags: kNilOptions action: @selector(handleCommand:)]];
-    [commands addObject: [UIKeyCommand keyCommandWithInput: UIKeyInputLeftArrow modifierFlags: kNilOptions action: @selector(handleCommand:)]];
-    [commands addObject: [UIKeyCommand keyCommandWithInput: UIKeyInputRightArrow modifierFlags: kNilOptions action: @selector(handleCommand:)]];
-    [commands addObject: [UIKeyCommand keyCommandWithInput: UIKeyInputEscape modifierFlags: kNilOptions action: @selector(handleCommand:)]];
+    addKey(UIKeyInputUpArrow, kNilOptions);
+    addKey(UIKeyInputDownArrow, kNilOptions);
+    addKey(UIKeyInputLeftArrow, kNilOptions);
+    addKey(UIKeyInputRightArrow, kNilOptions);
+    addKey(UIKeyInputEscape, kNilOptions);
 
     // caps Lock, shift, control, option, command
-    [commands addObject: [UIKeyCommand keyCommandWithInput: @"" modifierFlags: UIKeyModifierAlphaShift action: @selector(handleCommand:)]];
-    [commands addObject: [UIKeyCommand keyCommandWithInput: @"" modifierFlags: UIKeyModifierShift action: @selector(handleCommand:)]];
-    [commands addObject: [UIKeyCommand keyCommandWithInput: @"" modifierFlags: UIKeyModifierControl action: @selector(handleCommand:)]];
-    [commands addObject: [UIKeyCommand keyCommandWithInput: @"" modifierFlags: UIKeyModifierAlternate action: @selector(handleCommand:)]];
-    [commands addObject: [UIKeyCommand keyCommandWithInput: @"" modifierFlags: UIKeyModifierCommand action: @selector(handleCommand:)]];
+    addKey(@"", UIKeyModifierAlphaShift);
+    addKey(@"", UIKeyModifierShift);
+    addKey(@"", UIKeyModifierControl);
+    addKey(@"", UIKeyModifierAlternate);
+    addKey(@"", UIKeyModifierCommand);
 
     keyboardCommands = commands.copy;
 }
 
 - (NSArray*)keyCommands
 {
-    //keyCommands take controll of buttons over UITextView, that's why need to return nil if text input field is active
-    if ([[KeyboardDelegate Instance] status] == Visible)
-    {
+    //keyCommands take control of buttons over UITextView, that's why need to return nil if text input field is active or we have an external keyboard attached AND a first responder
+    if ([[KeyboardDelegate Instance] status] == Visible || ([[KeyboardDelegate Instance] hasExternalKeyboard] && [self hasFirstResponderInHeirachy: UnityGetGLView()]))
         return nil;
-    }
 
     if (keyboardCommands == nil)
     {
         [self createKeyboard];
     }
     return keyboardCommands;
+}
+
+- (bool)hasFirstResponderInHeirachy:(UIView*)view
+{
+    if (view.isFirstResponder)
+        return true;
+
+    for (UIView* subview in view.subviews)
+    {
+        if ([self hasFirstResponderInHeirachy: subview])
+            return true;
+    }
+
+    return false;
 }
 
 - (bool)isValidCodeForButton:(int)code

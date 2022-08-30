@@ -214,33 +214,24 @@ void ReportSafeAreaChangeForView(UIView* view)
     UnityReportSafeAreaChange(safeArea.origin.x, safeArea.origin.y,
         safeArea.size.width, safeArea.size.height);
 
-    switch (UnityDeviceGeneration())
+    if (UnityDeviceHasCutout())
     {
-        case deviceiPhoneXR:
-        case deviceiPhone11:
+        CGSize cutoutSizeRatio = GetCutoutToScreenRatio();
+
+        if (!CGSizeEqualToSize(CGSizeZero, cutoutSizeRatio))
         {
-            const float x = 184, y = 1726, w = 460, h = 66;
+            const float w = ([UIScreen mainScreen].nativeBounds.size.width * cutoutSizeRatio.width);
+            const float h = ([UIScreen mainScreen].nativeBounds.size.height * cutoutSizeRatio.height);
+
+            // Apple's cutouts are currently centred on the horizontal, and stuck to the top of the vertical, hence this positioning.
+            const float x = (([UIScreen mainScreen].nativeBounds.size.width - w) / 2);
+            const float y = ([UIScreen mainScreen].nativeBounds.size.height - h);
             UnityReportDisplayCutouts(&x, &y, &w, &h, 1);
-            break;
+            return;
         }
-        case deviceiPhoneX:
-        case deviceiPhoneXS:
-        case deviceiPhone11Pro:
-        {
-            const float x = 250, y = 2346, w = 625, h = 90;
-            UnityReportDisplayCutouts(&x, &y, &w, &h, 1);
-            break;
-        }
-        case deviceiPhoneXSMax:
-        case deviceiPhone11ProMax:
-        {
-            const float x = 308, y = 2598, w = 626, h = 90;
-            UnityReportDisplayCutouts(&x, &y, &w, &h, 1);
-            break;
-        }
-        default:
-            UnityReportDisplayCutouts(nullptr, nullptr, nullptr, nullptr, 0);
     }
+
+    UnityReportDisplayCutouts(nullptr, nullptr, nullptr, nullptr, 0);
 }
 
 CGRect ComputeSafeArea(UIView* view)
@@ -264,4 +255,43 @@ CGRect ComputeSafeArea(UIView* view)
     screenRect.size.width = (unsigned)(screenRect.size.width * scale);
     screenRect.size.height = (unsigned)(screenRect.size.height * scale);
     return screenRect;
+}
+
+// Apple does not provide the cutout width and height in points/pixels. They *do* however list the
+// size of the cutout and screen in mm for accessory makers. We can use this information to calculate the percentage of the screen is cutout.
+// This information can be found here - https://developer.apple.com/accessories/Accessory-Design-Guidelines.pdf
+CGSize GetCutoutToScreenRatio()
+{
+    switch (UnityDeviceGeneration())
+    {
+        case deviceiPhone13ProMax:
+            return CGSizeMake(0.373, 0.036);
+        case deviceiPhone13Pro:
+        case deviceiPhone13:
+            return CGSizeMake(0.4148, 0.0399);
+        case deviceiPhone13Mini:
+            return CGSizeMake(0.4644, 0.0462);
+        case deviceiPhone12ProMax:
+            return CGSizeMake(0.4897, 0.0346);
+        case deviceiPhone12Pro:
+        case deviceiPhone12:
+            return CGSizeMake(0.5393, 0.0379);
+        case deviceiPhone12Mini:
+            return CGSizeMake(0.604, 0.0424);
+        case deviceiPhone11ProMax:
+            return CGSizeMake(0.5057, 0.0335);
+        case deviceiPhone11Pro:
+            return CGSizeMake(0.5583, 0.037);
+        case deviceiPhone11:
+        case deviceiPhoneXR:
+            return CGSizeMake(0.5568, 0.0398);
+        case deviceiPhoneXSMax:
+            return CGSizeMake(0.4884, 0.0333);
+        case deviceiPhoneX:
+        case deviceiPhoneXS:
+            return CGSizeMake(0.5391, 0.0368);
+        default:
+            NSCAssert(!UnityDeviceHasCutout(), @"Device has a cutout, but no ratio has been added for it.");
+            return CGSizeZero;
+    }
 }

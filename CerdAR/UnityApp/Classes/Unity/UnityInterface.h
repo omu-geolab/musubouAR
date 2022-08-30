@@ -53,6 +53,7 @@ int     UnityIsPaused();                    // 0 if player is running, 1 if paus
 void    UnityWillPause();                   // send the message that app will pause
 void    UnityWillResume();                  // send the message that app will resume
 void    UnityDeliverUIEvents();             // unity processing impacting UI will be called in there
+void    UnityWaitForFrame();
 
 void    UnityInputProcess();                // no longer used, will be removed soon
 
@@ -61,7 +62,7 @@ void    UnityInputProcess();                // no longer used, will be removed s
 
 int     UnityGetRenderingAPI();
 void    UnityFinishRendering();
-void    UnityDisplayLinkCallback(double machAbsoluteTimeSeconds);
+void    UnityDisplayLinkCallback(double /*machAbsoluteTimeSeconds*/); // argument is not used anymore
 
 // controling player internals
 
@@ -75,6 +76,9 @@ void    UnitySendMessage(const char* obj, const char* method, const char* msg);
 void    UnityUpdateMuteState(int mute);
 void    UnityUpdateAudioOutputState();
 
+int     UnityShouldMuteOtherAudioSources(void);
+int     UnityShouldPrepareForIOSRecording(void);
+int     UnityIsAudioManagerAvailableAndEnabled(void);
 EAGLContext*        UnityGetDataContextGLES();
 
 #ifdef __cplusplus
@@ -102,6 +106,7 @@ int     UnityIsOrientationEnabled(unsigned /*ScreenOrientation*/ orientation);
 
 int     UnityHasOrientationRequest();
 int     UnityShouldAutorotate();
+int     UnityAutorotationStatusChanged(void);
 int     UnityShouldChangeAllowedOrientations();
 int     UnityRequestedScreenOrientation(); // returns ScreenOrientation
 void    UnityOrientationRequestWasCommitted();
@@ -185,7 +190,7 @@ void    UnityWebRequestConsumeUploadData(void* udata, unsigned consumedSize);
 
 // AVCapture
 
-void    UnityReportAVCapturePermission();
+void    UnityReportAVCapturePermission(void* userData);
 void    UnityDidCaptureVideoFrame(intptr_t tex, void* udata);
 
 // logging override
@@ -233,6 +238,9 @@ enum ScreenOrientation  UnityCurrentOrientation();
 // Unity/DisplayManager.mm
 float                   UnityScreenScaleFactor(UIScreen* screen);
 
+// Unity/DeviceSettings.mm
+int                     UnityDeviceHasCutout(void);
+
 #ifdef __cplusplus
 } // extern "C"
 #endif
@@ -262,7 +270,6 @@ void            UnityGetJoystickAxisName(int idx, int axis, char* buffer, int ma
 void            UnityGetNiceKeyname(int key, char* buffer, int maxLen);
 
 // UnityAppController+Rendering.mm
-void            UnityInitMainScreenRenderingCallback();
 void            UnityGfxInitedCallback();
 void            UnityPresentContextCallback(struct UnityFrameStats const* frameStats);
 void            UnityFramerateChangeCallback(int targetFPS);
@@ -308,7 +315,7 @@ void            UnityNotifyDeferSystemGesturesChange();
 
 // Unity/AVCapture.mm
 int             UnityGetAVCapturePermission(int captureTypes);
-void            UnityRequestAVCapturePermission(int captureTypes);
+void            UnityRequestAVCapturePermission(int captureTypes, void* userData);
 
 // Unity/CameraCapture.mm
 void            UnityEnumVideoCaptureDevices(void* udata, void(*callback)(void* udata, const char* name, int frontFacing, int autoFocusPointSupported, int kind, const int* resolutions, int resCount));
@@ -331,6 +338,7 @@ int             UnityAdTrackingEnabled();
 int             UnityGetLowPowerModeEnabled();
 int             UnityGetWantsSoftwareDimming();
 void            UnitySetWantsSoftwareDimming(int enabled);
+int             UnityGetIosAppOnMac();
 const char*     UnityDeviceName();
 const char*     UnitySystemName();
 const char*     UnitySystemVersion();
@@ -380,6 +388,9 @@ void        UnitySetAppleTVRemoteTouchesEnabled(int val);
 
 // Unity/UnityReplayKit.mm
 void         UnityShouldCreateReplayKitOverlay();
+
+// Runtime analytics
+void UnitySendEmbeddedLaunchEvent(int launchType); // Tracks events when application is launched from native host app (Unity as a Library)
 
 #ifdef __cplusplus
 } // extern "C"

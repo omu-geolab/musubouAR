@@ -3,6 +3,15 @@
     "typesInScenes": [
         {
             "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "Object",
+            "fullManagedTypeName": "UnityEngine.Object",
+            "moduleName": "Core",
+            "usedInScenes": [
+                "Assets/Scenes/Meshing/OcclusionMeshes.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
             "nativeClass": "Behaviour",
             "fullManagedTypeName": "UnityEngine.Behaviour",
             "moduleName": "Core",
@@ -12,75 +21,8 @@
         },
         {
             "managedAssemblyName": "",
-            "nativeClass": "StreamingManager",
+            "nativeClass": "EditorExtension",
             "fullManagedTypeName": "",
-            "moduleName": "Streaming",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "VFXManager",
-            "fullManagedTypeName": "UnityEditor.VFXManager",
-            "moduleName": "VFX",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "Texture2D",
-            "fullManagedTypeName": "UnityEngine.Texture2D",
-            "moduleName": "Core",
-            "usedInScenes": [
-                "Assets/Scenes/Meshing/OcclusionMeshes.unity"
-            ]
-        },
-        {
-            "managedAssemblyName": "",
-            "nativeClass": "GameManager",
-            "fullManagedTypeName": "",
-            "moduleName": "Core",
-            "usedInScenes": [
-                "Assets/Scenes/Meshing/OcclusionMeshes.unity"
-            ]
-        },
-        {
-            "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "TagManager",
-            "fullManagedTypeName": "UnityEditor.TagManager",
-            "moduleName": "Core",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "MonoManager",
-            "fullManagedTypeName": "UnityEditor.MonoManager",
-            "moduleName": "Core",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "GraphicsSettings",
-            "fullManagedTypeName": "UnityEngine.Rendering.GraphicsSettings",
-            "moduleName": "Core",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "",
-            "nativeClass": "DelayedCallManager",
-            "fullManagedTypeName": "",
-            "moduleName": "Core",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "",
-            "nativeClass": "BuildSettings",
-            "fullManagedTypeName": "",
-            "moduleName": "Core",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "Texture",
-            "fullManagedTypeName": "UnityEngine.Texture",
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/Meshing/OcclusionMeshes.unity"
@@ -97,12 +39,142 @@
         },
         {
             "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "MonoScript",
+            "fullManagedTypeName": "UnityEditor.MonoScript",
+            "moduleName": "Core",
+            "usedInScenes": [
+                "Assets/Scenes/Meshing/OcclusionMeshes.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "MonoBehaviour",
+            "fullManagedTypeName": "UnityEngine.MonoBehaviour",
+            "moduleName": "Core",
+            "usedInScenes": [
+                "Assets/Scenes/Meshing/OcclusionMeshes.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
             "nativeClass": "Material",
             "fullManagedTypeName": "UnityEngine.Material",
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/Meshing/OcclusionMeshes.unity"
             ]
+        },
+        {
+            "managedAssemblyName": "",
+            "nativeClass": "NamedObject",
+            "fullManagedTypeName": "",
+            "moduleName": "Core",
+            "usedInScenes": [
+                "Assets/Scenes/Meshing/OcclusionMeshes.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "Texture",
+            "fullManagedTypeName": "UnityEngine.Texture",
+            "moduleName": "Core",
+            "usedInScenes": [
+                "Assets/Scenes/Meshing/OcclusionMeshes.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "Texture2D",
+            "fullManagedTypeName": "UnityEngine.Texture2D",
+            "moduleName": "Core",
+            "usedInScenes": [
+                "Assets/Scenes/Meshing/OcclusionMeshes.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "",
+            "nativeClass": "GlobalGameManager",
+            "fullManagedTypeName": "",
+            "moduleName": "Core",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "",
+            "nativeClass": "StreamingManager",
+            "fullManagedTypeName": "",
+            "moduleName": "Streaming",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "",
+            "nativeClass": "GameManager",
+            "fullManagedTypeName": "",
+            "moduleName": "Core",
+            "usedInScenes": [
+                "Assets/Scenes/Meshing/OcclusionMeshes.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "UnityConnectSettings",
+            "fullManagedTypeName": "UnityEditor.UnityConnectSettings",
+            "moduleName": "UnityConnect",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "VFXManager",
+            "fullManagedTypeName": "UnityEditor.VFXManager",
+            "moduleName": "VFX",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "ComputeShader",
+            "fullManagedTypeName": "UnityEngine.ComputeShader",
+            "moduleName": "Core",
+            "usedInScenes": [
+                "Assets/Scenes/Meshing/OcclusionMeshes.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "Shader",
+            "fullManagedTypeName": "UnityEngine.Shader",
+            "moduleName": "Core",
+            "usedInScenes": [
+                "Assets/Scenes/Meshing/OcclusionMeshes.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "TextAsset",
+            "fullManagedTypeName": "UnityEngine.TextAsset",
+            "moduleName": "Core",
+            "usedInScenes": [
+                "Assets/Scenes/Meshing/OcclusionMeshes.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "TagManager",
+            "fullManagedTypeName": "UnityEditor.TagManager",
+            "moduleName": "Core",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "GraphicsSettings",
+            "fullManagedTypeName": "UnityEngine.Rendering.GraphicsSettings",
+            "moduleName": "Core",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "",
+            "nativeClass": "DelayedCallManager",
+            "fullManagedTypeName": "",
+            "moduleName": "Core",
+            "usedInScenes": []
         },
         {
             "managedAssemblyName": "UnityEngine.dll",
@@ -140,15 +212,6 @@
             "usedInScenes": []
         },
         {
-            "managedAssemblyName": "",
-            "nativeClass": "NamedObject",
-            "fullManagedTypeName": "",
-            "moduleName": "Core",
-            "usedInScenes": [
-                "Assets/Scenes/Meshing/OcclusionMeshes.unity"
-            ]
-        },
-        {
             "managedAssemblyName": "UnityEngine.dll",
             "nativeClass": "PhysicsManager",
             "fullManagedTypeName": "UnityEditor.PhysicsManager",
@@ -157,30 +220,10 @@
         },
         {
             "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "TextAsset",
-            "fullManagedTypeName": "UnityEngine.TextAsset",
+            "nativeClass": "MonoManager",
+            "fullManagedTypeName": "UnityEditor.MonoManager",
             "moduleName": "Core",
-            "usedInScenes": [
-                "Assets/Scenes/Meshing/OcclusionMeshes.unity"
-            ]
-        },
-        {
-            "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "MonoScript",
-            "fullManagedTypeName": "UnityEditor.MonoScript",
-            "moduleName": "Core",
-            "usedInScenes": [
-                "Assets/Scenes/Meshing/OcclusionMeshes.unity"
-            ]
-        },
-        {
-            "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "Object",
-            "fullManagedTypeName": "UnityEngine.Object",
-            "moduleName": "Core",
-            "usedInScenes": [
-                "Assets/Scenes/Meshing/OcclusionMeshes.unity"
-            ]
+            "usedInScenes": []
         },
         {
             "managedAssemblyName": "",
@@ -198,37 +241,10 @@
         },
         {
             "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "Shader",
-            "fullManagedTypeName": "UnityEngine.Shader",
-            "moduleName": "Core",
-            "usedInScenes": [
-                "Assets/Scenes/Meshing/OcclusionMeshes.unity"
-            ]
-        },
-        {
-            "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "MonoBehaviour",
-            "fullManagedTypeName": "UnityEngine.MonoBehaviour",
-            "moduleName": "Core",
-            "usedInScenes": [
-                "Assets/Scenes/Meshing/OcclusionMeshes.unity"
-            ]
-        },
-        {
-            "managedAssemblyName": "UnityEngine.dll",
             "nativeClass": "Physics2DSettings",
             "fullManagedTypeName": "UnityEditor.Physics2DSettings",
             "moduleName": "Physics2D",
             "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "",
-            "nativeClass": "EditorExtension",
-            "fullManagedTypeName": "",
-            "moduleName": "Core",
-            "usedInScenes": [
-                "Assets/Scenes/Meshing/OcclusionMeshes.unity"
-            ]
         },
         {
             "managedAssemblyName": "UnityEngine.dll",
@@ -239,24 +255,116 @@
         },
         {
             "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "UnityConnectSettings",
-            "fullManagedTypeName": "UnityEditor.UnityConnectSettings",
-            "moduleName": "UnityConnect",
+            "nativeClass": "QualitySettings",
+            "fullManagedTypeName": "UnityEngine.QualitySettings",
+            "moduleName": "Core",
             "usedInScenes": []
         },
         {
             "managedAssemblyName": "",
-            "nativeClass": "GlobalGameManager",
+            "nativeClass": "BuildSettings",
             "fullManagedTypeName": "",
             "moduleName": "Core",
             "usedInScenes": []
         },
         {
             "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "QualitySettings",
-            "fullManagedTypeName": "UnityEngine.QualitySettings",
+            "nativeClass": "Camera",
+            "fullManagedTypeName": "UnityEngine.Camera",
             "moduleName": "Core",
-            "usedInScenes": []
+            "usedInScenes": [
+                "Assets/Scenes/Meshing/OcclusionMeshes.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "Transform",
+            "fullManagedTypeName": "UnityEngine.Transform",
+            "moduleName": "Core",
+            "usedInScenes": [
+                "Assets/Scenes/Meshing/OcclusionMeshes.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "Renderer",
+            "fullManagedTypeName": "UnityEngine.Renderer",
+            "moduleName": "Core",
+            "usedInScenes": [
+                "Assets/Scenes/Meshing/OcclusionMeshes.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "Light",
+            "fullManagedTypeName": "UnityEngine.Light",
+            "moduleName": "Core",
+            "usedInScenes": [
+                "Assets/Scenes/Meshing/OcclusionMeshes.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "MeshFilter",
+            "fullManagedTypeName": "UnityEngine.MeshFilter",
+            "moduleName": "Core",
+            "usedInScenes": [
+                "Assets/Scenes/Meshing/OcclusionMeshes.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "MeshRenderer",
+            "fullManagedTypeName": "UnityEngine.MeshRenderer",
+            "moduleName": "Core",
+            "usedInScenes": [
+                "Assets/Scenes/Meshing/OcclusionMeshes.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "AudioSource",
+            "fullManagedTypeName": "UnityEngine.AudioSource",
+            "moduleName": "Audio",
+            "usedInScenes": [
+                "Assets/Scenes/Meshing/OcclusionMeshes.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "AudioBehaviour",
+            "fullManagedTypeName": "UnityEngine.AudioBehaviour",
+            "moduleName": "Audio",
+            "usedInScenes": [
+                "Assets/Scenes/Meshing/OcclusionMeshes.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "AudioListener",
+            "fullManagedTypeName": "UnityEngine.AudioListener",
+            "moduleName": "Audio",
+            "usedInScenes": [
+                "Assets/Scenes/Meshing/OcclusionMeshes.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "ParticleSystem",
+            "fullManagedTypeName": "UnityEngine.ParticleSystem",
+            "moduleName": "ParticleSystem",
+            "usedInScenes": [
+                "Assets/Scenes/Meshing/OcclusionMeshes.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "ParticleSystemRenderer",
+            "fullManagedTypeName": "UnityEngine.ParticleSystemRenderer",
+            "moduleName": "ParticleSystem",
+            "usedInScenes": [
+                "Assets/Scenes/Meshing/OcclusionMeshes.unity"
+            ]
         },
         {
             "managedAssemblyName": "UnityEngine.dll",
@@ -305,9 +413,45 @@
         },
         {
             "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "TextMesh",
+            "fullManagedTypeName": "UnityEngine.TextMesh",
+            "moduleName": "TextRendering",
+            "usedInScenes": [
+                "Assets/Scenes/Meshing/OcclusionMeshes.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
             "nativeClass": "Canvas",
             "fullManagedTypeName": "UnityEngine.Canvas",
             "moduleName": "UI",
+            "usedInScenes": [
+                "Assets/Scenes/Meshing/OcclusionMeshes.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "RectTransform",
+            "fullManagedTypeName": "UnityEngine.RectTransform",
+            "moduleName": "Core",
+            "usedInScenes": [
+                "Assets/Scenes/Meshing/OcclusionMeshes.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "VisualEffect",
+            "fullManagedTypeName": "UnityEngine.VFX.VisualEffect",
+            "moduleName": "VFX",
+            "usedInScenes": [
+                "Assets/Scenes/Meshing/OcclusionMeshes.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "VFXRenderer",
+            "fullManagedTypeName": "UnityEngine.VFX.VFXRenderer",
+            "moduleName": "VFX",
             "usedInScenes": [
                 "Assets/Scenes/Meshing/OcclusionMeshes.unity"
             ]
@@ -323,6 +467,24 @@
         },
         {
             "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "GameObject",
+            "fullManagedTypeName": "UnityEngine.GameObject",
+            "moduleName": "Core",
+            "usedInScenes": [
+                "Assets/Scenes/Meshing/OcclusionMeshes.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "LightmapSettings",
+            "fullManagedTypeName": "UnityEngine.LightmapSettings",
+            "moduleName": "Core",
+            "usedInScenes": [
+                "Assets/Scenes/Meshing/OcclusionMeshes.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
             "nativeClass": "Font",
             "fullManagedTypeName": "UnityEngine.Font",
             "moduleName": "TextRendering",
@@ -332,8 +494,8 @@
         },
         {
             "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "Renderer",
-            "fullManagedTypeName": "UnityEngine.Renderer",
+            "nativeClass": "Mesh",
+            "fullManagedTypeName": "UnityEngine.Mesh",
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/Meshing/OcclusionMeshes.unity"
@@ -341,18 +503,27 @@
         },
         {
             "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "ParticleSystemRenderer",
-            "fullManagedTypeName": "UnityEngine.ParticleSystemRenderer",
-            "moduleName": "ParticleSystem",
+            "nativeClass": "Sprite",
+            "fullManagedTypeName": "UnityEngine.Sprite",
+            "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/Meshing/OcclusionMeshes.unity"
             ]
         },
         {
             "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "ParticleSystem",
-            "fullManagedTypeName": "UnityEngine.ParticleSystem",
-            "moduleName": "ParticleSystem",
+            "nativeClass": "CanvasRenderer",
+            "fullManagedTypeName": "UnityEngine.CanvasRenderer",
+            "moduleName": "UI",
+            "usedInScenes": [
+                "Assets/Scenes/Meshing/OcclusionMeshes.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "VisualEffectAsset",
+            "fullManagedTypeName": "UnityEngine.VFX.VisualEffectAsset",
+            "moduleName": "VFX",
             "usedInScenes": [
                 "Assets/Scenes/Meshing/OcclusionMeshes.unity"
             ]
@@ -376,9 +547,18 @@
             ]
         },
         {
+            "managedAssemblyName": "",
+            "nativeClass": "LevelGameManager",
+            "fullManagedTypeName": "",
+            "moduleName": "Core",
+            "usedInScenes": [
+                "Assets/Scenes/Meshing/OcclusionMeshes.unity"
+            ]
+        },
+        {
             "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "Sprite",
-            "fullManagedTypeName": "UnityEngine.Sprite",
+            "nativeClass": "Cubemap",
+            "fullManagedTypeName": "UnityEngine.Cubemap",
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/Meshing/OcclusionMeshes.unity"
@@ -395,63 +575,18 @@
         },
         {
             "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "MeshRenderer",
-            "fullManagedTypeName": "UnityEngine.MeshRenderer",
-            "moduleName": "Core",
-            "usedInScenes": [
-                "Assets/Scenes/Meshing/OcclusionMeshes.unity"
-            ]
-        },
-        {
-            "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "Transform",
-            "fullManagedTypeName": "UnityEngine.Transform",
-            "moduleName": "Core",
-            "usedInScenes": [
-                "Assets/Scenes/Meshing/OcclusionMeshes.unity"
-            ]
-        },
-        {
-            "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "Light",
-            "fullManagedTypeName": "UnityEngine.Light",
-            "moduleName": "Core",
-            "usedInScenes": [
-                "Assets/Scenes/Meshing/OcclusionMeshes.unity"
-            ]
-        },
-        {
-            "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "Camera",
-            "fullManagedTypeName": "UnityEngine.Camera",
-            "moduleName": "Core",
-            "usedInScenes": [
-                "Assets/Scenes/Meshing/OcclusionMeshes.unity"
-            ]
-        },
-        {
-            "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "Mesh",
-            "fullManagedTypeName": "UnityEngine.Mesh",
-            "moduleName": "Core",
-            "usedInScenes": [
-                "Assets/Scenes/Meshing/OcclusionMeshes.unity"
-            ]
-        },
-        {
-            "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "GameObject",
-            "fullManagedTypeName": "UnityEngine.GameObject",
-            "moduleName": "Core",
-            "usedInScenes": [
-                "Assets/Scenes/Meshing/OcclusionMeshes.unity"
-            ]
-        },
-        {
-            "managedAssemblyName": "UnityEngine.dll",
             "nativeClass": "AudioClip",
             "fullManagedTypeName": "UnityEngine.AudioClip",
             "moduleName": "Audio",
+            "usedInScenes": [
+                "Assets/Scenes/Meshing/OcclusionMeshes.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "PhysicMaterial",
+            "fullManagedTypeName": "UnityEngine.PhysicMaterial",
+            "moduleName": "Physics",
             "usedInScenes": [
                 "Assets/Scenes/Meshing/OcclusionMeshes.unity"
             ]
@@ -476,54 +611,9 @@
         },
         {
             "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "MeshFilter",
-            "fullManagedTypeName": "UnityEngine.MeshFilter",
-            "moduleName": "Core",
-            "usedInScenes": [
-                "Assets/Scenes/Meshing/OcclusionMeshes.unity"
-            ]
-        },
-        {
-            "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "RectTransform",
-            "fullManagedTypeName": "UnityEngine.RectTransform",
-            "moduleName": "Core",
-            "usedInScenes": [
-                "Assets/Scenes/Meshing/OcclusionMeshes.unity"
-            ]
-        },
-        {
-            "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "CanvasRenderer",
-            "fullManagedTypeName": "UnityEngine.CanvasRenderer",
-            "moduleName": "UI",
-            "usedInScenes": [
-                "Assets/Scenes/Meshing/OcclusionMeshes.unity"
-            ]
-        },
-        {
-            "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "Cubemap",
-            "fullManagedTypeName": "UnityEngine.Cubemap",
-            "moduleName": "Core",
-            "usedInScenes": [
-                "Assets/Scenes/Meshing/OcclusionMeshes.unity"
-            ]
-        },
-        {
-            "managedAssemblyName": "",
-            "nativeClass": "LevelGameManager",
-            "fullManagedTypeName": "",
-            "moduleName": "Core",
-            "usedInScenes": [
-                "Assets/Scenes/Meshing/OcclusionMeshes.unity"
-            ]
-        },
-        {
-            "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "LightmapSettings",
-            "fullManagedTypeName": "UnityEngine.LightmapSettings",
-            "moduleName": "Core",
+            "nativeClass": "VisualEffectObject",
+            "fullManagedTypeName": "UnityEngine.VFX.VisualEffectObject",
+            "moduleName": "VFX",
             "usedInScenes": [
                 "Assets/Scenes/Meshing/OcclusionMeshes.unity"
             ]
@@ -532,6 +622,13 @@
             "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
             "fullManagedTypeName": "BoxVolumeController",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "DialogInfoController",
             "moduleName": "",
             "usedInScenes": []
         },
@@ -552,6 +649,13 @@
         {
             "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
+            "fullManagedTypeName": "Exploder",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
             "fullManagedTypeName": "Float",
             "moduleName": "",
             "usedInScenes": []
@@ -560,6 +664,55 @@
             "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
             "fullManagedTypeName": "FloodController",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "GISInfoView",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "HillController",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "ImageDownload",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "InfoModelController",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "LocationData",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "MainController",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "ParticleComponent",
             "moduleName": "",
             "usedInScenes": []
         },
@@ -587,6 +740,13 @@
         {
             "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
+            "fullManagedTypeName": "UnityEngine.XR.ARFoundation.Samples.ARWorldMapController",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
             "fullManagedTypeName": "UnityEngine.XR.ARFoundation.Samples.BackButton",
             "moduleName": "",
             "usedInScenes": []
@@ -602,6 +762,13 @@
             "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
             "fullManagedTypeName": "UnityEngine.XR.ARFoundation.Samples.ProjectileLauncher",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "WarnAnimationController",
             "moduleName": "",
             "usedInScenes": []
         },
@@ -900,6 +1067,34 @@
             "usedInScenes": []
         },
         {
+            "managedAssemblyName": "Unity.TextMeshPro.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "TMPro.TMP_FontAsset",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Unity.TextMeshPro.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "TMPro.TMP_Settings",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Unity.TextMeshPro.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "TMPro.TMP_SpriteAsset",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Unity.TextMeshPro.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "TMPro.TMP_StyleSheet",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
             "managedAssemblyName": "Unity.XR.ARFoundation.dll",
             "nativeClass": "",
             "fullManagedTypeName": "UnityEngine.XR.ARFoundation.ARBackgroundRendererFeature",
@@ -1000,6 +1195,20 @@
         {
             "managedAssemblyName": "UnityEngine.UI.dll",
             "nativeClass": "",
+            "fullManagedTypeName": "UnityEngine.EventSystems.EventTrigger",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "UnityEngine.UI.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "UnityEngine.EventSystems.PhysicsRaycaster",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "UnityEngine.UI.dll",
+            "nativeClass": "",
             "fullManagedTypeName": "UnityEngine.EventSystems.StandaloneInputModule",
             "moduleName": "",
             "usedInScenes": []
@@ -1057,6 +1266,13 @@
             "managedAssemblyName": "UnityEngine.UI.dll",
             "nativeClass": "",
             "fullManagedTypeName": "UnityEngine.UI.Mask",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "UnityEngine.UI.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "UnityEngine.UI.RawImage",
             "moduleName": "",
             "usedInScenes": []
         },
@@ -1125,18 +1341,6 @@
             "name": "BuiltAssetBundleInfoSet",
             "module": "BuildReportingEditor",
             "baseName": "Object",
-            "baseModule": "Core"
-        },
-        {
-            "name": "Derived",
-            "module": "Core",
-            "baseName": "Object",
-            "baseModule": "Core"
-        },
-        {
-            "name": "SubDerived",
-            "module": "Core",
-            "baseName": "Derived",
             "baseModule": "Core"
         },
         {
@@ -1686,12 +1890,6 @@
             "baseModule": "Physics"
         },
         {
-            "name": "FakeComponent",
-            "module": "Core",
-            "baseName": "Component",
-            "baseModule": "Core"
-        },
-        {
             "name": "Joint",
             "module": "Physics",
             "baseName": "Component",
@@ -1773,12 +1971,6 @@
             "name": "LineRenderer",
             "module": "Core",
             "baseName": "Renderer",
-            "baseModule": "Core"
-        },
-        {
-            "name": "RendererFake",
-            "module": "Core",
-            "baseName": "LineRenderer",
             "baseModule": "Core"
         },
         {
@@ -1936,6 +2128,12 @@
             "module": "Editor",
             "baseName": "NamedObject",
             "baseModule": "Core"
+        },
+        {
+            "name": "AndroidAssetPackImporter",
+            "module": "Editor",
+            "baseName": "AssetImporter",
+            "baseModule": "Editor"
         },
         {
             "name": "AssemblyDefinitionImporter",
@@ -2670,12 +2868,6 @@
             "baseModule": "Core"
         },
         {
-            "name": "EmptyObject",
-            "module": "Core",
-            "baseName": "Object",
-            "baseModule": "Core"
-        },
-        {
             "name": "GameManager",
             "module": "Core",
             "baseName": "Object",
@@ -2850,12 +3042,6 @@
             "baseModule": "Core"
         },
         {
-            "name": "NativeObjectType",
-            "module": "Core",
-            "baseName": "Object",
-            "baseModule": "Core"
-        },
-        {
             "name": "PackedAssets",
             "module": "Editor",
             "baseName": "Object",
@@ -2892,12 +3078,6 @@
             "baseModule": "Core"
         },
         {
-            "name": "PropertyModificationsTargetTestObject",
-            "module": "Core",
-            "baseName": "Object",
-            "baseModule": "Core"
-        },
-        {
             "name": "SceneVisibilityState",
             "module": "Core",
             "baseName": "Object",
@@ -2910,67 +3090,7 @@
             "baseModule": "Core"
         },
         {
-            "name": "SerializableManagedHost",
-            "module": "Core",
-            "baseName": "Object",
-            "baseModule": "Core"
-        },
-        {
-            "name": "SerializableManagedRefTestClass",
-            "module": "Core",
-            "baseName": "Object",
-            "baseModule": "Core"
-        },
-        {
-            "name": "SiblingDerived",
-            "module": "Core",
-            "baseName": "Object",
-            "baseModule": "Core"
-        },
-        {
             "name": "SpriteAtlasDatabase",
-            "module": "Core",
-            "baseName": "Object",
-            "baseModule": "Core"
-        },
-        {
-            "name": "TestObjectVectorPairStringBool",
-            "module": "Core",
-            "baseName": "Object",
-            "baseModule": "Core"
-        },
-        {
-            "name": "TestObjectWithSerializedAnimationCurve",
-            "module": "Core",
-            "baseName": "Object",
-            "baseModule": "Core"
-        },
-        {
-            "name": "TestObjectWithSerializedArray",
-            "module": "Core",
-            "baseName": "Object",
-            "baseModule": "Core"
-        },
-        {
-            "name": "TestObjectWithSerializedMapStringBool",
-            "module": "Core",
-            "baseName": "Object",
-            "baseModule": "Core"
-        },
-        {
-            "name": "TestObjectWithSerializedMapStringNonAlignedStruct",
-            "module": "Core",
-            "baseName": "Object",
-            "baseModule": "Core"
-        },
-        {
-            "name": "TestObjectWithSpecialLayoutOne",
-            "module": "Core",
-            "baseName": "Object",
-            "baseModule": "Core"
-        },
-        {
-            "name": "TestObjectWithSpecialLayoutTwo",
             "module": "Core",
             "baseName": "Object",
             "baseModule": "Core"
@@ -2978,6 +3098,12 @@
         {
             "name": "VersionControlSettings",
             "module": "Editor",
+            "baseName": "Object",
+            "baseModule": "Core"
+        },
+        {
+            "name": "VideoBuildInfo",
+            "module": "BuildReportingEditor",
             "baseName": "Object",
             "baseModule": "Core"
         },
