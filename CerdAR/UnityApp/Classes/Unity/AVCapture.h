@@ -13,4 +13,4 @@ enum
 };
 
 extern "C" int  UnityGetAVCapturePermission(int captureType);
-extern "C" void UnityRequestAVCapturePermission(int captureType);
+extern "C" void UnityRequestAVCapturePermission(int captureType, void* userData);

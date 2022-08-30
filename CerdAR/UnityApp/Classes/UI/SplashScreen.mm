@@ -105,7 +105,7 @@ static SplashScreenController*  _controller  = nil;
     [super viewWillTransitionToSize: size withTransitionCoordinator: coordinator];
 }
 
-- (void)create:(UIWindow*)window
+- (void)initImpl
 {
     NSArray* supportedOrientation = [[[NSBundle mainBundle] infoDictionary] objectForKey: @"UISupportedInterfaceOrientations"];
     // splash will be shown way before unity is inited so we need to override autorotation handling with values read from info.plist
@@ -127,6 +127,19 @@ static SplashScreenController*  _controller  = nil;
             printf_console("This device does not support UpsideDown orientation, so we switched to Portrait.\n");
         }
     }
+}
+
+- (instancetype)initWithCoder:(NSCoder *)coder
+{
+    if ((self = [super initWithCoder: coder]))
+        [self initImpl];
+
+    return self;
+}
+
+- (void)create:(UIWindow*)window
+{
+    [self initImpl];
 
     _splash = [[SplashScreen alloc] initWithFrame: [[UIScreen mainScreen] bounds]];
     _splash.contentScaleFactor = UnityScreenScaleFactor([UIScreen mainScreen]);
@@ -177,24 +190,6 @@ static SplashScreenController*  _controller  = nil;
 
 @end
 
-// on ios13 we can finally tweak initial storyboard view controller: use unity base view controller
-// this way we can handle orientations/status-bar/whatever-we-want-to-tweak uniformly
-// the only caveat is that we should handle orientations in a special way as unity default view controller expects autorotation
-@interface UnityViewControllerStoryboard : UnityViewControllerBase
-#if PLATFORM_IOS
-- (NSUInteger)supportedInterfaceOrientations;
-#endif
-@end
-@implementation UnityViewControllerStoryboard
-#if PLATFORM_IOS
-- (NSUInteger)supportedInterfaceOrientations
-{
-    return EnabledAutorotationInterfaceOrientations();
-}
-
-#endif
-@end
-
 void ShowSplashScreen(UIWindow* window)
 {
     NSString* launchScreen = [[NSBundle mainBundle].infoDictionary[@"UILaunchStoryboardName"] stringByDeletingPathExtension];
@@ -208,13 +203,15 @@ void ShowSplashScreen(UIWindow* window)
     {
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName: launchScreen bundle: [NSBundle mainBundle]];
 
+        // on ios13 we can finally tweak initial storyboard view controller: use unity base view controller
+        // this way we can handle orientations/status-bar/whatever-we-want-to-tweak uniformly
         // as we still support xcode pre-11 we must do this weird dance of checking for both sdk and runtime version
         // otherwise it fails to compile (due to unknown selector)
     #if (PLATFORM_IOS && defined(__IPHONE_13_0)) || (PLATFORM_TVOS && defined(__TVOS_13_0))
         if (@available(iOS 13.0, tvOS 13.0, *))
         {
             _controller = [storyboard instantiateInitialViewControllerWithCreator:^(NSCoder *coder) {
-                return [[UnityViewControllerStoryboard alloc] initWithCoder: coder];
+                return [[SplashScreenController alloc] initWithCoder: coder];
             }];
         }
         else

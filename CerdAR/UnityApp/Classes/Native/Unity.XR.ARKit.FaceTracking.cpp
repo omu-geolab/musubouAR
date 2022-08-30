@@ -71,7 +71,7 @@ IL2CPP_EXTERN_C_END
 #endif
 
 // <Module>
-struct  U3CModuleU3E_tC69EEB4E2E51935936BADB7F1792EED6E105A3C9 
+struct U3CModuleU3E_tC69EEB4E2E51935936BADB7F1792EED6E105A3C9 
 {
 public:
 
@@ -87,7 +87,7 @@ struct Il2CppArrayBounds;
 
 
 // System.Reflection.MemberInfo
-struct  MemberInfo_t  : public RuntimeObject
+struct MemberInfo_t  : public RuntimeObject
 {
 public:
 
@@ -96,7 +96,7 @@ public:
 
 
 // System.String
-struct  String_t  : public RuntimeObject
+struct String_t  : public RuntimeObject
 {
 public:
 	// System.Int32 System.String::m_stringLength
@@ -141,7 +141,7 @@ public:
 
 
 // UnityEngine.SubsystemsImplementation.SubsystemProvider
-struct  SubsystemProvider_t39E89FB8DB1EF1D2B0AF93796AEDB19D76A665F9  : public RuntimeObject
+struct SubsystemProvider_t39E89FB8DB1EF1D2B0AF93796AEDB19D76A665F9  : public RuntimeObject
 {
 public:
 	// System.Boolean UnityEngine.SubsystemsImplementation.SubsystemProvider::m_Running
@@ -159,7 +159,7 @@ public:
 
 
 // UnityEngine.SubsystemsImplementation.SubsystemWithProvider
-struct  SubsystemWithProvider_t1C1868CF8676F5596C1AD20A7CE69BDF7C7DE73E  : public RuntimeObject
+struct SubsystemWithProvider_t1C1868CF8676F5596C1AD20A7CE69BDF7C7DE73E  : public RuntimeObject
 {
 public:
 	// System.Boolean UnityEngine.SubsystemsImplementation.SubsystemWithProvider::<running>k__BackingField
@@ -188,7 +188,7 @@ public:
 
 
 // System.ValueType
-struct  ValueType_tDBF999C1B75C48C68621878250DBF6CDBCF51E52  : public RuntimeObject
+struct ValueType_tDBF999C1B75C48C68621878250DBF6CDBCF51E52  : public RuntimeObject
 {
 public:
 
@@ -205,7 +205,7 @@ struct ValueType_tDBF999C1B75C48C68621878250DBF6CDBCF51E52_marshaled_com
 };
 
 // UnityEngine.SubsystemsImplementation.SubsystemProvider`1<UnityEngine.XR.ARSubsystems.XRFaceSubsystem>
-struct  SubsystemProvider_1_t23EADEE126E953AEBF796C02B50539998EA56B78  : public SubsystemProvider_t39E89FB8DB1EF1D2B0AF93796AEDB19D76A665F9
+struct SubsystemProvider_1_t23EADEE126E953AEBF796C02B50539998EA56B78  : public SubsystemProvider_t39E89FB8DB1EF1D2B0AF93796AEDB19D76A665F9
 {
 public:
 
@@ -214,7 +214,7 @@ public:
 
 
 // UnityEngine.SubsystemsImplementation.SubsystemWithProvider`3<UnityEngine.XR.ARSubsystems.XRFaceSubsystem,UnityEngine.XR.ARSubsystems.XRFaceSubsystemDescriptor,UnityEngine.XR.ARSubsystems.XRFaceSubsystem/Provider>
-struct  SubsystemWithProvider_3_t2E74C29CB9922972A66085C9DAD6E1542BCCE25B  : public SubsystemWithProvider_t1C1868CF8676F5596C1AD20A7CE69BDF7C7DE73E
+struct SubsystemWithProvider_3_t2E74C29CB9922972A66085C9DAD6E1542BCCE25B  : public SubsystemWithProvider_t1C1868CF8676F5596C1AD20A7CE69BDF7C7DE73E
 {
 public:
 	// TSubsystemDescriptor UnityEngine.SubsystemsImplementation.SubsystemWithProvider`3::<subsystemDescriptor>k__BackingField
@@ -244,7 +244,7 @@ public:
 
 
 // UnityEngine.XR.ARKit.ARKitFaceSubsystem/ARKitProvider/Triangle`1<System.Int16>
-struct  Triangle_1_t5D70FED5A96E61ADDCC41F8B4CA3855BC7A98A11 
+struct Triangle_1_t5D70FED5A96E61ADDCC41F8B4CA3855BC7A98A11 
 {
 public:
 	// T UnityEngine.XR.ARKit.ARKitFaceSubsystem/ARKitProvider/Triangle`1::a
@@ -282,7 +282,7 @@ public:
 
 
 // UnityEngine.XR.ARKit.ARKitFaceSubsystem/ARKitProvider/Triangle`1<System.Int32>
-struct  Triangle_1_t23CE09469BEC0FFB6767EDDA20FAB85B0C3104C9 
+struct Triangle_1_t23CE09469BEC0FFB6767EDDA20FAB85B0C3104C9 
 {
 public:
 	// T UnityEngine.XR.ARKit.ARKitFaceSubsystem/ARKitProvider/Triangle`1::a
@@ -320,7 +320,7 @@ public:
 
 
 // System.Boolean
-struct  Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37 
+struct Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37 
 {
 public:
 	// System.Boolean System.Boolean::m_value
@@ -366,7 +366,7 @@ public:
 
 
 // System.Enum
-struct  Enum_t23B90B40F60E677A8025267341651C94AE079CDA  : public ValueType_tDBF999C1B75C48C68621878250DBF6CDBCF51E52
+struct Enum_t23B90B40F60E677A8025267341651C94AE079CDA  : public ValueType_tDBF999C1B75C48C68621878250DBF6CDBCF51E52
 {
 public:
 
@@ -400,7 +400,7 @@ struct Enum_t23B90B40F60E677A8025267341651C94AE079CDA_marshaled_com
 };
 
 // System.Int16
-struct  Int16_tD0F031114106263BB459DA1F099FF9F42691295A 
+struct Int16_tD0F031114106263BB459DA1F099FF9F42691295A 
 {
 public:
 	// System.Int16 System.Int16::m_value
@@ -418,7 +418,7 @@ public:
 
 
 // System.Int32
-struct  Int32_tFDE5F8CD43D10453F6A2E0C77FE48C6CC7009046 
+struct Int32_tFDE5F8CD43D10453F6A2E0C77FE48C6CC7009046 
 {
 public:
 	// System.Int32 System.Int32::m_value
@@ -436,7 +436,7 @@ public:
 
 
 // System.IntPtr
-struct  IntPtr_t 
+struct IntPtr_t 
 {
 public:
 	// System.Void* System.IntPtr::m_value
@@ -470,7 +470,7 @@ public:
 
 
 // UnityEngine.Quaternion
-struct  Quaternion_t6D28618CF65156D4A0AD747370DDFD0C514A31B4 
+struct Quaternion_t6D28618CF65156D4A0AD747370DDFD0C514A31B4 
 {
 public:
 	// System.Single UnityEngine.Quaternion::x
@@ -534,7 +534,7 @@ public:
 
 
 // System.Single
-struct  Single_tE07797BA3C98D4CA9B5A19413C19A76688AB899E 
+struct Single_tE07797BA3C98D4CA9B5A19413C19A76688AB899E 
 {
 public:
 	// System.Single System.Single::m_value
@@ -552,7 +552,7 @@ public:
 
 
 // UnityEngine.XR.ARSubsystems.TrackableId
-struct  TrackableId_t17A59B04292038BB1B77BEACD41221D2700BE90B 
+struct TrackableId_t17A59B04292038BB1B77BEACD41221D2700BE90B 
 {
 public:
 	// System.UInt64 UnityEngine.XR.ARSubsystems.TrackableId::m_SubId1
@@ -607,7 +607,7 @@ public:
 
 
 // UnityEngine.Vector2
-struct  Vector2_tBB32F2736AEC229A7BFBCE18197EC0F6AC7EC2D9 
+struct Vector2_tBB32F2736AEC229A7BFBCE18197EC0F6AC7EC2D9 
 {
 public:
 	// System.Single UnityEngine.Vector2::x
@@ -721,7 +721,7 @@ public:
 
 
 // UnityEngine.Vector3
-struct  Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E 
+struct Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E 
 {
 public:
 	// System.Single UnityEngine.Vector3::x
@@ -865,7 +865,7 @@ public:
 
 
 // UnityEngine.Vector4
-struct  Vector4_tA56A37FC5661BCC89C3DDC24BE12BA5BCB6A02C7 
+struct Vector4_tA56A37FC5661BCC89C3DDC24BE12BA5BCB6A02C7 
 {
 public:
 	// System.Single UnityEngine.Vector4::x
@@ -959,7 +959,7 @@ public:
 
 
 // System.Void
-struct  Void_t700C6383A2A510C2CF4DD86DABD5CA9FF70ADAC5 
+struct Void_t700C6383A2A510C2CF4DD86DABD5CA9FF70ADAC5 
 {
 public:
 	union
@@ -975,7 +975,7 @@ public:
 
 
 // UnityEngine.XR.ARSubsystems.TrackingSubsystem`4<UnityEngine.XR.ARSubsystems.XRFace,UnityEngine.XR.ARSubsystems.XRFaceSubsystem,UnityEngine.XR.ARSubsystems.XRFaceSubsystemDescriptor,UnityEngine.XR.ARSubsystems.XRFaceSubsystem/Provider>
-struct  TrackingSubsystem_4_tFC4495C6B04D616F71158509026269F004F79333  : public SubsystemWithProvider_3_t2E74C29CB9922972A66085C9DAD6E1542BCCE25B
+struct TrackingSubsystem_4_tFC4495C6B04D616F71158509026269F004F79333  : public SubsystemWithProvider_3_t2E74C29CB9922972A66085C9DAD6E1542BCCE25B
 {
 public:
 
@@ -984,7 +984,7 @@ public:
 
 
 // UnityEngine.XR.ARKit.ARKitBlendShapeLocation
-struct  ARKitBlendShapeLocation_t53A407013F6013772CFC72145DCA1C633997F560 
+struct ARKitBlendShapeLocation_t53A407013F6013772CFC72145DCA1C633997F560 
 {
 public:
 	// System.Int32 UnityEngine.XR.ARKit.ARKitBlendShapeLocation::value__
@@ -1002,7 +1002,7 @@ public:
 
 
 // Unity.Collections.Allocator
-struct  Allocator_t9888223DEF4F46F3419ECFCCD0753599BEE52A05 
+struct Allocator_t9888223DEF4F46F3419ECFCCD0753599BEE52A05 
 {
 public:
 	// System.Int32 Unity.Collections.Allocator::value__
@@ -1020,7 +1020,7 @@ public:
 
 
 // System.Reflection.BindingFlags
-struct  BindingFlags_tAAAB07D9AC588F0D55D844E51D7035E96DF94733 
+struct BindingFlags_tAAAB07D9AC588F0D55D844E51D7035E96DF94733 
 {
 public:
 	// System.Int32 System.Reflection.BindingFlags::value__
@@ -1038,7 +1038,7 @@ public:
 
 
 // UnityEngine.XR.ARSubsystems.FaceSubsystemCapabilities
-struct  FaceSubsystemCapabilities_t84A18B266F89BCEE6ADA3FB05E21935877632057 
+struct FaceSubsystemCapabilities_t84A18B266F89BCEE6ADA3FB05E21935877632057 
 {
 public:
 	// System.Int32 UnityEngine.XR.ARSubsystems.FaceSubsystemCapabilities::value__
@@ -1056,7 +1056,7 @@ public:
 
 
 // Unity.Jobs.JobHandle
-struct  JobHandle_t8AEB8D31C25D7774C71D62B0C662525E6E36D847 
+struct JobHandle_t8AEB8D31C25D7774C71D62B0C662525E6E36D847 
 {
 public:
 	// System.IntPtr Unity.Jobs.JobHandle::jobGroup
@@ -1084,7 +1084,7 @@ public:
 
 
 // Unity.Collections.NativeArrayOptions
-struct  NativeArrayOptions_t181E2A9B49F6D62868DE6428E4CDF148AEF558E3 
+struct NativeArrayOptions_t181E2A9B49F6D62868DE6428E4CDF148AEF558E3 
 {
 public:
 	// System.Int32 Unity.Collections.NativeArrayOptions::value__
@@ -1102,7 +1102,7 @@ public:
 
 
 // UnityEngine.Pose
-struct  Pose_t9F30358E65733E60A1DC8682FDB7104F40C9434A 
+struct Pose_t9F30358E65733E60A1DC8682FDB7104F40C9434A 
 {
 public:
 	// UnityEngine.Vector3 UnityEngine.Pose::position
@@ -1146,7 +1146,7 @@ public:
 
 
 // System.RuntimeTypeHandle
-struct  RuntimeTypeHandle_tC33965ADA3E041E0C94AF05E5CB527B56482CEF9 
+struct RuntimeTypeHandle_tC33965ADA3E041E0C94AF05E5CB527B56482CEF9 
 {
 public:
 	// System.IntPtr System.RuntimeTypeHandle::value
@@ -1164,7 +1164,7 @@ public:
 
 
 // UnityEngine.XR.ARSubsystems.TrackingState
-struct  TrackingState_tB6996ED0D52D2A17DFACC90800705B81D370FC38 
+struct TrackingState_tB6996ED0D52D2A17DFACC90800705B81D370FC38 
 {
 public:
 	// System.Int32 UnityEngine.XR.ARSubsystems.TrackingState::value__
@@ -1182,7 +1182,7 @@ public:
 
 
 // UnityEngine.XR.ARSubsystems.XRFaceMesh/Attributes
-struct  Attributes_tD47C14745EB853AB5A128A56544CF6C1BC670186 
+struct Attributes_tD47C14745EB853AB5A128A56544CF6C1BC670186 
 {
 public:
 	// System.Int32 UnityEngine.XR.ARSubsystems.XRFaceMesh/Attributes::value__
@@ -1200,7 +1200,7 @@ public:
 
 
 // UnityEngine.XR.ARSubsystems.XRFaceSubsystem/Provider
-struct  Provider_t0133E0DB4F1A68EB3D4814F63B14456832E3EAE7  : public SubsystemProvider_1_t23EADEE126E953AEBF796C02B50539998EA56B78
+struct Provider_t0133E0DB4F1A68EB3D4814F63B14456832E3EAE7  : public SubsystemProvider_1_t23EADEE126E953AEBF796C02B50539998EA56B78
 {
 public:
 	// System.Int32 UnityEngine.XR.ARSubsystems.XRFaceSubsystem/Provider::m_RequestedMaximumFaceCount
@@ -1218,7 +1218,7 @@ public:
 
 
 // Unity.Collections.NativeArray`1<UnityEngine.XR.ARKit.ARKitFaceSubsystem/ARKitProvider/Triangle`1<System.Int16>>
-struct  NativeArray_1_tE10EA3995F906F16A488A42FE362A2EFA0A4D197 
+struct NativeArray_1_tE10EA3995F906F16A488A42FE362A2EFA0A4D197 
 {
 public:
 	// System.Void* Unity.Collections.NativeArray`1::m_Buffer
@@ -1256,7 +1256,7 @@ public:
 
 
 // Unity.Collections.NativeArray`1<UnityEngine.XR.ARKit.ARKitFaceSubsystem/ARKitProvider/Triangle`1<System.Int32>>
-struct  NativeArray_1_t61ABCFB5F1A9FF2864A2760E1E84A5E656715219 
+struct NativeArray_1_t61ABCFB5F1A9FF2864A2760E1E84A5E656715219 
 {
 public:
 	// System.Void* Unity.Collections.NativeArray`1::m_Buffer
@@ -1294,7 +1294,7 @@ public:
 
 
 // Unity.Collections.NativeArray`1<UnityEngine.XR.ARKit.ARKitBlendShapeCoefficient>
-struct  NativeArray_1_t789EF72B9F35EFEE803ED394D2CAEA69F554E419 
+struct NativeArray_1_t789EF72B9F35EFEE803ED394D2CAEA69F554E419 
 {
 public:
 	// System.Void* Unity.Collections.NativeArray`1::m_Buffer
@@ -1332,7 +1332,7 @@ public:
 
 
 // Unity.Collections.NativeArray`1<System.Int32>
-struct  NativeArray_1_tD60079F06B473C85CF6C2BB4F2D203F38191AE99 
+struct NativeArray_1_tD60079F06B473C85CF6C2BB4F2D203F38191AE99 
 {
 public:
 	// System.Void* Unity.Collections.NativeArray`1::m_Buffer
@@ -1370,7 +1370,7 @@ public:
 
 
 // Unity.Collections.NativeArray`1<UnityEngine.XR.ARSubsystems.TrackableId>
-struct  NativeArray_1_t991E9C764228B2B65D9688847CCDA8CE903F5D77 
+struct NativeArray_1_t991E9C764228B2B65D9688847CCDA8CE903F5D77 
 {
 public:
 	// System.Void* Unity.Collections.NativeArray`1::m_Buffer
@@ -1408,7 +1408,7 @@ public:
 
 
 // Unity.Collections.NativeArray`1<UnityEngine.Vector2>
-struct  NativeArray_1_t431C85F30275831D1F5D458AB73DFCE050693BC0 
+struct NativeArray_1_t431C85F30275831D1F5D458AB73DFCE050693BC0 
 {
 public:
 	// System.Void* Unity.Collections.NativeArray`1::m_Buffer
@@ -1446,7 +1446,7 @@ public:
 
 
 // Unity.Collections.NativeArray`1<UnityEngine.Vector3>
-struct  NativeArray_1_t2577BCA09CA248EFB78BD7FDA7F09D5C395DFF52 
+struct NativeArray_1_t2577BCA09CA248EFB78BD7FDA7F09D5C395DFF52 
 {
 public:
 	// System.Void* Unity.Collections.NativeArray`1::m_Buffer
@@ -1484,7 +1484,7 @@ public:
 
 
 // Unity.Collections.NativeArray`1<UnityEngine.Vector4>
-struct  NativeArray_1_t381CA7D92591F9C96DB84965C31AF8713A546156 
+struct NativeArray_1_t381CA7D92591F9C96DB84965C31AF8713A546156 
 {
 public:
 	// System.Void* Unity.Collections.NativeArray`1::m_Buffer
@@ -1522,7 +1522,7 @@ public:
 
 
 // Unity.Collections.NativeArray`1<UnityEngine.XR.ARSubsystems.XRFace>
-struct  NativeArray_1_t176B5BDE49F181D4851D8B2230677A558EFC5E55 
+struct NativeArray_1_t176B5BDE49F181D4851D8B2230677A558EFC5E55 
 {
 public:
 	// System.Void* Unity.Collections.NativeArray`1::m_Buffer
@@ -1560,7 +1560,7 @@ public:
 
 
 // UnityEngine.XR.ARKit.ARKitBlendShapeCoefficient
-struct  ARKitBlendShapeCoefficient_t6B17AD958119715154498F9EB6A29ECF98BA0E9F 
+struct ARKitBlendShapeCoefficient_t6B17AD958119715154498F9EB6A29ECF98BA0E9F 
 {
 public:
 	// UnityEngine.XR.ARKit.ARKitBlendShapeLocation UnityEngine.XR.ARKit.ARKitBlendShapeCoefficient::m_BlendShapeLocation
@@ -1588,7 +1588,7 @@ public:
 
 
 // UnityEngine.XR.ARSubsystems.FaceSubsystemParams
-struct  FaceSubsystemParams_t2FC64133455298391F1A1DDC61B151E688301B09 
+struct FaceSubsystemParams_t2FC64133455298391F1A1DDC61B151E688301B09 
 {
 public:
 	// System.String UnityEngine.XR.ARSubsystems.FaceSubsystemParams::<id>k__BackingField
@@ -1668,7 +1668,7 @@ struct FaceSubsystemParams_t2FC64133455298391F1A1DDC61B151E688301B09_marshaled_c
 };
 
 // System.Type
-struct  Type_t  : public MemberInfo_t
+struct Type_t  : public MemberInfo_t
 {
 public:
 	// System.RuntimeTypeHandle System.Type::_impl
@@ -1768,7 +1768,7 @@ public:
 
 
 // UnityEngine.XR.ARSubsystems.XRFace
-struct  XRFace_tA970995ECE26D43D1CBB9058ABEC72B76D2DA599 
+struct XRFace_tA970995ECE26D43D1CBB9058ABEC72B76D2DA599 
 {
 public:
 	// UnityEngine.XR.ARSubsystems.TrackableId UnityEngine.XR.ARSubsystems.XRFace::m_TrackableId
@@ -1862,7 +1862,7 @@ public:
 
 
 // UnityEngine.XR.ARSubsystems.XRFaceSubsystem
-struct  XRFaceSubsystem_tBC42015E8BB4ED0A5428E01DBB7BE769A6B140FD  : public TrackingSubsystem_4_tFC4495C6B04D616F71158509026269F004F79333
+struct XRFaceSubsystem_tBC42015E8BB4ED0A5428E01DBB7BE769A6B140FD  : public TrackingSubsystem_4_tFC4495C6B04D616F71158509026269F004F79333
 {
 public:
 
@@ -1871,7 +1871,7 @@ public:
 
 
 // UnityEngine.XR.ARKit.ARKitFaceSubsystem/ARKitProvider
-struct  ARKitProvider_tA1A675BEFA8E851172BAAA1796D7D99578F71195  : public Provider_t0133E0DB4F1A68EB3D4814F63B14456832E3EAE7
+struct ARKitProvider_tA1A675BEFA8E851172BAAA1796D7D99578F71195  : public Provider_t0133E0DB4F1A68EB3D4814F63B14456832E3EAE7
 {
 public:
 
@@ -1880,7 +1880,7 @@ public:
 
 
 // UnityEngine.XR.ARSubsystems.TrackableChanges`1<UnityEngine.XR.ARSubsystems.XRFace>
-struct  TrackableChanges_1_t4155663F6D60090D5E988A2EB1E4A782792ADA63 
+struct TrackableChanges_1_t4155663F6D60090D5E988A2EB1E4A782792ADA63 
 {
 public:
 	// System.Boolean UnityEngine.XR.ARSubsystems.TrackableChanges`1::<isCreated>k__BackingField
@@ -1928,7 +1928,7 @@ public:
 
 
 // UnityEngine.XR.ARKit.ARKitFaceSubsystem
-struct  ARKitFaceSubsystem_t369BE5809CFFB915E7D7C380EA989BD9E2B7FEB1  : public XRFaceSubsystem_tBC42015E8BB4ED0A5428E01DBB7BE769A6B140FD
+struct ARKitFaceSubsystem_t369BE5809CFFB915E7D7C380EA989BD9E2B7FEB1  : public XRFaceSubsystem_tBC42015E8BB4ED0A5428E01DBB7BE769A6B140FD
 {
 public:
 
@@ -1937,7 +1937,7 @@ public:
 
 
 // UnityEngine.XR.ARSubsystems.XRFaceMesh
-struct  XRFaceMesh_t2ADC7E6069DCCCFB439A4A60DB9189338C9E1AD0 
+struct XRFaceMesh_t2ADC7E6069DCCCFB439A4A60DB9189338C9E1AD0 
 {
 public:
 	// Unity.Collections.NativeArray`1<UnityEngine.Vector3> UnityEngine.XR.ARSubsystems.XRFaceMesh::m_Vertices
@@ -1985,7 +1985,7 @@ public:
 
 
 // UnityEngine.XR.ARKit.ARKitFaceSubsystem/ARKitProvider/TransformIndicesJob
-struct  TransformIndicesJob_tFF87C2E297015EECA6853BA147171FF78D123302 
+struct TransformIndicesJob_tFF87C2E297015EECA6853BA147171FF78D123302 
 {
 public:
 	// Unity.Collections.NativeArray`1<UnityEngine.XR.ARKit.ARKitFaceSubsystem/ARKitProvider/Triangle`1<System.Int16>> UnityEngine.XR.ARKit.ARKitFaceSubsystem/ARKitProvider/TransformIndicesJob::triangleIndicesIn
@@ -2013,7 +2013,7 @@ public:
 
 
 // UnityEngine.XR.ARKit.ARKitFaceSubsystem/ARKitProvider/TransformUVsJob
-struct  TransformUVsJob_tCABA7AB1790251392EC9FCA81A3EBD0E579F3E0A 
+struct TransformUVsJob_tCABA7AB1790251392EC9FCA81A3EBD0E579F3E0A 
 {
 public:
 	// Unity.Collections.NativeArray`1<UnityEngine.Vector2> UnityEngine.XR.ARKit.ARKitFaceSubsystem/ARKitProvider/TransformUVsJob::uvsIn
@@ -2041,7 +2041,7 @@ public:
 
 
 // UnityEngine.XR.ARKit.ARKitFaceSubsystem/ARKitProvider/TransformVerticesJob
-struct  TransformVerticesJob_t2238CFDB87B56D80881834E0BEDBFE25D9133239 
+struct TransformVerticesJob_t2238CFDB87B56D80881834E0BEDBFE25D9133239 
 {
 public:
 	// Unity.Collections.NativeArray`1<UnityEngine.Vector4> UnityEngine.XR.ARKit.ARKitFaceSubsystem/ARKitProvider/TransformVerticesJob::verticesIn

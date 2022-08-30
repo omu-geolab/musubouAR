@@ -105,6 +105,9 @@ if([obj respondsToSelector:sel])                        \
         UnitySuppressPauseMessage();
         [self pause: false];
         [self showUnityWindow];
+
+        // Send Unity start event
+        UnitySendEmbeddedLaunchEvent(0);
     }
     else
     {
@@ -118,6 +121,9 @@ if([obj respondsToSelector:sel])                        \
 
         [appCtrl applicationWillEnterForeground: app];
         [appCtrl applicationDidBecomeActive: app];
+
+        // Send Unity start (first time) event
+        UnitySendEmbeddedLaunchEvent(1);
     }
 
     self->runCount += 1;

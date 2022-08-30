@@ -48,7 +48,7 @@ IL2CPP_EXTERN_C_END
 #endif
 
 // <Module>
-struct  U3CModuleU3E_tA96012C582F6417CD28F1C5F72BB7CDE7A2C96C8 
+struct U3CModuleU3E_tA96012C582F6417CD28F1C5F72BB7CDE7A2C96C8 
 {
 public:
 
@@ -64,7 +64,7 @@ struct Il2CppArrayBounds;
 
 
 // System.String
-struct  String_t  : public RuntimeObject
+struct String_t  : public RuntimeObject
 {
 public:
 	// System.Int32 System.String::m_stringLength
@@ -109,7 +109,7 @@ public:
 
 
 // System.ValueType
-struct  ValueType_tDBF999C1B75C48C68621878250DBF6CDBCF51E52  : public RuntimeObject
+struct ValueType_tDBF999C1B75C48C68621878250DBF6CDBCF51E52  : public RuntimeObject
 {
 public:
 
@@ -126,7 +126,7 @@ struct ValueType_tDBF999C1B75C48C68621878250DBF6CDBCF51E52_marshaled_com
 };
 
 // Unity.Mathematics.math
-struct  math_tFA6CF4319F9BE692A3A01857946865C31AEDED0E  : public RuntimeObject
+struct math_tFA6CF4319F9BE692A3A01857946865C31AEDED0E  : public RuntimeObject
 {
 public:
 
@@ -135,7 +135,7 @@ public:
 
 
 // Unity.Mathematics.float2/DebuggerProxy
-struct  DebuggerProxy_t407BFC8E21A86BDBF1C02CB451D0DF70DBFC7D86  : public RuntimeObject
+struct DebuggerProxy_t407BFC8E21A86BDBF1C02CB451D0DF70DBFC7D86  : public RuntimeObject
 {
 public:
 
@@ -144,7 +144,7 @@ public:
 
 
 // Unity.Mathematics.float3/DebuggerProxy
-struct  DebuggerProxy_t57C699F1846E116DDAF0A5D1D5CF136A3DE498AA  : public RuntimeObject
+struct DebuggerProxy_t57C699F1846E116DDAF0A5D1D5CF136A3DE498AA  : public RuntimeObject
 {
 public:
 
@@ -153,7 +153,7 @@ public:
 
 
 // Unity.Mathematics.float4/DebuggerProxy
-struct  DebuggerProxy_t368A74D6971F51452A7461C738E4BC540678C7AC  : public RuntimeObject
+struct DebuggerProxy_t368A74D6971F51452A7461C738E4BC540678C7AC  : public RuntimeObject
 {
 public:
 
@@ -162,7 +162,7 @@ public:
 
 
 // Unity.Mathematics.uint2/DebuggerProxy
-struct  DebuggerProxy_t9CAD504CEF7A30BA24D56E70D16F78E18B20D5CB  : public RuntimeObject
+struct DebuggerProxy_t9CAD504CEF7A30BA24D56E70D16F78E18B20D5CB  : public RuntimeObject
 {
 public:
 
@@ -171,7 +171,7 @@ public:
 
 
 // Unity.Mathematics.uint3/DebuggerProxy
-struct  DebuggerProxy_tCB285AE3638D7C28AEB223FC39D09610BBA961AF  : public RuntimeObject
+struct DebuggerProxy_tCB285AE3638D7C28AEB223FC39D09610BBA961AF  : public RuntimeObject
 {
 public:
 
@@ -180,7 +180,7 @@ public:
 
 
 // Unity.Mathematics.uint4/DebuggerProxy
-struct  DebuggerProxy_t63A74C0E16E809774ABBED1438A4714624A76094  : public RuntimeObject
+struct DebuggerProxy_t63A74C0E16E809774ABBED1438A4714624A76094  : public RuntimeObject
 {
 public:
 
@@ -189,7 +189,7 @@ public:
 
 
 // System.Boolean
-struct  Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37 
+struct Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37 
 {
 public:
 	// System.Boolean System.Boolean::m_value
@@ -235,7 +235,7 @@ public:
 
 
 // System.Double
-struct  Double_t42821932CB52DE2057E685D0E1AF3DE5033D2181 
+struct Double_t42821932CB52DE2057E685D0E1AF3DE5033D2181 
 {
 public:
 	// System.Double System.Double::m_value
@@ -269,7 +269,7 @@ public:
 
 
 // System.Int32
-struct  Int32_tFDE5F8CD43D10453F6A2E0C77FE48C6CC7009046 
+struct Int32_tFDE5F8CD43D10453F6A2E0C77FE48C6CC7009046 
 {
 public:
 	// System.Int32 System.Int32::m_value
@@ -287,7 +287,7 @@ public:
 
 
 // System.Single
-struct  Single_tE07797BA3C98D4CA9B5A19413C19A76688AB899E 
+struct Single_tE07797BA3C98D4CA9B5A19413C19A76688AB899E 
 {
 public:
 	// System.Single System.Single::m_value
@@ -305,7 +305,7 @@ public:
 
 
 // System.UInt32
-struct  UInt32_tE60352A06233E4E69DD198BCC67142159F686B15 
+struct UInt32_tE60352A06233E4E69DD198BCC67142159F686B15 
 {
 public:
 	// System.UInt32 System.UInt32::m_value
@@ -323,7 +323,7 @@ public:
 
 
 // UnityEngine.Vector2
-struct  Vector2_tBB32F2736AEC229A7BFBCE18197EC0F6AC7EC2D9 
+struct Vector2_tBB32F2736AEC229A7BFBCE18197EC0F6AC7EC2D9 
 {
 public:
 	// System.Single UnityEngine.Vector2::x
@@ -437,7 +437,7 @@ public:
 
 
 // UnityEngine.Vector3
-struct  Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E 
+struct Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E 
 {
 public:
 	// System.Single UnityEngine.Vector3::x
@@ -581,7 +581,7 @@ public:
 
 
 // System.Void
-struct  Void_t700C6383A2A510C2CF4DD86DABD5CA9FF70ADAC5 
+struct Void_t700C6383A2A510C2CF4DD86DABD5CA9FF70ADAC5 
 {
 public:
 	union
@@ -597,7 +597,7 @@ public:
 
 
 // Unity.Mathematics.float2
-struct  float2_t11F5F2974404951113DDC4E13EEB6E2456295547 
+struct float2_t11F5F2974404951113DDC4E13EEB6E2456295547 
 {
 public:
 	// System.Single Unity.Mathematics.float2::x
@@ -625,7 +625,7 @@ public:
 
 
 // Unity.Mathematics.float3
-struct  float3_tE0DD2FF13F818025945C9AC314390D2A1F55E37D 
+struct float3_tE0DD2FF13F818025945C9AC314390D2A1F55E37D 
 {
 public:
 	// System.Single Unity.Mathematics.float3::x
@@ -679,7 +679,7 @@ public:
 
 
 // Unity.Mathematics.float4
-struct  float4_t866F9B9B0DB07AE8949D4ACE92A0A84C88769883 
+struct float4_t866F9B9B0DB07AE8949D4ACE92A0A84C88769883 
 {
 public:
 	// System.Single Unity.Mathematics.float4::x
@@ -727,7 +727,7 @@ public:
 
 
 // Unity.Mathematics.uint2
-struct  uint2_t7EFB16363EC27D5EE357BB695C2916A9E8C03D7A 
+struct uint2_t7EFB16363EC27D5EE357BB695C2916A9E8C03D7A 
 {
 public:
 	// System.UInt32 Unity.Mathematics.uint2::x
@@ -755,7 +755,7 @@ public:
 
 
 // Unity.Mathematics.uint3
-struct  uint3_tFFC02518718716A961F404F5474E31B2E0CE7CFE 
+struct uint3_tFFC02518718716A961F404F5474E31B2E0CE7CFE 
 {
 public:
 	// System.UInt32 Unity.Mathematics.uint3::x
@@ -793,7 +793,7 @@ public:
 
 
 // Unity.Mathematics.uint4
-struct  uint4_t6C7A8C67DCDD20CC3282CA4AA5382744FB27EE92 
+struct uint4_t6C7A8C67DCDD20CC3282CA4AA5382744FB27EE92 
 {
 public:
 	// System.UInt32 Unity.Mathematics.uint4::x
@@ -841,7 +841,7 @@ public:
 
 
 // Unity.Mathematics.math/IntFloatUnion
-struct  IntFloatUnion_t3B42C127ECCA706E64B5C2B9EE370A632FC83548 
+struct IntFloatUnion_t3B42C127ECCA706E64B5C2B9EE370A632FC83548 
 {
 public:
 	union

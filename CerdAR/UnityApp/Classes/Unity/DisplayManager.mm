@@ -512,8 +512,20 @@ extern "C" void UnityDisplayManager_DisplaySystemResolution(void* nativeDisplay,
     DisplayConnection* conn = [DisplayManager Instance][(__bridge UIScreen*)nativeDisplay];
     EnsureDisplayIsInited(conn);
 
-    *w = (int)conn.surface->systemW;
-    *h = (int)conn.surface->systemH;
+    // CODE ARCHEOLOGY: We were creating full-screen buffer for "system" RT, and (possibly) resized for "target" RT,
+    // CODE ARCHEOLOGY:   and if the resolution was changed we were blitting target to system to rescale the image.
+    // CODE ARCHEOLOGY: Since then we have switched to using OS scaling mechanism, i.e. we are creating window
+    // CODE ARCHEOLOGY:   with rendering extents and let iOS do the upscale
+    // CODE ARCHEOLOGY: We should revisit the rendering code to possibly get rid of the code needed for this setup
+    // CODE ARCHEOLOGY:   but for now we do the minimal change to unbreak native resolution query
+
+    // note that we mimic size calculation that we use in other places, i.e. using screen bounds + content scale factor
+    // we should also note that we tweak CAMetalLayer.drawableSize (well, that's the way to trigger native upscale)
+    //   so we have CAMetalLayer.drawableSize = rendering size
+    //   and        CAMetalLayer.size         = system (native) size
+    const CGSize layerSize = conn.view.layer.bounds.size; const float scale = conn.view.contentScaleFactor;
+    *w = (int)(layerSize.width * scale);
+    *h = (int)(layerSize.height * scale);
 }
 
 extern "C" void UnityDisplayManager_DisplayRenderingResolution(void* nativeDisplay, int* w, int* h)

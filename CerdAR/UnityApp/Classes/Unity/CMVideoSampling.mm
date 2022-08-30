@@ -3,6 +3,8 @@
 #include "CVTextureCache.h"
 #include <AVFoundation/AVFoundation.h>
 
+#include "DisplayManager.h" // for GetMainDisplaySurface() to have proper linear/srgb handling
+
 void CMVideoSampling_Initialize(CMVideoSampling* sampling)
 {
     ::memset(sampling, 0x00, sizeof(CMVideoSampling));
@@ -47,20 +49,17 @@ intptr_t CMVideoSampling_ImageBuffer(CMVideoSampling* sampling, CVImageBufferRef
     }
 
     OSType pixelFormat = CVPixelBufferGetPixelFormatType(buffer);
-    switch (pixelFormat)
+    if (pixelFormat == kCVPixelFormatType_32BGRA || pixelFormat == kCVPixelFormatType_DepthFloat16)
     {
-        case kCVPixelFormatType_32BGRA:
-            sampling->cvTextureCacheTexture = CreateBGRA32TextureFromCVTextureCache(sampling->cvTextureCache, sampling->cvImageBuffer, *w, *h);
-            break;
-#if UNITY_HAS_IOSSDK_11_0
-        case kCVPixelFormatType_DepthFloat16:
-            sampling->cvTextureCacheTexture = CreateHalfFloatTextureFromCVTextureCache(sampling->cvTextureCache, sampling->cvImageBuffer, *w, *h);
-            break;
-#endif
-        default:
-            #define FourCC2Str(fourcc) (const char[]){*(((char*)&fourcc)+3), *(((char*)&fourcc)+2), *(((char*)&fourcc)+1), *(((char*)&fourcc)+0),0}
-            ::printf("CMVideoSampling_SampleBuffer: unexpected pixel format \'%s\'\n", FourCC2Str(pixelFormat));
-            break;
+        MTLPixelFormat metalFormat32BGRA = GetMainDisplaySurface()->srgb ? MTLPixelFormatBGRA8Unorm_sRGB : MTLPixelFormatBGRA8Unorm;
+        MTLPixelFormat metalFormat = pixelFormat == kCVPixelFormatType_32BGRA ? metalFormat32BGRA : MTLPixelFormatR16Float;
+
+        sampling->cvTextureCacheTexture = CreateTextureFromCVTextureCache2(sampling->cvTextureCache, sampling->cvImageBuffer, *w, *h, metalFormat);
+    }
+    else
+    {
+        #define FourCC2Str(fourcc) (const char[]){*(((char*)&fourcc)+3), *(((char*)&fourcc)+2), *(((char*)&fourcc)+1), *(((char*)&fourcc)+0),0}
+        ::printf("CMVideoSampling_SampleBuffer: unexpected pixel format \'%s\'\n", FourCC2Str(pixelFormat));
     }
 
     if (sampling->cvTextureCacheTexture)

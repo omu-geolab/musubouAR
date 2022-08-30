@@ -31,7 +31,7 @@ extern "C" int UnityGetAVCapturePermission(int captureType)
     return avCapturePermissionDenied;
 }
 
-extern "C" void UnityRequestAVCapturePermission(int captureType)
+extern "C" void UnityRequestAVCapturePermission(int captureType, void* userData)
 {
 #if !PLATFORM_TVOS && (UNITY_USES_WEBCAM || UNITY_USES_MICROPHONE)
     NSString* mediaType = MediaTypeFromEnum(captureType);
@@ -39,7 +39,7 @@ extern "C" void UnityRequestAVCapturePermission(int captureType)
         return;
 
     [AVCaptureDevice requestAccessForMediaType: mediaType completionHandler:^(BOOL granted) {
-        UnityReportAVCapturePermission();
+        UnityReportAVCapturePermission(userData);
     }];
 #endif
 }

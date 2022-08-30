@@ -1,0 +1,288 @@
+﻿#include "pch-c.h"
+#ifndef _MSC_VER
+# include <alloca.h>
+#else
+# include <malloc.h>
+#endif
+
+
+#include "codegen/il2cpp-codegen-metadata.h"
+
+
+
+
+
+// 0x00000001 UnityEngine.XR.Interaction.Toolkit.Inputs.Cardinal UnityEngine.XR.Interaction.Toolkit.Inputs.CardinalUtility::GetNearestCardinal(UnityEngine.Vector2)
+extern void CardinalUtility_GetNearestCardinal_mD0D5EEA123C0B684D20BE8DBF98B1954BB134B28 (void);
+// 0x00000002 System.Void UnityEngine.XR.Interaction.Toolkit.Inputs.Simulation.SimulatedInputLayoutLoader::.cctor()
+extern void SimulatedInputLayoutLoader__cctor_m3D22CCF524A29655239041B7A009527A7DF234E9 (void);
+// 0x00000003 System.Void UnityEngine.XR.Interaction.Toolkit.Inputs.Simulation.SimulatedInputLayoutLoader::Initialize()
+extern void SimulatedInputLayoutLoader_Initialize_mA8D3A8DED86CC5D6DD0CF667B4F9567FD588923A (void);
+// 0x00000004 System.Void UnityEngine.XR.Interaction.Toolkit.Inputs.Simulation.SimulatedInputLayoutLoader::RegisterInputLayouts()
+extern void SimulatedInputLayoutLoader_RegisterInputLayouts_m6438013D44910B5E51E0CAD32DFB7980FFA0A0EC (void);
+// 0x00000005 UnityEngine.InputSystem.Controls.Vector2Control UnityEngine.XR.Interaction.Toolkit.Inputs.Simulation.XRSimulatedController::get_primary2DAxis()
+extern void XRSimulatedController_get_primary2DAxis_mBC42D6A59D455DBB89C4BA55486F475DA8C80A7F (void);
+// 0x00000006 System.Void UnityEngine.XR.Interaction.Toolkit.Inputs.Simulation.XRSimulatedController::set_primary2DAxis(UnityEngine.InputSystem.Controls.Vector2Control)
+extern void XRSimulatedController_set_primary2DAxis_m09A60D58705B7CADFC1B767835EB490D155A5B93 (void);
+// 0x00000007 UnityEngine.InputSystem.Controls.AxisControl UnityEngine.XR.Interaction.Toolkit.Inputs.Simulation.XRSimulatedController::get_trigger()
+extern void XRSimulatedController_get_trigger_m7D24A613D468E7DEBB76EE21F742804AEE5878E1 (void);
+// 0x00000008 System.Void UnityEngine.XR.Interaction.Toolkit.Inputs.Simulation.XRSimulatedController::set_trigger(UnityEngine.InputSystem.Controls.AxisControl)
+extern void XRSimulatedController_set_trigger_m9D9565206FE1AC70862FED6B20FAF12D29C6CF8F (void);
+// 0x00000009 UnityEngine.InputSystem.Controls.AxisControl UnityEngine.XR.Interaction.Toolkit.Inputs.Simulation.XRSimulatedController::get_grip()
+extern void XRSimulatedController_get_grip_mD24D6566E1072C931AB02DCA41EBFDD50966CAF1 (void);
+// 0x0000000A System.Void UnityEngine.XR.Interaction.Toolkit.Inputs.Simulation.XRSimulatedController::set_grip(UnityEngine.InputSystem.Controls.AxisControl)
+extern void XRSimulatedController_set_grip_m0745CFD24284357BF80FDA5C64F738C2EDB73FED (void);
+// 0x0000000B UnityEngine.InputSystem.Controls.Vector2Control UnityEngine.XR.Interaction.Toolkit.Inputs.Simulation.XRSimulatedController::get_secondary2DAxis()
+extern void XRSimulatedController_get_secondary2DAxis_mB7EC1711EAF9F2359521EB4D0B4213D6E1715344 (void);
+// 0x0000000C System.Void UnityEngine.XR.Interaction.Toolkit.Inputs.Simulation.XRSimulatedController::set_secondary2DAxis(UnityEngine.InputSystem.Controls.Vector2Control)
+extern void XRSimulatedController_set_secondary2DAxis_m5739AF9F536A41FE8A2B2EB5FB4D56F0D12685C3 (void);
+// 0x0000000D UnityEngine.InputSystem.Controls.ButtonControl UnityEngine.XR.Interaction.Toolkit.Inputs.Simulation.XRSimulatedController::get_primaryButton()
+extern void XRSimulatedController_get_primaryButton_m605B20EF1B89376AF13CCD600C267ABCC2A368F7 (void);
+// 0x0000000E System.Void UnityEngine.XR.Interaction.Toolkit.Inputs.Simulation.XRSimulatedController::set_primaryButton(UnityEngine.InputSystem.Controls.ButtonControl)
+extern void XRSimulatedController_set_primaryButton_m87831E1609E70820267179171D53411262A6D1D3 (void);
+// 0x0000000F UnityEngine.InputSystem.Controls.ButtonControl UnityEngine.XR.Interaction.Toolkit.Inputs.Simulation.XRSimulatedController::get_primaryTouch()
+extern void XRSimulatedController_get_primaryTouch_mD84BB9010F9E89C8DE0F2B8AFA4F4DAEFB02C75C (void);
+// 0x00000010 System.Void UnityEngine.XR.Interaction.Toolkit.Inputs.Simulation.XRSimulatedController::set_primaryTouch(UnityEngine.InputSystem.Controls.ButtonControl)
+extern void XRSimulatedController_set_primaryTouch_mD3E4152221390959CBEC0EFB63262BB3A16E1C9A (void);
+// 0x00000011 UnityEngine.InputSystem.Controls.ButtonControl UnityEngine.XR.Interaction.Toolkit.Inputs.Simulation.XRSimulatedController::get_secondaryButton()
+extern void XRSimulatedController_get_secondaryButton_m49BFB060E75BB0AE53D5239C4CAC2826DB1E2732 (void);
+// 0x00000012 System.Void UnityEngine.XR.Interaction.Toolkit.Inputs.Simulation.XRSimulatedController::set_secondaryButton(UnityEngine.InputSystem.Controls.ButtonControl)
+extern void XRSimulatedController_set_secondaryButton_m9A08568E8E648D486E3824161441FACA985C41EA (void);
+// 0x00000013 UnityEngine.InputSystem.Controls.ButtonControl UnityEngine.XR.Interaction.Toolkit.Inputs.Simulation.XRSimulatedController::get_secondaryTouch()
+extern void XRSimulatedController_get_secondaryTouch_mA59CA81A8235CC75BEB30CC2E5B4CD2AFD002E29 (void);
+// 0x00000014 System.Void UnityEngine.XR.Interaction.Toolkit.Inputs.Simulation.XRSimulatedController::set_secondaryTouch(UnityEngine.InputSystem.Controls.ButtonControl)
+extern void XRSimulatedController_set_secondaryTouch_m5A8748BBCE3A795C0F9B4F59488BDE42A7246DCE (void);
+// 0x00000015 UnityEngine.InputSystem.Controls.ButtonControl UnityEngine.XR.Interaction.Toolkit.Inputs.Simulation.XRSimulatedController::get_gripButton()
+extern void XRSimulatedController_get_gripButton_m7CA66BB71D771A08EFE2DCE84167161E23714AAA (void);
+// 0x00000016 System.Void UnityEngine.XR.Interaction.Toolkit.Inputs.Simulation.XRSimulatedController::set_gripButton(UnityEngine.InputSystem.Controls.ButtonControl)
+extern void XRSimulatedController_set_gripButton_mAAC9A82AEA0F811F5FA6B51E2550624828795F1D (void);
+// 0x00000017 UnityEngine.InputSystem.Controls.ButtonControl UnityEngine.XR.Interaction.Toolkit.Inputs.Simulation.XRSimulatedController::get_triggerButton()
+extern void XRSimulatedController_get_triggerButton_m88AA985552A319E02260328A1E3607DC7D98EA49 (void);
+// 0x00000018 System.Void UnityEngine.XR.Interaction.Toolkit.Inputs.Simulation.XRSimulatedController::set_triggerButton(UnityEngine.InputSystem.Controls.ButtonControl)
+extern void XRSimulatedController_set_triggerButton_m8E7807C9514908D69246BF843C1CEE613852E252 (void);
+// 0x00000019 UnityEngine.InputSystem.Controls.ButtonControl UnityEngine.XR.Interaction.Toolkit.Inputs.Simulation.XRSimulatedController::get_menuButton()
+extern void XRSimulatedController_get_menuButton_mB3ABC88AD6CF841F0B1A2AF00C973A7A6926D330 (void);
+// 0x0000001A System.Void UnityEngine.XR.Interaction.Toolkit.Inputs.Simulation.XRSimulatedController::set_menuButton(UnityEngine.InputSystem.Controls.ButtonControl)
+extern void XRSimulatedController_set_menuButton_m5E5EE1D1311C5F21F277267182270051479FBC79 (void);
+// 0x0000001B UnityEngine.InputSystem.Controls.ButtonControl UnityEngine.XR.Interaction.Toolkit.Inputs.Simulation.XRSimulatedController::get_primary2DAxisClick()
+extern void XRSimulatedController_get_primary2DAxisClick_m70A50608CAE839BC181B4394D7F0AED539CFFB1E (void);
+// 0x0000001C System.Void UnityEngine.XR.Interaction.Toolkit.Inputs.Simulation.XRSimulatedController::set_primary2DAxisClick(UnityEngine.InputSystem.Controls.ButtonControl)
+extern void XRSimulatedController_set_primary2DAxisClick_m3E288D567D20E040D7EDCC3ACBE8B57A5861299B (void);
+// 0x0000001D UnityEngine.InputSystem.Controls.ButtonControl UnityEngine.XR.Interaction.Toolkit.Inputs.Simulation.XRSimulatedController::get_primary2DAxisTouch()
+extern void XRSimulatedController_get_primary2DAxisTouch_m95485F5339BFC31453622B6B49C0E4C4F7FA6AF3 (void);
+// 0x0000001E System.Void UnityEngine.XR.Interaction.Toolkit.Inputs.Simulation.XRSimulatedController::set_primary2DAxisTouch(UnityEngine.InputSystem.Controls.ButtonControl)
+extern void XRSimulatedController_set_primary2DAxisTouch_mBECB86C88CC15C0CB475C471138B7489D59F6970 (void);
+// 0x0000001F UnityEngine.InputSystem.Controls.ButtonControl UnityEngine.XR.Interaction.Toolkit.Inputs.Simulation.XRSimulatedController::get_secondary2DAxisClick()
+extern void XRSimulatedController_get_secondary2DAxisClick_m39F048C075B9037FF5454EB9C253BD50D4390CB9 (void);
+// 0x00000020 System.Void UnityEngine.XR.Interaction.Toolkit.Inputs.Simulation.XRSimulatedController::set_secondary2DAxisClick(UnityEngine.InputSystem.Controls.ButtonControl)
+extern void XRSimulatedController_set_secondary2DAxisClick_mB886D2C9E3E339146B81CEDE80BBFEFE2669E430 (void);
+// 0x00000021 UnityEngine.InputSystem.Controls.ButtonControl UnityEngine.XR.Interaction.Toolkit.Inputs.Simulation.XRSimulatedController::get_secondary2DAxisTouch()
+extern void XRSimulatedController_get_secondary2DAxisTouch_m68790A598E2261A6EAA170437FA980780C664F12 (void);
+// 0x00000022 System.Void UnityEngine.XR.Interaction.Toolkit.Inputs.Simulation.XRSimulatedController::set_secondary2DAxisTouch(UnityEngine.InputSystem.Controls.ButtonControl)
+extern void XRSimulatedController_set_secondary2DAxisTouch_m6E6479050442D4C547F72A326B07A48693A60B64 (void);
+// 0x00000023 UnityEngine.InputSystem.Controls.AxisControl UnityEngine.XR.Interaction.Toolkit.Inputs.Simulation.XRSimulatedController::get_batteryLevel()
+extern void XRSimulatedController_get_batteryLevel_mBE3A6AB69FF2E5A1457AF51662B93848C29CFB5C (void);
+// 0x00000024 System.Void UnityEngine.XR.Interaction.Toolkit.Inputs.Simulation.XRSimulatedController::set_batteryLevel(UnityEngine.InputSystem.Controls.AxisControl)
+extern void XRSimulatedController_set_batteryLevel_m7E23FCC419B9C7F4CB24DE3BEE220273C4135088 (void);
+// 0x00000025 UnityEngine.InputSystem.Controls.ButtonControl UnityEngine.XR.Interaction.Toolkit.Inputs.Simulation.XRSimulatedController::get_userPresence()
+extern void XRSimulatedController_get_userPresence_mD511177A560F047B6A07B879CB94AB0637602ED6 (void);
+// 0x00000026 System.Void UnityEngine.XR.Interaction.Toolkit.Inputs.Simulation.XRSimulatedController::set_userPresence(UnityEngine.InputSystem.Controls.ButtonControl)
+extern void XRSimulatedController_set_userPresence_mBD1370D18B8558D71453B1C933A4418BED15EF4C (void);
+// 0x00000027 System.Void UnityEngine.XR.Interaction.Toolkit.Inputs.Simulation.XRSimulatedController::FinishSetup()
+extern void XRSimulatedController_FinishSetup_m3FF9228BA9B5BD9506F824E708D8A088EFB45D2A (void);
+// 0x00000028 System.Void UnityEngine.XR.Interaction.Toolkit.Inputs.Simulation.XRSimulatedController::.ctor()
+extern void XRSimulatedController__ctor_m832C2B3ACDA212CABE445F8248960849A7CF2C58 (void);
+// 0x00000029 UnityEngine.InputSystem.Utilities.FourCC UnityEngine.XR.Interaction.Toolkit.Inputs.Simulation.XRSimulatedControllerState::get_formatId()
+extern void XRSimulatedControllerState_get_formatId_m74E4263CFB3EB8B67D4FCCB2E2A555ACD37F1261 (void);
+// 0x0000002A UnityEngine.InputSystem.Utilities.FourCC UnityEngine.XR.Interaction.Toolkit.Inputs.Simulation.XRSimulatedControllerState::get_format()
+extern void XRSimulatedControllerState_get_format_mB080486979D3E2F92014DC12E696F3031B3A808C (void);
+// 0x0000002B UnityEngine.XR.Interaction.Toolkit.Inputs.Simulation.XRSimulatedControllerState UnityEngine.XR.Interaction.Toolkit.Inputs.Simulation.XRSimulatedControllerState::WithButton(UnityEngine.XR.Interaction.Toolkit.Inputs.Simulation.ControllerButton,System.Boolean)
+extern void XRSimulatedControllerState_WithButton_m1B3D8EB3C81BABA0BCE4DC52632F43C8617AE6CF (void);
+// 0x0000002C System.Void UnityEngine.XR.Interaction.Toolkit.Inputs.Simulation.XRSimulatedControllerState::Reset()
+extern void XRSimulatedControllerState_Reset_m524D26C8145A95198ABEFBCE125E5681436FB793 (void);
+// 0x0000002D System.Void UnityEngine.XR.Interaction.Toolkit.Inputs.Simulation.XRSimulatedHMD::.ctor()
+extern void XRSimulatedHMD__ctor_m5A6C1A3D704B28FDB61A81A83BC05159C17EE9B9 (void);
+// 0x0000002E UnityEngine.InputSystem.Utilities.FourCC UnityEngine.XR.Interaction.Toolkit.Inputs.Simulation.XRSimulatedHMDState::get_formatId()
+extern void XRSimulatedHMDState_get_formatId_m44B59180955A04D5BD01114B302F26E958ED53CD (void);
+// 0x0000002F UnityEngine.InputSystem.Utilities.FourCC UnityEngine.XR.Interaction.Toolkit.Inputs.Simulation.XRSimulatedHMDState::get_format()
+extern void XRSimulatedHMDState_get_format_mB1416ACE91164B7A8660923C4823F5D3986F14EF (void);
+// 0x00000030 System.Void UnityEngine.XR.Interaction.Toolkit.Inputs.Simulation.XRSimulatedHMDState::Reset()
+extern void XRSimulatedHMDState_Reset_mD47104BCF5DBB055F673EA4F7889819079B94406 (void);
+// 0x00000031 System.Single UnityEngine.XR.Interaction.Toolkit.Inputs.Interactions.SectorInteraction::get_pressPointOrDefault()
+extern void SectorInteraction_get_pressPointOrDefault_mC48A3C5FEF778359655233D9CB76B99707DBD9E8 (void);
+// 0x00000032 System.Single UnityEngine.XR.Interaction.Toolkit.Inputs.Interactions.SectorInteraction::get_defaultPressPoint()
+extern void SectorInteraction_get_defaultPressPoint_mC8BA99741478D69AC5AD20C53A2563B269A50703 (void);
+// 0x00000033 System.Void UnityEngine.XR.Interaction.Toolkit.Inputs.Interactions.SectorInteraction::set_defaultPressPoint(System.Single)
+extern void SectorInteraction_set_defaultPressPoint_mE149D21B50B09B456919B022D214762DF1E738B9 (void);
+// 0x00000034 System.Void UnityEngine.XR.Interaction.Toolkit.Inputs.Interactions.SectorInteraction::Process(UnityEngine.InputSystem.InputInteractionContext&)
+extern void SectorInteraction_Process_mF68845C62BB2742A2F171130F723ACBD55E4509C (void);
+// 0x00000035 System.Boolean UnityEngine.XR.Interaction.Toolkit.Inputs.Interactions.SectorInteraction::IsValidDirection(UnityEngine.InputSystem.InputInteractionContext&)
+extern void SectorInteraction_IsValidDirection_m1AA36553F492DF8DB2EC182C0281088332B68EEF (void);
+// 0x00000036 UnityEngine.XR.Interaction.Toolkit.Inputs.Interactions.SectorInteraction/Directions UnityEngine.XR.Interaction.Toolkit.Inputs.Interactions.SectorInteraction::GetNearestDirection(UnityEngine.XR.Interaction.Toolkit.Inputs.Cardinal)
+extern void SectorInteraction_GetNearestDirection_m33380BA3A20657BFA06F0CA7FB32EE15D48BE9FC (void);
+// 0x00000037 System.Void UnityEngine.XR.Interaction.Toolkit.Inputs.Interactions.SectorInteraction::Reset()
+extern void SectorInteraction_Reset_m19D8A80BE1E89AEE8C7BF9F16B4B44BB13424D99 (void);
+// 0x00000038 System.Void UnityEngine.XR.Interaction.Toolkit.Inputs.Interactions.SectorInteraction::.cctor()
+extern void SectorInteraction__cctor_mE52D92B20C725EF6ED77927E99C5C28F6C50D6B9 (void);
+// 0x00000039 System.Void UnityEngine.XR.Interaction.Toolkit.Inputs.Interactions.SectorInteraction::Initialize()
+extern void SectorInteraction_Initialize_mE02B33790B23EABF1D52D8C95E422CD033C90EDE (void);
+// 0x0000003A System.Void UnityEngine.XR.Interaction.Toolkit.Inputs.Interactions.SectorInteraction::.ctor()
+extern void SectorInteraction__ctor_m96B44EF9FE2E61A02C49FEBE2127771D40538BB1 (void);
+static Il2CppMethodPointer s_methodPointers[58] = 
+{
+	CardinalUtility_GetNearestCardinal_mD0D5EEA123C0B684D20BE8DBF98B1954BB134B28,
+	SimulatedInputLayoutLoader__cctor_m3D22CCF524A29655239041B7A009527A7DF234E9,
+	SimulatedInputLayoutLoader_Initialize_mA8D3A8DED86CC5D6DD0CF667B4F9567FD588923A,
+	SimulatedInputLayoutLoader_RegisterInputLayouts_m6438013D44910B5E51E0CAD32DFB7980FFA0A0EC,
+	XRSimulatedController_get_primary2DAxis_mBC42D6A59D455DBB89C4BA55486F475DA8C80A7F,
+	XRSimulatedController_set_primary2DAxis_m09A60D58705B7CADFC1B767835EB490D155A5B93,
+	XRSimulatedController_get_trigger_m7D24A613D468E7DEBB76EE21F742804AEE5878E1,
+	XRSimulatedController_set_trigger_m9D9565206FE1AC70862FED6B20FAF12D29C6CF8F,
+	XRSimulatedController_get_grip_mD24D6566E1072C931AB02DCA41EBFDD50966CAF1,
+	XRSimulatedController_set_grip_m0745CFD24284357BF80FDA5C64F738C2EDB73FED,
+	XRSimulatedController_get_secondary2DAxis_mB7EC1711EAF9F2359521EB4D0B4213D6E1715344,
+	XRSimulatedController_set_secondary2DAxis_m5739AF9F536A41FE8A2B2EB5FB4D56F0D12685C3,
+	XRSimulatedController_get_primaryButton_m605B20EF1B89376AF13CCD600C267ABCC2A368F7,
+	XRSimulatedController_set_primaryButton_m87831E1609E70820267179171D53411262A6D1D3,
+	XRSimulatedController_get_primaryTouch_mD84BB9010F9E89C8DE0F2B8AFA4F4DAEFB02C75C,
+	XRSimulatedController_set_primaryTouch_mD3E4152221390959CBEC0EFB63262BB3A16E1C9A,
+	XRSimulatedController_get_secondaryButton_m49BFB060E75BB0AE53D5239C4CAC2826DB1E2732,
+	XRSimulatedController_set_secondaryButton_m9A08568E8E648D486E3824161441FACA985C41EA,
+	XRSimulatedController_get_secondaryTouch_mA59CA81A8235CC75BEB30CC2E5B4CD2AFD002E29,
+	XRSimulatedController_set_secondaryTouch_m5A8748BBCE3A795C0F9B4F59488BDE42A7246DCE,
+	XRSimulatedController_get_gripButton_m7CA66BB71D771A08EFE2DCE84167161E23714AAA,
+	XRSimulatedController_set_gripButton_mAAC9A82AEA0F811F5FA6B51E2550624828795F1D,
+	XRSimulatedController_get_triggerButton_m88AA985552A319E02260328A1E3607DC7D98EA49,
+	XRSimulatedController_set_triggerButton_m8E7807C9514908D69246BF843C1CEE613852E252,
+	XRSimulatedController_get_menuButton_mB3ABC88AD6CF841F0B1A2AF00C973A7A6926D330,
+	XRSimulatedController_set_menuButton_m5E5EE1D1311C5F21F277267182270051479FBC79,
+	XRSimulatedController_get_primary2DAxisClick_m70A50608CAE839BC181B4394D7F0AED539CFFB1E,
+	XRSimulatedController_set_primary2DAxisClick_m3E288D567D20E040D7EDCC3ACBE8B57A5861299B,
+	XRSimulatedController_get_primary2DAxisTouch_m95485F5339BFC31453622B6B49C0E4C4F7FA6AF3,
+	XRSimulatedController_set_primary2DAxisTouch_mBECB86C88CC15C0CB475C471138B7489D59F6970,
+	XRSimulatedController_get_secondary2DAxisClick_m39F048C075B9037FF5454EB9C253BD50D4390CB9,
+	XRSimulatedController_set_secondary2DAxisClick_mB886D2C9E3E339146B81CEDE80BBFEFE2669E430,
+	XRSimulatedController_get_secondary2DAxisTouch_m68790A598E2261A6EAA170437FA980780C664F12,
+	XRSimulatedController_set_secondary2DAxisTouch_m6E6479050442D4C547F72A326B07A48693A60B64,
+	XRSimulatedController_get_batteryLevel_mBE3A6AB69FF2E5A1457AF51662B93848C29CFB5C,
+	XRSimulatedController_set_batteryLevel_m7E23FCC419B9C7F4CB24DE3BEE220273C4135088,
+	XRSimulatedController_get_userPresence_mD511177A560F047B6A07B879CB94AB0637602ED6,
+	XRSimulatedController_set_userPresence_mBD1370D18B8558D71453B1C933A4418BED15EF4C,
+	XRSimulatedController_FinishSetup_m3FF9228BA9B5BD9506F824E708D8A088EFB45D2A,
+	XRSimulatedController__ctor_m832C2B3ACDA212CABE445F8248960849A7CF2C58,
+	XRSimulatedControllerState_get_formatId_m74E4263CFB3EB8B67D4FCCB2E2A555ACD37F1261,
+	XRSimulatedControllerState_get_format_mB080486979D3E2F92014DC12E696F3031B3A808C,
+	XRSimulatedControllerState_WithButton_m1B3D8EB3C81BABA0BCE4DC52632F43C8617AE6CF,
+	XRSimulatedControllerState_Reset_m524D26C8145A95198ABEFBCE125E5681436FB793,
+	XRSimulatedHMD__ctor_m5A6C1A3D704B28FDB61A81A83BC05159C17EE9B9,
+	XRSimulatedHMDState_get_formatId_m44B59180955A04D5BD01114B302F26E958ED53CD,
+	XRSimulatedHMDState_get_format_mB1416ACE91164B7A8660923C4823F5D3986F14EF,
+	XRSimulatedHMDState_Reset_mD47104BCF5DBB055F673EA4F7889819079B94406,
+	SectorInteraction_get_pressPointOrDefault_mC48A3C5FEF778359655233D9CB76B99707DBD9E8,
+	SectorInteraction_get_defaultPressPoint_mC8BA99741478D69AC5AD20C53A2563B269A50703,
+	SectorInteraction_set_defaultPressPoint_mE149D21B50B09B456919B022D214762DF1E738B9,
+	SectorInteraction_Process_mF68845C62BB2742A2F171130F723ACBD55E4509C,
+	SectorInteraction_IsValidDirection_m1AA36553F492DF8DB2EC182C0281088332B68EEF,
+	SectorInteraction_GetNearestDirection_m33380BA3A20657BFA06F0CA7FB32EE15D48BE9FC,
+	SectorInteraction_Reset_m19D8A80BE1E89AEE8C7BF9F16B4B44BB13424D99,
+	SectorInteraction__cctor_mE52D92B20C725EF6ED77927E99C5C28F6C50D6B9,
+	SectorInteraction_Initialize_mE02B33790B23EABF1D52D8C95E422CD033C90EDE,
+	SectorInteraction__ctor_m96B44EF9FE2E61A02C49FEBE2127771D40538BB1,
+};
+extern void XRSimulatedControllerState_get_format_mB080486979D3E2F92014DC12E696F3031B3A808C_AdjustorThunk (void);
+extern void XRSimulatedControllerState_WithButton_m1B3D8EB3C81BABA0BCE4DC52632F43C8617AE6CF_AdjustorThunk (void);
+extern void XRSimulatedControllerState_Reset_m524D26C8145A95198ABEFBCE125E5681436FB793_AdjustorThunk (void);
+extern void XRSimulatedHMDState_get_format_mB1416ACE91164B7A8660923C4823F5D3986F14EF_AdjustorThunk (void);
+extern void XRSimulatedHMDState_Reset_mD47104BCF5DBB055F673EA4F7889819079B94406_AdjustorThunk (void);
+static Il2CppTokenAdjustorThunkPair s_adjustorThunks[5] = 
+{
+	{ 0x0600002A, XRSimulatedControllerState_get_format_mB080486979D3E2F92014DC12E696F3031B3A808C_AdjustorThunk },
+	{ 0x0600002B, XRSimulatedControllerState_WithButton_m1B3D8EB3C81BABA0BCE4DC52632F43C8617AE6CF_AdjustorThunk },
+	{ 0x0600002C, XRSimulatedControllerState_Reset_m524D26C8145A95198ABEFBCE125E5681436FB793_AdjustorThunk },
+	{ 0x0600002F, XRSimulatedHMDState_get_format_mB1416ACE91164B7A8660923C4823F5D3986F14EF_AdjustorThunk },
+	{ 0x06000030, XRSimulatedHMDState_Reset_mD47104BCF5DBB055F673EA4F7889819079B94406_AdjustorThunk },
+};
+static const int32_t s_InvokerIndices[58] = 
+{
+	7856,
+	8358,
+	8358,
+	8358,
+	5134,
+	4180,
+	5134,
+	4180,
+	5134,
+	4180,
+	5134,
+	4180,
+	5134,
+	4180,
+	5134,
+	4180,
+	5134,
+	4180,
+	5134,
+	4180,
+	5134,
+	4180,
+	5134,
+	4180,
+	5134,
+	4180,
+	5134,
+	4180,
+	5134,
+	4180,
+	5134,
+	4180,
+	5134,
+	4180,
+	5134,
+	4180,
+	5134,
+	4180,
+	5219,
+	5219,
+	8299,
+	5071,
+	2401,
+	5219,
+	5219,
+	8299,
+	5071,
+	5219,
+	5178,
+	8344,
+	8211,
+	4054,
+	2838,
+	7834,
+	5219,
+	8358,
+	8358,
+	5219,
+};
+extern const CustomAttributesCacheGenerator g_Unity_XR_Interaction_Toolkit_AttributeGenerators[];
+IL2CPP_EXTERN_C const Il2CppCodeGenModule g_Unity_XR_Interaction_Toolkit_CodeGenModule;
+const Il2CppCodeGenModule g_Unity_XR_Interaction_Toolkit_CodeGenModule = 
+{
+	"Unity.XR.Interaction.Toolkit.dll",
+	58,
+	s_methodPointers,
+	5,
+	s_adjustorThunks,
+	s_InvokerIndices,
+	0,
+	NULL,
+	0,
+	NULL,
+	0,
+	NULL,
+	NULL,
+	g_Unity_XR_Interaction_Toolkit_AttributeGenerators,
+	NULL, // module initializer,
+	NULL,
+	NULL,
+	NULL,
+};

@@ -132,6 +132,19 @@ NSInteger _forceInterfaceOrientationMask = 0;
     UnitySetPlayerFocus(1);
 
     AVAudioSession* audioSession = [AVAudioSession sharedInstance];
+    [audioSession setCategory: AVAudioSessionCategoryAmbient error: nil];
+    if (UnityIsAudioManagerAvailableAndEnabled())
+    {
+        if (UnityShouldPrepareForIOSRecording())
+        {
+            [audioSession setCategory: AVAudioSessionCategoryPlayAndRecord error: nil];
+        }
+        else if (UnityShouldMuteOtherAudioSources())
+        {
+            [audioSession setCategory: AVAudioSessionCategorySoloAmbient error: nil];
+        }
+    }
+
     [audioSession setActive: YES error: nil];
     [audioSession addObserver: self forKeyPath: @"outputVolume" options: 0 context: nil];
     UnityUpdateMuteState([audioSession outputVolume] < 0.01f ? 1 : 0);
@@ -293,6 +306,33 @@ extern "C" void UnityCleanupTrampoline()
     return YES;
 }
 
+#if (PLATFORM_IOS && defined(__IPHONE_13_0)) || (PLATFORM_TVOS && defined(__TVOS_13_0))
+- (UIWindowScene*)pickStartupWindowScene:(NSSet<UIScene*>*)scenes API_AVAILABLE(ios(13.0), tvos(13.0))
+{
+    // if we have scene with UISceneActivationStateForegroundActive - pick it
+    // otherwise UISceneActivationStateForegroundInactive will work
+    //   it will be the scene going into active state
+    // if there were no active/inactive scenes (only background) we should allow background scene
+    //   this might happen in some cases with native plugins doing "things"
+    UIWindowScene *foregroundScene = nil, *backgroundScene = nil;
+    for (UIScene* scene in scenes)
+    {
+        if (![scene isKindOfClass: [UIWindowScene class]])
+            continue;
+        UIWindowScene* windowScene = (UIWindowScene*)scene;
+
+        if (scene.activationState == UISceneActivationStateForegroundActive)
+            return windowScene;
+        if (scene.activationState == UISceneActivationStateForegroundInactive)
+            foregroundScene = windowScene;
+        else if (scene.activationState == UISceneActivationStateBackground)
+            backgroundScene = windowScene;
+    }
+
+    return foregroundScene ? foregroundScene : backgroundScene;
+}
+#endif
+
 - (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
 {
     ::printf("-> applicationDidFinishLaunching()\n");
@@ -311,11 +351,18 @@ extern "C" void UnityCleanupTrampoline()
     [self selectRenderingAPI];
     [UnityRenderingView InitializeForAPI: self.renderingAPI];
 
-    _window         = [[UIWindow alloc] initWithFrame: [UIScreen mainScreen].bounds];
-    _unityView      = [self createUnityView];
+#if (PLATFORM_IOS && defined(__IPHONE_13_0)) || (PLATFORM_TVOS && defined(__TVOS_13_0))
+    if (@available(iOS 13, tvOS 13, *))
+        _window = [[UIWindow alloc] initWithWindowScene: [self pickStartupWindowScene: application.connectedScenes]];
+    else
+#endif
+    _window = [[UIWindow alloc] initWithFrame: [UIScreen mainScreen].bounds];
+
+    _unityView = [self createUnityView];
+
 
     [DisplayManager Initialize];
-    _mainDisplay    = [DisplayManager Instance].mainDisplay;
+    _mainDisplay = [DisplayManager Instance].mainDisplay;
     [_mainDisplay createWithWindow: _window andView: _unityView];
 
     [self createUI];
@@ -385,35 +432,27 @@ extern "C" void UnityCleanupTrampoline()
 
 - (void)updateUnityAudioOutput
 {
-    UnityUpdateAudioOutputState();
     UnityUpdateMuteState([[AVAudioSession sharedInstance] outputVolume] < 0.01f ? 1 : 0);
 }
 
 - (void)addSnapshotViewController
 {
-    // This is done on the next frame so that
-    // in the case where unity is paused while going
-    // into the background and an input is deactivated
-    // we don't mess with the view hierarchy while taking
-    // a view snapshot (case 760747).
-    dispatch_async(dispatch_get_main_queue(), ^{
-        // if we are active again, we don't need to do this anymore
-        if (!_didResignActive || _snapshotViewController)
-        {
-            return;
-        }
+    if (!_didResignActive || self->_snapshotViewController)
+    {
+        return;
+    }
 
-        UIView* snapshotView = [self createSnapshotView];
+    UIView* snapshotView = [self createSnapshotView];
 
-        if (snapshotView != nil)
-        {
-            _snapshotViewController = [[UIViewController alloc] init];
-            _snapshotViewController.modalPresentationStyle = UIModalPresentationFullScreen;
-            _snapshotViewController.view = snapshotView;
+    if (snapshotView != nil)
+    {
+        UIViewController* snapshotViewController = [AllocUnityViewController() init];
+        snapshotViewController.modalPresentationStyle = UIModalPresentationFullScreen;
+        snapshotViewController.view = snapshotView;
 
-            [_rootController presentViewController: _snapshotViewController animated: false completion: nil];
-        }
-    });
+        [self->_rootController presentViewController: snapshotViewController animated: false completion: nil];
+        self->_snapshotViewController = snapshotViewController;
+    }
 }
 
 - (void)removeSnapshotViewController
@@ -421,17 +460,17 @@ extern "C" void UnityCleanupTrampoline()
     // do this on the main queue async so that if we try to create one
     // and remove in the same frame, this always happens after in the same queue
     dispatch_async(dispatch_get_main_queue(), ^{
-        if (_snapshotViewController)
+        if (self->_snapshotViewController)
         {
             // we've got a view on top of the snapshot view (3rd party plugin/social media login etc).
-            if (_snapshotViewController.presentedViewController)
+            if (self->_snapshotViewController.presentedViewController)
             {
                 [self performSelector: @selector(removeSnapshotViewController) withObject: nil afterDelay: 0.05];
                 return;
             }
 
-            [_snapshotViewController dismissViewControllerAnimated: NO completion: nil];
-            _snapshotViewController = nil;
+            [self->_snapshotViewController dismissViewControllerAnimated: NO completion: nil];
+            self->_snapshotViewController = nil;
 
             // Make sure that the keyboard input field regains focus after the application becomes active.
             [[KeyboardDelegate Instance] becomeFirstResponder];
@@ -458,14 +497,17 @@ extern "C" void UnityCleanupTrampoline()
             // otherwise batched player loop can be called to run user scripts.
             if (!UnityGetUseCustomAppBackgroundBehavior())
             {
+#if UNITY_SNAPSHOT_VIEW_ON_APPLICATION_PAUSE
                 // Force player to do one more frame, so scripts get a chance to render custom screen for minimized app in task manager.
                 // NB: UnityWillPause will schedule OnApplicationPause message, which will be sent normally inside repaint (unity player loop)
                 // NB: We will actually pause after the loop (when calling UnityPause).
                 UnityWillPause();
                 [self repaint];
-                UnityPause(1);
+                UnityWaitForFrame();
 
                 [self addSnapshotViewController];
+#endif
+                UnityPause(1);
             }
         }
     }

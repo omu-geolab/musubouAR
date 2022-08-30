@@ -40,15 +40,21 @@
 
 #define UNITY_TRAMPOLINE_IN_USE 1
 
-#if defined(TARGET_OS_TV) && TARGET_OS_TV
-#define PLATFORM_TVOS 0
+#if defined(TARGET_OS_IOS) && TARGET_OS_IOS
 #define PLATFORM_IOS 1
+    #define PLATFORM_OSX    0
+#define PLATFORM_TVOS 0
+#elif defined(TARGET_OS_OSX) && TARGET_OS_OSX
+#define PLATFORM_IOS 1
+    #define PLATFORM_OSX    1
+#define PLATFORM_TVOS 0
+#elif defined(TARGET_OS_TV) && TARGET_OS_TV
+#define PLATFORM_IOS 1
+    #define PLATFORM_OSX    0
+#define PLATFORM_TVOS 0
 #else
-#define PLATFORM_TVOS 0
-#define PLATFORM_IOS 1
+    #error one of TARGET_OS_IOS, TARGET_OS_OSX, TARGET_OS_TV should be defined
 #endif
-
-#define PLATFORM_OSX 0
 
 
 //------------------------------------------------------------------------------
@@ -117,6 +123,16 @@
 #else
     #define UNITY_HAS_IOSSDK_13_0  0
 #endif
+#if defined(__IPHONE_14_0)
+    #define UNITY_HAS_IOSSDK_14_0  1
+#else
+    #define UNITY_HAS_IOSSDK_14_0  0
+#endif
+#if defined(__IPHONE_15_0)
+    #define UNITY_HAS_IOSSDK_15_0  1
+#else
+    #define UNITY_HAS_IOSSDK_15_0  0
+#endif
 #if defined(__TVOS_10_0)
     #define UNITY_HAS_TVOSSDK_10_0 1
 #else
@@ -131,6 +147,26 @@
     #define UNITY_HAS_TVOSSDK_11_0 1
 #else
     #define UNITY_HAS_TVOSSDK_11_0 0
+#endif
+#if defined(__TVOS_12_0)
+    #define UNITY_HAS_TVOSSDK_12_0 1
+#else
+    #define UNITY_HAS_TVOSSDK_12_0 0
+#endif
+#if defined(__TVOS_13_0)
+    #define UNITY_HAS_TVOSSDK_13_0 1
+#else
+    #define UNITY_HAS_TVOSSDK_13_0 0
+#endif
+#if defined(__TVOS_14_0)
+    #define UNITY_HAS_TVOSSDK_14_0 1
+#else
+    #define UNITY_HAS_TVOSSDK_14_0 0
+#endif
+#if defined(__TVOS_15_0)
+    #define UNITY_HAS_TVOSSDK_15_0 1
+#else
+    #define UNITY_HAS_TVOSSDK_15_0 0
 #endif
 
 // The following UNITY_USES_* flags disable functionality in the trampoline project whenever the user does not use it from his scripts.
