@@ -12637,12 +12637,10 @@ public:
 	int32_t ___probeCount_8;
 	// System.Single Exploder::explodeDuration
 	float ___explodeDuration_9;
-	// UnityEngine.AudioSource Exploder::audio
-	AudioSource_tC4BF65AF8CDCAA63724BB3CA59A7A29249269E6B * ___audio_10;
 	// System.Boolean Exploder::exploded
-	bool ___exploded_11;
+	bool ___exploded_10;
 	// System.Boolean Exploder::wasTrigger
-	bool ___wasTrigger_12;
+	bool ___wasTrigger_11;
 
 public:
 	inline static int32_t get_offset_of_explosionTime_4() { return static_cast<int32_t>(offsetof(Exploder_t5C3ED28A081BA7E71B37D46E711C7F56228F7486, ___explosionTime_4)); }
@@ -12693,29 +12691,20 @@ public:
 		___explodeDuration_9 = value;
 	}
 
-	inline static int32_t get_offset_of_audio_10() { return static_cast<int32_t>(offsetof(Exploder_t5C3ED28A081BA7E71B37D46E711C7F56228F7486, ___audio_10)); }
-	inline AudioSource_tC4BF65AF8CDCAA63724BB3CA59A7A29249269E6B * get_audio_10() const { return ___audio_10; }
-	inline AudioSource_tC4BF65AF8CDCAA63724BB3CA59A7A29249269E6B ** get_address_of_audio_10() { return &___audio_10; }
-	inline void set_audio_10(AudioSource_tC4BF65AF8CDCAA63724BB3CA59A7A29249269E6B * value)
+	inline static int32_t get_offset_of_exploded_10() { return static_cast<int32_t>(offsetof(Exploder_t5C3ED28A081BA7E71B37D46E711C7F56228F7486, ___exploded_10)); }
+	inline bool get_exploded_10() const { return ___exploded_10; }
+	inline bool* get_address_of_exploded_10() { return &___exploded_10; }
+	inline void set_exploded_10(bool value)
 	{
-		___audio_10 = value;
-		Il2CppCodeGenWriteBarrier((void**)(&___audio_10), (void*)value);
+		___exploded_10 = value;
 	}
 
-	inline static int32_t get_offset_of_exploded_11() { return static_cast<int32_t>(offsetof(Exploder_t5C3ED28A081BA7E71B37D46E711C7F56228F7486, ___exploded_11)); }
-	inline bool get_exploded_11() const { return ___exploded_11; }
-	inline bool* get_address_of_exploded_11() { return &___exploded_11; }
-	inline void set_exploded_11(bool value)
+	inline static int32_t get_offset_of_wasTrigger_11() { return static_cast<int32_t>(offsetof(Exploder_t5C3ED28A081BA7E71B37D46E711C7F56228F7486, ___wasTrigger_11)); }
+	inline bool get_wasTrigger_11() const { return ___wasTrigger_11; }
+	inline bool* get_address_of_wasTrigger_11() { return &___wasTrigger_11; }
+	inline void set_wasTrigger_11(bool value)
 	{
-		___exploded_11 = value;
-	}
-
-	inline static int32_t get_offset_of_wasTrigger_12() { return static_cast<int32_t>(offsetof(Exploder_t5C3ED28A081BA7E71B37D46E711C7F56228F7486, ___wasTrigger_12)); }
-	inline bool get_wasTrigger_12() const { return ___wasTrigger_12; }
-	inline bool* get_address_of_wasTrigger_12() { return &___wasTrigger_12; }
-	inline void set_wasTrigger_12(bool value)
-	{
-		___wasTrigger_12 = value;
+		___wasTrigger_11 = value;
 	}
 };
 

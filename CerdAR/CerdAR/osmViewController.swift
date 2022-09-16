@@ -17,6 +17,7 @@ import HealthKitUI
 import AVFoundation
 import WatchConnectivity
 import MediaPlayer
+import ARKit
 
 let mapboxAccess = "pk.eyJ1Ijoic2FicmluYXp1cmFpbWkiLCJhIjoiY2lyaGFmbzFjMDE5cGc5bm42c2ozMnJlYSJ9.7W_kYbSqA3sEZUyS14s_Tw"
 
@@ -179,29 +180,54 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
             toCam_button.widthAnchor.constraint(equalToConstant: sizeButton)
         ]
         NSLayoutConstraint.activate(constraintsCamera)
-        toCam_button.addTarget(self, action: #selector(osmViewController.onclick_AR(_:)), for: .touchUpInside)
+        let supportLiDAR = ARWorldTrackingConfiguration.supportsSceneReconstruction(.mesh)
+        if supportLiDAR {
+            toCam_button.addTarget(self, action: #selector(osmViewController.onclick_Lidar(_:)), for: .touchUpInside)
+        }else {
+            toCam_button.addTarget(self, action: #selector(osmViewController.onclick_AR(_:)), for: .touchUpInside)
+            
+        }
+//        // 画面遷移するためのボタンを生成
+//        let toCam_button = UIButton()
+//        let buttonImage: UIImage = UIImage(named: "ar2-icon")!
+//        toCam_button.setImage(buttonImage, for: UIControl.State())
+//        toCam_button.layer.shadowColor = UIColor.black.cgColor
+//        toCam_button.layer.shadowRadius = 5
+//        toCam_button.layer.shadowOffset = CGSize(width: 10, height: 10)
+//        toCam_button.layer.shadowOpacity = 0.6
+//
+//        mapView.addSubview(toCam_button)
+//        toCam_button.translatesAutoresizingMaskIntoConstraints = false
+//        let constraintsCamera = [
+//            toCam_button.leadingAnchor.constraint(equalTo: mapView.leadingAnchor,constant: 15),
+//            toCam_button.bottomAnchor.constraint(equalTo: mapView.bottomAnchor,constant: -15),
+//            toCam_button.heightAnchor.constraint(equalToConstant: sizeButton),
+//            toCam_button.widthAnchor.constraint(equalToConstant: sizeButton)
+//        ]
+//        NSLayoutConstraint.activate(constraintsCamera)
+//        toCam_button.addTarget(self, action: #selector(osmViewController.onclick_AR(_:)), for: .touchUpInside)
         
         // LIDAR画面遷移するためのボタンを生成
-        let toLidar_button = UIButton()
-        let buttonImageLidar: UIImage = UIImage(named: "lidar")!
-        toLidar_button.setImage(buttonImageLidar, for: UIControl.State())
-        toLidar_button.layer.shadowColor = UIColor.black.cgColor
-        toLidar_button.layer.shadowRadius = 5
-        toLidar_button.layer.shadowOffset = CGSize(width: 10, height: 10)
-        toLidar_button.layer.shadowOpacity = 0.6
-        
-        mapView.addSubview(toLidar_button)
-//        toLidar_button.isHidden = true
-        toLidar_button.translatesAutoresizingMaskIntoConstraints = false
-        let constraintsLidar = [
-            toLidar_button.leadingAnchor.constraint(equalTo: mapView.leadingAnchor,constant: 15),
-            toLidar_button.bottomAnchor.constraint(equalTo: mapView.bottomAnchor,constant: -15*2 - sizeButton),
-            toLidar_button.heightAnchor.constraint(equalToConstant: sizeButton),
-            toLidar_button.widthAnchor.constraint(equalToConstant: sizeButton)
-        ]
-        NSLayoutConstraint.activate(constraintsLidar)
-        toLidar_button.addTarget(self, action: #selector(osmViewController.onclick_Lidar(_:)), for: .touchUpInside)
-        
+//        let toLidar_button = UIButton()
+//        let buttonImageLidar: UIImage = UIImage(named: "lidar")!
+//        toLidar_button.setImage(buttonImageLidar, for: UIControl.State())
+//        toLidar_button.layer.shadowColor = UIColor.black.cgColor
+//        toLidar_button.layer.shadowRadius = 5
+//        toLidar_button.layer.shadowOffset = CGSize(width: 10, height: 10)
+//        toLidar_button.layer.shadowOpacity = 0.6
+//
+//        mapView.addSubview(toLidar_button)
+////        toLidar_button.isHidden = true
+//        toLidar_button.translatesAutoresizingMaskIntoConstraints = false
+//        let constraintsLidar = [
+//            toLidar_button.leadingAnchor.constraint(equalTo: mapView.leadingAnchor,constant: 15),
+//            toLidar_button.bottomAnchor.constraint(equalTo: mapView.bottomAnchor,constant: -15*2 - sizeButton),
+//            toLidar_button.heightAnchor.constraint(equalToConstant: sizeButton),
+//            toLidar_button.widthAnchor.constraint(equalToConstant: sizeButton)
+//        ]
+//        NSLayoutConstraint.activate(constraintsLidar)
+//        toLidar_button.addTarget(self, action: #selector(osmViewController.onclick_Lidar(_:)), for: .touchUpInside)
+//
         // 設定画面へ遷移するためのボタン生成
         let toCon_button = UIButton()
         let conButImage: UIImage = UIImage(named: "setting-icon")!
@@ -308,7 +334,6 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         
         /*アニメーション設定*/
         nowLoc_button.startAnimatingPressActions()
-        toCam_button.startAnimatingPressActions()
         toCon_button.startAnimatingPressActions()
         
         /* 警告メッセージの設定 */
