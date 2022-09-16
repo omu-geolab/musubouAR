@@ -12110,19 +12110,19 @@ public:
 };
 
 
-// Exploder/<explode>d__8
-struct U3CexplodeU3Ed__8_tA74F3100068A32F1BF5FE13EEF058D6B3887BAD6  : public RuntimeObject
+// Exploder/<explode>d__7
+struct U3CexplodeU3Ed__7_tEF39325588529DF3B15CD73DDF255CBE955FC7A8  : public RuntimeObject
 {
 public:
-	// System.Int32 Exploder/<explode>d__8::<>1__state
+	// System.Int32 Exploder/<explode>d__7::<>1__state
 	int32_t ___U3CU3E1__state_0;
-	// System.Object Exploder/<explode>d__8::<>2__current
+	// System.Object Exploder/<explode>d__7::<>2__current
 	RuntimeObject * ___U3CU3E2__current_1;
-	// Exploder Exploder/<explode>d__8::<>4__this
+	// Exploder Exploder/<explode>d__7::<>4__this
 	Exploder_t5C3ED28A081BA7E71B37D46E711C7F56228F7486 * ___U3CU3E4__this_2;
 
 public:
-	inline static int32_t get_offset_of_U3CU3E1__state_0() { return static_cast<int32_t>(offsetof(U3CexplodeU3Ed__8_tA74F3100068A32F1BF5FE13EEF058D6B3887BAD6, ___U3CU3E1__state_0)); }
+	inline static int32_t get_offset_of_U3CU3E1__state_0() { return static_cast<int32_t>(offsetof(U3CexplodeU3Ed__7_tEF39325588529DF3B15CD73DDF255CBE955FC7A8, ___U3CU3E1__state_0)); }
 	inline int32_t get_U3CU3E1__state_0() const { return ___U3CU3E1__state_0; }
 	inline int32_t* get_address_of_U3CU3E1__state_0() { return &___U3CU3E1__state_0; }
 	inline void set_U3CU3E1__state_0(int32_t value)
@@ -12130,7 +12130,7 @@ public:
 		___U3CU3E1__state_0 = value;
 	}
 
-	inline static int32_t get_offset_of_U3CU3E2__current_1() { return static_cast<int32_t>(offsetof(U3CexplodeU3Ed__8_tA74F3100068A32F1BF5FE13EEF058D6B3887BAD6, ___U3CU3E2__current_1)); }
+	inline static int32_t get_offset_of_U3CU3E2__current_1() { return static_cast<int32_t>(offsetof(U3CexplodeU3Ed__7_tEF39325588529DF3B15CD73DDF255CBE955FC7A8, ___U3CU3E2__current_1)); }
 	inline RuntimeObject * get_U3CU3E2__current_1() const { return ___U3CU3E2__current_1; }
 	inline RuntimeObject ** get_address_of_U3CU3E2__current_1() { return &___U3CU3E2__current_1; }
 	inline void set_U3CU3E2__current_1(RuntimeObject * value)
@@ -12139,7 +12139,7 @@ public:
 		Il2CppCodeGenWriteBarrier((void**)(&___U3CU3E2__current_1), (void*)value);
 	}
 
-	inline static int32_t get_offset_of_U3CU3E4__this_2() { return static_cast<int32_t>(offsetof(U3CexplodeU3Ed__8_tA74F3100068A32F1BF5FE13EEF058D6B3887BAD6, ___U3CU3E4__this_2)); }
+	inline static int32_t get_offset_of_U3CU3E4__this_2() { return static_cast<int32_t>(offsetof(U3CexplodeU3Ed__7_tEF39325588529DF3B15CD73DDF255CBE955FC7A8, ___U3CU3E4__this_2)); }
 	inline Exploder_t5C3ED28A081BA7E71B37D46E711C7F56228F7486 * get_U3CU3E4__this_2() const { return ___U3CU3E4__this_2; }
 	inline Exploder_t5C3ED28A081BA7E71B37D46E711C7F56228F7486 ** get_address_of_U3CU3E4__this_2() { return &___U3CU3E4__this_2; }
 	inline void set_U3CU3E4__this_2(Exploder_t5C3ED28A081BA7E71B37D46E711C7F56228F7486 * value)
@@ -73402,12 +73402,10 @@ public:
 	int32_t ___probeCount_8;
 	// System.Single Exploder::explodeDuration
 	float ___explodeDuration_9;
-	// UnityEngine.AudioSource Exploder::audio
-	AudioSource_tC4BF65AF8CDCAA63724BB3CA59A7A29249269E6B * ___audio_10;
 	// System.Boolean Exploder::exploded
-	bool ___exploded_11;
+	bool ___exploded_10;
 	// System.Boolean Exploder::wasTrigger
-	bool ___wasTrigger_12;
+	bool ___wasTrigger_11;
 
 public:
 	inline static int32_t get_offset_of_explosionTime_4() { return static_cast<int32_t>(offsetof(Exploder_t5C3ED28A081BA7E71B37D46E711C7F56228F7486, ___explosionTime_4)); }
@@ -73458,29 +73456,20 @@ public:
 		___explodeDuration_9 = value;
 	}
 
-	inline static int32_t get_offset_of_audio_10() { return static_cast<int32_t>(offsetof(Exploder_t5C3ED28A081BA7E71B37D46E711C7F56228F7486, ___audio_10)); }
-	inline AudioSource_tC4BF65AF8CDCAA63724BB3CA59A7A29249269E6B * get_audio_10() const { return ___audio_10; }
-	inline AudioSource_tC4BF65AF8CDCAA63724BB3CA59A7A29249269E6B ** get_address_of_audio_10() { return &___audio_10; }
-	inline void set_audio_10(AudioSource_tC4BF65AF8CDCAA63724BB3CA59A7A29249269E6B * value)
+	inline static int32_t get_offset_of_exploded_10() { return static_cast<int32_t>(offsetof(Exploder_t5C3ED28A081BA7E71B37D46E711C7F56228F7486, ___exploded_10)); }
+	inline bool get_exploded_10() const { return ___exploded_10; }
+	inline bool* get_address_of_exploded_10() { return &___exploded_10; }
+	inline void set_exploded_10(bool value)
 	{
-		___audio_10 = value;
-		Il2CppCodeGenWriteBarrier((void**)(&___audio_10), (void*)value);
+		___exploded_10 = value;
 	}
 
-	inline static int32_t get_offset_of_exploded_11() { return static_cast<int32_t>(offsetof(Exploder_t5C3ED28A081BA7E71B37D46E711C7F56228F7486, ___exploded_11)); }
-	inline bool get_exploded_11() const { return ___exploded_11; }
-	inline bool* get_address_of_exploded_11() { return &___exploded_11; }
-	inline void set_exploded_11(bool value)
+	inline static int32_t get_offset_of_wasTrigger_11() { return static_cast<int32_t>(offsetof(Exploder_t5C3ED28A081BA7E71B37D46E711C7F56228F7486, ___wasTrigger_11)); }
+	inline bool get_wasTrigger_11() const { return ___wasTrigger_11; }
+	inline bool* get_address_of_wasTrigger_11() { return &___wasTrigger_11; }
+	inline void set_wasTrigger_11(bool value)
 	{
-		___exploded_11 = value;
-	}
-
-	inline static int32_t get_offset_of_wasTrigger_12() { return static_cast<int32_t>(offsetof(Exploder_t5C3ED28A081BA7E71B37D46E711C7F56228F7486, ___wasTrigger_12)); }
-	inline bool get_wasTrigger_12() const { return ___wasTrigger_12; }
-	inline bool* get_address_of_wasTrigger_12() { return &___wasTrigger_12; }
-	inline void set_wasTrigger_12(bool value)
-	{
-		___wasTrigger_12 = value;
+		___wasTrigger_11 = value;
 	}
 };
 
@@ -91198,7 +91187,7 @@ const Il2CppTypeDefinitionSizes g_typeDefinitionSize5974 = { sizeof (U3CemulateU
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize5975;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize5975 = { sizeof (VolumetricComponent2D_t504E3FD7ACF4B5F810743739621B2212E330D44A), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize5976;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize5976 = { sizeof (U3CexplodeU3Ed__8_tA74F3100068A32F1BF5FE13EEF058D6B3887BAD6), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize5976 = { sizeof (U3CexplodeU3Ed__7_tEF39325588529DF3B15CD73DDF255CBE955FC7A8), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize5977;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize5977 = { sizeof (Exploder_t5C3ED28A081BA7E71B37D46E711C7F56228F7486), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize5978;
