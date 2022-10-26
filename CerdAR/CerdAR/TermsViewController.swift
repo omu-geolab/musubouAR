@@ -33,18 +33,18 @@ class TermsViewController: UIViewController {
     }
     @IBAction func continousApp(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
-        let osmVC = osmViewController()
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        appDelegate.window?.rootViewController = osmVC
-//        let view = UIStoryboard(name: "OptionView", bundle: .main)
-//        if let vc = view.instantiateInitialViewController() as? OptionViewController {
-//            let appDelegate = UIApplication.shared.delegate as! AppDelegate
-//            let window = appDelegate.window
-//            if let window = window {
-//              window.rootViewController = vc
-//              window.makeKeyAndVisible()
-//            }
-//        }
+//        let osmVC = osmViewController()
+//        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+//        appDelegate.window?.rootViewController = osmVC
+        let view = UIStoryboard(name: "OptionView", bundle: .main)
+        if let vc = view.instantiateInitialViewController() as? OptionViewController {
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            let window = appDelegate.window
+            if let window = window {
+              window.rootViewController = vc
+              window.makeKeyAndVisible()
+            }
+        }
     }
 }
 

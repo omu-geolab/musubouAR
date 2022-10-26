@@ -92,7 +92,15 @@ extension WorkoutViewController:WorkoutCellDelegate {
     func send(workout: HKWorkout) {
         let semaphore = DispatchSemaphore (value: 0)
         confirm(title: "送信", message: "MUSUBOUへデータを登録しますか？", okAction: {_ in
-            let date = workout.startDate.toString(format: "yyyy-MM-dd HH-mm-ss Z") ?? ""
+            let formatterDate = ISO8601DateFormatter()
+//            let date =  workout.startDate.toString(format: "yyyy-MM-dd HH-mm-ss Z") ?? ""
+            let date =  formatterDate.string(from: workout.startDate)
+            if #available(iOS 15, *) {
+                print("送信時刻：　"+Date.now.toString(format: "yyyy-MM-dd HH-mm-ss")!)
+            } else {
+                // Fallback on earlier versions
+            }
+            print("ファイル名：　"+date+".gpx")
             let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent(date).appendingPathExtension("gpx").path
             do{
                
