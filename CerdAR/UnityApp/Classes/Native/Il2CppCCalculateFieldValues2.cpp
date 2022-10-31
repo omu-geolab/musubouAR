@@ -2207,6 +2207,34 @@ public:
 };
 
 
+// System.Nullable`1<System.Double>
+struct Nullable_1_t75730434CAD4E48A4EE117588CFD586FFBCAC209 
+{
+public:
+	// T System.Nullable`1::value
+	double ___value_0;
+	// System.Boolean System.Nullable`1::has_value
+	bool ___has_value_1;
+
+public:
+	inline static int32_t get_offset_of_value_0() { return static_cast<int32_t>(offsetof(Nullable_1_t75730434CAD4E48A4EE117588CFD586FFBCAC209, ___value_0)); }
+	inline double get_value_0() const { return ___value_0; }
+	inline double* get_address_of_value_0() { return &___value_0; }
+	inline void set_value_0(double value)
+	{
+		___value_0 = value;
+	}
+
+	inline static int32_t get_offset_of_has_value_1() { return static_cast<int32_t>(offsetof(Nullable_1_t75730434CAD4E48A4EE117588CFD586FFBCAC209, ___has_value_1)); }
+	inline bool get_has_value_1() const { return ___has_value_1; }
+	inline bool* get_address_of_has_value_1() { return &___has_value_1; }
+	inline void set_has_value_1(bool value)
+	{
+		___has_value_1 = value;
+	}
+};
+
+
 // System.Nullable`1<System.Int32>
 struct Nullable_1_t864FD0051A05D37F91C857AB496BFCB3FE756103 
 {
@@ -4567,6 +4595,8 @@ public:
 	String_t* ___U3Cpic_typeU3Ek__BackingField_13;
 	// System.String JSONModel.Properties::<photo>k__BackingField
 	String_t* ___U3CphotoU3Ek__BackingField_14;
+	// System.Nullable`1<System.Double> JSONModel.Properties::<water_level>k__BackingField
+	Nullable_1_t75730434CAD4E48A4EE117588CFD586FFBCAC209  ___U3Cwater_levelU3Ek__BackingField_15;
 
 public:
 	inline static int32_t get_offset_of_U3CiconU3Ek__BackingField_0() { return static_cast<int32_t>(offsetof(Properties_t93A3BA06C499B7848DA469507D1A0FBC32D45A3A, ___U3CiconU3Ek__BackingField_0)); }
@@ -4700,6 +4730,14 @@ public:
 	{
 		___U3CphotoU3Ek__BackingField_14 = value;
 		Il2CppCodeGenWriteBarrier((void**)(&___U3CphotoU3Ek__BackingField_14), (void*)value);
+	}
+
+	inline static int32_t get_offset_of_U3Cwater_levelU3Ek__BackingField_15() { return static_cast<int32_t>(offsetof(Properties_t93A3BA06C499B7848DA469507D1A0FBC32D45A3A, ___U3Cwater_levelU3Ek__BackingField_15)); }
+	inline Nullable_1_t75730434CAD4E48A4EE117588CFD586FFBCAC209  get_U3Cwater_levelU3Ek__BackingField_15() const { return ___U3Cwater_levelU3Ek__BackingField_15; }
+	inline Nullable_1_t75730434CAD4E48A4EE117588CFD586FFBCAC209 * get_address_of_U3Cwater_levelU3Ek__BackingField_15() { return &___U3Cwater_levelU3Ek__BackingField_15; }
+	inline void set_U3Cwater_levelU3Ek__BackingField_15(Nullable_1_t75730434CAD4E48A4EE117588CFD586FFBCAC209  value)
+	{
+		___U3Cwater_levelU3Ek__BackingField_15 = value;
 	}
 };
 
@@ -17180,7 +17218,7 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6108[8] =
 	MouseOrbit_t751AE508C197C54B7B2DDF8B3C7B35BFB3C0EC2E::get_offset_of_angleX_10(),
 	MouseOrbit_t751AE508C197C54B7B2DDF8B3C7B35BFB3C0EC2E::get_offset_of_angleY_11(),
 };
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6109[15] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6109[16] = 
 {
 	Properties_t93A3BA06C499B7848DA469507D1A0FBC32D45A3A::get_offset_of_U3CiconU3Ek__BackingField_0(),
 	Properties_t93A3BA06C499B7848DA469507D1A0FBC32D45A3A::get_offset_of_U3CidU3Ek__BackingField_1(),
@@ -17197,6 +17235,7 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6109[15] =
 	Properties_t93A3BA06C499B7848DA469507D1A0FBC32D45A3A::get_offset_of_U3CmovieU3Ek__BackingField_12(),
 	Properties_t93A3BA06C499B7848DA469507D1A0FBC32D45A3A::get_offset_of_U3Cpic_typeU3Ek__BackingField_13(),
 	Properties_t93A3BA06C499B7848DA469507D1A0FBC32D45A3A::get_offset_of_U3CphotoU3Ek__BackingField_14(),
+	Properties_t93A3BA06C499B7848DA469507D1A0FBC32D45A3A::get_offset_of_U3Cwater_levelU3Ek__BackingField_15(),
 };
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6110[2] = 
 {

@@ -23,22 +23,27 @@ class OptionViewController: UIViewController {
         view.removeFromSuperview()
     }
     @IBAction func appStart(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-        let osmVC = osmViewController()
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        appDelegate.window?.rootViewController = osmVC
+       
+        let view = UIStoryboard(name: "WorkoutsView", bundle: .main)
+        
+        if let vc = view.instantiateInitialViewController() as? WorkoutViewController {
+            vc.modalPresentationStyle = .fullScreen
+            weak var pvc = self.presentingViewController
+            self.dismiss(animated: false, completion: {
+                pvc?.present(vc, animated: false, completion: nil)
+            })
+        }
     }
     
     @IBAction func loginStart(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        
         let view = UIStoryboard(name: "LoginView", bundle: .main)
         if let vc = view.instantiateInitialViewController() as? LoginViewController {
-            let appDelegate = UIApplication.shared.delegate as! AppDelegate
-            let window = appDelegate.window
-            if let window = window {
-              window.rootViewController = vc
-              window.makeKeyAndVisible()
-            }
+            vc.modalPresentationStyle = .fullScreen
+            weak var pvc = self.presentingViewController
+            self.dismiss(animated: false, completion: {
+                pvc?.present(vc, animated: false, completion: nil)
+            })
         }
     }
 }

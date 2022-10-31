@@ -3077,47 +3077,51 @@ extern void Properties_set_pic_type_mEE0CE33FF1BA7CEE91DDDA9BB5CA0EA86809DC60 (v
 extern void Properties_get_photo_mE89456BC3ADFFAD1676EC82ECEDA3E48F2A30972 (void);
 // 0x000005FE System.Void JSONModel.Properties::set_photo(System.String)
 extern void Properties_set_photo_mAE38814DDAEDF4DFD5C0F9CB3FC59ED8F0339F14 (void);
-// 0x000005FF System.Void JSONModel.Properties::.ctor()
+// 0x000005FF System.Nullable`1<System.Double> JSONModel.Properties::get_water_level()
+extern void Properties_get_water_level_mA2DCF204B67965D93B7AACD6BFDD29A50071C08F (void);
+// 0x00000600 System.Void JSONModel.Properties::set_water_level(System.Nullable`1<System.Double>)
+extern void Properties_set_water_level_mA5543B61DE90A04559CC17E2891543D6112B03C7 (void);
+// 0x00000601 System.Void JSONModel.Properties::.ctor()
 extern void Properties__ctor_m76BDFD561290BCEF4A9FCC700412328A1BEC3803 (void);
-// 0x00000600 System.String JSONModel.Geometry::get_type()
+// 0x00000602 System.String JSONModel.Geometry::get_type()
 extern void Geometry_get_type_m1887A492B188BFB1F9F83DFA9D858EDC7C0B5CB3 (void);
-// 0x00000601 System.Void JSONModel.Geometry::set_type(System.String)
+// 0x00000603 System.Void JSONModel.Geometry::set_type(System.String)
 extern void Geometry_set_type_m0AC6BEF9990A280BD29326C644485AAA20338057 (void);
-// 0x00000602 System.Collections.Generic.List`1<System.Double> JSONModel.Geometry::get_coordinates()
+// 0x00000604 System.Collections.Generic.List`1<System.Double> JSONModel.Geometry::get_coordinates()
 extern void Geometry_get_coordinates_m65BB75C86E83D46BB5EE1275C85B32A0111AB375 (void);
-// 0x00000603 System.Void JSONModel.Geometry::set_coordinates(System.Collections.Generic.List`1<System.Double>)
+// 0x00000605 System.Void JSONModel.Geometry::set_coordinates(System.Collections.Generic.List`1<System.Double>)
 extern void Geometry_set_coordinates_m71CC1DDAEB1DB65565E80B34B4FD40621C3E4D87 (void);
-// 0x00000604 System.Void JSONModel.Geometry::.ctor()
+// 0x00000606 System.Void JSONModel.Geometry::.ctor()
 extern void Geometry__ctor_m3FFD17C9CDF524B05385A70CCAECD65CD82A0121 (void);
-// 0x00000605 System.String JSONModel.Feature::get_type()
+// 0x00000607 System.String JSONModel.Feature::get_type()
 extern void Feature_get_type_mF2E77FE6940C11B184B8DBCC79DBF03C0295D183 (void);
-// 0x00000606 System.Void JSONModel.Feature::set_type(System.String)
+// 0x00000608 System.Void JSONModel.Feature::set_type(System.String)
 extern void Feature_set_type_m31AD9B5EBFC2E508969A04CBF14EA639EF0609B9 (void);
-// 0x00000607 JSONModel.Properties JSONModel.Feature::get_properties()
+// 0x00000609 JSONModel.Properties JSONModel.Feature::get_properties()
 extern void Feature_get_properties_m2D29DD047BD28E7FE343E430CA66CDA093D4B72F (void);
-// 0x00000608 System.Void JSONModel.Feature::set_properties(JSONModel.Properties)
+// 0x0000060A System.Void JSONModel.Feature::set_properties(JSONModel.Properties)
 extern void Feature_set_properties_m9E28FE4C74CD556CA38B1DBF4023661FCB0AA98E (void);
-// 0x00000609 JSONModel.Geometry JSONModel.Feature::get_geometry()
+// 0x0000060B JSONModel.Geometry JSONModel.Feature::get_geometry()
 extern void Feature_get_geometry_mAF48ABD0CBD61DAC2CB073868EFAE6EAD00D5C2E (void);
-// 0x0000060A System.Void JSONModel.Feature::set_geometry(JSONModel.Geometry)
+// 0x0000060C System.Void JSONModel.Feature::set_geometry(JSONModel.Geometry)
 extern void Feature_set_geometry_m00F69594E38D4DBF01CC1A42A53B6ED4D3DD4CDA (void);
-// 0x0000060B System.String JSONModel.Feature::get_id()
+// 0x0000060D System.String JSONModel.Feature::get_id()
 extern void Feature_get_id_m8F409898D966264752DDBAF62473FA0ACF79EF07 (void);
-// 0x0000060C System.Void JSONModel.Feature::set_id(System.String)
+// 0x0000060E System.Void JSONModel.Feature::set_id(System.String)
 extern void Feature_set_id_m7B4E7DAA1B73A0AAAA5DFECCC74514A17FF5FE80 (void);
-// 0x0000060D System.Void JSONModel.Feature::.ctor()
+// 0x0000060F System.Void JSONModel.Feature::.ctor()
 extern void Feature__ctor_m0D546A98532F40794E22C4A0E9679B56F6ED0D6E (void);
-// 0x0000060E System.String JSONModel.Root::get_type()
+// 0x00000610 System.String JSONModel.Root::get_type()
 extern void Root_get_type_m5F0226A3F03F1CD9A912726008E49735966BA95F (void);
-// 0x0000060F System.Void JSONModel.Root::set_type(System.String)
+// 0x00000611 System.Void JSONModel.Root::set_type(System.String)
 extern void Root_set_type_mECC5E5A23C4B9A4EF1FEC8156C99F5CB07502F88 (void);
-// 0x00000610 System.Collections.Generic.List`1<JSONModel.Feature> JSONModel.Root::get_features()
+// 0x00000612 System.Collections.Generic.List`1<JSONModel.Feature> JSONModel.Root::get_features()
 extern void Root_get_features_m8CEF9B138BE459A7414671B9D5E2DC21B91633A3 (void);
-// 0x00000611 System.Void JSONModel.Root::set_features(System.Collections.Generic.List`1<JSONModel.Feature>)
+// 0x00000613 System.Void JSONModel.Root::set_features(System.Collections.Generic.List`1<JSONModel.Feature>)
 extern void Root_set_features_mFEB1BA3E6B7D46DDCA47BEE4B0FA13C78C1A2AE7 (void);
-// 0x00000612 System.Void JSONModel.Root::.ctor()
+// 0x00000614 System.Void JSONModel.Root::.ctor()
 extern void Root__ctor_m0E0B7CED7B239A774BF98F310E5E14899979B087 (void);
-static Il2CppMethodPointer s_methodPointers[1554] = 
+static Il2CppMethodPointer s_methodPointers[1556] = 
 {
 	EmbeddedAttribute__ctor_m90D0B6DEB625101355554D49B2EE2FB67C875860,
 	IsReadOnlyAttribute__ctor_mF1843241F60B2240CFAE651F1FD8A7AE17E32ECD,
@@ -4653,6 +4657,8 @@ static Il2CppMethodPointer s_methodPointers[1554] =
 	Properties_set_pic_type_mEE0CE33FF1BA7CEE91DDDA9BB5CA0EA86809DC60,
 	Properties_get_photo_mE89456BC3ADFFAD1676EC82ECEDA3E48F2A30972,
 	Properties_set_photo_mAE38814DDAEDF4DFD5C0F9CB3FC59ED8F0339F14,
+	Properties_get_water_level_mA2DCF204B67965D93B7AACD6BFDD29A50071C08F,
+	Properties_set_water_level_mA5543B61DE90A04559CC17E2891543D6112B03C7,
 	Properties__ctor_m76BDFD561290BCEF4A9FCC700412328A1BEC3803,
 	Geometry_get_type_m1887A492B188BFB1F9F83DFA9D858EDC7C0B5CB3,
 	Geometry_set_type_m0AC6BEF9990A280BD29326C644485AAA20338057,
@@ -4687,7 +4693,7 @@ static Il2CppTokenAdjustorThunkPair s_adjustorThunks[5] =
 	{ 0x06000219, NamedPrefab__ctor_m4C5A1EAC954851954E10ADF5F4ED646967BAB252_AdjustorThunk },
 	{ 0x06000573, ParseResult__ctor_m3A83790FCE0BCB507E4EF20EB67FB22A8A0DD819_AdjustorThunk },
 };
-static const int32_t s_InvokerIndices[1554] = 
+static const int32_t s_InvokerIndices[1556] = 
 {
 	5219,
 	5219,
@@ -6223,6 +6229,8 @@ static const int32_t s_InvokerIndices[1554] =
 	4180,
 	5134,
 	4180,
+	4963,
+	4005,
 	5219,
 	5134,
 	4180,
@@ -6263,7 +6271,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	1554,
+	1556,
 	s_methodPointers,
 	5,
 	s_adjustorThunks,

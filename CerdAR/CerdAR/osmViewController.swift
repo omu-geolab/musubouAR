@@ -1218,11 +1218,22 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
      */
     @objc internal func showActiveWorkout(_ sender: UIButton) {
         closeConfigBackground()
-        let view = UIStoryboard(name: "WorkoutsView", bundle: .main)
-        if let vc = view.instantiateInitialViewController() as? WorkoutViewController {
-            vc.modalPresentationStyle = .fullScreen
-            self.present(vc, animated: true, completion: nil)
+        if isLogin {
+            let view = UIStoryboard(name: "WorkoutsView", bundle: .main)
+            if let vc = view.instantiateInitialViewController() as? WorkoutViewController {
+                vc.modalPresentationStyle = .fullScreen
+                self.present(vc, animated: true, completion: nil)
+            }
+        }else {
+            let view = UIStoryboard(name: "OptionView", bundle: .main)
+            if let vc = view.instantiateInitialViewController() as? OptionViewController {
+                vc.modalPresentationStyle = .fullScreen
+                self.present(vc, animated: true, completion: nil)
+            }
         }
+
+        
+      
     }
     
     

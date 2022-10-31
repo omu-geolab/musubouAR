@@ -21,15 +21,23 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func closeLogin(_ sender: Any) {
+        self.dismiss(animated: false, completion: nil)
+    }
+    
     @IBAction func loginMusubou(_ sender: Any) {
         if validateEmail(candidate: emailText.text ?? ""){
             email = emailText.text!
             isLogin = true
-            self.dismiss(animated: true, completion: nil)
-            let osmVC = osmViewController()
-            let appDelegate = UIApplication.shared.delegate as! AppDelegate
-            appDelegate.window?.rootViewController = osmVC
+            
+            let view = UIStoryboard(name: "WorkoutsView", bundle: .main)
+            if let vc = view.instantiateInitialViewController() as? WorkoutViewController {
+                vc.modalPresentationStyle = .fullScreen
+                weak var pvc = self.presentingViewController
+                self.dismiss(animated: false, completion: {
+                    pvc?.present(vc, animated: false, completion: nil)
+                })
+            }
         }else{
             alert(title: "入力エラー", message: "メールアドレスの形式が合っていません。")
         }
@@ -43,10 +51,14 @@ class LoginViewController: UIViewController {
             if let emailAddress = user.profile?.email {
                 email = emailAddress
                 isLogin = true
-                self.dismiss(animated: true, completion: nil)
-                let osmVC = osmViewController()
-                let appDelegate = UIApplication.shared.delegate as! AppDelegate
-                appDelegate.window?.rootViewController = osmVC
+                let view = UIStoryboard(name: "WorkoutsView", bundle: .main)
+                if let vc = view.instantiateInitialViewController() as? WorkoutViewController {
+                    vc.modalPresentationStyle = .fullScreen
+                    weak var pvc = self.presentingViewController
+                    self.dismiss(animated: false, completion: {
+                        pvc?.present(vc, animated: false, completion: nil)
+                    })
+                }
             }
 
           }
