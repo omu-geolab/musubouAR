@@ -236,6 +236,8 @@ struct WaitForEndOfFrame_t082FDFEAAFF92937632C357C39E55C84B8FD06D4;
 struct WaitForSeconds_t8F9189BE6E467C98C99177038881F8982E0E4013;
 // UnityEngine.XR.ARSubsystems.XRSessionSubsystem
 struct XRSessionSubsystem_t8AD3C01568AA19BF038D23A6031FF9814CAF93CD;
+// Defective.JSON.JSONObject/AddJSONContents
+struct AddJSONContents_t4C79C7E3E895473A341F05EAC2ADA3BAFDF92AD9;
 // Defective.JSON.JSONObject/FieldNotFound
 struct FieldNotFound_t8598EEA3FC14D52B991F461CF0F125AADAB50265;
 // Defective.JSON.JSONObject/GetFieldResponse
@@ -3347,6 +3349,15 @@ public:
 };
 
 
+// Defective.JSON.JSONObject/AddJSONContents
+struct AddJSONContents_t4C79C7E3E895473A341F05EAC2ADA3BAFDF92AD9  : public MulticastDelegate_t
+{
+public:
+
+public:
+};
+
+
 // Defective.JSON.JSONObject/FieldNotFound
 struct FieldNotFound_t8598EEA3FC14D52B991F461CF0F125AADAB50265  : public MulticastDelegate_t
 {
@@ -4611,6 +4622,143 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VolumetricComponent2D_resetColors_mB11A9
 // System.Void UnityEngine.Vector3::.ctor(System.Single,System.Single,System.Single)
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector3__ctor_m57495F692C6CE1CEF278CAD9A98221165D37E636_inline (Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E * __this, float ___x0, float ___y1, float ___z2, const RuntimeMethod* method);
 IL2CPP_EXTERN_C int32_t DEFAULT_CALL ARFoundationSamples_GetCurrentThermalState();
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void Defective.JSON.JSONObject/AddJSONContents::.ctor(System.Object,System.IntPtr)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AddJSONContents__ctor_m3B702C0666D8B1BCBAA66664B7B5AEB383A9A807 (AddJSONContents_t4C79C7E3E895473A341F05EAC2ADA3BAFDF92AD9 * __this, RuntimeObject * ___object0, intptr_t ___method1, const RuntimeMethod* method)
+{
+	if (___object0 == NULL && !MethodIsStatic((RuntimeMethod*)___method1))
+	{
+		il2cpp_codegen_raise_exception(il2cpp_codegen_get_argument_exception(NULL, "Delegate to an instance method cannot have null 'this'."), NULL);
+	}
+	__this->set_method_ptr_0(il2cpp_codegen_get_method_pointer((RuntimeMethod*)___method1));
+	__this->set_method_3(___method1);
+	__this->set_m_target_2(___object0);
+}
+// System.Void Defective.JSON.JSONObject/AddJSONContents::Invoke(Defective.JSON.JSONObject)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AddJSONContents_Invoke_m399DCCDA4AD3EEA12A8EB6F2EF24A1C9F9AB7C63 (AddJSONContents_t4C79C7E3E895473A341F05EAC2ADA3BAFDF92AD9 * __this, JSONObject_t8DACBEBC27983927BF85CAE7AEBAB1A481137818 * ___self0, const RuntimeMethod* method)
+{
+	DelegateU5BU5D_t677D8FE08A5F99E8EE49150B73966CD6E9BF7DB8* delegateArrayToInvoke = __this->get_delegates_11();
+	Delegate_t** delegatesToInvoke;
+	il2cpp_array_size_t length;
+	if (delegateArrayToInvoke != NULL)
+	{
+		length = delegateArrayToInvoke->max_length;
+		delegatesToInvoke = reinterpret_cast<Delegate_t**>(delegateArrayToInvoke->GetAddressAtUnchecked(0));
+	}
+	else
+	{
+		length = 1;
+		delegatesToInvoke = reinterpret_cast<Delegate_t**>(&__this);
+	}
+
+	for (il2cpp_array_size_t i = 0; i < length; i++)
+	{
+		Delegate_t* currentDelegate = delegatesToInvoke[i];
+		Il2CppMethodPointer targetMethodPointer = currentDelegate->get_method_ptr_0();
+		RuntimeObject* targetThis = currentDelegate->get_m_target_2();
+		RuntimeMethod* targetMethod = (RuntimeMethod*)(currentDelegate->get_method_3());
+		if (!il2cpp_codegen_method_is_virtual(targetMethod))
+		{
+			il2cpp_codegen_raise_execution_engine_exception_if_method_is_not_found(targetMethod);
+		}
+		bool ___methodIsStatic = MethodIsStatic(targetMethod);
+		int ___parameterCount = il2cpp_codegen_method_parameter_count(targetMethod);
+		if (___methodIsStatic)
+		{
+			if (___parameterCount == 1)
+			{
+				// open
+				typedef void (*FunctionPointerType) (JSONObject_t8DACBEBC27983927BF85CAE7AEBAB1A481137818 *, const RuntimeMethod*);
+				((FunctionPointerType)targetMethodPointer)(___self0, targetMethod);
+			}
+			else
+			{
+				// closed
+				typedef void (*FunctionPointerType) (void*, JSONObject_t8DACBEBC27983927BF85CAE7AEBAB1A481137818 *, const RuntimeMethod*);
+				((FunctionPointerType)targetMethodPointer)(targetThis, ___self0, targetMethod);
+			}
+		}
+		else if (___parameterCount != 1)
+		{
+			// open
+			if (il2cpp_codegen_method_is_virtual(targetMethod) && il2cpp_codegen_delegate_has_invoker((Il2CppDelegate*)__this))
+			{
+				if (il2cpp_codegen_method_is_generic_instance(targetMethod))
+				{
+					if (il2cpp_codegen_method_is_interface_method(targetMethod))
+						GenericInterfaceActionInvoker0::Invoke(targetMethod, ___self0);
+					else
+						GenericVirtActionInvoker0::Invoke(targetMethod, ___self0);
+				}
+				else
+				{
+					if (il2cpp_codegen_method_is_interface_method(targetMethod))
+						InterfaceActionInvoker0::Invoke(il2cpp_codegen_method_get_slot(targetMethod), il2cpp_codegen_method_get_declaring_type(targetMethod), ___self0);
+					else
+						VirtActionInvoker0::Invoke(il2cpp_codegen_method_get_slot(targetMethod), ___self0);
+				}
+			}
+			else
+			{
+				typedef void (*FunctionPointerType) (JSONObject_t8DACBEBC27983927BF85CAE7AEBAB1A481137818 *, const RuntimeMethod*);
+				((FunctionPointerType)targetMethodPointer)(___self0, targetMethod);
+			}
+		}
+		else
+		{
+			// closed
+			if (targetThis != NULL && il2cpp_codegen_method_is_virtual(targetMethod) && !il2cpp_codegen_object_is_of_sealed_type(targetThis) && il2cpp_codegen_delegate_has_invoker((Il2CppDelegate*)__this))
+			{
+				if (il2cpp_codegen_method_is_generic_instance(targetMethod))
+				{
+					if (il2cpp_codegen_method_is_interface_method(targetMethod))
+						GenericInterfaceActionInvoker1< JSONObject_t8DACBEBC27983927BF85CAE7AEBAB1A481137818 * >::Invoke(targetMethod, targetThis, ___self0);
+					else
+						GenericVirtActionInvoker1< JSONObject_t8DACBEBC27983927BF85CAE7AEBAB1A481137818 * >::Invoke(targetMethod, targetThis, ___self0);
+				}
+				else
+				{
+					if (il2cpp_codegen_method_is_interface_method(targetMethod))
+						InterfaceActionInvoker1< JSONObject_t8DACBEBC27983927BF85CAE7AEBAB1A481137818 * >::Invoke(il2cpp_codegen_method_get_slot(targetMethod), il2cpp_codegen_method_get_declaring_type(targetMethod), targetThis, ___self0);
+					else
+						VirtActionInvoker1< JSONObject_t8DACBEBC27983927BF85CAE7AEBAB1A481137818 * >::Invoke(il2cpp_codegen_method_get_slot(targetMethod), targetThis, ___self0);
+				}
+			}
+			else
+			{
+				if (___parameterCount == 0)
+				{
+					typedef void (*FunctionPointerType) (JSONObject_t8DACBEBC27983927BF85CAE7AEBAB1A481137818 *, const RuntimeMethod*);
+					((FunctionPointerType)targetMethodPointer)(___self0, targetMethod);
+				}
+				else
+				{
+					typedef void (*FunctionPointerType) (void*, JSONObject_t8DACBEBC27983927BF85CAE7AEBAB1A481137818 *, const RuntimeMethod*);
+					((FunctionPointerType)targetMethodPointer)(targetThis, ___self0, targetMethod);
+				}
+			}
+		}
+	}
+}
+// System.IAsyncResult Defective.JSON.JSONObject/AddJSONContents::BeginInvoke(Defective.JSON.JSONObject,System.AsyncCallback,System.Object)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* AddJSONContents_BeginInvoke_m7B089CCD296BC8D7ACE7346C7441543F16CA431F (AddJSONContents_t4C79C7E3E895473A341F05EAC2ADA3BAFDF92AD9 * __this, JSONObject_t8DACBEBC27983927BF85CAE7AEBAB1A481137818 * ___self0, AsyncCallback_tA7921BEF974919C46FF8F9D9867C567B200BB0EA * ___callback1, RuntimeObject * ___object2, const RuntimeMethod* method)
+{
+	void *__d_args[2] = {0};
+	__d_args[0] = ___self0;
+	return (RuntimeObject*)il2cpp_codegen_delegate_begin_invoke((RuntimeDelegate*)__this, __d_args, (RuntimeDelegate*)___callback1, (RuntimeObject*)___object2);;
+}
+// System.Void Defective.JSON.JSONObject/AddJSONContents::EndInvoke(System.IAsyncResult)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AddJSONContents_EndInvoke_mFBC492B9AA510587329064F695FD569BB4BDD771 (AddJSONContents_t4C79C7E3E895473A341F05EAC2ADA3BAFDF92AD9 * __this, RuntimeObject* ___result0, const RuntimeMethod* method)
+{
+	il2cpp_codegen_delegate_end_invoke((Il2CppAsyncResult*) ___result0, 0);
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
