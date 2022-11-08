@@ -527,6 +527,12 @@ class ARViewController: UIViewController,detailViewDelegate {
         mapView.allowsZooming = true
         mapView.allowsScrolling = true
         #endif
+        if isTestMode {
+            mapView.allowsTilting = true
+            mapView.allowsRotating = true
+            mapView.allowsZooming = true
+            mapView.allowsScrolling = true
+        }
         mapView.showsUserHeadingIndicator =  true
         mapView.layer.shadowColor = UIColor.black.cgColor
         mapView.layer.shadowRadius = 5
@@ -1065,7 +1071,7 @@ extension ARViewController: CLLocationManagerDelegate{
         }
         
         // 災害発生していないとき
-        if warnCount == 0 {
+        if warnCount == 0  {
             self.sceneView.overlaySKScene = OverlayScene(size: self.sceneView.bounds.size)
             vibration.vibStop()
             
@@ -1083,6 +1089,9 @@ extension ARViewController: CLLocationManagerDelegate{
             self.mapView.isHidden = false
         }
         #endif
+        if isTestMode {
+            self.mapView.isHidden = false
+        }
     }
     func updateOverlay( risk:Int){
         let size = self.sceneView.bounds.size
@@ -1537,6 +1546,12 @@ extension ARViewController: MGLMapViewDelegate {
         return false
     }
     func mapView(_ mapView: MGLMapView, regionDidChangeAnimated animated: Bool) {
+        if isTestMode {
+            userLat = self.mapView.centerCoordinate.latitude
+            userLon = self.mapView.centerCoordinate.longitude
+            updateAllDistances()
+            updateStatus()
+        }
 //                userLat = self.mapView.centerCoordinate.latitude
 //                userLon = self.mapView.centerCoordinate.longitude
         if mapView.zoomLevel >  levelZoomMap + 0.5 || mapView.zoomLevel <  levelZoomMap - 0.5 {
@@ -1548,13 +1563,14 @@ extension ARViewController: MGLMapViewDelegate {
     }
     
     func mapView(_ mapView: MGLMapView, didUpdate userLocation: MGLUserLocation?) {
-        
         if let location = userLocation?.location {
             altitude = location.altitude
-            userLat = location.coordinate.latitude
-            userLon = location.coordinate.longitude
-            updateAllDistances()
-            updateStatus()
+            if !isTestMode {
+                userLat = location.coordinate.latitude
+                userLon = location.coordinate.longitude
+                updateAllDistances()
+                updateStatus()
+            }
         }
     }
    

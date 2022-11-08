@@ -314,7 +314,10 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         
         // 画面の中心を現在地にするためのボタン生成
         let nowLoc_button = UIButton()
-        let locButImage: UIImage = UIImage(named: "map-icon")!
+        var locButImage: UIImage = UIImage(named: "map-icon")!
+        if isTestMode {
+            locButImage = UIImage(named: "map-center")!
+        }
         nowLoc_button.setImage(locButImage, for: UIControl.State())
         nowLoc_button.layer.shadowColor = UIColor.black.cgColor
         nowLoc_button.layer.shadowRadius = 5
@@ -331,6 +334,9 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         ]
         NSLayoutConstraint.activate(constraintsLocation)
         nowLoc_button.addTarget(self, action: #selector(self.nowLocate(_:)), for: .touchUpInside)
+        
+        let recognizer = UILongPressGestureRecognizer(target: self, action: #selector(self.onCenterMap(_:)))
+        nowLoc_button.addGestureRecognizer(recognizer)
         
         /*アニメーション設定*/
         nowLoc_button.startAnimatingPressActions()
@@ -587,6 +593,10 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
      * 拡大縮小に合わせて画像を張り替える
      */
     func mapView(_ mapView: MGLMapView, regionDidChangeAnimated animated: Bool) {
+        if isTestMode {
+            userLat = self.mapView.centerCoordinate.latitude
+            userLon = self.mapView.centerCoordinate.longitude
+        }
         //        userLat = self.mapView.centerCoordinate.latitude
         //        userLon = self.mapView.centerCoordinate.longitude
         if mapView.zoomLevel >  levelZoomMap + 0.5 || mapView.zoomLevel <  levelZoomMap - 0.5 {
@@ -855,10 +865,10 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
      * 目的地までの距離を計算し、新しくタグ画像を生成・貼り直しをする
      */
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        
-        userLat = (locationManager.location?.coordinate.latitude)!
-        userLon = (locationManager.location?.coordinate.longitude)!
-        
+        if !isTestMode {
+            userLat = (locationManager.location?.coordinate.latitude)!
+            userLon = (locationManager.location?.coordinate.longitude)!
+        }
     }
     
     
@@ -1218,19 +1228,24 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
      */
     @objc internal func showActiveWorkout(_ sender: UIButton) {
         closeConfigBackground()
-        if isLogin {
-            let view = UIStoryboard(name: "WorkoutsView", bundle: .main)
-            if let vc = view.instantiateInitialViewController() as? WorkoutViewController {
-                vc.modalPresentationStyle = .fullScreen
-                self.present(vc, animated: true, completion: nil)
-            }
-        }else {
-            let view = UIStoryboard(name: "OptionView", bundle: .main)
-            if let vc = view.instantiateInitialViewController() as? OptionViewController {
-                vc.modalPresentationStyle = .fullScreen
-                self.present(vc, animated: true, completion: nil)
-            }
+        let view = UIStoryboard(name: "WorkoutsView", bundle: .main)
+        if let vc = view.instantiateInitialViewController() as? WorkoutViewController {
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true, completion: nil)
         }
+//        if isLogin {
+//            let view = UIStoryboard(name: "WorkoutsView", bundle: .main)
+//            if let vc = view.instantiateInitialViewController() as? WorkoutViewController {
+//                vc.modalPresentationStyle = .fullScreen
+//                self.present(vc, animated: true, completion: nil)
+//            }
+//        }else {
+//            let view = UIStoryboard(name: "OptionView", bundle: .main)
+//            if let vc = view.instantiateInitialViewController() as? OptionViewController {
+//                vc.modalPresentationStyle = .fullScreen
+//                self.present(vc, animated: true, completion: nil)
+//            }
+//        }
 
         
       
@@ -1448,9 +1463,32 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
      * 画面が現在地を中心に表示する
      */
     @objc internal func nowLocate(_ sender: UIButton) {
-        playButtonSound()
-        self.mapView.setCenter(CLLocationCoordinate2D(latitude: self.mapView.userLocation!.coordinate.latitude, longitude: self.mapView.userLocation!.coordinate.longitude), zoomLevel: 16.5, animated: true)
+//        if !isTestMode {
+            playButtonSound()
+            self.mapView.setCenter(CLLocationCoordinate2D(latitude: self.mapView.userLocation!.coordinate.latitude, longitude: self.mapView.userLocation!.coordinate.longitude), zoomLevel: 16.5, animated: true)
+//        }
+      
         
+    }
+    
+    @objc internal func onCenterMap(_ sender: UILongPressGestureRecognizer) {
+        if sender.state == .ended {
+            playButtonSound()
+            isTestMode = !isTestMode
+            if let button = sender.view as? UIButton {
+                if isTestMode {
+                    let locButImage: UIImage = UIImage(named: "map-center")!
+                    button.setImage(locButImage, for: .normal)
+                    userLat = self.mapView.centerCoordinate.latitude
+                    userLon = self.mapView.centerCoordinate.longitude
+                }else {
+                    let locButImage: UIImage = UIImage(named: "map-icon")!
+                    button.setImage(locButImage, for: .normal)
+                }
+            }
+        }
+        
+
     }
     
     /*

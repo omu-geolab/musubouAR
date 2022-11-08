@@ -12,11 +12,13 @@ import Foundation
 #if canImport(FoundationNetworking)
 import FoundationNetworking
 #endif
+import GoogleSignIn
 
 class WorkoutViewController: UIViewController {
     
     @IBOutlet weak var workoutListview: UITableView!
     private var workouts: [HKWorkout]?
+    let signInConfig = GIDConfiguration.init(clientID: "58994390067-nm49a5nsa0aobbarufiu0pveqtac67ll.apps.googleusercontent.com")
     override func viewDidLoad() {
         super.viewDidLoad()
         workoutListview.dataSource = self
@@ -65,7 +67,7 @@ extension WorkoutViewController:UITableViewDataSource {
         let workout = workouts[indexPath.row]
         cell.workout = workout
         cell.delegate = self
-        cell.setVisibleSendButton(isVisible: isLogin)
+        cell.setVisibleSendButton(isVisible: true)
         cell.render()
         return cell
     }
@@ -88,8 +90,7 @@ extension WorkoutViewController:UITableViewDataSource {
 //    }
 }
 extension WorkoutViewController:WorkoutCellDelegate {
-   
-    func send(workout: HKWorkout) {
+    func sendFile(workout:HKWorkout) {
         let semaphore = DispatchSemaphore (value: 0)
         confirm(title: "送信", message: "MUSUBOUへデータを登録しますか？", okAction: {_ in
             let formatterDate = ISO8601DateFormatter()
@@ -182,6 +183,31 @@ extension WorkoutViewController:WorkoutCellDelegate {
                 return
             }
         }, cancelAction:  {_ in })
+    }
+    func validateEmail(candidate: String) -> Bool {
+           let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}"
+           return NSPredicate(format: "SELF MATCHES %@", emailRegex).evaluate(with: candidate)
+    }
+    
+   
+    func send(workout: HKWorkout) {
+        if !isLogin {
+            GIDSignIn.sharedInstance.signIn(with: signInConfig, presenting: self) { user, error in
+                guard error == nil else { return }
+                guard let user = user else { return }
+
+                if let emailAddress = user.profile?.email {
+                    email = emailAddress
+                    isLogin = true
+                    self.sendFile(workout: workout)
+                }
+              }
+        }else {
+            sendFile(workout: workout)
+        }
+       
+        
+
     }
 }
 extension WorkoutViewController:UITableViewDelegate {
