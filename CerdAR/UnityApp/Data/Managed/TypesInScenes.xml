@@ -61,6 +61,7 @@
 		<type fullname="UnityEngine.VFX.VisualEffectObject" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="Assembly-CSharp">
+		<type fullname="ARAnimationViewDemoController" preserve="nothing"/>
 		<type fullname="BoxVolumeController" preserve="nothing"/>
 		<type fullname="DialogInfoController" preserve="nothing"/>
 		<type fullname="DigitalRuby.RainMaker.RainCollision" preserve="nothing"/>

@@ -45,3 +45,4 @@ let kMapARAlpha = Float(0.9)
 var isSound = true
 var email = ""
 var isLogin = false
+var isTestMode = false
