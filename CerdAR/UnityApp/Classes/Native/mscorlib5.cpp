@@ -29110,14 +29110,6 @@ IL_000e:
 		return (bool)0;
 	}
 }
-// System.Boolean System.Double::IsNegative(System.Double)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Double_IsNegative_m662219A5FC5373C121E65F6B70A2860225231343 (double ___d0, const RuntimeMethod* method)
-{
-	{
-		int64_t L_0 = *((int64_t*)((uintptr_t)(&___d0)));
-		return (bool)((((int64_t)((int64_t)((int64_t)L_0&(int64_t)((int64_t)(std::numeric_limits<int64_t>::min)())))) == ((int64_t)((int64_t)(std::numeric_limits<int64_t>::min)())))? 1 : 0);
-	}
-}
 // System.Boolean System.Double::IsNaN(System.Double)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Double_IsNaN_m94415C98C2D7DCAA32A82E1911AC13958AAD4347 (double ___d0, const RuntimeMethod* method)
 {

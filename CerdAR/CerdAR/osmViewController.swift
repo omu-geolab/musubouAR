@@ -335,8 +335,8 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         NSLayoutConstraint.activate(constraintsLocation)
         nowLoc_button.addTarget(self, action: #selector(self.nowLocate(_:)), for: .touchUpInside)
         
-        let recognizer = UILongPressGestureRecognizer(target: self, action: #selector(self.onCenterMap(_:)))
-        nowLoc_button.addGestureRecognizer(recognizer)
+//        let recognizer = UILongPressGestureRecognizer(target: self, action: #selector(self.onCenterMap(_:)))
+//        nowLoc_button.addGestureRecognizer(recognizer)
         
         /*アニメーション設定*/
         nowLoc_button.startAnimatingPressActions()
