@@ -1900,16 +1900,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Input_GetAxisRaw_mC07AC23FD8D04A69CDB07
 	float icallRetVal = _il2cpp_icall_func(___axisName0);
 	return icallRetVal;
 }
-// System.Boolean UnityEngine.Input::GetButton(System.String)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Input_GetButton_m95EE8314087068F3AA9CEF3C3F6A246D55C4734C (String_t* ___buttonName0, const RuntimeMethod* method)
-{
-	typedef bool (*Input_GetButton_m95EE8314087068F3AA9CEF3C3F6A246D55C4734C_ftn) (String_t*);
-	static Input_GetButton_m95EE8314087068F3AA9CEF3C3F6A246D55C4734C_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (Input_GetButton_m95EE8314087068F3AA9CEF3C3F6A246D55C4734C_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Input::GetButton(System.String)");
-	bool icallRetVal = _il2cpp_icall_func(___buttonName0);
-	return icallRetVal;
-}
 // System.Boolean UnityEngine.Input::GetButtonDown(System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Input_GetButtonDown_m2001112EBCA3D5C7B0344EF62C896667F7E67DDF (String_t* ___buttonName0, const RuntimeMethod* method)
 {
