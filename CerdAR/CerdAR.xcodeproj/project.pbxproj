@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1C447092E15A286D1FDCFCAA /* Pods_CerdARTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E52094F0C3ABE6F410F7F4E /* Pods_CerdARTests.framework */; };
-		52F850DEAA9F0C31D6727C83 /* Pods_CerdAR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0D858644B38509A64BEFA4C /* Pods_CerdAR.framework */; };
+		6D7FC273A859892F2FB694A1 /* Pods_CerdAR_CerdARUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE0D2F38821D36BF3DDC2639 /* Pods_CerdAR_CerdARUITests.framework */; };
 		7EE70E1F1DEAA16A000FB537 /* sound_intrusion.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7EE70E1E1DEAA16A000FB537 /* sound_intrusion.mp3 */; };
 		7EE70E211DEAA1B6000FB537 /* sound_near.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7EE70E201DEAA1B6000FB537 /* sound_near.mp3 */; };
-		8B76F69216B70ADD89F8D2F4 /* Pods_CerdAR_CerdARUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2759833BFDE81F19BD45141A /* Pods_CerdAR_CerdARUITests.framework */; };
+		947BE4DC2A3FE526005F1888 /* TermsView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 947BE4DB2A3FE526005F1888 /* TermsView.storyboard */; };
+		9F4AE72A0928AD44DE4E2AD4 /* Pods_CerdARTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5520A484FF96686032A4E49E /* Pods_CerdARTests.framework */; };
 		AC05B9FA1D811FDA0082C52A /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC05B9F91D811FDA0082C52A /* DataManager.swift */; };
 		AC2AB8F61DB778A10048931C /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2AB8F51DB778A10048931C /* Constant.swift */; };
 		AC2C03D41D9D1CB9009926E3 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2C03D31D9D1CB9009926E3 /* SwiftyJSON.swift */; };
@@ -24,6 +24,7 @@
 		ACEE245C1D8235FE00102E10 /* MakeTagImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEE245B1D8235FE00102E10 /* MakeTagImage.swift */; };
 		ACF399B71D98C25100B0EC47 /* osmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF399B61D98C25100B0EC47 /* osmViewController.swift */; };
 		ACFD6E0C1DB474680006A765 /* loadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFD6E0B1DB474680006A765 /* loadViewController.swift */; };
+		AD5A90D855A1A02DBACBFC87 /* Pods_CerdAR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A7212CE0DBA3DA2FCF40669 /* Pods_CerdAR.framework */; };
 		BF01B83E1F6FEECE001AC15E /* GISImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF01B83D1F6FEECE001AC15E /* GISImageView.swift */; };
 		D37E86961E780A6A0030B01A /* Vibration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37E86951E780A6A0030B01A /* Vibration.swift */; };
 		D3CF68DD1D91187D008B588E /* detailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CF68DB1D91187D008B588E /* detailView.swift */; };
@@ -86,7 +87,6 @@
 		F09088C725EE3C45008463C8 /* GradidentPolylineRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09088C625EE3C45008463C8 /* GradidentPolylineRenderer.swift */; };
 		F0986D1625B95C0000CB0FE6 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0986D1525B95C0000CB0FE6 /* HealthKit.framework */; };
 		F0986D2525B9660700CB0FE6 /* HealthKitSetupAssistant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0986D2425B9660700CB0FE6 /* HealthKitSetupAssistant.swift */; };
-		F0986D2C25C0F75200CB0FE6 /* TermsView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0986D2B25C0F75200CB0FE6 /* TermsView.storyboard */; };
 		F0986D3225C10B2D00CB0FE6 /* TermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0986D3125C10B2D00CB0FE6 /* TermsViewController.swift */; };
 		F09F7CA128657D0A0052E2D5 /* GPX.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09F7CA028657D0A0052E2D5 /* GPX.swift */; };
 		F09F7CA328657F5B0052E2D5 /* LocationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09F7CA228657F5B0052E2D5 /* LocationExtension.swift */; };
@@ -170,16 +170,17 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0824046B153E46BAD010AE20 /* Pods-CerdARTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CerdARTests.debug.xcconfig"; path = "Target Support Files/Pods-CerdARTests/Pods-CerdARTests.debug.xcconfig"; sourceTree = "<group>"; };
-		2759833BFDE81F19BD45141A /* Pods_CerdAR_CerdARUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CerdAR_CerdARUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		333751FB8F553FBAA9735B3A /* Pods-CerdAR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CerdAR.debug.xcconfig"; path = "Target Support Files/Pods-CerdAR/Pods-CerdAR.debug.xcconfig"; sourceTree = "<group>"; };
-		476B6FE03EBBB1271C8ED10D /* Pods-CerdAR-CerdARUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CerdAR-CerdARUITests.release.xcconfig"; path = "Target Support Files/Pods-CerdAR-CerdARUITests/Pods-CerdAR-CerdARUITests.release.xcconfig"; sourceTree = "<group>"; };
-		4B78C49963F154A37F7F255D /* Pods-CerdAR-CerdARUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CerdAR-CerdARUITests.debug.xcconfig"; path = "Target Support Files/Pods-CerdAR-CerdARUITests/Pods-CerdAR-CerdARUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		4E52094F0C3ABE6F410F7F4E /* Pods_CerdARTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CerdARTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		734A4AB4BD8ABC7AE2BB3F89 /* Pods-CerdAR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CerdAR.release.xcconfig"; path = "Target Support Files/Pods-CerdAR/Pods-CerdAR.release.xcconfig"; sourceTree = "<group>"; };
+		0A7212CE0DBA3DA2FCF40669 /* Pods_CerdAR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CerdAR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		173ACC9D8E3FDD7BEA612361 /* Pods-CerdAR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CerdAR.debug.xcconfig"; path = "Target Support Files/Pods-CerdAR/Pods-CerdAR.debug.xcconfig"; sourceTree = "<group>"; };
+		3EC9C9AA1A3C28BBFA939B0C /* Pods-CerdAR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CerdAR.release.xcconfig"; path = "Target Support Files/Pods-CerdAR/Pods-CerdAR.release.xcconfig"; sourceTree = "<group>"; };
+		4B26CF0CEAB5B04E0E59CD49 /* Pods-CerdAR-CerdARUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CerdAR-CerdARUITests.release.xcconfig"; path = "Target Support Files/Pods-CerdAR-CerdARUITests/Pods-CerdAR-CerdARUITests.release.xcconfig"; sourceTree = "<group>"; };
+		541975C0E522C61931451EDA /* Pods-CerdAR-CerdARUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CerdAR-CerdARUITests.debug.xcconfig"; path = "Target Support Files/Pods-CerdAR-CerdARUITests/Pods-CerdAR-CerdARUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		5520A484FF96686032A4E49E /* Pods_CerdARTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CerdARTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EE70E1E1DEAA16A000FB537 /* sound_intrusion.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sound_intrusion.mp3; sourceTree = "<group>"; };
 		7EE70E201DEAA1B6000FB537 /* sound_near.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sound_near.mp3; sourceTree = "<group>"; };
-		8BC8BE4E33EDA949832C977C /* Pods-CerdARTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CerdARTests.release.xcconfig"; path = "Target Support Files/Pods-CerdARTests/Pods-CerdARTests.release.xcconfig"; sourceTree = "<group>"; };
+		8A045058B72EF00B938220EF /* Pods-CerdARTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CerdARTests.debug.xcconfig"; path = "Target Support Files/Pods-CerdARTests/Pods-CerdARTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8D35DF58AEB1A4B730273062 /* Pods-CerdARTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CerdARTests.release.xcconfig"; path = "Target Support Files/Pods-CerdARTests/Pods-CerdARTests.release.xcconfig"; sourceTree = "<group>"; };
+		947BE4DB2A3FE526005F1888 /* TermsView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = TermsView.storyboard; path = ../../../../../Desktop/TermsView.storyboard; sourceTree = "<group>"; };
 		AC05B9F91D811FDA0082C52A /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		AC2AB8F51DB778A10048931C /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		AC2C03D31D9D1CB9009926E3 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
@@ -201,7 +202,6 @@
 		D37E86951E780A6A0030B01A /* Vibration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vibration.swift; sourceTree = "<group>"; };
 		D3CF68DB1D91187D008B588E /* detailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = detailView.swift; sourceTree = "<group>"; };
 		D3CF68DC1D91187D008B588E /* termsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = termsView.swift; sourceTree = "<group>"; };
-		E0D858644B38509A64BEFA4C /* Pods_CerdAR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CerdAR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F00A92AA25CD244E00BC5D5A /* PlaySound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySound.swift; sourceTree = "<group>"; };
 		F00A933725D3BB5B00BC5D5A /* CerdARWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CerdARWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F00A933A25D3BB5B00BC5D5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
@@ -271,7 +271,6 @@
 		F0986D1425B95C0000CB0FE6 /* CerdAR.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CerdAR.entitlements; sourceTree = "<group>"; };
 		F0986D1525B95C0000CB0FE6 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		F0986D2425B9660700CB0FE6 /* HealthKitSetupAssistant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthKitSetupAssistant.swift; sourceTree = "<group>"; };
-		F0986D2B25C0F75200CB0FE6 /* TermsView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TermsView.storyboard; sourceTree = "<group>"; };
 		F0986D3125C10B2D00CB0FE6 /* TermsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsViewController.swift; sourceTree = "<group>"; };
 		F09F7CA028657D0A0052E2D5 /* GPX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPX.swift; sourceTree = "<group>"; };
 		F09F7CA228657F5B0052E2D5 /* LocationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationExtension.swift; sourceTree = "<group>"; };
@@ -285,6 +284,7 @@
 		F0C14028224A050400BFDDE7 /* third_party_vector_style.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = third_party_vector_style.json; sourceTree = "<group>"; };
 		F0C5DB8B21B4CFF90067EF8F /* fire.scnp */ = {isa = PBXFileReference; lastKnownFileType = file.scp; name = fire.scnp; path = CerdAR/SceneKit.scnassets/fire.scnp; sourceTree = "<group>"; };
 		F0DF93B425EF2D860034C1A0 /* ExportWorkout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportWorkout.swift; sourceTree = "<group>"; };
+		FE0D2F38821D36BF3DDC2639 /* Pods_CerdAR_CerdARUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CerdAR_CerdARUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -292,8 +292,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52F850DEAA9F0C31D6727C83 /* Pods_CerdAR.framework in Frameworks */,
 				F0986D1625B95C0000CB0FE6 /* HealthKit.framework in Frameworks */,
+				AD5A90D855A1A02DBACBFC87 /* Pods_CerdAR.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,7 +301,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C447092E15A286D1FDCFCAA /* Pods_CerdARTests.framework in Frameworks */,
+				9F4AE72A0928AD44DE4E2AD4 /* Pods_CerdARTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,7 +309,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B76F69216B70ADD89F8D2F4 /* Pods_CerdAR_CerdARUITests.framework in Frameworks */,
+				6D7FC273A859892F2FB694A1 /* Pods_CerdAR_CerdARUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,12 +334,12 @@
 		3B75004CE1AD900D63C1790D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				333751FB8F553FBAA9735B3A /* Pods-CerdAR.debug.xcconfig */,
-				734A4AB4BD8ABC7AE2BB3F89 /* Pods-CerdAR.release.xcconfig */,
-				4B78C49963F154A37F7F255D /* Pods-CerdAR-CerdARUITests.debug.xcconfig */,
-				476B6FE03EBBB1271C8ED10D /* Pods-CerdAR-CerdARUITests.release.xcconfig */,
-				0824046B153E46BAD010AE20 /* Pods-CerdARTests.debug.xcconfig */,
-				8BC8BE4E33EDA949832C977C /* Pods-CerdARTests.release.xcconfig */,
+				173ACC9D8E3FDD7BEA612361 /* Pods-CerdAR.debug.xcconfig */,
+				3EC9C9AA1A3C28BBFA939B0C /* Pods-CerdAR.release.xcconfig */,
+				541975C0E522C61931451EDA /* Pods-CerdAR-CerdARUITests.debug.xcconfig */,
+				4B26CF0CEAB5B04E0E59CD49 /* Pods-CerdAR-CerdARUITests.release.xcconfig */,
+				8A045058B72EF00B938220EF /* Pods-CerdARTests.debug.xcconfig */,
+				8D35DF58AEB1A4B730273062 /* Pods-CerdARTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -525,9 +525,9 @@
 				F06A927121CB5B9C0075391E /* Mapbox.framework */,
 				F054082B21CB56E9009D8558 /* MapboxSceneKit.framework */,
 				F054082921CB56E4009D8558 /* MapboxMobileEvents.framework */,
-				E0D858644B38509A64BEFA4C /* Pods_CerdAR.framework */,
-				2759833BFDE81F19BD45141A /* Pods_CerdAR_CerdARUITests.framework */,
-				4E52094F0C3ABE6F410F7F4E /* Pods_CerdARTests.framework */,
+				0A7212CE0DBA3DA2FCF40669 /* Pods_CerdAR.framework */,
+				FE0D2F38821D36BF3DDC2639 /* Pods_CerdAR_CerdARUITests.framework */,
+				5520A484FF96686032A4E49E /* Pods_CerdARTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -551,7 +551,7 @@
 		F0986D2A25C0F71900CB0FE6 /* Storybroad */ = {
 			isa = PBXGroup;
 			children = (
-				F0986D2B25C0F75200CB0FE6 /* TermsView.storyboard */,
+				947BE4DB2A3FE526005F1888 /* TermsView.storyboard */,
 				F071A3F025CA3553009D6E7D /* OSMView.storyboard */,
 				F090888D25E8F449008463C8 /* WorkoutsView.storyboard */,
 				F060A95D25F212D300888F67 /* WorkoutDetail.storyboard */,
@@ -579,14 +579,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AC2C52ED1D5805F80032B689 /* Build configuration list for PBXNativeTarget "CerdAR" */;
 			buildPhases = (
-				23BD3CA6050D4B4B86986B6B /* [CP] Check Pods Manifest.lock */,
+				9AB0F7B03FC8E396065AB7A4 /* [CP] Check Pods Manifest.lock */,
 				AC2C52BE1D5805F70032B689 /* Sources */,
 				AC2C52BF1D5805F70032B689 /* Frameworks */,
 				AC2C52C01D5805F70032B689 /* Resources */,
 				F033F9FE2191761D008A3A2E /* Embed Frameworks */,
 				F054082D21CB5719009D8558 /* ShellScript */,
-				6F6D3F79DA9D8C9AD3CA6370 /* [CP] Embed Pods Frameworks */,
 				F00A935E25D3BB5F00BC5D5A /* Embed Watch Content */,
+				A0994D97E4CD09BFB517E926 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -602,7 +602,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AC2C52F01D5805F80032B689 /* Build configuration list for PBXNativeTarget "CerdARTests" */;
 			buildPhases = (
-				81A49FF19912FAA17E177F72 /* [CP] Check Pods Manifest.lock */,
+				0D2E031C3862AACAF41A0BD2 /* [CP] Check Pods Manifest.lock */,
 				AC2C52D51D5805F80032B689 /* Sources */,
 				AC2C52D61D5805F80032B689 /* Frameworks */,
 				AC2C52D71D5805F80032B689 /* Resources */,
@@ -621,11 +621,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AC2C52F31D5805F80032B689 /* Build configuration list for PBXNativeTarget "CerdARUITests" */;
 			buildPhases = (
-				A9CF3D02B9A8F14A6EE75DBD /* [CP] Check Pods Manifest.lock */,
+				99C3C89406C11A6BF7AFE176 /* [CP] Check Pods Manifest.lock */,
 				AC2C52E01D5805F80032B689 /* Sources */,
 				AC2C52E11D5805F80032B689 /* Frameworks */,
 				AC2C52E21D5805F80032B689 /* Resources */,
-				7EDF4ECADB0FDCEA4A4BEFC5 /* [CP] Embed Pods Frameworks */,
+				535522E7FD49187CC26C0FB2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -747,7 +747,7 @@
 				F081CE2827E3003D0017A687 /* OptionView.storyboard in Resources */,
 				F090889425E8F88F008463C8 /* WorkoutCell.xib in Resources */,
 				F0A3E62021B78A7C0099812E /* smoke.scnp in Resources */,
-				F0986D2C25C0F75200CB0FE6 /* TermsView.storyboard in Resources */,
+				947BE4DC2A3FE526005F1888 /* TermsView.storyboard in Resources */,
 				F0B4EE3526BD67430062FC7D /* LinePolygon.geojson in Resources */,
 				F06E168621D316D1004E0BB6 /* confetti.png in Resources */,
 				F06D0D4C219C12CB0046747B /* SceneKit.scnassets in Resources */,
@@ -795,63 +795,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		23BD3CA6050D4B4B86986B6B /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CerdAR-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6F6D3F79DA9D8C9AD3CA6370 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CerdAR/Pods-CerdAR-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CerdAR/Pods-CerdAR-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CerdAR/Pods-CerdAR-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7EDF4ECADB0FDCEA4A4BEFC5 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CerdAR-CerdARUITests/Pods-CerdAR-CerdARUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CerdAR-CerdARUITests/Pods-CerdAR-CerdARUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CerdAR-CerdARUITests/Pods-CerdAR-CerdARUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		81A49FF19912FAA17E177F72 /* [CP] Check Pods Manifest.lock */ = {
+		0D2E031C3862AACAF41A0BD2 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -873,7 +817,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A9CF3D02B9A8F14A6EE75DBD /* [CP] Check Pods Manifest.lock */ = {
+		535522E7FD49187CC26C0FB2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CerdAR-CerdARUITests/Pods-CerdAR-CerdARUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CerdAR-CerdARUITests/Pods-CerdAR-CerdARUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CerdAR-CerdARUITests/Pods-CerdAR-CerdARUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		99C3C89406C11A6BF7AFE176 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -893,6 +854,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9AB0F7B03FC8E396065AB7A4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CerdAR-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A0994D97E4CD09BFB517E926 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CerdAR/Pods-CerdAR-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CerdAR/Pods-CerdAR-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CerdAR/Pods-CerdAR-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F054082D21CB5719009D8558 /* ShellScript */ = {
@@ -1166,14 +1166,14 @@
 		};
 		AC2C52EE1D5805F80032B689 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 333751FB8F553FBAA9735B3A /* Pods-CerdAR.debug.xcconfig */;
+			baseConfigurationReference = 173ACC9D8E3FDD7BEA612361 /* Pods-CerdAR.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = CerdAR/CerdAR.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ND55MN997H;
+				DEVELOPMENT_TEAM = 9F4BD2UBE2;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1188,7 +1188,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 2.0;
-				PRODUCT_BUNDLE_IDENTIFIER = jp.co.apptec.cerdar;
+				PRODUCT_BUNDLE_IDENTIFIER = omu.cerdar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1200,14 +1200,14 @@
 		};
 		AC2C52EF1D5805F80032B689 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 734A4AB4BD8ABC7AE2BB3F89 /* Pods-CerdAR.release.xcconfig */;
+			baseConfigurationReference = 3EC9C9AA1A3C28BBFA939B0C /* Pods-CerdAR.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = CerdAR/CerdAR.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ND55MN997H;
+				DEVELOPMENT_TEAM = 9F4BD2UBE2;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1222,7 +1222,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 2.0;
-				PRODUCT_BUNDLE_IDENTIFIER = jp.co.apptec.cerdar;
+				PRODUCT_BUNDLE_IDENTIFIER = omu.cerdar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1234,10 +1234,10 @@
 		};
 		AC2C52F11D5805F80032B689 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0824046B153E46BAD010AE20 /* Pods-CerdARTests.debug.xcconfig */;
+			baseConfigurationReference = 8A045058B72EF00B938220EF /* Pods-CerdARTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = ND55MN997H;
+				DEVELOPMENT_TEAM = 9F4BD2UBE2;
 				INFOPLIST_FILE = CerdARTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1254,10 +1254,10 @@
 		};
 		AC2C52F21D5805F80032B689 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8BC8BE4E33EDA949832C977C /* Pods-CerdARTests.release.xcconfig */;
+			baseConfigurationReference = 8D35DF58AEB1A4B730273062 /* Pods-CerdARTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = ND55MN997H;
+				DEVELOPMENT_TEAM = 9F4BD2UBE2;
 				INFOPLIST_FILE = CerdARTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1274,10 +1274,10 @@
 		};
 		AC2C52F41D5805F80032B689 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4B78C49963F154A37F7F255D /* Pods-CerdAR-CerdARUITests.debug.xcconfig */;
+			baseConfigurationReference = 541975C0E522C61931451EDA /* Pods-CerdAR-CerdARUITests.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
-				DEVELOPMENT_TEAM = ND55MN997H;
+				DEVELOPMENT_TEAM = 9F4BD2UBE2;
 				INFOPLIST_FILE = CerdARUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1294,10 +1294,10 @@
 		};
 		AC2C52F51D5805F80032B689 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 476B6FE03EBBB1271C8ED10D /* Pods-CerdAR-CerdARUITests.release.xcconfig */;
+			baseConfigurationReference = 4B26CF0CEAB5B04E0E59CD49 /* Pods-CerdAR-CerdARUITests.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
-				DEVELOPMENT_TEAM = ND55MN997H;
+				DEVELOPMENT_TEAM = 9F4BD2UBE2;
 				INFOPLIST_FILE = CerdARUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1324,7 +1324,7 @@
 				CODE_SIGN_ENTITLEMENTS = "CerdARWatch Extension/CerdARWatch Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3;
-				DEVELOPMENT_TEAM = ND55MN997H;
+				DEVELOPMENT_TEAM = 9F4BD2UBE2;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "CerdARWatch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1335,7 +1335,7 @@
 				MARKETING_VERSION = 2.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = jp.co.apptec.cerdar.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = omu.cerdar.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1358,7 +1358,7 @@
 				CODE_SIGN_ENTITLEMENTS = "CerdARWatch Extension/CerdARWatch Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3;
-				DEVELOPMENT_TEAM = ND55MN997H;
+				DEVELOPMENT_TEAM = 9F4BD2UBE2;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "CerdARWatch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1368,7 +1368,7 @@
 				);
 				MARKETING_VERSION = 2.0;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = jp.co.apptec.cerdar.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = omu.cerdar.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1393,14 +1393,14 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3;
-				DEVELOPMENT_TEAM = ND55MN997H;
+				DEVELOPMENT_TEAM = 9F4BD2UBE2;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				IBSC_MODULE = CerdARWatch_Extension;
 				INFOPLIST_FILE = CerdARWatch/Info.plist;
 				MARKETING_VERSION = 2.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = jp.co.apptec.cerdar.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = omu.cerdar.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1426,13 +1426,13 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3;
-				DEVELOPMENT_TEAM = ND55MN997H;
+				DEVELOPMENT_TEAM = 9F4BD2UBE2;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				IBSC_MODULE = CerdARWatch_Extension;
 				INFOPLIST_FILE = CerdARWatch/Info.plist;
 				MARKETING_VERSION = 2.0;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = jp.co.apptec.cerdar.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = omu.cerdar.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
