@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="psJ-JP-oH6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="psJ-JP-oH6">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -18,36 +18,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2hk-ei-vRj">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="48" width="414" height="814"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xPb-7i-26i">
-                                        <rect key="frame" x="30" y="30" width="354" height="758"/>
+                                        <rect key="frame" x="30" y="30" width="354" height="754"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="利用規約" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H2w-Bf-ysl">
-                                                <rect key="frame" x="8" y="24" width="155" height="35"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="35" id="8Y9-M3-BWF"/>
-                                                    <constraint firstAttribute="width" constant="155" id="pMM-Mf-iAn"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_CERD" translatesAutoresizingMaskIntoConstraints="NO" id="ayb-RO-8Gh">
-                                                <rect key="frame" x="226" y="12" width="120" height="59"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="120" id="Bf6-uO-isf"/>
-                                                    <constraint firstAttribute="height" constant="59" id="Iw7-6s-cdX"/>
-                                                </constraints>
-                                            </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IFe-WF-fEQ">
-                                                <rect key="frame" x="18" y="79" width="318" height="531"/>
+                                                <rect key="frame" x="18" y="97" width="318" height="509"/>
                                                 <subviews>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nCN-De-xgA">
-                                                        <rect key="frame" x="0.0" y="0.0" width="318" height="531"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="318" height="509"/>
                                                         <color key="backgroundColor" red="0.94426157994923854" green="0.94426157994923854" blue="0.94426157994923854" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <color key="tintColor" systemColor="systemOrangeColor"/>
-                                                        <string key="text">大阪市立大学 都市防災教育研究センター(CERD)が提供するiOS端末用アプリ「CERD-AR」の利用について、以下の通りに定めます。
+                                                        <mutableString key="text">大阪公立大学 都市科学・防災研究センター(UReC)が提供するiOS端末用アプリ「MUSUBOU-AR」の利用について、以下の通りに定めます。
 本規約に同意頂くことにより、本アプリを利用することができます。
 なお、本アプリの使用を開始した時点をもって、本規約に同意したものとみなします。
 （１）当センターは、本アプリおよび本利用規約を、利用者への事前通知および承諾なく変更、追加又は削除する事ができるものとします。
@@ -59,7 +42,7 @@
 必ず安全な場所に停止してから、周囲の安全を十分に確認してから操作および画面の確認を行ってください。　　
 
 
-　</string>
+　</mutableString>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -74,13 +57,13 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="❖  このアプリを使用すると、利用規約に同意したことになります。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dkE-tQ-oHR">
-                                                <rect key="frame" x="18" y="618" width="318" height="48"/>
+                                                <rect key="frame" x="18" y="614" width="318" height="48"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zpH-35-gqj">
-                                                <rect key="frame" x="196" y="676" width="140" height="70"/>
+                                                <rect key="frame" x="196" y="672" width="140" height="70"/>
                                                 <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="140" id="1Y7-DG-uHK"/>
@@ -102,7 +85,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Avj-YN-5CD">
-                                                <rect key="frame" x="18" y="676" width="140" height="70"/>
+                                                <rect key="frame" x="18" y="672" width="140" height="70"/>
                                                 <color key="backgroundColor" systemColor="systemGray2Color"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="70" id="3FJ-Pe-G69"/>
@@ -121,25 +104,40 @@
                                                     <action selector="cancelApp:" destination="psJ-JP-oH6" eventType="touchDown" id="10f-Gn-9Y4"/>
                                                 </connections>
                                             </button>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_UReC" translatesAutoresizingMaskIntoConstraints="NO" id="ayb-RO-8Gh">
+                                                <rect key="frame" x="131" y="20" width="198" height="69"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="利用規約" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H2w-Bf-ysl">
+                                                <rect key="frame" x="21" y="36" width="155" height="35"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="35" id="8Y9-M3-BWF"/>
+                                                    <constraint firstAttribute="width" constant="155" id="pMM-Mf-iAn"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="zpH-35-gqj" secondAttribute="trailing" constant="18" id="33M-hX-0mk"/>
                                             <constraint firstItem="Avj-YN-5CD" firstAttribute="leading" secondItem="xPb-7i-26i" secondAttribute="leading" constant="18" id="3Zh-hd-P0G"/>
-                                            <constraint firstItem="ayb-RO-8Gh" firstAttribute="top" secondItem="xPb-7i-26i" secondAttribute="top" constant="12" id="63G-QX-EGZ"/>
-                                            <constraint firstItem="H2w-Bf-ysl" firstAttribute="leading" secondItem="xPb-7i-26i" secondAttribute="leading" constant="8" id="DHF-aY-A98"/>
+                                            <constraint firstItem="H2w-Bf-ysl" firstAttribute="leading" secondItem="xPb-7i-26i" secondAttribute="leading" constant="21" id="DHF-aY-A98"/>
+                                            <constraint firstItem="ayb-RO-8Gh" firstAttribute="top" secondItem="xPb-7i-26i" secondAttribute="top" constant="20" id="Dja-eF-yNf"/>
                                             <constraint firstItem="Avj-YN-5CD" firstAttribute="top" secondItem="dkE-tQ-oHR" secondAttribute="bottom" constant="10" id="Dsj-4f-P8y"/>
+                                            <constraint firstItem="ayb-RO-8Gh" firstAttribute="centerY" secondItem="H2w-Bf-ysl" secondAttribute="centerY" constant="1" id="FdD-xg-ZuB"/>
                                             <constraint firstItem="dkE-tQ-oHR" firstAttribute="top" secondItem="IFe-WF-fEQ" secondAttribute="bottom" constant="8" id="Iyl-K6-gcU"/>
+                                            <constraint firstAttribute="trailing" secondItem="ayb-RO-8Gh" secondAttribute="trailing" constant="25" id="O4A-Y7-3Wc"/>
                                             <constraint firstAttribute="trailing" secondItem="IFe-WF-fEQ" secondAttribute="trailing" constant="18" id="OCO-O2-bal"/>
-                                            <constraint firstItem="IFe-WF-fEQ" firstAttribute="top" secondItem="ayb-RO-8Gh" secondAttribute="bottom" constant="8" id="OXp-Hp-wNp"/>
                                             <constraint firstItem="IFe-WF-fEQ" firstAttribute="leading" secondItem="xPb-7i-26i" secondAttribute="leading" constant="18" id="OdI-oo-qqk"/>
                                             <constraint firstAttribute="bottom" secondItem="Avj-YN-5CD" secondAttribute="bottom" constant="12" id="WVl-dU-Wnk"/>
                                             <constraint firstAttribute="bottom" secondItem="zpH-35-gqj" secondAttribute="bottom" constant="12" id="bCU-uG-yr0"/>
                                             <constraint firstItem="dkE-tQ-oHR" firstAttribute="leading" secondItem="xPb-7i-26i" secondAttribute="leadingMargin" constant="10" id="hzX-NH-9QE"/>
-                                            <constraint firstAttribute="trailing" secondItem="ayb-RO-8Gh" secondAttribute="trailing" constant="8" id="oB5-hu-MCk"/>
-                                            <constraint firstItem="H2w-Bf-ysl" firstAttribute="top" secondItem="xPb-7i-26i" secondAttribute="top" constant="24" id="pTB-qV-mZL"/>
+                                            <constraint firstItem="ayb-RO-8Gh" firstAttribute="leading" secondItem="zpH-35-gqj" secondAttribute="leading" constant="-65" id="oj0-hX-Toj"/>
+                                            <constraint firstItem="H2w-Bf-ysl" firstAttribute="top" secondItem="xPb-7i-26i" secondAttribute="top" constant="36" id="pTB-qV-mZL"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="dkE-tQ-oHR" secondAttribute="trailing" constant="10" id="yBN-gH-Dvi"/>
+                                            <constraint firstItem="IFe-WF-fEQ" firstAttribute="top" secondItem="ayb-RO-8Gh" secondAttribute="bottom" constant="8" id="z2K-13-C0Q"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -189,11 +187,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ekG-Eg-LYg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="175.23364485981307" y="6.4794816414686833"/>
+            <point key="canvasLocation" x="173.91304347826087" y="6.0267857142857144"/>
         </scene>
     </scenes>
     <resources>
-        <image name="logo_CERD" width="691.5" height="302"/>
+        <image name="logo_UReC" width="1383" height="500"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

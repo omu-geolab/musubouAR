@@ -51,25 +51,24 @@
     }
 },
 {
-    "name":"津波浸水想定図（南海トラフ）",
-    "server":"https://disaportaldata.gsi.go.jp/raster/04_tsunami_newlegend_pref_data/27/{z}/{x}/{y}.png",
-    "legend":"https://disaportal.gsi.go.jp/hazardmap/copyright/img/tsunami_newlegend.png",
+    "name":"空中写真（1945年～1950年）",
+    "server":"https://cyberjapandata.gsi.go.jp/xyz/ort_USA10/{z}/{x}/{y}.png",
     "gl_style":{
         "version": 8,
         "name": "Raster Tiles",
         "sources": {
-            "04_tsunami_newlegend_pref_data": {
+            "ort_1945": {
                 "type": "raster",
                 "tiles": [
-                    "https://disaportaldata.gsi.go.jp/raster/04_tsunami_newlegend_pref_data/27/{z}/{x}/{y}.png"
+                    "https://cyberjapandata.gsi.go.jp/xyz/ort_USA10/{z}/{x}/{y}.png"
                 ],
                 "tileSize": 256
             }
         },
         "layers": [{
-            "id": "04_tsunami_newlegend_pref_data",
+            "id": "ort_1945",
             "type": "raster",
-            "source": "04_tsunami_newlegend_pref_data",
+            "source": "ort_1945",
             "paint": {
                 "raster-fade-duration": 100
             }
@@ -77,24 +76,49 @@
     }
 },
 {
-    "name":"空中写真（1928年頃）",
-    "server":"https://cyberjapandata.gsi.go.jp/xyz/ort_1928/{z}/{x}/{y}.png",
+    "name":"空中写真（1961年～1969年）",
+    "server":"https://cyberjapandata.gsi.go.jp/xyz/ort_old10/{z}/{x}/{y}.png",
     "gl_style":{
         "version": 8,
         "name": "Raster Tiles",
         "sources": {
-            "ort_1928": {
+            "ort_1961": {
                 "type": "raster",
                 "tiles": [
-                    "https://cyberjapandata.gsi.go.jp/xyz/ort_1928/{z}/{x}/{y}.png"
+                    "https://cyberjapandata.gsi.go.jp/xyz/ort_old10/{z}/{x}/{y}.png"
                 ],
                 "tileSize": 256
             }
         },
         "layers": [{
-            "id": "ort_1928",
+            "id": "ort_1961",
             "type": "raster",
-            "source": "ort_1928",
+            "source": "ort_1961",
+            "paint": {
+                "raster-fade-duration": 100
+            }
+        }]
+    }
+},
+{
+    "name":"空中写真（1974年～1978年）",
+    "server":"https://cyberjapandata.gsi.go.jp/xyz/gazo1/{z}/{x}/{y}.jpg",
+    "gl_style":{
+        "version": 8,
+        "name": "Raster Tiles",
+        "sources": {
+            "ort_1974": {
+                "type": "raster",
+                "tiles": [
+                    "https://cyberjapandata.gsi.go.jp/xyz/gazo1/{z}/{x}/{y}.jpg"
+                ],
+                "tileSize": 256
+            }
+        },
+        "layers": [{
+            "id": "ort_1974",
+            "type": "raster",
+            "source": "ort_1974",
             "paint": {
                 "raster-fade-duration": 100
             }

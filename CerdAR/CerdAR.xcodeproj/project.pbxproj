@@ -10,7 +10,7 @@
 		6D7FC273A859892F2FB694A1 /* Pods_CerdAR_CerdARUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE0D2F38821D36BF3DDC2639 /* Pods_CerdAR_CerdARUITests.framework */; };
 		7EE70E1F1DEAA16A000FB537 /* sound_intrusion.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7EE70E1E1DEAA16A000FB537 /* sound_intrusion.mp3 */; };
 		7EE70E211DEAA1B6000FB537 /* sound_near.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7EE70E201DEAA1B6000FB537 /* sound_near.mp3 */; };
-		947BE4DC2A3FE526005F1888 /* TermsView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 947BE4DB2A3FE526005F1888 /* TermsView.storyboard */; };
+		942A6D1A2A41E17400CEC20A /* TermsView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 942A6D192A41E17400CEC20A /* TermsView.storyboard */; };
 		9F4AE72A0928AD44DE4E2AD4 /* Pods_CerdARTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5520A484FF96686032A4E49E /* Pods_CerdARTests.framework */; };
 		AC05B9FA1D811FDA0082C52A /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC05B9F91D811FDA0082C52A /* DataManager.swift */; };
 		AC2AB8F61DB778A10048931C /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2AB8F51DB778A10048931C /* Constant.swift */; };
@@ -180,7 +180,7 @@
 		7EE70E201DEAA1B6000FB537 /* sound_near.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sound_near.mp3; sourceTree = "<group>"; };
 		8A045058B72EF00B938220EF /* Pods-CerdARTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CerdARTests.debug.xcconfig"; path = "Target Support Files/Pods-CerdARTests/Pods-CerdARTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8D35DF58AEB1A4B730273062 /* Pods-CerdARTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CerdARTests.release.xcconfig"; path = "Target Support Files/Pods-CerdARTests/Pods-CerdARTests.release.xcconfig"; sourceTree = "<group>"; };
-		947BE4DB2A3FE526005F1888 /* TermsView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = TermsView.storyboard; path = ../../../../../Desktop/TermsView.storyboard; sourceTree = "<group>"; };
+		942A6D192A41E17400CEC20A /* TermsView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TermsView.storyboard; sourceTree = "<group>"; };
 		AC05B9F91D811FDA0082C52A /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		AC2AB8F51DB778A10048931C /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		AC2C03D31D9D1CB9009926E3 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
@@ -551,7 +551,7 @@
 		F0986D2A25C0F71900CB0FE6 /* Storybroad */ = {
 			isa = PBXGroup;
 			children = (
-				947BE4DB2A3FE526005F1888 /* TermsView.storyboard */,
+				942A6D192A41E17400CEC20A /* TermsView.storyboard */,
 				F071A3F025CA3553009D6E7D /* OSMView.storyboard */,
 				F090888D25E8F449008463C8 /* WorkoutsView.storyboard */,
 				F060A95D25F212D300888F67 /* WorkoutDetail.storyboard */,
@@ -745,9 +745,9 @@
 				F07C561721B4D12F004F760C /* rock.scnp in Resources */,
 				F071A3AC25C23B2E009D6E7D /* DetailViewIphone.xib in Resources */,
 				F081CE2827E3003D0017A687 /* OptionView.storyboard in Resources */,
+				942A6D1A2A41E17400CEC20A /* TermsView.storyboard in Resources */,
 				F090889425E8F88F008463C8 /* WorkoutCell.xib in Resources */,
 				F0A3E62021B78A7C0099812E /* smoke.scnp in Resources */,
-				947BE4DC2A3FE526005F1888 /* TermsView.storyboard in Resources */,
 				F0B4EE3526BD67430062FC7D /* LinePolygon.geojson in Resources */,
 				F06E168621D316D1004E0BB6 /* confetti.png in Resources */,
 				F06D0D4C219C12CB0046747B /* SceneKit.scnassets in Resources */,
