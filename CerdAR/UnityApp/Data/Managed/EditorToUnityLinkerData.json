@@ -1145,6 +1145,20 @@
             "usedInScenes": []
         },
         {
+            "managedAssemblyName": "Unity.XR.Interaction.Toolkit.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "UnityEngine.XR.Interaction.Toolkit.Inputs.Simulation.XRDeviceSimulatorSettings",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Unity.XR.Interaction.Toolkit.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "UnityEngine.XR.Interaction.Toolkit.InteractionLayerSettings",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
             "managedAssemblyName": "Unity.XR.Management.dll",
             "nativeClass": "",
             "fullManagedTypeName": "UnityEngine.XR.Management.XRGeneralSettings",

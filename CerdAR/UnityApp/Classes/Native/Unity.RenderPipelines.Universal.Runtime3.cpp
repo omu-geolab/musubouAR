@@ -151,7 +151,7 @@ struct Func_2_t07574F1E7EF84CF543A9B2FF0E62BB6B96696C64;
 // System.Func`2<UnityEngine.Experimental.Rendering.Universal.LibTessDotNet.ContourVertex,UnityEngine.Vector3>
 struct Func_2_tA55660D7B36BC919063457215A12594F309CFDF1;
 // System.Func`2<UnityEngine.Experimental.Rendering.Universal.LibTessDotNet.ContourVertex,Unity.Mathematics.float3>
-struct Func_2_t4ADAECFAD3DFE1FE3B6834A49502FA772B85CB3C;
+struct Func_2_t77B68D533F2F0E05F775295694D4331FC889DD6D;
 // System.Func`2<System.Int32,System.Int32>
 struct Func_2_tFF6AE79EFD0857556AD37A1A1594C43F76012FEA;
 // System.Collections.Generic.IEnumerator`1<System.Action`2<UnityEngine.Rendering.RenderTargetIdentifier,UnityEngine.Rendering.CommandBuffer>>
@@ -4772,7 +4772,7 @@ public:
 	// System.Func`2<System.Int32,System.Int32> UnityEngine.Experimental.Rendering.Universal.LightUtility/<>c::<>9__8_0
 	Func_2_tFF6AE79EFD0857556AD37A1A1594C43F76012FEA * ___U3CU3E9__8_0_1;
 	// System.Func`2<UnityEngine.Experimental.Rendering.Universal.LibTessDotNet.ContourVertex,Unity.Mathematics.float3> UnityEngine.Experimental.Rendering.Universal.LightUtility/<>c::<>9__8_1
-	Func_2_t4ADAECFAD3DFE1FE3B6834A49502FA772B85CB3C * ___U3CU3E9__8_1_2;
+	Func_2_t77B68D533F2F0E05F775295694D4331FC889DD6D * ___U3CU3E9__8_1_2;
 
 public:
 	inline static int32_t get_offset_of_U3CU3E9_0() { return static_cast<int32_t>(offsetof(U3CU3Ec_t8ED3E8827F3C27626ABEF57EA6E850B2A914B3F5_StaticFields, ___U3CU3E9_0)); }
@@ -4794,9 +4794,9 @@ public:
 	}
 
 	inline static int32_t get_offset_of_U3CU3E9__8_1_2() { return static_cast<int32_t>(offsetof(U3CU3Ec_t8ED3E8827F3C27626ABEF57EA6E850B2A914B3F5_StaticFields, ___U3CU3E9__8_1_2)); }
-	inline Func_2_t4ADAECFAD3DFE1FE3B6834A49502FA772B85CB3C * get_U3CU3E9__8_1_2() const { return ___U3CU3E9__8_1_2; }
-	inline Func_2_t4ADAECFAD3DFE1FE3B6834A49502FA772B85CB3C ** get_address_of_U3CU3E9__8_1_2() { return &___U3CU3E9__8_1_2; }
-	inline void set_U3CU3E9__8_1_2(Func_2_t4ADAECFAD3DFE1FE3B6834A49502FA772B85CB3C * value)
+	inline Func_2_t77B68D533F2F0E05F775295694D4331FC889DD6D * get_U3CU3E9__8_1_2() const { return ___U3CU3E9__8_1_2; }
+	inline Func_2_t77B68D533F2F0E05F775295694D4331FC889DD6D ** get_address_of_U3CU3E9__8_1_2() { return &___U3CU3E9__8_1_2; }
+	inline void set_U3CU3E9__8_1_2(Func_2_t77B68D533F2F0E05F775295694D4331FC889DD6D * value)
 	{
 		___U3CU3E9__8_1_2 = value;
 		Il2CppCodeGenWriteBarrier((void**)(&___U3CU3E9__8_1_2), (void*)value);
@@ -8585,7 +8585,7 @@ struct XRLayout_t7EB07CE1478AE117866C37B6729C9CA4E1F64C77_marshaled_com
 };
 
 // Unity.Mathematics.float2
-struct float2_t11F5F2974404951113DDC4E13EEB6E2456295547 
+struct float2_tCB7B81181978EDE17722C533A55E345D9A413274 
 {
 public:
 	// System.Single Unity.Mathematics.float2::x
@@ -8594,7 +8594,7 @@ public:
 	float ___y_1;
 
 public:
-	inline static int32_t get_offset_of_x_0() { return static_cast<int32_t>(offsetof(float2_t11F5F2974404951113DDC4E13EEB6E2456295547, ___x_0)); }
+	inline static int32_t get_offset_of_x_0() { return static_cast<int32_t>(offsetof(float2_tCB7B81181978EDE17722C533A55E345D9A413274, ___x_0)); }
 	inline float get_x_0() const { return ___x_0; }
 	inline float* get_address_of_x_0() { return &___x_0; }
 	inline void set_x_0(float value)
@@ -8602,7 +8602,7 @@ public:
 		___x_0 = value;
 	}
 
-	inline static int32_t get_offset_of_y_1() { return static_cast<int32_t>(offsetof(float2_t11F5F2974404951113DDC4E13EEB6E2456295547, ___y_1)); }
+	inline static int32_t get_offset_of_y_1() { return static_cast<int32_t>(offsetof(float2_tCB7B81181978EDE17722C533A55E345D9A413274, ___y_1)); }
 	inline float get_y_1() const { return ___y_1; }
 	inline float* get_address_of_y_1() { return &___y_1; }
 	inline void set_y_1(float value)
@@ -8611,9 +8611,25 @@ public:
 	}
 };
 
+struct float2_tCB7B81181978EDE17722C533A55E345D9A413274_StaticFields
+{
+public:
+	// Unity.Mathematics.float2 Unity.Mathematics.float2::zero
+	float2_tCB7B81181978EDE17722C533A55E345D9A413274  ___zero_2;
+
+public:
+	inline static int32_t get_offset_of_zero_2() { return static_cast<int32_t>(offsetof(float2_tCB7B81181978EDE17722C533A55E345D9A413274_StaticFields, ___zero_2)); }
+	inline float2_tCB7B81181978EDE17722C533A55E345D9A413274  get_zero_2() const { return ___zero_2; }
+	inline float2_tCB7B81181978EDE17722C533A55E345D9A413274 * get_address_of_zero_2() { return &___zero_2; }
+	inline void set_zero_2(float2_tCB7B81181978EDE17722C533A55E345D9A413274  value)
+	{
+		___zero_2 = value;
+	}
+};
+
 
 // Unity.Mathematics.float3
-struct float3_tE0DD2FF13F818025945C9AC314390D2A1F55E37D 
+struct float3_t9500D105F273B3D86BD354142E891C48FFF9F71D 
 {
 public:
 	// System.Single Unity.Mathematics.float3::x
@@ -8624,7 +8640,7 @@ public:
 	float ___z_2;
 
 public:
-	inline static int32_t get_offset_of_x_0() { return static_cast<int32_t>(offsetof(float3_tE0DD2FF13F818025945C9AC314390D2A1F55E37D, ___x_0)); }
+	inline static int32_t get_offset_of_x_0() { return static_cast<int32_t>(offsetof(float3_t9500D105F273B3D86BD354142E891C48FFF9F71D, ___x_0)); }
 	inline float get_x_0() const { return ___x_0; }
 	inline float* get_address_of_x_0() { return &___x_0; }
 	inline void set_x_0(float value)
@@ -8632,7 +8648,7 @@ public:
 		___x_0 = value;
 	}
 
-	inline static int32_t get_offset_of_y_1() { return static_cast<int32_t>(offsetof(float3_tE0DD2FF13F818025945C9AC314390D2A1F55E37D, ___y_1)); }
+	inline static int32_t get_offset_of_y_1() { return static_cast<int32_t>(offsetof(float3_t9500D105F273B3D86BD354142E891C48FFF9F71D, ___y_1)); }
 	inline float get_y_1() const { return ___y_1; }
 	inline float* get_address_of_y_1() { return &___y_1; }
 	inline void set_y_1(float value)
@@ -8640,7 +8656,7 @@ public:
 		___y_1 = value;
 	}
 
-	inline static int32_t get_offset_of_z_2() { return static_cast<int32_t>(offsetof(float3_tE0DD2FF13F818025945C9AC314390D2A1F55E37D, ___z_2)); }
+	inline static int32_t get_offset_of_z_2() { return static_cast<int32_t>(offsetof(float3_t9500D105F273B3D86BD354142E891C48FFF9F71D, ___z_2)); }
 	inline float get_z_2() const { return ___z_2; }
 	inline float* get_address_of_z_2() { return &___z_2; }
 	inline void set_z_2(float value)
@@ -8649,17 +8665,17 @@ public:
 	}
 };
 
-struct float3_tE0DD2FF13F818025945C9AC314390D2A1F55E37D_StaticFields
+struct float3_t9500D105F273B3D86BD354142E891C48FFF9F71D_StaticFields
 {
 public:
 	// Unity.Mathematics.float3 Unity.Mathematics.float3::zero
-	float3_tE0DD2FF13F818025945C9AC314390D2A1F55E37D  ___zero_3;
+	float3_t9500D105F273B3D86BD354142E891C48FFF9F71D  ___zero_3;
 
 public:
-	inline static int32_t get_offset_of_zero_3() { return static_cast<int32_t>(offsetof(float3_tE0DD2FF13F818025945C9AC314390D2A1F55E37D_StaticFields, ___zero_3)); }
-	inline float3_tE0DD2FF13F818025945C9AC314390D2A1F55E37D  get_zero_3() const { return ___zero_3; }
-	inline float3_tE0DD2FF13F818025945C9AC314390D2A1F55E37D * get_address_of_zero_3() { return &___zero_3; }
-	inline void set_zero_3(float3_tE0DD2FF13F818025945C9AC314390D2A1F55E37D  value)
+	inline static int32_t get_offset_of_zero_3() { return static_cast<int32_t>(offsetof(float3_t9500D105F273B3D86BD354142E891C48FFF9F71D_StaticFields, ___zero_3)); }
+	inline float3_t9500D105F273B3D86BD354142E891C48FFF9F71D  get_zero_3() const { return ___zero_3; }
+	inline float3_t9500D105F273B3D86BD354142E891C48FFF9F71D * get_address_of_zero_3() { return &___zero_3; }
+	inline void set_zero_3(float3_t9500D105F273B3D86BD354142E891C48FFF9F71D  value)
 	{
 		___zero_3 = value;
 	}
@@ -12172,21 +12188,21 @@ struct PrePunctualLight_t6A6B0358A9D80FE6E10948C365C06F7092A8D609
 {
 public:
 	// Unity.Mathematics.float3 UnityEngine.Rendering.Universal.Internal.DeferredTiler/PrePunctualLight::posVS
-	float3_tE0DD2FF13F818025945C9AC314390D2A1F55E37D  ___posVS_0;
+	float3_t9500D105F273B3D86BD354142E891C48FFF9F71D  ___posVS_0;
 	// System.Single UnityEngine.Rendering.Universal.Internal.DeferredTiler/PrePunctualLight::radius
 	float ___radius_1;
 	// System.Single UnityEngine.Rendering.Universal.Internal.DeferredTiler/PrePunctualLight::minDist
 	float ___minDist_2;
 	// Unity.Mathematics.float2 UnityEngine.Rendering.Universal.Internal.DeferredTiler/PrePunctualLight::screenPos
-	float2_t11F5F2974404951113DDC4E13EEB6E2456295547  ___screenPos_3;
+	float2_tCB7B81181978EDE17722C533A55E345D9A413274  ___screenPos_3;
 	// System.UInt16 UnityEngine.Rendering.Universal.Internal.DeferredTiler/PrePunctualLight::visLightIndex
 	uint16_t ___visLightIndex_4;
 
 public:
 	inline static int32_t get_offset_of_posVS_0() { return static_cast<int32_t>(offsetof(PrePunctualLight_t6A6B0358A9D80FE6E10948C365C06F7092A8D609, ___posVS_0)); }
-	inline float3_tE0DD2FF13F818025945C9AC314390D2A1F55E37D  get_posVS_0() const { return ___posVS_0; }
-	inline float3_tE0DD2FF13F818025945C9AC314390D2A1F55E37D * get_address_of_posVS_0() { return &___posVS_0; }
-	inline void set_posVS_0(float3_tE0DD2FF13F818025945C9AC314390D2A1F55E37D  value)
+	inline float3_t9500D105F273B3D86BD354142E891C48FFF9F71D  get_posVS_0() const { return ___posVS_0; }
+	inline float3_t9500D105F273B3D86BD354142E891C48FFF9F71D * get_address_of_posVS_0() { return &___posVS_0; }
+	inline void set_posVS_0(float3_t9500D105F273B3D86BD354142E891C48FFF9F71D  value)
 	{
 		___posVS_0 = value;
 	}
@@ -12208,9 +12224,9 @@ public:
 	}
 
 	inline static int32_t get_offset_of_screenPos_3() { return static_cast<int32_t>(offsetof(PrePunctualLight_t6A6B0358A9D80FE6E10948C365C06F7092A8D609, ___screenPos_3)); }
-	inline float2_t11F5F2974404951113DDC4E13EEB6E2456295547  get_screenPos_3() const { return ___screenPos_3; }
-	inline float2_t11F5F2974404951113DDC4E13EEB6E2456295547 * get_address_of_screenPos_3() { return &___screenPos_3; }
-	inline void set_screenPos_3(float2_t11F5F2974404951113DDC4E13EEB6E2456295547  value)
+	inline float2_tCB7B81181978EDE17722C533A55E345D9A413274  get_screenPos_3() const { return ___screenPos_3; }
+	inline float2_tCB7B81181978EDE17722C533A55E345D9A413274 * get_address_of_screenPos_3() { return &___screenPos_3; }
+	inline void set_screenPos_3(float2_tCB7B81181978EDE17722C533A55E345D9A413274  value)
 	{
 		___screenPos_3 = value;
 	}
@@ -12330,15 +12346,15 @@ struct ParametricLightMeshVertex_tB82504F406737A009734BC6F80812DAC6B4DE893
 {
 public:
 	// Unity.Mathematics.float3 UnityEngine.Experimental.Rendering.Universal.LightUtility/ParametricLightMeshVertex::position
-	float3_tE0DD2FF13F818025945C9AC314390D2A1F55E37D  ___position_0;
+	float3_t9500D105F273B3D86BD354142E891C48FFF9F71D  ___position_0;
 	// UnityEngine.Color UnityEngine.Experimental.Rendering.Universal.LightUtility/ParametricLightMeshVertex::color
 	Color_tF40DAF76C04FFECF3FE6024F85A294741C9CC659  ___color_1;
 
 public:
 	inline static int32_t get_offset_of_position_0() { return static_cast<int32_t>(offsetof(ParametricLightMeshVertex_tB82504F406737A009734BC6F80812DAC6B4DE893, ___position_0)); }
-	inline float3_tE0DD2FF13F818025945C9AC314390D2A1F55E37D  get_position_0() const { return ___position_0; }
-	inline float3_tE0DD2FF13F818025945C9AC314390D2A1F55E37D * get_address_of_position_0() { return &___position_0; }
-	inline void set_position_0(float3_tE0DD2FF13F818025945C9AC314390D2A1F55E37D  value)
+	inline float3_t9500D105F273B3D86BD354142E891C48FFF9F71D  get_position_0() const { return ___position_0; }
+	inline float3_t9500D105F273B3D86BD354142E891C48FFF9F71D * get_address_of_position_0() { return &___position_0; }
+	inline void set_position_0(float3_t9500D105F273B3D86BD354142E891C48FFF9F71D  value)
 	{
 		___position_0 = value;
 	}
@@ -21653,7 +21669,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Light2D_get_lightOrder_mD
 // System.Void UnityEngine.Experimental.Rendering.Universal.LightUtility/<>c::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__ctor_m1A77B3FBC09C73BC329944620B72C8DF33A53F28 (U3CU3Ec_t8ED3E8827F3C27626ABEF57EA6E850B2A914B3F5 * __this, const RuntimeMethod* method);
 // System.Void Unity.Mathematics.float3::.ctor(System.Single,System.Single,System.Single)
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void float3__ctor_m853853CCAF2BC58F66EE07DB9338C1644698D483_inline (float3_tE0DD2FF13F818025945C9AC314390D2A1F55E37D * __this, float ___x0, float ___y1, float ___z2, const RuntimeMethod* method);
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void float3__ctor_mA1B0F2B6874F0DEDFC715C334892EB2FAB31B40A_inline (float3_t9500D105F273B3D86BD354142E891C48FFF9F71D * __this, float ___x0, float ___y1, float ___z2, const RuntimeMethod* method);
 // System.Void UnityEngine.Rendering.VertexAttributeDescriptor::.ctor(UnityEngine.Rendering.VertexAttribute,UnityEngine.Rendering.VertexAttributeFormat,System.Int32,System.Int32)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VertexAttributeDescriptor__ctor_m98183669DC960D7BEFBEF0E216FF9A4BE1941FE9 (VertexAttributeDescriptor_t63A6AA231C2400B66A65E1B66732882B6C27E54E * __this, int32_t ___attribute0, int32_t ___format1, int32_t ___dimension2, int32_t ___stream3, const RuntimeMethod* method);
 // UnityEngine.Experimental.Rendering.Universal.LibTessDotNet.MeshUtils/Edge UnityEngine.Experimental.Rendering.Universal.LibTessDotNet.MeshUtils/Edge::get__Rprev()
@@ -38450,7 +38466,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t U3CU3Ec_U3CGenerateShapeMeshU3Eb__8_0
 	}
 }
 // Unity.Mathematics.float3 UnityEngine.Experimental.Rendering.Universal.LightUtility/<>c::<GenerateShapeMesh>b__8_1(UnityEngine.Experimental.Rendering.Universal.LibTessDotNet.ContourVertex)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float3_tE0DD2FF13F818025945C9AC314390D2A1F55E37D  U3CU3Ec_U3CGenerateShapeMeshU3Eb__8_1_m28F4B81CF36A5022D30EF051C2EA5BC58C92E107 (U3CU3Ec_t8ED3E8827F3C27626ABEF57EA6E850B2A914B3F5 * __this, ContourVertex_tF9E27CB6BCC62DF5F4202153BBBECDE5E3283536  ___v0, const RuntimeMethod* method)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float3_t9500D105F273B3D86BD354142E891C48FFF9F71D  U3CU3Ec_U3CGenerateShapeMeshU3Eb__8_1_m17C64A7119C9F7A5A5DE5F83AB4D0E3C1F3937C8 (U3CU3Ec_t8ED3E8827F3C27626ABEF57EA6E850B2A914B3F5 * __this, ContourVertex_tF9E27CB6BCC62DF5F4202153BBBECDE5E3283536  ___v0, const RuntimeMethod* method)
 {
 	{
 		// var verticesI = tessI.Vertices.Select(v => new float3(v.Position.X, v.Position.Y, 0));
@@ -38460,9 +38476,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float3_tE0DD2FF13F818025945C9AC314390D2A1F55E
 		ContourVertex_tF9E27CB6BCC62DF5F4202153BBBECDE5E3283536  L_3 = ___v0;
 		Vec3_tDD913B31171F6A37E61E4625FEA6C7901A6B1BC1  L_4 = L_3.get_Position_0();
 		float L_5 = L_4.get_Y_2();
-		float3_tE0DD2FF13F818025945C9AC314390D2A1F55E37D  L_6;
+		float3_t9500D105F273B3D86BD354142E891C48FFF9F71D  L_6;
 		memset((&L_6), 0, sizeof(L_6));
-		float3__ctor_m853853CCAF2BC58F66EE07DB9338C1644698D483_inline((&L_6), L_2, L_5, (0.0f), /*hidden argument*/NULL);
+		float3__ctor_mA1B0F2B6874F0DEDFC715C334892EB2FAB31B40A_inline((&L_6), L_2, L_5, (0.0f), /*hidden argument*/NULL);
 		return L_6;
 	}
 }
@@ -43424,7 +43440,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Light2D_get_lightOrder_mD
 		return L_0;
 	}
 }
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void float3__ctor_m853853CCAF2BC58F66EE07DB9338C1644698D483_inline (float3_tE0DD2FF13F818025945C9AC314390D2A1F55E37D * __this, float ___x0, float ___y1, float ___z2, const RuntimeMethod* method)
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void float3__ctor_mA1B0F2B6874F0DEDFC715C334892EB2FAB31B40A_inline (float3_t9500D105F273B3D86BD354142E891C48FFF9F71D * __this, float ___x0, float ___y1, float ___z2, const RuntimeMethod* method)
 {
 	{
 		// this.x = x;

@@ -136,7 +136,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         /* マップビューの設定 */
         mapView.frame = self.view.frame
         
-        mapView.camera = MGLMapCamera(lookingAtCenter: CLLocationCoordinate2D(latitude: 37.919792, longitude: 139.063600), altitude: 1200, pitch: 45, heading: 0)
+        mapView.camera = MGLMapCamera(lookingAtCenter: CLLocationCoordinate2D(latitude: 34.592337, longitude: 135.505284), altitude: 1200, pitch: 45, heading: 0)
         mapView.showsUserLocation = true // 現在地を表示する
         mapView.isPitchEnabled = true  // ジェスチャでの視点変更を許可しない
         mapView.showsScale = true

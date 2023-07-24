@@ -150,6 +150,10 @@
 	<assembly fullname="Unity.XR.ARKit">
 		<type fullname="UnityEngine.XR.ARKit.ARKitLoader" preserve="nothing"/>
 	</assembly>
+	<assembly fullname="Unity.XR.Interaction.Toolkit">
+		<type fullname="UnityEngine.XR.Interaction.Toolkit.Inputs.Simulation.XRDeviceSimulatorSettings" preserve="nothing"/>
+		<type fullname="UnityEngine.XR.Interaction.Toolkit.InteractionLayerSettings" preserve="nothing"/>
+	</assembly>
 	<assembly fullname="Unity.XR.Management">
 		<type fullname="UnityEngine.XR.Management.XRGeneralSettings" preserve="nothing"/>
 		<type fullname="UnityEngine.XR.Management.XRManagerSettings" preserve="nothing"/>
