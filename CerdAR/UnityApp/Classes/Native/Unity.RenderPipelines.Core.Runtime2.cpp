@@ -712,7 +712,7 @@ struct IDictionary_t99871C56B8EC2452AC5C4CF3831695E617B89D3A;
 // UnityEngine.UI.Image
 struct Image_t4021FF27176E44BFEDDCBE43C7FE6B713EC70D3C;
 // UnityEngine.InputSystem.InputActionMap
-struct InputActionMap_t266476E849A2FE654FE49A0318A1623B68350422;
+struct InputActionMap_t588F4834F020838C4E8AE148F8A42CC84FA75B44;
 // System.InvalidOperationException
 struct InvalidOperationException_t10D3EE59AD28EC641ACEE05BCA4271A527E5ECAB;
 // UnityEngine.Events.InvokableCallList
@@ -3425,7 +3425,7 @@ public:
 	// UnityEngine.Rendering.DebugActionState[] UnityEngine.Rendering.DebugManager::m_DebugActionStates
 	DebugActionStateU5BU5D_tCAD201CCCBD54E28636B1F3581D08872DD209E81* ___m_DebugActionStates_12;
 	// UnityEngine.InputSystem.InputActionMap UnityEngine.Rendering.DebugManager::debugActionMap
-	InputActionMap_t266476E849A2FE654FE49A0318A1623B68350422 * ___debugActionMap_13;
+	InputActionMap_t588F4834F020838C4E8AE148F8A42CC84FA75B44 * ___debugActionMap_13;
 	// System.Collections.ObjectModel.ReadOnlyCollection`1<UnityEngine.Rendering.DebugUI/Panel> UnityEngine.Rendering.DebugManager::m_ReadOnlyPanels
 	ReadOnlyCollection_1_t6263EA82317E201D50C5B5D16CD0C3478236C784 * ___m_ReadOnlyPanels_15;
 	// System.Collections.Generic.List`1<UnityEngine.Rendering.DebugUI/Panel> UnityEngine.Rendering.DebugManager::m_Panels
@@ -3471,9 +3471,9 @@ public:
 	}
 
 	inline static int32_t get_offset_of_debugActionMap_13() { return static_cast<int32_t>(offsetof(DebugManager_t42836832B6E4E05F0549C9BFA3366BE303B5BE92, ___debugActionMap_13)); }
-	inline InputActionMap_t266476E849A2FE654FE49A0318A1623B68350422 * get_debugActionMap_13() const { return ___debugActionMap_13; }
-	inline InputActionMap_t266476E849A2FE654FE49A0318A1623B68350422 ** get_address_of_debugActionMap_13() { return &___debugActionMap_13; }
-	inline void set_debugActionMap_13(InputActionMap_t266476E849A2FE654FE49A0318A1623B68350422 * value)
+	inline InputActionMap_t588F4834F020838C4E8AE148F8A42CC84FA75B44 * get_debugActionMap_13() const { return ___debugActionMap_13; }
+	inline InputActionMap_t588F4834F020838C4E8AE148F8A42CC84FA75B44 ** get_address_of_debugActionMap_13() { return &___debugActionMap_13; }
+	inline void set_debugActionMap_13(InputActionMap_t588F4834F020838C4E8AE148F8A42CC84FA75B44 * value)
 	{
 		___debugActionMap_13 = value;
 		Il2CppCodeGenWriteBarrier((void**)(&___debugActionMap_13), (void*)value);

@@ -6625,7 +6625,7 @@ public:
 
 
 // Unity.Mathematics.float2
-struct float2_t11F5F2974404951113DDC4E13EEB6E2456295547 
+struct float2_tCB7B81181978EDE17722C533A55E345D9A413274 
 {
 public:
 	// System.Single Unity.Mathematics.float2::x
@@ -6634,7 +6634,7 @@ public:
 	float ___y_1;
 
 public:
-	inline static int32_t get_offset_of_x_0() { return static_cast<int32_t>(offsetof(float2_t11F5F2974404951113DDC4E13EEB6E2456295547, ___x_0)); }
+	inline static int32_t get_offset_of_x_0() { return static_cast<int32_t>(offsetof(float2_tCB7B81181978EDE17722C533A55E345D9A413274, ___x_0)); }
 	inline float get_x_0() const { return ___x_0; }
 	inline float* get_address_of_x_0() { return &___x_0; }
 	inline void set_x_0(float value)
@@ -6642,7 +6642,7 @@ public:
 		___x_0 = value;
 	}
 
-	inline static int32_t get_offset_of_y_1() { return static_cast<int32_t>(offsetof(float2_t11F5F2974404951113DDC4E13EEB6E2456295547, ___y_1)); }
+	inline static int32_t get_offset_of_y_1() { return static_cast<int32_t>(offsetof(float2_tCB7B81181978EDE17722C533A55E345D9A413274, ___y_1)); }
 	inline float get_y_1() const { return ___y_1; }
 	inline float* get_address_of_y_1() { return &___y_1; }
 	inline void set_y_1(float value)
@@ -6651,9 +6651,25 @@ public:
 	}
 };
 
+struct float2_tCB7B81181978EDE17722C533A55E345D9A413274_StaticFields
+{
+public:
+	// Unity.Mathematics.float2 Unity.Mathematics.float2::zero
+	float2_tCB7B81181978EDE17722C533A55E345D9A413274  ___zero_2;
+
+public:
+	inline static int32_t get_offset_of_zero_2() { return static_cast<int32_t>(offsetof(float2_tCB7B81181978EDE17722C533A55E345D9A413274_StaticFields, ___zero_2)); }
+	inline float2_tCB7B81181978EDE17722C533A55E345D9A413274  get_zero_2() const { return ___zero_2; }
+	inline float2_tCB7B81181978EDE17722C533A55E345D9A413274 * get_address_of_zero_2() { return &___zero_2; }
+	inline void set_zero_2(float2_tCB7B81181978EDE17722C533A55E345D9A413274  value)
+	{
+		___zero_2 = value;
+	}
+};
+
 
 // Unity.Mathematics.float3
-struct float3_tE0DD2FF13F818025945C9AC314390D2A1F55E37D 
+struct float3_t9500D105F273B3D86BD354142E891C48FFF9F71D 
 {
 public:
 	// System.Single Unity.Mathematics.float3::x
@@ -6664,7 +6680,7 @@ public:
 	float ___z_2;
 
 public:
-	inline static int32_t get_offset_of_x_0() { return static_cast<int32_t>(offsetof(float3_tE0DD2FF13F818025945C9AC314390D2A1F55E37D, ___x_0)); }
+	inline static int32_t get_offset_of_x_0() { return static_cast<int32_t>(offsetof(float3_t9500D105F273B3D86BD354142E891C48FFF9F71D, ___x_0)); }
 	inline float get_x_0() const { return ___x_0; }
 	inline float* get_address_of_x_0() { return &___x_0; }
 	inline void set_x_0(float value)
@@ -6672,7 +6688,7 @@ public:
 		___x_0 = value;
 	}
 
-	inline static int32_t get_offset_of_y_1() { return static_cast<int32_t>(offsetof(float3_tE0DD2FF13F818025945C9AC314390D2A1F55E37D, ___y_1)); }
+	inline static int32_t get_offset_of_y_1() { return static_cast<int32_t>(offsetof(float3_t9500D105F273B3D86BD354142E891C48FFF9F71D, ___y_1)); }
 	inline float get_y_1() const { return ___y_1; }
 	inline float* get_address_of_y_1() { return &___y_1; }
 	inline void set_y_1(float value)
@@ -6680,7 +6696,7 @@ public:
 		___y_1 = value;
 	}
 
-	inline static int32_t get_offset_of_z_2() { return static_cast<int32_t>(offsetof(float3_tE0DD2FF13F818025945C9AC314390D2A1F55E37D, ___z_2)); }
+	inline static int32_t get_offset_of_z_2() { return static_cast<int32_t>(offsetof(float3_t9500D105F273B3D86BD354142E891C48FFF9F71D, ___z_2)); }
 	inline float get_z_2() const { return ___z_2; }
 	inline float* get_address_of_z_2() { return &___z_2; }
 	inline void set_z_2(float value)
@@ -6689,17 +6705,17 @@ public:
 	}
 };
 
-struct float3_tE0DD2FF13F818025945C9AC314390D2A1F55E37D_StaticFields
+struct float3_t9500D105F273B3D86BD354142E891C48FFF9F71D_StaticFields
 {
 public:
 	// Unity.Mathematics.float3 Unity.Mathematics.float3::zero
-	float3_tE0DD2FF13F818025945C9AC314390D2A1F55E37D  ___zero_3;
+	float3_t9500D105F273B3D86BD354142E891C48FFF9F71D  ___zero_3;
 
 public:
-	inline static int32_t get_offset_of_zero_3() { return static_cast<int32_t>(offsetof(float3_tE0DD2FF13F818025945C9AC314390D2A1F55E37D_StaticFields, ___zero_3)); }
-	inline float3_tE0DD2FF13F818025945C9AC314390D2A1F55E37D  get_zero_3() const { return ___zero_3; }
-	inline float3_tE0DD2FF13F818025945C9AC314390D2A1F55E37D * get_address_of_zero_3() { return &___zero_3; }
-	inline void set_zero_3(float3_tE0DD2FF13F818025945C9AC314390D2A1F55E37D  value)
+	inline static int32_t get_offset_of_zero_3() { return static_cast<int32_t>(offsetof(float3_t9500D105F273B3D86BD354142E891C48FFF9F71D_StaticFields, ___zero_3)); }
+	inline float3_t9500D105F273B3D86BD354142E891C48FFF9F71D  get_zero_3() const { return ___zero_3; }
+	inline float3_t9500D105F273B3D86BD354142E891C48FFF9F71D * get_address_of_zero_3() { return &___zero_3; }
+	inline void set_zero_3(float3_t9500D105F273B3D86BD354142E891C48FFF9F71D  value)
 	{
 		___zero_3 = value;
 	}
@@ -6707,7 +6723,7 @@ public:
 
 
 // Unity.Mathematics.float4
-struct float4_t866F9B9B0DB07AE8949D4ACE92A0A84C88769883 
+struct float4_tE704FC67CF9AC634EBA989ADFB15A4737CDA2861 
 {
 public:
 	// System.Single Unity.Mathematics.float4::x
@@ -6720,7 +6736,7 @@ public:
 	float ___w_3;
 
 public:
-	inline static int32_t get_offset_of_x_0() { return static_cast<int32_t>(offsetof(float4_t866F9B9B0DB07AE8949D4ACE92A0A84C88769883, ___x_0)); }
+	inline static int32_t get_offset_of_x_0() { return static_cast<int32_t>(offsetof(float4_tE704FC67CF9AC634EBA989ADFB15A4737CDA2861, ___x_0)); }
 	inline float get_x_0() const { return ___x_0; }
 	inline float* get_address_of_x_0() { return &___x_0; }
 	inline void set_x_0(float value)
@@ -6728,7 +6744,7 @@ public:
 		___x_0 = value;
 	}
 
-	inline static int32_t get_offset_of_y_1() { return static_cast<int32_t>(offsetof(float4_t866F9B9B0DB07AE8949D4ACE92A0A84C88769883, ___y_1)); }
+	inline static int32_t get_offset_of_y_1() { return static_cast<int32_t>(offsetof(float4_tE704FC67CF9AC634EBA989ADFB15A4737CDA2861, ___y_1)); }
 	inline float get_y_1() const { return ___y_1; }
 	inline float* get_address_of_y_1() { return &___y_1; }
 	inline void set_y_1(float value)
@@ -6736,7 +6752,7 @@ public:
 		___y_1 = value;
 	}
 
-	inline static int32_t get_offset_of_z_2() { return static_cast<int32_t>(offsetof(float4_t866F9B9B0DB07AE8949D4ACE92A0A84C88769883, ___z_2)); }
+	inline static int32_t get_offset_of_z_2() { return static_cast<int32_t>(offsetof(float4_tE704FC67CF9AC634EBA989ADFB15A4737CDA2861, ___z_2)); }
 	inline float get_z_2() const { return ___z_2; }
 	inline float* get_address_of_z_2() { return &___z_2; }
 	inline void set_z_2(float value)
@@ -6744,12 +6760,28 @@ public:
 		___z_2 = value;
 	}
 
-	inline static int32_t get_offset_of_w_3() { return static_cast<int32_t>(offsetof(float4_t866F9B9B0DB07AE8949D4ACE92A0A84C88769883, ___w_3)); }
+	inline static int32_t get_offset_of_w_3() { return static_cast<int32_t>(offsetof(float4_tE704FC67CF9AC634EBA989ADFB15A4737CDA2861, ___w_3)); }
 	inline float get_w_3() const { return ___w_3; }
 	inline float* get_address_of_w_3() { return &___w_3; }
 	inline void set_w_3(float value)
 	{
 		___w_3 = value;
+	}
+};
+
+struct float4_tE704FC67CF9AC634EBA989ADFB15A4737CDA2861_StaticFields
+{
+public:
+	// Unity.Mathematics.float4 Unity.Mathematics.float4::zero
+	float4_tE704FC67CF9AC634EBA989ADFB15A4737CDA2861  ___zero_4;
+
+public:
+	inline static int32_t get_offset_of_zero_4() { return static_cast<int32_t>(offsetof(float4_tE704FC67CF9AC634EBA989ADFB15A4737CDA2861_StaticFields, ___zero_4)); }
+	inline float4_tE704FC67CF9AC634EBA989ADFB15A4737CDA2861  get_zero_4() const { return ___zero_4; }
+	inline float4_tE704FC67CF9AC634EBA989ADFB15A4737CDA2861 * get_address_of_zero_4() { return &___zero_4; }
+	inline void set_zero_4(float4_tE704FC67CF9AC634EBA989ADFB15A4737CDA2861  value)
+	{
+		___zero_4 = value;
 	}
 };
 
@@ -9101,43 +9133,43 @@ struct PreTile_t4C3B1DD1A0BC90B618CEE8D0102DBC58FF119F36
 {
 public:
 	// Unity.Mathematics.float4 UnityEngine.Rendering.Universal.PreTile::planeLeft
-	float4_t866F9B9B0DB07AE8949D4ACE92A0A84C88769883  ___planeLeft_0;
+	float4_tE704FC67CF9AC634EBA989ADFB15A4737CDA2861  ___planeLeft_0;
 	// Unity.Mathematics.float4 UnityEngine.Rendering.Universal.PreTile::planeRight
-	float4_t866F9B9B0DB07AE8949D4ACE92A0A84C88769883  ___planeRight_1;
+	float4_tE704FC67CF9AC634EBA989ADFB15A4737CDA2861  ___planeRight_1;
 	// Unity.Mathematics.float4 UnityEngine.Rendering.Universal.PreTile::planeBottom
-	float4_t866F9B9B0DB07AE8949D4ACE92A0A84C88769883  ___planeBottom_2;
+	float4_tE704FC67CF9AC634EBA989ADFB15A4737CDA2861  ___planeBottom_2;
 	// Unity.Mathematics.float4 UnityEngine.Rendering.Universal.PreTile::planeTop
-	float4_t866F9B9B0DB07AE8949D4ACE92A0A84C88769883  ___planeTop_3;
+	float4_tE704FC67CF9AC634EBA989ADFB15A4737CDA2861  ___planeTop_3;
 
 public:
 	inline static int32_t get_offset_of_planeLeft_0() { return static_cast<int32_t>(offsetof(PreTile_t4C3B1DD1A0BC90B618CEE8D0102DBC58FF119F36, ___planeLeft_0)); }
-	inline float4_t866F9B9B0DB07AE8949D4ACE92A0A84C88769883  get_planeLeft_0() const { return ___planeLeft_0; }
-	inline float4_t866F9B9B0DB07AE8949D4ACE92A0A84C88769883 * get_address_of_planeLeft_0() { return &___planeLeft_0; }
-	inline void set_planeLeft_0(float4_t866F9B9B0DB07AE8949D4ACE92A0A84C88769883  value)
+	inline float4_tE704FC67CF9AC634EBA989ADFB15A4737CDA2861  get_planeLeft_0() const { return ___planeLeft_0; }
+	inline float4_tE704FC67CF9AC634EBA989ADFB15A4737CDA2861 * get_address_of_planeLeft_0() { return &___planeLeft_0; }
+	inline void set_planeLeft_0(float4_tE704FC67CF9AC634EBA989ADFB15A4737CDA2861  value)
 	{
 		___planeLeft_0 = value;
 	}
 
 	inline static int32_t get_offset_of_planeRight_1() { return static_cast<int32_t>(offsetof(PreTile_t4C3B1DD1A0BC90B618CEE8D0102DBC58FF119F36, ___planeRight_1)); }
-	inline float4_t866F9B9B0DB07AE8949D4ACE92A0A84C88769883  get_planeRight_1() const { return ___planeRight_1; }
-	inline float4_t866F9B9B0DB07AE8949D4ACE92A0A84C88769883 * get_address_of_planeRight_1() { return &___planeRight_1; }
-	inline void set_planeRight_1(float4_t866F9B9B0DB07AE8949D4ACE92A0A84C88769883  value)
+	inline float4_tE704FC67CF9AC634EBA989ADFB15A4737CDA2861  get_planeRight_1() const { return ___planeRight_1; }
+	inline float4_tE704FC67CF9AC634EBA989ADFB15A4737CDA2861 * get_address_of_planeRight_1() { return &___planeRight_1; }
+	inline void set_planeRight_1(float4_tE704FC67CF9AC634EBA989ADFB15A4737CDA2861  value)
 	{
 		___planeRight_1 = value;
 	}
 
 	inline static int32_t get_offset_of_planeBottom_2() { return static_cast<int32_t>(offsetof(PreTile_t4C3B1DD1A0BC90B618CEE8D0102DBC58FF119F36, ___planeBottom_2)); }
-	inline float4_t866F9B9B0DB07AE8949D4ACE92A0A84C88769883  get_planeBottom_2() const { return ___planeBottom_2; }
-	inline float4_t866F9B9B0DB07AE8949D4ACE92A0A84C88769883 * get_address_of_planeBottom_2() { return &___planeBottom_2; }
-	inline void set_planeBottom_2(float4_t866F9B9B0DB07AE8949D4ACE92A0A84C88769883  value)
+	inline float4_tE704FC67CF9AC634EBA989ADFB15A4737CDA2861  get_planeBottom_2() const { return ___planeBottom_2; }
+	inline float4_tE704FC67CF9AC634EBA989ADFB15A4737CDA2861 * get_address_of_planeBottom_2() { return &___planeBottom_2; }
+	inline void set_planeBottom_2(float4_tE704FC67CF9AC634EBA989ADFB15A4737CDA2861  value)
 	{
 		___planeBottom_2 = value;
 	}
 
 	inline static int32_t get_offset_of_planeTop_3() { return static_cast<int32_t>(offsetof(PreTile_t4C3B1DD1A0BC90B618CEE8D0102DBC58FF119F36, ___planeTop_3)); }
-	inline float4_t866F9B9B0DB07AE8949D4ACE92A0A84C88769883  get_planeTop_3() const { return ___planeTop_3; }
-	inline float4_t866F9B9B0DB07AE8949D4ACE92A0A84C88769883 * get_address_of_planeTop_3() { return &___planeTop_3; }
-	inline void set_planeTop_3(float4_t866F9B9B0DB07AE8949D4ACE92A0A84C88769883  value)
+	inline float4_tE704FC67CF9AC634EBA989ADFB15A4737CDA2861  get_planeTop_3() const { return ___planeTop_3; }
+	inline float4_tE704FC67CF9AC634EBA989ADFB15A4737CDA2861 * get_address_of_planeTop_3() { return &___planeTop_3; }
+	inline void set_planeTop_3(float4_tE704FC67CF9AC634EBA989ADFB15A4737CDA2861  value)
 	{
 		___planeTop_3 = value;
 	}
@@ -10176,21 +10208,21 @@ struct PrePunctualLight_t6A6B0358A9D80FE6E10948C365C06F7092A8D609
 {
 public:
 	// Unity.Mathematics.float3 UnityEngine.Rendering.Universal.Internal.DeferredTiler/PrePunctualLight::posVS
-	float3_tE0DD2FF13F818025945C9AC314390D2A1F55E37D  ___posVS_0;
+	float3_t9500D105F273B3D86BD354142E891C48FFF9F71D  ___posVS_0;
 	// System.Single UnityEngine.Rendering.Universal.Internal.DeferredTiler/PrePunctualLight::radius
 	float ___radius_1;
 	// System.Single UnityEngine.Rendering.Universal.Internal.DeferredTiler/PrePunctualLight::minDist
 	float ___minDist_2;
 	// Unity.Mathematics.float2 UnityEngine.Rendering.Universal.Internal.DeferredTiler/PrePunctualLight::screenPos
-	float2_t11F5F2974404951113DDC4E13EEB6E2456295547  ___screenPos_3;
+	float2_tCB7B81181978EDE17722C533A55E345D9A413274  ___screenPos_3;
 	// System.UInt16 UnityEngine.Rendering.Universal.Internal.DeferredTiler/PrePunctualLight::visLightIndex
 	uint16_t ___visLightIndex_4;
 
 public:
 	inline static int32_t get_offset_of_posVS_0() { return static_cast<int32_t>(offsetof(PrePunctualLight_t6A6B0358A9D80FE6E10948C365C06F7092A8D609, ___posVS_0)); }
-	inline float3_tE0DD2FF13F818025945C9AC314390D2A1F55E37D  get_posVS_0() const { return ___posVS_0; }
-	inline float3_tE0DD2FF13F818025945C9AC314390D2A1F55E37D * get_address_of_posVS_0() { return &___posVS_0; }
-	inline void set_posVS_0(float3_tE0DD2FF13F818025945C9AC314390D2A1F55E37D  value)
+	inline float3_t9500D105F273B3D86BD354142E891C48FFF9F71D  get_posVS_0() const { return ___posVS_0; }
+	inline float3_t9500D105F273B3D86BD354142E891C48FFF9F71D * get_address_of_posVS_0() { return &___posVS_0; }
+	inline void set_posVS_0(float3_t9500D105F273B3D86BD354142E891C48FFF9F71D  value)
 	{
 		___posVS_0 = value;
 	}
@@ -10212,9 +10244,9 @@ public:
 	}
 
 	inline static int32_t get_offset_of_screenPos_3() { return static_cast<int32_t>(offsetof(PrePunctualLight_t6A6B0358A9D80FE6E10948C365C06F7092A8D609, ___screenPos_3)); }
-	inline float2_t11F5F2974404951113DDC4E13EEB6E2456295547  get_screenPos_3() const { return ___screenPos_3; }
-	inline float2_t11F5F2974404951113DDC4E13EEB6E2456295547 * get_address_of_screenPos_3() { return &___screenPos_3; }
-	inline void set_screenPos_3(float2_t11F5F2974404951113DDC4E13EEB6E2456295547  value)
+	inline float2_tCB7B81181978EDE17722C533A55E345D9A413274  get_screenPos_3() const { return ___screenPos_3; }
+	inline float2_tCB7B81181978EDE17722C533A55E345D9A413274 * get_address_of_screenPos_3() { return &___screenPos_3; }
+	inline void set_screenPos_3(float2_tCB7B81181978EDE17722C533A55E345D9A413274  value)
 	{
 		___screenPos_3 = value;
 	}
