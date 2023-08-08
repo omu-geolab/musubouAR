@@ -51,31 +51,6 @@
     }
 },
 {
-    "name":"空中写真（1945年～1950年）",
-    "server":"https://cyberjapandata.gsi.go.jp/xyz/ort_USA10/{z}/{x}/{y}.png",
-    "gl_style":{
-        "version": 8,
-        "name": "Raster Tiles",
-        "sources": {
-            "ort_1945": {
-                "type": "raster",
-                "tiles": [
-                    "https://cyberjapandata.gsi.go.jp/xyz/ort_USA10/{z}/{x}/{y}.png"
-                ],
-                "tileSize": 256
-            }
-        },
-        "layers": [{
-            "id": "ort_1945",
-            "type": "raster",
-            "source": "ort_1945",
-            "paint": {
-                "raster-fade-duration": 100
-            }
-        }]
-    }
-},
-{
     "name":"空中写真（1961年～1969年）",
     "server":"https://cyberjapandata.gsi.go.jp/xyz/ort_old10/{z}/{x}/{y}.png",
     "gl_style":{
