@@ -1,7 +1,8 @@
 [
 {
-    "name":"地理院地図（標準）",
-    "server":"https://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png",
+    "name":"地理院地図（治水地形分類図 更新版 2007年以降）",
+    "server":"https://cyberjapandata.gsi.go.jp/xyz/lcmfc2/{z}/{x}/{y}.png",
+    "legend":"https://cyberjapandata.gsi.go.jp/legend/lcmfc2_legend.jpg",
     "gl_style":{
         "version": 8,
         "name": "Raster Tiles",
@@ -9,15 +10,41 @@
             "gsiStd": {
                 "type": "raster",
                 "tiles": [
-                    "https://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png"
+                    "https://cyberjapandata.gsi.go.jp/xyz/lcmfc2/{z}/{x}/{y}.png"
                 ],
                 "tileSize": 256
             }
         },
         "layers": [{
-            "id": "gsiStd",
+            "id": "lcmfc2",
             "type": "raster",
-            "source": "gsiStd",
+            "source": "lcmfc2",
+            "paint": {
+                "raster-fade-duration": 100
+            }
+        }]
+    }
+},
+{
+    "name":"高潮浸水想定区域",
+    "server":"https://disaportaldata.gsi.go.jp/raster/03_hightide_l2_shinsuishin_data/{z}/{x}/{y}.png",
+    "legend":"https://disaportal.gsi.go.jp/hazardmap/copyright/img/tsunami_newlegend.png",
+    "gl_style":{
+        "version": 8,
+        "name": "Raster Tiles",
+        "sources": {
+            "03_hightide_l2_shinsuishin_data": {
+                "type": "raster",
+                "tiles": [
+                    "https://disaportaldata.gsi.go.jp/raster/03_hightide_l2_shinsuishin_data/{z}/{x}/{y}.png"
+                ],
+                "tileSize": 256
+            }
+        },
+        "layers": [{
+            "id": "01_flood_l2_shinsuishin_data",
+            "type": "raster",
+            "source": "01_flood_l2_shinsuishin_data",
             "paint": {
                 "raster-fade-duration": 100
             }
