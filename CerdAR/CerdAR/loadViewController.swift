@@ -205,7 +205,9 @@ class loadViewController: UIViewController, termsViewDelegate, CLLocationManager
      */
     func jsondata(callback: @escaping (String) -> Void) -> Void {
         
-        let url = URL(string: "https://www.cerd.osaka-cu.ac.jp/cerdar_pics/Sugimoto/data.geojson")
+//        let url = URL(string: "https://www.cerd.osaka-cu.ac.jp/cerdar_pics/Sugimoto/data.geojson")
+        let url = URL(string: "https://www.musubou.net/musubou-ar/data.geojson")
+
         let req = URLRequest(url: url!, timeoutInterval: 5.0)
         
         let configuration = URLSessionConfiguration.default
