@@ -7,7 +7,7 @@
         "version": 8,
         "name": "Raster Tiles",
         "sources": {
-            "gsiStd": {
+            "lcmfc2": {
                 "type": "raster",
                 "tiles": [
                     "https://cyberjapandata.gsi.go.jp/xyz/lcmfc2/{z}/{x}/{y}.png"
@@ -19,6 +19,58 @@
             "id": "lcmfc2",
             "type": "raster",
             "source": "lcmfc2",
+            "paint": {
+                "raster-fade-duration": 100
+            }
+        }]
+    }
+},
+{
+    "name":"数値地図25000（土地条件）",
+    "server":"https://cyberjapandata.gsi.go.jp/xyz/lcm25k_2012/{z}/{x}/{y}.png",
+    "legend":"https://www.cerd.osaka-cu.ac.jp/cerd-ar_tiles/lc_legend.png",
+    "gl_style":{
+        "version": 8,
+        "name": "Raster Tiles",
+        "sources": {
+            "lcm25k_2012": {
+                "type": "raster",
+                "tiles": [
+                    "https://cyberjapandata.gsi.go.jp/xyz/lcm25k_2012/{z}/{x}/{y}.png"
+                ],
+                "tileSize": 256
+            }
+        },
+        "layers": [{
+            "id": "lcm25k_2012",
+            "type": "raster",
+            "source": "lcm25k_2012",
+            "paint": {
+                "raster-fade-duration": 100
+            }
+        }]
+    }
+},
+{
+    "name":"色別標高図",
+    "server":"https://cyberjapandata.gsi.go.jp/xyz/relief/{z}/{x}/{y}.png",
+    "legend":"https://maps.gsi.go.jp/legend/Relief_hanrei.png",
+    "gl_style":{
+        "version": 8,
+        "name": "Raster Tiles",
+        "sources": {
+            "relief": {
+                "type": "raster",
+                "tiles": [
+                    "https://cyberjapandata.gsi.go.jp/xyz/relief/{z}/{x}/{y}.png"
+                ],
+                "tileSize": 256
+            }
+        },
+        "layers": [{
+            "id": "relief",
+            "type": "raster",
+            "source": "relief",
             "paint": {
                 "raster-fade-duration": 100
             }
@@ -42,9 +94,9 @@
             }
         },
         "layers": [{
-            "id": "01_flood_l2_shinsuishin_data",
+            "id": "03_hightide_l2_shinsuishin_data",
             "type": "raster",
-            "source": "01_flood_l2_shinsuishin_data",
+            "source": "03_hightide_l2_shinsuishin_data",
             "paint": {
                 "raster-fade-duration": 100
             }
@@ -71,6 +123,31 @@
             "id": "01_flood_l2_shinsuishin_data",
             "type": "raster",
             "source": "01_flood_l2_shinsuishin_data",
+            "paint": {
+                "raster-fade-duration": 100
+            }
+        }]
+    }
+},
+{
+    "name":"空中写真（1945年～1950年）",
+    "server":"https://cyberjapandata.gsi.go.jp/xyz/ort_USA10/{z}/{x}/{y}.png",
+    "gl_style":{
+        "version": 8,
+        "name": "Raster Tiles",
+        "sources": {
+            "ort_1945": {
+                "type": "raster",
+                "tiles": [
+                    "https://cyberjapandata.gsi.go.jp/xyz/ort_USA10/{z}/{x}/{y}.png"
+                ],
+                "tileSize": 256
+            }
+        },
+        "layers": [{
+            "id": "ort_1945",
+            "type": "raster",
+            "source": "ort_1945",
             "paint": {
                 "raster-fade-duration": 100
             }
