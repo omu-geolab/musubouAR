@@ -2454,10 +2454,6 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_ParticleSystem_Emit_Internal();
 		Register_UnityEngine_ParticleSystem_Emit_Internal();
 
-		//System.Void UnityEngine.ParticleSystem::Play(System.Boolean)
-		void Register_UnityEngine_ParticleSystem_Play();
-		Register_UnityEngine_ParticleSystem_Play();
-
 		//System.Void UnityEngine.ParticleSystem::SetParticles(UnityEngine.ParticleSystem/Particle[],System.Int32,System.Int32)
 		void Register_UnityEngine_ParticleSystem_SetParticles();
 		Register_UnityEngine_ParticleSystem_SetParticles();
@@ -2473,10 +2469,6 @@ void RegisterAllStrippedInternalCalls()
 		//System.Void UnityEngine.ParticleSystem/MainModule::get_startSize_Injected(UnityEngine.ParticleSystem/MainModule&,UnityEngine.ParticleSystem/MinMaxCurve&)
 		void Register_UnityEngine_ParticleSystem_MainModule_get_startSize_Injected();
 		Register_UnityEngine_ParticleSystem_MainModule_get_startSize_Injected();
-
-		//System.Void UnityEngine.ParticleSystem/MainModule::set_duration_Injected(UnityEngine.ParticleSystem/MainModule&,System.Single)
-		void Register_UnityEngine_ParticleSystem_MainModule_set_duration_Injected();
-		Register_UnityEngine_ParticleSystem_MainModule_set_duration_Injected();
 
 	//End Registrations for type : UnityEngine.ParticleSystem/MainModule
 

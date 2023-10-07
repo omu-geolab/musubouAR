@@ -1133,7 +1133,6 @@ IL2CPP_EXTERN_C String_t* _stringLiteralC1771FD048FA0C5283A6D1085A6C3493F05C1302
 IL2CPP_EXTERN_C String_t* _stringLiteralC1AFD1C9F987BC59E96A1E684A27F9C8CF990FC1;
 IL2CPP_EXTERN_C String_t* _stringLiteralC1FB25C5E08A962EB17CFE800C70288A0D8B7935;
 IL2CPP_EXTERN_C String_t* _stringLiteralC4589C665A5E0947EF51834EAFBFACF31452FC8E;
-IL2CPP_EXTERN_C String_t* _stringLiteralC553D377A25488D9FAF57D1EAEA38847171D8A78;
 IL2CPP_EXTERN_C String_t* _stringLiteralC5DD049CCCA8D953E8AB8090EA7F5C8412480A83;
 IL2CPP_EXTERN_C String_t* _stringLiteralC6880ED9BBC8974667FAC9F324AB95BACCBE82D0;
 IL2CPP_EXTERN_C String_t* _stringLiteralC72B2B7A748D532C712F49D6D87F1B969D15395A;
@@ -1169,6 +1168,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteralE6C99819BF8E8F96F7CA2244A490B088B17B3CC0
 IL2CPP_EXTERN_C String_t* _stringLiteralE72B48F6A64AEFB8068F9F38F85F3A179CD1E9F5;
 IL2CPP_EXTERN_C String_t* _stringLiteralE772D6B752E71D3C55BA27F48DC3D27B2E29D615;
 IL2CPP_EXTERN_C String_t* _stringLiteralE85F0A4D199E0563D62EF12E32FB115B6872A1ED;
+IL2CPP_EXTERN_C String_t* _stringLiteralEBD8044853D38524000A9618EB61AFD6F16295E8;
 IL2CPP_EXTERN_C String_t* _stringLiteralEC3E296F3933E53A708D8297BE06FBDF3F612458;
 IL2CPP_EXTERN_C String_t* _stringLiteralECCF13147057F5D46884CB2CF19909ED77F4228C;
 IL2CPP_EXTERN_C String_t* _stringLiteralED2CB408113858F06823A62070B87E225F471DED;
@@ -3584,12 +3584,8 @@ public:
 	String_t* ___kInfo_2;
 	// System.String DataManager::kWarn
 	String_t* ___kWarn_3;
-	// System.String DataManager::kPhoto
-	String_t* ___kPhoto_4;
-	// System.String DataManager::kMovie
-	String_t* ___kMovie_5;
 	// System.Boolean DataManager::hasData
-	bool ___hasData_6;
+	bool ___hasData_4;
 
 public:
 	inline static int32_t get_offset_of_infoBox_0() { return static_cast<int32_t>(offsetof(DataManager_t01518B3D49E16D1E80F0C7C9F0533427905EC1E2, ___infoBox_0)); }
@@ -3628,30 +3624,12 @@ public:
 		Il2CppCodeGenWriteBarrier((void**)(&___kWarn_3), (void*)value);
 	}
 
-	inline static int32_t get_offset_of_kPhoto_4() { return static_cast<int32_t>(offsetof(DataManager_t01518B3D49E16D1E80F0C7C9F0533427905EC1E2, ___kPhoto_4)); }
-	inline String_t* get_kPhoto_4() const { return ___kPhoto_4; }
-	inline String_t** get_address_of_kPhoto_4() { return &___kPhoto_4; }
-	inline void set_kPhoto_4(String_t* value)
+	inline static int32_t get_offset_of_hasData_4() { return static_cast<int32_t>(offsetof(DataManager_t01518B3D49E16D1E80F0C7C9F0533427905EC1E2, ___hasData_4)); }
+	inline bool get_hasData_4() const { return ___hasData_4; }
+	inline bool* get_address_of_hasData_4() { return &___hasData_4; }
+	inline void set_hasData_4(bool value)
 	{
-		___kPhoto_4 = value;
-		Il2CppCodeGenWriteBarrier((void**)(&___kPhoto_4), (void*)value);
-	}
-
-	inline static int32_t get_offset_of_kMovie_5() { return static_cast<int32_t>(offsetof(DataManager_t01518B3D49E16D1E80F0C7C9F0533427905EC1E2, ___kMovie_5)); }
-	inline String_t* get_kMovie_5() const { return ___kMovie_5; }
-	inline String_t** get_address_of_kMovie_5() { return &___kMovie_5; }
-	inline void set_kMovie_5(String_t* value)
-	{
-		___kMovie_5 = value;
-		Il2CppCodeGenWriteBarrier((void**)(&___kMovie_5), (void*)value);
-	}
-
-	inline static int32_t get_offset_of_hasData_6() { return static_cast<int32_t>(offsetof(DataManager_t01518B3D49E16D1E80F0C7C9F0533427905EC1E2, ___hasData_6)); }
-	inline bool get_hasData_6() const { return ___hasData_6; }
-	inline bool* get_address_of_hasData_6() { return &___hasData_6; }
-	inline void set_hasData_6(bool value)
-	{
-		___hasData_6 = value;
+		___hasData_4 = value;
 	}
 };
 
@@ -8100,25 +8078,6 @@ public:
 };
 
 
-// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=12
-struct __StaticArrayInitTypeSizeU3D12_tBA6527015605C05FA449470204ADB7A684F0A794 
-{
-public:
-	union
-	{
-		struct
-		{
-			union
-			{
-			};
-		};
-		uint8_t __StaticArrayInitTypeSizeU3D12_tBA6527015605C05FA449470204ADB7A684F0A794__padding[12];
-	};
-
-public:
-};
-
-
 // UnityEngine.XR.ARFoundation.Samples.CustomConfigurationChooser/PreferCameraConfigurationChooser
 struct PreferCameraConfigurationChooser_t50630FE3BDE9C3BC4A0C9D34FEF6A1592CE4A631  : public ConfigurationChooser_t0CCF856A226297A702F306A2217CF17D652E72C4
 {
@@ -8634,31 +8593,6 @@ struct TrackingSubsystem_4_t87A57AE1E1117ED73BBD3B84DD595F36FA975077  : public S
 public:
 
 public:
-};
-
-
-// <PrivateImplementationDetails>
-struct U3CPrivateImplementationDetailsU3E_t6BC7664D9CD46304D39A7D175BB8FFBE0B9F4528  : public RuntimeObject
-{
-public:
-
-public:
-};
-
-struct U3CPrivateImplementationDetailsU3E_t6BC7664D9CD46304D39A7D175BB8FFBE0B9F4528_StaticFields
-{
-public:
-	// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=12 <PrivateImplementationDetails>::13BA99FB374DE24EB2656ACE253C54E2DA7EBAEDA4DD3DAB04852553EAF91EF6
-	__StaticArrayInitTypeSizeU3D12_tBA6527015605C05FA449470204ADB7A684F0A794  ___13BA99FB374DE24EB2656ACE253C54E2DA7EBAEDA4DD3DAB04852553EAF91EF6_0;
-
-public:
-	inline static int32_t get_offset_of_U313BA99FB374DE24EB2656ACE253C54E2DA7EBAEDA4DD3DAB04852553EAF91EF6_0() { return static_cast<int32_t>(offsetof(U3CPrivateImplementationDetailsU3E_t6BC7664D9CD46304D39A7D175BB8FFBE0B9F4528_StaticFields, ___13BA99FB374DE24EB2656ACE253C54E2DA7EBAEDA4DD3DAB04852553EAF91EF6_0)); }
-	inline __StaticArrayInitTypeSizeU3D12_tBA6527015605C05FA449470204ADB7A684F0A794  get_U313BA99FB374DE24EB2656ACE253C54E2DA7EBAEDA4DD3DAB04852553EAF91EF6_0() const { return ___13BA99FB374DE24EB2656ACE253C54E2DA7EBAEDA4DD3DAB04852553EAF91EF6_0; }
-	inline __StaticArrayInitTypeSizeU3D12_tBA6527015605C05FA449470204ADB7A684F0A794 * get_address_of_U313BA99FB374DE24EB2656ACE253C54E2DA7EBAEDA4DD3DAB04852553EAF91EF6_0() { return &___13BA99FB374DE24EB2656ACE253C54E2DA7EBAEDA4DD3DAB04852553EAF91EF6_0; }
-	inline void set_U313BA99FB374DE24EB2656ACE253C54E2DA7EBAEDA4DD3DAB04852553EAF91EF6_0(__StaticArrayInitTypeSizeU3D12_tBA6527015605C05FA449470204ADB7A684F0A794  value)
-	{
-		___13BA99FB374DE24EB2656ACE253C54E2DA7EBAEDA4DD3DAB04852553EAF91EF6_0 = value;
-	}
 };
 
 
@@ -29844,14 +29778,6 @@ IL2CPP_EXTERN_C void DEFAULT_CALL ARSession_addGeoAnchor(intptr_t, CLLocationCoo
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
 // UnityEngine.XR.ARFoundation.ARAllPointCloudPointsParticleVisualizer/Mode UnityEngine.XR.ARFoundation.ARAllPointCloudPointsParticleVisualizer::get_mode()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t ARAllPointCloudPointsParticleVisualizer_get_mode_mE2961E81075235D3BD24C54D522050A6A16ADF78 (ARAllPointCloudPointsParticleVisualizer_tA7A20F0ABC39455ED4236FD21D811E29281DAC9B * __this, const RuntimeMethod* method)
 {
@@ -43167,7 +43093,7 @@ IL_0147:
 	}
 	{
 		// hasData = true;
-		__this->set_hasData_6((bool)1);
+		__this->set_hasData_4((bool)1);
 	}
 
 IL_015a:
@@ -43185,8 +43111,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DataManager__ctor_m8A6DD19CA5399C36D89F0
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1__ctor_mD8C59647B6A99276F4ED6265A1FCC28CE2A01843_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_t065E647AF7FEA79F5438C2EE7B985B7580A86CDE_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral7CD4F2CFEB1F344425CBDF9D59697BBD8D71BD91);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral8005DCBC24CE3E5088A2A803FDE6FFA94175CE62);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral9A14D93843D1DA4DDF664301D156D4048654F064);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralA7B00F7F25C375B2501A6ADBC86D092B23977085);
 		s_Il2CppMethodInitialized = true;
 	}
@@ -43203,10 +43127,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DataManager__ctor_m8A6DD19CA5399C36D89F0
 		__this->set_kInfo_2(_stringLiteralA7B00F7F25C375B2501A6ADBC86D092B23977085);
 		// string kWarn = "warn"; // 種別(警告(今災害が起こっている))
 		__this->set_kWarn_3(_stringLiteral7CD4F2CFEB1F344425CBDF9D59697BBD8D71BD91);
-		// string kPhoto = "photo"; // 写真
-		__this->set_kPhoto_4(_stringLiteral9A14D93843D1DA4DDF664301D156D4048654F064);
-		// string kMovie = "movie"; // 動画
-		__this->set_kMovie_5(_stringLiteral8005DCBC24CE3E5088A2A803FDE6FFA94175CE62);
 		Object__ctor_m88880E0413421D13FD95325EDCE231707CE1F405(__this, /*hidden argument*/NULL);
 		return;
 	}
@@ -43341,8 +43261,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DialogInfoController_setFeature_m31FF149
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralA04F46818C5979B5F4A647B3385BB091910BF3E1);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralA15C898F015A9B0BC3268E8883CD03008A56DE26);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralC1771FD048FA0C5283A6D1085A6C3493F05C1302);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralC553D377A25488D9FAF57D1EAEA38847171D8A78);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralEBD8044853D38524000A9618EB61AFD6F16295E8);
 		s_Il2CppMethodInitialized = true;
 	}
 	String_t* V_0 = NULL;
@@ -43670,12 +43590,12 @@ IL_01b4:
 
 IL_0205:
 	{
-		// distance.text ="����"+ dis.ToString("F0") + "m";
+		// distance.text ="??"+ dis.ToString("F0") + "m";
 		Text_t6A2339DA6C05AE2646FC1A6C8FCC127391BE7FA1 * L_83 = __this->get_distance_5();
 		String_t* L_84;
 		L_84 = Double_ToString_m01772ACCBAF392BB24F3A8803DF40ADCF148D64C((double*)(&V_2), _stringLiteral1EA9FDAF69DF72C9D1CF16DE8ADB89BCAF623EE6, /*hidden argument*/NULL);
 		String_t* L_85;
-		L_85 = String_Concat_m89EAB4C6A96B0E5C3F87300D6BE78D386B9EFC44(_stringLiteralC553D377A25488D9FAF57D1EAEA38847171D8A78, L_84, _stringLiteralC1771FD048FA0C5283A6D1085A6C3493F05C1302, /*hidden argument*/NULL);
+		L_85 = String_Concat_m89EAB4C6A96B0E5C3F87300D6BE78D386B9EFC44(_stringLiteralEBD8044853D38524000A9618EB61AFD6F16295E8, L_84, _stringLiteralC1771FD048FA0C5283A6D1085A6C3493F05C1302, /*hidden argument*/NULL);
 		NullCheck(L_83);
 		VirtActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_83, L_85);
 		// content.text = feature.properties.description;
