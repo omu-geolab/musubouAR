@@ -5,8 +5,8 @@
       "scale" : "1x"
     },
     {
+      "filename" : "前掛け [更新済み].png",
       "idiom" : "universal",
-      "filename" : "shoubo-markerMap.png",
       "scale" : "2x"
     },
     {
@@ -15,7 +15,7 @@
     }
   ],
   "info" : {
-    "version" : 1,
-    "author" : "xcode"
+    "author" : "xcode",
+    "version" : 1
   }
 }
