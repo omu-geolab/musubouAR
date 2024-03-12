@@ -24629,9 +24629,9 @@ IL_00eb:
 
 IL_010d:
 	{
-		// if (distance < 50)
+		// if (distance < 5) // ARモードでのメッセージの表示範囲（m）
 		double L_40 = V_2;
-		if ((!(((double)L_40) < ((double)(50.0)))))
+		if ((!(((double)L_40) < ((double)(5.0)))))
 		{
 			goto IL_013d;
 		}
