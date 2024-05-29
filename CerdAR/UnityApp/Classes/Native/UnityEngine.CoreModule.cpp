@@ -15992,8 +15992,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool LODParameters_Equals_m8F8B356BCB62FAEAE0
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t LODParameters_GetHashCode_m5310697EE3BF4943F7358EF0EA2E7B3A9D7C1BAD (LODParameters_tA41D06C4BDB03138144BE9DCC4BC6B37963DC5CD * __this, const RuntimeMethod* method);
 // System.Int32 UnityEngine.LayerMask::get_value()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t LayerMask_get_value_m6380C7449537F99361797225E179A9448A53DDF9 (LayerMask_t5FA647D8C300EA0621360CA4424717C3C73190A8 * __this, const RuntimeMethod* method);
-// System.Void UnityEngine.LayerMask::set_value(System.Int32)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LayerMask_set_value_mE825B6131A75814FCF2EA32ECBE2A205E6531585 (LayerMask_t5FA647D8C300EA0621360CA4424717C3C73190A8 * __this, int32_t ___value0, const RuntimeMethod* method);
 // System.Void UnityEngine.Light::get_color_Injected(UnityEngine.Color&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Light_get_color_Injected_mFC80DFA291AB496FAE0BC39E82460F6653B3362D (Light_tA2F349FE839781469A0344CF6039B51512394275 * __this, Color_tF40DAF76C04FFECF3FE6024F85A294741C9CC659 * ___ret0, const RuntimeMethod* method);
 // System.Void UnityEngine.Light::set_color_Injected(UnityEngine.Color&)
@@ -37257,21 +37255,6 @@ IL2CPP_EXTERN_C  int32_t LayerMask_get_value_m6380C7449537F99361797225E179A9448A
 	int32_t _returnValue;
 	_returnValue = LayerMask_get_value_m6380C7449537F99361797225E179A9448A53DDF9(_thisAdjusted, method);
 	return _returnValue;
-}
-// System.Void UnityEngine.LayerMask::set_value(System.Int32)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LayerMask_set_value_mE825B6131A75814FCF2EA32ECBE2A205E6531585 (LayerMask_t5FA647D8C300EA0621360CA4424717C3C73190A8 * __this, int32_t ___value0, const RuntimeMethod* method)
-{
-	{
-		int32_t L_0 = ___value0;
-		__this->set_m_Mask_0(L_0);
-		return;
-	}
-}
-IL2CPP_EXTERN_C  void LayerMask_set_value_mE825B6131A75814FCF2EA32ECBE2A205E6531585_AdjustorThunk (RuntimeObject * __this, int32_t ___value0, const RuntimeMethod* method)
-{
-	int32_t _offset = 1;
-	LayerMask_t5FA647D8C300EA0621360CA4424717C3C73190A8 * _thisAdjusted = reinterpret_cast<LayerMask_t5FA647D8C300EA0621360CA4424717C3C73190A8 *>(__this + _offset);
-	LayerMask_set_value_mE825B6131A75814FCF2EA32ECBE2A205E6531585(_thisAdjusted, ___value0, method);
 }
 #ifdef __clang__
 #pragma clang diagnostic pop

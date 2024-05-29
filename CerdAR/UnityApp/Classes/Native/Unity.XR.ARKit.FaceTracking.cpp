@@ -14,16 +14,26 @@
 
 // System.Char[]
 struct CharU5BU5D_t7B7FC5BC8091AA3B9CB0B29CDD80B5EE9254AA34;
+// System.IntPtr[]
+struct IntPtrU5BU5D_t27FC72B0409D75AAF33EC42498E8094E95FEE9A6;
+// System.Diagnostics.StackTrace[]
+struct StackTraceU5BU5D_t4AD999C288CB6D1F38A299D12B1598D606588971;
 // System.Type[]
 struct TypeU5BU5D_t85B10489E46F06CEC7C4B1CCBD0E01FAB6649755;
 // UnityEngine.XR.ARKit.ARKitFaceSubsystem
 struct ARKitFaceSubsystem_t369BE5809CFFB915E7D7C380EA989BD9E2B7FEB1;
 // System.Reflection.Binder
 struct Binder_t2BEE27FD84737D1E79BC47FD67F6D3DD2F2DDA30;
+// System.Collections.IDictionary
+struct IDictionary_t99871C56B8EC2452AC5C4CF3831695E617B89D3A;
 // System.Reflection.MemberFilter
 struct MemberFilter_t48D0AA10105D186AF42428FA532D4B4332CF8B81;
+// System.NotImplementedException
+struct NotImplementedException_t26260C4EE0444C5FA022994203060B3A42A3ADE6;
 // System.Text.RegularExpressions.Regex
 struct Regex_t90F443D398F44965EA241A652ED75DF5BA072A1F;
+// System.Runtime.Serialization.SafeSerializationManager
+struct SafeSerializationManager_tDE44F029589A028F8A3053C5C06153FAB4AAE29F;
 // System.String
 struct String_t;
 // UnityEngine.SubsystemsImplementation.SubsystemProvider
@@ -42,8 +52,23 @@ struct ARKitProvider_tA1A675BEFA8E851172BAAA1796D7D99578F71195;
 struct Provider_t0133E0DB4F1A68EB3D4814F63B14456832E3EAE7;
 
 IL2CPP_EXTERN_C RuntimeClass* ARKitBlendShapeCoefficient_t6B17AD958119715154498F9EB6A29ECF98BA0E9F_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* ARKitFaceSubsystem_t369BE5809CFFB915E7D7C380EA989BD9E2B7FEB1_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* NotImplementedException_t26260C4EE0444C5FA022994203060B3A42A3ADE6_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Type_t_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C String_t* _stringLiteral8253EEC179AE2F43719A271C97BC28385391F1D0;
 IL2CPP_EXTERN_C String_t* _stringLiteralB4864243BC84ACADEEAE7751496ED8C4C00A9169;
+IL2CPP_EXTERN_C const RuntimeMethod* ARKitFaceSubsystem_UnityARKit_FaceProvider_AcquireChanges_m903B774621588E06CA5641B802BDEB8FF7645CA7_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* ARKitFaceSubsystem_UnityARKit_FaceProvider_AcquireFaceAnchor_mCA5ED0BAF8F40A1381C924F3746F6F4A7D24E859_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* ARKitFaceSubsystem_UnityARKit_FaceProvider_DeallocateTempMemory_mFA056649EBEC0EA596B86E7776ED89A69CA54DA3_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* ARKitFaceSubsystem_UnityARKit_FaceProvider_Initialize_mFEFCC10A1D16F6A553EC9480EE070081C8201070_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* ARKitFaceSubsystem_UnityARKit_FaceProvider_OnRegisterDescriptor_mFF88BD6F056A332E14175370D504D4A4A4C899F0_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* ARKitFaceSubsystem_UnityARKit_FaceProvider_ReleaseChanges_m37CA49550D76A937A3A0741A07A5C5D3BA616906_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* ARKitFaceSubsystem_UnityARKit_FaceProvider_ReleaseFaceAnchor_m61116A7538B74311076BECF2FF59D111B069754D_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* ARKitFaceSubsystem_UnityARKit_FaceProvider_SetRequestedMaximumFaceCount_mEF2E6553693DE0FF024B275DF8A24D4EE63E0C67_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* ARKitFaceSubsystem_UnityARKit_FaceProvider_Shutdown_mA1DCC2FDFB73EC97C05A1DECC68E82BCCC794A75_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* ARKitFaceSubsystem_UnityARKit_FaceProvider_Start_mF2AD76E77A382459ADB0E61D88ACD355C5A54BD4_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* ARKitFaceSubsystem_UnityARKit_FaceProvider_Stop_mA78405212AF75CD7AAEA96213249DF6B329DCFB1_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* ARKitFaceSubsystem_UnityARKit_FaceProvider_TryAcquireFaceBlendCoefficients_m72678365F53600A14CDD44564E9EE616163AE3A3_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* IJobParallelForExtensions_Schedule_TisTransformIndicesJob_tFF87C2E297015EECA6853BA147171FF78D123302_m896921BFF25C7700041225364D6104E546C7EDEA_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* IJobParallelForExtensions_Schedule_TisTransformUVsJob_tCABA7AB1790251392EC9FCA81A3EBD0E579F3E0A_mA5272565236E5440A326C82136C786600F99D645_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* IJobParallelForExtensions_Schedule_TisTransformVerticesJob_t2238CFDB87B56D80881834E0BEDBFE25D9133239_m12A8CEEABAF367108ABB92C1307385A156BE6A3A_RuntimeMethod_var;
@@ -59,6 +84,8 @@ IL2CPP_EXTERN_C const RuntimeMethod* TrackableChanges_1__ctor_m529358A9D19C12874
 IL2CPP_EXTERN_C const RuntimeMethod* Triangle_1__ctor_m49F2E45F4053C6B2DE3904035D78CE86157F0ECA_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeType* ARKitFaceSubsystem_t369BE5809CFFB915E7D7C380EA989BD9E2B7FEB1_0_0_0_var;
 IL2CPP_EXTERN_C const RuntimeType* ARKitProvider_tA1A675BEFA8E851172BAAA1796D7D99578F71195_0_0_0_var;
+struct Exception_t_marshaled_com;
+struct Exception_t_marshaled_pinvoke;
 
 
 IL2CPP_EXTERN_C_BEGIN
@@ -1037,6 +1064,232 @@ public:
 };
 
 
+// System.Exception
+struct Exception_t  : public RuntimeObject
+{
+public:
+	// System.String System.Exception::_className
+	String_t* ____className_1;
+	// System.String System.Exception::_message
+	String_t* ____message_2;
+	// System.Collections.IDictionary System.Exception::_data
+	RuntimeObject* ____data_3;
+	// System.Exception System.Exception::_innerException
+	Exception_t * ____innerException_4;
+	// System.String System.Exception::_helpURL
+	String_t* ____helpURL_5;
+	// System.Object System.Exception::_stackTrace
+	RuntimeObject * ____stackTrace_6;
+	// System.String System.Exception::_stackTraceString
+	String_t* ____stackTraceString_7;
+	// System.String System.Exception::_remoteStackTraceString
+	String_t* ____remoteStackTraceString_8;
+	// System.Int32 System.Exception::_remoteStackIndex
+	int32_t ____remoteStackIndex_9;
+	// System.Object System.Exception::_dynamicMethods
+	RuntimeObject * ____dynamicMethods_10;
+	// System.Int32 System.Exception::_HResult
+	int32_t ____HResult_11;
+	// System.String System.Exception::_source
+	String_t* ____source_12;
+	// System.Runtime.Serialization.SafeSerializationManager System.Exception::_safeSerializationManager
+	SafeSerializationManager_tDE44F029589A028F8A3053C5C06153FAB4AAE29F * ____safeSerializationManager_13;
+	// System.Diagnostics.StackTrace[] System.Exception::captured_traces
+	StackTraceU5BU5D_t4AD999C288CB6D1F38A299D12B1598D606588971* ___captured_traces_14;
+	// System.IntPtr[] System.Exception::native_trace_ips
+	IntPtrU5BU5D_t27FC72B0409D75AAF33EC42498E8094E95FEE9A6* ___native_trace_ips_15;
+
+public:
+	inline static int32_t get_offset_of__className_1() { return static_cast<int32_t>(offsetof(Exception_t, ____className_1)); }
+	inline String_t* get__className_1() const { return ____className_1; }
+	inline String_t** get_address_of__className_1() { return &____className_1; }
+	inline void set__className_1(String_t* value)
+	{
+		____className_1 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&____className_1), (void*)value);
+	}
+
+	inline static int32_t get_offset_of__message_2() { return static_cast<int32_t>(offsetof(Exception_t, ____message_2)); }
+	inline String_t* get__message_2() const { return ____message_2; }
+	inline String_t** get_address_of__message_2() { return &____message_2; }
+	inline void set__message_2(String_t* value)
+	{
+		____message_2 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&____message_2), (void*)value);
+	}
+
+	inline static int32_t get_offset_of__data_3() { return static_cast<int32_t>(offsetof(Exception_t, ____data_3)); }
+	inline RuntimeObject* get__data_3() const { return ____data_3; }
+	inline RuntimeObject** get_address_of__data_3() { return &____data_3; }
+	inline void set__data_3(RuntimeObject* value)
+	{
+		____data_3 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&____data_3), (void*)value);
+	}
+
+	inline static int32_t get_offset_of__innerException_4() { return static_cast<int32_t>(offsetof(Exception_t, ____innerException_4)); }
+	inline Exception_t * get__innerException_4() const { return ____innerException_4; }
+	inline Exception_t ** get_address_of__innerException_4() { return &____innerException_4; }
+	inline void set__innerException_4(Exception_t * value)
+	{
+		____innerException_4 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&____innerException_4), (void*)value);
+	}
+
+	inline static int32_t get_offset_of__helpURL_5() { return static_cast<int32_t>(offsetof(Exception_t, ____helpURL_5)); }
+	inline String_t* get__helpURL_5() const { return ____helpURL_5; }
+	inline String_t** get_address_of__helpURL_5() { return &____helpURL_5; }
+	inline void set__helpURL_5(String_t* value)
+	{
+		____helpURL_5 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&____helpURL_5), (void*)value);
+	}
+
+	inline static int32_t get_offset_of__stackTrace_6() { return static_cast<int32_t>(offsetof(Exception_t, ____stackTrace_6)); }
+	inline RuntimeObject * get__stackTrace_6() const { return ____stackTrace_6; }
+	inline RuntimeObject ** get_address_of__stackTrace_6() { return &____stackTrace_6; }
+	inline void set__stackTrace_6(RuntimeObject * value)
+	{
+		____stackTrace_6 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&____stackTrace_6), (void*)value);
+	}
+
+	inline static int32_t get_offset_of__stackTraceString_7() { return static_cast<int32_t>(offsetof(Exception_t, ____stackTraceString_7)); }
+	inline String_t* get__stackTraceString_7() const { return ____stackTraceString_7; }
+	inline String_t** get_address_of__stackTraceString_7() { return &____stackTraceString_7; }
+	inline void set__stackTraceString_7(String_t* value)
+	{
+		____stackTraceString_7 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&____stackTraceString_7), (void*)value);
+	}
+
+	inline static int32_t get_offset_of__remoteStackTraceString_8() { return static_cast<int32_t>(offsetof(Exception_t, ____remoteStackTraceString_8)); }
+	inline String_t* get__remoteStackTraceString_8() const { return ____remoteStackTraceString_8; }
+	inline String_t** get_address_of__remoteStackTraceString_8() { return &____remoteStackTraceString_8; }
+	inline void set__remoteStackTraceString_8(String_t* value)
+	{
+		____remoteStackTraceString_8 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&____remoteStackTraceString_8), (void*)value);
+	}
+
+	inline static int32_t get_offset_of__remoteStackIndex_9() { return static_cast<int32_t>(offsetof(Exception_t, ____remoteStackIndex_9)); }
+	inline int32_t get__remoteStackIndex_9() const { return ____remoteStackIndex_9; }
+	inline int32_t* get_address_of__remoteStackIndex_9() { return &____remoteStackIndex_9; }
+	inline void set__remoteStackIndex_9(int32_t value)
+	{
+		____remoteStackIndex_9 = value;
+	}
+
+	inline static int32_t get_offset_of__dynamicMethods_10() { return static_cast<int32_t>(offsetof(Exception_t, ____dynamicMethods_10)); }
+	inline RuntimeObject * get__dynamicMethods_10() const { return ____dynamicMethods_10; }
+	inline RuntimeObject ** get_address_of__dynamicMethods_10() { return &____dynamicMethods_10; }
+	inline void set__dynamicMethods_10(RuntimeObject * value)
+	{
+		____dynamicMethods_10 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&____dynamicMethods_10), (void*)value);
+	}
+
+	inline static int32_t get_offset_of__HResult_11() { return static_cast<int32_t>(offsetof(Exception_t, ____HResult_11)); }
+	inline int32_t get__HResult_11() const { return ____HResult_11; }
+	inline int32_t* get_address_of__HResult_11() { return &____HResult_11; }
+	inline void set__HResult_11(int32_t value)
+	{
+		____HResult_11 = value;
+	}
+
+	inline static int32_t get_offset_of__source_12() { return static_cast<int32_t>(offsetof(Exception_t, ____source_12)); }
+	inline String_t* get__source_12() const { return ____source_12; }
+	inline String_t** get_address_of__source_12() { return &____source_12; }
+	inline void set__source_12(String_t* value)
+	{
+		____source_12 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&____source_12), (void*)value);
+	}
+
+	inline static int32_t get_offset_of__safeSerializationManager_13() { return static_cast<int32_t>(offsetof(Exception_t, ____safeSerializationManager_13)); }
+	inline SafeSerializationManager_tDE44F029589A028F8A3053C5C06153FAB4AAE29F * get__safeSerializationManager_13() const { return ____safeSerializationManager_13; }
+	inline SafeSerializationManager_tDE44F029589A028F8A3053C5C06153FAB4AAE29F ** get_address_of__safeSerializationManager_13() { return &____safeSerializationManager_13; }
+	inline void set__safeSerializationManager_13(SafeSerializationManager_tDE44F029589A028F8A3053C5C06153FAB4AAE29F * value)
+	{
+		____safeSerializationManager_13 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&____safeSerializationManager_13), (void*)value);
+	}
+
+	inline static int32_t get_offset_of_captured_traces_14() { return static_cast<int32_t>(offsetof(Exception_t, ___captured_traces_14)); }
+	inline StackTraceU5BU5D_t4AD999C288CB6D1F38A299D12B1598D606588971* get_captured_traces_14() const { return ___captured_traces_14; }
+	inline StackTraceU5BU5D_t4AD999C288CB6D1F38A299D12B1598D606588971** get_address_of_captured_traces_14() { return &___captured_traces_14; }
+	inline void set_captured_traces_14(StackTraceU5BU5D_t4AD999C288CB6D1F38A299D12B1598D606588971* value)
+	{
+		___captured_traces_14 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&___captured_traces_14), (void*)value);
+	}
+
+	inline static int32_t get_offset_of_native_trace_ips_15() { return static_cast<int32_t>(offsetof(Exception_t, ___native_trace_ips_15)); }
+	inline IntPtrU5BU5D_t27FC72B0409D75AAF33EC42498E8094E95FEE9A6* get_native_trace_ips_15() const { return ___native_trace_ips_15; }
+	inline IntPtrU5BU5D_t27FC72B0409D75AAF33EC42498E8094E95FEE9A6** get_address_of_native_trace_ips_15() { return &___native_trace_ips_15; }
+	inline void set_native_trace_ips_15(IntPtrU5BU5D_t27FC72B0409D75AAF33EC42498E8094E95FEE9A6* value)
+	{
+		___native_trace_ips_15 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&___native_trace_ips_15), (void*)value);
+	}
+};
+
+struct Exception_t_StaticFields
+{
+public:
+	// System.Object System.Exception::s_EDILock
+	RuntimeObject * ___s_EDILock_0;
+
+public:
+	inline static int32_t get_offset_of_s_EDILock_0() { return static_cast<int32_t>(offsetof(Exception_t_StaticFields, ___s_EDILock_0)); }
+	inline RuntimeObject * get_s_EDILock_0() const { return ___s_EDILock_0; }
+	inline RuntimeObject ** get_address_of_s_EDILock_0() { return &___s_EDILock_0; }
+	inline void set_s_EDILock_0(RuntimeObject * value)
+	{
+		___s_EDILock_0 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&___s_EDILock_0), (void*)value);
+	}
+};
+
+// Native definition for P/Invoke marshalling of System.Exception
+struct Exception_t_marshaled_pinvoke
+{
+	char* ____className_1;
+	char* ____message_2;
+	RuntimeObject* ____data_3;
+	Exception_t_marshaled_pinvoke* ____innerException_4;
+	char* ____helpURL_5;
+	Il2CppIUnknown* ____stackTrace_6;
+	char* ____stackTraceString_7;
+	char* ____remoteStackTraceString_8;
+	int32_t ____remoteStackIndex_9;
+	Il2CppIUnknown* ____dynamicMethods_10;
+	int32_t ____HResult_11;
+	char* ____source_12;
+	SafeSerializationManager_tDE44F029589A028F8A3053C5C06153FAB4AAE29F * ____safeSerializationManager_13;
+	StackTraceU5BU5D_t4AD999C288CB6D1F38A299D12B1598D606588971* ___captured_traces_14;
+	Il2CppSafeArray/*NONE*/* ___native_trace_ips_15;
+};
+// Native definition for COM marshalling of System.Exception
+struct Exception_t_marshaled_com
+{
+	Il2CppChar* ____className_1;
+	Il2CppChar* ____message_2;
+	RuntimeObject* ____data_3;
+	Exception_t_marshaled_com* ____innerException_4;
+	Il2CppChar* ____helpURL_5;
+	Il2CppIUnknown* ____stackTrace_6;
+	Il2CppChar* ____stackTraceString_7;
+	Il2CppChar* ____remoteStackTraceString_8;
+	int32_t ____remoteStackIndex_9;
+	Il2CppIUnknown* ____dynamicMethods_10;
+	int32_t ____HResult_11;
+	Il2CppChar* ____source_12;
+	SafeSerializationManager_tDE44F029589A028F8A3053C5C06153FAB4AAE29F * ____safeSerializationManager_13;
+	StackTraceU5BU5D_t4AD999C288CB6D1F38A299D12B1598D606588971* ___captured_traces_14;
+	Il2CppSafeArray/*NONE*/* ___native_trace_ips_15;
+};
+
 // UnityEngine.XR.ARSubsystems.FaceSubsystemCapabilities
 struct FaceSubsystemCapabilities_t84A18B266F89BCEE6ADA3FB05E21935877632057 
 {
@@ -1667,6 +1920,15 @@ struct FaceSubsystemParams_t2FC64133455298391F1A1DDC61B151E688301B09_marshaled_c
 	int32_t ___m_Capabilities_4;
 };
 
+// System.SystemException
+struct SystemException_tC551B4D6EE3772B5F32C71EE8C719F4B43ECCC62  : public Exception_t
+{
+public:
+
+public:
+};
+
+
 // System.Type
 struct Type_t  : public MemberInfo_t
 {
@@ -1935,6 +2197,32 @@ public:
 public:
 };
 
+struct ARKitFaceSubsystem_t369BE5809CFFB915E7D7C380EA989BD9E2B7FEB1_StaticFields
+{
+public:
+	// System.String UnityEngine.XR.ARKit.ARKitFaceSubsystem::k_ExceptionMsg
+	String_t* ___k_ExceptionMsg_4;
+
+public:
+	inline static int32_t get_offset_of_k_ExceptionMsg_4() { return static_cast<int32_t>(offsetof(ARKitFaceSubsystem_t369BE5809CFFB915E7D7C380EA989BD9E2B7FEB1_StaticFields, ___k_ExceptionMsg_4)); }
+	inline String_t* get_k_ExceptionMsg_4() const { return ___k_ExceptionMsg_4; }
+	inline String_t** get_address_of_k_ExceptionMsg_4() { return &___k_ExceptionMsg_4; }
+	inline void set_k_ExceptionMsg_4(String_t* value)
+	{
+		___k_ExceptionMsg_4 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&___k_ExceptionMsg_4), (void*)value);
+	}
+};
+
+
+// System.NotImplementedException
+struct NotImplementedException_t26260C4EE0444C5FA022994203060B3A42A3ADE6  : public SystemException_tC551B4D6EE3772B5F32C71EE8C719F4B43ECCC62
+{
+public:
+
+public:
+};
+
 
 // UnityEngine.XR.ARSubsystems.XRFaceMesh
 struct XRFaceMesh_t2ADC7E6069DCCCFB439A4A60DB9189338C9E1AD0 
@@ -2115,6 +2403,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Int32_GetHashCode_mEDD3F492A5F7CF0211
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Single_GetHashCode_m7662E1812DDDBC85D464398740CFFC3588DFB2C9 (float* __this, const RuntimeMethod* method);
 // System.Int32 UnityEngine.XR.ARKit.ARKitBlendShapeCoefficient::GetHashCode()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t ARKitBlendShapeCoefficient_GetHashCode_mD07D2B750B8CE21F92D92A0BBC263588D37151BE (ARKitBlendShapeCoefficient_t6B17AD958119715154498F9EB6A29ECF98BA0E9F * __this, const RuntimeMethod* method);
+// System.Void System.NotImplementedException::.ctor(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NotImplementedException__ctor_m8A9AA4499614A5BC57DD21713D0720630C130AEB (NotImplementedException_t26260C4EE0444C5FA022994203060B3A42A3ADE6 * __this, String_t* ___message0, const RuntimeMethod* method);
 // System.Boolean UnityEngine.XR.ARKit.ARKitFaceSubsystem::UnityARKit_FaceProvider_TryAcquireFaceBlendCoefficients(UnityEngine.XR.ARSubsystems.TrackableId,System.IntPtr&,System.Int32&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ARKitFaceSubsystem_UnityARKit_FaceProvider_TryAcquireFaceBlendCoefficients_m72678365F53600A14CDD44564E9EE616163AE3A3 (TrackableId_t17A59B04292038BB1B77BEACD41221D2700BE90B  ___faceId0, intptr_t* ___ptrBlendCoefficientData1, int32_t* ___numArrayBlendCoefficients2, const RuntimeMethod* method);
 // System.Void Unity.Collections.NativeArray`1<UnityEngine.XR.ARKit.ARKitBlendShapeCoefficient>::.ctor(System.Int32,Unity.Collections.Allocator,Unity.Collections.NativeArrayOptions)
@@ -2262,23 +2552,6 @@ IL2CPP_EXTERN_C IL2CPP_NO_INLINE IL2CPP_METHOD_ATTR void TransformUVsJob_Execute
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector3__ctor_m57495F692C6CE1CEF278CAD9A98221165D37E636_inline (Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E * __this, float ___x0, float ___y1, float ___z2, const RuntimeMethod* method);
 // System.Void UnityEngine.XR.ARKit.ARKitFaceSubsystem/ARKitProvider/TransformVerticesJob::Execute(System.Int32)
 IL2CPP_EXTERN_C IL2CPP_NO_INLINE IL2CPP_METHOD_ATTR void TransformVerticesJob_Execute_mF4E64C4602CDF10692CE6D3963478CA6297A6C90 (TransformVerticesJob_t2238CFDB87B56D80881834E0BEDBFE25D9133239 * IL2CPP_PARAMETER_RESTRICT __this, int32_t ___i0, const RuntimeMethod* method);
-IL2CPP_EXTERN_C void DEFAULT_CALL UnityARKit_FaceProvider_Initialize();
-IL2CPP_EXTERN_C void DEFAULT_CALL UnityARKit_FaceProvider_Shutdown();
-IL2CPP_EXTERN_C void DEFAULT_CALL UnityARKit_FaceProvider_Start();
-IL2CPP_EXTERN_C void DEFAULT_CALL UnityARKit_FaceProvider_Stop();
-IL2CPP_EXTERN_C int32_t DEFAULT_CALL UnityARKit_FaceProvider_TryAcquireFaceBlendCoefficients(TrackableId_t17A59B04292038BB1B77BEACD41221D2700BE90B , intptr_t*, int32_t*);
-IL2CPP_EXTERN_C int32_t DEFAULT_CALL UnityARKit_FaceProvider_IsSupported();
-IL2CPP_EXTERN_C void DEFAULT_CALL UnityARKit_FaceProvider_OnRegisterDescriptor();
-IL2CPP_EXTERN_C int32_t DEFAULT_CALL UnityARKit_FaceProvider_IsEyeTrackingSupported();
-IL2CPP_EXTERN_C void DEFAULT_CALL UnityARKit_FaceProvider_DeallocateTempMemory(intptr_t);
-IL2CPP_EXTERN_C void* DEFAULT_CALL UnityARKit_FaceProvider_AcquireChanges(void**, int32_t*, void**, int32_t*, void**, int32_t*, int32_t*);
-IL2CPP_EXTERN_C void DEFAULT_CALL UnityARKit_FaceProvider_ReleaseChanges(void*);
-IL2CPP_EXTERN_C void* DEFAULT_CALL UnityARKit_FaceProvider_AcquireFaceAnchor(TrackableId_t17A59B04292038BB1B77BEACD41221D2700BE90B , void**, void**, int32_t*, void**, int32_t*);
-IL2CPP_EXTERN_C void DEFAULT_CALL UnityARKit_FaceProvider_ReleaseFaceAnchor(void*);
-IL2CPP_EXTERN_C int32_t DEFAULT_CALL UnityARKit_FaceProvider_GetSupportedFaceCount();
-IL2CPP_EXTERN_C int32_t DEFAULT_CALL UnityARKit_FaceProvider_GetMaximumFaceCount();
-IL2CPP_EXTERN_C void DEFAULT_CALL UnityARKit_FaceProvider_SetRequestedMaximumFaceCount(int32_t);
-IL2CPP_EXTERN_C int32_t DEFAULT_CALL UnityARKit_FaceProvider_GetRequestedMaximumFaceCount();
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
@@ -2456,217 +2729,186 @@ IL2CPP_EXTERN_C  int32_t ARKitBlendShapeCoefficient_GetHashCode_mD07D2B750B8CE21
 // System.Void UnityEngine.XR.ARKit.ARKitFaceSubsystem::UnityARKit_FaceProvider_Initialize()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARKitFaceSubsystem_UnityARKit_FaceProvider_Initialize_mFEFCC10A1D16F6A553EC9480EE070081C8201070 (const RuntimeMethod* method)
 {
-	typedef void (DEFAULT_CALL *PInvokeFunc) ();
-
-	// Native function invocation
-	reinterpret_cast<PInvokeFunc>(UnityARKit_FaceProvider_Initialize)();
-
+	{
+		// throw new System.NotImplementedException(k_ExceptionMsg);
+		IL2CPP_RUNTIME_CLASS_INIT(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ARKitFaceSubsystem_t369BE5809CFFB915E7D7C380EA989BD9E2B7FEB1_il2cpp_TypeInfo_var)));
+		String_t* L_0 = ((ARKitFaceSubsystem_t369BE5809CFFB915E7D7C380EA989BD9E2B7FEB1_StaticFields*)il2cpp_codegen_static_fields_for(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ARKitFaceSubsystem_t369BE5809CFFB915E7D7C380EA989BD9E2B7FEB1_il2cpp_TypeInfo_var))))->get_k_ExceptionMsg_4();
+		NotImplementedException_t26260C4EE0444C5FA022994203060B3A42A3ADE6 * L_1 = (NotImplementedException_t26260C4EE0444C5FA022994203060B3A42A3ADE6 *)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NotImplementedException_t26260C4EE0444C5FA022994203060B3A42A3ADE6_il2cpp_TypeInfo_var)));
+		NotImplementedException__ctor_m8A9AA4499614A5BC57DD21713D0720630C130AEB(L_1, L_0, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_1, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ARKitFaceSubsystem_UnityARKit_FaceProvider_Initialize_mFEFCC10A1D16F6A553EC9480EE070081C8201070_RuntimeMethod_var)));
+	}
 }
 // System.Void UnityEngine.XR.ARKit.ARKitFaceSubsystem::UnityARKit_FaceProvider_Shutdown()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARKitFaceSubsystem_UnityARKit_FaceProvider_Shutdown_mA1DCC2FDFB73EC97C05A1DECC68E82BCCC794A75 (const RuntimeMethod* method)
 {
-	typedef void (DEFAULT_CALL *PInvokeFunc) ();
-
-	// Native function invocation
-	reinterpret_cast<PInvokeFunc>(UnityARKit_FaceProvider_Shutdown)();
-
+	{
+		// throw new System.NotImplementedException(k_ExceptionMsg);
+		IL2CPP_RUNTIME_CLASS_INIT(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ARKitFaceSubsystem_t369BE5809CFFB915E7D7C380EA989BD9E2B7FEB1_il2cpp_TypeInfo_var)));
+		String_t* L_0 = ((ARKitFaceSubsystem_t369BE5809CFFB915E7D7C380EA989BD9E2B7FEB1_StaticFields*)il2cpp_codegen_static_fields_for(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ARKitFaceSubsystem_t369BE5809CFFB915E7D7C380EA989BD9E2B7FEB1_il2cpp_TypeInfo_var))))->get_k_ExceptionMsg_4();
+		NotImplementedException_t26260C4EE0444C5FA022994203060B3A42A3ADE6 * L_1 = (NotImplementedException_t26260C4EE0444C5FA022994203060B3A42A3ADE6 *)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NotImplementedException_t26260C4EE0444C5FA022994203060B3A42A3ADE6_il2cpp_TypeInfo_var)));
+		NotImplementedException__ctor_m8A9AA4499614A5BC57DD21713D0720630C130AEB(L_1, L_0, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_1, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ARKitFaceSubsystem_UnityARKit_FaceProvider_Shutdown_mA1DCC2FDFB73EC97C05A1DECC68E82BCCC794A75_RuntimeMethod_var)));
+	}
 }
 // System.Void UnityEngine.XR.ARKit.ARKitFaceSubsystem::UnityARKit_FaceProvider_Start()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARKitFaceSubsystem_UnityARKit_FaceProvider_Start_mF2AD76E77A382459ADB0E61D88ACD355C5A54BD4 (const RuntimeMethod* method)
 {
-	typedef void (DEFAULT_CALL *PInvokeFunc) ();
-
-	// Native function invocation
-	reinterpret_cast<PInvokeFunc>(UnityARKit_FaceProvider_Start)();
-
+	{
+		// throw new System.NotImplementedException(k_ExceptionMsg);
+		IL2CPP_RUNTIME_CLASS_INIT(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ARKitFaceSubsystem_t369BE5809CFFB915E7D7C380EA989BD9E2B7FEB1_il2cpp_TypeInfo_var)));
+		String_t* L_0 = ((ARKitFaceSubsystem_t369BE5809CFFB915E7D7C380EA989BD9E2B7FEB1_StaticFields*)il2cpp_codegen_static_fields_for(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ARKitFaceSubsystem_t369BE5809CFFB915E7D7C380EA989BD9E2B7FEB1_il2cpp_TypeInfo_var))))->get_k_ExceptionMsg_4();
+		NotImplementedException_t26260C4EE0444C5FA022994203060B3A42A3ADE6 * L_1 = (NotImplementedException_t26260C4EE0444C5FA022994203060B3A42A3ADE6 *)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NotImplementedException_t26260C4EE0444C5FA022994203060B3A42A3ADE6_il2cpp_TypeInfo_var)));
+		NotImplementedException__ctor_m8A9AA4499614A5BC57DD21713D0720630C130AEB(L_1, L_0, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_1, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ARKitFaceSubsystem_UnityARKit_FaceProvider_Start_mF2AD76E77A382459ADB0E61D88ACD355C5A54BD4_RuntimeMethod_var)));
+	}
 }
 // System.Void UnityEngine.XR.ARKit.ARKitFaceSubsystem::UnityARKit_FaceProvider_Stop()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARKitFaceSubsystem_UnityARKit_FaceProvider_Stop_mA78405212AF75CD7AAEA96213249DF6B329DCFB1 (const RuntimeMethod* method)
 {
-	typedef void (DEFAULT_CALL *PInvokeFunc) ();
-
-	// Native function invocation
-	reinterpret_cast<PInvokeFunc>(UnityARKit_FaceProvider_Stop)();
-
+	{
+		// throw new System.NotImplementedException(k_ExceptionMsg);
+		IL2CPP_RUNTIME_CLASS_INIT(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ARKitFaceSubsystem_t369BE5809CFFB915E7D7C380EA989BD9E2B7FEB1_il2cpp_TypeInfo_var)));
+		String_t* L_0 = ((ARKitFaceSubsystem_t369BE5809CFFB915E7D7C380EA989BD9E2B7FEB1_StaticFields*)il2cpp_codegen_static_fields_for(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ARKitFaceSubsystem_t369BE5809CFFB915E7D7C380EA989BD9E2B7FEB1_il2cpp_TypeInfo_var))))->get_k_ExceptionMsg_4();
+		NotImplementedException_t26260C4EE0444C5FA022994203060B3A42A3ADE6 * L_1 = (NotImplementedException_t26260C4EE0444C5FA022994203060B3A42A3ADE6 *)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NotImplementedException_t26260C4EE0444C5FA022994203060B3A42A3ADE6_il2cpp_TypeInfo_var)));
+		NotImplementedException__ctor_m8A9AA4499614A5BC57DD21713D0720630C130AEB(L_1, L_0, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_1, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ARKitFaceSubsystem_UnityARKit_FaceProvider_Stop_mA78405212AF75CD7AAEA96213249DF6B329DCFB1_RuntimeMethod_var)));
+	}
 }
 // System.Boolean UnityEngine.XR.ARKit.ARKitFaceSubsystem::UnityARKit_FaceProvider_TryAcquireFaceBlendCoefficients(UnityEngine.XR.ARSubsystems.TrackableId,System.IntPtr&,System.Int32&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ARKitFaceSubsystem_UnityARKit_FaceProvider_TryAcquireFaceBlendCoefficients_m72678365F53600A14CDD44564E9EE616163AE3A3 (TrackableId_t17A59B04292038BB1B77BEACD41221D2700BE90B  ___faceId0, intptr_t* ___ptrBlendCoefficientData1, int32_t* ___numArrayBlendCoefficients2, const RuntimeMethod* method)
 {
-	typedef int32_t (DEFAULT_CALL *PInvokeFunc) (TrackableId_t17A59B04292038BB1B77BEACD41221D2700BE90B , intptr_t*, int32_t*);
-
-	// Native function invocation
-	int32_t returnValue = reinterpret_cast<PInvokeFunc>(UnityARKit_FaceProvider_TryAcquireFaceBlendCoefficients)(___faceId0, ___ptrBlendCoefficientData1, ___numArrayBlendCoefficients2);
-
-	return static_cast<bool>(returnValue);
+	{
+		// throw new System.NotImplementedException(k_ExceptionMsg);
+		IL2CPP_RUNTIME_CLASS_INIT(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ARKitFaceSubsystem_t369BE5809CFFB915E7D7C380EA989BD9E2B7FEB1_il2cpp_TypeInfo_var)));
+		String_t* L_0 = ((ARKitFaceSubsystem_t369BE5809CFFB915E7D7C380EA989BD9E2B7FEB1_StaticFields*)il2cpp_codegen_static_fields_for(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ARKitFaceSubsystem_t369BE5809CFFB915E7D7C380EA989BD9E2B7FEB1_il2cpp_TypeInfo_var))))->get_k_ExceptionMsg_4();
+		NotImplementedException_t26260C4EE0444C5FA022994203060B3A42A3ADE6 * L_1 = (NotImplementedException_t26260C4EE0444C5FA022994203060B3A42A3ADE6 *)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NotImplementedException_t26260C4EE0444C5FA022994203060B3A42A3ADE6_il2cpp_TypeInfo_var)));
+		NotImplementedException__ctor_m8A9AA4499614A5BC57DD21713D0720630C130AEB(L_1, L_0, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_1, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ARKitFaceSubsystem_UnityARKit_FaceProvider_TryAcquireFaceBlendCoefficients_m72678365F53600A14CDD44564E9EE616163AE3A3_RuntimeMethod_var)));
+	}
 }
 // System.Boolean UnityEngine.XR.ARKit.ARKitFaceSubsystem::UnityARKit_FaceProvider_IsSupported()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ARKitFaceSubsystem_UnityARKit_FaceProvider_IsSupported_mD5D180359516D9C3EC555426FDE731EB16D7EFCC (const RuntimeMethod* method)
 {
-	typedef int32_t (DEFAULT_CALL *PInvokeFunc) ();
-
-	// Native function invocation
-	int32_t returnValue = reinterpret_cast<PInvokeFunc>(UnityARKit_FaceProvider_IsSupported)();
-
-	return static_cast<bool>(returnValue);
+	{
+		// static bool UnityARKit_FaceProvider_IsSupported() => false;
+		return (bool)0;
+	}
 }
 // System.Void UnityEngine.XR.ARKit.ARKitFaceSubsystem::UnityARKit_FaceProvider_OnRegisterDescriptor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARKitFaceSubsystem_UnityARKit_FaceProvider_OnRegisterDescriptor_mFF88BD6F056A332E14175370D504D4A4A4C899F0 (const RuntimeMethod* method)
 {
-	typedef void (DEFAULT_CALL *PInvokeFunc) ();
-
-	// Native function invocation
-	reinterpret_cast<PInvokeFunc>(UnityARKit_FaceProvider_OnRegisterDescriptor)();
-
+	{
+		// throw new System.NotImplementedException(k_ExceptionMsg);
+		IL2CPP_RUNTIME_CLASS_INIT(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ARKitFaceSubsystem_t369BE5809CFFB915E7D7C380EA989BD9E2B7FEB1_il2cpp_TypeInfo_var)));
+		String_t* L_0 = ((ARKitFaceSubsystem_t369BE5809CFFB915E7D7C380EA989BD9E2B7FEB1_StaticFields*)il2cpp_codegen_static_fields_for(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ARKitFaceSubsystem_t369BE5809CFFB915E7D7C380EA989BD9E2B7FEB1_il2cpp_TypeInfo_var))))->get_k_ExceptionMsg_4();
+		NotImplementedException_t26260C4EE0444C5FA022994203060B3A42A3ADE6 * L_1 = (NotImplementedException_t26260C4EE0444C5FA022994203060B3A42A3ADE6 *)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NotImplementedException_t26260C4EE0444C5FA022994203060B3A42A3ADE6_il2cpp_TypeInfo_var)));
+		NotImplementedException__ctor_m8A9AA4499614A5BC57DD21713D0720630C130AEB(L_1, L_0, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_1, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ARKitFaceSubsystem_UnityARKit_FaceProvider_OnRegisterDescriptor_mFF88BD6F056A332E14175370D504D4A4A4C899F0_RuntimeMethod_var)));
+	}
 }
 // System.Boolean UnityEngine.XR.ARKit.ARKitFaceSubsystem::UnityARKit_FaceProvider_IsEyeTrackingSupported()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ARKitFaceSubsystem_UnityARKit_FaceProvider_IsEyeTrackingSupported_m834B62EA3CE8D12C7520F7AF88C91692D9F29F97 (const RuntimeMethod* method)
 {
-	typedef int32_t (DEFAULT_CALL *PInvokeFunc) ();
-
-	// Native function invocation
-	int32_t returnValue = reinterpret_cast<PInvokeFunc>(UnityARKit_FaceProvider_IsEyeTrackingSupported)();
-
-	return static_cast<bool>(returnValue);
+	{
+		// static bool UnityARKit_FaceProvider_IsEyeTrackingSupported() => false;
+		return (bool)0;
+	}
 }
 // System.Void UnityEngine.XR.ARKit.ARKitFaceSubsystem::UnityARKit_FaceProvider_DeallocateTempMemory(System.IntPtr)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARKitFaceSubsystem_UnityARKit_FaceProvider_DeallocateTempMemory_mFA056649EBEC0EA596B86E7776ED89A69CA54DA3 (intptr_t ___ptr0, const RuntimeMethod* method)
 {
-	typedef void (DEFAULT_CALL *PInvokeFunc) (intptr_t);
-
-	// Native function invocation
-	reinterpret_cast<PInvokeFunc>(UnityARKit_FaceProvider_DeallocateTempMemory)(___ptr0);
-
+	{
+		// throw new System.NotImplementedException(k_ExceptionMsg);
+		IL2CPP_RUNTIME_CLASS_INIT(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ARKitFaceSubsystem_t369BE5809CFFB915E7D7C380EA989BD9E2B7FEB1_il2cpp_TypeInfo_var)));
+		String_t* L_0 = ((ARKitFaceSubsystem_t369BE5809CFFB915E7D7C380EA989BD9E2B7FEB1_StaticFields*)il2cpp_codegen_static_fields_for(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ARKitFaceSubsystem_t369BE5809CFFB915E7D7C380EA989BD9E2B7FEB1_il2cpp_TypeInfo_var))))->get_k_ExceptionMsg_4();
+		NotImplementedException_t26260C4EE0444C5FA022994203060B3A42A3ADE6 * L_1 = (NotImplementedException_t26260C4EE0444C5FA022994203060B3A42A3ADE6 *)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NotImplementedException_t26260C4EE0444C5FA022994203060B3A42A3ADE6_il2cpp_TypeInfo_var)));
+		NotImplementedException__ctor_m8A9AA4499614A5BC57DD21713D0720630C130AEB(L_1, L_0, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_1, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ARKitFaceSubsystem_UnityARKit_FaceProvider_DeallocateTempMemory_mFA056649EBEC0EA596B86E7776ED89A69CA54DA3_RuntimeMethod_var)));
+	}
 }
 // System.Void* UnityEngine.XR.ARKit.ARKitFaceSubsystem::UnityARKit_FaceProvider_AcquireChanges(System.Void*&,System.Int32&,System.Void*&,System.Int32&,System.Void*&,System.Int32&,System.Int32&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void* ARKitFaceSubsystem_UnityARKit_FaceProvider_AcquireChanges_m903B774621588E06CA5641B802BDEB8FF7645CA7 (void** ___addedPtr0, int32_t* ___addedLength1, void** ___updatedPtr2, int32_t* ___updatedLength3, void** ___removedPtr4, int32_t* ___removedLength5, int32_t* ___elementSize6, const RuntimeMethod* method)
 {
-	typedef void* (DEFAULT_CALL *PInvokeFunc) (void**, int32_t*, void**, int32_t*, void**, int32_t*, int32_t*);
-
-	// Marshaling of parameter '___addedPtr0' to native representation
-	void* ____addedPtr0_empty = NULL;
-	void** ____addedPtr0_marshaled = &____addedPtr0_empty;
-
-	// Marshaling of parameter '___updatedPtr2' to native representation
-	void* ____updatedPtr2_empty = NULL;
-	void** ____updatedPtr2_marshaled = &____updatedPtr2_empty;
-
-	// Marshaling of parameter '___removedPtr4' to native representation
-	void* ____removedPtr4_empty = NULL;
-	void** ____removedPtr4_marshaled = &____removedPtr4_empty;
-
-	// Native function invocation
-	void* returnValue = reinterpret_cast<PInvokeFunc>(UnityARKit_FaceProvider_AcquireChanges)(____addedPtr0_marshaled, ___addedLength1, ____updatedPtr2_marshaled, ___updatedLength3, ____removedPtr4_marshaled, ___removedLength5, ___elementSize6);
-
-	// Marshaling of parameter '___addedPtr0' back from native representation
-	void* _____addedPtr0_marshaled_unmarshaled_dereferenced = NULL;
-	_____addedPtr0_marshaled_unmarshaled_dereferenced = *____addedPtr0_marshaled;
-	*___addedPtr0 = _____addedPtr0_marshaled_unmarshaled_dereferenced;
-
-	// Marshaling of parameter '___updatedPtr2' back from native representation
-	void* _____updatedPtr2_marshaled_unmarshaled_dereferenced = NULL;
-	_____updatedPtr2_marshaled_unmarshaled_dereferenced = *____updatedPtr2_marshaled;
-	*___updatedPtr2 = _____updatedPtr2_marshaled_unmarshaled_dereferenced;
-
-	// Marshaling of parameter '___removedPtr4' back from native representation
-	void* _____removedPtr4_marshaled_unmarshaled_dereferenced = NULL;
-	_____removedPtr4_marshaled_unmarshaled_dereferenced = *____removedPtr4_marshaled;
-	*___removedPtr4 = _____removedPtr4_marshaled_unmarshaled_dereferenced;
-
-	return returnValue;
+	{
+		// throw new System.NotImplementedException(k_ExceptionMsg);
+		IL2CPP_RUNTIME_CLASS_INIT(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ARKitFaceSubsystem_t369BE5809CFFB915E7D7C380EA989BD9E2B7FEB1_il2cpp_TypeInfo_var)));
+		String_t* L_0 = ((ARKitFaceSubsystem_t369BE5809CFFB915E7D7C380EA989BD9E2B7FEB1_StaticFields*)il2cpp_codegen_static_fields_for(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ARKitFaceSubsystem_t369BE5809CFFB915E7D7C380EA989BD9E2B7FEB1_il2cpp_TypeInfo_var))))->get_k_ExceptionMsg_4();
+		NotImplementedException_t26260C4EE0444C5FA022994203060B3A42A3ADE6 * L_1 = (NotImplementedException_t26260C4EE0444C5FA022994203060B3A42A3ADE6 *)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NotImplementedException_t26260C4EE0444C5FA022994203060B3A42A3ADE6_il2cpp_TypeInfo_var)));
+		NotImplementedException__ctor_m8A9AA4499614A5BC57DD21713D0720630C130AEB(L_1, L_0, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_1, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ARKitFaceSubsystem_UnityARKit_FaceProvider_AcquireChanges_m903B774621588E06CA5641B802BDEB8FF7645CA7_RuntimeMethod_var)));
+	}
 }
 // System.Void UnityEngine.XR.ARKit.ARKitFaceSubsystem::UnityARKit_FaceProvider_ReleaseChanges(System.Void*)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARKitFaceSubsystem_UnityARKit_FaceProvider_ReleaseChanges_m37CA49550D76A937A3A0741A07A5C5D3BA616906 (void* ___context0, const RuntimeMethod* method)
 {
-	typedef void (DEFAULT_CALL *PInvokeFunc) (void*);
-
-	// Native function invocation
-	reinterpret_cast<PInvokeFunc>(UnityARKit_FaceProvider_ReleaseChanges)(___context0);
-
+	{
+		// throw new System.NotImplementedException(k_ExceptionMsg);
+		IL2CPP_RUNTIME_CLASS_INIT(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ARKitFaceSubsystem_t369BE5809CFFB915E7D7C380EA989BD9E2B7FEB1_il2cpp_TypeInfo_var)));
+		String_t* L_0 = ((ARKitFaceSubsystem_t369BE5809CFFB915E7D7C380EA989BD9E2B7FEB1_StaticFields*)il2cpp_codegen_static_fields_for(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ARKitFaceSubsystem_t369BE5809CFFB915E7D7C380EA989BD9E2B7FEB1_il2cpp_TypeInfo_var))))->get_k_ExceptionMsg_4();
+		NotImplementedException_t26260C4EE0444C5FA022994203060B3A42A3ADE6 * L_1 = (NotImplementedException_t26260C4EE0444C5FA022994203060B3A42A3ADE6 *)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NotImplementedException_t26260C4EE0444C5FA022994203060B3A42A3ADE6_il2cpp_TypeInfo_var)));
+		NotImplementedException__ctor_m8A9AA4499614A5BC57DD21713D0720630C130AEB(L_1, L_0, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_1, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ARKitFaceSubsystem_UnityARKit_FaceProvider_ReleaseChanges_m37CA49550D76A937A3A0741A07A5C5D3BA616906_RuntimeMethod_var)));
+	}
 }
 // System.Void* UnityEngine.XR.ARKit.ARKitFaceSubsystem::UnityARKit_FaceProvider_AcquireFaceAnchor(UnityEngine.XR.ARSubsystems.TrackableId,System.Void*&,System.Void*&,System.Int32&,System.Void*&,System.Int32&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void* ARKitFaceSubsystem_UnityARKit_FaceProvider_AcquireFaceAnchor_mCA5ED0BAF8F40A1381C924F3746F6F4A7D24E859 (TrackableId_t17A59B04292038BB1B77BEACD41221D2700BE90B  ___faceId0, void** ___vertexPtr1, void** ___uvPtr2, int32_t* ___vertexCount3, void** ___indexPtr4, int32_t* ___triangleCount5, const RuntimeMethod* method)
 {
-	typedef void* (DEFAULT_CALL *PInvokeFunc) (TrackableId_t17A59B04292038BB1B77BEACD41221D2700BE90B , void**, void**, int32_t*, void**, int32_t*);
-
-	// Marshaling of parameter '___vertexPtr1' to native representation
-	void* ____vertexPtr1_empty = NULL;
-	void** ____vertexPtr1_marshaled = &____vertexPtr1_empty;
-
-	// Marshaling of parameter '___uvPtr2' to native representation
-	void* ____uvPtr2_empty = NULL;
-	void** ____uvPtr2_marshaled = &____uvPtr2_empty;
-
-	// Marshaling of parameter '___indexPtr4' to native representation
-	void* ____indexPtr4_empty = NULL;
-	void** ____indexPtr4_marshaled = &____indexPtr4_empty;
-
-	// Native function invocation
-	void* returnValue = reinterpret_cast<PInvokeFunc>(UnityARKit_FaceProvider_AcquireFaceAnchor)(___faceId0, ____vertexPtr1_marshaled, ____uvPtr2_marshaled, ___vertexCount3, ____indexPtr4_marshaled, ___triangleCount5);
-
-	// Marshaling of parameter '___vertexPtr1' back from native representation
-	void* _____vertexPtr1_marshaled_unmarshaled_dereferenced = NULL;
-	_____vertexPtr1_marshaled_unmarshaled_dereferenced = *____vertexPtr1_marshaled;
-	*___vertexPtr1 = _____vertexPtr1_marshaled_unmarshaled_dereferenced;
-
-	// Marshaling of parameter '___uvPtr2' back from native representation
-	void* _____uvPtr2_marshaled_unmarshaled_dereferenced = NULL;
-	_____uvPtr2_marshaled_unmarshaled_dereferenced = *____uvPtr2_marshaled;
-	*___uvPtr2 = _____uvPtr2_marshaled_unmarshaled_dereferenced;
-
-	// Marshaling of parameter '___indexPtr4' back from native representation
-	void* _____indexPtr4_marshaled_unmarshaled_dereferenced = NULL;
-	_____indexPtr4_marshaled_unmarshaled_dereferenced = *____indexPtr4_marshaled;
-	*___indexPtr4 = _____indexPtr4_marshaled_unmarshaled_dereferenced;
-
-	return returnValue;
+	{
+		// throw new System.NotImplementedException(k_ExceptionMsg);
+		IL2CPP_RUNTIME_CLASS_INIT(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ARKitFaceSubsystem_t369BE5809CFFB915E7D7C380EA989BD9E2B7FEB1_il2cpp_TypeInfo_var)));
+		String_t* L_0 = ((ARKitFaceSubsystem_t369BE5809CFFB915E7D7C380EA989BD9E2B7FEB1_StaticFields*)il2cpp_codegen_static_fields_for(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ARKitFaceSubsystem_t369BE5809CFFB915E7D7C380EA989BD9E2B7FEB1_il2cpp_TypeInfo_var))))->get_k_ExceptionMsg_4();
+		NotImplementedException_t26260C4EE0444C5FA022994203060B3A42A3ADE6 * L_1 = (NotImplementedException_t26260C4EE0444C5FA022994203060B3A42A3ADE6 *)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NotImplementedException_t26260C4EE0444C5FA022994203060B3A42A3ADE6_il2cpp_TypeInfo_var)));
+		NotImplementedException__ctor_m8A9AA4499614A5BC57DD21713D0720630C130AEB(L_1, L_0, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_1, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ARKitFaceSubsystem_UnityARKit_FaceProvider_AcquireFaceAnchor_mCA5ED0BAF8F40A1381C924F3746F6F4A7D24E859_RuntimeMethod_var)));
+	}
 }
 // System.Void UnityEngine.XR.ARKit.ARKitFaceSubsystem::UnityARKit_FaceProvider_ReleaseFaceAnchor(System.Void*)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARKitFaceSubsystem_UnityARKit_FaceProvider_ReleaseFaceAnchor_m61116A7538B74311076BECF2FF59D111B069754D (void* ___faceAnchor0, const RuntimeMethod* method)
 {
-	typedef void (DEFAULT_CALL *PInvokeFunc) (void*);
-
-	// Native function invocation
-	reinterpret_cast<PInvokeFunc>(UnityARKit_FaceProvider_ReleaseFaceAnchor)(___faceAnchor0);
-
+	{
+		// throw new System.NotImplementedException(k_ExceptionMsg);
+		IL2CPP_RUNTIME_CLASS_INIT(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ARKitFaceSubsystem_t369BE5809CFFB915E7D7C380EA989BD9E2B7FEB1_il2cpp_TypeInfo_var)));
+		String_t* L_0 = ((ARKitFaceSubsystem_t369BE5809CFFB915E7D7C380EA989BD9E2B7FEB1_StaticFields*)il2cpp_codegen_static_fields_for(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ARKitFaceSubsystem_t369BE5809CFFB915E7D7C380EA989BD9E2B7FEB1_il2cpp_TypeInfo_var))))->get_k_ExceptionMsg_4();
+		NotImplementedException_t26260C4EE0444C5FA022994203060B3A42A3ADE6 * L_1 = (NotImplementedException_t26260C4EE0444C5FA022994203060B3A42A3ADE6 *)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NotImplementedException_t26260C4EE0444C5FA022994203060B3A42A3ADE6_il2cpp_TypeInfo_var)));
+		NotImplementedException__ctor_m8A9AA4499614A5BC57DD21713D0720630C130AEB(L_1, L_0, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_1, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ARKitFaceSubsystem_UnityARKit_FaceProvider_ReleaseFaceAnchor_m61116A7538B74311076BECF2FF59D111B069754D_RuntimeMethod_var)));
+	}
 }
 // System.Int32 UnityEngine.XR.ARKit.ARKitFaceSubsystem::UnityARKit_FaceProvider_GetSupportedFaceCount()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t ARKitFaceSubsystem_UnityARKit_FaceProvider_GetSupportedFaceCount_m660368444B21A741EAB6714221AB68F6C2CD0451 (const RuntimeMethod* method)
 {
-	typedef int32_t (DEFAULT_CALL *PInvokeFunc) ();
-
-	// Native function invocation
-	int32_t returnValue = reinterpret_cast<PInvokeFunc>(UnityARKit_FaceProvider_GetSupportedFaceCount)();
-
-	return returnValue;
+	{
+		// static int UnityARKit_FaceProvider_GetSupportedFaceCount() => 0;
+		return 0;
+	}
 }
 // System.Int32 UnityEngine.XR.ARKit.ARKitFaceSubsystem::UnityARKit_FaceProvider_GetMaximumFaceCount()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t ARKitFaceSubsystem_UnityARKit_FaceProvider_GetMaximumFaceCount_m989B8F9A715B39D93A3B0C23D2CD3B0B0C794CD2 (const RuntimeMethod* method)
 {
-	typedef int32_t (DEFAULT_CALL *PInvokeFunc) ();
-
-	// Native function invocation
-	int32_t returnValue = reinterpret_cast<PInvokeFunc>(UnityARKit_FaceProvider_GetMaximumFaceCount)();
-
-	return returnValue;
+	{
+		// static int UnityARKit_FaceProvider_GetMaximumFaceCount() => 0;
+		return 0;
+	}
 }
 // System.Void UnityEngine.XR.ARKit.ARKitFaceSubsystem::UnityARKit_FaceProvider_SetRequestedMaximumFaceCount(System.Int32)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARKitFaceSubsystem_UnityARKit_FaceProvider_SetRequestedMaximumFaceCount_mEF2E6553693DE0FF024B275DF8A24D4EE63E0C67 (int32_t ___count0, const RuntimeMethod* method)
 {
-	typedef void (DEFAULT_CALL *PInvokeFunc) (int32_t);
-
-	// Native function invocation
-	reinterpret_cast<PInvokeFunc>(UnityARKit_FaceProvider_SetRequestedMaximumFaceCount)(___count0);
-
+	{
+		// throw new System.NotImplementedException(k_ExceptionMsg);
+		IL2CPP_RUNTIME_CLASS_INIT(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ARKitFaceSubsystem_t369BE5809CFFB915E7D7C380EA989BD9E2B7FEB1_il2cpp_TypeInfo_var)));
+		String_t* L_0 = ((ARKitFaceSubsystem_t369BE5809CFFB915E7D7C380EA989BD9E2B7FEB1_StaticFields*)il2cpp_codegen_static_fields_for(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ARKitFaceSubsystem_t369BE5809CFFB915E7D7C380EA989BD9E2B7FEB1_il2cpp_TypeInfo_var))))->get_k_ExceptionMsg_4();
+		NotImplementedException_t26260C4EE0444C5FA022994203060B3A42A3ADE6 * L_1 = (NotImplementedException_t26260C4EE0444C5FA022994203060B3A42A3ADE6 *)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NotImplementedException_t26260C4EE0444C5FA022994203060B3A42A3ADE6_il2cpp_TypeInfo_var)));
+		NotImplementedException__ctor_m8A9AA4499614A5BC57DD21713D0720630C130AEB(L_1, L_0, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_1, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ARKitFaceSubsystem_UnityARKit_FaceProvider_SetRequestedMaximumFaceCount_mEF2E6553693DE0FF024B275DF8A24D4EE63E0C67_RuntimeMethod_var)));
+	}
 }
 // System.Int32 UnityEngine.XR.ARKit.ARKitFaceSubsystem::UnityARKit_FaceProvider_GetRequestedMaximumFaceCount()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t ARKitFaceSubsystem_UnityARKit_FaceProvider_GetRequestedMaximumFaceCount_m009D20663FC8567FDF16E9B6DDE8A3F738A797D3 (const RuntimeMethod* method)
 {
-	typedef int32_t (DEFAULT_CALL *PInvokeFunc) ();
-
-	// Native function invocation
-	int32_t returnValue = reinterpret_cast<PInvokeFunc>(UnityARKit_FaceProvider_GetRequestedMaximumFaceCount)();
-
-	return returnValue;
+	{
+		// static int UnityARKit_FaceProvider_GetRequestedMaximumFaceCount() => 0;
+		return 0;
+	}
 }
 // Unity.Collections.NativeArray`1<UnityEngine.XR.ARKit.ARKitBlendShapeCoefficient> UnityEngine.XR.ARKit.ARKitFaceSubsystem::GetBlendShapeCoefficients(UnityEngine.XR.ARSubsystems.TrackableId,Unity.Collections.Allocator)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR NativeArray_1_t789EF72B9F35EFEE803ED394D2CAEA69F554E419  ARKitFaceSubsystem_GetBlendShapeCoefficients_mE983A3A34A04F8C6340EF79A06138BEA025F9721 (ARKitFaceSubsystem_t369BE5809CFFB915E7D7C380EA989BD9E2B7FEB1 * __this, TrackableId_t17A59B04292038BB1B77BEACD41221D2700BE90B  ___faceId0, int32_t ___allocator1, const RuntimeMethod* method)
@@ -2674,6 +2916,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR NativeArray_1_t789EF72B9F35EFEE803ED394D2CAEA
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ARKitFaceSubsystem_t369BE5809CFFB915E7D7C380EA989BD9E2B7FEB1_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NativeArrayUnsafeUtility_ConvertExistingDataToNativeArray_TisARKitBlendShapeCoefficient_t6B17AD958119715154498F9EB6A29ECF98BA0E9F_m4C0A44474F9253FBEFFFB7A5B9B928085AE6F4C2_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NativeArray_1_CopyFrom_m3EABE3E957BDDEA5F4428C21FC19BC275751571A_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NativeArray_1__ctor_m6EF3FEBF49491CF3893DC0DE272D6262C6252CE8_RuntimeMethod_var);
@@ -2693,6 +2936,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR NativeArray_1_t789EF72B9F35EFEE803ED394D2CAEA
 	{
 		// if (!UnityARKit_FaceProvider_TryAcquireFaceBlendCoefficients(faceId, out ptrNativeCoefficientsArray, out coefficientsCount) || coefficientsCount <= 0)
 		TrackableId_t17A59B04292038BB1B77BEACD41221D2700BE90B  L_0 = ___faceId0;
+		IL2CPP_RUNTIME_CLASS_INIT(ARKitFaceSubsystem_t369BE5809CFFB915E7D7C380EA989BD9E2B7FEB1_il2cpp_TypeInfo_var);
 		bool L_1;
 		L_1 = ARKitFaceSubsystem_UnityARKit_FaceProvider_TryAcquireFaceBlendCoefficients_m72678365F53600A14CDD44564E9EE616163AE3A3(L_0, (intptr_t*)(&V_0), (int32_t*)(&V_1), /*hidden argument*/NULL);
 		if (!L_1)
@@ -2756,6 +3000,7 @@ FINALLY_003f:
 	{ // begin finally (depth: 1)
 		// UnityARKit_FaceProvider_DeallocateTempMemory(ptrNativeCoefficientsArray);
 		intptr_t L_13 = V_0;
+		IL2CPP_RUNTIME_CLASS_INIT(ARKitFaceSubsystem_t369BE5809CFFB915E7D7C380EA989BD9E2B7FEB1_il2cpp_TypeInfo_var);
 		ARKitFaceSubsystem_UnityARKit_FaceProvider_DeallocateTempMemory_mFA056649EBEC0EA596B86E7776ED89A69CA54DA3((intptr_t)L_13, /*hidden argument*/NULL);
 		// }
 		IL2CPP_END_FINALLY(63)
@@ -2780,6 +3025,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARKitFaceSubsystem_RegisterDescriptor_mC
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ARKitFaceSubsystem_t369BE5809CFFB915E7D7C380EA989BD9E2B7FEB1_0_0_0_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ARKitFaceSubsystem_t369BE5809CFFB915E7D7C380EA989BD9E2B7FEB1_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ARKitProvider_tA1A675BEFA8E851172BAAA1796D7D99578F71195_0_0_0_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Type_t_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralB4864243BC84ACADEEAE7751496ED8C4C00A9169);
@@ -2789,6 +3035,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARKitFaceSubsystem_RegisterDescriptor_mC
 	memset((&V_0), 0, sizeof(V_0));
 	{
 		// if (!UnityARKit_FaceProvider_IsSupported())
+		IL2CPP_RUNTIME_CLASS_INIT(ARKitFaceSubsystem_t369BE5809CFFB915E7D7C380EA989BD9E2B7FEB1_il2cpp_TypeInfo_var);
 		bool L_0;
 		L_0 = ARKitFaceSubsystem_UnityARKit_FaceProvider_IsSupported_mD5D180359516D9C3EC555426FDE731EB16D7EFCC(/*hidden argument*/NULL);
 		if (L_0)
@@ -2804,6 +3051,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARKitFaceSubsystem_RegisterDescriptor_mC
 IL_0008:
 	{
 		// UnityARKit_FaceProvider_OnRegisterDescriptor();
+		IL2CPP_RUNTIME_CLASS_INIT(ARKitFaceSubsystem_t369BE5809CFFB915E7D7C380EA989BD9E2B7FEB1_il2cpp_TypeInfo_var);
 		ARKitFaceSubsystem_UnityARKit_FaceProvider_OnRegisterDescriptor_mFF88BD6F056A332E14175370D504D4A4A4C899F0(/*hidden argument*/NULL);
 		// var descriptorParams = new FaceSubsystemParams
 		// {
@@ -2847,6 +3095,22 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARKitFaceSubsystem__ctor_mFA6DA680416BA4
 		return;
 	}
 }
+// System.Void UnityEngine.XR.ARKit.ARKitFaceSubsystem::.cctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARKitFaceSubsystem__cctor_m0418BF412ADD7B04A3832F02DA42261D7EB242D6 (const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ARKitFaceSubsystem_t369BE5809CFFB915E7D7C380EA989BD9E2B7FEB1_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral8253EEC179AE2F43719A271C97BC28385391F1D0);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		// static readonly string k_ExceptionMsg = "ARKit Plugin Provider not enabled in project settings.";
+		((ARKitFaceSubsystem_t369BE5809CFFB915E7D7C380EA989BD9E2B7FEB1_StaticFields*)il2cpp_codegen_static_fields_for(ARKitFaceSubsystem_t369BE5809CFFB915E7D7C380EA989BD9E2B7FEB1_il2cpp_TypeInfo_var))->set_k_ExceptionMsg_4(_stringLiteral8253EEC179AE2F43719A271C97BC28385391F1D0);
+		return;
+	}
+}
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
@@ -2858,10 +3122,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARKitFaceSubsystem__ctor_mFA6DA680416BA4
 // System.Void UnityEngine.XR.ARKit.ARKitFaceSubsystem/ARKitProvider::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARKitProvider__ctor_mF8ABBB36CFF4009240926841B45BBACD66DB52D9 (ARKitProvider_tA1A675BEFA8E851172BAAA1796D7D99578F71195 * __this, const RuntimeMethod* method)
 {
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ARKitFaceSubsystem_t369BE5809CFFB915E7D7C380EA989BD9E2B7FEB1_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
 	{
 		// public ARKitProvider() => UnityARKit_FaceProvider_Initialize();
 		Provider__ctor_mD36F52D0D0CF48E1C950DAE67246AB8C42498DE5(__this, /*hidden argument*/NULL);
 		// public ARKitProvider() => UnityARKit_FaceProvider_Initialize();
+		IL2CPP_RUNTIME_CLASS_INIT(ARKitFaceSubsystem_t369BE5809CFFB915E7D7C380EA989BD9E2B7FEB1_il2cpp_TypeInfo_var);
 		ARKitFaceSubsystem_UnityARKit_FaceProvider_Initialize_mFEFCC10A1D16F6A553EC9480EE070081C8201070(/*hidden argument*/NULL);
 		return;
 	}
@@ -2869,8 +3140,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARKitProvider__ctor_mF8ABBB36CFF40092409
 // System.Void UnityEngine.XR.ARKit.ARKitFaceSubsystem/ARKitProvider::Start()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARKitProvider_Start_mABAF1866CBBE303A459729E26B23CC63DD977200 (ARKitProvider_tA1A675BEFA8E851172BAAA1796D7D99578F71195 * __this, const RuntimeMethod* method)
 {
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ARKitFaceSubsystem_t369BE5809CFFB915E7D7C380EA989BD9E2B7FEB1_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
 	{
 		// public override void Start() => UnityARKit_FaceProvider_Start();
+		IL2CPP_RUNTIME_CLASS_INIT(ARKitFaceSubsystem_t369BE5809CFFB915E7D7C380EA989BD9E2B7FEB1_il2cpp_TypeInfo_var);
 		ARKitFaceSubsystem_UnityARKit_FaceProvider_Start_mF2AD76E77A382459ADB0E61D88ACD355C5A54BD4(/*hidden argument*/NULL);
 		return;
 	}
@@ -2878,8 +3156,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARKitProvider_Start_mABAF1866CBBE303A459
 // System.Void UnityEngine.XR.ARKit.ARKitFaceSubsystem/ARKitProvider::Stop()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARKitProvider_Stop_m0A7356D17D90ED001CE4B86B9E9502863547F756 (ARKitProvider_tA1A675BEFA8E851172BAAA1796D7D99578F71195 * __this, const RuntimeMethod* method)
 {
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ARKitFaceSubsystem_t369BE5809CFFB915E7D7C380EA989BD9E2B7FEB1_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
 	{
 		// public override void Stop() => UnityARKit_FaceProvider_Stop();
+		IL2CPP_RUNTIME_CLASS_INIT(ARKitFaceSubsystem_t369BE5809CFFB915E7D7C380EA989BD9E2B7FEB1_il2cpp_TypeInfo_var);
 		ARKitFaceSubsystem_UnityARKit_FaceProvider_Stop_mA78405212AF75CD7AAEA96213249DF6B329DCFB1(/*hidden argument*/NULL);
 		return;
 	}
@@ -2887,8 +3172,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARKitProvider_Stop_m0A7356D17D90ED001CE4
 // System.Void UnityEngine.XR.ARKit.ARKitFaceSubsystem/ARKitProvider::Destroy()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARKitProvider_Destroy_m85F85F4DDB06853CF29F442E83D799211BA2F6B8 (ARKitProvider_tA1A675BEFA8E851172BAAA1796D7D99578F71195 * __this, const RuntimeMethod* method)
 {
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ARKitFaceSubsystem_t369BE5809CFFB915E7D7C380EA989BD9E2B7FEB1_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
 	{
 		// public override void Destroy() => UnityARKit_FaceProvider_Shutdown();
+		IL2CPP_RUNTIME_CLASS_INIT(ARKitFaceSubsystem_t369BE5809CFFB915E7D7C380EA989BD9E2B7FEB1_il2cpp_TypeInfo_var);
 		ARKitFaceSubsystem_UnityARKit_FaceProvider_Shutdown_mA1DCC2FDFB73EC97C05A1DECC68E82BCCC794A75(/*hidden argument*/NULL);
 		return;
 	}
@@ -2899,6 +3191,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARKitProvider_GetFaceMesh_m741F033901224
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ARKitFaceSubsystem_t369BE5809CFFB915E7D7C380EA989BD9E2B7FEB1_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IJobParallelForExtensions_Schedule_TisTransformIndicesJob_tFF87C2E297015EECA6853BA147171FF78D123302_m896921BFF25C7700041225364D6104E546C7EDEA_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IJobParallelForExtensions_Schedule_TisTransformUVsJob_tCABA7AB1790251392EC9FCA81A3EBD0E579F3E0A_mA5272565236E5440A326C82136C786600F99D645_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IJobParallelForExtensions_Schedule_TisTransformVerticesJob_t2238CFDB87B56D80881834E0BEDBFE25D9133239_m12A8CEEABAF367108ABB92C1307385A156BE6A3A_RuntimeMethod_var);
@@ -2935,6 +3228,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARKitProvider_GetFaceMesh_m741F033901224
 		//     out vertexPtr, out uvPtr, out vertexCount,
 		//     out indexPtr, out triangleCount);
 		TrackableId_t17A59B04292038BB1B77BEACD41221D2700BE90B  L_0 = ___faceId0;
+		IL2CPP_RUNTIME_CLASS_INIT(ARKitFaceSubsystem_t369BE5809CFFB915E7D7C380EA989BD9E2B7FEB1_il2cpp_TypeInfo_var);
 		void* L_1;
 		L_1 = ARKitFaceSubsystem_UnityARKit_FaceProvider_AcquireFaceAnchor_mCA5ED0BAF8F40A1381C924F3746F6F4A7D24E859(L_0, (void**)(&V_2), (void**)(&V_4), (int32_t*)(&V_0), (void**)(&V_3), (int32_t*)(&V_1), /*hidden argument*/NULL);
 		V_5 = (void*)L_1;
@@ -3069,6 +3363,7 @@ FINALLY_00fe:
 	{ // begin finally (depth: 1)
 		// UnityARKit_FaceProvider_ReleaseFaceAnchor(faceAnchor);
 		void* L_42 = V_5;
+		IL2CPP_RUNTIME_CLASS_INIT(ARKitFaceSubsystem_t369BE5809CFFB915E7D7C380EA989BD9E2B7FEB1_il2cpp_TypeInfo_var);
 		ARKitFaceSubsystem_UnityARKit_FaceProvider_ReleaseFaceAnchor_m61116A7538B74311076BECF2FF59D111B069754D((void*)(void*)L_42, /*hidden argument*/NULL);
 		// }
 		IL2CPP_END_FINALLY(254)
@@ -3091,6 +3386,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR TrackableChanges_1_t4155663F6D60090D5E988A2EB
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ARKitFaceSubsystem_t369BE5809CFFB915E7D7C380EA989BD9E2B7FEB1_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&TrackableChanges_1__ctor_m529358A9D19C12874038815703FBB61C2D874608_RuntimeMethod_var);
 		s_Il2CppMethodInitialized = true;
 	}
@@ -3112,6 +3408,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR TrackableChanges_1_t4155663F6D60090D5E988A2EB
 		//     out updatedPtr, out updatedLength,
 		//     out removedPtr, out removedLength,
 		//     out elementSize);
+		IL2CPP_RUNTIME_CLASS_INIT(ARKitFaceSubsystem_t369BE5809CFFB915E7D7C380EA989BD9E2B7FEB1_il2cpp_TypeInfo_var);
 		void* L_0;
 		L_0 = ARKitFaceSubsystem_UnityARKit_FaceProvider_AcquireChanges_m903B774621588E06CA5641B802BDEB8FF7645CA7((void**)(&V_0), (int32_t*)(&V_3), (void**)(&V_1), (int32_t*)(&V_4), (void**)(&V_2), (int32_t*)(&V_5), (int32_t*)(&V_6), /*hidden argument*/NULL);
 		V_7 = (void*)L_0;
@@ -3151,6 +3448,7 @@ FINALLY_002a:
 	{ // begin finally (depth: 1)
 		// UnityARKit_FaceProvider_ReleaseChanges(context);
 		void* L_11 = V_7;
+		IL2CPP_RUNTIME_CLASS_INIT(ARKitFaceSubsystem_t369BE5809CFFB915E7D7C380EA989BD9E2B7FEB1_il2cpp_TypeInfo_var);
 		ARKitFaceSubsystem_UnityARKit_FaceProvider_ReleaseChanges_m37CA49550D76A937A3A0741A07A5C5D3BA616906((void*)(void*)L_11, /*hidden argument*/NULL);
 		// }
 		IL2CPP_END_FINALLY(42)
@@ -3171,8 +3469,15 @@ IL_0032:
 // System.Int32 UnityEngine.XR.ARKit.ARKitFaceSubsystem/ARKitProvider::get_supportedFaceCount()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t ARKitProvider_get_supportedFaceCount_m2C25996917B196615DBC337F0909B21C7C82B39E (ARKitProvider_tA1A675BEFA8E851172BAAA1796D7D99578F71195 * __this, const RuntimeMethod* method)
 {
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ARKitFaceSubsystem_t369BE5809CFFB915E7D7C380EA989BD9E2B7FEB1_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
 	{
 		// public override int supportedFaceCount => UnityARKit_FaceProvider_GetSupportedFaceCount();
+		IL2CPP_RUNTIME_CLASS_INIT(ARKitFaceSubsystem_t369BE5809CFFB915E7D7C380EA989BD9E2B7FEB1_il2cpp_TypeInfo_var);
 		int32_t L_0;
 		L_0 = ARKitFaceSubsystem_UnityARKit_FaceProvider_GetSupportedFaceCount_m660368444B21A741EAB6714221AB68F6C2CD0451(/*hidden argument*/NULL);
 		return L_0;
@@ -3181,8 +3486,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t ARKitProvider_get_supportedFaceCount_
 // System.Int32 UnityEngine.XR.ARKit.ARKitFaceSubsystem/ARKitProvider::get_currentMaximumFaceCount()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t ARKitProvider_get_currentMaximumFaceCount_m7D7FD609848BD6DDD79A56D157C6E3AF72649DC6 (ARKitProvider_tA1A675BEFA8E851172BAAA1796D7D99578F71195 * __this, const RuntimeMethod* method)
 {
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ARKitFaceSubsystem_t369BE5809CFFB915E7D7C380EA989BD9E2B7FEB1_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
 	{
 		// public override int currentMaximumFaceCount => UnityARKit_FaceProvider_GetMaximumFaceCount();
+		IL2CPP_RUNTIME_CLASS_INIT(ARKitFaceSubsystem_t369BE5809CFFB915E7D7C380EA989BD9E2B7FEB1_il2cpp_TypeInfo_var);
 		int32_t L_0;
 		L_0 = ARKitFaceSubsystem_UnityARKit_FaceProvider_GetMaximumFaceCount_m989B8F9A715B39D93A3B0C23D2CD3B0B0C794CD2(/*hidden argument*/NULL);
 		return L_0;
@@ -3191,8 +3503,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t ARKitProvider_get_currentMaximumFaceC
 // System.Int32 UnityEngine.XR.ARKit.ARKitFaceSubsystem/ARKitProvider::get_requestedMaximumFaceCount()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t ARKitProvider_get_requestedMaximumFaceCount_mC10877AC4500D774E06CCAAC976421ED9E0F09A1 (ARKitProvider_tA1A675BEFA8E851172BAAA1796D7D99578F71195 * __this, const RuntimeMethod* method)
 {
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ARKitFaceSubsystem_t369BE5809CFFB915E7D7C380EA989BD9E2B7FEB1_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
 	{
 		// get => UnityARKit_FaceProvider_GetRequestedMaximumFaceCount();
+		IL2CPP_RUNTIME_CLASS_INIT(ARKitFaceSubsystem_t369BE5809CFFB915E7D7C380EA989BD9E2B7FEB1_il2cpp_TypeInfo_var);
 		int32_t L_0;
 		L_0 = ARKitFaceSubsystem_UnityARKit_FaceProvider_GetRequestedMaximumFaceCount_m009D20663FC8567FDF16E9B6DDE8A3F738A797D3(/*hidden argument*/NULL);
 		return L_0;
@@ -3201,9 +3520,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t ARKitProvider_get_requestedMaximumFac
 // System.Void UnityEngine.XR.ARKit.ARKitFaceSubsystem/ARKitProvider::set_requestedMaximumFaceCount(System.Int32)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARKitProvider_set_requestedMaximumFaceCount_m797EE5A23724B35FFF5A50F0715919BC8A06B57E (ARKitProvider_tA1A675BEFA8E851172BAAA1796D7D99578F71195 * __this, int32_t ___value0, const RuntimeMethod* method)
 {
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ARKitFaceSubsystem_t369BE5809CFFB915E7D7C380EA989BD9E2B7FEB1_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
 	{
 		// set => UnityARKit_FaceProvider_SetRequestedMaximumFaceCount(value);
 		int32_t L_0 = ___value0;
+		IL2CPP_RUNTIME_CLASS_INIT(ARKitFaceSubsystem_t369BE5809CFFB915E7D7C380EA989BD9E2B7FEB1_il2cpp_TypeInfo_var);
 		ARKitFaceSubsystem_UnityARKit_FaceProvider_SetRequestedMaximumFaceCount_mEF2E6553693DE0FF024B275DF8A24D4EE63E0C67(L_0, /*hidden argument*/NULL);
 		return;
 	}
@@ -3275,8 +3601,8 @@ IL2CPP_EXTERN_C IL2CPP_NO_INLINE IL2CPP_METHOD_ATTR void TransformUVsJob_Execute
 {
 	{
 		// uvsOut[i] = new Vector2(
-		//      uvsIn[i].x,
-		//     -uvsIn[i].y);
+		//     uvsIn[i].x,
+		//     1.0f - uvsIn[i].y);
 		NativeArray_1_t431C85F30275831D1F5D458AB73DFCE050693BC0 * L_0 = __this->get_address_of_uvsOut_1();
 		int32_t L_1 = ___i0;
 		NativeArray_1_t431C85F30275831D1F5D458AB73DFCE050693BC0 * L_2 = __this->get_address_of_uvsIn_0();
@@ -3291,7 +3617,7 @@ IL2CPP_EXTERN_C IL2CPP_NO_INLINE IL2CPP_METHOD_ATTR void TransformUVsJob_Execute
 		float L_9 = L_8.get_y_1();
 		Vector2_tBB32F2736AEC229A7BFBCE18197EC0F6AC7EC2D9  L_10;
 		memset((&L_10), 0, sizeof(L_10));
-		Vector2__ctor_m9F1F2D5EB5D1FF7091BB527AC8A72CBB309D115E_inline((&L_10), L_5, ((-L_9)), /*hidden argument*/NULL);
+		Vector2__ctor_m9F1F2D5EB5D1FF7091BB527AC8A72CBB309D115E_inline((&L_10), L_5, ((float)il2cpp_codegen_subtract((float)(1.0f), (float)L_9)), /*hidden argument*/NULL);
 		IL2CPP_NATIVEARRAY_SET_ITEM(Vector2_tBB32F2736AEC229A7BFBCE18197EC0F6AC7EC2D9 , ((NativeArray_1_t431C85F30275831D1F5D458AB73DFCE050693BC0 *)L_0)->___m_Buffer_0, L_1, (L_10));
 		// }
 		return;

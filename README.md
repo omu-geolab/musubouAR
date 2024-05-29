@@ -1,5 +1,5 @@
-### CERD-ARについて ###
-CERD-ARは、身のまわりの防災関連情報や仮想的な災害情報を、現実世界の上で可視化がおこなえる拡張現実（AR）アプリです。
+### MUSUBOU-ARについて ###
+MUSUBOU-ARは、身のまわりの防災関連情報や仮想的な災害情報を、現実世界の上で可視化がおこなえる拡張現実（AR）アプリです。
 
 ![3.JPG](https://bitbucket.org/repo/yEpMMp/images/774768982-3.JPG)
 ![4.JPG](https://bitbucket.org/repo/yEpMMp/images/1256607693-4.JPG)
@@ -14,7 +14,7 @@ CERD-ARは、身のまわりの防災関連情報や仮想的な災害情報を�
 
 [![](http://img.youtube.com/vi/8AHcJXs5R0Q/0.jpg)](https://www.youtube.com/watch?v=8AHcJXs5R0Q) 
 
-### CERD-ARの機能 ###
+### MUSUBOU-ARの機能 ###
 * **対応iOS端末**：iPhone、iPad（GPS機能を使用するためセルラーモデルを推奨）
 
 * **地図表示機能**：従来の地図アプリと同様に、現在地表示や地図の拡大縮小がおこなえます。データをインポートすることで、様々な災害・防災関連情報を、地図画面上に表示することができます。また、背景地図にオープンデータのOpenStreetMap（Mapbox）を採用しています。これにより、GoogleやAppleマップ等で地図データが乏しい地域でも、自分達で地図データを作成し、本アプリにて活用することができます。また、地図表示画面やAR表示画面上のアイコン画像をクリックすることで、詳細情報（写真や動画、現在地からの距離）を確認することができます。
@@ -33,7 +33,7 @@ CERD-ARは、身のまわりの防災関連情報や仮想的な災害情報を�
 ![1.JPG](https://bitbucket.org/repo/yEpMMp/images/3080560709-1.JPG)
 
 
-### CERD-ARの使い方 ###
+### MUSUBOU-ARの使い方 ###
 
 * [アプリのインストール方法について](https://bitbucket.org/nro2dai/cerd-ar/wiki/Home)（現在準備中）
 * [データのインポート方法について](https://bitbucket.org/nro2dai/cerd-ar/wiki/Data%20Import)（現在準備中）

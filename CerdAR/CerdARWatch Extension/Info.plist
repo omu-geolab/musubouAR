@@ -27,18 +27,18 @@
 		<key>NSExtensionAttributes</key>
 		<dict>
 			<key>WKAppBundleIdentifier</key>
-			<string>omu.cerdar.watchkitapp</string>
+			<string>ocu.cerd-ar.watchkitapp</string>
 		</dict>
 		<key>NSExtensionPointIdentifier</key>
 		<string>com.apple.watchkit</string>
 	</dict>
+	<key>NSHealthShareUsageDescription</key>
+	<string>本アプリで記録したアプリ利用者の生体情報（心拍数）を、まち歩きや災害訓練後のふりかえりにおいて確認するために、この機能を使用します。</string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>本アプリでは、まち歩きや災害訓練後のふりかえりにおいて、アプリ利用者の体力などを確認するために、アプリ利用者の生体情報（心拍数）を記録します。</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>location</string>
-	</array>
-	<key>UIRequiredDeviceCapabilities</key>
-	<array>
-		<string>healthkit</string>
 	</array>
 	<key>WKBackgroundModes</key>
 	<array>

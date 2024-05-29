@@ -203,5 +203,30 @@
             }
         }]
     }
+},
+{
+    "name":"空中写真（1979年～1983年）",
+    "server":"https://cyberjapandata.gsi.go.jp/xyz/gazo2/{z}/{x}/{y}.jpg",
+    "gl_style":{
+        "version": 8,
+        "name": "Raster Tiles",
+        "sources": {
+            "ort_1979": {
+                "type": "raster",
+                "tiles": [
+                    "https://cyberjapandata.gsi.go.jp/xyz/gazo2/{z}/{x}/{y}.jpg"
+                ],
+                "tileSize": 256
+            }
+        },
+        "layers": [{
+            "id": "ort_1979",
+            "type": "raster",
+            "source": "ort_1979",
+            "paint": {
+                "raster-fade-duration": 100
+            }
+        }]
+    }
 }
 ]

@@ -7788,6 +7788,24 @@ public:
 };
 
 
+// UnityEngine.Rendering.RenderingThreadingMode
+struct RenderingThreadingMode_t9C2FA359F30C7EC839AB6B0C98E1E66FC11F7CFC 
+{
+public:
+	// System.Int32 UnityEngine.Rendering.RenderingThreadingMode::value__
+	int32_t ___value___2;
+
+public:
+	inline static int32_t get_offset_of_value___2() { return static_cast<int32_t>(offsetof(RenderingThreadingMode_t9C2FA359F30C7EC839AB6B0C98E1E66FC11F7CFC, ___value___2)); }
+	inline int32_t get_value___2() const { return ___value___2; }
+	inline int32_t* get_address_of_value___2() { return &___value___2; }
+	inline void set_value___2(int32_t value)
+	{
+		___value___2 = value;
+	}
+};
+
+
 // UnityEngine.RuntimePlatform
 struct RuntimePlatform_tB8798C800FD9810C0FE2B7D2F2A0A3979D239065 
 {
@@ -13027,6 +13045,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SystemInfo_GetGraphicsDeviceType_m8E3
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool SystemInfo_GetGraphicsUVStartsAtTop_m05A4A723EEB7FBCB3E55C3A417AA03AF0B021E4D (const RuntimeMethod* method);
 // System.Int32 UnityEngine.SystemInfo::GetGraphicsShaderLevel()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SystemInfo_GetGraphicsShaderLevel_m5FA0FBC7F9E2EB33F845D4481BBD2E703FDC9774 (const RuntimeMethod* method);
+// UnityEngine.Rendering.RenderingThreadingMode UnityEngine.SystemInfo::GetRenderingThreadingMode()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SystemInfo_GetRenderingThreadingMode_m682EEFF66E4F688ACA133E371FF891F8D30C3F85 (const RuntimeMethod* method);
 // System.Boolean UnityEngine.SystemInfo::HasHiddenSurfaceRemovalOnGPU()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool SystemInfo_HasHiddenSurfaceRemovalOnGPU_m1A886FAE9CA31DD2C7102C8ECCC715D04B01A2E3 (const RuntimeMethod* method);
 // System.Boolean UnityEngine.SystemInfo::SupportsShadows()
@@ -24283,6 +24303,23 @@ IL_0009:
 		return L_1;
 	}
 }
+// UnityEngine.Rendering.RenderingThreadingMode UnityEngine.SystemInfo::get_renderingThreadingMode()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SystemInfo_get_renderingThreadingMode_m29074A4856EC00C30886F74167F65895AB2533A2 (const RuntimeMethod* method)
+{
+	int32_t V_0 = 0;
+	{
+		int32_t L_0;
+		L_0 = SystemInfo_GetRenderingThreadingMode_m682EEFF66E4F688ACA133E371FF891F8D30C3F85(/*hidden argument*/NULL);
+		V_0 = L_0;
+		goto IL_0009;
+	}
+
+IL_0009:
+	{
+		int32_t L_1 = V_0;
+		return L_1;
+	}
+}
 // System.Boolean UnityEngine.SystemInfo::get_hasHiddenSurfaceRemovalOnGPU()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool SystemInfo_get_hasHiddenSurfaceRemovalOnGPU_m00DD0BE87F19B47150817BECFADAB712911E8376 (const RuntimeMethod* method)
 {
@@ -24681,6 +24718,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SystemInfo_GetGraphicsShaderLevel_m5F
 	static SystemInfo_GetGraphicsShaderLevel_m5FA0FBC7F9E2EB33F845D4481BBD2E703FDC9774_ftn _il2cpp_icall_func;
 	if (!_il2cpp_icall_func)
 	_il2cpp_icall_func = (SystemInfo_GetGraphicsShaderLevel_m5FA0FBC7F9E2EB33F845D4481BBD2E703FDC9774_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.SystemInfo::GetGraphicsShaderLevel()");
+	int32_t icallRetVal = _il2cpp_icall_func();
+	return icallRetVal;
+}
+// UnityEngine.Rendering.RenderingThreadingMode UnityEngine.SystemInfo::GetRenderingThreadingMode()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SystemInfo_GetRenderingThreadingMode_m682EEFF66E4F688ACA133E371FF891F8D30C3F85 (const RuntimeMethod* method)
+{
+	typedef int32_t (*SystemInfo_GetRenderingThreadingMode_m682EEFF66E4F688ACA133E371FF891F8D30C3F85_ftn) ();
+	static SystemInfo_GetRenderingThreadingMode_m682EEFF66E4F688ACA133E371FF891F8D30C3F85_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (SystemInfo_GetRenderingThreadingMode_m682EEFF66E4F688ACA133E371FF891F8D30C3F85_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.SystemInfo::GetRenderingThreadingMode()");
 	int32_t icallRetVal = _il2cpp_icall_func();
 	return icallRetVal;
 }
