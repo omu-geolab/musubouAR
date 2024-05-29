@@ -33790,13 +33790,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XROcclusionSubsystem_TryAcquireEnvironme
 		}
 	}
 	{
-		// cpuImage = new XRCpuImage(provider.environmentDepthCpuImageApi, cinfo);
+		// cpuImage = new XRCpuImage(provider.environmentDepthConfidenceCpuImageApi, cinfo);
 		XRCpuImage_tA48C0687D95D3D63D1101E4E08EFCF0ABB2431CE * L_4 = ___cpuImage0;
 		Provider_t5B60C630FB68EFEAB6FA2F3D9A732C144003B7FB * L_5;
 		L_5 = SubsystemWithProvider_3_get_provider_m81730A811D7512001F84071740C58DD919EF6FE1_inline(__this, /*hidden argument*/SubsystemWithProvider_3_get_provider_m81730A811D7512001F84071740C58DD919EF6FE1_RuntimeMethod_var);
 		NullCheck(L_5);
 		Api_t7C92F00C6416A2C636A44AAC833C3773C567DC3E * L_6;
-		L_6 = VirtFuncInvoker0< Api_t7C92F00C6416A2C636A44AAC833C3773C567DC3E * >::Invoke(33 /* UnityEngine.XR.ARSubsystems.XRCpuImage/Api UnityEngine.XR.ARSubsystems.XROcclusionSubsystem/Provider::get_environmentDepthCpuImageApi() */, L_5);
+		L_6 = VirtFuncInvoker0< Api_t7C92F00C6416A2C636A44AAC833C3773C567DC3E * >::Invoke(36 /* UnityEngine.XR.ARSubsystems.XRCpuImage/Api UnityEngine.XR.ARSubsystems.XROcclusionSubsystem/Provider::get_environmentDepthConfidenceCpuImageApi() */, L_5);
 		Cinfo_t4E32E30AF6973611F1DD0F47FC041ED3A8775DA6  L_7 = V_0;
 		XRCpuImage_tA48C0687D95D3D63D1101E4E08EFCF0ABB2431CE  L_8;
 		memset((&L_8), 0, sizeof(L_8));

@@ -350,8 +350,6 @@ struct EmptyInternalEnumerator_1_tE0EFDA98496404617E2248BB62C2725447743B26;
 struct EmptyInternalEnumerator_1_tC27E938DE5A96CEDC2D7B2C76CC8542F71FE755F;
 // System.Array/EmptyInternalEnumerator`1<UnityEngine.InputSystem.Users.InputUser/UserData>
 struct EmptyInternalEnumerator_1_tD267943FEA15E70B35D06088E9305C3A64B07783;
-// System.Array/EmptyInternalEnumerator`1<Defective.JSON.JSONObject/ParseResult>
-struct EmptyInternalEnumerator_1_t848A6C2E0C9A4A22A48A5DCB6903DB4D7C845224;
 // System.Array/EmptyInternalEnumerator`1<UnityEngine.InputSystem.Utilities.JsonParser/JsonValue>
 struct EmptyInternalEnumerator_1_t6F84B5F5D1332EEA9E39C4378210EFE7ADDC3FF3;
 // System.Array/EmptyInternalEnumerator`1<UnityEngine.Experimental.Rendering.Universal.LightUtility/ParametricLightMeshVertex>
@@ -834,8 +832,6 @@ struct InputEvent_t0E4B1A66D8B3273D8188F3902F40C5E8BFF6E234;
 struct InputStateHistory_t0869C8331534E5D5C7E2D33FA6EEC05E85C18A31;
 // System.InvalidOperationException
 struct InvalidOperationException_t10D3EE59AD28EC641ACEE05BCA4271A527E5ECAB;
-// Defective.JSON.JSONObject
-struct JSONObject_t8DACBEBC27983927BF85CAE7AEBAB1A481137818;
 // System.Threading.ManualResetEvent
 struct ManualResetEvent_t9E2ED486907E3A16122ED4E946534E4DD6B5A7BA;
 // UnityEngine.Material
@@ -1044,7 +1040,6 @@ IL2CPP_EXTERN_C const RuntimeMethod* EmptyInternalEnumerator_1_get_Current_m9E81
 IL2CPP_EXTERN_C const RuntimeMethod* EmptyInternalEnumerator_1_get_Current_m9F0428CAE178CE01EC760C7F497F10878A5CA5A1_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* EmptyInternalEnumerator_1_get_Current_mA18F89E0A3510BFDA58BC116FAD0D27C57FC7076_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* EmptyInternalEnumerator_1_get_Current_mA1CDCAEAE9FF61619169B85198933BE7A543478C_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* EmptyInternalEnumerator_1_get_Current_mA2958F1D419AD2EA463EBF27A76C8E6C6C3DFFB2_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* EmptyInternalEnumerator_1_get_Current_mA3E6CE7426624A3BF666DB7B80D303D509D74B2F_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* EmptyInternalEnumerator_1_get_Current_mA53650C2FA0DBAD575970C306A5E2CF74249A7C4_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* EmptyInternalEnumerator_1_get_Current_mA5E8E5D318447890F7D3F39BE26C303D499B3BE5_RuntimeMethod_var;
@@ -4862,32 +4857,6 @@ public:
 	inline EmptyInternalEnumerator_1_tD267943FEA15E70B35D06088E9305C3A64B07783 * get_Value_0() const { return ___Value_0; }
 	inline EmptyInternalEnumerator_1_tD267943FEA15E70B35D06088E9305C3A64B07783 ** get_address_of_Value_0() { return &___Value_0; }
 	inline void set_Value_0(EmptyInternalEnumerator_1_tD267943FEA15E70B35D06088E9305C3A64B07783 * value)
-	{
-		___Value_0 = value;
-		Il2CppCodeGenWriteBarrier((void**)(&___Value_0), (void*)value);
-	}
-};
-
-
-// System.Array/EmptyInternalEnumerator`1<Defective.JSON.JSONObject/ParseResult>
-struct EmptyInternalEnumerator_1_t848A6C2E0C9A4A22A48A5DCB6903DB4D7C845224  : public RuntimeObject
-{
-public:
-
-public:
-};
-
-struct EmptyInternalEnumerator_1_t848A6C2E0C9A4A22A48A5DCB6903DB4D7C845224_StaticFields
-{
-public:
-	// System.Array/EmptyInternalEnumerator`1<T> System.Array/EmptyInternalEnumerator`1::Value
-	EmptyInternalEnumerator_1_t848A6C2E0C9A4A22A48A5DCB6903DB4D7C845224 * ___Value_0;
-
-public:
-	inline static int32_t get_offset_of_Value_0() { return static_cast<int32_t>(offsetof(EmptyInternalEnumerator_1_t848A6C2E0C9A4A22A48A5DCB6903DB4D7C845224_StaticFields, ___Value_0)); }
-	inline EmptyInternalEnumerator_1_t848A6C2E0C9A4A22A48A5DCB6903DB4D7C845224 * get_Value_0() const { return ___Value_0; }
-	inline EmptyInternalEnumerator_1_t848A6C2E0C9A4A22A48A5DCB6903DB4D7C845224 ** get_address_of_Value_0() { return &___Value_0; }
-	inline void set_Value_0(EmptyInternalEnumerator_1_t848A6C2E0C9A4A22A48A5DCB6903DB4D7C845224 * value)
 	{
 		___Value_0 = value;
 		Il2CppCodeGenWriteBarrier((void**)(&___Value_0), (void*)value);
@@ -18036,59 +18005,6 @@ struct OngoingAccountSelection_tD333D4FF49EF1F6A9A3EA8ABC61B6027A8A3DB4E_marshal
 {
 	InputDevice_t64BD575C54DB522A280D29E47F96E52B79B22D87 * ___device_0;
 	uint32_t ___userId_1;
-};
-
-// Defective.JSON.JSONObject/ParseResult
-struct ParseResult_t4490944B2ABC1B8476378F2ED5A8356E13CA1768 
-{
-public:
-	// Defective.JSON.JSONObject Defective.JSON.JSONObject/ParseResult::result
-	JSONObject_t8DACBEBC27983927BF85CAE7AEBAB1A481137818 * ___result_0;
-	// System.Int32 Defective.JSON.JSONObject/ParseResult::offset
-	int32_t ___offset_1;
-	// System.Boolean Defective.JSON.JSONObject/ParseResult::pause
-	bool ___pause_2;
-
-public:
-	inline static int32_t get_offset_of_result_0() { return static_cast<int32_t>(offsetof(ParseResult_t4490944B2ABC1B8476378F2ED5A8356E13CA1768, ___result_0)); }
-	inline JSONObject_t8DACBEBC27983927BF85CAE7AEBAB1A481137818 * get_result_0() const { return ___result_0; }
-	inline JSONObject_t8DACBEBC27983927BF85CAE7AEBAB1A481137818 ** get_address_of_result_0() { return &___result_0; }
-	inline void set_result_0(JSONObject_t8DACBEBC27983927BF85CAE7AEBAB1A481137818 * value)
-	{
-		___result_0 = value;
-		Il2CppCodeGenWriteBarrier((void**)(&___result_0), (void*)value);
-	}
-
-	inline static int32_t get_offset_of_offset_1() { return static_cast<int32_t>(offsetof(ParseResult_t4490944B2ABC1B8476378F2ED5A8356E13CA1768, ___offset_1)); }
-	inline int32_t get_offset_1() const { return ___offset_1; }
-	inline int32_t* get_address_of_offset_1() { return &___offset_1; }
-	inline void set_offset_1(int32_t value)
-	{
-		___offset_1 = value;
-	}
-
-	inline static int32_t get_offset_of_pause_2() { return static_cast<int32_t>(offsetof(ParseResult_t4490944B2ABC1B8476378F2ED5A8356E13CA1768, ___pause_2)); }
-	inline bool get_pause_2() const { return ___pause_2; }
-	inline bool* get_address_of_pause_2() { return &___pause_2; }
-	inline void set_pause_2(bool value)
-	{
-		___pause_2 = value;
-	}
-};
-
-// Native definition for P/Invoke marshalling of Defective.JSON.JSONObject/ParseResult
-struct ParseResult_t4490944B2ABC1B8476378F2ED5A8356E13CA1768_marshaled_pinvoke
-{
-	JSONObject_t8DACBEBC27983927BF85CAE7AEBAB1A481137818 * ___result_0;
-	int32_t ___offset_1;
-	int32_t ___pause_2;
-};
-// Native definition for COM marshalling of Defective.JSON.JSONObject/ParseResult
-struct ParseResult_t4490944B2ABC1B8476378F2ED5A8356E13CA1768_marshaled_com
-{
-	JSONObject_t8DACBEBC27983927BF85CAE7AEBAB1A481137818 * ___result_0;
-	int32_t ___offset_1;
-	int32_t ___pause_2;
 };
 
 // UnityEngine.Experimental.Rendering.Universal.Light2DBlendStyle/BlendFactors
@@ -53645,75 +53561,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EmptyInternalEnumerator_1__cctor_m41AD8E
 		EmptyInternalEnumerator_1_tD267943FEA15E70B35D06088E9305C3A64B07783 * L_0 = (EmptyInternalEnumerator_1_tD267943FEA15E70B35D06088E9305C3A64B07783 *)il2cpp_codegen_object_new(IL2CPP_RGCTX_DATA(InitializedTypeInfo(method->klass)->rgctx_data, 2));
 		((  void (*) (EmptyInternalEnumerator_1_tD267943FEA15E70B35D06088E9305C3A64B07783 *, const RuntimeMethod*))IL2CPP_RGCTX_METHOD_INFO(InitializedTypeInfo(method->klass)->rgctx_data, 3)->methodPointer)(L_0, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(InitializedTypeInfo(method->klass)->rgctx_data, 3));
 		((EmptyInternalEnumerator_1_tD267943FEA15E70B35D06088E9305C3A64B07783_StaticFields*)il2cpp_codegen_static_fields_for(IL2CPP_RGCTX_DATA(InitializedTypeInfo(method->klass)->rgctx_data, 4)))->set_Value_0(L_0);
-		return;
-	}
-}
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-// System.Void System.Array/EmptyInternalEnumerator`1<Defective.JSON.JSONObject/ParseResult>::Dispose()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EmptyInternalEnumerator_1_Dispose_mD0D9F46C9BB255FA56DCB9C37249432F854E8103_gshared (EmptyInternalEnumerator_1_t848A6C2E0C9A4A22A48A5DCB6903DB4D7C845224 * __this, const RuntimeMethod* method)
-{
-	{
-		return;
-	}
-}
-// System.Boolean System.Array/EmptyInternalEnumerator`1<Defective.JSON.JSONObject/ParseResult>::MoveNext()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool EmptyInternalEnumerator_1_MoveNext_m4946570A96FC085F9D0863D8FB412D60FCCD34C3_gshared (EmptyInternalEnumerator_1_t848A6C2E0C9A4A22A48A5DCB6903DB4D7C845224 * __this, const RuntimeMethod* method)
-{
-	{
-		return (bool)0;
-	}
-}
-// T System.Array/EmptyInternalEnumerator`1<Defective.JSON.JSONObject/ParseResult>::get_Current()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ParseResult_t4490944B2ABC1B8476378F2ED5A8356E13CA1768  EmptyInternalEnumerator_1_get_Current_mA2958F1D419AD2EA463EBF27A76C8E6C6C3DFFB2_gshared (EmptyInternalEnumerator_1_t848A6C2E0C9A4A22A48A5DCB6903DB4D7C845224 * __this, const RuntimeMethod* method)
-{
-	{
-		InvalidOperationException_t10D3EE59AD28EC641ACEE05BCA4271A527E5ECAB * L_0 = (InvalidOperationException_t10D3EE59AD28EC641ACEE05BCA4271A527E5ECAB *)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&InvalidOperationException_t10D3EE59AD28EC641ACEE05BCA4271A527E5ECAB_il2cpp_TypeInfo_var)));
-		InvalidOperationException__ctor_mC012CE552988309733C896F3FEA8249171E4402E(L_0, (String_t*)((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral7E7A07FECA0FF43839D67A9F7828EE56182CC9F6)), /*hidden argument*/NULL);
-		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&EmptyInternalEnumerator_1_get_Current_mA2958F1D419AD2EA463EBF27A76C8E6C6C3DFFB2_RuntimeMethod_var)));
-	}
-}
-// System.Object System.Array/EmptyInternalEnumerator`1<Defective.JSON.JSONObject/ParseResult>::System.Collections.IEnumerator.get_Current()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject * EmptyInternalEnumerator_1_System_Collections_IEnumerator_get_Current_m7AB15D28E52B9CFDC765C7CF03D5223F0E006401_gshared (EmptyInternalEnumerator_1_t848A6C2E0C9A4A22A48A5DCB6903DB4D7C845224 * __this, const RuntimeMethod* method)
-{
-	{
-		NullCheck((EmptyInternalEnumerator_1_t848A6C2E0C9A4A22A48A5DCB6903DB4D7C845224 *)__this);
-		ParseResult_t4490944B2ABC1B8476378F2ED5A8356E13CA1768  L_0;
-		L_0 = ((  ParseResult_t4490944B2ABC1B8476378F2ED5A8356E13CA1768  (*) (EmptyInternalEnumerator_1_t848A6C2E0C9A4A22A48A5DCB6903DB4D7C845224 *, const RuntimeMethod*))IL2CPP_RGCTX_METHOD_INFO(method->klass->rgctx_data, 0)->methodPointer)((EmptyInternalEnumerator_1_t848A6C2E0C9A4A22A48A5DCB6903DB4D7C845224 *)__this, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->klass->rgctx_data, 0));
-		ParseResult_t4490944B2ABC1B8476378F2ED5A8356E13CA1768  L_1 = (ParseResult_t4490944B2ABC1B8476378F2ED5A8356E13CA1768 )L_0;
-		RuntimeObject * L_2 = Box(IL2CPP_RGCTX_DATA(method->klass->rgctx_data, 1), &L_1);
-		return (RuntimeObject *)L_2;
-	}
-}
-// System.Void System.Array/EmptyInternalEnumerator`1<Defective.JSON.JSONObject/ParseResult>::System.Collections.IEnumerator.Reset()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EmptyInternalEnumerator_1_System_Collections_IEnumerator_Reset_m2C63427E3BBF2ABAA0C649F383A7D8B733BF67F9_gshared (EmptyInternalEnumerator_1_t848A6C2E0C9A4A22A48A5DCB6903DB4D7C845224 * __this, const RuntimeMethod* method)
-{
-	{
-		return;
-	}
-}
-// System.Void System.Array/EmptyInternalEnumerator`1<Defective.JSON.JSONObject/ParseResult>::.ctor()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EmptyInternalEnumerator_1__ctor_m403DB37EE60D6E2AEF7CD920EC63C81791C59B34_gshared (EmptyInternalEnumerator_1_t848A6C2E0C9A4A22A48A5DCB6903DB4D7C845224 * __this, const RuntimeMethod* method)
-{
-	{
-		NullCheck((RuntimeObject *)__this);
-		Object__ctor_m88880E0413421D13FD95325EDCE231707CE1F405((RuntimeObject *)__this, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void System.Array/EmptyInternalEnumerator`1<Defective.JSON.JSONObject/ParseResult>::.cctor()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EmptyInternalEnumerator_1__cctor_m03793517C1E9ABB6D5F3311A963D6C754004335E_gshared (const RuntimeMethod* method)
-{
-	{
-		EmptyInternalEnumerator_1_t848A6C2E0C9A4A22A48A5DCB6903DB4D7C845224 * L_0 = (EmptyInternalEnumerator_1_t848A6C2E0C9A4A22A48A5DCB6903DB4D7C845224 *)il2cpp_codegen_object_new(IL2CPP_RGCTX_DATA(InitializedTypeInfo(method->klass)->rgctx_data, 2));
-		((  void (*) (EmptyInternalEnumerator_1_t848A6C2E0C9A4A22A48A5DCB6903DB4D7C845224 *, const RuntimeMethod*))IL2CPP_RGCTX_METHOD_INFO(InitializedTypeInfo(method->klass)->rgctx_data, 3)->methodPointer)(L_0, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(InitializedTypeInfo(method->klass)->rgctx_data, 3));
-		((EmptyInternalEnumerator_1_t848A6C2E0C9A4A22A48A5DCB6903DB4D7C845224_StaticFields*)il2cpp_codegen_static_fields_for(IL2CPP_RGCTX_DATA(InitializedTypeInfo(method->klass)->rgctx_data, 4)))->set_Value_0(L_0);
 		return;
 	}
 }

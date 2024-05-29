@@ -13961,6 +13961,8 @@ public:
 	NativeArray_1_t381CA7D92591F9C96DB84965C31AF8713A546156  ___positionsIn_0;
 	// Unity.Collections.NativeArray`1<UnityEngine.Vector2> UnityEngine.XR.ARKit.ARKitXRPlaneSubsystem/ARKitProvider/TransformBoundaryPositionsJob::positionsOut
 	NativeArray_1_t431C85F30275831D1F5D458AB73DFCE050693BC0  ___positionsOut_1;
+	// UnityEngine.Quaternion UnityEngine.XR.ARKit.ARKitXRPlaneSubsystem/ARKitProvider/TransformBoundaryPositionsJob::inverseYAxisRotation
+	Quaternion_t6D28618CF65156D4A0AD747370DDFD0C514A31B4  ___inverseYAxisRotation_2;
 
 public:
 	inline static int32_t get_offset_of_positionsIn_0() { return static_cast<int32_t>(offsetof(TransformBoundaryPositionsJob_t538BF69F9F744EBC94AA0487075746AD113A64FE, ___positionsIn_0)); }
@@ -13977,6 +13979,14 @@ public:
 	inline void set_positionsOut_1(NativeArray_1_t431C85F30275831D1F5D458AB73DFCE050693BC0  value)
 	{
 		___positionsOut_1 = value;
+	}
+
+	inline static int32_t get_offset_of_inverseYAxisRotation_2() { return static_cast<int32_t>(offsetof(TransformBoundaryPositionsJob_t538BF69F9F744EBC94AA0487075746AD113A64FE, ___inverseYAxisRotation_2)); }
+	inline Quaternion_t6D28618CF65156D4A0AD747370DDFD0C514A31B4  get_inverseYAxisRotation_2() const { return ___inverseYAxisRotation_2; }
+	inline Quaternion_t6D28618CF65156D4A0AD747370DDFD0C514A31B4 * get_address_of_inverseYAxisRotation_2() { return &___inverseYAxisRotation_2; }
+	inline void set_inverseYAxisRotation_2(Quaternion_t6D28618CF65156D4A0AD747370DDFD0C514A31B4  value)
+	{
+		___inverseYAxisRotation_2 = value;
 	}
 };
 
