@@ -104,25 +104,25 @@
     }
 },
 {
-    "name":"洪水浸水想定区域（想定最大規模）",
-    "server":"https://disaportaldata.gsi.go.jp/raster/01_flood_l2_shinsuishin_data/{z}/{x}/{y}.png",
+    "name":"洪水浸水想定区域（想定最大規模）_国管理河川",
+    "server":"https://disaportaldata.gsi.go.jp/raster/01_flood_l2_shinsuishin_kuni_data/{z}/{x}/{y}.png",
     "legend":"https://disaportal.gsi.go.jp/hazardmap/copyright/img/shinsui_legend2-1.png",
     "gl_style":{
         "version": 8,
         "name": "Raster Tiles",
         "sources": {
-            "01_flood_l2_shinsuishin_data": {
+            "01_flood_l2_shinsuishin_kuni_data": {
                 "type": "raster",
                 "tiles": [
-                    "https://disaportaldata.gsi.go.jp/raster/01_flood_l2_shinsuishin_data/{z}/{x}/{y}.png"
+                    "https://disaportaldata.gsi.go.jp/raster/01_flood_l2_shinsuishin_kuni_data/{z}/{x}/{y}.png"
                 ],
                 "tileSize": 256
             }
         },
         "layers": [{
-            "id": "01_flood_l2_shinsuishin_data",
+            "id": "01_flood_l2_shinsuishin_kuni_data",
             "type": "raster",
-            "source": "01_flood_l2_shinsuishin_data",
+            "source": "01_flood_l2_shinsuishin_kuni_data",
             "paint": {
                 "raster-fade-duration": 100
             }

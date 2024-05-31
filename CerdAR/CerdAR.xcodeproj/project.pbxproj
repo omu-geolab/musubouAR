@@ -1183,8 +1183,6 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = CerdAR/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "MUSUBOU-AR";
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1220,8 +1218,6 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = CerdAR/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "MUSUBOU-AR";
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1333,9 +1329,6 @@
 				DEVELOPMENT_TEAM = 9F4BD2UBE2;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "CerdARWatch Extension/Info.plist";
-				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "";
-				INFOPLIST_KEY_NSHealthShareUsageDescription = "";
-				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1370,9 +1363,6 @@
 				DEVELOPMENT_TEAM = 9F4BD2UBE2;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "CerdARWatch Extension/Info.plist";
-				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "";
-				INFOPLIST_KEY_NSHealthShareUsageDescription = "";
-				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1409,7 +1399,6 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				IBSC_MODULE = CerdARWatch_Extension;
 				INFOPLIST_FILE = CerdARWatch/Info.plist;
-				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "";
 				MARKETING_VERSION = 4.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -1443,7 +1432,6 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				IBSC_MODULE = CerdARWatch_Extension;
 				INFOPLIST_FILE = CerdARWatch/Info.plist;
-				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "";
 				MARKETING_VERSION = 4.0;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "ocu.cerd-ar.watchkitapp";

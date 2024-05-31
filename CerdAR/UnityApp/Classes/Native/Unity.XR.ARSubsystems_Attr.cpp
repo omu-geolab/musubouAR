@@ -1212,10 +1212,6 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void CreateAssetMenuAttribute_set
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void CreateAssetMenuAttribute_set_order_m4E3BBB75DCF82E2ADCACE57685420FA3F8D71C1B_inline (CreateAssetMenuAttribute_t79F6BDD595B569A2D16681BDD571D1AE6E782D0C * __this, int32_t ___value0, const RuntimeMethod* method);
 // System.Void UnityEngine.InputSystem.Layouts.InputControlLayoutAttribute::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InputControlLayoutAttribute__ctor_m8C201473802FDB0442E912B2CCBDF3B0F4C33B36 (InputControlLayoutAttribute_t647A2B42F2AF7A2A2D8091F7BAB9BA9DB89C182C * __this, const RuntimeMethod* method);
-// System.Void UnityEngine.InputSystem.Layouts.InputControlLayoutAttribute::set_displayName(System.String)
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void InputControlLayoutAttribute_set_displayName_m29FDF3A579CAA3EED0F638C8E9F3FC151AD35922_inline (InputControlLayoutAttribute_t647A2B42F2AF7A2A2D8091F7BAB9BA9DB89C182C * __this, String_t* ___value0, const RuntimeMethod* method);
-// System.Void UnityEngine.InputSystem.Layouts.InputControlLayoutAttribute::set_isGenericTypeOfDevice(System.Boolean)
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void InputControlLayoutAttribute_set_isGenericTypeOfDevice_m9F72281DB145072353EC2CFF1C527299B9234F32_inline (InputControlLayoutAttribute_t647A2B42F2AF7A2A2D8091F7BAB9BA9DB89C182C * __this, bool ___value0, const RuntimeMethod* method);
 // System.Void UnityEngine.Scripting.PreserveAttribute::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PreserveAttribute__ctor_mBD1EEF1095DBD581365C77729CF4ACB914859CD2 (PreserveAttribute_tD3CDF1454F8E64CEF59CF7094B45BBACE2C69948 * __this, const RuntimeMethod* method);
 // System.Void UnityEngine.InputSystem.Layouts.InputControlAttribute::.ctor()
@@ -3804,8 +3800,6 @@ static void HandheldARInputDevice_tDA83371435104E92F19A3E1B96D19A2F2CEC2321_Cust
 	{
 		InputControlLayoutAttribute_t647A2B42F2AF7A2A2D8091F7BAB9BA9DB89C182C * tmp = (InputControlLayoutAttribute_t647A2B42F2AF7A2A2D8091F7BAB9BA9DB89C182C *)cache->attributes[0];
 		InputControlLayoutAttribute__ctor_m8C201473802FDB0442E912B2CCBDF3B0F4C33B36(tmp, NULL);
-		InputControlLayoutAttribute_set_displayName_m29FDF3A579CAA3EED0F638C8E9F3FC151AD35922_inline(tmp, il2cpp_codegen_string_new_wrapper("\x41\x52\x20\x48\x61\x6E\x64\x68\x65\x6C\x64\x20\x44\x65\x76\x69\x63\x65"), NULL);
-		InputControlLayoutAttribute_set_isGenericTypeOfDevice_m9F72281DB145072353EC2CFF1C527299B9234F32_inline(tmp, true, NULL);
 	}
 	{
 		PreserveAttribute_tD3CDF1454F8E64CEF59CF7094B45BBACE2C69948 * tmp = (PreserveAttribute_tD3CDF1454F8E64CEF59CF7094B45BBACE2C69948 *)cache->attributes[1];
@@ -5926,24 +5920,6 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void CreateAssetMenuAttribute_set
 	{
 		int32_t L_0 = ___value0;
 		__this->set_U3CorderU3Ek__BackingField_2(L_0);
-		return;
-	}
-}
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void InputControlLayoutAttribute_set_displayName_m29FDF3A579CAA3EED0F638C8E9F3FC151AD35922_inline (InputControlLayoutAttribute_t647A2B42F2AF7A2A2D8091F7BAB9BA9DB89C182C * __this, String_t* ___value0, const RuntimeMethod* method)
-{
-	{
-		// public string displayName { get; set; }
-		String_t* L_0 = ___value0;
-		__this->set_U3CdisplayNameU3Ek__BackingField_8(L_0);
-		return;
-	}
-}
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void InputControlLayoutAttribute_set_isGenericTypeOfDevice_m9F72281DB145072353EC2CFF1C527299B9234F32_inline (InputControlLayoutAttribute_t647A2B42F2AF7A2A2D8091F7BAB9BA9DB89C182C * __this, bool ___value0, const RuntimeMethod* method)
-{
-	{
-		// public bool isGenericTypeOfDevice { get; set; }
-		bool L_0 = ___value0;
-		__this->set_U3CisGenericTypeOfDeviceU3Ek__BackingField_7(L_0);
 		return;
 	}
 }

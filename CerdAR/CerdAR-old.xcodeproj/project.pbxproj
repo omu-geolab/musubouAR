@@ -1,0 +1,1552 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6D7FC273A859892F2FB694A1 /* Pods_CerdAR_CerdARUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE0D2F38821D36BF3DDC2639 /* Pods_CerdAR_CerdARUITests.framework */; };
+		7EE70E1F1DEAA16A000FB537 /* sound_intrusion.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7EE70E1E1DEAA16A000FB537 /* sound_intrusion.mp3 */; };
+		7EE70E211DEAA1B6000FB537 /* sound_near.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7EE70E201DEAA1B6000FB537 /* sound_near.mp3 */; };
+		942A6D1A2A41E17400CEC20A /* TermsView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 942A6D192A41E17400CEC20A /* TermsView.storyboard */; };
+		9F4AE72A0928AD44DE4E2AD4 /* Pods_CerdARTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5520A484FF96686032A4E49E /* Pods_CerdARTests.framework */; };
+		AC05B9FA1D811FDA0082C52A /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC05B9F91D811FDA0082C52A /* DataManager.swift */; };
+		AC2AB8F61DB778A10048931C /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2AB8F51DB778A10048931C /* Constant.swift */; };
+		AC2C03D41D9D1CB9009926E3 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2C03D31D9D1CB9009926E3 /* SwiftyJSON.swift */; };
+		AC2C52C61D5805F70032B689 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2C52C51D5805F70032B689 /* AppDelegate.swift */; };
+		AC2C52CB1D5805F70032B689 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC2C52C91D5805F70032B689 /* Main.storyboard */; };
+		AC2C52D01D5805F70032B689 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC2C52CF1D5805F70032B689 /* Assets.xcassets */; };
+		AC2C52D31D5805F70032B689 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC2C52D11D5805F70032B689 /* LaunchScreen.storyboard */; };
+		AC2C52E91D5805F80032B689 /* CerdARUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2C52E81D5805F80032B689 /* CerdARUITests.swift */; };
+		AC2C52FB1D5807D00032B689 /* ConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2C52FA1D5807D00032B689 /* ConfigView.swift */; };
+		ACEE245C1D8235FE00102E10 /* MakeTagImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEE245B1D8235FE00102E10 /* MakeTagImage.swift */; };
+		ACF399B71D98C25100B0EC47 /* osmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF399B61D98C25100B0EC47 /* osmViewController.swift */; };
+		ACFD6E0C1DB474680006A765 /* loadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFD6E0B1DB474680006A765 /* loadViewController.swift */; };
+		AD5A90D855A1A02DBACBFC87 /* Pods_CerdAR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A7212CE0DBA3DA2FCF40669 /* Pods_CerdAR.framework */; };
+		BF01B83E1F6FEECE001AC15E /* GISImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF01B83D1F6FEECE001AC15E /* GISImageView.swift */; };
+		D37E86961E780A6A0030B01A /* Vibration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37E86951E780A6A0030B01A /* Vibration.swift */; };
+		D3CF68DD1D91187D008B588E /* detailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CF68DB1D91187D008B588E /* detailView.swift */; };
+		D3CF68DE1D91187D008B588E /* termsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CF68DC1D91187D008B588E /* termsView.swift */; };
+		F00A92AB25CD244E00BC5D5A /* PlaySound.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00A92AA25CD244E00BC5D5A /* PlaySound.swift */; };
+		F00A933B25D3BB5B00BC5D5A /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F00A933925D3BB5B00BC5D5A /* Interface.storyboard */; };
+		F00A933D25D3BB5D00BC5D5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F00A933C25D3BB5D00BC5D5A /* Assets.xcassets */; };
+		F00A934425D3BB5D00BC5D5A /* CerdARWatch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F00A934325D3BB5D00BC5D5A /* CerdARWatch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F00A934925D3BB5D00BC5D5A /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00A934825D3BB5D00BC5D5A /* InterfaceController.swift */; };
+		F00A934B25D3BB5D00BC5D5A /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00A934A25D3BB5D00BC5D5A /* ExtensionDelegate.swift */; };
+		F00A934D25D3BB5D00BC5D5A /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00A934C25D3BB5D00BC5D5A /* NotificationController.swift */; };
+		F00A934F25D3BB5D00BC5D5A /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00A934E25D3BB5D00BC5D5A /* ComplicationController.swift */; };
+		F00A935125D3BB5F00BC5D5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F00A935025D3BB5E00BC5D5A /* Assets.xcassets */; };
+		F00A935625D3BB5F00BC5D5A /* CerdARWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = F00A933725D3BB5B00BC5D5A /* CerdARWatch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F023CFE922C33B4300E115F8 /* gis_data.json in Resources */ = {isa = PBXBuildFile; fileRef = F023CFE822C33B4300E115F8 /* gis_data.json */; };
+		F024796125DF77190019056B /* WorkoutService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F024796025DF77190019056B /* WorkoutService.swift */; };
+		F024796725DF81D40019056B /* WorkoutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F024796625DF81D40019056B /* WorkoutController.swift */; };
+		F024797925E377D30019056B /* ParrentConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = F024797825E377D30019056B /* ParrentConnector.swift */; };
+		F024798025E37FB60019056B /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F024797F25E37FB60019056B /* HealthKit.framework */; };
+		F02479CD25E5F0840019056B /* ResumableTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02479CC25E5F0840019056B /* ResumableTimer.swift */; };
+		F02479D325E5F89D0019056B /* WorkoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02479D225E5F89D0019056B /* WorkoutManager.swift */; };
+		F033F9F5219171DD008A3A2E /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F033F9F4219171DD008A3A2E /* ARViewController.swift */; };
+		F033F9F8219172E7008A3A2E /* MapboxARAnnotationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F033F9F7219172E7008A3A2E /* MapboxARAnnotationManager.swift */; };
+		F033F9FA219172EC008A3A2E /* MapboxARAnchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F033F9F9219172EC008A3A2E /* MapboxARAnchor.swift */; };
+		F040A5A025B6C18300647A7F /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F040A59F25B6C18300647A7F /* LoadingView.swift */; };
+		F05A3C9A26048756002BC9E4 /* NodeAR.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05A3C9926048756002BC9E4 /* NodeAR.swift */; };
+		F060A95E25F212D300888F67 /* WorkoutDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F060A95D25F212D300888F67 /* WorkoutDetail.storyboard */; };
+		F060A96425F2134B00888F67 /* WorkoutDetaill.swift in Sources */ = {isa = PBXBuildFile; fileRef = F060A96325F2134B00888F67 /* WorkoutDetaill.swift */; };
+		F060A98625F849E700888F67 /* ToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F060A98525F849E700888F67 /* ToggleButton.swift */; };
+		F060A98C25F86A7100888F67 /* HeartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F060A98B25F86A7100888F67 /* HeartView.swift */; };
+		F060A99225F86A9100888F67 /* HeartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F060A99125F86A9100888F67 /* HeartView.xib */; };
+		F060A99825F89ED100888F67 /* WorkoutData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F060A99725F89ED100888F67 /* WorkoutData.swift */; };
+		F060A99E25F9F76F00888F67 /* NotificationWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F060A99D25F9F76F00888F67 /* NotificationWatch.swift */; };
+		F060A9C42600774E00888F67 /* GradientColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F060A9C32600774E00888F67 /* GradientColorView.swift */; };
+		F06D0D4C219C12CB0046747B /* SceneKit.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = F06D0D4B219C12CB0046747B /* SceneKit.scnassets */; };
+		F06D986B22E98DA6001CCB9E /* NodeText.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06D986A22E98DA6001CCB9E /* NodeText.swift */; };
+		F06D987622FA75E1001CCB9E /* SectionedSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06D987522FA75E1001CCB9E /* SectionedSlider.swift */; };
+		F06E168221D31629004E0BB6 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = F06E168121D31629004E0BB6 /* spark.png */; };
+		F06E168621D316D1004E0BB6 /* confetti.png in Resources */ = {isa = PBXBuildFile; fileRef = F06E168521D316D1004E0BB6 /* confetti.png */; };
+		F06E168821D31709004E0BB6 /* rock.png in Resources */ = {isa = PBXBuildFile; fileRef = F06E168721D31709004E0BB6 /* rock.png */; };
+		F071A3A225C23AEE009D6E7D /* DetailViewIphone.swift in Sources */ = {isa = PBXBuildFile; fileRef = F071A3A125C23AEE009D6E7D /* DetailViewIphone.swift */; };
+		F071A3AC25C23B2E009D6E7D /* DetailViewIphone.xib in Resources */ = {isa = PBXBuildFile; fileRef = F071A3AB25C23B2E009D6E7D /* DetailViewIphone.xib */; };
+		F071A3F125CA3553009D6E7D /* OSMView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F071A3F025CA3553009D6E7D /* OSMView.storyboard */; };
+		F07C561721B4D12F004F760C /* rock.scnp in Resources */ = {isa = PBXBuildFile; fileRef = F07C561621B4D12F004F760C /* rock.scnp */; };
+		F081CE2227E2F3760017A687 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F081CE2127E2F3760017A687 /* UIViewExtension.swift */; };
+		F081CE2627E2FAF20017A687 /* OptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F081CE2527E2FAF10017A687 /* OptionViewController.swift */; };
+		F081CE2827E3003D0017A687 /* OptionView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F081CE2727E3003D0017A687 /* OptionView.storyboard */; };
+		F081CE2A27E3166C0017A687 /* LoginView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F081CE2927E3166C0017A687 /* LoginView.storyboard */; };
+		F081CE2C27E31EEE0017A687 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F081CE2B27E31EEE0017A687 /* LoginViewController.swift */; };
+		F08A2D3921CCE95500777CAC /* rain.scnp in Resources */ = {isa = PBXBuildFile; fileRef = F08A2D3821CCE95500777CAC /* rain.scnp */; };
+		F090887825E8B4CA008463C8 /* GPSService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F090887725E8B4CA008463C8 /* GPSService.swift */; };
+		F090888E25E8F449008463C8 /* WorkoutsView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F090888D25E8F449008463C8 /* WorkoutsView.storyboard */; };
+		F090889425E8F88F008463C8 /* WorkoutCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F090889325E8F88F008463C8 /* WorkoutCell.xib */; };
+		F09088A425EC87B7008463C8 /* WorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09088A325EC87B7008463C8 /* WorkoutViewController.swift */; };
+		F09088B425ECAC7C008463C8 /* WorkoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09088B325ECAC7C008463C8 /* WorkoutCell.swift */; };
+		F09088C125EE3BDD008463C8 /* GradientPolyline.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09088C025EE3BDD008463C8 /* GradientPolyline.swift */; };
+		F09088C725EE3C45008463C8 /* GradidentPolylineRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09088C625EE3C45008463C8 /* GradidentPolylineRenderer.swift */; };
+		F0986D1625B95C0000CB0FE6 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0986D1525B95C0000CB0FE6 /* HealthKit.framework */; };
+		F0986D2525B9660700CB0FE6 /* HealthKitSetupAssistant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0986D2425B9660700CB0FE6 /* HealthKitSetupAssistant.swift */; };
+		F0986D3225C10B2D00CB0FE6 /* TermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0986D3125C10B2D00CB0FE6 /* TermsViewController.swift */; };
+		F09F7CA128657D0A0052E2D5 /* GPX.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09F7CA028657D0A0052E2D5 /* GPX.swift */; };
+		F09F7CA328657F5B0052E2D5 /* LocationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09F7CA228657F5B0052E2D5 /* LocationExtension.swift */; };
+		F0A3E61F21B78A7C0099812E /* smoke.png in Resources */ = {isa = PBXBuildFile; fileRef = F0A3E61D21B78A7C0099812E /* smoke.png */; };
+		F0A3E62021B78A7C0099812E /* smoke.scnp in Resources */ = {isa = PBXBuildFile; fileRef = F0A3E61E21B78A7C0099812E /* smoke.scnp */; };
+		F0B4EE3526BD67430062FC7D /* LinePolygon.geojson in Resources */ = {isa = PBXBuildFile; fileRef = F0B4EE3426BD67430062FC7D /* LinePolygon.geojson */; };
+		F0B4EE3726C9FCC30062FC7D /* click.wav in Resources */ = {isa = PBXBuildFile; fileRef = F0B4EE3626C9FCC20062FC7D /* click.wav */; };
+		F0C1392225EF7EE3004E67CD /* WorkoutJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C1392125EF7EE3004E67CD /* WorkoutJSON.swift */; };
+		F0C1392925EF8996004E67CD /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C1392825EF8996004E67CD /* DateExtension.swift */; };
+		F0C1393325F0C177004E67CD /* ConstantsWorkout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C1393225F0C177004E67CD /* ConstantsWorkout.swift */; };
+		F0C14029224A050400BFDDE7 /* third_party_vector_style.json in Resources */ = {isa = PBXBuildFile; fileRef = F0C14028224A050400BFDDE7 /* third_party_vector_style.json */; };
+		F0C5DB8C21B4CFF90067EF8F /* fire.scnp in Resources */ = {isa = PBXBuildFile; fileRef = F0C5DB8B21B4CFF90067EF8F /* fire.scnp */; };
+		F0DF93B525EF2D860034C1A0 /* ExportWorkout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DF93B425EF2D860034C1A0 /* ExportWorkout.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AC2C52DA1D5805F80032B689 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC2C52BA1D5805F70032B689 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AC2C52C11D5805F70032B689;
+			remoteInfo = CerdAR;
+		};
+		AC2C52E51D5805F80032B689 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC2C52BA1D5805F70032B689 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AC2C52C11D5805F70032B689;
+			remoteInfo = CerdAR;
+		};
+		F00A934525D3BB5D00BC5D5A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC2C52BA1D5805F70032B689 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F00A934225D3BB5D00BC5D5A;
+			remoteInfo = "CerdARWatch Extension";
+		};
+		F00A935425D3BB5F00BC5D5A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC2C52BA1D5805F70032B689 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F00A933625D3BB5B00BC5D5A;
+			remoteInfo = CerdARWatch;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F00A935A25D3BB5F00BC5D5A /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				F00A934425D3BB5D00BC5D5A /* CerdARWatch Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F00A935E25D3BB5F00BC5D5A /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				F00A935625D3BB5F00BC5D5A /* CerdARWatch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0A7212CE0DBA3DA2FCF40669 /* Pods_CerdAR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CerdAR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		173ACC9D8E3FDD7BEA612361 /* Pods-CerdAR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CerdAR.debug.xcconfig"; path = "Target Support Files/Pods-CerdAR/Pods-CerdAR.debug.xcconfig"; sourceTree = "<group>"; };
+		3EC9C9AA1A3C28BBFA939B0C /* Pods-CerdAR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CerdAR.release.xcconfig"; path = "Target Support Files/Pods-CerdAR/Pods-CerdAR.release.xcconfig"; sourceTree = "<group>"; };
+		4B26CF0CEAB5B04E0E59CD49 /* Pods-CerdAR-CerdARUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CerdAR-CerdARUITests.release.xcconfig"; path = "Target Support Files/Pods-CerdAR-CerdARUITests/Pods-CerdAR-CerdARUITests.release.xcconfig"; sourceTree = "<group>"; };
+		541975C0E522C61931451EDA /* Pods-CerdAR-CerdARUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CerdAR-CerdARUITests.debug.xcconfig"; path = "Target Support Files/Pods-CerdAR-CerdARUITests/Pods-CerdAR-CerdARUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		5520A484FF96686032A4E49E /* Pods_CerdARTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CerdARTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7EE70E1E1DEAA16A000FB537 /* sound_intrusion.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sound_intrusion.mp3; sourceTree = "<group>"; };
+		7EE70E201DEAA1B6000FB537 /* sound_near.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sound_near.mp3; sourceTree = "<group>"; };
+		8A045058B72EF00B938220EF /* Pods-CerdARTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CerdARTests.debug.xcconfig"; path = "Target Support Files/Pods-CerdARTests/Pods-CerdARTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8D35DF58AEB1A4B730273062 /* Pods-CerdARTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CerdARTests.release.xcconfig"; path = "Target Support Files/Pods-CerdARTests/Pods-CerdARTests.release.xcconfig"; sourceTree = "<group>"; };
+		942A6D192A41E17400CEC20A /* TermsView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TermsView.storyboard; sourceTree = "<group>"; };
+		AC05B9F91D811FDA0082C52A /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		AC2AB8F51DB778A10048931C /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		AC2C03D31D9D1CB9009926E3 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		AC2C52C21D5805F70032B689 /* CerdAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CerdAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC2C52C51D5805F70032B689 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AC2C52CA1D5805F70032B689 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AC2C52CF1D5805F70032B689 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AC2C52D21D5805F70032B689 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AC2C52D41D5805F70032B689 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC2C52D91D5805F80032B689 /* CerdARTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CerdARTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC2C52E41D5805F80032B689 /* CerdARUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CerdARUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC2C52E81D5805F80032B689 /* CerdARUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CerdARUITests.swift; sourceTree = "<group>"; };
+		AC2C52EA1D5805F80032B689 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC2C52FA1D5807D00032B689 /* ConfigView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigView.swift; sourceTree = "<group>"; };
+		ACEE245B1D8235FE00102E10 /* MakeTagImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeTagImage.swift; sourceTree = "<group>"; };
+		ACF399B61D98C25100B0EC47 /* osmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = osmViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		ACFD6E0B1DB474680006A765 /* loadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loadViewController.swift; sourceTree = "<group>"; };
+		BF01B83D1F6FEECE001AC15E /* GISImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GISImageView.swift; sourceTree = "<group>"; };
+		D37E86951E780A6A0030B01A /* Vibration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vibration.swift; sourceTree = "<group>"; };
+		D3CF68DB1D91187D008B588E /* detailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = detailView.swift; sourceTree = "<group>"; };
+		D3CF68DC1D91187D008B588E /* termsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = termsView.swift; sourceTree = "<group>"; };
+		F00A92AA25CD244E00BC5D5A /* PlaySound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySound.swift; sourceTree = "<group>"; };
+		F00A933725D3BB5B00BC5D5A /* CerdARWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CerdARWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F00A933A25D3BB5B00BC5D5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		F00A933C25D3BB5D00BC5D5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F00A933E25D3BB5D00BC5D5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F00A934325D3BB5D00BC5D5A /* CerdARWatch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "CerdARWatch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F00A934825D3BB5D00BC5D5A /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		F00A934A25D3BB5D00BC5D5A /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		F00A934C25D3BB5D00BC5D5A /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		F00A934E25D3BB5D00BC5D5A /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		F00A935025D3BB5E00BC5D5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F00A935225D3BB5F00BC5D5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F00A935325D3BB5F00BC5D5A /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		F023CFE822C33B4300E115F8 /* gis_data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = gis_data.json; sourceTree = "<group>"; };
+		F024796025DF77190019056B /* WorkoutService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutService.swift; sourceTree = "<group>"; };
+		F024796625DF81D40019056B /* WorkoutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutController.swift; sourceTree = "<group>"; };
+		F024797825E377D30019056B /* ParrentConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParrentConnector.swift; sourceTree = "<group>"; };
+		F024797E25E37FB60019056B /* CerdARWatch Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "CerdARWatch Extension.entitlements"; sourceTree = "<group>"; };
+		F024797F25E37FB60019056B /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS7.2.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
+		F02479CC25E5F0840019056B /* ResumableTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumableTimer.swift; sourceTree = "<group>"; };
+		F02479D225E5F89D0019056B /* WorkoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutManager.swift; sourceTree = "<group>"; };
+		F0319F7923099272002DEF7C /* Surge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Surge.framework; path = Carthage/Build/iOS/Surge.framework; sourceTree = "<group>"; };
+		F033F9F4219171DD008A3A2E /* ARViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
+		F033F9F7219172E7008A3A2E /* MapboxARAnnotationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapboxARAnnotationManager.swift; sourceTree = "<group>"; };
+		F033F9F9219172EC008A3A2E /* MapboxARAnchor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapboxARAnchor.swift; sourceTree = "<group>"; };
+		F040A59F25B6C18300647A7F /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		F054082921CB56E4009D8558 /* MapboxMobileEvents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapboxMobileEvents.framework; path = ../Carthage/Build/iOS/MapboxMobileEvents.framework; sourceTree = "<group>"; };
+		F054082B21CB56E9009D8558 /* MapboxSceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapboxSceneKit.framework; path = ../Carthage/Build/iOS/MapboxSceneKit.framework; sourceTree = "<group>"; };
+		F055A0B2268B236200034143 /* UnityFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UnityFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F05A3C9926048756002BC9E4 /* NodeAR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeAR.swift; sourceTree = "<group>"; };
+		F060A95D25F212D300888F67 /* WorkoutDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WorkoutDetail.storyboard; sourceTree = "<group>"; };
+		F060A96325F2134B00888F67 /* WorkoutDetaill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDetaill.swift; sourceTree = "<group>"; };
+		F060A98525F849E700888F67 /* ToggleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleButton.swift; sourceTree = "<group>"; };
+		F060A98B25F86A7100888F67 /* HeartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartView.swift; sourceTree = "<group>"; };
+		F060A99125F86A9100888F67 /* HeartView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeartView.xib; sourceTree = "<group>"; };
+		F060A99725F89ED100888F67 /* WorkoutData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutData.swift; sourceTree = "<group>"; };
+		F060A99D25F9F76F00888F67 /* NotificationWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationWatch.swift; sourceTree = "<group>"; };
+		F060A9C32600774E00888F67 /* GradientColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientColorView.swift; sourceTree = "<group>"; };
+		F06A927121CB5B9C0075391E /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mapbox.framework; path = Carthage/Build/iOS/Mapbox.framework; sourceTree = "<group>"; };
+		F06A927321CB5BA20075391E /* MapboxMobileEvents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapboxMobileEvents.framework; path = Carthage/Build/iOS/MapboxMobileEvents.framework; sourceTree = "<group>"; };
+		F06A927521CB5BA70075391E /* MapboxSceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapboxSceneKit.framework; path = Carthage/Build/iOS/MapboxSceneKit.framework; sourceTree = "<group>"; };
+		F06D0D4B219C12CB0046747B /* SceneKit.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = SceneKit.scnassets; sourceTree = "<group>"; };
+		F06D986A22E98DA6001CCB9E /* NodeText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeText.swift; sourceTree = "<group>"; };
+		F06D987522FA75E1001CCB9E /* SectionedSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionedSlider.swift; sourceTree = "<group>"; };
+		F06E168121D31629004E0BB6 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		F06E168521D316D1004E0BB6 /* confetti.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = confetti.png; sourceTree = "<group>"; };
+		F06E168721D31709004E0BB6 /* rock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rock.png; sourceTree = "<group>"; };
+		F071A3A125C23AEE009D6E7D /* DetailViewIphone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewIphone.swift; sourceTree = "<group>"; };
+		F071A3AB25C23B2E009D6E7D /* DetailViewIphone.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewIphone.xib; sourceTree = "<group>"; };
+		F071A3F025CA3553009D6E7D /* OSMView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OSMView.storyboard; sourceTree = "<group>"; };
+		F07C561621B4D12F004F760C /* rock.scnp */ = {isa = PBXFileReference; lastKnownFileType = file.scp; name = rock.scnp; path = CerdAR/SceneKit.scnassets/rock.scnp; sourceTree = "<group>"; };
+		F081CE2127E2F3760017A687 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		F081CE2527E2FAF10017A687 /* OptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionViewController.swift; sourceTree = "<group>"; };
+		F081CE2727E3003D0017A687 /* OptionView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OptionView.storyboard; sourceTree = "<group>"; };
+		F081CE2927E3166C0017A687 /* LoginView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginView.storyboard; sourceTree = "<group>"; };
+		F081CE2B27E31EEE0017A687 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		F08A2D3821CCE95500777CAC /* rain.scnp */ = {isa = PBXFileReference; lastKnownFileType = file.scp; path = rain.scnp; sourceTree = "<group>"; };
+		F090887725E8B4CA008463C8 /* GPSService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPSService.swift; sourceTree = "<group>"; };
+		F090888D25E8F449008463C8 /* WorkoutsView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WorkoutsView.storyboard; sourceTree = "<group>"; };
+		F090889325E8F88F008463C8 /* WorkoutCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WorkoutCell.xib; sourceTree = "<group>"; };
+		F09088A325EC87B7008463C8 /* WorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		F09088B325ECAC7C008463C8 /* WorkoutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCell.swift; sourceTree = "<group>"; };
+		F09088C025EE3BDD008463C8 /* GradientPolyline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientPolyline.swift; sourceTree = "<group>"; };
+		F09088C625EE3C45008463C8 /* GradidentPolylineRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradidentPolylineRenderer.swift; sourceTree = "<group>"; };
+		F0986D1425B95C0000CB0FE6 /* CerdAR.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CerdAR.entitlements; sourceTree = "<group>"; };
+		F0986D1525B95C0000CB0FE6 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		F0986D2425B9660700CB0FE6 /* HealthKitSetupAssistant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthKitSetupAssistant.swift; sourceTree = "<group>"; };
+		F0986D3125C10B2D00CB0FE6 /* TermsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsViewController.swift; sourceTree = "<group>"; };
+		F09F7CA028657D0A0052E2D5 /* GPX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPX.swift; sourceTree = "<group>"; };
+		F09F7CA228657F5B0052E2D5 /* LocationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationExtension.swift; sourceTree = "<group>"; };
+		F0A3E61D21B78A7C0099812E /* smoke.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = smoke.png; path = CerdAR/SceneKit.scnassets/smoke.png; sourceTree = "<group>"; };
+		F0A3E61E21B78A7C0099812E /* smoke.scnp */ = {isa = PBXFileReference; lastKnownFileType = file.scp; name = smoke.scnp; path = CerdAR/SceneKit.scnassets/smoke.scnp; sourceTree = "<group>"; };
+		F0B4EE3426BD67430062FC7D /* LinePolygon.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = LinePolygon.geojson; sourceTree = "<group>"; };
+		F0B4EE3626C9FCC20062FC7D /* click.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = click.wav; sourceTree = "<group>"; };
+		F0C1392125EF7EE3004E67CD /* WorkoutJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutJSON.swift; sourceTree = "<group>"; };
+		F0C1392825EF8996004E67CD /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		F0C1393225F0C177004E67CD /* ConstantsWorkout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsWorkout.swift; sourceTree = "<group>"; };
+		F0C14028224A050400BFDDE7 /* third_party_vector_style.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = third_party_vector_style.json; sourceTree = "<group>"; };
+		F0C5DB8B21B4CFF90067EF8F /* fire.scnp */ = {isa = PBXFileReference; lastKnownFileType = file.scp; name = fire.scnp; path = CerdAR/SceneKit.scnassets/fire.scnp; sourceTree = "<group>"; };
+		F0DF93B425EF2D860034C1A0 /* ExportWorkout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportWorkout.swift; sourceTree = "<group>"; };
+		FE0D2F38821D36BF3DDC2639 /* Pods_CerdAR_CerdARUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CerdAR_CerdARUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AC2C52BF1D5805F70032B689 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0986D1625B95C0000CB0FE6 /* HealthKit.framework in Frameworks */,
+				AD5A90D855A1A02DBACBFC87 /* Pods_CerdAR.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC2C52D61D5805F80032B689 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F4AE72A0928AD44DE4E2AD4 /* Pods_CerdARTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC2C52E11D5805F80032B689 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D7FC273A859892F2FB694A1 /* Pods_CerdAR_CerdARUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E3F4DF217BA52453223DA97C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F00A934025D3BB5D00BC5D5A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F024798025E37FB60019056B /* HealthKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3B75004CE1AD900D63C1790D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				173ACC9D8E3FDD7BEA612361 /* Pods-CerdAR.debug.xcconfig */,
+				3EC9C9AA1A3C28BBFA939B0C /* Pods-CerdAR.release.xcconfig */,
+				541975C0E522C61931451EDA /* Pods-CerdAR-CerdARUITests.debug.xcconfig */,
+				4B26CF0CEAB5B04E0E59CD49 /* Pods-CerdAR-CerdARUITests.release.xcconfig */,
+				8A045058B72EF00B938220EF /* Pods-CerdARTests.debug.xcconfig */,
+				8D35DF58AEB1A4B730273062 /* Pods-CerdARTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		AC2AB8F41DB778420048931C /* sound */ = {
+			isa = PBXGroup;
+			children = (
+				F0B4EE3626C9FCC20062FC7D /* click.wav */,
+				7EE70E1E1DEAA16A000FB537 /* sound_intrusion.mp3 */,
+				7EE70E201DEAA1B6000FB537 /* sound_near.mp3 */,
+			);
+			name = sound;
+			sourceTree = "<group>";
+		};
+		AC2C52B91D5805F70032B689 = {
+			isa = PBXGroup;
+			children = (
+				F0A3E61D21B78A7C0099812E /* smoke.png */,
+				F0A3E61E21B78A7C0099812E /* smoke.scnp */,
+				F06E168521D316D1004E0BB6 /* confetti.png */,
+				F06E168721D31709004E0BB6 /* rock.png */,
+				F08A2D3821CCE95500777CAC /* rain.scnp */,
+				F07C561621B4D12F004F760C /* rock.scnp */,
+				F0C5DB8B21B4CFF90067EF8F /* fire.scnp */,
+				F06E168121D31629004E0BB6 /* spark.png */,
+				AC2AB8F41DB778420048931C /* sound */,
+				AC2C53021D5809610032B689 /* Image */,
+				AC2C52C41D5805F70032B689 /* CerdAR */,
+				AC2C52E71D5805F80032B689 /* CerdARUITests */,
+				F00A933825D3BB5B00BC5D5A /* CerdARWatch */,
+				F00A934725D3BB5D00BC5D5A /* CerdARWatch Extension */,
+				AC2C52C31D5805F70032B689 /* Products */,
+				F033F9FF2191768C008A3A2E /* Frameworks */,
+				3B75004CE1AD900D63C1790D /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		AC2C52C31D5805F70032B689 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AC2C52C21D5805F70032B689 /* CerdAR.app */,
+				AC2C52D91D5805F80032B689 /* CerdARTests.xctest */,
+				AC2C52E41D5805F80032B689 /* CerdARUITests.xctest */,
+				F00A933725D3BB5B00BC5D5A /* CerdARWatch.app */,
+				F00A934325D3BB5D00BC5D5A /* CerdARWatch Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AC2C52C41D5805F70032B689 /* CerdAR */ = {
+			isa = PBXGroup;
+			children = (
+				F0C1392725EF8968004E67CD /* Utils */,
+				F071A3E525C7BE57009D6E7D /* Models */,
+				F0986D2A25C0F71900CB0FE6 /* Storybroad */,
+				F0986D1425B95C0000CB0FE6 /* CerdAR.entitlements */,
+				F023CFE822C33B4300E115F8 /* gis_data.json */,
+				F0B4EE3426BD67430062FC7D /* LinePolygon.geojson */,
+				F0C14028224A050400BFDDE7 /* third_party_vector_style.json */,
+				F0986D2425B9660700CB0FE6 /* HealthKitSetupAssistant.swift */,
+				AC2C03D31D9D1CB9009926E3 /* SwiftyJSON.swift */,
+				AC05B9F91D811FDA0082C52A /* DataManager.swift */,
+				ACEE245B1D8235FE00102E10 /* MakeTagImage.swift */,
+				F024796025DF77190019056B /* WorkoutService.swift */,
+				D37E86951E780A6A0030B01A /* Vibration.swift */,
+				AC2AB8F51DB778A10048931C /* Constant.swift */,
+				AC2C52C51D5805F70032B689 /* AppDelegate.swift */,
+				AC2C52C91D5805F70032B689 /* Main.storyboard */,
+				AC2C52D11D5805F70032B689 /* LaunchScreen.storyboard */,
+				F033F9F6219172B8008A3A2E /* ARKitGeo */,
+				D360EF551D912DA900A3AFE8 /* ViewController */,
+				D360EF561D912DB200A3AFE8 /* View */,
+				AC2C52CF1D5805F70032B689 /* Assets.xcassets */,
+				F06D0D4B219C12CB0046747B /* SceneKit.scnassets */,
+				AC2C52D41D5805F70032B689 /* Info.plist */,
+			);
+			path = CerdAR;
+			sourceTree = "<group>";
+		};
+		AC2C52E71D5805F80032B689 /* CerdARUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AC2C52E81D5805F80032B689 /* CerdARUITests.swift */,
+				AC2C52EA1D5805F80032B689 /* Info.plist */,
+			);
+			path = CerdARUITests;
+			sourceTree = "<group>";
+		};
+		AC2C53021D5809610032B689 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Image;
+			sourceTree = "<group>";
+		};
+		D360EF551D912DA900A3AFE8 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F033F9F4219171DD008A3A2E /* ARViewController.swift */,
+				ACF399B61D98C25100B0EC47 /* osmViewController.swift */,
+				ACFD6E0B1DB474680006A765 /* loadViewController.swift */,
+				F0986D3125C10B2D00CB0FE6 /* TermsViewController.swift */,
+				F09088A325EC87B7008463C8 /* WorkoutViewController.swift */,
+				F060A96325F2134B00888F67 /* WorkoutDetaill.swift */,
+<<<<<<< HEAD
+				F03B8237268C54DB003A6011 /* UnityViewController.swift */,
+				F081CE2527E2FAF10017A687 /* OptionViewController.swift */,
+				F081CE2B27E31EEE0017A687 /* LoginViewController.swift */,
+=======
+>>>>>>> app-store
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		D360EF561D912DB200A3AFE8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F06D987522FA75E1001CCB9E /* SectionedSlider.swift */,
+				BF01B83D1F6FEECE001AC15E /* GISImageView.swift */,
+				AC2C52FA1D5807D00032B689 /* ConfigView.swift */,
+				D3CF68DB1D91187D008B588E /* detailView.swift */,
+				D3CF68DC1D91187D008B588E /* termsView.swift */,
+				F040A59F25B6C18300647A7F /* LoadingView.swift */,
+				F071A3A125C23AEE009D6E7D /* DetailViewIphone.swift */,
+				F071A3AB25C23B2E009D6E7D /* DetailViewIphone.xib */,
+				F090889325E8F88F008463C8 /* WorkoutCell.xib */,
+				F09088B325ECAC7C008463C8 /* WorkoutCell.swift */,
+				F060A98B25F86A7100888F67 /* HeartView.swift */,
+				F060A99125F86A9100888F67 /* HeartView.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		F00A933825D3BB5B00BC5D5A /* CerdARWatch */ = {
+			isa = PBXGroup;
+			children = (
+				F00A933925D3BB5B00BC5D5A /* Interface.storyboard */,
+				F00A933C25D3BB5D00BC5D5A /* Assets.xcassets */,
+				F00A933E25D3BB5D00BC5D5A /* Info.plist */,
+			);
+			path = CerdARWatch;
+			sourceTree = "<group>";
+		};
+		F00A934725D3BB5D00BC5D5A /* CerdARWatch Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F024797E25E37FB60019056B /* CerdARWatch Extension.entitlements */,
+				F00A934825D3BB5D00BC5D5A /* InterfaceController.swift */,
+				F00A934A25D3BB5D00BC5D5A /* ExtensionDelegate.swift */,
+				F00A934C25D3BB5D00BC5D5A /* NotificationController.swift */,
+				F00A934E25D3BB5D00BC5D5A /* ComplicationController.swift */,
+				F024796625DF81D40019056B /* WorkoutController.swift */,
+				F024797825E377D30019056B /* ParrentConnector.swift */,
+				F02479CC25E5F0840019056B /* ResumableTimer.swift */,
+				F02479D225E5F89D0019056B /* WorkoutManager.swift */,
+				F090887725E8B4CA008463C8 /* GPSService.swift */,
+				F00A935025D3BB5E00BC5D5A /* Assets.xcassets */,
+				F00A935225D3BB5F00BC5D5A /* Info.plist */,
+				F00A935325D3BB5F00BC5D5A /* PushNotificationPayload.apns */,
+				F060A99D25F9F76F00888F67 /* NotificationWatch.swift */,
+			);
+			path = "CerdARWatch Extension";
+			sourceTree = "<group>";
+		};
+		F033F9F6219172B8008A3A2E /* ARKitGeo */ = {
+			isa = PBXGroup;
+			children = (
+				F06D986A22E98DA6001CCB9E /* NodeText.swift */,
+				F033F9F9219172EC008A3A2E /* MapboxARAnchor.swift */,
+				F033F9F7219172E7008A3A2E /* MapboxARAnnotationManager.swift */,
+				F05A3C9926048756002BC9E4 /* NodeAR.swift */,
+			);
+			path = ARKitGeo;
+			sourceTree = "<group>";
+		};
+		F033F9FF2191768C008A3A2E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F055A0B2268B236200034143 /* UnityFramework.framework */,
+				F024797F25E37FB60019056B /* HealthKit.framework */,
+				F0986D1525B95C0000CB0FE6 /* HealthKit.framework */,
+				F0319F7923099272002DEF7C /* Surge.framework */,
+				F06A927521CB5BA70075391E /* MapboxSceneKit.framework */,
+				F06A927321CB5BA20075391E /* MapboxMobileEvents.framework */,
+				F06A927121CB5B9C0075391E /* Mapbox.framework */,
+				F054082B21CB56E9009D8558 /* MapboxSceneKit.framework */,
+				F054082921CB56E4009D8558 /* MapboxMobileEvents.framework */,
+				0A7212CE0DBA3DA2FCF40669 /* Pods_CerdAR.framework */,
+				FE0D2F38821D36BF3DDC2639 /* Pods_CerdAR_CerdARUITests.framework */,
+				5520A484FF96686032A4E49E /* Pods_CerdARTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F071A3E525C7BE57009D6E7D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F00A92AA25CD244E00BC5D5A /* PlaySound.swift */,
+				F09088C025EE3BDD008463C8 /* GradientPolyline.swift */,
+				F09088C625EE3C45008463C8 /* GradidentPolylineRenderer.swift */,
+				F0DF93B425EF2D860034C1A0 /* ExportWorkout.swift */,
+				F0C1392125EF7EE3004E67CD /* WorkoutJSON.swift */,
+				F060A98525F849E700888F67 /* ToggleButton.swift */,
+				F060A99725F89ED100888F67 /* WorkoutData.swift */,
+				F060A9C32600774E00888F67 /* GradientColorView.swift */,
+				F09F7CA028657D0A0052E2D5 /* GPX.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F0986D2A25C0F71900CB0FE6 /* Storybroad */ = {
+			isa = PBXGroup;
+			children = (
+				942A6D192A41E17400CEC20A /* TermsView.storyboard */,
+				F071A3F025CA3553009D6E7D /* OSMView.storyboard */,
+				F090888D25E8F449008463C8 /* WorkoutsView.storyboard */,
+				F060A95D25F212D300888F67 /* WorkoutDetail.storyboard */,
+				F081CE2727E3003D0017A687 /* OptionView.storyboard */,
+				F081CE2927E3166C0017A687 /* LoginView.storyboard */,
+			);
+			path = Storybroad;
+			sourceTree = "<group>";
+		};
+		F0C1392725EF8968004E67CD /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				F0C1392825EF8996004E67CD /* DateExtension.swift */,
+				F0C1393225F0C177004E67CD /* ConstantsWorkout.swift */,
+				F081CE2127E2F3760017A687 /* UIViewExtension.swift */,
+				F09F7CA228657F5B0052E2D5 /* LocationExtension.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AC2C52C11D5805F70032B689 /* CerdAR */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC2C52ED1D5805F80032B689 /* Build configuration list for PBXNativeTarget "CerdAR" */;
+			buildPhases = (
+				9AB0F7B03FC8E396065AB7A4 /* [CP] Check Pods Manifest.lock */,
+				AC2C52BE1D5805F70032B689 /* Sources */,
+				AC2C52BF1D5805F70032B689 /* Frameworks */,
+				AC2C52C01D5805F70032B689 /* Resources */,
+				F054082D21CB5719009D8558 /* ShellScript */,
+				F00A935E25D3BB5F00BC5D5A /* Embed Watch Content */,
+				A0994D97E4CD09BFB517E926 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F00A935525D3BB5F00BC5D5A /* PBXTargetDependency */,
+			);
+			name = CerdAR;
+			productName = CerdAR;
+			productReference = AC2C52C21D5805F70032B689 /* CerdAR.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AC2C52D81D5805F80032B689 /* CerdARTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC2C52F01D5805F80032B689 /* Build configuration list for PBXNativeTarget "CerdARTests" */;
+			buildPhases = (
+				0D2E031C3862AACAF41A0BD2 /* [CP] Check Pods Manifest.lock */,
+				AC2C52D51D5805F80032B689 /* Sources */,
+				AC2C52D61D5805F80032B689 /* Frameworks */,
+				AC2C52D71D5805F80032B689 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AC2C52DB1D5805F80032B689 /* PBXTargetDependency */,
+			);
+			name = CerdARTests;
+			productName = CerdARTests;
+			productReference = AC2C52D91D5805F80032B689 /* CerdARTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AC2C52E31D5805F80032B689 /* CerdARUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC2C52F31D5805F80032B689 /* Build configuration list for PBXNativeTarget "CerdARUITests" */;
+			buildPhases = (
+				99C3C89406C11A6BF7AFE176 /* [CP] Check Pods Manifest.lock */,
+				AC2C52E01D5805F80032B689 /* Sources */,
+				AC2C52E11D5805F80032B689 /* Frameworks */,
+				AC2C52E21D5805F80032B689 /* Resources */,
+				535522E7FD49187CC26C0FB2 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AC2C52E61D5805F80032B689 /* PBXTargetDependency */,
+			);
+			name = CerdARUITests;
+			productName = CerdARUITests;
+			productReference = AC2C52E41D5805F80032B689 /* CerdARUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		F00A933625D3BB5B00BC5D5A /* CerdARWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F00A935B25D3BB5F00BC5D5A /* Build configuration list for PBXNativeTarget "CerdARWatch" */;
+			buildPhases = (
+				F00A933525D3BB5B00BC5D5A /* Resources */,
+				F00A935A25D3BB5F00BC5D5A /* Embed App Extensions */,
+				E3F4DF217BA52453223DA97C /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F00A934625D3BB5D00BC5D5A /* PBXTargetDependency */,
+			);
+			name = CerdARWatch;
+			productName = CerdARWatch;
+			productReference = F00A933725D3BB5B00BC5D5A /* CerdARWatch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		F00A934225D3BB5D00BC5D5A /* CerdARWatch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F00A935725D3BB5F00BC5D5A /* Build configuration list for PBXNativeTarget "CerdARWatch Extension" */;
+			buildPhases = (
+				F00A933F25D3BB5D00BC5D5A /* Sources */,
+				F00A934025D3BB5D00BC5D5A /* Frameworks */,
+				F00A934125D3BB5D00BC5D5A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CerdARWatch Extension";
+			productName = "CerdARWatch Extension";
+			productReference = F00A934325D3BB5D00BC5D5A /* CerdARWatch Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AC2C52BA1D5805F70032B689 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1230;
+				LastUpgradeCheck = 1210;
+				ORGANIZATIONNAME = "CERD (Osaka City University),  APPLIED TECHNOLOGY CO.,LTD., BRILLIANTSERVICE CO.,LTD.,";
+				TargetAttributes = {
+					AC2C52C11D5805F70032B689 = {
+						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0900;
+					};
+					AC2C52D81D5805F80032B689 = {
+						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0900;
+						TestTargetID = AC2C52C11D5805F70032B689;
+					};
+					AC2C52E31D5805F80032B689 = {
+						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0900;
+						TestTargetID = AC2C52C11D5805F70032B689;
+					};
+					F00A933625D3BB5B00BC5D5A = {
+						CreatedOnToolsVersion = 12.3;
+					};
+					F00A934225D3BB5D00BC5D5A = {
+						CreatedOnToolsVersion = 12.3;
+					};
+				};
+			};
+			buildConfigurationList = AC2C52BD1D5805F70032B689 /* Build configuration list for PBXProject "CerdAR" */;
+			compatibilityVersion = "Xcode 10.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AC2C52B91D5805F70032B689;
+			productRefGroup = AC2C52C31D5805F70032B689 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AC2C52C11D5805F70032B689 /* CerdAR */,
+				AC2C52D81D5805F80032B689 /* CerdARTests */,
+				AC2C52E31D5805F80032B689 /* CerdARUITests */,
+				F00A933625D3BB5B00BC5D5A /* CerdARWatch */,
+				F00A934225D3BB5D00BC5D5A /* CerdARWatch Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AC2C52C01D5805F70032B689 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0B4EE3726C9FCC30062FC7D /* click.wav in Resources */,
+				F0C14029224A050400BFDDE7 /* third_party_vector_style.json in Resources */,
+				F071A3F125CA3553009D6E7D /* OSMView.storyboard in Resources */,
+				F023CFE922C33B4300E115F8 /* gis_data.json in Resources */,
+				7EE70E211DEAA1B6000FB537 /* sound_near.mp3 in Resources */,
+				F081CE2A27E3166C0017A687 /* LoginView.storyboard in Resources */,
+				AC2C52D31D5805F70032B689 /* LaunchScreen.storyboard in Resources */,
+				7EE70E1F1DEAA16A000FB537 /* sound_intrusion.mp3 in Resources */,
+				AC2C52D01D5805F70032B689 /* Assets.xcassets in Resources */,
+				F060A95E25F212D300888F67 /* WorkoutDetail.storyboard in Resources */,
+				AC2C52CB1D5805F70032B689 /* Main.storyboard in Resources */,
+				F07C561721B4D12F004F760C /* rock.scnp in Resources */,
+				F071A3AC25C23B2E009D6E7D /* DetailViewIphone.xib in Resources */,
+				F081CE2827E3003D0017A687 /* OptionView.storyboard in Resources */,
+				942A6D1A2A41E17400CEC20A /* TermsView.storyboard in Resources */,
+				F090889425E8F88F008463C8 /* WorkoutCell.xib in Resources */,
+				F0A3E62021B78A7C0099812E /* smoke.scnp in Resources */,
+				F0B4EE3526BD67430062FC7D /* LinePolygon.geojson in Resources */,
+				F06E168621D316D1004E0BB6 /* confetti.png in Resources */,
+				F06D0D4C219C12CB0046747B /* SceneKit.scnassets in Resources */,
+				F06E168221D31629004E0BB6 /* spark.png in Resources */,
+				F06E168821D31709004E0BB6 /* rock.png in Resources */,
+				F08A2D3921CCE95500777CAC /* rain.scnp in Resources */,
+				F0A3E61F21B78A7C0099812E /* smoke.png in Resources */,
+				F090888E25E8F449008463C8 /* WorkoutsView.storyboard in Resources */,
+				F0C5DB8C21B4CFF90067EF8F /* fire.scnp in Resources */,
+				F060A99225F86A9100888F67 /* HeartView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC2C52D71D5805F80032B689 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC2C52E21D5805F80032B689 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F00A933525D3BB5B00BC5D5A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F00A933D25D3BB5D00BC5D5A /* Assets.xcassets in Resources */,
+				F00A933B25D3BB5B00BC5D5A /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F00A934125D3BB5D00BC5D5A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F00A935125D3BB5F00BC5D5A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0D2E031C3862AACAF41A0BD2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CerdARTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		535522E7FD49187CC26C0FB2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CerdAR-CerdARUITests/Pods-CerdAR-CerdARUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CerdAR-CerdARUITests/Pods-CerdAR-CerdARUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CerdAR-CerdARUITests/Pods-CerdAR-CerdARUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		99C3C89406C11A6BF7AFE176 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CerdAR-CerdARUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9AB0F7B03FC8E396065AB7A4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CerdAR-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A0994D97E4CD09BFB517E926 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CerdAR/Pods-CerdAR-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CerdAR/Pods-CerdAR-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CerdAR/Pods-CerdAR-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F054082D21CB5719009D8558 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "
+";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AC2C52BE1D5805F70032B689 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F081CE2C27E31EEE0017A687 /* LoginViewController.swift in Sources */,
+				F0986D3225C10B2D00CB0FE6 /* TermsViewController.swift in Sources */,
+				F0C1392925EF8996004E67CD /* DateExtension.swift in Sources */,
+				F0DF93B525EF2D860034C1A0 /* ExportWorkout.swift in Sources */,
+				F033F9F5219171DD008A3A2E /* ARViewController.swift in Sources */,
+				F071A3A225C23AEE009D6E7D /* DetailViewIphone.swift in Sources */,
+				F09088A425EC87B7008463C8 /* WorkoutViewController.swift in Sources */,
+				AC2C52FB1D5807D00032B689 /* ConfigView.swift in Sources */,
+				ACF399B71D98C25100B0EC47 /* osmViewController.swift in Sources */,
+				AC2C03D41D9D1CB9009926E3 /* SwiftyJSON.swift in Sources */,
+				F06D986B22E98DA6001CCB9E /* NodeText.swift in Sources */,
+				AC05B9FA1D811FDA0082C52A /* DataManager.swift in Sources */,
+				F024796125DF77190019056B /* WorkoutService.swift in Sources */,
+				F060A98625F849E700888F67 /* ToggleButton.swift in Sources */,
+				F06D987622FA75E1001CCB9E /* SectionedSlider.swift in Sources */,
+				F09088C725EE3C45008463C8 /* GradidentPolylineRenderer.swift in Sources */,
+				F081CE2627E2FAF20017A687 /* OptionViewController.swift in Sources */,
+				D3CF68DE1D91187D008B588E /* termsView.swift in Sources */,
+				ACEE245C1D8235FE00102E10 /* MakeTagImage.swift in Sources */,
+				F060A96425F2134B00888F67 /* WorkoutDetaill.swift in Sources */,
+				F033F9FA219172EC008A3A2E /* MapboxARAnchor.swift in Sources */,
+				F0986D2525B9660700CB0FE6 /* HealthKitSetupAssistant.swift in Sources */,
+				F09088C125EE3BDD008463C8 /* GradientPolyline.swift in Sources */,
+				ACFD6E0C1DB474680006A765 /* loadViewController.swift in Sources */,
+				F09F7CA128657D0A0052E2D5 /* GPX.swift in Sources */,
+				F040A5A025B6C18300647A7F /* LoadingView.swift in Sources */,
+				F09088B425ECAC7C008463C8 /* WorkoutCell.swift in Sources */,
+				F00A92AB25CD244E00BC5D5A /* PlaySound.swift in Sources */,
+				F033F9F8219172E7008A3A2E /* MapboxARAnnotationManager.swift in Sources */,
+				F060A9C42600774E00888F67 /* GradientColorView.swift in Sources */,
+				F0C1393325F0C177004E67CD /* ConstantsWorkout.swift in Sources */,
+				F09F7CA328657F5B0052E2D5 /* LocationExtension.swift in Sources */,
+				F060A98C25F86A7100888F67 /* HeartView.swift in Sources */,
+				F081CE2227E2F3760017A687 /* UIViewExtension.swift in Sources */,
+				AC2C52C61D5805F70032B689 /* AppDelegate.swift in Sources */,
+				D3CF68DD1D91187D008B588E /* detailView.swift in Sources */,
+				F060A99825F89ED100888F67 /* WorkoutData.swift in Sources */,
+				D37E86961E780A6A0030B01A /* Vibration.swift in Sources */,
+				BF01B83E1F6FEECE001AC15E /* GISImageView.swift in Sources */,
+				AC2AB8F61DB778A10048931C /* Constant.swift in Sources */,
+				F05A3C9A26048756002BC9E4 /* NodeAR.swift in Sources */,
+				F0C1392225EF7EE3004E67CD /* WorkoutJSON.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC2C52D51D5805F80032B689 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC2C52E01D5805F80032B689 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC2C52E91D5805F80032B689 /* CerdARUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F00A933F25D3BB5D00BC5D5A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F024797925E377D30019056B /* ParrentConnector.swift in Sources */,
+				F00A934D25D3BB5D00BC5D5A /* NotificationController.swift in Sources */,
+				F060A99E25F9F76F00888F67 /* NotificationWatch.swift in Sources */,
+				F090887825E8B4CA008463C8 /* GPSService.swift in Sources */,
+				F00A934F25D3BB5D00BC5D5A /* ComplicationController.swift in Sources */,
+				F02479CD25E5F0840019056B /* ResumableTimer.swift in Sources */,
+				F00A934B25D3BB5D00BC5D5A /* ExtensionDelegate.swift in Sources */,
+				F02479D325E5F89D0019056B /* WorkoutManager.swift in Sources */,
+				F00A934925D3BB5D00BC5D5A /* InterfaceController.swift in Sources */,
+				F024796725DF81D40019056B /* WorkoutController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AC2C52DB1D5805F80032B689 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AC2C52C11D5805F70032B689 /* CerdAR */;
+			targetProxy = AC2C52DA1D5805F80032B689 /* PBXContainerItemProxy */;
+		};
+		AC2C52E61D5805F80032B689 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AC2C52C11D5805F70032B689 /* CerdAR */;
+			targetProxy = AC2C52E51D5805F80032B689 /* PBXContainerItemProxy */;
+		};
+		F00A934625D3BB5D00BC5D5A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F00A934225D3BB5D00BC5D5A /* CerdARWatch Extension */;
+			targetProxy = F00A934525D3BB5D00BC5D5A /* PBXContainerItemProxy */;
+		};
+		F00A935525D3BB5F00BC5D5A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F00A933625D3BB5B00BC5D5A /* CerdARWatch */;
+			targetProxy = F00A935425D3BB5F00BC5D5A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AC2C52C91D5805F70032B689 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC2C52CA1D5805F70032B689 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AC2C52D11D5805F70032B689 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC2C52D21D5805F70032B689 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		F00A933925D3BB5B00BC5D5A /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F00A933A25D3BB5B00BC5D5A /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AC2C52EB1D5805F80032B689 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AC2C52EC1D5805F80032B689 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AC2C52EE1D5805F80032B689 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 173ACC9D8E3FDD7BEA612361 /* Pods-CerdAR.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CerdAR/CerdAR.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+<<<<<<< HEAD
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9F4BD2UBE2;
+				ENABLE_BITCODE = NO;
+=======
+				CURRENT_PROJECT_VERSION = 5;
+				DEVELOPMENT_TEAM = 9F4BD2UBE2;
+				ENABLE_BITCODE = YES;
+>>>>>>> app-store
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = CerdAR/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "MUSUBOU-AR";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+<<<<<<< HEAD
+				MARKETING_VERSION = 4.0;
+=======
+				MARKETING_VERSION = 3.0;
+>>>>>>> app-store
+				PRODUCT_BUNDLE_IDENTIFIER = "ocu.cerd-ar";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AC2C52EF1D5805F80032B689 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3EC9C9AA1A3C28BBFA939B0C /* Pods-CerdAR.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CerdAR/CerdAR.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+<<<<<<< HEAD
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9F4BD2UBE2;
+				ENABLE_BITCODE = NO;
+=======
+				CURRENT_PROJECT_VERSION = 5;
+				DEVELOPMENT_TEAM = 9F4BD2UBE2;
+				ENABLE_BITCODE = YES;
+>>>>>>> app-store
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = CerdAR/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "MUSUBOU-AR";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+<<<<<<< HEAD
+				MARKETING_VERSION = 4.0;
+=======
+				MARKETING_VERSION = 3.0;
+>>>>>>> app-store
+				PRODUCT_BUNDLE_IDENTIFIER = "ocu.cerd-ar";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AC2C52F11D5805F80032B689 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A045058B72EF00B938220EF /* Pods-CerdARTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 9F4BD2UBE2;
+				INFOPLIST_FILE = CerdARTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ymn.CerdARTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CerdAR.app/CerdAR";
+			};
+			name = Debug;
+		};
+		AC2C52F21D5805F80032B689 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D35DF58AEB1A4B730273062 /* Pods-CerdARTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 9F4BD2UBE2;
+				INFOPLIST_FILE = CerdARTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ymn.CerdARTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CerdAR.app/CerdAR";
+			};
+			name = Release;
+		};
+		AC2C52F41D5805F80032B689 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 541975C0E522C61931451EDA /* Pods-CerdAR-CerdARUITests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				DEVELOPMENT_TEAM = 9F4BD2UBE2;
+				INFOPLIST_FILE = CerdARUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ymn.CerdARUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = CerdAR;
+			};
+			name = Debug;
+		};
+		AC2C52F51D5805F80032B689 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B26CF0CEAB5B04E0E59CD49 /* Pods-CerdAR-CerdARUITests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				DEVELOPMENT_TEAM = 9F4BD2UBE2;
+				INFOPLIST_FILE = CerdARUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ymn.CerdARUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = CerdAR;
+			};
+			name = Release;
+		};
+		F00A935825D3BB5F00BC5D5A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = "CerdARWatch Extension/CerdARWatch Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+<<<<<<< HEAD
+				CURRENT_PROJECT_VERSION = 1;
+=======
+				CURRENT_PROJECT_VERSION = 5;
+>>>>>>> app-store
+				DEVELOPMENT_TEAM = 9F4BD2UBE2;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "CerdARWatch Extension/Info.plist";
+				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+<<<<<<< HEAD
+				MARKETING_VERSION = 4.0;
+=======
+				MARKETING_VERSION = 3.0;
+>>>>>>> app-store
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "ocu.cerd-ar.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+			};
+			name = Debug;
+		};
+		F00A935925D3BB5F00BC5D5A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = "CerdARWatch Extension/CerdARWatch Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+<<<<<<< HEAD
+				CURRENT_PROJECT_VERSION = 1;
+=======
+				CURRENT_PROJECT_VERSION = 5;
+>>>>>>> app-store
+				DEVELOPMENT_TEAM = 9F4BD2UBE2;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "CerdARWatch Extension/Info.plist";
+				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+<<<<<<< HEAD
+				MARKETING_VERSION = 4.0;
+=======
+				MARKETING_VERSION = 3.0;
+>>>>>>> app-store
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "ocu.cerd-ar.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+			};
+			name = Release;
+		};
+		F00A935C25D3BB5F00BC5D5A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+<<<<<<< HEAD
+				CURRENT_PROJECT_VERSION = 1;
+=======
+				CURRENT_PROJECT_VERSION = 5;
+>>>>>>> app-store
+				DEVELOPMENT_TEAM = 9F4BD2UBE2;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				IBSC_MODULE = CerdARWatch_Extension;
+				INFOPLIST_FILE = CerdARWatch/Info.plist;
+<<<<<<< HEAD
+				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "";
+				MARKETING_VERSION = 4.0;
+=======
+				MARKETING_VERSION = 3.0;
+>>>>>>> app-store
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "ocu.cerd-ar.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+			};
+			name = Debug;
+		};
+		F00A935D25D3BB5F00BC5D5A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+<<<<<<< HEAD
+				CURRENT_PROJECT_VERSION = 1;
+=======
+				CURRENT_PROJECT_VERSION = 5;
+>>>>>>> app-store
+				DEVELOPMENT_TEAM = 9F4BD2UBE2;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				IBSC_MODULE = CerdARWatch_Extension;
+				INFOPLIST_FILE = CerdARWatch/Info.plist;
+<<<<<<< HEAD
+				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "";
+				MARKETING_VERSION = 4.0;
+=======
+				MARKETING_VERSION = 3.0;
+>>>>>>> app-store
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "ocu.cerd-ar.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AC2C52BD1D5805F70032B689 /* Build configuration list for PBXProject "CerdAR" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC2C52EB1D5805F80032B689 /* Debug */,
+				AC2C52EC1D5805F80032B689 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC2C52ED1D5805F80032B689 /* Build configuration list for PBXNativeTarget "CerdAR" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC2C52EE1D5805F80032B689 /* Debug */,
+				AC2C52EF1D5805F80032B689 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC2C52F01D5805F80032B689 /* Build configuration list for PBXNativeTarget "CerdARTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC2C52F11D5805F80032B689 /* Debug */,
+				AC2C52F21D5805F80032B689 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC2C52F31D5805F80032B689 /* Build configuration list for PBXNativeTarget "CerdARUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC2C52F41D5805F80032B689 /* Debug */,
+				AC2C52F51D5805F80032B689 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F00A935725D3BB5F00BC5D5A /* Build configuration list for PBXNativeTarget "CerdARWatch Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F00A935825D3BB5F00BC5D5A /* Debug */,
+				F00A935925D3BB5F00BC5D5A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F00A935B25D3BB5F00BC5D5A /* Build configuration list for PBXNativeTarget "CerdARWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F00A935C25D3BB5F00BC5D5A /* Debug */,
+				F00A935D25D3BB5F00BC5D5A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AC2C52BA1D5805F70032B689 /* Project object */;
+}

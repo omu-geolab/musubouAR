@@ -862,8 +862,13 @@
             filePath = "CerdAR/ARViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
+<<<<<<< HEAD
             startingLineNumber = "1735"
             endingLineNumber = "1735"
+=======
+            startingLineNumber = "1717"
+            endingLineNumber = "1717"
+>>>>>>> app-store
             landmarkName = "init?(coder:)"
             landmarkType = "7">
          </BreakpointContent>

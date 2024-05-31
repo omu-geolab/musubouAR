@@ -33117,6 +33117,15 @@ IL_000f:
 		return ((int64_t)il2cpp_codegen_add((int64_t)((int64_t)il2cpp_codegen_subtract((int64_t)L_2, (int64_t)L_3)), (int64_t)L_4));
 	}
 }
+// System.Void System.Diagnostics.Stopwatch::Reset()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Stopwatch_Reset_m79B1D65568465AE5B1A68EF3A2A65218590ABD14 (Stopwatch_t78C5E942A89311381E0D8894576457C33462DF89 * __this, const RuntimeMethod* method)
+{
+	{
+		__this->set_elapsed_2(((int64_t)((int64_t)0)));
+		__this->set_is_running_4((bool)0);
+		return;
+	}
+}
 // System.Void System.Diagnostics.Stopwatch::Start()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Stopwatch_Start_mED237B2178B2075FAED706E2A38111496B28DBDE (Stopwatch_t78C5E942A89311381E0D8894576457C33462DF89 * __this, const RuntimeMethod* method)
 {
