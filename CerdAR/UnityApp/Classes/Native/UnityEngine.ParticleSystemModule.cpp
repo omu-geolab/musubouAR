@@ -79,6 +79,52 @@ struct ValueType_tDBF999C1B75C48C68621878250DBF6CDBCF51E52_marshaled_com
 {
 };
 
+// System.Boolean
+struct Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37 
+{
+public:
+	// System.Boolean System.Boolean::m_value
+	bool ___m_value_0;
+
+public:
+	inline static int32_t get_offset_of_m_value_0() { return static_cast<int32_t>(offsetof(Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37, ___m_value_0)); }
+	inline bool get_m_value_0() const { return ___m_value_0; }
+	inline bool* get_address_of_m_value_0() { return &___m_value_0; }
+	inline void set_m_value_0(bool value)
+	{
+		___m_value_0 = value;
+	}
+};
+
+struct Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_StaticFields
+{
+public:
+	// System.String System.Boolean::TrueString
+	String_t* ___TrueString_5;
+	// System.String System.Boolean::FalseString
+	String_t* ___FalseString_6;
+
+public:
+	inline static int32_t get_offset_of_TrueString_5() { return static_cast<int32_t>(offsetof(Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_StaticFields, ___TrueString_5)); }
+	inline String_t* get_TrueString_5() const { return ___TrueString_5; }
+	inline String_t** get_address_of_TrueString_5() { return &___TrueString_5; }
+	inline void set_TrueString_5(String_t* value)
+	{
+		___TrueString_5 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&___TrueString_5), (void*)value);
+	}
+
+	inline static int32_t get_offset_of_FalseString_6() { return static_cast<int32_t>(offsetof(Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_StaticFields, ___FalseString_6)); }
+	inline String_t* get_FalseString_6() const { return ___FalseString_6; }
+	inline String_t** get_address_of_FalseString_6() { return &___FalseString_6; }
+	inline void set_FalseString_6(String_t* value)
+	{
+		___FalseString_6 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&___FalseString_6), (void*)value);
+	}
+};
+
+
 // UnityEngine.Color
 struct Color_tF40DAF76C04FFECF3FE6024F85A294741C9CC659 
 {
@@ -1244,12 +1290,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Particle_set_randomSeed_m8FD7A4DB7F8E7EB
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ParticleSystem_EmitOld_Internal_m4F094DC523986298D5626F0F3F2335DFF596C993 (ParticleSystem_t2F526CCDBD3512879B3FCBE04BCAB20D7B4F391E * __this, Particle_tDAEF22C4F9FB70E048551ECB203B6A81185832E1 * ___particle0, const RuntimeMethod* method);
 // System.Void UnityEngine.ParticleSystem::SetParticles(UnityEngine.ParticleSystem/Particle[],System.Int32,System.Int32)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ParticleSystem_SetParticles_m79867147E65742BE1E1ADF0222C090BD6AF1E20A (ParticleSystem_t2F526CCDBD3512879B3FCBE04BCAB20D7B4F391E * __this, ParticleU5BU5D_tF02F4854575E99F3004B58B6CC6BB2373BAEB04C* ___particles0, int32_t ___size1, int32_t ___offset2, const RuntimeMethod* method);
+// System.Void UnityEngine.ParticleSystem::Play(System.Boolean)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ParticleSystem_Play_m97D70BAF373265E633ACD91833E56D981B19958A (ParticleSystem_t2F526CCDBD3512879B3FCBE04BCAB20D7B4F391E * __this, bool ___withChildren0, const RuntimeMethod* method);
 // System.Void UnityEngine.ParticleSystem::Emit_Internal(System.Int32)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ParticleSystem_Emit_Internal_m7C72C31F7F4875B54B00E255A450B045A4449646 (ParticleSystem_t2F526CCDBD3512879B3FCBE04BCAB20D7B4F391E * __this, int32_t ___count0, const RuntimeMethod* method);
 // System.Void UnityEngine.ParticleSystem::Emit_Injected(UnityEngine.ParticleSystem/EmitParams&,System.Int32)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ParticleSystem_Emit_Injected_mC31E36D577A2D3135436438BFC27B6C76D9ADC72 (ParticleSystem_t2F526CCDBD3512879B3FCBE04BCAB20D7B4F391E * __this, EmitParams_t4F6429654653488A5D430701CD0743D011807CCC * ___emitParams0, int32_t ___count1, const RuntimeMethod* method);
 // System.Void UnityEngine.ParticleSystem/MainModule::.ctor(UnityEngine.ParticleSystem)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainModule__ctor_m34F626B568C6D3C80A036409049761C8316E6A76 (MainModule_t671F49558CB1A3CFAAD637A7927C076EC2E61F0B * __this, ParticleSystem_t2F526CCDBD3512879B3FCBE04BCAB20D7B4F391E * ___particleSystem0, const RuntimeMethod* method);
+// System.Void UnityEngine.ParticleSystem/MainModule::set_duration_Injected(UnityEngine.ParticleSystem/MainModule&,System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainModule_set_duration_Injected_mDA29D56D8E47391D60DB6D0B3B3210904DF497D0 (MainModule_t671F49558CB1A3CFAAD637A7927C076EC2E61F0B * ____unity_self0, float ___value1, const RuntimeMethod* method);
+// System.Void UnityEngine.ParticleSystem/MainModule::set_duration(System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainModule_set_duration_m3965C31AE6F33C75B02E164D0ADAC4E911808DB4 (MainModule_t671F49558CB1A3CFAAD637A7927C076EC2E61F0B * __this, float ___value0, const RuntimeMethod* method);
 // System.Void UnityEngine.ParticleSystem/MainModule::get_startSize_Injected(UnityEngine.ParticleSystem/MainModule&,UnityEngine.ParticleSystem/MinMaxCurve&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainModule_get_startSize_Injected_m90CDC478FCF73576361C0918A63783FB5699F7AE (MainModule_t671F49558CB1A3CFAAD637A7927C076EC2E61F0B * ____unity_self0, MinMaxCurve_tF036239442AB2D438B1EDABEBC785426871084CD * ___ret1, const RuntimeMethod* method);
 // UnityEngine.ParticleSystem/MinMaxCurve UnityEngine.ParticleSystem/MainModule::get_startSize()
@@ -1335,6 +1387,23 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ParticleSystem_SetParticles_m0658B777D1C
 		ParticleU5BU5D_tF02F4854575E99F3004B58B6CC6BB2373BAEB04C* L_0 = ___particles0;
 		int32_t L_1 = ___size1;
 		ParticleSystem_SetParticles_m79867147E65742BE1E1ADF0222C090BD6AF1E20A(__this, L_0, L_1, 0, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.ParticleSystem::Play(System.Boolean)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ParticleSystem_Play_m97D70BAF373265E633ACD91833E56D981B19958A (ParticleSystem_t2F526CCDBD3512879B3FCBE04BCAB20D7B4F391E * __this, bool ___withChildren0, const RuntimeMethod* method)
+{
+	typedef void (*ParticleSystem_Play_m97D70BAF373265E633ACD91833E56D981B19958A_ftn) (ParticleSystem_t2F526CCDBD3512879B3FCBE04BCAB20D7B4F391E *, bool);
+	static ParticleSystem_Play_m97D70BAF373265E633ACD91833E56D981B19958A_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (ParticleSystem_Play_m97D70BAF373265E633ACD91833E56D981B19958A_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.ParticleSystem::Play(System.Boolean)");
+	_il2cpp_icall_func(__this, ___withChildren0);
+}
+// System.Void UnityEngine.ParticleSystem::Play()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ParticleSystem_Play_m28D27CC4CDC1D93195C75647E6F6DAECF8B6BC50 (ParticleSystem_t2F526CCDBD3512879B3FCBE04BCAB20D7B4F391E * __this, const RuntimeMethod* method)
+{
+	{
+		ParticleSystem_Play_m97D70BAF373265E633ACD91833E56D981B19958A(__this, (bool)1, /*hidden argument*/NULL);
 		return;
 	}
 }
@@ -1617,6 +1686,21 @@ IL2CPP_EXTERN_C  void MainModule__ctor_m34F626B568C6D3C80A036409049761C8316E6A76
 	MainModule_t671F49558CB1A3CFAAD637A7927C076EC2E61F0B * _thisAdjusted = reinterpret_cast<MainModule_t671F49558CB1A3CFAAD637A7927C076EC2E61F0B *>(__this + _offset);
 	MainModule__ctor_m34F626B568C6D3C80A036409049761C8316E6A76(_thisAdjusted, ___particleSystem0, method);
 }
+// System.Void UnityEngine.ParticleSystem/MainModule::set_duration(System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainModule_set_duration_m3965C31AE6F33C75B02E164D0ADAC4E911808DB4 (MainModule_t671F49558CB1A3CFAAD637A7927C076EC2E61F0B * __this, float ___value0, const RuntimeMethod* method)
+{
+	{
+		float L_0 = ___value0;
+		MainModule_set_duration_Injected_mDA29D56D8E47391D60DB6D0B3B3210904DF497D0((MainModule_t671F49558CB1A3CFAAD637A7927C076EC2E61F0B *)__this, L_0, /*hidden argument*/NULL);
+		return;
+	}
+}
+IL2CPP_EXTERN_C  void MainModule_set_duration_m3965C31AE6F33C75B02E164D0ADAC4E911808DB4_AdjustorThunk (RuntimeObject * __this, float ___value0, const RuntimeMethod* method)
+{
+	int32_t _offset = 1;
+	MainModule_t671F49558CB1A3CFAAD637A7927C076EC2E61F0B * _thisAdjusted = reinterpret_cast<MainModule_t671F49558CB1A3CFAAD637A7927C076EC2E61F0B *>(__this + _offset);
+	MainModule_set_duration_m3965C31AE6F33C75B02E164D0ADAC4E911808DB4(_thisAdjusted, ___value0, method);
+}
 // UnityEngine.ParticleSystem/MinMaxCurve UnityEngine.ParticleSystem/MainModule::get_startSize()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MinMaxCurve_tF036239442AB2D438B1EDABEBC785426871084CD  MainModule_get_startSize_m3343005F084AF8664090CBE5084143B0C5E0CCC7 (MainModule_t671F49558CB1A3CFAAD637A7927C076EC2E61F0B * __this, const RuntimeMethod* method)
 {
@@ -1654,6 +1738,15 @@ IL2CPP_EXTERN_C  MinMaxGradient_tF4530B26F29D9635D670A33B9EE581EAC48C12B7  MainM
 	MinMaxGradient_tF4530B26F29D9635D670A33B9EE581EAC48C12B7  _returnValue;
 	_returnValue = MainModule_get_startColor_mC8BAD25B55ACF9586BAFEECF047CCE5268123DD4(_thisAdjusted, method);
 	return _returnValue;
+}
+// System.Void UnityEngine.ParticleSystem/MainModule::set_duration_Injected(UnityEngine.ParticleSystem/MainModule&,System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainModule_set_duration_Injected_mDA29D56D8E47391D60DB6D0B3B3210904DF497D0 (MainModule_t671F49558CB1A3CFAAD637A7927C076EC2E61F0B * ____unity_self0, float ___value1, const RuntimeMethod* method)
+{
+	typedef void (*MainModule_set_duration_Injected_mDA29D56D8E47391D60DB6D0B3B3210904DF497D0_ftn) (MainModule_t671F49558CB1A3CFAAD637A7927C076EC2E61F0B *, float);
+	static MainModule_set_duration_Injected_mDA29D56D8E47391D60DB6D0B3B3210904DF497D0_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (MainModule_set_duration_Injected_mDA29D56D8E47391D60DB6D0B3B3210904DF497D0_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.ParticleSystem/MainModule::set_duration_Injected(UnityEngine.ParticleSystem/MainModule&,System.Single)");
+	_il2cpp_icall_func(____unity_self0, ___value1);
 }
 // System.Void UnityEngine.ParticleSystem/MainModule::get_startSize_Injected(UnityEngine.ParticleSystem/MainModule&,UnityEngine.ParticleSystem/MinMaxCurve&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainModule_get_startSize_Injected_m90CDC478FCF73576361C0918A63783FB5699F7AE (MainModule_t671F49558CB1A3CFAAD637A7927C076EC2E61F0B * ____unity_self0, MinMaxCurve_tF036239442AB2D438B1EDABEBC785426871084CD * ___ret1, const RuntimeMethod* method)

@@ -8645,24 +8645,6 @@ public:
 };
 
 
-// UnityEngine.Rendering.RenderingThreadingMode
-struct RenderingThreadingMode_t9C2FA359F30C7EC839AB6B0C98E1E66FC11F7CFC 
-{
-public:
-	// System.Int32 UnityEngine.Rendering.RenderingThreadingMode::value__
-	int32_t ___value___2;
-
-public:
-	inline static int32_t get_offset_of_value___2() { return static_cast<int32_t>(offsetof(RenderingThreadingMode_t9C2FA359F30C7EC839AB6B0C98E1E66FC11F7CFC, ___value___2)); }
-	inline int32_t get_value___2() const { return ___value___2; }
-	inline int32_t* get_address_of_value___2() { return &___value___2; }
-	inline void set_value___2(int32_t value)
-	{
-		___value___2 = value;
-	}
-};
-
-
 // UnityEngine.RuntimeInitializeLoadType
 struct RuntimeInitializeLoadType_t78BE0E3079AE8955C97DF6A9814A6E6BFA146EA5 
 {
@@ -37545,14 +37527,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Renderer_get_bounds_Injected_m37798C3D5E
 	_il2cpp_icall_func = (Renderer_get_bounds_Injected_m37798C3D5E22FC1910B4ED4FEBDCD264BEF4C7AA_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Renderer::get_bounds_Injected(UnityEngine.Bounds&)");
 	_il2cpp_icall_func(__this, ___ret0);
 }
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif

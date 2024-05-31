@@ -64,6 +64,7 @@
 		<type fullname="Float" preserve="nothing"/>
 		<type fullname="FloodController" preserve="nothing"/>
 		<type fullname="GISInfoView" preserve="nothing"/>
+		<type fullname="ImageDownload" preserve="nothing"/>
 		<type fullname="InfoModelController" preserve="nothing"/>
 		<type fullname="LocationData" preserve="nothing"/>
 		<type fullname="MainController" preserve="nothing"/>

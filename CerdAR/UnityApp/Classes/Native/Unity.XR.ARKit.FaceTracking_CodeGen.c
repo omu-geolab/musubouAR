@@ -62,36 +62,34 @@ extern void ARKitFaceSubsystem_GetBlendShapeCoefficients_mE983A3A34A04F8C6340EF7
 extern void ARKitFaceSubsystem_RegisterDescriptor_mCDE7CD16B0F2524FFBE6C1E05A1C78CFA0E0DF3E (void);
 // 0x00000019 System.Void UnityEngine.XR.ARKit.ARKitFaceSubsystem::.ctor()
 extern void ARKitFaceSubsystem__ctor_mFA6DA680416BA405C65E9A05BBCE8BE427DB9915 (void);
-// 0x0000001A System.Void UnityEngine.XR.ARKit.ARKitFaceSubsystem::.cctor()
-extern void ARKitFaceSubsystem__cctor_m0418BF412ADD7B04A3832F02DA42261D7EB242D6 (void);
-// 0x0000001B System.Void UnityEngine.XR.ARKit.ARKitFaceSubsystem/ARKitProvider::.ctor()
+// 0x0000001A System.Void UnityEngine.XR.ARKit.ARKitFaceSubsystem/ARKitProvider::.ctor()
 extern void ARKitProvider__ctor_mF8ABBB36CFF4009240926841B45BBACD66DB52D9 (void);
-// 0x0000001C System.Void UnityEngine.XR.ARKit.ARKitFaceSubsystem/ARKitProvider::Start()
+// 0x0000001B System.Void UnityEngine.XR.ARKit.ARKitFaceSubsystem/ARKitProvider::Start()
 extern void ARKitProvider_Start_mABAF1866CBBE303A459729E26B23CC63DD977200 (void);
-// 0x0000001D System.Void UnityEngine.XR.ARKit.ARKitFaceSubsystem/ARKitProvider::Stop()
+// 0x0000001C System.Void UnityEngine.XR.ARKit.ARKitFaceSubsystem/ARKitProvider::Stop()
 extern void ARKitProvider_Stop_m0A7356D17D90ED001CE4B86B9E9502863547F756 (void);
-// 0x0000001E System.Void UnityEngine.XR.ARKit.ARKitFaceSubsystem/ARKitProvider::Destroy()
+// 0x0000001D System.Void UnityEngine.XR.ARKit.ARKitFaceSubsystem/ARKitProvider::Destroy()
 extern void ARKitProvider_Destroy_m85F85F4DDB06853CF29F442E83D799211BA2F6B8 (void);
-// 0x0000001F System.Void UnityEngine.XR.ARKit.ARKitFaceSubsystem/ARKitProvider::GetFaceMesh(UnityEngine.XR.ARSubsystems.TrackableId,Unity.Collections.Allocator,UnityEngine.XR.ARSubsystems.XRFaceMesh&)
+// 0x0000001E System.Void UnityEngine.XR.ARKit.ARKitFaceSubsystem/ARKitProvider::GetFaceMesh(UnityEngine.XR.ARSubsystems.TrackableId,Unity.Collections.Allocator,UnityEngine.XR.ARSubsystems.XRFaceMesh&)
 extern void ARKitProvider_GetFaceMesh_m741F0339012243B63B323EA9479A61D12D2B6C58 (void);
-// 0x00000020 UnityEngine.XR.ARSubsystems.TrackableChanges`1<UnityEngine.XR.ARSubsystems.XRFace> UnityEngine.XR.ARKit.ARKitFaceSubsystem/ARKitProvider::GetChanges(UnityEngine.XR.ARSubsystems.XRFace,Unity.Collections.Allocator)
+// 0x0000001F UnityEngine.XR.ARSubsystems.TrackableChanges`1<UnityEngine.XR.ARSubsystems.XRFace> UnityEngine.XR.ARKit.ARKitFaceSubsystem/ARKitProvider::GetChanges(UnityEngine.XR.ARSubsystems.XRFace,Unity.Collections.Allocator)
 extern void ARKitProvider_GetChanges_m74FB16F6645BC80CE2F96636884D6B22E5B7FBF3 (void);
-// 0x00000021 System.Int32 UnityEngine.XR.ARKit.ARKitFaceSubsystem/ARKitProvider::get_supportedFaceCount()
+// 0x00000020 System.Int32 UnityEngine.XR.ARKit.ARKitFaceSubsystem/ARKitProvider::get_supportedFaceCount()
 extern void ARKitProvider_get_supportedFaceCount_m2C25996917B196615DBC337F0909B21C7C82B39E (void);
-// 0x00000022 System.Int32 UnityEngine.XR.ARKit.ARKitFaceSubsystem/ARKitProvider::get_currentMaximumFaceCount()
+// 0x00000021 System.Int32 UnityEngine.XR.ARKit.ARKitFaceSubsystem/ARKitProvider::get_currentMaximumFaceCount()
 extern void ARKitProvider_get_currentMaximumFaceCount_m7D7FD609848BD6DDD79A56D157C6E3AF72649DC6 (void);
-// 0x00000023 System.Int32 UnityEngine.XR.ARKit.ARKitFaceSubsystem/ARKitProvider::get_requestedMaximumFaceCount()
+// 0x00000022 System.Int32 UnityEngine.XR.ARKit.ARKitFaceSubsystem/ARKitProvider::get_requestedMaximumFaceCount()
 extern void ARKitProvider_get_requestedMaximumFaceCount_mC10877AC4500D774E06CCAAC976421ED9E0F09A1 (void);
-// 0x00000024 System.Void UnityEngine.XR.ARKit.ARKitFaceSubsystem/ARKitProvider::set_requestedMaximumFaceCount(System.Int32)
+// 0x00000023 System.Void UnityEngine.XR.ARKit.ARKitFaceSubsystem/ARKitProvider::set_requestedMaximumFaceCount(System.Int32)
 extern void ARKitProvider_set_requestedMaximumFaceCount_m797EE5A23724B35FFF5A50F0715919BC8A06B57E (void);
-// 0x00000025 System.Void UnityEngine.XR.ARKit.ARKitFaceSubsystem/ARKitProvider/TransformVerticesJob::Execute(System.Int32)
+// 0x00000024 System.Void UnityEngine.XR.ARKit.ARKitFaceSubsystem/ARKitProvider/TransformVerticesJob::Execute(System.Int32)
 extern void TransformVerticesJob_Execute_mF4E64C4602CDF10692CE6D3963478CA6297A6C90 (void);
-// 0x00000026 System.Void UnityEngine.XR.ARKit.ARKitFaceSubsystem/ARKitProvider/TransformUVsJob::Execute(System.Int32)
+// 0x00000025 System.Void UnityEngine.XR.ARKit.ARKitFaceSubsystem/ARKitProvider/TransformUVsJob::Execute(System.Int32)
 extern void TransformUVsJob_Execute_m6DDF7B05106815AD0BBB5A62A13428B0A71745C4 (void);
-// 0x00000027 System.Void UnityEngine.XR.ARKit.ARKitFaceSubsystem/ARKitProvider/Triangle`1::.ctor(T,T,T)
-// 0x00000028 System.Void UnityEngine.XR.ARKit.ARKitFaceSubsystem/ARKitProvider/TransformIndicesJob::Execute(System.Int32)
+// 0x00000026 System.Void UnityEngine.XR.ARKit.ARKitFaceSubsystem/ARKitProvider/Triangle`1::.ctor(T,T,T)
+// 0x00000027 System.Void UnityEngine.XR.ARKit.ARKitFaceSubsystem/ARKitProvider/TransformIndicesJob::Execute(System.Int32)
 extern void TransformIndicesJob_Execute_m0753C5D102FC6590C86726FEC49133A6526E63FE (void);
-static Il2CppMethodPointer s_methodPointers[40] = 
+static Il2CppMethodPointer s_methodPointers[39] = 
 {
 	ARKitBlendShapeCoefficient_get_blendShapeLocation_m14A5487CA35FF18CD8EDA49BD9E70900B444B512,
 	ARKitBlendShapeCoefficient_get_coefficient_m314BED878AE51026667924FF236DCF8E6FF8B759,
@@ -118,7 +116,6 @@ static Il2CppMethodPointer s_methodPointers[40] =
 	ARKitFaceSubsystem_GetBlendShapeCoefficients_mE983A3A34A04F8C6340EF79A06138BEA025F9721,
 	ARKitFaceSubsystem_RegisterDescriptor_mCDE7CD16B0F2524FFBE6C1E05A1C78CFA0E0DF3E,
 	ARKitFaceSubsystem__ctor_mFA6DA680416BA405C65E9A05BBCE8BE427DB9915,
-	ARKitFaceSubsystem__cctor_m0418BF412ADD7B04A3832F02DA42261D7EB242D6,
 	ARKitProvider__ctor_mF8ABBB36CFF4009240926841B45BBACD66DB52D9,
 	ARKitProvider_Start_mABAF1866CBBE303A459729E26B23CC63DD977200,
 	ARKitProvider_Stop_m0A7356D17D90ED001CE4B86B9E9502863547F756,
@@ -149,59 +146,58 @@ static Il2CppTokenAdjustorThunkPair s_adjustorThunks[8] =
 	{ 0x06000003, ARKitBlendShapeCoefficient_Equals_mB6216C6A0AC169C93AD63C22D1E2E33C998A1443_AdjustorThunk },
 	{ 0x06000004, ARKitBlendShapeCoefficient_Equals_mAD34950A37EE03A7B7A2212A9AA1376F09EAD285_AdjustorThunk },
 	{ 0x06000005, ARKitBlendShapeCoefficient_GetHashCode_mD07D2B750B8CE21F92D92A0BBC263588D37151BE_AdjustorThunk },
-	{ 0x06000025, TransformVerticesJob_Execute_mF4E64C4602CDF10692CE6D3963478CA6297A6C90_AdjustorThunk },
-	{ 0x06000026, TransformUVsJob_Execute_m6DDF7B05106815AD0BBB5A62A13428B0A71745C4_AdjustorThunk },
-	{ 0x06000028, TransformIndicesJob_Execute_m0753C5D102FC6590C86726FEC49133A6526E63FE_AdjustorThunk },
+	{ 0x06000024, TransformVerticesJob_Execute_mF4E64C4602CDF10692CE6D3963478CA6297A6C90_AdjustorThunk },
+	{ 0x06000025, TransformUVsJob_Execute_m6DDF7B05106815AD0BBB5A62A13428B0A71745C4_AdjustorThunk },
+	{ 0x06000027, TransformIndicesJob_Execute_m0753C5D102FC6590C86726FEC49133A6526E63FE_AdjustorThunk },
 };
-static const int32_t s_InvokerIndices[40] = 
+static const int32_t s_InvokerIndices[39] = 
 {
-	5441,
-	5522,
-	3056,
-	3195,
-	5441,
-	8854,
-	8854,
-	8854,
-	8854,
-	6818,
-	8782,
-	8854,
-	8782,
-	8697,
-	5782,
-	8685,
-	5828,
-	8685,
-	8804,
-	8804,
-	8695,
-	8804,
-	1510,
-	8854,
-	5564,
-	8854,
-	5564,
-	5564,
-	5564,
-	5564,
-	1479,
-	1521,
-	5441,
-	5441,
-	5441,
-	4424,
-	4424,
-	4424,
+	5454,
+	5535,
+	3065,
+	3204,
+	5454,
+	8887,
+	8887,
+	8887,
+	8887,
+	6841,
+	8815,
+	8887,
+	8815,
+	8730,
+	5803,
+	8718,
+	5849,
+	8718,
+	8837,
+	8837,
+	8728,
+	8837,
+	1518,
+	8887,
+	5577,
+	5577,
+	5577,
+	5577,
+	5577,
+	1487,
+	1529,
+	5454,
+	5454,
+	5454,
+	4435,
+	4435,
+	4435,
 	-1,
-	4424,
+	4435,
 };
 extern const CustomAttributesCacheGenerator g_Unity_XR_ARKit_FaceTracking_AttributeGenerators[];
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_Unity_XR_ARKit_FaceTracking_CodeGenModule;
 const Il2CppCodeGenModule g_Unity_XR_ARKit_FaceTracking_CodeGenModule = 
 {
 	"Unity.XR.ARKit.FaceTracking.dll",
-	40,
+	39,
 	s_methodPointers,
 	8,
 	s_adjustorThunks,
