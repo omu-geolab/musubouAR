@@ -134,7 +134,6 @@ class ExportWorkout:NSObject {
                     ],header: XMLHeader(version: 1.0, encoding: "UTF-8"))
                     let str: String? = String(data: data, encoding: .utf8)
                     try str?.write(to: fileUrl, atomically: false, encoding: .utf8)
-                    print(str ?? "")
                 } catch {
                     // エラーが発生した場合の処理
                 }
