@@ -8,15 +8,15 @@
 
 import WatchKit
 import Foundation
-import WatchConnectivity
-import HealthKit
+//import WatchConnectivity
+//import HealthKit
 import UserNotifications
 
 class InterfaceController: WKInterfaceController {
 
-    var timer : Timer?
-    
-    var isPaused = false
+//    var timer : Timer?
+//    
+//    var isPaused = false
     
     @IBOutlet weak var caloLabel: WKInterfaceLabel!
     @IBOutlet weak var heartRateLabel: WKInterfaceLabel!
@@ -48,18 +48,22 @@ class InterfaceController: WKInterfaceController {
     @IBAction func tapActionButton() {
         if(!WorkoutManager.shared.running){
             WorkoutManager.shared.startWorkout()
-            actionButton.setTitle("完了")
+            DispatchQueue.main.async {
+                self.actionButton.setTitle("完了")
+            }
             ParentConnector.shared.send(key: "State", message: "Start")
         }else {
             WorkoutManager.shared.endWorkout()
-            actionButton.setTitle("開始")
+            DispatchQueue.main.async {
+                self.actionButton.setTitle("開始")
+            }
             ParentConnector.shared.send(key: "State", message: "End")
         }
     }
-    @IBAction func tapState() {
-        
-        
-    }
+//    @IBAction func tapState() {
+//        
+//        
+//    }
     func stringWithUUID() -> String {
       let uuidObj = CFUUIDCreate(nil)
       let uuidString = CFUUIDCreateString(nil, uuidObj)!
@@ -118,24 +122,33 @@ class InterfaceController: WKInterfaceController {
 
 extension InterfaceController: WorkoutManagerDelegate {
     func updateWorkout() {
-        caloLabel.setText(String.init(format: "%.1fKCAL", WorkoutManager.shared.activeCalories))
-        runLabel.setText(String.init(format: "%.1fM", WorkoutManager.shared.distance))
-        heartRateLabel.setText(String.init(format: "%0.1fBPM", WorkoutManager.shared.heartrate))
-        ParentConnector.shared.send(key: "heartrate",message: String.init(format: "%.f",
-                                                                     WorkoutManager.shared.heartrate))
+        DispatchQueue.main.async {
+            self.caloLabel.setText(String.init(format: "%.1fKCAL", WorkoutManager.shared.activeCalories))
+            self.runLabel.setText(String.init(format: "%.1fM", WorkoutManager.shared.distance))
+            self.heartRateLabel.setText(String.init(format: "%0.1fBPM", WorkoutManager.shared.heartrate))
+      
+            DispatchQueue.global(qos: .background).async {
+                ParentConnector.shared.send(key: "heartrate", message: String.init(format: "%.f", WorkoutManager.shared.heartrate))
+            }
+        }
     }
 }
 extension InterfaceController: ParentConnectorDelegate {
     func messageFromIOS(message: String) {
         if(message.elementsEqual("start")){
             WorkoutManager.shared.startWorkout()
+            DispatchQueue.main.async {
+                self.actionButton.setTitle("完了")
+            }
             actionButton.setTitle("完了")
         }else if(message.elementsEqual("end")){
             WorkoutManager.shared.endWorkout()
-            actionButton.setTitle("開始")
-            caloLabel.setText("--")
-            runLabel.setText("--")
-            heartRateLabel.setText("--")
+            DispatchQueue.main.async {
+                self.actionButton.setTitle("開始")
+                self.caloLabel.setText("--")
+                self.runLabel.setText("--")
+                self.heartRateLabel.setText("--")
+            }
         }
     }
     func notificationFromIOS(message: String) {

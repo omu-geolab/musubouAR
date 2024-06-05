@@ -14,9 +14,6 @@ import Combine
 
 class WorkoutController: WKInterfaceController, HKWorkoutSessionDelegate, HKLiveWorkoutBuilderDelegate {
 
-    
-
-    
     let healthStore = HKHealthStore()
     var session: HKWorkoutSession!
     var builder: HKLiveWorkoutBuilder!
@@ -65,17 +62,17 @@ class WorkoutController: WKInterfaceController, HKWorkoutSessionDelegate, HKLive
     }
     
     func workoutBuilder(_ workoutBuilder: HKLiveWorkoutBuilder, didCollectDataOf collectedTypes: Set<HKSampleType>) {
-        for type in collectedTypes {
-            guard let quantityType = type as? HKQuantityType else {
-                return // Nothing to do.
-            }
-            
-            /// - Tag: GetStatistics
-            let statistics = workoutBuilder.statistics(for: quantityType)
-            
-            // Update the published values.
-            updateForStatistics(statistics)
-        }
+//        for type in collectedTypes {
+//            guard let quantityType = type as? HKQuantityType else {
+//                return // Nothing to do.
+//            }
+//            
+//            /// - Tag: GetStatistics
+//            let statistics = workoutBuilder.statistics(for: quantityType)
+//            
+//            // Update the published values.
+//            updateForStatistics(statistics)
+//        }
     }
     
     func workoutBuilderDidCollectEvent(_ workoutBuilder: HKLiveWorkoutBuilder) {

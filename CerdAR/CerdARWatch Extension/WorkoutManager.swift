@@ -81,16 +81,18 @@ class WorkoutManager: NSObject, HKWorkoutSessionDelegate, HKLiveWorkoutBuilderDe
     }
     
     func workoutBuilder(_ workoutBuilder: HKLiveWorkoutBuilder, didCollectDataOf collectedTypes: Set<HKSampleType>) {
+        var updated = false
         for type in collectedTypes {
-            guard let quantityType = type as? HKQuantityType else {
-                return // Nothing to do.
-            }
+            guard let quantityType = type as? HKQuantityType else { continue }
             
-            /// - Tag: GetStatistics
             let statistics = workoutBuilder.statistics(for: quantityType)
-            
-            // Update the published values.
-            updateForStatistics(statistics)
+            updated = updateForStatistics(statistics) || updated
+        }
+        
+        if updated {
+            DispatchQueue.main.async {
+                self.delegate?.updateWorkout()
+            }
         }
     }
     
@@ -149,15 +151,15 @@ class WorkoutManager: NSObject, HKWorkoutSessionDelegate, HKLiveWorkoutBuilderDe
         for quantity in healthKitQuantityTypes {
             self.builder.dataSource?.enableCollection(for: quantity, predicate: nil)
         }
-        if #available(watchOSApplicationExtension 7.0, *) {
-            self.builder.dataSource?.enableCollection(for: HKQuantityType.quantityType(forIdentifier: .walkingSpeed)!, predicate: nil)
-            self.builder.dataSource?.enableCollection(for: HKQuantityType.quantityType(forIdentifier: .walkingAsymmetryPercentage)!, predicate: nil)
-            self.builder.dataSource?.enableCollection(for: HKQuantityType.quantityType(forIdentifier: .walkingDoubleSupportPercentage)!, predicate: nil)
-            self.builder.dataSource?.enableCollection(for: HKQuantityType.quantityType(forIdentifier: .walkingStepLength)!, predicate: nil)
-        
-        } else {
-            // Fallback on earlier versions
-        }
+//        if #available(watchOSApplicationExtension 7.0, *) {
+//            self.builder.dataSource?.enableCollection(for: HKQuantityType.quantityType(forIdentifier: .walkingSpeed)!, predicate: nil)
+//            self.builder.dataSource?.enableCollection(for: HKQuantityType.quantityType(forIdentifier: .walkingAsymmetryPercentage)!, predicate: nil)
+//            self.builder.dataSource?.enableCollection(for: HKQuantityType.quantityType(forIdentifier: .walkingDoubleSupportPercentage)!, predicate: nil)
+//            self.builder.dataSource?.enableCollection(for: HKQuantityType.quantityType(forIdentifier: .walkingStepLength)!, predicate: nil)
+//        
+//        } else {
+//            // Fallback on earlier versions
+//        }
 
         
         // Start the workout session and begin data collection.
@@ -245,33 +247,64 @@ class WorkoutManager: NSObject, HKWorkoutSessionDelegate, HKLiveWorkoutBuilderDe
             self.distance = 0
         }
     }
-    func updateForStatistics(_ statistics: HKStatistics?) {
-        guard let statistics = statistics else { return }
-        
-        DispatchQueue.main.async {
-            switch statistics.quantityType {
-            case HKQuantityType.quantityType(forIdentifier: .heartRate):
-                /// - Tag: SetLabel
-                let heartRateUnit = HKUnit.count().unitDivided(by: HKUnit.minute())
-                let value = statistics.mostRecentQuantity()?.doubleValue(for: heartRateUnit)
-                let roundedValue = Double( round( 1 * value! ) / 1 )
-                self.heartrate = roundedValue
-            case HKQuantityType.quantityType(forIdentifier: .activeEnergyBurned):
-                let energyUnit = HKUnit.kilocalorie()
-                let value = statistics.sumQuantity()?.doubleValue(for: energyUnit)
-                self.activeCalories = Double( round( 1 * value! ) / 1 )
-                return
-            case HKQuantityType.quantityType(forIdentifier: .distanceWalkingRunning):
-                let meterUnit = HKUnit.meter()
-                let value = statistics.sumQuantity()?.doubleValue(for: meterUnit)
-                let roundedValue = Double( round( 1 * value! ) / 1 )
-                self.distance = roundedValue
-                return
-            default:
-                return
+    
+    @discardableResult
+    func updateForStatistics(_ statistics: HKStatistics?) -> Bool  {
+        guard let statistics = statistics else { return false}
+        var updated = false
+        switch statistics.quantityType {
+        case HKQuantityType.quantityType(forIdentifier: .heartRate):
+            let value = statistics.mostRecentQuantity()?.doubleValue(for: .count().unitDivided(by: .minute()))
+            let newValue = Double(round(value ?? 0))
+            if newValue != self.heartrate {
+                self.heartrate = newValue
+                updated = true
             }
-            self.delegate?.updateWorkout()
+        case HKQuantityType.quantityType(forIdentifier: .activeEnergyBurned):
+            let value = statistics.sumQuantity()?.doubleValue(for: .kilocalorie())
+            let newValue = Double(round(value ?? 0))
+            if newValue != self.activeCalories {
+                self.activeCalories = newValue
+                updated = true
+            }
+        case HKQuantityType.quantityType(forIdentifier: .distanceWalkingRunning):
+            let meterUnit = HKUnit.meter()
+            let value = statistics.sumQuantity()?.doubleValue(for: meterUnit)
+            let newValue = Double(round(value ?? 0))
+            if newValue != self.distance {
+                self.distance = newValue
+                updated = true
+            }
+        default:
+            break
         }
+        
+        return updated
+        
+//        DispatchQueue.main.async {
+//            switch statistics.quantityType {
+//            case HKQuantityType.quantityType(forIdentifier: .heartRate):
+//                /// - Tag: SetLabel
+//                let heartRateUnit = HKUnit.count().unitDivided(by: HKUnit.minute())
+//                let value = statistics.mostRecentQuantity()?.doubleValue(for: heartRateUnit)
+//                let roundedValue = Double( round( 1 * value! ) / 1 )
+//                self.heartrate = roundedValue
+//            case HKQuantityType.quantityType(forIdentifier: .activeEnergyBurned):
+//                let energyUnit = HKUnit.kilocalorie()
+//                let value = statistics.sumQuantity()?.doubleValue(for: energyUnit)
+//                self.activeCalories = Double( round( 1 * value! ) / 1 )
+//                return
+//            case HKQuantityType.quantityType(forIdentifier: .distanceWalkingRunning):
+//                let meterUnit = HKUnit.meter()
+//                let value = statistics.sumQuantity()?.doubleValue(for: meterUnit)
+//                let roundedValue = Double( round( 1 * value! ) / 1 )
+//                self.distance = roundedValue
+//                return
+//            default:
+//                return
+//            }
+//            self.delegate?.updateWorkout()
+//        }
     }
 }
 //extension  WorkoutManager: GPSServiceDelegate  {
@@ -330,80 +363,80 @@ extension  WorkoutManager: CLLocationManagerDelegate  {
 }
 let healthKitQuantityTypes: Set<HKQuantityType> = Set(arrayLiteral:
     // Body Measurements
-    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.bodyMassIndex)!,
-    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.bodyFatPercentage)!,
-    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.height)!,
-    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.bodyMass)!,
-    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.leanBodyMass)!,
+//    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.bodyMassIndex)!,
+//    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.bodyFatPercentage)!,
+//    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.height)!,
+//    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.bodyMass)!,
+//    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.leanBodyMass)!,
     // Fitness
-    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.stepCount)!,
+//    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.stepCount)!,
     HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.distanceWalkingRunning)!,
 //    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.walkingSpeed)!,
 //    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.walkingStepLength)!,
 //
-    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.distanceCycling)!,
-    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.basalEnergyBurned)!,
+//    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.distanceCycling)!,
+//    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.basalEnergyBurned)!,
     HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.activeEnergyBurned)!,
-    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.flightsClimbed)!,
+//    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.flightsClimbed)!,
     // Vitals
     HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.heartRate)!,
-    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.bodyTemperature)!,
-    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.basalBodyTemperature)!,
-    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.bloodPressureSystolic)!,
-    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.bloodPressureDiastolic)!,
-    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.respiratoryRate)!,
+//    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.bodyTemperature)!,
+//    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.basalBodyTemperature)!,
+//    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.bloodPressureSystolic)!,
+//    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.bloodPressureDiastolic)!,
+//    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.respiratoryRate)!,
     // Results
-    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.oxygenSaturation)!,
-    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.peripheralPerfusionIndex)!,
-    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.bloodGlucose)!,
-    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.numberOfTimesFallen)!,
-    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.electrodermalActivity)!,
-    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.inhalerUsage)!,
-    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.bloodAlcoholContent)!,
-    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.forcedVitalCapacity)!,
-    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.forcedExpiratoryVolume1)!,
-    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.peakExpiratoryFlowRate)!,
-    // Nutrition
-    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryFatTotal)!,
-    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryFatPolyunsaturated)!,
-    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryFatMonounsaturated)!,
-    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryFatSaturated)!,
-    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryCholesterol)!,
-    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietarySodium)!,
-    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryCarbohydrates)!,
-    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryFiber)!,
-    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietarySugar)!,
-    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryEnergyConsumed)!,
-    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryProtein)!,
-    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryVitaminA)!,
-    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryVitaminB6)!,
-    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryVitaminB12)!,
-    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryVitaminC)!,
-    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryVitaminD)!,
-    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryVitaminE)!,
-    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryVitaminK)!,
-    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryCalcium)!,
-    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryIron)!,
-    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryThiamin)!,
-    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryRiboflavin)!,
-    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryNiacin)!,
-    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryFolate)!,
-    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryBiotin)!,
-    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryPantothenicAcid)!,
-    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryPhosphorus)!,
-    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryIodine)!,
-    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryMagnesium)!,
-    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryZinc)!,
-    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietarySelenium)!,
-    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryCopper)!,
-    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryManganese)!,
-    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryChromium)!,
-    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryMolybdenum)!,
-    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryChloride)!,
-    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryPotassium)!,
-    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryCaffeine)!,
-    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryWater)!,
-    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.uvExposure)!,
-    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.heartRateVariabilitySDNN)!,
-    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.restingHeartRate)!
+//    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.oxygenSaturation)!,
+//    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.peripheralPerfusionIndex)!,
+//    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.bloodGlucose)!,
+//    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.numberOfTimesFallen)!,
+//    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.electrodermalActivity)!,
+//    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.inhalerUsage)!,
+//    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.bloodAlcoholContent)!,
+//    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.forcedVitalCapacity)!,
+//    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.forcedExpiratoryVolume1)!,
+//    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.peakExpiratoryFlowRate)!,
+//    // Nutrition
+//    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryFatTotal)!,
+//    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryFatPolyunsaturated)!,
+//    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryFatMonounsaturated)!,
+//    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryFatSaturated)!,
+//    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryCholesterol)!,
+//    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietarySodium)!,
+//    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryCarbohydrates)!,
+//    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryFiber)!,
+//    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietarySugar)!,
+//    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryEnergyConsumed)!,
+//    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryProtein)!,
+//    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryVitaminA)!,
+//    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryVitaminB6)!,
+//    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryVitaminB12)!,
+//    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryVitaminC)!,
+//    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryVitaminD)!,
+//    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryVitaminE)!,
+//    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryVitaminK)!,
+//    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryCalcium)!,
+//    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryIron)!,
+//    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryThiamin)!,
+//    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryRiboflavin)!,
+//    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryNiacin)!,
+//    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryFolate)!,
+//    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryBiotin)!,
+//    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryPantothenicAcid)!,
+//    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryPhosphorus)!,
+//    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryIodine)!,
+//    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryMagnesium)!,
+//    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryZinc)!,
+//    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietarySelenium)!,
+//    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryCopper)!,
+//    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryManganese)!,
+//    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryChromium)!,
+//    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryMolybdenum)!,
+//    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryChloride)!,
+//    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryPotassium)!,
+//    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryCaffeine)!,
+//    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryWater)!,
+//    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.uvExposure)!,
+    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.heartRateVariabilitySDNN)!
+//    HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.restingHeartRate)!
 )
