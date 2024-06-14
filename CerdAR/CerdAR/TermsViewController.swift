@@ -15,36 +15,30 @@ class TermsViewController: UIViewController {
     @IBOutlet weak var cancelButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        continousButton.startAnimatingPressActions()
-        cancelButton.startAnimatingPressActions()
-        continousButton.layer.borderColor = UIColor.black.cgColor
-        continousButton.layer.borderWidth = 3
+        // ボタンのアニメーションを開始する
+        continousButton?.startAnimatingPressActions()
+        cancelButton?.startAnimatingPressActions()
+        // 続行ボタンのボーダーを設定する
+        continousButton?.layer.borderColor = UIColor.black.cgColor
+        continousButton?.layer.borderWidth = 3
     }
     override func viewWillDisappear(_ animated: Bool) {
-        for view  in self.view.subviews{
-            view.removeConstraints(view.constraints)
-            view.removeFromSuperview()
-        }
-        view.removeFromSuperview()
+        super.viewWillDisappear(animated)
     }
     
     @IBAction func cancelApp(_ sender: Any) {
         exit(0) // アプリを終了する
     }
     @IBAction func continousApp(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-        let osmVC = osmViewController()
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        appDelegate.window?.rootViewController = osmVC
-//        let view = UIStoryboard(name: "OptionView", bundle: .main)
-//        if let vc = view.instantiateInitialViewController() as? OptionViewController {
-//            let appDelegate = UIApplication.shared.delegate as! AppDelegate
-//            let window = appDelegate.window
-//            if let window = window {
-//              window.rootViewController = vc
-//              window.makeKeyAndVisible()
-//            }
-//        }
+        // 現在のビューコントローラーを閉じる
+        self.dismiss(animated: true) {
+            // メインウィンドウを取得する
+            if let window = UIApplication.shared.windows.first {
+                // 新しいルートビューコントローラーを設定する
+                let osmVC = osmViewController()
+                window.rootViewController = osmVC
+                window.makeKeyAndVisible()
+            }
+        }
     }
 }
-
