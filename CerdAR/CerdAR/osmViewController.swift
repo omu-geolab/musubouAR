@@ -104,7 +104,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
     // MARK:- ライフサイクル
     override func viewDidLoad() {
         super.viewDidLoad()
-        MPVolumeView.setVolume(0.2)
+//        MPVolumeView.setVolume(0.2)
         WorkoutService.shared.delegate = self
         WorkoutService.shared.ExpportAllWorkouts()
         
