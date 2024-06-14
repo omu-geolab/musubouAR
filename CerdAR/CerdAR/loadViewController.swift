@@ -205,9 +205,8 @@ class loadViewController: UIViewController, termsViewDelegate, CLLocationManager
      */
     func jsondata(callback: @escaping (String) -> Void) -> Void {
         
-//        let url = URL(string: "https://www.cerd.osaka-cu.ac.jp/cerdar_pics/Sugimoto/data.geojson")
-        let url = URL(string: "https://www.musubou.net/musubou-ar/data.geojson")
-
+        let url = URL(string: loadDisasterLink())
+        
         let req = URLRequest(url: url!, timeoutInterval: 5.0)
         
         let configuration = URLSessionConfiguration.default
@@ -226,6 +225,43 @@ class loadViewController: UIViewController, termsViewDelegate, CLLocationManager
         })
         task.resume()
     }
+    
+    func loadDisasterLink() -> String {
+        // JSON ファイルのパス
+        let filePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("disaster.json")
+        
+        // disasterLink を使用して JSON を生成
+        let jsonData = """
+        {
+            "disaster_link": "\(disasterLink)"
+        }
+        """.data(using: .utf8)
+        
+        // ファイルの存在を確認
+        if FileManager.default.fileExists(atPath: filePath?.path ?? "") {
+            // ファイルが存在する場合、内容を読み取り、disaster_link を表示
+            do {
+                let existingData = try Data(contentsOf: filePath!)
+                if let jsonObject = try JSONSerialization.jsonObject(with: existingData, options: []) as? [String: Any],
+                   let disasterLinkJson = jsonObject["disaster_link"] as? String {
+                    print("災害リンク: \(disasterLinkJson)")
+                    return disasterLinkJson
+                }
+            } catch {
+                print("既存の JSON ファイルを読み込めませんでした: \(error)")
+            }
+        } else {
+            // ファイルが存在しない場合、新しいファイルを作成し、JSON の内容を保存
+            do {
+                try jsonData?.write(to: filePath!)
+                print("JSON ファイルが作成され、保存されました。")
+            } catch {
+                print("JSON ファイルを保存できませんでした: \(error)")
+            }
+        }
+        return disasterLink
+    }
+
     
     func showTermsView() {
 //        termsview = termsView(frame: CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight))

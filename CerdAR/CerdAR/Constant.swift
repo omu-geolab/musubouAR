@@ -33,6 +33,8 @@ let kMapAlpha = 0.8 // 警告モードのalpha値( 0(濃)<-->(薄)1 ) ※地図�
 //let serverName = "https://www.cerd.osaka-cu.ac.jp/cerd-ar_tiles/sinsui/{z}/{x}/{y}.png"
 var serverName = "https://cyberjapandata.gsi.go.jp/xyz/lcmfc2/{z}/{x}/{y}.png"
 
+/* 災害情報URL */
+let disasterLink = "https://www.musubou.net/musubou-ar/data.geojson"
 
 let scaleAR = Float(0.02)//AR拡大縮小
 var adjustHeightAR = Float(1.5)//AR高さし調整
