@@ -50,10 +50,6 @@ void RegisterAllStrippedInternalCalls()
 		void Register_Unity_Jobs_JobHandle_ScheduleBatchedJobsAndIsCompleted();
 		Register_Unity_Jobs_JobHandle_ScheduleBatchedJobsAndIsCompleted();
 
-		//System.Void Unity.Jobs.JobHandle::CombineDependenciesInternal3_Injected(Unity.Jobs.JobHandle&,Unity.Jobs.JobHandle&,Unity.Jobs.JobHandle&,Unity.Jobs.JobHandle&)
-		void Register_Unity_Jobs_JobHandle_CombineDependenciesInternal3_Injected();
-		Register_Unity_Jobs_JobHandle_CombineDependenciesInternal3_Injected();
-
 		//System.Void Unity.Jobs.JobHandle::ScheduleBatchedJobs()
 		void Register_Unity_Jobs_JobHandle_ScheduleBatchedJobs();
 		Register_Unity_Jobs_JobHandle_ScheduleBatchedJobs();
@@ -2054,10 +2050,6 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Mesh_get_canAccess();
 		Register_UnityEngine_Mesh_get_canAccess();
 
-		//System.Int32 UnityEngine.Mesh::GetBlendShapeIndex(System.String)
-		void Register_UnityEngine_Mesh_GetBlendShapeIndex();
-		Register_UnityEngine_Mesh_GetBlendShapeIndex();
-
 		//System.Int32 UnityEngine.Mesh::get_subMeshCount()
 		void Register_UnityEngine_Mesh_get_subMeshCount();
 		Register_UnityEngine_Mesh_get_subMeshCount();
@@ -2454,10 +2446,6 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_ParticleSystem_Emit_Internal();
 		Register_UnityEngine_ParticleSystem_Emit_Internal();
 
-		//System.Void UnityEngine.ParticleSystem::Play(System.Boolean)
-		void Register_UnityEngine_ParticleSystem_Play();
-		Register_UnityEngine_ParticleSystem_Play();
-
 		//System.Void UnityEngine.ParticleSystem::SetParticles(UnityEngine.ParticleSystem/Particle[],System.Int32,System.Int32)
 		void Register_UnityEngine_ParticleSystem_SetParticles();
 		Register_UnityEngine_ParticleSystem_SetParticles();
@@ -2473,10 +2461,6 @@ void RegisterAllStrippedInternalCalls()
 		//System.Void UnityEngine.ParticleSystem/MainModule::get_startSize_Injected(UnityEngine.ParticleSystem/MainModule&,UnityEngine.ParticleSystem/MinMaxCurve&)
 		void Register_UnityEngine_ParticleSystem_MainModule_get_startSize_Injected();
 		Register_UnityEngine_ParticleSystem_MainModule_get_startSize_Injected();
-
-		//System.Void UnityEngine.ParticleSystem/MainModule::set_duration_Injected(UnityEngine.ParticleSystem/MainModule&,System.Single)
-		void Register_UnityEngine_ParticleSystem_MainModule_set_duration_Injected();
-		Register_UnityEngine_ParticleSystem_MainModule_set_duration_Injected();
 
 	//End Registrations for type : UnityEngine.ParticleSystem/MainModule
 
@@ -3797,10 +3781,6 @@ void RegisterAllStrippedInternalCalls()
 		//System.Void UnityEngine.SkinnedMeshRenderer::SetBlendShapeWeight(System.Int32,System.Single)
 		void Register_UnityEngine_SkinnedMeshRenderer_SetBlendShapeWeight();
 		Register_UnityEngine_SkinnedMeshRenderer_SetBlendShapeWeight();
-
-		//UnityEngine.Mesh UnityEngine.SkinnedMeshRenderer::get_sharedMesh()
-		void Register_UnityEngine_SkinnedMeshRenderer_get_sharedMesh();
-		Register_UnityEngine_SkinnedMeshRenderer_get_sharedMesh();
 
 	//End Registrations for type : UnityEngine.SkinnedMeshRenderer
 
