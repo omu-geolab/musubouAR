@@ -81,7 +81,7 @@ class Unity: UIResponder, UIApplicationDelegate{
         let ufw = bundle?.principalClass?.getInstance()
         if ufw?.appController() == nil {
             let machineHeader = UnsafeMutablePointer<MachHeader>.allocate(capacity: 1)
-            machineHeader.pointee = _mh_execute_header
+            machineHeader.pointee = _mh_dylib_header
 
             ufw?.setExecuteHeader(machineHeader)
         }
