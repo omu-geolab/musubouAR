@@ -18,7 +18,7 @@ let kInfoAnimation = 0.1 // 情報タグがタップされた時のアニメー�
 let kWarnAnimation = 0.1 // 警告タグがタップされた時のアニメーション時間
 
 /* 共通(camera,map,osm) */
-let kNearMsg = 50 // 現在地から災害までがnearMsg(m)以内であれば、付近にいるメッセージを表示する
+let kNearMsg = 5 // 現在地から災害までがnearMsg(m)以内であれば、付近にいるメッセージを表示する
 let kUpdateWarn = 4.0 // 災害情報の更新周期（倍速）※災害円の拡大速度もここで行っている
 let kUpdateMM = 2.0 // 警告メッセージと警告モードの更新周期(値はkUpdateWarnの半分ほうがいいです)
 let kMsgAlpha = 0.6 // 警告メッセージのalpha値( 0(薄)<-->(濃)1 )
@@ -33,6 +33,8 @@ let kMapAlpha = 0.8 // 警告モードのalpha値( 0(濃)<-->(薄)1 ) ※地図�
 //let serverName = "https://www.cerd.osaka-cu.ac.jp/cerd-ar_tiles/sinsui/{z}/{x}/{y}.png"
 var serverName = "https://cyberjapandata.gsi.go.jp/xyz/lcmfc2/{z}/{x}/{y}.png"
 
+/* 災害情報URL */
+let disasterLink = "https://www.musubou.net/musubou-ar/data.geojson"
 
 let scaleAR = Float(0.02)//AR拡大縮小
 var adjustHeightAR = Float(1.5)//AR高さし調整

@@ -17678,16 +17678,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Mesh_GetArrayFromChannelImpl_m71BD9D5D72
 	_il2cpp_icall_func = (Mesh_GetArrayFromChannelImpl_m71BD9D5D72762ED7399D5662FE5DA4294102A6DA_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Mesh::GetArrayFromChannelImpl(UnityEngine.Rendering.VertexAttribute,UnityEngine.Rendering.VertexAttributeFormat,System.Int32,System.Array)");
 	_il2cpp_icall_func(__this, ___channel0, ___format1, ___dim2, ___values3);
 }
-// System.Int32 UnityEngine.Mesh::GetBlendShapeIndex(System.String)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Mesh_GetBlendShapeIndex_m70CEEB97F2B0146D37DF02D66640928276365BDE (Mesh_t2F5992DBA650D5862B43D3823ACD997132A57DA6 * __this, String_t* ___blendShapeName0, const RuntimeMethod* method)
-{
-	typedef int32_t (*Mesh_GetBlendShapeIndex_m70CEEB97F2B0146D37DF02D66640928276365BDE_ftn) (Mesh_t2F5992DBA650D5862B43D3823ACD997132A57DA6 *, String_t*);
-	static Mesh_GetBlendShapeIndex_m70CEEB97F2B0146D37DF02D66640928276365BDE_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (Mesh_GetBlendShapeIndex_m70CEEB97F2B0146D37DF02D66640928276365BDE_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Mesh::GetBlendShapeIndex(System.String)");
-	int32_t icallRetVal = _il2cpp_icall_func(__this, ___blendShapeName0);
-	return icallRetVal;
-}
 // System.Boolean UnityEngine.Mesh::get_canAccess()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Mesh_get_canAccess_m991B64F0FA651459A7E0DD4526D7EF0384F1792F (Mesh_t2F5992DBA650D5862B43D3823ACD997132A57DA6 * __this, const RuntimeMethod* method)
 {
