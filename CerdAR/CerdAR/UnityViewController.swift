@@ -108,7 +108,7 @@ extension UnityViewController {
        let unityFramework = bundle?.principalClass?.getInstance()
        if unityFramework?.appController() == nil {
            let machineHeader = UnsafeMutablePointer<MachHeader>.allocate(capacity: 1)
-           machineHeader.pointee = _mh_dylib_header
+           machineHeader.pointee = _mh_execute_header
            unityFramework?.setExecuteHeader(machineHeader)
        }
        return unityFramework
