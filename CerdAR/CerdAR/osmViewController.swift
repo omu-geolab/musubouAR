@@ -1419,8 +1419,13 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         layer.lineJoin = NSExpression(forConstantValue: "round")
         layer.lineCap = NSExpression(forConstantValue: "round")
         
+        // Default color if no stroke property
+        let defaultColor = UIColor(red: 59/255, green: 178/255, blue: 208/255, alpha: 1)
+        
         // Set the line color to a constant blue color.
-        layer.lineColor = NSExpression(forConstantValue: UIColor(red: 59/255, green: 178/255, blue: 208/255, alpha: 1))
+//        layer.lineColor = NSExpression(forConstantValue: UIColor(red: 59/255, green: 178/255, blue: 208/255, alpha: 1))
+        layer.lineColor = NSExpression(format: "TERNARY(stroke != nil, stroke, %@)", defaultColor)
+        
         
         // Use `NSExpression` to smoothly adjust the line width from 2pt to 20pt between zoom levels 14 and 18. The `interpolationBase` parameter allows the values to interpolate along an exponential curve.
         layer.lineWidth = NSExpression(format: "mgl_interpolate:withCurveType:parameters:stops:($zoomLevel, 'linear', nil, %@)",
@@ -1434,7 +1439,8 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         // Line gap width represents the space before the outline begins, so should match the main line’s line width exactly.
         casingLayer.lineGapWidth = layer.lineWidth
         // Stroke color slightly darker than the line color.
-        casingLayer.lineColor = NSExpression(forConstantValue: UIColor(red: 41/255, green: 145/255, blue: 171/255, alpha: 1))
+//        casingLayer.lineColor = NSExpression(forConstantValue: UIColor(red: 41/255, green: 145/255, blue: 171/255, alpha: 1))
+        casingLayer.lineColor = NSExpression(format: "TERNARY(stroke != nil, stroke, %@)", defaultColor)
         // Use `NSExpression` to gradually increase the stroke width between zoom levels 14 and 18.
         casingLayer.lineWidth = NSExpression(format: "mgl_interpolate:withCurveType:parameters:stops:($zoomLevel, 'linear', nil, %@)", [14: 1, 18: 4])
         
