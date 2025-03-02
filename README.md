@@ -1,33 +1,17 @@
-<<<<<<< HEAD
-### MUSUBOU-ARについて ###
+### MUSUBOU-AR（旧名称：CERD-AR）について ###
 MUSUBOU-ARは、身のまわりの防災関連情報や仮想的な災害情報を、現実世界の上で可視化がおこなえる拡張現実（AR）アプリです。
-
-![3.JPG](https://bitbucket.org/repo/yEpMMp/images/774768982-3.JPG)
-![4.JPG](https://bitbucket.org/repo/yEpMMp/images/1256607693-4.JPG)
-![IMG_0044.PNG](https://bitbucket.org/repo/yEpMMp/images/50710392-IMG_0044.PNG)
-
-このアプリは，科学技術振興機構(JST) 平成27年度 科学技術コミュニケーション推進事業 問題解決型科学技術コミュニケーション支援ネットワーク形成型[「公立大学防災センター連携による地区防災教室ネットワークの構築」](http://www.jst.go.jp/pr/info/info1109/besshi.html)の中で、[大阪市立大学都市防災教育研究センター（CERD）](https://www.cerd.osaka-cu.ac.jp/)と[株式会社ブリリアントサービス](http://www.brilliantservice.co.jp/)が開発した成果物を、オープンソース化したものです。
-=======
-### CERD-ARについて ###
-CERD-ARは、身のまわりの防災関連情報や仮想的な災害情報を、現実世界の上で可視化がおこなえる拡張現実（AR）アプリです。
 このアプリは，科学技術振興機構(JST) 平成27年度 科学技術コミュニケーション推進事業 問題解決型科学技術コミュニケーション支援ネットワーク形成型[「公立大学防災センター連携による地区防災教室ネットワークの構築」](https://www.jst.go.jp/sis/scenario/list/2020/02/post-19.html) ならびに、[平成30年度日本建設情報総合センター（JACIC）研究助成](http://www.jacic.or.jp/josei/itiran_2017.html)「防災教育向けARアプリの開発とその活用に関する研究」の中で、[大阪市立大学都市防災教育研究センター（CERD）](https://www.cerd.osaka-cu.ac.jp/)が開発した成果物をオープンソース化したものです。
->>>>>>> app-store
 
 * [ライセンスについて](https://bitbucket.org/nro2dai/cerd-ar/src/a30a858468e8554325dc7e79d2ebd7a112c019f9/LICENSE.md?fileviewer=file-view-default)
-* 現行バージョン：　3.0
+* 現行バージョン：　4.0
 
 ### 紹介動画など ###
 
-* [CERD-AR紹介動画（Geoアクティビティコンテスト2019）](https://youtu.be/nbQuODNjh8A)
-* [平成29年1月14日 放送 J:COMチャンネル（堺シティレポ） ](https://www.youtube.com/watch?v=Fz0js3CdoMs&t=59s)
+* [大阪狭山市さくらフェス](https://youtu.be/QWwnTAh-36k)
+* [ARアプリを活用した防災授業](https://youtu.be/aflbRBEv1v4)
 
-<<<<<<< HEAD
 ### MUSUBOU-ARの機能 ###
-* **対応iOS端末**：iPhone、iPad（GPS機能を使用するためセルラーモデルを推奨）
-=======
-### CERD-ARの機能 ###
 * **対応iOS端末**：ARKit対応端末：iPhone（6s以上）、iPad (第5世代以上  ＊GPS機能を使用するためセルラーモデルが必要）
->>>>>>> app-store
 
 * **地図表示機能**：従来の地図アプリと同様に、現在地表示や地図の拡大縮小がおこなえます。データをインポートすることで、様々な災害・防災関連情報を、地図画面上に表示することができます。また、背景地図にオープンデータのOpenStreetMap（Mapbox）を採用しています。これにより、GoogleやAppleマップ等で地図データが乏しい地域でも、自分達で地図データを作成し、本アプリにて活用することができます。また、地図表示画面やAR表示画面上のアイコン画像をクリックすることで、詳細情報（写真や動画、現在地からの距離）を確認することができます。
 
@@ -68,15 +52,15 @@ CERD-ARは、身のまわりの防災関連情報や仮想的な災害情報を�
 
 ### サンプルデータファイル（data.geojson） ###
 
-* [大阪市立大学周辺](https://www.cerd.osaka-cu.ac.jp/cerdar_pics/Sugimoto/data.geojson)
+* [大阪公立大学周辺](https://www.musubou.net/musubou-ar/data.geojson)
 
 ### AppStore公開版 ###
 
-* [CERD-AR AppStore](https://apps.apple.com/jp/app/cerd-ar/id1222300758)
+* [MUSUBOU-AR AppStore](https://apps.apple.com/jp/app/musubou-ar/id1222300758)
 
 ### 開発者 & 協力者 ###
 
-* [大阪市立大学都市防災教育研究センター(CERD)](https://www.cerd.osaka-cu.ac.jp/)
+* [大阪公立大学 大学院情報学研究科 吉田大介研究室](https://www.omu.ac.jp/i/geo/)
 * [応用技術株式会社](https://www.apptec.co.jp/)
 * 有限会社ロケージング
 
