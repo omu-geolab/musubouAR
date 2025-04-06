@@ -1741,43 +1741,259 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         }
     }
     
-    @objc func showLegend(){
+    @objc func showLegend() {
         if !pathGISImage.isEmpty {
-            let alertController = UIAlertController(title: "\n\n\n\n\n\n\n\n\n\n\n", message: nil, preferredStyle: .alert)
-            if let url:URL = URL(string: pathGISImage) {
-                let data = try? Data(contentsOf: url)
-                let image = UIImage(data: data!)
-                let margin:CGFloat = 10.0
-                let rect = CGRect(x: margin, y: margin, width: 300, height: 250)
-                let customView = UIImageView(frame: rect)
-                customView.image = image
-                customView.contentMode = .scaleAspectFit
-                alertController.view.addSubview(customView)
-                customView.translatesAutoresizingMaskIntoConstraints = false
-                let constraintsSetting = [
-                    customView.centerYAnchor.constraint(equalTo: alertController.view.centerYAnchor, constant: -13),
-                    customView.centerXAnchor.constraint(equalTo: alertController.view.centerXAnchor, constant: 0),
-                    customView.heightAnchor.constraint(equalToConstant: 250),
-                    customView.widthAnchor.constraint(equalToConstant: 300)
-                ]
-                NSLayoutConstraint.activate(constraintsSetting)
-                
-                if UIDevice.current.userInterfaceIdiom == .pad {
-                    if let popoverController = alertController.popoverPresentationController {
-                        popoverController.sourceView = self.view
-                        let screenSize = UIScreen.main.bounds
-                        popoverController.sourceRect = CGRect(x: screenSize.size.width / 2,y: screenSize.size.height,width: 0,height: 0)
-                        popoverController.permittedArrowDirections = []
+            // Create controller immediately to show loading state
+            let legendViewController = UIViewController()
+            legendViewController.modalPresentationStyle = .overFullScreen
+            legendViewController.view.backgroundColor = UIColor.black.withAlphaComponent(0.7)
+            
+            // Create container view early
+            let screenSize = UIScreen.main.bounds
+            let margin: CGFloat = 40.0
+            let containerWidth = min(screenSize.width - 2*margin, 700) // Cap maximum width
+            let containerHeight = min(screenSize.height - 2*margin, 800) // Cap maximum height
+            
+            // Create container with loading indicator
+            let containerView = UIView()
+            containerView.backgroundColor = .white
+            containerView.layer.cornerRadius = 12
+            containerView.clipsToBounds = true
+            containerView.frame = CGRect(x: margin, y: margin, width: containerWidth, height: containerHeight)
+            containerView.center = CGPoint(x: screenSize.width/2, y: screenSize.height/2)
+            
+            // Add loading indicator
+            let activityIndicator = UIActivityIndicatorView(style: .large)
+            activityIndicator.center = CGPoint(x: containerWidth/2, y: containerHeight/2 - 20)
+            activityIndicator.startAnimating()
+            containerView.addSubview(activityIndicator)
+            
+            // Add close button that's always visible
+            let closeButton = UIButton(type: .system)
+            closeButton.setTitle("閉じる", for: .normal)
+            closeButton.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .medium)
+            closeButton.backgroundColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0)
+            closeButton.layer.cornerRadius = 8
+            closeButton.frame = CGRect(x: 20, y: containerHeight - 45, width: containerWidth - 40, height: 40)
+            closeButton.tag = 100 // Tag for identifying in the action method
+            closeButton.addTarget(self, action: #selector(dismissLegendView), for: .touchUpInside)
+            containerView.addSubview(closeButton)
+            
+            // Add tap gesture to dismiss when tapping outside
+            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(legendBackgroundTapHandler(_:)))
+            tapGesture.cancelsTouchesInView = false
+            legendViewController.view.addGestureRecognizer(tapGesture)
+            
+            // Add the container to the view
+            legendViewController.view.addSubview(containerView)
+            
+            // Create scroll view controller with zoom functionality
+            let scrollViewController = UIViewController()
+            scrollViewController.view.frame = CGRect(x: 0, y: 0, width: containerWidth, height: containerHeight - 50)
+            containerView.addSubview(scrollViewController.view)
+            
+            // Present view controller immediately to show loading state
+            self.present(legendViewController, animated: true) {
+                // Now load the image in background
+                DispatchQueue.global(qos: .userInitiated).async {
+                    var loadedImage: UIImage? = nil
+                    
+                    if let url: URL = URL(string: self.pathGISImage) {
+                        do {
+                            let imageData = try Data(contentsOf: url)
+                            loadedImage = UIImage(data: imageData)
+                        } catch {
+                            print("Error loading image: \(error)")
+                        }
+                    }
+                    
+                    // Update UI on main thread
+                    DispatchQueue.main.async {
+                        // Remove loading indicator
+                        activityIndicator.removeFromSuperview()
+                        
+                        if let image = loadedImage {
+                            // Successfully loaded image
+                            let buttonHeight: CGFloat = 50
+                            let contentHeight = containerHeight - buttonHeight
+                            let contentWidth = containerWidth
+                            
+                            // Create scroll view that properly supports zooming
+                            let scrollView = UIScrollView(frame: CGRect(x: 0, y: 0, width: contentWidth, height: contentHeight))
+                            scrollView.backgroundColor = .white
+                            scrollView.minimumZoomScale = 1.0
+                            scrollView.maximumZoomScale = 4.0
+                            scrollView.bouncesZoom = true
+                            scrollView.showsVerticalScrollIndicator = true
+                            scrollView.showsHorizontalScrollIndicator = true
+                            
+                            // Calculate image dimensions
+                            let imageRatio = image.size.width / image.size.height
+                            let viewRatio = contentWidth / contentHeight
+                            
+                            var finalWidth: CGFloat
+                            var finalHeight: CGFloat
+                            
+                            if imageRatio > viewRatio {
+                                // Image is wider than container (relative to height)
+                                finalWidth = contentWidth
+                                finalHeight = finalWidth / imageRatio
+                            } else {
+                                // Image is taller than container (relative to width)
+                                finalHeight = contentHeight
+                                finalWidth = finalHeight * imageRatio
+                            }
+                            
+                            // Create image view with calculated dimensions
+                            let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: finalWidth, height: finalHeight))
+                            imageView.image = image
+                            imageView.contentMode = .scaleAspectFit
+                            imageView.tag = 101 // Tag for identifying in the delegate method
+                            imageView.isUserInteractionEnabled = true
+                            
+                            // Center image if smaller than scroll view
+                            if finalWidth < contentWidth {
+                                imageView.center.x = contentWidth / 2
+                            }
+                            if finalHeight < contentHeight {
+                                imageView.center.y = contentHeight / 2
+                            }
+                            
+                            // Create a custom double tap gesture handler
+                            let doubleTapHandler = LegendDoubleTapHandler(scrollView: scrollView)
+                            
+                            // Set up double tap gesture for zooming
+                            let doubleTapRecognizer = UITapGestureRecognizer(target: doubleTapHandler, action: #selector(LegendDoubleTapHandler.handleDoubleTap(_:)))
+                            doubleTapRecognizer.numberOfTapsRequired = 2
+                            scrollView.addGestureRecognizer(doubleTapRecognizer)
+                            
+                            // Store the handler as an associated object to prevent it from being deallocated
+                            objc_setAssociatedObject(scrollView, UnsafeRawPointer(bitPattern: 1)!, doubleTapHandler, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+                            
+                            // Add image view to scroll view
+                            scrollView.addSubview(imageView)
+                            scrollView.contentSize = CGSize(width: max(finalWidth, contentWidth), height: max(finalHeight, contentHeight))
+                            
+                            // Create and set delegate for zoom functionality
+                            let zoomDelegate = LegendZoomDelegate() // Custom delegate class defined below
+                            scrollView.delegate = zoomDelegate
+                            
+                            // Store the delegate as an associated object to prevent it from being deallocated
+                            objc_setAssociatedObject(scrollView, UnsafeRawPointer(bitPattern: 2)!, zoomDelegate, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+                            
+                            scrollViewController.view.addSubview(scrollView)
+                        } else {
+                            // Show error message in Japanese
+                            let errorLabel = UILabel(frame: CGRect(x: 20, y: containerHeight/2 - 60, width: containerWidth - 40, height: 80))
+                            errorLabel.text = "画像を読み込めませんでした。"
+                            errorLabel.textAlignment = .center
+                            errorLabel.numberOfLines = 0
+                            errorLabel.font = UIFont.systemFont(ofSize: 17)
+                            errorLabel.textColor = .darkGray
+                            scrollViewController.view.addSubview(errorLabel)
+                        }
                     }
                 }
-                let cancelAction = UIAlertAction(title: "閉じる", style: .cancel, handler: {(alert: UIAlertAction!) in print("閉じる")})
-                alertController.addAction(cancelAction)
-                DispatchQueue.main.async {
-                    self.present(alertController, animated: true, completion:{})
-                }
-                
             }
         }
+    }
+
+    // Custom handler class for double tap
+    class LegendDoubleTapHandler: NSObject {
+        weak var scrollView: UIScrollView?
+        
+        init(scrollView: UIScrollView) {
+            self.scrollView = scrollView
+            super.init()
+        }
+        
+        @objc func handleDoubleTap(_ gestureRecognizer: UITapGestureRecognizer) {
+            guard let scrollView = self.scrollView else { return }
+            
+            if scrollView.zoomScale == scrollView.minimumZoomScale {
+                // Zoom in to where the user tapped
+                let pointInView = gestureRecognizer.location(in: scrollView)
+                let zoomRect = CGRect(
+                    x: pointInView.x - (scrollView.bounds.width / 4),
+                    y: pointInView.y - (scrollView.bounds.height / 4),
+                    width: scrollView.bounds.width / 2,
+                    height: scrollView.bounds.height / 2
+                )
+                scrollView.zoom(to: zoomRect, animated: true)
+            } else {
+                // Zoom out
+                scrollView.setZoomScale(scrollView.minimumZoomScale, animated: true)
+            }
+        }
+    }
+
+    // Custom delegate class for zoom functionality
+    class LegendZoomDelegate: NSObject, UIScrollViewDelegate {
+        func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+            return scrollView.subviews.first(where: { $0 is UIImageView })
+        }
+        
+        func scrollViewDidZoom(_ scrollView: UIScrollView) {
+            // Keep the image centered during zoom
+            if let imageView = scrollView.subviews.first(where: { $0 is UIImageView }) {
+                let offsetX = max((scrollView.bounds.size.width - scrollView.contentSize.width) * 0.5, 0)
+                let offsetY = max((scrollView.bounds.size.height - scrollView.contentSize.height) * 0.5, 0)
+                
+                imageView.center = CGPoint(
+                    x: scrollView.contentSize.width * 0.5 + offsetX,
+                    y: scrollView.contentSize.height * 0.5 + offsetY
+                )
+            }
+        }
+    }
+
+    @objc func legendBackgroundTapHandler(_ gestureRecognizer: UITapGestureRecognizer) {
+        let touchPoint = gestureRecognizer.location(in: gestureRecognizer.view)
+        if let containerView = gestureRecognizer.view?.subviews.first as? UIView {
+            if !containerView.frame.contains(touchPoint) {
+                dismiss(animated: true, completion: nil)
+            }
+        }
+    }
+
+    @objc func dismissLegendView() {
+        dismiss(animated: true, completion: nil)
+    }
+
+    @objc func handleBackgroundTap(_ gesture: UITapGestureRecognizer) {
+        let location = gesture.location(in: gesture.view)
+        // Check if tap is outside the container view
+        if let containerView = gesture.view?.subviews.first, !containerView.frame.contains(location) {
+            dismiss(animated: true)
+        }
+    }
+
+    // Add this method to handle double tap zoom
+    @objc func handleDoubleTap(_ gesture: UITapGestureRecognizer) {
+        if let scrollView = gesture.view?.superview as? UIScrollView {
+            if scrollView.zoomScale == 1.0 {
+                // Zoom in to where the user tapped
+                let pointInView = gesture.location(in: scrollView.subviews.first)
+                let newZoomScale = scrollView.maximumZoomScale / 2
+                
+                let scrollViewSize = scrollView.bounds.size
+                let width = scrollViewSize.width / newZoomScale
+                let height = scrollViewSize.height / newZoomScale
+                let x = pointInView.x - (width / 2)
+                let y = pointInView.y - (height / 2)
+                
+                let rectToZoom = CGRect(x: x, y: y, width: width, height: height)
+                scrollView.zoom(to: rectToZoom, animated: true)
+            } else {
+                // Zoom back out
+                scrollView.setZoomScale(1.0, animated: true)
+            }
+        }
+    }
+
+    // Add this method to conform to UIScrollViewDelegate
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        return scrollView.subviews.first
     }
     
 }
