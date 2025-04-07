@@ -28,7 +28,7 @@
 {
     "name":"数値地図25000（土地条件）",
     "server":"https://cyberjapandata.gsi.go.jp/xyz/lcm25k_2012/{z}/{x}/{y}.png",
-    "legend":"https://www.cerd.osaka-cu.ac.jp/cerd-ar_tiles/lc_legend.png",
+    "legend":"https://www.musubou.net/musubou-ar/lc_legend.png",
     "gl_style":{
         "version": 8,
         "name": "Raster Tiles",
