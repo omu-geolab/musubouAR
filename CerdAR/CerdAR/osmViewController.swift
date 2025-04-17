@@ -1460,7 +1460,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
             
             // 衛星画像の場合
         } else {
-            style.insertLayer(layer, at: 10) //10 は 適当
+            style.insertLayer(layer, at: 4) // 4 は 適当
         }
         style.insertLayer(dashedLayer, above: layer)
         style.insertLayer(casingLayer, above: dashedLayer)

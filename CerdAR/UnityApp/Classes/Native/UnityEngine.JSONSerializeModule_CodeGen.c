@@ -34,12 +34,12 @@ static Il2CppMethodPointer s_methodPointers[6] =
 };
 static const int32_t s_InvokerIndices[6] = 
 {
-	7575,
-	6874,
-	8427,
-	7575,
+	7596,
+	6892,
+	8448,
+	7596,
 	-1,
-	7584,
+	7605,
 };
 static const Il2CppTokenRangePair s_rgctxIndices[1] = 
 {
@@ -47,8 +47,8 @@ static const Il2CppTokenRangePair s_rgctxIndices[1] =
 };
 static const Il2CppRGCTXDefinition s_rgctxValues[2] = 
 {
-	{ (Il2CppRGCTXDataType)1, 304 },
-	{ (Il2CppRGCTXDataType)2, 304 },
+	{ (Il2CppRGCTXDataType)1, 306 },
+	{ (Il2CppRGCTXDataType)2, 306 },
 };
 extern const CustomAttributesCacheGenerator g_UnityEngine_JSONSerializeModule_AttributeGenerators[];
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_UnityEngine_JSONSerializeModule_CodeGenModule;
