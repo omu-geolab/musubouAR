@@ -18,7 +18,7 @@ let kInfoAnimation = 0.1 // 情報タグがタップされた時のアニメー�
 let kWarnAnimation = 0.1 // 警告タグがタップされた時のアニメーション時間
 
 /* 共通(camera,map,osm) */
-let kNearMsg = 50 // 現在地から災害までがnearMsg(m)以内であれば、付近にいるメッセージを表示する
+let kNearMsg = 5 // 現在地から災害までがnearMsg(m)以内であれば、付近にいるメッセージを表示する
 let kUpdateWarn = 4.0 // 災害情報の更新周期（倍速）※災害円の拡大速度もここで行っている
 let kUpdateMM = 2.0 // 警告メッセージと警告モードの更新周期(値はkUpdateWarnの半分ほうがいいです)
 let kMsgAlpha = 0.6 // 警告メッセージのalpha値( 0(薄)<-->(濃)1 )
