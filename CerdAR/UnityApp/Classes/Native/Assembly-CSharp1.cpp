@@ -32753,7 +32753,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90
 		double L_4 = ((GlobalAR_t17B42CA7105FCE6F67C362698FA868C1065D0275_StaticFields*)il2cpp_codegen_static_fields_for(GlobalAR_t17B42CA7105FCE6F67C362698FA868C1065D0275_il2cpp_TypeInfo_var))->get_userLat_2();
 		double L_5 = ((GlobalAR_t17B42CA7105FCE6F67C362698FA868C1065D0275_StaticFields*)il2cpp_codegen_static_fields_for(GlobalAR_t17B42CA7105FCE6F67C362698FA868C1065D0275_il2cpp_TypeInfo_var))->get_lat2km_4();
 		V_0 = ((double)il2cpp_codegen_multiply((double)((double)il2cpp_codegen_subtract((double)L_3, (double)L_4)), (double)L_5));
-		// double dx = -(ft.geometry.coordinates[0] - GlobalAR.userLng) * GlobalAR.lat2km; // +x is east
+		// double dx = (ft.geometry.coordinates[0] - GlobalAR.userLng) * GlobalAR.lat2km; // +x is east
 		Feature_t5935A60ABB085B1600FFA2C0CEB4457D508CE3D3 * L_6 = ___ft0;
 		NullCheck(L_6);
 		Geometry_t6B1F4107BF41F87965F5D77740F10FE835E4DB30 * L_7;
@@ -32770,7 +32770,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90
 		double L_12 = V_0;
 		Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  L_13;
 		memset((&L_13), 0, sizeof(L_13));
-		Vector3__ctor_m57495F692C6CE1CEF278CAD9A98221165D37E636_inline((&L_13), ((float)((float)((double)il2cpp_codegen_multiply((double)((-((double)il2cpp_codegen_subtract((double)L_9, (double)L_10)))), (double)L_11)))), (0.0f), ((float)((float)L_12)), /*hidden argument*/NULL);
+		Vector3__ctor_m57495F692C6CE1CEF278CAD9A98221165D37E636_inline((&L_13), ((float)((float)((double)il2cpp_codegen_multiply((double)((double)il2cpp_codegen_subtract((double)L_9, (double)L_10)), (double)L_11)))), (0.0f), ((float)((float)L_12)), /*hidden argument*/NULL);
 		return L_13;
 	}
 }
