@@ -6,7 +6,8 @@ target 'CerdAR' do
   use_frameworks!
 
   # Pods for CerdAR
-  pod 'GoogleSignIn'
+#  pod 'AppAuth'
+  pod 'GoogleSignIn','6.2.3'
   pod 'Mapbox-iOS-SDK', '~> 6.3.0'
   pod 'XMLCoder', '~> 0.12.0'
   target 'CerdARTests' do
