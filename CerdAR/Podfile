@@ -6,10 +6,10 @@ target 'CerdAR' do
   use_frameworks!
 
   # Pods for CerdAR
-#  pod 'AppAuth'
   pod 'GoogleSignIn','6.2.3'
   pod 'Mapbox-iOS-SDK', '~> 6.3.0'
   pod 'XMLCoder', '~> 0.12.0'
+
   target 'CerdARTests' do
     inherit! :search_paths
     # Pods for testing
@@ -19,4 +19,12 @@ target 'CerdAR' do
     # Pods for testing
   end
 
+end
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['ENABLE_BITCODE'] = 'NO'
+    end
+  end
 end
