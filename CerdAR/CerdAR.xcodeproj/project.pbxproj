@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B7FCBE2955E12DA50FFE27D /* Pods_CerdAR_CerdARUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21EF162B5EC63166D94ADDC8 /* Pods_CerdAR_CerdARUITests.framework */; };
+		766E84C36013541D7FE7875D /* Pods_CerdAR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51BB3E3F135A0B77055E64DA /* Pods_CerdAR.framework */; };
+		7BBA0E9613F65ACAE8F531AD /* Pods_CerdARTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED7227775087FF8F00BAD266 /* Pods_CerdARTests.framework */; };
 		7EE70E1F1DEAA16A000FB537 /* sound_intrusion.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7EE70E1E1DEAA16A000FB537 /* sound_intrusion.mp3 */; };
 		7EE70E211DEAA1B6000FB537 /* sound_near.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7EE70E201DEAA1B6000FB537 /* sound_near.mp3 */; };
 		942A6D1A2A41E17400CEC20A /* TermsView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 942A6D192A41E17400CEC20A /* TermsView.storyboard */; };
-		96655ABCA386BD53442B3ACD /* Pods_CerdARTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D04586146BAD1B8F73019B83 /* Pods_CerdARTests.framework */; };
 		AC05B9FA1D811FDA0082C52A /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC05B9F91D811FDA0082C52A /* DataManager.swift */; };
 		AC2AB8F61DB778A10048931C /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2AB8F51DB778A10048931C /* Constant.swift */; };
 		AC2C03D41D9D1CB9009926E3 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2C03D31D9D1CB9009926E3 /* SwiftyJSON.swift */; };
@@ -24,11 +26,9 @@
 		ACF399B71D98C25100B0EC47 /* osmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF399B61D98C25100B0EC47 /* osmViewController.swift */; };
 		ACFD6E0C1DB474680006A765 /* loadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFD6E0B1DB474680006A765 /* loadViewController.swift */; };
 		BF01B83E1F6FEECE001AC15E /* GISImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF01B83D1F6FEECE001AC15E /* GISImageView.swift */; };
-		C36E33A20FF3853210C0ED9C /* Pods_CerdAR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC85F0FEE744518F90CB9F57 /* Pods_CerdAR.framework */; };
 		D37E86961E780A6A0030B01A /* Vibration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37E86951E780A6A0030B01A /* Vibration.swift */; };
 		D3CF68DD1D91187D008B588E /* detailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CF68DB1D91187D008B588E /* detailView.swift */; };
 		D3CF68DE1D91187D008B588E /* termsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CF68DC1D91187D008B588E /* termsView.swift */; };
-		D58F4D15A7DB5E314E99DDA6 /* Pods_CerdAR_CerdARUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF325313CD8D12621DCEF5B1 /* Pods_CerdAR_CerdARUITests.framework */; };
 		F00A92AB25CD244E00BC5D5A /* PlaySound.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00A92AA25CD244E00BC5D5A /* PlaySound.swift */; };
 		F00A933B25D3BB5B00BC5D5A /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F00A933925D3BB5B00BC5D5A /* Interface.storyboard */; };
 		F00A933D25D3BB5D00BC5D5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F00A933C25D3BB5D00BC5D5A /* Assets.xcassets */; };
@@ -170,15 +170,18 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		033E577AEC85F197E9BA1CB2 /* Pods-CerdAR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CerdAR.release.xcconfig"; path = "Target Support Files/Pods-CerdAR/Pods-CerdAR.release.xcconfig"; sourceTree = "<group>"; };
-		41EA5823C45D1F6F75620313 /* Pods-CerdARTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CerdARTests.release.xcconfig"; path = "Target Support Files/Pods-CerdARTests/Pods-CerdARTests.release.xcconfig"; sourceTree = "<group>"; };
-		4F716DF81F38ECD1C73C95E7 /* Pods-CerdAR-CerdARUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CerdAR-CerdARUITests.debug.xcconfig"; path = "Target Support Files/Pods-CerdAR-CerdARUITests/Pods-CerdAR-CerdARUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		54A1773872B7DF37C1DA269B /* Pods-CerdARTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CerdARTests.debug.xcconfig"; path = "Target Support Files/Pods-CerdARTests/Pods-CerdARTests.debug.xcconfig"; sourceTree = "<group>"; };
+		1B29A58081A475C4BDC84EEB /* Pods-CerdAR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CerdAR.release.xcconfig"; path = "Target Support Files/Pods-CerdAR/Pods-CerdAR.release.xcconfig"; sourceTree = "<group>"; };
+		21EF162B5EC63166D94ADDC8 /* Pods_CerdAR_CerdARUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CerdAR_CerdARUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		37F3F1AE14CD6313E6936A90 /* Pods-CerdARTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CerdARTests.debug.xcconfig"; path = "Target Support Files/Pods-CerdARTests/Pods-CerdARTests.debug.xcconfig"; sourceTree = "<group>"; };
+		41E4C27868D3C032FBAC57FE /* Pods-CerdAR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CerdAR.debug.xcconfig"; path = "Target Support Files/Pods-CerdAR/Pods-CerdAR.debug.xcconfig"; sourceTree = "<group>"; };
+		51BB3E3F135A0B77055E64DA /* Pods_CerdAR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CerdAR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B3BED26AF9589EC01DD89D8 /* Pods-CerdAR-CerdARUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CerdAR-CerdARUITests.release.xcconfig"; path = "Target Support Files/Pods-CerdAR-CerdARUITests/Pods-CerdAR-CerdARUITests.release.xcconfig"; sourceTree = "<group>"; };
+		6AF462A4B7B185B57067178F /* Pods-CerdARTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CerdARTests.release.xcconfig"; path = "Target Support Files/Pods-CerdARTests/Pods-CerdARTests.release.xcconfig"; sourceTree = "<group>"; };
 		7EE70E1E1DEAA16A000FB537 /* sound_intrusion.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sound_intrusion.mp3; sourceTree = "<group>"; };
 		7EE70E201DEAA1B6000FB537 /* sound_near.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sound_near.mp3; sourceTree = "<group>"; };
 		7EF467252DE69D4000BB182B /* AppAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AppAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A3001EF647E125B1E14D83E /* Pods-CerdAR-CerdARUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CerdAR-CerdARUITests.debug.xcconfig"; path = "Target Support Files/Pods-CerdAR-CerdARUITests/Pods-CerdAR-CerdARUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		942A6D192A41E17400CEC20A /* TermsView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TermsView.storyboard; sourceTree = "<group>"; };
-		962312CCEA16F6423B9FBD7D /* Pods-CerdAR-CerdARUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CerdAR-CerdARUITests.release.xcconfig"; path = "Target Support Files/Pods-CerdAR-CerdARUITests/Pods-CerdAR-CerdARUITests.release.xcconfig"; sourceTree = "<group>"; };
 		AC05B9F91D811FDA0082C52A /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		AC2AB8F51DB778A10048931C /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		AC2C03D31D9D1CB9009926E3 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
@@ -197,13 +200,10 @@
 		ACF399B61D98C25100B0EC47 /* osmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = osmViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		ACFD6E0B1DB474680006A765 /* loadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loadViewController.swift; sourceTree = "<group>"; };
 		BF01B83D1F6FEECE001AC15E /* GISImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GISImageView.swift; sourceTree = "<group>"; };
-		BF325313CD8D12621DCEF5B1 /* Pods_CerdAR_CerdARUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CerdAR_CerdARUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C1053275B07E2CB6D41D4513 /* Pods-CerdAR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CerdAR.debug.xcconfig"; path = "Target Support Files/Pods-CerdAR/Pods-CerdAR.debug.xcconfig"; sourceTree = "<group>"; };
-		D04586146BAD1B8F73019B83 /* Pods_CerdARTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CerdARTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D37E86951E780A6A0030B01A /* Vibration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vibration.swift; sourceTree = "<group>"; };
 		D3CF68DB1D91187D008B588E /* detailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = detailView.swift; sourceTree = "<group>"; };
 		D3CF68DC1D91187D008B588E /* termsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = termsView.swift; sourceTree = "<group>"; };
-		EC85F0FEE744518F90CB9F57 /* Pods_CerdAR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CerdAR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED7227775087FF8F00BAD266 /* Pods_CerdARTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CerdARTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F00A92AA25CD244E00BC5D5A /* PlaySound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySound.swift; sourceTree = "<group>"; };
 		F00A933725D3BB5B00BC5D5A /* CerdARWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CerdARWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F00A933A25D3BB5B00BC5D5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
@@ -294,7 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0986D1625B95C0000CB0FE6 /* HealthKit.framework in Frameworks */,
-				C36E33A20FF3853210C0ED9C /* Pods_CerdAR.framework in Frameworks */,
+				766E84C36013541D7FE7875D /* Pods_CerdAR.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,7 +302,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96655ABCA386BD53442B3ACD /* Pods_CerdARTests.framework in Frameworks */,
+				7BBA0E9613F65ACAE8F531AD /* Pods_CerdARTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,7 +310,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D58F4D15A7DB5E314E99DDA6 /* Pods_CerdAR_CerdARUITests.framework in Frameworks */,
+				4B7FCBE2955E12DA50FFE27D /* Pods_CerdAR_CerdARUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,12 +335,12 @@
 		3B75004CE1AD900D63C1790D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				C1053275B07E2CB6D41D4513 /* Pods-CerdAR.debug.xcconfig */,
-				033E577AEC85F197E9BA1CB2 /* Pods-CerdAR.release.xcconfig */,
-				4F716DF81F38ECD1C73C95E7 /* Pods-CerdAR-CerdARUITests.debug.xcconfig */,
-				962312CCEA16F6423B9FBD7D /* Pods-CerdAR-CerdARUITests.release.xcconfig */,
-				54A1773872B7DF37C1DA269B /* Pods-CerdARTests.debug.xcconfig */,
-				41EA5823C45D1F6F75620313 /* Pods-CerdARTests.release.xcconfig */,
+				41E4C27868D3C032FBAC57FE /* Pods-CerdAR.debug.xcconfig */,
+				1B29A58081A475C4BDC84EEB /* Pods-CerdAR.release.xcconfig */,
+				8A3001EF647E125B1E14D83E /* Pods-CerdAR-CerdARUITests.debug.xcconfig */,
+				5B3BED26AF9589EC01DD89D8 /* Pods-CerdAR-CerdARUITests.release.xcconfig */,
+				37F3F1AE14CD6313E6936A90 /* Pods-CerdARTests.debug.xcconfig */,
+				6AF462A4B7B185B57067178F /* Pods-CerdARTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -527,9 +527,9 @@
 				F06A927121CB5B9C0075391E /* Mapbox.framework */,
 				F054082B21CB56E9009D8558 /* MapboxSceneKit.framework */,
 				F054082921CB56E4009D8558 /* MapboxMobileEvents.framework */,
-				EC85F0FEE744518F90CB9F57 /* Pods_CerdAR.framework */,
-				BF325313CD8D12621DCEF5B1 /* Pods_CerdAR_CerdARUITests.framework */,
-				D04586146BAD1B8F73019B83 /* Pods_CerdARTests.framework */,
+				51BB3E3F135A0B77055E64DA /* Pods_CerdAR.framework */,
+				21EF162B5EC63166D94ADDC8 /* Pods_CerdAR_CerdARUITests.framework */,
+				ED7227775087FF8F00BAD266 /* Pods_CerdARTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -581,14 +581,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AC2C52ED1D5805F80032B689 /* Build configuration list for PBXNativeTarget "CerdAR" */;
 			buildPhases = (
-				5F629F3AA694126D0086B711 /* [CP] Check Pods Manifest.lock */,
+				C23442F311110F444C5A2B07 /* [CP] Check Pods Manifest.lock */,
 				AC2C52BE1D5805F70032B689 /* Sources */,
 				AC2C52BF1D5805F70032B689 /* Frameworks */,
 				AC2C52C01D5805F70032B689 /* Resources */,
 				F033F9FE2191761D008A3A2E /* Embed Frameworks */,
 				F00A935E25D3BB5F00BC5D5A /* Embed Watch Content */,
-				F4BAB8573736B6A06A6C1B0F /* [CP] Embed Pods Frameworks */,
 				7E04A8D92DE6AAE600AE4086 /* Strip Bitcode from Mapbox */,
+				A7417CF8727A5B56DF7C2E29 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -604,7 +604,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AC2C52F01D5805F80032B689 /* Build configuration list for PBXNativeTarget "CerdARTests" */;
 			buildPhases = (
-				48E4CD9A204F5B28B447BD67 /* [CP] Check Pods Manifest.lock */,
+				D3FF7AEA7F15E0F8080F680B /* [CP] Check Pods Manifest.lock */,
 				AC2C52D51D5805F80032B689 /* Sources */,
 				AC2C52D61D5805F80032B689 /* Frameworks */,
 				AC2C52D71D5805F80032B689 /* Resources */,
@@ -623,11 +623,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AC2C52F31D5805F80032B689 /* Build configuration list for PBXNativeTarget "CerdARUITests" */;
 			buildPhases = (
-				1F15C0286049FC64885418C5 /* [CP] Check Pods Manifest.lock */,
+				08020523B5C9F9CCAE4DAD33 /* [CP] Check Pods Manifest.lock */,
 				AC2C52E01D5805F80032B689 /* Sources */,
 				AC2C52E11D5805F80032B689 /* Frameworks */,
 				AC2C52E21D5805F80032B689 /* Resources */,
-				0B9645792EEA4E8A4309CE38 /* [CP] Embed Pods Frameworks */,
+				0232E214DB755089AD02D940 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -797,7 +797,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0B9645792EEA4E8A4309CE38 /* [CP] Embed Pods Frameworks */ = {
+		0232E214DB755089AD02D940 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -805,16 +805,20 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-CerdAR-CerdARUITests/Pods-CerdAR-CerdARUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-CerdAR-CerdARUITests/Pods-CerdAR-CerdARUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CerdAR-CerdARUITests/Pods-CerdAR-CerdARUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		1F15C0286049FC64885418C5 /* [CP] Check Pods Manifest.lock */ = {
+		08020523B5C9F9CCAE4DAD33 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -836,7 +840,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		48E4CD9A204F5B28B447BD67 /* [CP] Check Pods Manifest.lock */ = {
+		7E04A8D92DE6AAE600AE4086 /* Strip Bitcode from Mapbox */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -844,21 +848,39 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
 			);
-			name = "[CP] Check Pods Manifest.lock";
+			name = "Strip Bitcode from Mapbox";
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CerdARTests-checkManifestLockResult.txt",
+				"$(TARGET_BUILD_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Mapbox.framework/Mapbox",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "# Xcode Run Script Phase\n# 目的: Mapbox.framework からビットコードを削除し、再署名する\n# 注意: このスクリプトは \"[CP] Embed Pods Frameworks\" の後、\"Sign Product\" の前に配置してください。\n\nset -e # いずれかのコマンドが失敗したらスクリプトを終了する\n\nFRAMEWORK_NAME=\"Mapbox.framework\"\n# TARGET_BUILD_DIR はビルド製品が置かれるディレクトリ\n# FRAMEWORKS_FOLDER_PATH は通常 \"Frameworks\"\nFRAMEWORK_EXECUTABLE_RELATIVE_PATH=\"${FRAMEWORKS_FOLDER_PATH}/${FRAMEWORK_NAME}/Mapbox\"\nFRAMEWORK_EXECUTABLE_FULL_PATH=\"${TARGET_BUILD_DIR}/${FRAMEWORK_EXECUTABLE_RELATIVE_PATH}\"\n\n# フレームワークバンドル全体のパス\nFRAMEWORK_BUNDLE_PATH=\"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/${FRAMEWORK_NAME}\"\n\necho \"Attempting to strip bitcode from Mapbox framework...\"\necho \"Framework executable should be at: ${FRAMEWORK_EXECUTABLE_FULL_PATH}\"\n\nif [ -f \"${FRAMEWORK_EXECUTABLE_FULL_PATH}\" ]; then\n  echo \"Found Mapbox executable: ${FRAMEWORK_EXECUTABLE_FULL_PATH}\"\n\n  echo \"Stripping bitcode...\"\n  # xcrun bitcode_strip を使用してビットコードを削除し、ファイルを置き換える\n  if xcrun bitcode_strip \"${FRAMEWORK_EXECUTABLE_FULL_PATH}\" -r -o \"${FRAMEWORK_EXECUTABLE_FULL_PATH}\"; then\n    echo \"Successfully stripped bitcode from ${FRAMEWORK_NAME}.\"\n\n    # ビットコード削除後、フレームワークに再署名する\n    echo \"Re-signing ${FRAMEWORK_NAME} at ${FRAMEWORK_BUNDLE_PATH}...\"\n    echo \"Using signing identity: ${EXPANDED_CODE_SIGN_IDENTITY}\" # 使用される署名IDをログに出力\n\n    # codesign コマンドでフレームワークに再署名\n    # --force: 既存の署名を上書き\n    # --preserve-metadata=identifier,entitlements,flags: 既存のメタデータを保持\n    if codesign --force --sign \"${EXPANDED_CODE_SIGN_IDENTITY}\" --preserve-metadata=identifier,entitlements,flags \"${FRAMEWORK_BUNDLE_PATH}\"; then\n      echo \"Framework ${FRAMEWORK_NAME} re-signed successfully.\"\n    else\n      echo \"Error: Failed to re-sign ${FRAMEWORK_NAME}.\" >&2\n      exit 1 # ビルドを失敗させる\n    fi\n  else\n    echo \"Error: Failed to strip bitcode from ${FRAMEWORK_NAME} at ${FRAMEWORK_EXECUTABLE_FULL_PATH}.\" >&2\n    exit 1 # ビルドを失敗させる\n  fi\nelse\n  echo \"Warning: Mapbox executable not found at ${FRAMEWORK_EXECUTABLE_FULL_PATH}. Bitcode stripping and re-signing skipped.\" >&2\nfi\n\necho \"Bitcode stripping and re-signing script finished.\"\n";
+		};
+		A7417CF8727A5B56DF7C2E29 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CerdAR/Pods-CerdAR-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CerdAR/Pods-CerdAR-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CerdAR/Pods-CerdAR-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5F629F3AA694126D0086B711 /* [CP] Check Pods Manifest.lock */ = {
+		C23442F311110F444C5A2B07 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -880,7 +902,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7E04A8D92DE6AAE600AE4086 /* Strip Bitcode from Mapbox */ = {
+		D3FF7AEA7F15E0F8080F680B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -888,31 +910,18 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
-			name = "Strip Bitcode from Mapbox";
+			name = "[CP] Check Pods Manifest.lock";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CerdARTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Xcode Run Script Phase\n# 目的: Mapbox.framework からビットコードを削除し、再署名する\n# 注意: このスクリプトは \"[CP] Embed Pods Frameworks\" の後、\"Sign Product\" の前に配置してください。\n\nset -e # いずれかのコマンドが失敗したらスクリプトを終了する\n\nFRAMEWORK_NAME=\"Mapbox.framework\"\n# TARGET_BUILD_DIR はビルド製品が置かれるディレクトリ\n# FRAMEWORKS_FOLDER_PATH は通常 \"Frameworks\"\nFRAMEWORK_EXECUTABLE_RELATIVE_PATH=\"${FRAMEWORKS_FOLDER_PATH}/${FRAMEWORK_NAME}/Mapbox\"\nFRAMEWORK_EXECUTABLE_FULL_PATH=\"${TARGET_BUILD_DIR}/${FRAMEWORK_EXECUTABLE_RELATIVE_PATH}\"\n\n# フレームワークバンドル全体のパス\nFRAMEWORK_BUNDLE_PATH=\"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/${FRAMEWORK_NAME}\"\n\necho \"Attempting to strip bitcode from Mapbox framework...\"\necho \"Framework executable should be at: ${FRAMEWORK_EXECUTABLE_FULL_PATH}\"\n\nif [ -f \"${FRAMEWORK_EXECUTABLE_FULL_PATH}\" ]; then\n  echo \"Found Mapbox executable: ${FRAMEWORK_EXECUTABLE_FULL_PATH}\"\n\n  echo \"Stripping bitcode...\"\n  # xcrun bitcode_strip を使用してビットコードを削除し、ファイルを置き換える\n  if xcrun bitcode_strip \"${FRAMEWORK_EXECUTABLE_FULL_PATH}\" -r -o \"${FRAMEWORK_EXECUTABLE_FULL_PATH}\"; then\n    echo \"Successfully stripped bitcode from ${FRAMEWORK_NAME}.\"\n\n    # ビットコード削除後、フレームワークに再署名する\n    echo \"Re-signing ${FRAMEWORK_NAME} at ${FRAMEWORK_BUNDLE_PATH}...\"\n    echo \"Using signing identity: ${EXPANDED_CODE_SIGN_IDENTITY}\" # 使用される署名IDをログに出力\n\n    # codesign コマンドでフレームワークに再署名\n    # --force: 既存の署名を上書き\n    # --preserve-metadata=identifier,entitlements,flags: 既存のメタデータを保持\n    if codesign --force --sign \"${EXPANDED_CODE_SIGN_IDENTITY}\" --preserve-metadata=identifier,entitlements,flags \"${FRAMEWORK_BUNDLE_PATH}\"; then\n      echo \"Framework ${FRAMEWORK_NAME} re-signed successfully.\"\n    else\n      echo \"Error: Failed to re-sign ${FRAMEWORK_NAME}.\" >&2\n      exit 1 # ビルドを失敗させる\n    fi\n  else\n    echo \"Error: Failed to strip bitcode from ${FRAMEWORK_NAME} at ${FRAMEWORK_EXECUTABLE_FULL_PATH}.\" >&2\n    exit 1 # ビルドを失敗させる\n  fi\nelse\n  echo \"Warning: Mapbox executable not found at ${FRAMEWORK_EXECUTABLE_FULL_PATH}. Bitcode stripping and re-signing skipped.\" >&2\nfi\n\necho \"Bitcode stripping and re-signing script finished.\"\n";
-		};
-		F4BAB8573736B6A06A6C1B0F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CerdAR/Pods-CerdAR-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CerdAR/Pods-CerdAR-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CerdAR/Pods-CerdAR-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1168,7 +1177,7 @@
 		};
 		AC2C52EE1D5805F80032B689 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C1053275B07E2CB6D41D4513 /* Pods-CerdAR.debug.xcconfig */;
+			baseConfigurationReference = 41E4C27868D3C032FBAC57FE /* Pods-CerdAR.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = CerdAR/CerdAR.entitlements;
@@ -1204,7 +1213,7 @@
 		};
 		AC2C52EF1D5805F80032B689 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 033E577AEC85F197E9BA1CB2 /* Pods-CerdAR.release.xcconfig */;
+			baseConfigurationReference = 1B29A58081A475C4BDC84EEB /* Pods-CerdAR.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = CerdAR/CerdAR.entitlements;
@@ -1240,7 +1249,7 @@
 		};
 		AC2C52F11D5805F80032B689 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 54A1773872B7DF37C1DA269B /* Pods-CerdARTests.debug.xcconfig */;
+			baseConfigurationReference = 37F3F1AE14CD6313E6936A90 /* Pods-CerdARTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 9F4BD2UBE2;
@@ -1260,7 +1269,7 @@
 		};
 		AC2C52F21D5805F80032B689 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 41EA5823C45D1F6F75620313 /* Pods-CerdARTests.release.xcconfig */;
+			baseConfigurationReference = 6AF462A4B7B185B57067178F /* Pods-CerdARTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 9F4BD2UBE2;
@@ -1280,7 +1289,7 @@
 		};
 		AC2C52F41D5805F80032B689 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4F716DF81F38ECD1C73C95E7 /* Pods-CerdAR-CerdARUITests.debug.xcconfig */;
+			baseConfigurationReference = 8A3001EF647E125B1E14D83E /* Pods-CerdAR-CerdARUITests.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				DEVELOPMENT_TEAM = 9F4BD2UBE2;
@@ -1300,7 +1309,7 @@
 		};
 		AC2C52F51D5805F80032B689 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 962312CCEA16F6423B9FBD7D /* Pods-CerdAR-CerdARUITests.release.xcconfig */;
+			baseConfigurationReference = 5B3BED26AF9589EC01DD89D8 /* Pods-CerdAR-CerdARUITests.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				DEVELOPMENT_TEAM = 9F4BD2UBE2;
