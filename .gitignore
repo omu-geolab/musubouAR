@@ -1,8 +1,17 @@
-# Carthage
-#
-# Add this line if you want to avoid checking in source code from Carthage dependencies.
-# Carthage/Checkouts
+# ---- Xcode ----
+DerivedData/
+*.xcuserdata/
+*.xcuserstate
+*.dSYM/
 
+# ---- CocoaPods ----
+Pods/
+
+# ---- Carthage (使わないなら) ----
 Carthage/Build/
-Carthage/Checkouts/
-CerdAR/Pods/*
+
+# ---- Unity iOS build artifacts (Dataは残す前提で、Librariesだけ抑止) ----
+CerdAR/UnityApp/Libraries/*.a
+CerdAR/UnityApp/Libraries/**/*.a
+CerdAR/UnityApp/Libraries/**/*.framework/
+
