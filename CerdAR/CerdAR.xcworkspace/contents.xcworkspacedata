@@ -2,10 +2,10 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "container:UnityApp/Unity-iPhone.xcodeproj">
+      location = "group:CerdAR.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:CerdAR.xcodeproj">
+      location = "container:UnityApp/Unity-iPhone.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
