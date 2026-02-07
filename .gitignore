@@ -3,9 +3,14 @@ DerivedData/
 *.xcuserdata/
 *.xcuserstate
 *.dSYM/
+**/DerivedData/
+*.xcuserstate
 
 # ---- CocoaPods ----
 Pods/
+CerdAR/Pods/
+CerdAR/*.xcworkspace/xcuserdata/
+CerdAR/*.xcodeproj/xcuserdata/
 
 # ---- Carthage (使わないなら) ----
 Carthage/Build/
