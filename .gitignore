@@ -1,19 +1,20 @@
-# Carthage
-#
-# Add this line if you want to avoid checking in source code from Carthage dependencies.
-# Carthage/Checkouts
-
-*.a
-*.framework/
+# ===== Xcode =====
+DerivedData/
+*.xcuserdata/
+*.xcuserstate
 *.dSYM/
-CerdAR/UnityApp/Libraries/
-CerdAR/UnityApp/Data/
+
+# ===== CocoaPods =====
+CerdAR/Pods/
+
+# ===== Carthage =====
 Carthage/Build/
 Carthage/Checkouts/
-CerdAR/Pods/*
+
+# ===== Unity (generated artifacts) =====
 CerdAR/UnityApp/Libraries/
-CerdAR/UnityApp/Data/
-CerdAR/Pods/
-*.a
-*.framework/
-*.dSYM/
+# Dataは「残したい」なら消す（残すならコメントアウトしない）
+# CerdAR/UnityApp/Data/
+
+# If you only want to exclude one large file instead of the whole Libraries:
+# CerdAR/UnityApp/Libraries/libiPhone-lib.a
