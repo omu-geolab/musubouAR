@@ -3,6 +3,17 @@
 # Add this line if you want to avoid checking in source code from Carthage dependencies.
 # Carthage/Checkouts
 
+*.a
+*.framework/
+*.dSYM/
+CerdAR/UnityApp/Libraries/
+CerdAR/UnityApp/Data/
 Carthage/Build/
 Carthage/Checkouts/
 CerdAR/Pods/*
+CerdAR/UnityApp/Libraries/
+CerdAR/UnityApp/Data/
+CerdAR/Pods/
+*.a
+*.framework/
+*.dSYM/
