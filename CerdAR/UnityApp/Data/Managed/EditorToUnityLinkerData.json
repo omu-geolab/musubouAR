@@ -458,6 +458,15 @@
         },
         {
             "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "LightProbeGroup",
+            "fullManagedTypeName": "UnityEngine.LightProbeGroup",
+            "moduleName": "Core",
+            "usedInScenes": [
+                "Assets/Scenes/Meshing/OcclusionMeshes.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
             "nativeClass": "Cubemap",
             "fullManagedTypeName": "UnityEngine.Cubemap",
             "moduleName": "Core",

@@ -44,6 +44,7 @@
 		<type fullname="UnityEngine.ParticleSystemRenderer" preserve="nothing"/>
 		<type fullname="UnityEngine.ParticleSystem" preserve="nothing"/>
 		<type fullname="UnityEngine.VFX.VisualEffectAsset" preserve="nothing"/>
+		<type fullname="UnityEngine.LightProbeGroup" preserve="nothing"/>
 		<type fullname="UnityEngine.Cubemap" preserve="nothing"/>
 		<type fullname="UnityEngine.RenderSettings" preserve="nothing"/>
 		<type fullname="UnityEngine.Transform" preserve="nothing"/>

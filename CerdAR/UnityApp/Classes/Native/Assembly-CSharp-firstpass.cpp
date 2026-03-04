@@ -38,6 +38,7 @@ struct Void_t700C6383A2A510C2CF4DD86DABD5CA9FF70ADAC5;
 struct WebViewObject_tE6F9FD7B76F7E3894D7997DCCF7FACCDBDBD7F52;
 
 IL2CPP_EXTERN_C RuntimeClass* IntPtr_t_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C String_t* _stringLiteralB46BAFF8C351D24C5F3A93095D304D7CBF331A7C;
 IL2CPP_EXTERN_C String_t* _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709;
 IL2CPP_EXTERN_C const RuntimeMethod* Action_1_Invoke_m6E81F94353B45920E7018D209DCF4B63DBE8D8B6_RuntimeMethod_var;
 struct Delegate_t_marshaled_com;
@@ -654,34 +655,38 @@ public:
 	Action_1_tC0D73E03177C82525D78670CDC2165F7CBF0A9C3 * ___onLoaded_8;
 	// System.Action`1<System.String> WebViewObject::onHooked
 	Action_1_tC0D73E03177C82525D78670CDC2165F7CBF0A9C3 * ___onHooked_9;
+	// System.Action`1<System.String> WebViewObject::onCookies
+	Action_1_tC0D73E03177C82525D78670CDC2165F7CBF0A9C3 * ___onCookies_10;
+	// System.Boolean WebViewObject::paused
+	bool ___paused_11;
 	// System.Boolean WebViewObject::visibility
-	bool ___visibility_10;
+	bool ___visibility_12;
 	// System.Boolean WebViewObject::alertDialogEnabled
-	bool ___alertDialogEnabled_11;
+	bool ___alertDialogEnabled_13;
 	// System.Boolean WebViewObject::scrollBounceEnabled
-	bool ___scrollBounceEnabled_12;
+	bool ___scrollBounceEnabled_14;
 	// System.Int32 WebViewObject::mMarginLeft
-	int32_t ___mMarginLeft_13;
+	int32_t ___mMarginLeft_15;
 	// System.Int32 WebViewObject::mMarginTop
-	int32_t ___mMarginTop_14;
+	int32_t ___mMarginTop_16;
 	// System.Int32 WebViewObject::mMarginRight
-	int32_t ___mMarginRight_15;
+	int32_t ___mMarginRight_17;
 	// System.Int32 WebViewObject::mMarginBottom
-	int32_t ___mMarginBottom_16;
+	int32_t ___mMarginBottom_18;
 	// System.Boolean WebViewObject::mMarginRelative
-	bool ___mMarginRelative_17;
+	bool ___mMarginRelative_19;
 	// System.Single WebViewObject::mMarginLeftComputed
-	float ___mMarginLeftComputed_18;
+	float ___mMarginLeftComputed_20;
 	// System.Single WebViewObject::mMarginTopComputed
-	float ___mMarginTopComputed_19;
+	float ___mMarginTopComputed_21;
 	// System.Single WebViewObject::mMarginRightComputed
-	float ___mMarginRightComputed_20;
+	float ___mMarginRightComputed_22;
 	// System.Single WebViewObject::mMarginBottomComputed
-	float ___mMarginBottomComputed_21;
+	float ___mMarginBottomComputed_23;
 	// System.Boolean WebViewObject::mMarginRelativeComputed
-	bool ___mMarginRelativeComputed_22;
+	bool ___mMarginRelativeComputed_24;
 	// System.IntPtr WebViewObject::webView
-	intptr_t ___webView_23;
+	intptr_t ___webView_25;
 
 public:
 	inline static int32_t get_offset_of_onJS_4() { return static_cast<int32_t>(offsetof(WebViewObject_tE6F9FD7B76F7E3894D7997DCCF7FACCDBDBD7F52, ___onJS_4)); }
@@ -738,116 +743,133 @@ public:
 		Il2CppCodeGenWriteBarrier((void**)(&___onHooked_9), (void*)value);
 	}
 
-	inline static int32_t get_offset_of_visibility_10() { return static_cast<int32_t>(offsetof(WebViewObject_tE6F9FD7B76F7E3894D7997DCCF7FACCDBDBD7F52, ___visibility_10)); }
-	inline bool get_visibility_10() const { return ___visibility_10; }
-	inline bool* get_address_of_visibility_10() { return &___visibility_10; }
-	inline void set_visibility_10(bool value)
+	inline static int32_t get_offset_of_onCookies_10() { return static_cast<int32_t>(offsetof(WebViewObject_tE6F9FD7B76F7E3894D7997DCCF7FACCDBDBD7F52, ___onCookies_10)); }
+	inline Action_1_tC0D73E03177C82525D78670CDC2165F7CBF0A9C3 * get_onCookies_10() const { return ___onCookies_10; }
+	inline Action_1_tC0D73E03177C82525D78670CDC2165F7CBF0A9C3 ** get_address_of_onCookies_10() { return &___onCookies_10; }
+	inline void set_onCookies_10(Action_1_tC0D73E03177C82525D78670CDC2165F7CBF0A9C3 * value)
 	{
-		___visibility_10 = value;
+		___onCookies_10 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&___onCookies_10), (void*)value);
 	}
 
-	inline static int32_t get_offset_of_alertDialogEnabled_11() { return static_cast<int32_t>(offsetof(WebViewObject_tE6F9FD7B76F7E3894D7997DCCF7FACCDBDBD7F52, ___alertDialogEnabled_11)); }
-	inline bool get_alertDialogEnabled_11() const { return ___alertDialogEnabled_11; }
-	inline bool* get_address_of_alertDialogEnabled_11() { return &___alertDialogEnabled_11; }
-	inline void set_alertDialogEnabled_11(bool value)
+	inline static int32_t get_offset_of_paused_11() { return static_cast<int32_t>(offsetof(WebViewObject_tE6F9FD7B76F7E3894D7997DCCF7FACCDBDBD7F52, ___paused_11)); }
+	inline bool get_paused_11() const { return ___paused_11; }
+	inline bool* get_address_of_paused_11() { return &___paused_11; }
+	inline void set_paused_11(bool value)
 	{
-		___alertDialogEnabled_11 = value;
+		___paused_11 = value;
 	}
 
-	inline static int32_t get_offset_of_scrollBounceEnabled_12() { return static_cast<int32_t>(offsetof(WebViewObject_tE6F9FD7B76F7E3894D7997DCCF7FACCDBDBD7F52, ___scrollBounceEnabled_12)); }
-	inline bool get_scrollBounceEnabled_12() const { return ___scrollBounceEnabled_12; }
-	inline bool* get_address_of_scrollBounceEnabled_12() { return &___scrollBounceEnabled_12; }
-	inline void set_scrollBounceEnabled_12(bool value)
+	inline static int32_t get_offset_of_visibility_12() { return static_cast<int32_t>(offsetof(WebViewObject_tE6F9FD7B76F7E3894D7997DCCF7FACCDBDBD7F52, ___visibility_12)); }
+	inline bool get_visibility_12() const { return ___visibility_12; }
+	inline bool* get_address_of_visibility_12() { return &___visibility_12; }
+	inline void set_visibility_12(bool value)
 	{
-		___scrollBounceEnabled_12 = value;
+		___visibility_12 = value;
 	}
 
-	inline static int32_t get_offset_of_mMarginLeft_13() { return static_cast<int32_t>(offsetof(WebViewObject_tE6F9FD7B76F7E3894D7997DCCF7FACCDBDBD7F52, ___mMarginLeft_13)); }
-	inline int32_t get_mMarginLeft_13() const { return ___mMarginLeft_13; }
-	inline int32_t* get_address_of_mMarginLeft_13() { return &___mMarginLeft_13; }
-	inline void set_mMarginLeft_13(int32_t value)
+	inline static int32_t get_offset_of_alertDialogEnabled_13() { return static_cast<int32_t>(offsetof(WebViewObject_tE6F9FD7B76F7E3894D7997DCCF7FACCDBDBD7F52, ___alertDialogEnabled_13)); }
+	inline bool get_alertDialogEnabled_13() const { return ___alertDialogEnabled_13; }
+	inline bool* get_address_of_alertDialogEnabled_13() { return &___alertDialogEnabled_13; }
+	inline void set_alertDialogEnabled_13(bool value)
 	{
-		___mMarginLeft_13 = value;
+		___alertDialogEnabled_13 = value;
 	}
 
-	inline static int32_t get_offset_of_mMarginTop_14() { return static_cast<int32_t>(offsetof(WebViewObject_tE6F9FD7B76F7E3894D7997DCCF7FACCDBDBD7F52, ___mMarginTop_14)); }
-	inline int32_t get_mMarginTop_14() const { return ___mMarginTop_14; }
-	inline int32_t* get_address_of_mMarginTop_14() { return &___mMarginTop_14; }
-	inline void set_mMarginTop_14(int32_t value)
+	inline static int32_t get_offset_of_scrollBounceEnabled_14() { return static_cast<int32_t>(offsetof(WebViewObject_tE6F9FD7B76F7E3894D7997DCCF7FACCDBDBD7F52, ___scrollBounceEnabled_14)); }
+	inline bool get_scrollBounceEnabled_14() const { return ___scrollBounceEnabled_14; }
+	inline bool* get_address_of_scrollBounceEnabled_14() { return &___scrollBounceEnabled_14; }
+	inline void set_scrollBounceEnabled_14(bool value)
 	{
-		___mMarginTop_14 = value;
+		___scrollBounceEnabled_14 = value;
 	}
 
-	inline static int32_t get_offset_of_mMarginRight_15() { return static_cast<int32_t>(offsetof(WebViewObject_tE6F9FD7B76F7E3894D7997DCCF7FACCDBDBD7F52, ___mMarginRight_15)); }
-	inline int32_t get_mMarginRight_15() const { return ___mMarginRight_15; }
-	inline int32_t* get_address_of_mMarginRight_15() { return &___mMarginRight_15; }
-	inline void set_mMarginRight_15(int32_t value)
+	inline static int32_t get_offset_of_mMarginLeft_15() { return static_cast<int32_t>(offsetof(WebViewObject_tE6F9FD7B76F7E3894D7997DCCF7FACCDBDBD7F52, ___mMarginLeft_15)); }
+	inline int32_t get_mMarginLeft_15() const { return ___mMarginLeft_15; }
+	inline int32_t* get_address_of_mMarginLeft_15() { return &___mMarginLeft_15; }
+	inline void set_mMarginLeft_15(int32_t value)
 	{
-		___mMarginRight_15 = value;
+		___mMarginLeft_15 = value;
 	}
 
-	inline static int32_t get_offset_of_mMarginBottom_16() { return static_cast<int32_t>(offsetof(WebViewObject_tE6F9FD7B76F7E3894D7997DCCF7FACCDBDBD7F52, ___mMarginBottom_16)); }
-	inline int32_t get_mMarginBottom_16() const { return ___mMarginBottom_16; }
-	inline int32_t* get_address_of_mMarginBottom_16() { return &___mMarginBottom_16; }
-	inline void set_mMarginBottom_16(int32_t value)
+	inline static int32_t get_offset_of_mMarginTop_16() { return static_cast<int32_t>(offsetof(WebViewObject_tE6F9FD7B76F7E3894D7997DCCF7FACCDBDBD7F52, ___mMarginTop_16)); }
+	inline int32_t get_mMarginTop_16() const { return ___mMarginTop_16; }
+	inline int32_t* get_address_of_mMarginTop_16() { return &___mMarginTop_16; }
+	inline void set_mMarginTop_16(int32_t value)
 	{
-		___mMarginBottom_16 = value;
+		___mMarginTop_16 = value;
 	}
 
-	inline static int32_t get_offset_of_mMarginRelative_17() { return static_cast<int32_t>(offsetof(WebViewObject_tE6F9FD7B76F7E3894D7997DCCF7FACCDBDBD7F52, ___mMarginRelative_17)); }
-	inline bool get_mMarginRelative_17() const { return ___mMarginRelative_17; }
-	inline bool* get_address_of_mMarginRelative_17() { return &___mMarginRelative_17; }
-	inline void set_mMarginRelative_17(bool value)
+	inline static int32_t get_offset_of_mMarginRight_17() { return static_cast<int32_t>(offsetof(WebViewObject_tE6F9FD7B76F7E3894D7997DCCF7FACCDBDBD7F52, ___mMarginRight_17)); }
+	inline int32_t get_mMarginRight_17() const { return ___mMarginRight_17; }
+	inline int32_t* get_address_of_mMarginRight_17() { return &___mMarginRight_17; }
+	inline void set_mMarginRight_17(int32_t value)
 	{
-		___mMarginRelative_17 = value;
+		___mMarginRight_17 = value;
 	}
 
-	inline static int32_t get_offset_of_mMarginLeftComputed_18() { return static_cast<int32_t>(offsetof(WebViewObject_tE6F9FD7B76F7E3894D7997DCCF7FACCDBDBD7F52, ___mMarginLeftComputed_18)); }
-	inline float get_mMarginLeftComputed_18() const { return ___mMarginLeftComputed_18; }
-	inline float* get_address_of_mMarginLeftComputed_18() { return &___mMarginLeftComputed_18; }
-	inline void set_mMarginLeftComputed_18(float value)
+	inline static int32_t get_offset_of_mMarginBottom_18() { return static_cast<int32_t>(offsetof(WebViewObject_tE6F9FD7B76F7E3894D7997DCCF7FACCDBDBD7F52, ___mMarginBottom_18)); }
+	inline int32_t get_mMarginBottom_18() const { return ___mMarginBottom_18; }
+	inline int32_t* get_address_of_mMarginBottom_18() { return &___mMarginBottom_18; }
+	inline void set_mMarginBottom_18(int32_t value)
 	{
-		___mMarginLeftComputed_18 = value;
+		___mMarginBottom_18 = value;
 	}
 
-	inline static int32_t get_offset_of_mMarginTopComputed_19() { return static_cast<int32_t>(offsetof(WebViewObject_tE6F9FD7B76F7E3894D7997DCCF7FACCDBDBD7F52, ___mMarginTopComputed_19)); }
-	inline float get_mMarginTopComputed_19() const { return ___mMarginTopComputed_19; }
-	inline float* get_address_of_mMarginTopComputed_19() { return &___mMarginTopComputed_19; }
-	inline void set_mMarginTopComputed_19(float value)
+	inline static int32_t get_offset_of_mMarginRelative_19() { return static_cast<int32_t>(offsetof(WebViewObject_tE6F9FD7B76F7E3894D7997DCCF7FACCDBDBD7F52, ___mMarginRelative_19)); }
+	inline bool get_mMarginRelative_19() const { return ___mMarginRelative_19; }
+	inline bool* get_address_of_mMarginRelative_19() { return &___mMarginRelative_19; }
+	inline void set_mMarginRelative_19(bool value)
 	{
-		___mMarginTopComputed_19 = value;
+		___mMarginRelative_19 = value;
 	}
 
-	inline static int32_t get_offset_of_mMarginRightComputed_20() { return static_cast<int32_t>(offsetof(WebViewObject_tE6F9FD7B76F7E3894D7997DCCF7FACCDBDBD7F52, ___mMarginRightComputed_20)); }
-	inline float get_mMarginRightComputed_20() const { return ___mMarginRightComputed_20; }
-	inline float* get_address_of_mMarginRightComputed_20() { return &___mMarginRightComputed_20; }
-	inline void set_mMarginRightComputed_20(float value)
+	inline static int32_t get_offset_of_mMarginLeftComputed_20() { return static_cast<int32_t>(offsetof(WebViewObject_tE6F9FD7B76F7E3894D7997DCCF7FACCDBDBD7F52, ___mMarginLeftComputed_20)); }
+	inline float get_mMarginLeftComputed_20() const { return ___mMarginLeftComputed_20; }
+	inline float* get_address_of_mMarginLeftComputed_20() { return &___mMarginLeftComputed_20; }
+	inline void set_mMarginLeftComputed_20(float value)
 	{
-		___mMarginRightComputed_20 = value;
+		___mMarginLeftComputed_20 = value;
 	}
 
-	inline static int32_t get_offset_of_mMarginBottomComputed_21() { return static_cast<int32_t>(offsetof(WebViewObject_tE6F9FD7B76F7E3894D7997DCCF7FACCDBDBD7F52, ___mMarginBottomComputed_21)); }
-	inline float get_mMarginBottomComputed_21() const { return ___mMarginBottomComputed_21; }
-	inline float* get_address_of_mMarginBottomComputed_21() { return &___mMarginBottomComputed_21; }
-	inline void set_mMarginBottomComputed_21(float value)
+	inline static int32_t get_offset_of_mMarginTopComputed_21() { return static_cast<int32_t>(offsetof(WebViewObject_tE6F9FD7B76F7E3894D7997DCCF7FACCDBDBD7F52, ___mMarginTopComputed_21)); }
+	inline float get_mMarginTopComputed_21() const { return ___mMarginTopComputed_21; }
+	inline float* get_address_of_mMarginTopComputed_21() { return &___mMarginTopComputed_21; }
+	inline void set_mMarginTopComputed_21(float value)
 	{
-		___mMarginBottomComputed_21 = value;
+		___mMarginTopComputed_21 = value;
 	}
 
-	inline static int32_t get_offset_of_mMarginRelativeComputed_22() { return static_cast<int32_t>(offsetof(WebViewObject_tE6F9FD7B76F7E3894D7997DCCF7FACCDBDBD7F52, ___mMarginRelativeComputed_22)); }
-	inline bool get_mMarginRelativeComputed_22() const { return ___mMarginRelativeComputed_22; }
-	inline bool* get_address_of_mMarginRelativeComputed_22() { return &___mMarginRelativeComputed_22; }
-	inline void set_mMarginRelativeComputed_22(bool value)
+	inline static int32_t get_offset_of_mMarginRightComputed_22() { return static_cast<int32_t>(offsetof(WebViewObject_tE6F9FD7B76F7E3894D7997DCCF7FACCDBDBD7F52, ___mMarginRightComputed_22)); }
+	inline float get_mMarginRightComputed_22() const { return ___mMarginRightComputed_22; }
+	inline float* get_address_of_mMarginRightComputed_22() { return &___mMarginRightComputed_22; }
+	inline void set_mMarginRightComputed_22(float value)
 	{
-		___mMarginRelativeComputed_22 = value;
+		___mMarginRightComputed_22 = value;
 	}
 
-	inline static int32_t get_offset_of_webView_23() { return static_cast<int32_t>(offsetof(WebViewObject_tE6F9FD7B76F7E3894D7997DCCF7FACCDBDBD7F52, ___webView_23)); }
-	inline intptr_t get_webView_23() const { return ___webView_23; }
-	inline intptr_t* get_address_of_webView_23() { return &___webView_23; }
-	inline void set_webView_23(intptr_t value)
+	inline static int32_t get_offset_of_mMarginBottomComputed_23() { return static_cast<int32_t>(offsetof(WebViewObject_tE6F9FD7B76F7E3894D7997DCCF7FACCDBDBD7F52, ___mMarginBottomComputed_23)); }
+	inline float get_mMarginBottomComputed_23() const { return ___mMarginBottomComputed_23; }
+	inline float* get_address_of_mMarginBottomComputed_23() { return &___mMarginBottomComputed_23; }
+	inline void set_mMarginBottomComputed_23(float value)
 	{
-		___webView_23 = value;
+		___mMarginBottomComputed_23 = value;
+	}
+
+	inline static int32_t get_offset_of_mMarginRelativeComputed_24() { return static_cast<int32_t>(offsetof(WebViewObject_tE6F9FD7B76F7E3894D7997DCCF7FACCDBDBD7F52, ___mMarginRelativeComputed_24)); }
+	inline bool get_mMarginRelativeComputed_24() const { return ___mMarginRelativeComputed_24; }
+	inline bool* get_address_of_mMarginRelativeComputed_24() { return &___mMarginRelativeComputed_24; }
+	inline void set_mMarginRelativeComputed_24(bool value)
+	{
+		___mMarginRelativeComputed_24 = value;
+	}
+
+	inline static int32_t get_offset_of_webView_25() { return static_cast<int32_t>(offsetof(WebViewObject_tE6F9FD7B76F7E3894D7997DCCF7FACCDBDBD7F52, ___webView_25)); }
+	inline intptr_t get_webView_25() const { return ___webView_25; }
+	inline intptr_t* get_address_of_webView_25() { return &___webView_25; }
+	inline void set_webView_25(intptr_t value)
+	{
+		___webView_25 = value;
 	}
 };
 
@@ -861,14 +883,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Action_1_Invoke_m587509C88BB83721D7918D8
 
 // System.Boolean UnityEngine.TouchScreenKeyboard::get_visible()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TouchScreenKeyboard_get_visible_m9099838FFE020BEAC716B29F5F47FBC831710549 (const RuntimeMethod* method);
-// System.String UnityEngine.Object::get_name()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Object_get_name_m0C7BC870ED2F0DC5A2FB09628136CD7D1CB82CFB (Object_tF2F3778131EFF286AF62B7B013A170F95A91571A * __this, const RuntimeMethod* method);
-// System.IntPtr WebViewObject::_CWebViewPlugin_Init(System.String,System.Boolean,System.Boolean,System.String,System.Boolean,System.Int32,System.Boolean)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t WebViewObject__CWebViewPlugin_Init_m0E80D3901024ABAF6930FBD79DE954C819113A16 (String_t* ___gameObject0, bool ___transparent1, bool ___zoom2, String_t* ___ua3, bool ___enableWKWebView4, int32_t ___wkContentMode5, bool ___wkAllowsLinkPreview6, const RuntimeMethod* method);
 // System.Boolean System.IntPtr::op_Equality(System.IntPtr,System.IntPtr)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool IntPtr_op_Equality_mD94F3FE43A65684EFF984A7B95E70D2520C0AC73 (intptr_t ___value10, intptr_t ___value21, const RuntimeMethod* method);
+// System.Boolean WebViewObject::_CWebViewPlugin_IsInitialized(System.IntPtr)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool WebViewObject__CWebViewPlugin_IsInitialized_m595595A30A77F7ED29302EE33DF2653AB88F7FCB (intptr_t ___instance0, const RuntimeMethod* method);
+// System.String UnityEngine.Object::get_name()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Object_get_name_m0C7BC870ED2F0DC5A2FB09628136CD7D1CB82CFB (Object_tF2F3778131EFF286AF62B7B013A170F95A91571A * __this, const RuntimeMethod* method);
+// System.IntPtr WebViewObject::_CWebViewPlugin_Init(System.String,System.Boolean,System.Boolean,System.String,System.Boolean,System.Int32,System.Boolean,System.Boolean,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t WebViewObject__CWebViewPlugin_Init_m9E13B67E2641FC0D5F774DD716F92ED5073E37A2 (String_t* ___gameObject0, bool ___transparent1, bool ___zoom2, String_t* ___ua3, bool ___enableWKWebView4, int32_t ___wkContentMode5, bool ___wkAllowsLinkPreview6, bool ___wkAllowsBackForwardNavigationGestures7, int32_t ___radius8, const RuntimeMethod* method);
 // System.Int32 WebViewObject::_CWebViewPlugin_Destroy(System.IntPtr)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t WebViewObject__CWebViewPlugin_Destroy_mA7C9DC6CD8D34F9CCCEBEB9B000B1918FF2594AD (intptr_t ___instance0, const RuntimeMethod* method);
+// System.Void WebViewObject::_CWebViewPlugin_SetSuspended(System.IntPtr,System.Boolean)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebViewObject__CWebViewPlugin_SetSuspended_mFAF6E08CEB0D6AF9C10093933739D23AF81DDCE3 (intptr_t ___instance0, bool ___suspended1, const RuntimeMethod* method);
 // System.Int32 UnityEngine.Screen::get_width()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Screen_get_width_m52188F76E8AAF57BE373018CB14083BB74C43C1C (const RuntimeMethod* method);
 // System.Int32 UnityEngine.Screen::get_height()
@@ -877,12 +903,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Screen_get_height_m110C90A573EE67895D
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebViewObject_SetMargins_m77E97BCD82A9E0A9B29BE83EE316149CEF863E1C (WebViewObject_tE6F9FD7B76F7E3894D7997DCCF7FACCDBDBD7F52 * __this, int32_t ___left0, int32_t ___top1, int32_t ___right2, int32_t ___bottom3, bool ___relative4, const RuntimeMethod* method);
 // System.Void WebViewObject::_CWebViewPlugin_SetMargins(System.IntPtr,System.Single,System.Single,System.Single,System.Single,System.Boolean)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebViewObject__CWebViewPlugin_SetMargins_mB3B023742584BCF7E03863B124345569196EF268 (intptr_t ___instance0, float ___left1, float ___top2, float ___right3, float ___bottom4, bool ___relative5, const RuntimeMethod* method);
+// System.Boolean WebViewObject::GetVisibility()
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool WebViewObject_GetVisibility_m8811FDD7E75C8309FCC9F86649A8B8CDD59151B4_inline (WebViewObject_tE6F9FD7B76F7E3894D7997DCCF7FACCDBDBD7F52 * __this, const RuntimeMethod* method);
+// System.Void WebViewObject::EvaluateJS(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebViewObject_EvaluateJS_m220DC9C8C6A476A9917760D4A4E38BD382CFF30A (WebViewObject_tE6F9FD7B76F7E3894D7997DCCF7FACCDBDBD7F52 * __this, String_t* ___js0, const RuntimeMethod* method);
 // System.Void WebViewObject::_CWebViewPlugin_SetVisibility(System.IntPtr,System.Boolean)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebViewObject__CWebViewPlugin_SetVisibility_mFF35C98810E952F7B57EF867F3B8E2163FEE2B81 (intptr_t ___instance0, bool ___visibility1, const RuntimeMethod* method);
 // System.Void WebViewObject::_CWebViewPlugin_SetScrollbarsVisibility(System.IntPtr,System.Boolean)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebViewObject__CWebViewPlugin_SetScrollbarsVisibility_mB5008BCF8B9190B286D416B61A75F6667F1A5BC0 (intptr_t ___instance0, bool ___visibility1, const RuntimeMethod* method);
 // System.Void WebViewObject::_CWebViewPlugin_SetInteractionEnabled(System.IntPtr,System.Boolean)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebViewObject__CWebViewPlugin_SetInteractionEnabled_m703F952DDB87DCAA6B73EE43E94EB37D1CD51CDE (intptr_t ___instance0, bool ___enabled1, const RuntimeMethod* method);
+// System.Void WebViewObject::_CWebViewPlugin_SetGoogleAppRedirectionEnabled(System.IntPtr,System.Boolean)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebViewObject__CWebViewPlugin_SetGoogleAppRedirectionEnabled_mA26886E893B06453A346FFB9D72B09609E43BEE4 (intptr_t ___instance0, bool ___enabled1, const RuntimeMethod* method);
 // System.Void WebViewObject::_CWebViewPlugin_SetAlertDialogEnabled(System.IntPtr,System.Boolean)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebViewObject__CWebViewPlugin_SetAlertDialogEnabled_mDFBDF3AF3208F661AE20E9C11A05BE5509408F06 (intptr_t ___instance0, bool ___enabled1, const RuntimeMethod* method);
 // System.Void WebViewObject::_CWebViewPlugin_SetScrollBounceEnabled(System.IntPtr,System.Boolean)
@@ -924,19 +956,22 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* WebViewObject__CWebViewPlugin_GetCu
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebViewObject__CWebViewPlugin_RemoveCustomHeader_mEFE86DB41B599CCD948456D7ECC2C38152D47F32 (intptr_t ___instance0, String_t* ___headerKey1, const RuntimeMethod* method);
 // System.Void WebViewObject::_CWebViewPlugin_ClearCustomHeader(System.IntPtr)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebViewObject__CWebViewPlugin_ClearCustomHeader_m65D4C7B94B35A4C69319275A0296732608E4728C (intptr_t ___instance0, const RuntimeMethod* method);
+// System.Void WebViewObject::_CWebViewPlugin_ClearCookie(System.String,System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebViewObject__CWebViewPlugin_ClearCookie_m9C0C83065D1BE896899196411939F3C86EFA3465 (String_t* ___url0, String_t* ___name1, const RuntimeMethod* method);
 // System.Void WebViewObject::_CWebViewPlugin_ClearCookies()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebViewObject__CWebViewPlugin_ClearCookies_m906D80E0C60733BD95F16B36F039940E533B704D (const RuntimeMethod* method);
 // System.Void WebViewObject::_CWebViewPlugin_SaveCookies()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebViewObject__CWebViewPlugin_SaveCookies_m1EC1592BE4241E9317F629EFD44726C7ADC93AB5 (const RuntimeMethod* method);
-// System.String WebViewObject::_CWebViewPlugin_GetCookies(System.String)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* WebViewObject__CWebViewPlugin_GetCookies_m444016E7EEB0B240DACECD4FD54A19E169C4F3D0 (String_t* ___url0, const RuntimeMethod* method);
+// System.Void WebViewObject::_CWebViewPlugin_GetCookies(System.IntPtr,System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebViewObject__CWebViewPlugin_GetCookies_m3E1E2B36106FA8AD1EEB6F71A500E9D84A33275E (intptr_t ___instance0, String_t* ___url1, const RuntimeMethod* method);
 // System.Void WebViewObject::_CWebViewPlugin_SetBasicAuthInfo(System.IntPtr,System.String,System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebViewObject__CWebViewPlugin_SetBasicAuthInfo_m25864F2B1764FA42C3451A604EC50C01887B5DE0 (intptr_t ___instance0, String_t* ___userName1, String_t* ___password2, const RuntimeMethod* method);
 // System.Void WebViewObject::_CWebViewPlugin_ClearCache(System.IntPtr,System.Boolean)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebViewObject__CWebViewPlugin_ClearCache_mA9FE773F517FB9A78FFE3090333B77F08856552D (intptr_t ___instance0, bool ___includeDiskFiles1, const RuntimeMethod* method);
 // System.Void UnityEngine.MonoBehaviour::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviour__ctor_mC0995D847F6A95B1A553652636C38A2AA8B13BED (MonoBehaviour_t37A501200D970A8257124B0EAE00A0FF3DDC354A * __this, const RuntimeMethod* method);
-IL2CPP_EXTERN_C intptr_t DEFAULT_CALL _CWebViewPlugin_Init(char*, int32_t, int32_t, char*, int32_t, int32_t, int32_t);
+IL2CPP_EXTERN_C int32_t DEFAULT_CALL _CWebViewPlugin_IsInitialized(intptr_t);
+IL2CPP_EXTERN_C intptr_t DEFAULT_CALL _CWebViewPlugin_Init(char*, int32_t, int32_t, char*, int32_t, int32_t, int32_t, int32_t, int32_t);
 IL2CPP_EXTERN_C int32_t DEFAULT_CALL _CWebViewPlugin_Destroy(intptr_t);
 IL2CPP_EXTERN_C void DEFAULT_CALL _CWebViewPlugin_SetMargins(intptr_t, float, float, float, float, int32_t);
 IL2CPP_EXTERN_C void DEFAULT_CALL _CWebViewPlugin_SetVisibility(intptr_t, int32_t);
@@ -944,6 +979,7 @@ IL2CPP_EXTERN_C void DEFAULT_CALL _CWebViewPlugin_SetScrollbarsVisibility(intptr
 IL2CPP_EXTERN_C void DEFAULT_CALL _CWebViewPlugin_SetAlertDialogEnabled(intptr_t, int32_t);
 IL2CPP_EXTERN_C void DEFAULT_CALL _CWebViewPlugin_SetScrollBounceEnabled(intptr_t, int32_t);
 IL2CPP_EXTERN_C void DEFAULT_CALL _CWebViewPlugin_SetInteractionEnabled(intptr_t, int32_t);
+IL2CPP_EXTERN_C void DEFAULT_CALL _CWebViewPlugin_SetGoogleAppRedirectionEnabled(intptr_t, int32_t);
 IL2CPP_EXTERN_C int32_t DEFAULT_CALL _CWebViewPlugin_SetURLPattern(intptr_t, char*, char*, char*);
 IL2CPP_EXTERN_C void DEFAULT_CALL _CWebViewPlugin_LoadURL(intptr_t, char*);
 IL2CPP_EXTERN_C void DEFAULT_CALL _CWebViewPlugin_LoadHTML(intptr_t, char*, char*);
@@ -958,11 +994,13 @@ IL2CPP_EXTERN_C void DEFAULT_CALL _CWebViewPlugin_AddCustomHeader(intptr_t, char
 IL2CPP_EXTERN_C char* DEFAULT_CALL _CWebViewPlugin_GetCustomHeaderValue(intptr_t, char*);
 IL2CPP_EXTERN_C void DEFAULT_CALL _CWebViewPlugin_RemoveCustomHeader(intptr_t, char*);
 IL2CPP_EXTERN_C void DEFAULT_CALL _CWebViewPlugin_ClearCustomHeader(intptr_t);
+IL2CPP_EXTERN_C void DEFAULT_CALL _CWebViewPlugin_ClearCookie(char*, char*);
 IL2CPP_EXTERN_C void DEFAULT_CALL _CWebViewPlugin_ClearCookies();
 IL2CPP_EXTERN_C void DEFAULT_CALL _CWebViewPlugin_SaveCookies();
-IL2CPP_EXTERN_C char* DEFAULT_CALL _CWebViewPlugin_GetCookies(char*);
+IL2CPP_EXTERN_C void DEFAULT_CALL _CWebViewPlugin_GetCookies(intptr_t, char*);
 IL2CPP_EXTERN_C void DEFAULT_CALL _CWebViewPlugin_SetBasicAuthInfo(intptr_t, char*, char*);
 IL2CPP_EXTERN_C void DEFAULT_CALL _CWebViewPlugin_ClearCache(intptr_t, int32_t);
+IL2CPP_EXTERN_C void DEFAULT_CALL _CWebViewPlugin_SetSuspended(intptr_t, int32_t);
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
@@ -981,17 +1019,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebViewObject_Awake_m2479A80BF381F426557
 {
 	{
 		// alertDialogEnabled = true;
-		__this->set_alertDialogEnabled_11((bool)1);
+		__this->set_alertDialogEnabled_13((bool)1);
 		// scrollBounceEnabled = true;
-		__this->set_scrollBounceEnabled_12((bool)1);
+		__this->set_scrollBounceEnabled_14((bool)1);
 		// mMarginLeftComputed = -9999;
-		__this->set_mMarginLeftComputed_18((-9999.0f));
+		__this->set_mMarginLeftComputed_20((-9999.0f));
 		// mMarginTopComputed = -9999;
-		__this->set_mMarginTopComputed_19((-9999.0f));
+		__this->set_mMarginTopComputed_21((-9999.0f));
 		// mMarginRightComputed = -9999;
-		__this->set_mMarginRightComputed_20((-9999.0f));
+		__this->set_mMarginRightComputed_22((-9999.0f));
 		// mMarginBottomComputed = -9999;
-		__this->set_mMarginBottomComputed_21((-9999.0f));
+		__this->set_mMarginBottomComputed_23((-9999.0f));
 		// }
 		return;
 	}
@@ -1006,10 +1044,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool WebViewObject_get_IsKeyboardVisible_mBE1
 		return L_0;
 	}
 }
-// System.IntPtr WebViewObject::_CWebViewPlugin_Init(System.String,System.Boolean,System.Boolean,System.String,System.Boolean,System.Int32,System.Boolean)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t WebViewObject__CWebViewPlugin_Init_m0E80D3901024ABAF6930FBD79DE954C819113A16 (String_t* ___gameObject0, bool ___transparent1, bool ___zoom2, String_t* ___ua3, bool ___enableWKWebView4, int32_t ___wkContentMode5, bool ___wkAllowsLinkPreview6, const RuntimeMethod* method)
+// System.Boolean WebViewObject::_CWebViewPlugin_IsInitialized(System.IntPtr)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool WebViewObject__CWebViewPlugin_IsInitialized_m595595A30A77F7ED29302EE33DF2653AB88F7FCB (intptr_t ___instance0, const RuntimeMethod* method)
 {
-	typedef intptr_t (DEFAULT_CALL *PInvokeFunc) (char*, int32_t, int32_t, char*, int32_t, int32_t, int32_t);
+	typedef int32_t (DEFAULT_CALL *PInvokeFunc) (intptr_t);
+
+	// Native function invocation
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(_CWebViewPlugin_IsInitialized)(___instance0);
+
+	return static_cast<bool>(returnValue);
+}
+// System.IntPtr WebViewObject::_CWebViewPlugin_Init(System.String,System.Boolean,System.Boolean,System.String,System.Boolean,System.Int32,System.Boolean,System.Boolean,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t WebViewObject__CWebViewPlugin_Init_m9E13B67E2641FC0D5F774DD716F92ED5073E37A2 (String_t* ___gameObject0, bool ___transparent1, bool ___zoom2, String_t* ___ua3, bool ___enableWKWebView4, int32_t ___wkContentMode5, bool ___wkAllowsLinkPreview6, bool ___wkAllowsBackForwardNavigationGestures7, int32_t ___radius8, const RuntimeMethod* method)
+{
+	typedef intptr_t (DEFAULT_CALL *PInvokeFunc) (char*, int32_t, int32_t, char*, int32_t, int32_t, int32_t, int32_t, int32_t);
 
 	// Marshaling of parameter '___gameObject0' to native representation
 	char* ____gameObject0_marshaled = NULL;
@@ -1020,7 +1068,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t WebViewObject__CWebViewPlugin_Init_m
 	____ua3_marshaled = il2cpp_codegen_marshal_string(___ua3);
 
 	// Native function invocation
-	intptr_t returnValue = reinterpret_cast<PInvokeFunc>(_CWebViewPlugin_Init)(____gameObject0_marshaled, static_cast<int32_t>(___transparent1), static_cast<int32_t>(___zoom2), ____ua3_marshaled, static_cast<int32_t>(___enableWKWebView4), ___wkContentMode5, static_cast<int32_t>(___wkAllowsLinkPreview6));
+	intptr_t returnValue = reinterpret_cast<PInvokeFunc>(_CWebViewPlugin_Init)(____gameObject0_marshaled, static_cast<int32_t>(___transparent1), static_cast<int32_t>(___zoom2), ____ua3_marshaled, static_cast<int32_t>(___enableWKWebView4), ___wkContentMode5, static_cast<int32_t>(___wkAllowsLinkPreview6), static_cast<int32_t>(___wkAllowsBackForwardNavigationGestures7), ___radius8);
 
 	// Marshaling cleanup of parameter '___gameObject0' native representation
 	il2cpp_codegen_marshal_free(____gameObject0_marshaled);
@@ -1094,6 +1142,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebViewObject__CWebViewPlugin_SetInterac
 
 	// Native function invocation
 	reinterpret_cast<PInvokeFunc>(_CWebViewPlugin_SetInteractionEnabled)(___instance0, static_cast<int32_t>(___enabled1));
+
+}
+// System.Void WebViewObject::_CWebViewPlugin_SetGoogleAppRedirectionEnabled(System.IntPtr,System.Boolean)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebViewObject__CWebViewPlugin_SetGoogleAppRedirectionEnabled_mA26886E893B06453A346FFB9D72B09609E43BEE4 (intptr_t ___instance0, bool ___enabled1, const RuntimeMethod* method)
+{
+	typedef void (DEFAULT_CALL *PInvokeFunc) (intptr_t, int32_t);
+
+	// Native function invocation
+	reinterpret_cast<PInvokeFunc>(_CWebViewPlugin_SetGoogleAppRedirectionEnabled)(___instance0, static_cast<int32_t>(___enabled1));
 
 }
 // System.Boolean WebViewObject::_CWebViewPlugin_SetURLPattern(System.IntPtr,System.String,System.String,System.String)
@@ -1323,6 +1380,31 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebViewObject__CWebViewPlugin_ClearCusto
 	reinterpret_cast<PInvokeFunc>(_CWebViewPlugin_ClearCustomHeader)(___instance0);
 
 }
+// System.Void WebViewObject::_CWebViewPlugin_ClearCookie(System.String,System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebViewObject__CWebViewPlugin_ClearCookie_m9C0C83065D1BE896899196411939F3C86EFA3465 (String_t* ___url0, String_t* ___name1, const RuntimeMethod* method)
+{
+	typedef void (DEFAULT_CALL *PInvokeFunc) (char*, char*);
+
+	// Marshaling of parameter '___url0' to native representation
+	char* ____url0_marshaled = NULL;
+	____url0_marshaled = il2cpp_codegen_marshal_string(___url0);
+
+	// Marshaling of parameter '___name1' to native representation
+	char* ____name1_marshaled = NULL;
+	____name1_marshaled = il2cpp_codegen_marshal_string(___name1);
+
+	// Native function invocation
+	reinterpret_cast<PInvokeFunc>(_CWebViewPlugin_ClearCookie)(____url0_marshaled, ____name1_marshaled);
+
+	// Marshaling cleanup of parameter '___url0' native representation
+	il2cpp_codegen_marshal_free(____url0_marshaled);
+	____url0_marshaled = NULL;
+
+	// Marshaling cleanup of parameter '___name1' native representation
+	il2cpp_codegen_marshal_free(____name1_marshaled);
+	____name1_marshaled = NULL;
+
+}
 // System.Void WebViewObject::_CWebViewPlugin_ClearCookies()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebViewObject__CWebViewPlugin_ClearCookies_m906D80E0C60733BD95F16B36F039940E533B704D (const RuntimeMethod* method)
 {
@@ -1341,31 +1423,22 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebViewObject__CWebViewPlugin_SaveCookie
 	reinterpret_cast<PInvokeFunc>(_CWebViewPlugin_SaveCookies)();
 
 }
-// System.String WebViewObject::_CWebViewPlugin_GetCookies(System.String)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* WebViewObject__CWebViewPlugin_GetCookies_m444016E7EEB0B240DACECD4FD54A19E169C4F3D0 (String_t* ___url0, const RuntimeMethod* method)
+// System.Void WebViewObject::_CWebViewPlugin_GetCookies(System.IntPtr,System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebViewObject__CWebViewPlugin_GetCookies_m3E1E2B36106FA8AD1EEB6F71A500E9D84A33275E (intptr_t ___instance0, String_t* ___url1, const RuntimeMethod* method)
 {
-	typedef char* (DEFAULT_CALL *PInvokeFunc) (char*);
+	typedef void (DEFAULT_CALL *PInvokeFunc) (intptr_t, char*);
 
-	// Marshaling of parameter '___url0' to native representation
-	char* ____url0_marshaled = NULL;
-	____url0_marshaled = il2cpp_codegen_marshal_string(___url0);
+	// Marshaling of parameter '___url1' to native representation
+	char* ____url1_marshaled = NULL;
+	____url1_marshaled = il2cpp_codegen_marshal_string(___url1);
 
 	// Native function invocation
-	char* returnValue = reinterpret_cast<PInvokeFunc>(_CWebViewPlugin_GetCookies)(____url0_marshaled);
+	reinterpret_cast<PInvokeFunc>(_CWebViewPlugin_GetCookies)(___instance0, ____url1_marshaled);
 
-	// Marshaling of return value back from native representation
-	String_t* _returnValue_unmarshaled = NULL;
-	_returnValue_unmarshaled = il2cpp_codegen_marshal_string_result(returnValue);
+	// Marshaling cleanup of parameter '___url1' native representation
+	il2cpp_codegen_marshal_free(____url1_marshaled);
+	____url1_marshaled = NULL;
 
-	// Marshaling cleanup of return value native representation
-	il2cpp_codegen_marshal_free(returnValue);
-	returnValue = NULL;
-
-	// Marshaling cleanup of parameter '___url0' native representation
-	il2cpp_codegen_marshal_free(____url0_marshaled);
-	____url0_marshaled = NULL;
-
-	return _returnValue_unmarshaled;
 }
 // System.Void WebViewObject::_CWebViewPlugin_SetBasicAuthInfo(System.IntPtr,System.String,System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebViewObject__CWebViewPlugin_SetBasicAuthInfo_m25864F2B1764FA42C3451A604EC50C01887B5DE0 (intptr_t ___instance0, String_t* ___userName1, String_t* ___password2, const RuntimeMethod* method)
@@ -1401,6 +1474,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebViewObject__CWebViewPlugin_ClearCache
 	reinterpret_cast<PInvokeFunc>(_CWebViewPlugin_ClearCache)(___instance0, static_cast<int32_t>(___includeDiskFiles1));
 
 }
+// System.Void WebViewObject::_CWebViewPlugin_SetSuspended(System.IntPtr,System.Boolean)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebViewObject__CWebViewPlugin_SetSuspended_mFAF6E08CEB0D6AF9C10093933739D23AF81DDCE3 (intptr_t ___instance0, bool ___suspended1, const RuntimeMethod* method)
+{
+	typedef void (DEFAULT_CALL *PInvokeFunc) (intptr_t, int32_t);
+
+	// Native function invocation
+	reinterpret_cast<PInvokeFunc>(_CWebViewPlugin_SetSuspended)(___instance0, static_cast<int32_t>(___suspended1));
+
+}
 // System.Boolean WebViewObject::IsWebViewAvailable()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool WebViewObject_IsWebViewAvailable_m730482C758E0E6350B1A5CCF0B4D9438548CC17D (const RuntimeMethod* method)
 {
@@ -1409,8 +1491,41 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool WebViewObject_IsWebViewAvailable_m730482
 		return (bool)1;
 	}
 }
-// System.Void WebViewObject::Init(System.Action`1<System.String>,System.Action`1<System.String>,System.Action`1<System.String>,System.Action`1<System.String>,System.Action`1<System.String>,System.Action`1<System.String>,System.Boolean,System.Boolean,System.String,System.Int32,System.Boolean,System.Int32,System.Boolean,System.Boolean)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebViewObject_Init_mE71A84E46BD4563E56B84BF06A56DC6160B97B30 (WebViewObject_tE6F9FD7B76F7E3894D7997DCCF7FACCDBDBD7F52 * __this, Action_1_tC0D73E03177C82525D78670CDC2165F7CBF0A9C3 * ___cb0, Action_1_tC0D73E03177C82525D78670CDC2165F7CBF0A9C3 * ___err1, Action_1_tC0D73E03177C82525D78670CDC2165F7CBF0A9C3 * ___httpErr2, Action_1_tC0D73E03177C82525D78670CDC2165F7CBF0A9C3 * ___ld3, Action_1_tC0D73E03177C82525D78670CDC2165F7CBF0A9C3 * ___started4, Action_1_tC0D73E03177C82525D78670CDC2165F7CBF0A9C3 * ___hooked5, bool ___transparent6, bool ___zoom7, String_t* ___ua8, int32_t ___androidForceDarkMode9, bool ___enableWKWebView10, int32_t ___wkContentMode11, bool ___wkAllowsLinkPreview12, bool ___separated13, const RuntimeMethod* method)
+// System.Boolean WebViewObject::IsInitialized()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool WebViewObject_IsInitialized_mBF949F2587687EC8FB1668BA20785409CE67CF72 (WebViewObject_tE6F9FD7B76F7E3894D7997DCCF7FACCDBDBD7F52 * __this, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IntPtr_t_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		// if (webView == IntPtr.Zero)
+		intptr_t L_0 = __this->get_webView_25();
+		bool L_1;
+		L_1 = IntPtr_op_Equality_mD94F3FE43A65684EFF984A7B95E70D2520C0AC73((intptr_t)L_0, (intptr_t)(0), /*hidden argument*/NULL);
+		if (!L_1)
+		{
+			goto IL_0014;
+		}
+	}
+	{
+		// return false;
+		return (bool)0;
+	}
+
+IL_0014:
+	{
+		// return _CWebViewPlugin_IsInitialized(webView);
+		intptr_t L_2 = __this->get_webView_25();
+		bool L_3;
+		L_3 = WebViewObject__CWebViewPlugin_IsInitialized_m595595A30A77F7ED29302EE33DF2653AB88F7FCB((intptr_t)L_2, /*hidden argument*/NULL);
+		return L_3;
+	}
+}
+// System.Void WebViewObject::Init(System.Action`1<System.String>,System.Action`1<System.String>,System.Action`1<System.String>,System.Action`1<System.String>,System.Action`1<System.String>,System.Action`1<System.String>,System.Action`1<System.String>,System.Boolean,System.Boolean,System.String,System.Int32,System.Int32,System.Boolean,System.Int32,System.Boolean,System.Boolean,System.Boolean)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebViewObject_Init_mFDE3C8921AD3E0F39A4DD1879BFBBC0D8ED71491 (WebViewObject_tE6F9FD7B76F7E3894D7997DCCF7FACCDBDBD7F52 * __this, Action_1_tC0D73E03177C82525D78670CDC2165F7CBF0A9C3 * ___cb0, Action_1_tC0D73E03177C82525D78670CDC2165F7CBF0A9C3 * ___err1, Action_1_tC0D73E03177C82525D78670CDC2165F7CBF0A9C3 * ___httpErr2, Action_1_tC0D73E03177C82525D78670CDC2165F7CBF0A9C3 * ___ld3, Action_1_tC0D73E03177C82525D78670CDC2165F7CBF0A9C3 * ___started4, Action_1_tC0D73E03177C82525D78670CDC2165F7CBF0A9C3 * ___hooked5, Action_1_tC0D73E03177C82525D78670CDC2165F7CBF0A9C3 * ___cookies6, bool ___transparent7, bool ___zoom8, String_t* ___ua9, int32_t ___radius10, int32_t ___androidForceDarkMode11, bool ___enableWKWebView12, int32_t ___wkContentMode13, bool ___wkAllowsLinkPreview14, bool ___wkAllowsBackForwardNavigationGestures15, bool ___separated16, const RuntimeMethod* method)
 {
 	{
 		// onJS = cb;
@@ -1431,18 +1546,23 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebViewObject_Init_mE71A84E46BD4563E56B8
 		// onHooked = hooked;
 		Action_1_tC0D73E03177C82525D78670CDC2165F7CBF0A9C3 * L_5 = ___hooked5;
 		__this->set_onHooked_9(L_5);
-		// webView = _CWebViewPlugin_Init(name, transparent, zoom, ua, enableWKWebView, wkContentMode, wkAllowsLinkPreview);
-		String_t* L_6;
-		L_6 = Object_get_name_m0C7BC870ED2F0DC5A2FB09628136CD7D1CB82CFB(__this, /*hidden argument*/NULL);
-		bool L_7 = ___transparent6;
-		bool L_8 = ___zoom7;
-		String_t* L_9 = ___ua8;
-		bool L_10 = ___enableWKWebView10;
-		int32_t L_11 = ___wkContentMode11;
-		bool L_12 = ___wkAllowsLinkPreview12;
-		intptr_t L_13;
-		L_13 = WebViewObject__CWebViewPlugin_Init_m0E80D3901024ABAF6930FBD79DE954C819113A16(L_6, L_7, L_8, L_9, L_10, L_11, L_12, /*hidden argument*/NULL);
-		__this->set_webView_23((intptr_t)L_13);
+		// onCookies = cookies;
+		Action_1_tC0D73E03177C82525D78670CDC2165F7CBF0A9C3 * L_6 = ___cookies6;
+		__this->set_onCookies_10(L_6);
+		// webView = _CWebViewPlugin_Init(name, transparent, zoom, ua, enableWKWebView, wkContentMode, wkAllowsLinkPreview, wkAllowsBackForwardNavigationGestures, radius);
+		String_t* L_7;
+		L_7 = Object_get_name_m0C7BC870ED2F0DC5A2FB09628136CD7D1CB82CFB(__this, /*hidden argument*/NULL);
+		bool L_8 = ___transparent7;
+		bool L_9 = ___zoom8;
+		String_t* L_10 = ___ua9;
+		bool L_11 = ___enableWKWebView12;
+		int32_t L_12 = ___wkContentMode13;
+		bool L_13 = ___wkAllowsLinkPreview14;
+		bool L_14 = ___wkAllowsBackForwardNavigationGestures15;
+		int32_t L_15 = ___radius10;
+		intptr_t L_16;
+		L_16 = WebViewObject__CWebViewPlugin_Init_m9E13B67E2641FC0D5F774DD716F92ED5073E37A2(L_7, L_8, L_9, L_10, L_11, L_12, L_13, L_14, L_15, /*hidden argument*/NULL);
+		__this->set_webView_25((intptr_t)L_16);
 		// }
 		return;
 	}
@@ -1458,7 +1578,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebViewObject_OnDestroy_m656ACF4F10BC03E
 	}
 	{
 		// if (webView == IntPtr.Zero)
-		intptr_t L_0 = __this->get_webView_23();
+		intptr_t L_0 = __this->get_webView_25();
 		bool L_1;
 		L_1 = IntPtr_op_Equality_mD94F3FE43A65684EFF984A7B95E70D2520C0AC73((intptr_t)L_0, (intptr_t)(0), /*hidden argument*/NULL);
 		if (!L_1)
@@ -1474,11 +1594,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebViewObject_OnDestroy_m656ACF4F10BC03E
 IL_0013:
 	{
 		// _CWebViewPlugin_Destroy(webView);
-		intptr_t L_2 = __this->get_webView_23();
+		intptr_t L_2 = __this->get_webView_25();
 		int32_t L_3;
 		L_3 = WebViewObject__CWebViewPlugin_Destroy_mA7C9DC6CD8D34F9CCCEBEB9B000B1918FF2594AD((intptr_t)L_2, /*hidden argument*/NULL);
 		// webView = IntPtr.Zero;
-		__this->set_webView_23((intptr_t)(0));
+		__this->set_webView_25((intptr_t)(0));
 		// }
 		return;
 	}
@@ -1487,6 +1607,11 @@ IL_0013:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebViewObject_Pause_mABAD2C7BDDACF1DA60A79BA507FF9E1ECC1F7592 (WebViewObject_tE6F9FD7B76F7E3894D7997DCCF7FACCDBDBD7F52 * __this, const RuntimeMethod* method)
 {
 	{
+		// if (webView == null)
+		intptr_t L_0 = __this->get_webView_25();
+		// _CWebViewPlugin_SetSuspended(webView, true);
+		intptr_t L_1 = __this->get_webView_25();
+		WebViewObject__CWebViewPlugin_SetSuspended_mFAF6E08CEB0D6AF9C10093933739D23AF81DDCE3((intptr_t)L_1, (bool)1, /*hidden argument*/NULL);
 		// }
 		return;
 	}
@@ -1495,6 +1620,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebViewObject_Pause_mABAD2C7BDDACF1DA60A
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebViewObject_Resume_m7F731886000E88566C93CB5F47CB981269E61DCD (WebViewObject_tE6F9FD7B76F7E3894D7997DCCF7FACCDBDBD7F52 * __this, const RuntimeMethod* method)
 {
 	{
+		// _CWebViewPlugin_SetSuspended(webView, false);
+		intptr_t L_0 = __this->get_webView_25();
+		WebViewObject__CWebViewPlugin_SetSuspended_mFAF6E08CEB0D6AF9C10093933739D23AF81DDCE3((intptr_t)L_0, (bool)0, /*hidden argument*/NULL);
 		// }
 		return;
 	}
@@ -1565,7 +1693,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebViewObject_SetMargins_m77E97BCD82A9E0
 	float V_6 = 0.0f;
 	{
 		// if (webView == IntPtr.Zero)
-		intptr_t L_0 = __this->get_webView_23();
+		intptr_t L_0 = __this->get_webView_25();
 		bool L_1;
 		L_1 = IntPtr_op_Equality_mD94F3FE43A65684EFF984A7B95E70D2520C0AC73((intptr_t)L_0, (intptr_t)(0), /*hidden argument*/NULL);
 		if (!L_1)
@@ -1582,19 +1710,19 @@ IL_0013:
 	{
 		// mMarginLeft = left;
 		int32_t L_2 = ___left0;
-		__this->set_mMarginLeft_13(L_2);
+		__this->set_mMarginLeft_15(L_2);
 		// mMarginTop = top;
 		int32_t L_3 = ___top1;
-		__this->set_mMarginTop_14(L_3);
+		__this->set_mMarginTop_16(L_3);
 		// mMarginRight = right;
 		int32_t L_4 = ___right2;
-		__this->set_mMarginRight_15(L_4);
+		__this->set_mMarginRight_17(L_4);
 		// mMarginBottom = bottom;
 		int32_t L_5 = ___bottom3;
-		__this->set_mMarginBottom_16(L_5);
+		__this->set_mMarginBottom_18(L_5);
 		// mMarginRelative = relative;
 		bool L_6 = ___relative4;
-		__this->set_mMarginRelative_17(L_6);
+		__this->set_mMarginRelative_19(L_6);
 		// if (relative)
 		bool L_7 = ___relative4;
 		if (!L_7)
@@ -1658,7 +1786,7 @@ IL_0074:
 		//     && mb == mMarginBottomComputed
 		//     && r == mMarginRelativeComputed)
 		float L_23 = V_0;
-		float L_24 = __this->get_mMarginLeftComputed_18();
+		float L_24 = __this->get_mMarginLeftComputed_20();
 		if ((!(((float)L_23) == ((float)L_24))))
 		{
 			goto IL_00a7;
@@ -1666,7 +1794,7 @@ IL_0074:
 	}
 	{
 		float L_25 = V_1;
-		float L_26 = __this->get_mMarginTopComputed_19();
+		float L_26 = __this->get_mMarginTopComputed_21();
 		if ((!(((float)L_25) == ((float)L_26))))
 		{
 			goto IL_00a7;
@@ -1674,7 +1802,7 @@ IL_0074:
 	}
 	{
 		float L_27 = V_2;
-		float L_28 = __this->get_mMarginRightComputed_20();
+		float L_28 = __this->get_mMarginRightComputed_22();
 		if ((!(((float)L_27) == ((float)L_28))))
 		{
 			goto IL_00a7;
@@ -1682,7 +1810,7 @@ IL_0074:
 	}
 	{
 		float L_29 = V_3;
-		float L_30 = __this->get_mMarginBottomComputed_21();
+		float L_30 = __this->get_mMarginBottomComputed_23();
 		if ((!(((float)L_29) == ((float)L_30))))
 		{
 			goto IL_00a7;
@@ -1690,7 +1818,7 @@ IL_0074:
 	}
 	{
 		bool L_31 = V_4;
-		bool L_32 = __this->get_mMarginRelativeComputed_22();
+		bool L_32 = __this->get_mMarginRelativeComputed_24();
 		if ((!(((uint32_t)L_31) == ((uint32_t)L_32))))
 		{
 			goto IL_00a7;
@@ -1705,21 +1833,21 @@ IL_00a7:
 	{
 		// mMarginLeftComputed = ml;
 		float L_33 = V_0;
-		__this->set_mMarginLeftComputed_18(L_33);
+		__this->set_mMarginLeftComputed_20(L_33);
 		// mMarginTopComputed = mt;
 		float L_34 = V_1;
-		__this->set_mMarginTopComputed_19(L_34);
+		__this->set_mMarginTopComputed_21(L_34);
 		// mMarginRightComputed = mr;
 		float L_35 = V_2;
-		__this->set_mMarginRightComputed_20(L_35);
+		__this->set_mMarginRightComputed_22(L_35);
 		// mMarginBottomComputed = mb;
 		float L_36 = V_3;
-		__this->set_mMarginBottomComputed_21(L_36);
+		__this->set_mMarginBottomComputed_23(L_36);
 		// mMarginRelativeComputed = r;
 		bool L_37 = V_4;
-		__this->set_mMarginRelativeComputed_22(L_37);
+		__this->set_mMarginRelativeComputed_24(L_37);
 		// _CWebViewPlugin_SetMargins(webView, ml, mt, mr, mb, r);
-		intptr_t L_38 = __this->get_webView_23();
+		intptr_t L_38 = __this->get_webView_25();
 		float L_39 = V_0;
 		float L_40 = V_1;
 		float L_41 = V_2;
@@ -1737,16 +1865,39 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebViewObject_SetVisibility_m8FF4BB72505
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IntPtr_t_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralB46BAFF8C351D24C5F3A93095D304D7CBF331A7C);
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		// if (webView == IntPtr.Zero)
-		intptr_t L_0 = __this->get_webView_23();
-		bool L_1;
-		L_1 = IntPtr_op_Equality_mD94F3FE43A65684EFF984A7B95E70D2520C0AC73((intptr_t)L_0, (intptr_t)(0), /*hidden argument*/NULL);
-		if (!L_1)
+		// if (GetVisibility() && !v)
+		bool L_0;
+		L_0 = WebViewObject_GetVisibility_m8811FDD7E75C8309FCC9F86649A8B8CDD59151B4_inline(__this, /*hidden argument*/NULL);
+		if (!L_0)
 		{
-			goto IL_0013;
+			goto IL_0016;
+		}
+	}
+	{
+		bool L_1 = ___v0;
+		if (L_1)
+		{
+			goto IL_0016;
+		}
+	}
+	{
+		// EvaluateJS("if (document && document.activeElement) document.activeElement.blur();");
+		WebViewObject_EvaluateJS_m220DC9C8C6A476A9917760D4A4E38BD382CFF30A(__this, _stringLiteralB46BAFF8C351D24C5F3A93095D304D7CBF331A7C, /*hidden argument*/NULL);
+	}
+
+IL_0016:
+	{
+		// if (webView == IntPtr.Zero)
+		intptr_t L_2 = __this->get_webView_25();
+		bool L_3;
+		L_3 = IntPtr_op_Equality_mD94F3FE43A65684EFF984A7B95E70D2520C0AC73((intptr_t)L_2, (intptr_t)(0), /*hidden argument*/NULL);
+		if (!L_3)
+		{
+			goto IL_0029;
 		}
 	}
 	{
@@ -1754,15 +1905,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebViewObject_SetVisibility_m8FF4BB72505
 		return;
 	}
 
-IL_0013:
+IL_0029:
 	{
 		// _CWebViewPlugin_SetVisibility(webView, v);
-		intptr_t L_2 = __this->get_webView_23();
-		bool L_3 = ___v0;
-		WebViewObject__CWebViewPlugin_SetVisibility_mFF35C98810E952F7B57EF867F3B8E2163FEE2B81((intptr_t)L_2, L_3, /*hidden argument*/NULL);
+		intptr_t L_4 = __this->get_webView_25();
+		bool L_5 = ___v0;
+		WebViewObject__CWebViewPlugin_SetVisibility_mFF35C98810E952F7B57EF867F3B8E2163FEE2B81((intptr_t)L_4, L_5, /*hidden argument*/NULL);
 		// visibility = v;
-		bool L_4 = ___v0;
-		__this->set_visibility_10(L_4);
+		bool L_6 = ___v0;
+		__this->set_visibility_12(L_6);
 		// }
 		return;
 	}
@@ -1772,7 +1923,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool WebViewObject_GetVisibility_m8811FDD7E75
 {
 	{
 		// return visibility;
-		bool L_0 = __this->get_visibility_10();
+		bool L_0 = __this->get_visibility_12();
 		return L_0;
 	}
 }
@@ -1787,7 +1938,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebViewObject_SetScrollbarsVisibility_m7
 	}
 	{
 		// if (webView == IntPtr.Zero)
-		intptr_t L_0 = __this->get_webView_23();
+		intptr_t L_0 = __this->get_webView_25();
 		bool L_1;
 		L_1 = IntPtr_op_Equality_mD94F3FE43A65684EFF984A7B95E70D2520C0AC73((intptr_t)L_0, (intptr_t)(0), /*hidden argument*/NULL);
 		if (!L_1)
@@ -1803,7 +1954,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebViewObject_SetScrollbarsVisibility_m7
 IL_0013:
 	{
 		// _CWebViewPlugin_SetScrollbarsVisibility(webView, v);
-		intptr_t L_2 = __this->get_webView_23();
+		intptr_t L_2 = __this->get_webView_25();
 		bool L_3 = ___v0;
 		WebViewObject__CWebViewPlugin_SetScrollbarsVisibility_mB5008BCF8B9190B286D416B61A75F6667F1A5BC0((intptr_t)L_2, L_3, /*hidden argument*/NULL);
 		// }
@@ -1821,7 +1972,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebViewObject_SetInteractionEnabled_mE08
 	}
 	{
 		// if (webView == IntPtr.Zero)
-		intptr_t L_0 = __this->get_webView_23();
+		intptr_t L_0 = __this->get_webView_25();
 		bool L_1;
 		L_1 = IntPtr_op_Equality_mD94F3FE43A65684EFF984A7B95E70D2520C0AC73((intptr_t)L_0, (intptr_t)(0), /*hidden argument*/NULL);
 		if (!L_1)
@@ -1837,9 +1988,43 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebViewObject_SetInteractionEnabled_mE08
 IL_0013:
 	{
 		// _CWebViewPlugin_SetInteractionEnabled(webView, enabled);
-		intptr_t L_2 = __this->get_webView_23();
+		intptr_t L_2 = __this->get_webView_25();
 		bool L_3 = ___enabled0;
 		WebViewObject__CWebViewPlugin_SetInteractionEnabled_m703F952DDB87DCAA6B73EE43E94EB37D1CD51CDE((intptr_t)L_2, L_3, /*hidden argument*/NULL);
+		// }
+		return;
+	}
+}
+// System.Void WebViewObject::SetGoogleAppRedirectionEnabled(System.Boolean)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebViewObject_SetGoogleAppRedirectionEnabled_m24F96064C59432CABB90BAF98E71028CB9A3481D (WebViewObject_tE6F9FD7B76F7E3894D7997DCCF7FACCDBDBD7F52 * __this, bool ___enabled0, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IntPtr_t_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		// if (webView == IntPtr.Zero)
+		intptr_t L_0 = __this->get_webView_25();
+		bool L_1;
+		L_1 = IntPtr_op_Equality_mD94F3FE43A65684EFF984A7B95E70D2520C0AC73((intptr_t)L_0, (intptr_t)(0), /*hidden argument*/NULL);
+		if (!L_1)
+		{
+			goto IL_0013;
+		}
+	}
+	{
+		// return;
+		return;
+	}
+
+IL_0013:
+	{
+		// _CWebViewPlugin_SetGoogleAppRedirectionEnabled(webView, enabled);
+		intptr_t L_2 = __this->get_webView_25();
+		bool L_3 = ___enabled0;
+		WebViewObject__CWebViewPlugin_SetGoogleAppRedirectionEnabled_mA26886E893B06453A346FFB9D72B09609E43BEE4((intptr_t)L_2, L_3, /*hidden argument*/NULL);
 		// }
 		return;
 	}
@@ -1855,7 +2040,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebViewObject_SetAlertDialogEnabled_mB0B
 	}
 	{
 		// if (webView == IntPtr.Zero)
-		intptr_t L_0 = __this->get_webView_23();
+		intptr_t L_0 = __this->get_webView_25();
 		bool L_1;
 		L_1 = IntPtr_op_Equality_mD94F3FE43A65684EFF984A7B95E70D2520C0AC73((intptr_t)L_0, (intptr_t)(0), /*hidden argument*/NULL);
 		if (!L_1)
@@ -1871,12 +2056,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebViewObject_SetAlertDialogEnabled_mB0B
 IL_0013:
 	{
 		// _CWebViewPlugin_SetAlertDialogEnabled(webView, e);
-		intptr_t L_2 = __this->get_webView_23();
+		intptr_t L_2 = __this->get_webView_25();
 		bool L_3 = ___e0;
 		WebViewObject__CWebViewPlugin_SetAlertDialogEnabled_mDFBDF3AF3208F661AE20E9C11A05BE5509408F06((intptr_t)L_2, L_3, /*hidden argument*/NULL);
 		// alertDialogEnabled = e;
 		bool L_4 = ___e0;
-		__this->set_alertDialogEnabled_11(L_4);
+		__this->set_alertDialogEnabled_13(L_4);
 		// }
 		return;
 	}
@@ -1886,7 +2071,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool WebViewObject_GetAlertDialogEnabled_mBDD
 {
 	{
 		// return alertDialogEnabled;
-		bool L_0 = __this->get_alertDialogEnabled_11();
+		bool L_0 = __this->get_alertDialogEnabled_13();
 		return L_0;
 	}
 }
@@ -1901,7 +2086,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebViewObject_SetScrollBounceEnabled_mD5
 	}
 	{
 		// if (webView == IntPtr.Zero)
-		intptr_t L_0 = __this->get_webView_23();
+		intptr_t L_0 = __this->get_webView_25();
 		bool L_1;
 		L_1 = IntPtr_op_Equality_mD94F3FE43A65684EFF984A7B95E70D2520C0AC73((intptr_t)L_0, (intptr_t)(0), /*hidden argument*/NULL);
 		if (!L_1)
@@ -1917,12 +2102,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebViewObject_SetScrollBounceEnabled_mD5
 IL_0013:
 	{
 		// _CWebViewPlugin_SetScrollBounceEnabled(webView, e);
-		intptr_t L_2 = __this->get_webView_23();
+		intptr_t L_2 = __this->get_webView_25();
 		bool L_3 = ___e0;
 		WebViewObject__CWebViewPlugin_SetScrollBounceEnabled_m07AB6DE6CC0AB843C01C7689C2A015FA459EA456((intptr_t)L_2, L_3, /*hidden argument*/NULL);
 		// scrollBounceEnabled = e;
 		bool L_4 = ___e0;
-		__this->set_scrollBounceEnabled_12(L_4);
+		__this->set_scrollBounceEnabled_14(L_4);
 		// }
 		return;
 	}
@@ -1932,7 +2117,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool WebViewObject_GetScrollBounceEnabled_mEB
 {
 	{
 		// return scrollBounceEnabled;
-		bool L_0 = __this->get_scrollBounceEnabled_12();
+		bool L_0 = __this->get_scrollBounceEnabled_14();
 		return L_0;
 	}
 }
@@ -1963,7 +2148,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool WebViewObject_SetURLPattern_mB5D70B5CE25
 	}
 	{
 		// if (webView == IntPtr.Zero)
-		intptr_t L_0 = __this->get_webView_23();
+		intptr_t L_0 = __this->get_webView_25();
 		bool L_1;
 		L_1 = IntPtr_op_Equality_mD94F3FE43A65684EFF984A7B95E70D2520C0AC73((intptr_t)L_0, (intptr_t)(0), /*hidden argument*/NULL);
 		if (!L_1)
@@ -1979,7 +2164,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool WebViewObject_SetURLPattern_mB5D70B5CE25
 IL_0014:
 	{
 		// return _CWebViewPlugin_SetURLPattern(webView, allowPattern, denyPattern, hookPattern);
-		intptr_t L_2 = __this->get_webView_23();
+		intptr_t L_2 = __this->get_webView_25();
 		String_t* L_3 = ___allowPattern0;
 		String_t* L_4 = ___denyPattern1;
 		String_t* L_5 = ___hookPattern2;
@@ -2015,7 +2200,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebViewObject_LoadURL_m5FF41A80EB0218805
 IL_0009:
 	{
 		// if (webView == IntPtr.Zero)
-		intptr_t L_2 = __this->get_webView_23();
+		intptr_t L_2 = __this->get_webView_25();
 		bool L_3;
 		L_3 = IntPtr_op_Equality_mD94F3FE43A65684EFF984A7B95E70D2520C0AC73((intptr_t)L_2, (intptr_t)(0), /*hidden argument*/NULL);
 		if (!L_3)
@@ -2031,7 +2216,7 @@ IL_0009:
 IL_001c:
 	{
 		// _CWebViewPlugin_LoadURL(webView, url);
-		intptr_t L_4 = __this->get_webView_23();
+		intptr_t L_4 = __this->get_webView_25();
 		String_t* L_5 = ___url0;
 		WebViewObject__CWebViewPlugin_LoadURL_mCBC755D8C818ACDD53EB106A06BA9326D997117D((intptr_t)L_4, L_5, /*hidden argument*/NULL);
 		// }
@@ -2082,7 +2267,7 @@ IL_0009:
 IL_0018:
 	{
 		// if (webView == IntPtr.Zero)
-		intptr_t L_4 = __this->get_webView_23();
+		intptr_t L_4 = __this->get_webView_25();
 		bool L_5;
 		L_5 = IntPtr_op_Equality_mD94F3FE43A65684EFF984A7B95E70D2520C0AC73((intptr_t)L_4, (intptr_t)(0), /*hidden argument*/NULL);
 		if (!L_5)
@@ -2098,7 +2283,7 @@ IL_0018:
 IL_002b:
 	{
 		// _CWebViewPlugin_LoadHTML(webView, html, baseUrl);
-		intptr_t L_6 = __this->get_webView_23();
+		intptr_t L_6 = __this->get_webView_25();
 		String_t* L_7 = ___html0;
 		String_t* L_8 = ___baseUrl1;
 		WebViewObject__CWebViewPlugin_LoadHTML_mEB585F8C8EC855CD431251CF786D0EC01DFC330D((intptr_t)L_6, L_7, L_8, /*hidden argument*/NULL);
@@ -2117,7 +2302,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebViewObject_EvaluateJS_m220DC9C8C6A476
 	}
 	{
 		// if (webView == IntPtr.Zero)
-		intptr_t L_0 = __this->get_webView_23();
+		intptr_t L_0 = __this->get_webView_25();
 		bool L_1;
 		L_1 = IntPtr_op_Equality_mD94F3FE43A65684EFF984A7B95E70D2520C0AC73((intptr_t)L_0, (intptr_t)(0), /*hidden argument*/NULL);
 		if (!L_1)
@@ -2133,7 +2318,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebViewObject_EvaluateJS_m220DC9C8C6A476
 IL_0013:
 	{
 		// _CWebViewPlugin_EvaluateJS(webView, js);
-		intptr_t L_2 = __this->get_webView_23();
+		intptr_t L_2 = __this->get_webView_25();
 		String_t* L_3 = ___js0;
 		WebViewObject__CWebViewPlugin_EvaluateJS_mF3409DDBEA43368DF7C111951C055680EB0411B3((intptr_t)L_2, L_3, /*hidden argument*/NULL);
 		// }
@@ -2151,7 +2336,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t WebViewObject_Progress_mBEFEADC9225B5
 	}
 	{
 		// if (webView == IntPtr.Zero)
-		intptr_t L_0 = __this->get_webView_23();
+		intptr_t L_0 = __this->get_webView_25();
 		bool L_1;
 		L_1 = IntPtr_op_Equality_mD94F3FE43A65684EFF984A7B95E70D2520C0AC73((intptr_t)L_0, (intptr_t)(0), /*hidden argument*/NULL);
 		if (!L_1)
@@ -2167,7 +2352,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t WebViewObject_Progress_mBEFEADC9225B5
 IL_0014:
 	{
 		// return _CWebViewPlugin_Progress(webView);
-		intptr_t L_2 = __this->get_webView_23();
+		intptr_t L_2 = __this->get_webView_25();
 		int32_t L_3;
 		L_3 = WebViewObject__CWebViewPlugin_Progress_m1FE3D66B93E9FB3D55800533DA9D50693C40FF52((intptr_t)L_2, /*hidden argument*/NULL);
 		return L_3;
@@ -2184,7 +2369,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool WebViewObject_CanGoBack_mB4C735CB085B801
 	}
 	{
 		// if (webView == IntPtr.Zero)
-		intptr_t L_0 = __this->get_webView_23();
+		intptr_t L_0 = __this->get_webView_25();
 		bool L_1;
 		L_1 = IntPtr_op_Equality_mD94F3FE43A65684EFF984A7B95E70D2520C0AC73((intptr_t)L_0, (intptr_t)(0), /*hidden argument*/NULL);
 		if (!L_1)
@@ -2200,7 +2385,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool WebViewObject_CanGoBack_mB4C735CB085B801
 IL_0014:
 	{
 		// return _CWebViewPlugin_CanGoBack(webView);
-		intptr_t L_2 = __this->get_webView_23();
+		intptr_t L_2 = __this->get_webView_25();
 		bool L_3;
 		L_3 = WebViewObject__CWebViewPlugin_CanGoBack_m0792DAA7E383E9AE06E9ABEA01F2748653651CC2((intptr_t)L_2, /*hidden argument*/NULL);
 		return L_3;
@@ -2217,7 +2402,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool WebViewObject_CanGoForward_m6DFD772C07CD
 	}
 	{
 		// if (webView == IntPtr.Zero)
-		intptr_t L_0 = __this->get_webView_23();
+		intptr_t L_0 = __this->get_webView_25();
 		bool L_1;
 		L_1 = IntPtr_op_Equality_mD94F3FE43A65684EFF984A7B95E70D2520C0AC73((intptr_t)L_0, (intptr_t)(0), /*hidden argument*/NULL);
 		if (!L_1)
@@ -2233,7 +2418,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool WebViewObject_CanGoForward_m6DFD772C07CD
 IL_0014:
 	{
 		// return _CWebViewPlugin_CanGoForward(webView);
-		intptr_t L_2 = __this->get_webView_23();
+		intptr_t L_2 = __this->get_webView_25();
 		bool L_3;
 		L_3 = WebViewObject__CWebViewPlugin_CanGoForward_m03A744513E7A6F84336251DE48B71C4D96811D7D((intptr_t)L_2, /*hidden argument*/NULL);
 		return L_3;
@@ -2250,7 +2435,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebViewObject_GoBack_m5947506758751DBED1
 	}
 	{
 		// if (webView == IntPtr.Zero)
-		intptr_t L_0 = __this->get_webView_23();
+		intptr_t L_0 = __this->get_webView_25();
 		bool L_1;
 		L_1 = IntPtr_op_Equality_mD94F3FE43A65684EFF984A7B95E70D2520C0AC73((intptr_t)L_0, (intptr_t)(0), /*hidden argument*/NULL);
 		if (!L_1)
@@ -2266,7 +2451,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebViewObject_GoBack_m5947506758751DBED1
 IL_0013:
 	{
 		// _CWebViewPlugin_GoBack(webView);
-		intptr_t L_2 = __this->get_webView_23();
+		intptr_t L_2 = __this->get_webView_25();
 		WebViewObject__CWebViewPlugin_GoBack_m699637D677E6C4D66FE5821B7FAAC4C9720C0E94((intptr_t)L_2, /*hidden argument*/NULL);
 		// }
 		return;
@@ -2283,7 +2468,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebViewObject_GoForward_m53FE4DE6920EBCF
 	}
 	{
 		// if (webView == IntPtr.Zero)
-		intptr_t L_0 = __this->get_webView_23();
+		intptr_t L_0 = __this->get_webView_25();
 		bool L_1;
 		L_1 = IntPtr_op_Equality_mD94F3FE43A65684EFF984A7B95E70D2520C0AC73((intptr_t)L_0, (intptr_t)(0), /*hidden argument*/NULL);
 		if (!L_1)
@@ -2299,7 +2484,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebViewObject_GoForward_m53FE4DE6920EBCF
 IL_0013:
 	{
 		// _CWebViewPlugin_GoForward(webView);
-		intptr_t L_2 = __this->get_webView_23();
+		intptr_t L_2 = __this->get_webView_25();
 		WebViewObject__CWebViewPlugin_GoForward_m6214084D60BE14AD8979B5A1F1737D4977CFE63D((intptr_t)L_2, /*hidden argument*/NULL);
 		// }
 		return;
@@ -2316,7 +2501,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebViewObject_Reload_m3C76F5E71CD39151C3
 	}
 	{
 		// if (webView == IntPtr.Zero)
-		intptr_t L_0 = __this->get_webView_23();
+		intptr_t L_0 = __this->get_webView_25();
 		bool L_1;
 		L_1 = IntPtr_op_Equality_mD94F3FE43A65684EFF984A7B95E70D2520C0AC73((intptr_t)L_0, (intptr_t)(0), /*hidden argument*/NULL);
 		if (!L_1)
@@ -2332,7 +2517,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebViewObject_Reload_m3C76F5E71CD39151C3
 IL_0013:
 	{
 		// _CWebViewPlugin_Reload(webView);
-		intptr_t L_2 = __this->get_webView_23();
+		intptr_t L_2 = __this->get_webView_25();
 		WebViewObject__CWebViewPlugin_Reload_mCF6C707FB0549018A3AA8C637F0FBDEFDB291FF4((intptr_t)L_2, /*hidden argument*/NULL);
 		// }
 		return;
@@ -2534,6 +2719,37 @@ IL_001c:
 		return;
 	}
 }
+// System.Void WebViewObject::CallOnCookies(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebViewObject_CallOnCookies_mC1FC1E94872C8C80E9FB254809B838BBC67725A9 (WebViewObject_tE6F9FD7B76F7E3894D7997DCCF7FACCDBDBD7F52 * __this, String_t* ___cookies0, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Action_1_Invoke_m6E81F94353B45920E7018D209DCF4B63DBE8D8B6_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		// if (onCookies != null)
+		Action_1_tC0D73E03177C82525D78670CDC2165F7CBF0A9C3 * L_0 = __this->get_onCookies_10();
+		if (!L_0)
+		{
+			goto IL_0014;
+		}
+	}
+	{
+		// onCookies(cookies);
+		Action_1_tC0D73E03177C82525D78670CDC2165F7CBF0A9C3 * L_1 = __this->get_onCookies_10();
+		String_t* L_2 = ___cookies0;
+		NullCheck(L_1);
+		Action_1_Invoke_m6E81F94353B45920E7018D209DCF4B63DBE8D8B6(L_1, L_2, /*hidden argument*/Action_1_Invoke_m6E81F94353B45920E7018D209DCF4B63DBE8D8B6_RuntimeMethod_var);
+	}
+
+IL_0014:
+	{
+		// }
+		return;
+	}
+}
 // System.Void WebViewObject::AddCustomHeader(System.String,System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebViewObject_AddCustomHeader_mB9207F036B5B938D1606B062825ED1F2EFC4903D (WebViewObject_tE6F9FD7B76F7E3894D7997DCCF7FACCDBDBD7F52 * __this, String_t* ___headerKey0, String_t* ___headerValue1, const RuntimeMethod* method)
 {
@@ -2545,7 +2761,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebViewObject_AddCustomHeader_mB9207F036
 	}
 	{
 		// if (webView == IntPtr.Zero)
-		intptr_t L_0 = __this->get_webView_23();
+		intptr_t L_0 = __this->get_webView_25();
 		bool L_1;
 		L_1 = IntPtr_op_Equality_mD94F3FE43A65684EFF984A7B95E70D2520C0AC73((intptr_t)L_0, (intptr_t)(0), /*hidden argument*/NULL);
 		if (!L_1)
@@ -2561,7 +2777,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebViewObject_AddCustomHeader_mB9207F036
 IL_0013:
 	{
 		// _CWebViewPlugin_AddCustomHeader(webView, headerKey, headerValue);
-		intptr_t L_2 = __this->get_webView_23();
+		intptr_t L_2 = __this->get_webView_25();
 		String_t* L_3 = ___headerKey0;
 		String_t* L_4 = ___headerValue1;
 		WebViewObject__CWebViewPlugin_AddCustomHeader_mF987F51AC2ADCD8580F2E8A798ED260C3256CBE5((intptr_t)L_2, L_3, L_4, /*hidden argument*/NULL);
@@ -2580,7 +2796,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* WebViewObject_GetCustomHeaderValue_
 	}
 	{
 		// if (webView == IntPtr.Zero)
-		intptr_t L_0 = __this->get_webView_23();
+		intptr_t L_0 = __this->get_webView_25();
 		bool L_1;
 		L_1 = IntPtr_op_Equality_mD94F3FE43A65684EFF984A7B95E70D2520C0AC73((intptr_t)L_0, (intptr_t)(0), /*hidden argument*/NULL);
 		if (!L_1)
@@ -2596,7 +2812,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* WebViewObject_GetCustomHeaderValue_
 IL_0014:
 	{
 		// return _CWebViewPlugin_GetCustomHeaderValue(webView, headerKey);
-		intptr_t L_2 = __this->get_webView_23();
+		intptr_t L_2 = __this->get_webView_25();
 		String_t* L_3 = ___headerKey0;
 		String_t* L_4;
 		L_4 = WebViewObject__CWebViewPlugin_GetCustomHeaderValue_m00B70B436EEBE5FD9A09912D13EC01C3493646D9((intptr_t)L_2, L_3, /*hidden argument*/NULL);
@@ -2614,7 +2830,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebViewObject_RemoveCustomHeader_m13B572
 	}
 	{
 		// if (webView == IntPtr.Zero)
-		intptr_t L_0 = __this->get_webView_23();
+		intptr_t L_0 = __this->get_webView_25();
 		bool L_1;
 		L_1 = IntPtr_op_Equality_mD94F3FE43A65684EFF984A7B95E70D2520C0AC73((intptr_t)L_0, (intptr_t)(0), /*hidden argument*/NULL);
 		if (!L_1)
@@ -2630,7 +2846,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebViewObject_RemoveCustomHeader_m13B572
 IL_0013:
 	{
 		// _CWebViewPlugin_RemoveCustomHeader(webView, headerKey);
-		intptr_t L_2 = __this->get_webView_23();
+		intptr_t L_2 = __this->get_webView_25();
 		String_t* L_3 = ___headerKey0;
 		WebViewObject__CWebViewPlugin_RemoveCustomHeader_mEFE86DB41B599CCD948456D7ECC2C38152D47F32((intptr_t)L_2, L_3, /*hidden argument*/NULL);
 		// }
@@ -2648,7 +2864,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebViewObject_ClearCustomHeader_m9D8C91F
 	}
 	{
 		// if (webView == IntPtr.Zero)
-		intptr_t L_0 = __this->get_webView_23();
+		intptr_t L_0 = __this->get_webView_25();
 		bool L_1;
 		L_1 = IntPtr_op_Equality_mD94F3FE43A65684EFF984A7B95E70D2520C0AC73((intptr_t)L_0, (intptr_t)(0), /*hidden argument*/NULL);
 		if (!L_1)
@@ -2664,8 +2880,42 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebViewObject_ClearCustomHeader_m9D8C91F
 IL_0013:
 	{
 		// _CWebViewPlugin_ClearCustomHeader(webView);
-		intptr_t L_2 = __this->get_webView_23();
+		intptr_t L_2 = __this->get_webView_25();
 		WebViewObject__CWebViewPlugin_ClearCustomHeader_m65D4C7B94B35A4C69319275A0296732608E4728C((intptr_t)L_2, /*hidden argument*/NULL);
+		// }
+		return;
+	}
+}
+// System.Void WebViewObject::ClearCookie(System.String,System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebViewObject_ClearCookie_m895DC1CCD2AEEA63B5832AB0F0A746A5620B08FB (WebViewObject_tE6F9FD7B76F7E3894D7997DCCF7FACCDBDBD7F52 * __this, String_t* ___url0, String_t* ___name1, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IntPtr_t_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		// if (webView == IntPtr.Zero)
+		intptr_t L_0 = __this->get_webView_25();
+		bool L_1;
+		L_1 = IntPtr_op_Equality_mD94F3FE43A65684EFF984A7B95E70D2520C0AC73((intptr_t)L_0, (intptr_t)(0), /*hidden argument*/NULL);
+		if (!L_1)
+		{
+			goto IL_0013;
+		}
+	}
+	{
+		// return;
+		return;
+	}
+
+IL_0013:
+	{
+		// _CWebViewPlugin_ClearCookie(url, name);
+		String_t* L_2 = ___url0;
+		String_t* L_3 = ___name1;
+		WebViewObject__CWebViewPlugin_ClearCookie_m9C0C83065D1BE896899196411939F3C86EFA3465(L_2, L_3, /*hidden argument*/NULL);
 		// }
 		return;
 	}
@@ -2681,7 +2931,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebViewObject_ClearCookies_mD08727CF5BCE
 	}
 	{
 		// if (webView == IntPtr.Zero)
-		intptr_t L_0 = __this->get_webView_23();
+		intptr_t L_0 = __this->get_webView_25();
 		bool L_1;
 		L_1 = IntPtr_op_Equality_mD94F3FE43A65684EFF984A7B95E70D2520C0AC73((intptr_t)L_0, (intptr_t)(0), /*hidden argument*/NULL);
 		if (!L_1)
@@ -2713,7 +2963,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebViewObject_SaveCookies_m6081145D12FB3
 	}
 	{
 		// if (webView == IntPtr.Zero)
-		intptr_t L_0 = __this->get_webView_23();
+		intptr_t L_0 = __this->get_webView_25();
 		bool L_1;
 		L_1 = IntPtr_op_Equality_mD94F3FE43A65684EFF984A7B95E70D2520C0AC73((intptr_t)L_0, (intptr_t)(0), /*hidden argument*/NULL);
 		if (!L_1)
@@ -2734,38 +2984,38 @@ IL_0013:
 		return;
 	}
 }
-// System.String WebViewObject::GetCookies(System.String)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* WebViewObject_GetCookies_mA36C6AA27F87AFEB30E2EF8C32976E868F1943EF (WebViewObject_tE6F9FD7B76F7E3894D7997DCCF7FACCDBDBD7F52 * __this, String_t* ___url0, const RuntimeMethod* method)
+// System.Void WebViewObject::GetCookies(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebViewObject_GetCookies_m6C904918A508BCE7D64AC363648F2871283978A1 (WebViewObject_tE6F9FD7B76F7E3894D7997DCCF7FACCDBDBD7F52 * __this, String_t* ___url0, const RuntimeMethod* method)
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IntPtr_t_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709);
 		s_Il2CppMethodInitialized = true;
 	}
 	{
 		// if (webView == IntPtr.Zero)
-		intptr_t L_0 = __this->get_webView_23();
+		intptr_t L_0 = __this->get_webView_25();
 		bool L_1;
 		L_1 = IntPtr_op_Equality_mD94F3FE43A65684EFF984A7B95E70D2520C0AC73((intptr_t)L_0, (intptr_t)(0), /*hidden argument*/NULL);
 		if (!L_1)
 		{
-			goto IL_0018;
+			goto IL_0013;
 		}
 	}
 	{
-		// return "";
-		return _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709;
+		// return;
+		return;
 	}
 
-IL_0018:
+IL_0013:
 	{
-		// return _CWebViewPlugin_GetCookies(url);
-		String_t* L_2 = ___url0;
-		String_t* L_3;
-		L_3 = WebViewObject__CWebViewPlugin_GetCookies_m444016E7EEB0B240DACECD4FD54A19E169C4F3D0(L_2, /*hidden argument*/NULL);
-		return L_3;
+		// _CWebViewPlugin_GetCookies(webView, url);
+		intptr_t L_2 = __this->get_webView_25();
+		String_t* L_3 = ___url0;
+		WebViewObject__CWebViewPlugin_GetCookies_m3E1E2B36106FA8AD1EEB6F71A500E9D84A33275E((intptr_t)L_2, L_3, /*hidden argument*/NULL);
+		// }
+		return;
 	}
 }
 // System.Void WebViewObject::SetBasicAuthInfo(System.String,System.String)
@@ -2779,7 +3029,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebViewObject_SetBasicAuthInfo_mA4AE1830
 	}
 	{
 		// if (webView == IntPtr.Zero)
-		intptr_t L_0 = __this->get_webView_23();
+		intptr_t L_0 = __this->get_webView_25();
 		bool L_1;
 		L_1 = IntPtr_op_Equality_mD94F3FE43A65684EFF984A7B95E70D2520C0AC73((intptr_t)L_0, (intptr_t)(0), /*hidden argument*/NULL);
 		if (!L_1)
@@ -2795,7 +3045,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebViewObject_SetBasicAuthInfo_mA4AE1830
 IL_0013:
 	{
 		// _CWebViewPlugin_SetBasicAuthInfo(webView, userName, password);
-		intptr_t L_2 = __this->get_webView_23();
+		intptr_t L_2 = __this->get_webView_25();
 		String_t* L_3 = ___userName0;
 		String_t* L_4 = ___password1;
 		WebViewObject__CWebViewPlugin_SetBasicAuthInfo_m25864F2B1764FA42C3451A604EC50C01887B5DE0((intptr_t)L_2, L_3, L_4, /*hidden argument*/NULL);
@@ -2814,7 +3064,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebViewObject_ClearCache_m685CFFA50D9467
 	}
 	{
 		// if (webView == IntPtr.Zero)
-		intptr_t L_0 = __this->get_webView_23();
+		intptr_t L_0 = __this->get_webView_25();
 		bool L_1;
 		L_1 = IntPtr_op_Equality_mD94F3FE43A65684EFF984A7B95E70D2520C0AC73((intptr_t)L_0, (intptr_t)(0), /*hidden argument*/NULL);
 		if (!L_1)
@@ -2830,7 +3080,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebViewObject_ClearCache_m685CFFA50D9467
 IL_0013:
 	{
 		// _CWebViewPlugin_ClearCache(webView, includeDiskFiles);
-		intptr_t L_2 = __this->get_webView_23();
+		intptr_t L_2 = __this->get_webView_25();
 		bool L_3 = ___includeDiskFiles0;
 		WebViewObject__CWebViewPlugin_ClearCache_mA9FE773F517FB9A78FFE3090333B77F08856552D((intptr_t)L_2, L_3, /*hidden argument*/NULL);
 		// }
@@ -2839,6 +3089,14 @@ IL_0013:
 }
 // System.Void WebViewObject::SetTextZoom(System.Int32)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebViewObject_SetTextZoom_m5A3A9F812A77504D8FCD5582C7AF44B26CAE61AB (WebViewObject_tE6F9FD7B76F7E3894D7997DCCF7FACCDBDBD7F52 * __this, int32_t ___textZoom0, const RuntimeMethod* method)
+{
+	{
+		// }
+		return;
+	}
+}
+// System.Void WebViewObject::SetMixedContentMode(System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebViewObject_SetMixedContentMode_m3313279B37ED36E994DED799930143E1FF0CE0AC (WebViewObject_tE6F9FD7B76F7E3894D7997DCCF7FACCDBDBD7F52 * __this, int32_t ___mode0, const RuntimeMethod* method)
 {
 	{
 		// }
@@ -2856,3 +3114,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebViewObject__ctor_m6BABBDBFF7B566CB905
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool WebViewObject_GetVisibility_m8811FDD7E75C8309FCC9F86649A8B8CDD59151B4_inline (WebViewObject_tE6F9FD7B76F7E3894D7997DCCF7FACCDBDBD7F52 * __this, const RuntimeMethod* method)
+{
+	{
+		// return visibility;
+		bool L_0 = __this->get_visibility_12();
+		return L_0;
+	}
+}

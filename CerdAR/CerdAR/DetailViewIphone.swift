@@ -9,6 +9,8 @@
 import UIKit
 import WebKit
 import MediaPlayer
+import SafariServices // ★追加：これが必要です
+
 @objc protocol detailViewIphoneDelegate {
     func detailViewIphoneFinish()
 }
@@ -34,7 +36,7 @@ class DetailViewIphone: UIView {
     }
     
     private func loadNib() {
-       
+        
         if let view = Bundle.main.loadNibNamed(String(describing: type(of: self)), owner: self)?.first as? UIView {
             view.frame = self.bounds
             self.addSubview(view)
@@ -45,7 +47,7 @@ class DetailViewIphone: UIView {
      * 表示されているパーツを破棄する
      */
     @IBAction func tapDeleteButton(_ sender: Any) {
-   
+        
         deleteDetailView()
     }
     @objc func onClick_back(_ sender: UIButton) {
@@ -57,6 +59,7 @@ class DetailViewIphone: UIView {
      * 詳細画面を消去する
      */
     func deleteDetailView() {
+        // backgroundViewはグローバル変数のようなので ? なしでOK
         backgroundView.removeFromSuperview()
         delegate?.detailViewIphoneFinish()
     }
@@ -71,6 +74,56 @@ class DetailViewIphone: UIView {
         backgroundView.backgroundColor = UIColor.gray
         return backgroundView
     }
+    
+    /*
+     * 動画再生ボタンが押されたとき（アプリ内ブラウザ SFSafariViewController で開く）
+     * 修正版：遷移直前に詳細画面を閉じる処理を追加
+     */
+    @objc func onClick_playVideo(_ sender: UIButton) {
+        guard let data = pinData, let rawUrl = data.movie else { return }
+        
+        var videoId = ""
+        
+        // 1. 動画IDを抽出
+        if rawUrl.contains("youtu.be/") {
+            if let range = rawUrl.range(of: "youtu.be/") {
+                let sub = rawUrl[range.upperBound...]
+                videoId = String(sub).components(separatedBy: "?")[0]
+            }
+        } else if rawUrl.contains("v=") {
+            if let range = rawUrl.range(of: "v=") {
+                let sub = rawUrl[range.upperBound...]
+                videoId = String(sub).components(separatedBy: "&")[0]
+            }
+        } else if rawUrl.contains("/embed/") {
+            if let range = rawUrl.range(of: "/embed/") {
+                let sub = rawUrl[range.upperBound...]
+                videoId = String(sub).components(separatedBy: "?")[0]
+            }
+        }
+        
+        var finalUrlString = rawUrl
+        if !videoId.isEmpty {
+            // SafariViewControllerで開く場合も、普通のURL (watch?v=) にするのが正解です
+            finalUrlString = "https://www.youtube.com/watch?v=" + videoId
+        }
+        
+        // 2. SFSafariViewController (アプリ内ブラウザ) を起動
+        if let url = URL(string: finalUrlString) {
+            
+            // ★重要手順1: 先に親ViewControllerを確保する
+            // (画面を閉じてからだと、親との繋がりが切れて取得できなくなるため)
+            guard let parentVC = self.parentViewController() else { return }
+            
+            // ★重要手順2: Safariを開く前に、詳細画面(自分)を閉じる
+            self.deleteDetailView()
+            
+            // ★重要手順3: 確保しておいた親VCを使って Safari View Controller を表示
+            let safariVC = SFSafariViewController(url: url)
+            parentVC.present(safariVC, animated: true, completion: nil)
+        }
+    }
+    
     /*
      *画面表示設定
      */
@@ -96,48 +149,45 @@ class DetailViewIphone: UIView {
             }
             // 画像・動画の挿入(画面左側)
             if pinData.inforType == kInfo {
-
+                
                 if pinData.picType == kPhoto { // 画像
-
+                    
                     if pinData.photo != nil {
-                        if pinData.photo.range(of: "jpg") == nil && pinData.photo.range(of: "png") == nil && pinData.photo.range(of: "JPG") == nil {
+                        let photoStr = pinData.photo ?? ""
+                        if photoStr.range(of: "jpg") == nil && photoStr.range(of: "png") == nil && photoStr.range(of: "JPG") == nil {
                             notFound()
-
+                            
                         } else {
-
-                            let url = URL(string: pinData.photo)
+                            
+                            let url = URL(string: photoStr)
                             let req = URLRequest(url: url!, cachePolicy: NSURLRequest(url: url!).cachePolicy, timeoutInterval: 5.0)
-
+                            
                             let configuration = URLSessionConfiguration.default
                             let session = URLSession(configuration: configuration, delegate:nil, delegateQueue:OperationQueue.main)
-
+                            
                             let task = session.dataTask(with: req, completionHandler: {
                                 (data, response, error) -> Void in
-
-                                // urlが見つからない、またはタイムアウトしたとき
+                                
                                 if error != nil {
                                     self.notFound()
-
-                                    // 成功したとき
                                 } else {
                                     let warnImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: self.showView.bounds.width, height:self.showView.bounds.height))
-
+                                    
                                     if let image = UIImage(data: data!) {
                                         warnImageView.image = image
                                     } else {
                                         warnImageView.image = UIImage(named: "icon_notfound.png")
                                     }
                                     warnImageView.contentMode = .scaleAspectFill
-                                    warnImageView.layer.cornerRadius = self.showView.bounds.width*0.1
                                     warnImageView.clipsToBounds = true
                                     self.showView.addSubview(warnImageView)
                                 }
                             })
                             task.resume()
                         }
-
+                        
                     } else {
-
+                        
                         let warnImageView = UIImageView(frame: CGRect.init(x:0, y: 0, width: showView.bounds.width, height:showView.bounds.height))
                         if pinData.icon != "icon_infoTag.png" {
                             warnImageView.image = UIImage(named: pinData.icon)
@@ -148,44 +198,47 @@ class DetailViewIphone: UIView {
                             warnImageView.contentMode = .scaleAspectFill
                             self.showView.addSubview(warnImageView)
                         }
-                        warnImageView.translatesAutoresizingMaskIntoConstraints = false
-                        let constraints = [
-                            warnImageView.trailingAnchor.constraint(equalTo: self.showView.trailingAnchor,constant: 0),
-                            warnImageView.leadingAnchor.constraint(equalTo: self.showView.leadingAnchor,constant: 0),
-                            warnImageView.topAnchor.constraint(equalTo: self.showView.topAnchor,constant: 0),
-                            warnImageView.bottomAnchor.constraint(equalTo: self.showView.bottomAnchor,constant: 0),
-                        ]
-                        NSLayoutConstraint.activate(constraints)
                     }
-
+                    
                 } else if pinData.picType == kMovie { // 動画
-
-                    if !pinData.movie.hasPrefix("http://www.youtube.com/embed/") && !pinData.movie.hasPrefix("https://www.youtube.com/embed/") {
+                    
+                    let movieUrl = pinData.movie ?? ""
+                    
+                    if !movieUrl.hasPrefix("http://www.youtube.com/embed/") && !movieUrl.hasPrefix("https://www.youtube.com/embed/") &&
+                        !movieUrl.hasPrefix("https://www.youtube-nocookie.com/embed/") &&
+                        !movieUrl.hasPrefix("https://player.vimeo.com/video/"){
                         notFound()
-
+                        
                     } else {
-
-                        let url = URL(string : pinData.movie)
+                        
+                        let url = URL(string : movieUrl)
                         let req = URLRequest(url: url!, cachePolicy: NSURLRequest(url: url!).cachePolicy, timeoutInterval: 5.0)
                         let configuration = URLSessionConfiguration.default
                         let session = URLSession(configuration: configuration, delegate:nil, delegateQueue:OperationQueue.main)
-
+                        
                         let task = session.dataTask(with: req, completionHandler: {
                             (data, response, error) -> Void in
-
-                            // urlが見つからない、またはタイムアウトしたとき
+                            
                             if error != nil {
                                 self.notFound()
-
-                                // 成功したとき
                             } else {
-                                let webConfiguration = WKWebViewConfiguration()
-                                // 3 WKWebView に Configuration を引き渡し initialize
-                                let webView = WKWebView(frame: CGRect.init(x:0, y: 0, width: self.showView.bounds.width, height:self.showView.bounds.height), configuration: webConfiguration)
-                                webView.layer.cornerRadius = 15
-                                webView.clipsToBounds = true
-                                webView.load(req)
-                                self.showView.addSubview(webView)
+                                // ▼▼▼ 再生ボタン作成 ▼▼▼
+                                let playButton = UIButton(frame: CGRect(x: 0, y: 0, width: self.showView.bounds.width, height: self.showView.bounds.height))
+                                
+                                if let thumbImage = UIImage(named: "youtube") {
+                                    playButton.setImage(thumbImage, for: .normal)
+                                    playButton.imageView?.contentMode = .scaleAspectFit
+                                } else {
+                                    playButton.backgroundColor = UIColor.black
+                                    playButton.setTitle("▶︎ 再生", for: .normal)
+                                    playButton.setTitleColor(.white, for: .normal)
+                                }
+                                
+                                playButton.addTarget(self, action: #selector(self.onClick_playVideo(_:)), for: .touchUpInside)
+                                playButton.clipsToBounds = true
+                                
+                                self.showView.addSubview(playButton)
+                                // ▲▲▲ ここまで ▲▲▲
                             }
                         })
                         task.resume()
@@ -193,189 +246,81 @@ class DetailViewIphone: UIView {
                 } else {   // その他の情報タグ画像
                     let warnImageView = UIImageView(frame: CGRect.init(x: 0, y:0, width: self.showView.bounds.width, height:self.showView.bounds.height))
                     if pinData.icon != "icon_infoTag.png" {
-                      
+                        
                         warnImageView.contentMode = .scaleAspectFill
                         self.showView.addSubview(warnImageView)
                         warnImageView.image = UIImage(named: pinData.icon)
                         
-
+                        
                     } else {
-                       
+                        
                         warnImageView.contentMode = .scaleAspectFill
                         self.showView.addSubview(warnImageView)
                         warnImageView.image = pinData.expandImage
                     }
-                    warnImageView.translatesAutoresizingMaskIntoConstraints = false
-                    let constraints = [
-                        warnImageView.trailingAnchor.constraint(equalTo: self.showView.trailingAnchor,constant: 0),
-                        warnImageView.leadingAnchor.constraint(equalTo: self.showView.leadingAnchor,constant: 0),
-                        warnImageView.topAnchor.constraint(equalTo: self.showView.topAnchor,constant: 0),
-                        warnImageView.bottomAnchor.constraint(equalTo: self.showView.bottomAnchor,constant: 0),
-                    ]
-                    NSLayoutConstraint.activate(constraints)
                 }
-
-            } else if pinData.inforType == kWarn { // 警告タグ
-                if pinData.picType == kPhoto { // 警告タグに画像がある場合
-                    if pinData.photo != nil {
-                        if pinData.photo.range(of: "jpg") == nil && pinData.photo.range(of: "png") == nil && pinData.photo.range(of: "JPG") == nil {
-                            notFound()
-                            
-                        } else {
-                            
-                            let url = URL(string: pinData.photo)
-                            let req = URLRequest(url: url!, cachePolicy: NSURLRequest(url: url!).cachePolicy, timeoutInterval: 5.0)
-                            
-                            let configuration = URLSessionConfiguration.default
-                            let session = URLSession(configuration: configuration, delegate:nil, delegateQueue:OperationQueue.main)
-                            
-                            let task = session.dataTask(with: req, completionHandler: {
-                                (data, response, error) -> Void in
-                                
-                                // urlが見つからない、またはタイムアウトしたとき
-                                if error != nil {
-                                    self.notFound()
-                                    
-                                    // 成功したとき
-                                } else {
-                                    let warnImageView = UIImageView(frame: CGRect(x: dWid * 0.05, y: dHei * 0.25, width: dWid * 0.45, height: dHei * 0.5))
-                                    
-                                    if let image = UIImage(data: data!) {
-                                        warnImageView.image = image
-                                    } else {
-                                        warnImageView.image = UIImage(named: "icon_notfound.png")
-                                    }
-                                    self.addSubview(warnImageView)
-                                }
-                            })
-                            task.resume()
-                        }
-                    }
-                } else if pinData.picType == kMovie { // 動画
-                    if !pinData.movie.hasPrefix("http://www.youtube.com/embed/") && !pinData.movie.hasPrefix("https://www.youtube.com/embed/") {
-                        notFound()
-                        
-                    } else {
-                        let url = URL(string : pinData.movie)
-                        let req = URLRequest(url: url!, cachePolicy: NSURLRequest(url: url!).cachePolicy, timeoutInterval: 5.0)
-                        let configuration = URLSessionConfiguration.default
-                        let session = URLSession(configuration: configuration, delegate:nil, delegateQueue:OperationQueue.main)
-
-                        let task = session.dataTask(with: req, completionHandler: {
-                            (data, response, error) -> Void in
-                            
-                            // urlが見つからない、またはタイムアウトしたとき
-                            if error != nil {
-                                self.notFound()
-                                
-                                // 成功したとき
-                            } else {
-//                                let webview = UIWebView(frame: CGRect.init(x:0, y: 0, width: self.showView.bounds.width, height:self.showView.bounds.height))
-//                                webview.scalesPageToFit = true
-//                                webview.scrollView.bounces = false
-//                                webview.loadRequest(req)
-//                                webview.layer.cornerRadius = 15
-//                                webview.clipsToBounds = true
-//                                self.showView.addSubview(webview)
-                                let webConfiguration = WKWebViewConfiguration()
-                                // 3 WKWebView に Configuration を引き渡し initialize
-                                let webView = WKWebView(frame: CGRect.init(x:0, y: 0, width: self.showView.bounds.width, height:self.showView.bounds.height), configuration: webConfiguration)
-                                webView.layer.cornerRadius = 15
-                                webView.clipsToBounds = true
-                                
-                                webView.load(req)
-                                self.showView.addSubview(webView)
-                             
-                                
-                            }
-                        })
-                        task.resume()
-                    }
-                    
-                    
-             } else {  // 警告タグに画像がない場合は，アイコン画像を表示
                 
-                let warnImageView = UIImageView(frame: CGRect.init(x: 0, y: 0, width: self.showView.bounds.width, height:self.showView.bounds.height))
-
+            } else if pinData.inforType == kWarn { // 警告タグ
+                let warnImageView = UIImageView(frame: CGRect.init(x:0, y: 0, width: showView.bounds.width, height:showView.bounds.height))
+                
                 let warnImg: UIImage!
                 var text: String!
                 switch jsonDataManager.sharedInstance.warnBox[pinData.pinNum].riskType {
-
+                    
                 case 0:
                     text = "火災"
                     warnImg = UIImage(named: "icon_warn0.png")!
                 case 1:
-                    text = "浸水しています"
+                    text = "水が流れています"
                     warnImg = UIImage(named: "icon_warn1.png")!
                 case 2:
                     text = "土砂くずれ"
                     warnImg = UIImage(named: "icon_warn2.png")!
                 case 3:
-                    text = "煙が発生しています"
+                    text = "橋がこわれています"
                     warnImg = UIImage(named: "icon_warn3.png")!
                 case 4:
-                    text = "家が倒壊しています"
+                    text = "家がこわれています"
                     warnImg = UIImage(named: "icon_warn3.png")!
                 case 5:
-                    text = "塀が倒壊しています"
+                    text = "へいがこわれています"
                     warnImg = UIImage(named: "icon_warn3.png")!
                 case 6:
                     text = "道路にあながあいています"
-                    //text = "通行禁止\n(コンテナ流入)"
-                    warnImg = UIImage(named: "icon_warn3.png")!
-                case 7:
-                    text = "津波で水があふれています"
-                    warnImg = UIImage(named: "icon_warn1.png")!
-                case 8:
-                    text = "道が液状化しています"
                     warnImg = UIImage(named: "icon_warn3.png")!
                 default:
                     text = "その他の災害"
                     warnImg = UIImage(named: "icon_infoTagAR.png")!
                 }
-                let label = UILabel(frame: CGRect.init(x: 0.0, y: 0.0, width: warnImg!.size.width, height: warnImg!.size.height)) //ラベルサイズ
-
+                
+                let label = UILabel(frame: CGRect.init(x: 0.0, y: 0.0, width: warnImg!.size.width, height: warnImg!.size.height))
+                
                 label.text = text
-                label.textColor = UIColor.black // 文字色
-                label.textAlignment = NSTextAlignment.center // 中央揃え
-                label.font = UIFont.systemFont(ofSize: 80) // 初期文字サイズ
-                label.adjustsFontSizeToFitWidth = true // 文字の多さによってフォントサイズを調節する
-                label.numberOfLines = 2 // ラベル内の行数
-
-                let labelImg = label.getImage() as UIImage // UILabelをUIImageに変換する
-
-                let tagRect = CGRect.init(x: 0.0, y: 0.0, width: warnImg!.size.width, height: warnImg!.size.height) // タグ画像のサイズと位置
+                label.textColor = UIColor.black
+                label.textAlignment = NSTextAlignment.center
+                label.font = UIFont.systemFont(ofSize: 80)
+                label.adjustsFontSizeToFitWidth = true
+                label.numberOfLines = 2
+                
+                let labelImg = label.getImage() as UIImage
+                
+                let tagRect = CGRect.init(x: 0.0, y: 0.0, width: warnImg!.size.width, height: warnImg!.size.height)
                 UIGraphicsBeginImageContext(warnImg!.size)
                 warnImg!.draw(in: tagRect)
-
-                let labelRect = CGRect.init(x: 40.0, y: 40.0, width: labelImg.size.width - 100, height: labelImg.size.height * 0.75) // ラベル画像のサイズと位置
+                
+                let labelRect = CGRect.init(x: 40.0, y: 40.0, width: labelImg.size.width - 100, height: labelImg.size.height * 0.75)
                 labelImg.draw(in: labelRect)
-
-                // Context に描画された画像を新しく設定
+                
                 let newImage = UIGraphicsGetImageFromCurrentImageContext()
-
-                // Context 終了
                 UIGraphicsEndImageContext()
-
-               
-                warnImageView.contentMode = .scaleAspectFill
-             
-                self.showView.addSubview(warnImageView)
-                warnImageView.translatesAutoresizingMaskIntoConstraints = false
-                let constraints = [
-                    warnImageView.trailingAnchor.constraint(equalTo: self.showView.trailingAnchor,constant: 0),
-                    warnImageView.leadingAnchor.constraint(equalTo: self.showView.leadingAnchor,constant: 0),
-                    warnImageView.topAnchor.constraint(equalTo: self.showView.topAnchor,constant: 0),
-                    warnImageView.bottomAnchor.constraint(equalTo: self.showView.bottomAnchor,constant: 0),
-                ]
-                NSLayoutConstraint.activate(constraints)
-
+                
                 warnImageView.image = getResizeImage(newImage!, newHeight: 500.0)
-
-            }
+                warnImageView.contentMode = .scaleAspectFill
+                self.showView.addSubview(warnImageView)
             }
         }
     }
+    
     func notFound() {
         let warnImageView = UIImageView(frame: CGRect.init(x:0, y: 0, width: showView.bounds.width, height:showView.bounds.height))
         warnImageView.image = UIImage(named: "icon_notfound.png")
@@ -401,3 +346,5 @@ class DetailViewIphone: UIView {
         }
     }
 }
+
+

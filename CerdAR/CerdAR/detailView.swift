@@ -8,13 +8,17 @@
 import Foundation
 import UIKit
 import WebKit
+import SafariServices
+
 @objc protocol detailViewDelegate {
     func detailViewFinish()
 }
 
-
 class detailView: UIView {
     weak var delegate: detailViewDelegate?
+    
+    // エラー対策：変数を追加
+    var backgroundView: UIView?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -102,12 +106,14 @@ class detailView: UIView {
             if pinData.picType == kPhoto { // 画像
 
                 if pinData.photo != nil {
-                    if pinData.photo.range(of: "jpg") == nil && pinData.photo.range(of: "png") == nil && pinData.photo.range(of: "JPG") == nil {
+                    // ここもOptional対策で安全にチェック
+                    let photoStr = pinData.photo ?? ""
+                    if photoStr.range(of: "jpg") == nil && photoStr.range(of: "png") == nil && photoStr.range(of: "JPG") == nil {
                         notFound()
 
                     } else {
 
-                        let url = URL(string: pinData.photo)
+                        let url = URL(string: photoStr)
                         let req = URLRequest(url: url!, cachePolicy: NSURLRequest(url: url!).cachePolicy, timeoutInterval: 5.0)
 
                         let configuration = URLSessionConfiguration.default
@@ -116,11 +122,8 @@ class detailView: UIView {
                         let task = session.dataTask(with: req, completionHandler: {
                             (data, response, error) -> Void in
 
-                            // urlが見つからない、またはタイムアウトしたとき
                             if error != nil {
                                 self.notFound()
-
-                                // 成功したとき
                             } else {
                                 let warnImageView = UIImageView(frame: CGRect(x: dWid * 0.05, y: dHei * 0.25, width: dWid * 0.45, height: dHei * 0.5))
 
@@ -149,37 +152,62 @@ class detailView: UIView {
 
             } else if pinData.picType == kMovie { // 動画
 
-                if !pinData.movie.hasPrefix("http://www.youtube.com/embed/") && !pinData.movie.hasPrefix("https://www.youtube.com/embed/") {
+                // ▼▼▼ 修正箇所：Optionalを安全にアンラップしてから使う ▼▼▼
+                guard let movieUrl = pinData.movie else {
+                    notFound()
+                    return
+                }
+
+                // 動画URLのチェック
+                if !movieUrl.hasPrefix("http://www.youtube.com/embed/") && !movieUrl.hasPrefix("https://www.youtube.com/embed/") &&
+                    !movieUrl.hasPrefix("https://www.youtube-nocookie.com/embed/") &&
+                    !movieUrl.hasPrefix("https://player.vimeo.com/video/"){
                     notFound()
 
                 } else {
 
-                    let url = URL(string : pinData.movie)
-                    let req = URLRequest(url: url!, cachePolicy: NSURLRequest(url: url!).cachePolicy, timeoutInterval: 5.0)
-                    let configuration = URLSessionConfiguration.default
-                    let session = URLSession(configuration: configuration, delegate:nil, delegateQueue:OperationQueue.main)
+                    // URLSessionでの存在チェック（元のロジックを維持）
+                    if let url = URL(string : movieUrl) {
+                        let req = URLRequest(url: url, cachePolicy: NSURLRequest.CachePolicy.useProtocolCachePolicy, timeoutInterval: 5.0)
+                        let configuration = URLSessionConfiguration.default
+                        let session = URLSession(configuration: configuration, delegate:nil, delegateQueue:OperationQueue.main)
 
-                    let task = session.dataTask(with: req, completionHandler: {
-                        (data, response, error) -> Void in
+                        let task = session.dataTask(with: req, completionHandler: {
+                            (data, response, error) -> Void in
 
-                        // urlが見つからない、またはタイムアウトしたとき
-                        if error != nil {
-                            self.notFound()
+                            // エラー時
+                            if error != nil {
+                                self.notFound()
 
-                            // 成功したとき
-                        } else {
-                            
-                            let webConfiguration = WKWebViewConfiguration()
-                            // 3 WKWebView に Configuration を引き渡し initialize
-                            let webView = WKWebView(frame: CGRect.init(x: CGFloat(dWid * 0.05), y: CGFloat(dHei * 0.3), width: CGFloat(dWid * 0.45), height: CGFloat(dHei * 0.5)), configuration: webConfiguration)
-                            webView.layer.cornerRadius = 15
-                            webView.clipsToBounds = true
-                            webView.load(req)
-                            self.addSubview(webView)
-
-                        }
-                    })
-                    task.resume()
+                            } else {
+                                // ▼▼▼ 再生ボタン(画像)を作る ▼▼▼
+                                
+                                // 修正：self.dWid ではなく dWid を使用（グローバル変数のため）
+                                let buttonFrame = CGRect(x: CGFloat(dWid * 0.05), y: CGFloat(dHei * 0.3), width: CGFloat(dWid * 0.45), height: CGFloat(dHei * 0.5))
+                                let playButton = UIButton(frame: buttonFrame)
+                                
+                                // サムネイル画像の設定
+                                if let thumbImage = UIImage(named: "youtube") {
+                                    playButton.setImage(thumbImage, for: .normal)
+                                    playButton.imageView?.contentMode = .scaleAspectFit
+                                } else {
+                                    playButton.backgroundColor = UIColor.black
+                                    playButton.setTitle("▶︎ 再生", for: .normal)
+                                    playButton.setTitleColor(.white, for: .normal)
+                                }
+                                
+                                // タップ時のアクションを追加
+                                playButton.addTarget(self, action: #selector(self.onClick_playVideo(_:)), for: .touchUpInside)
+                                
+                                playButton.layer.cornerRadius = 15
+                                playButton.clipsToBounds = true
+                                
+                                self.addSubview(playButton)
+                                // ▲▲▲ 修正ここまで ▲▲▲
+                            }
+                        })
+                        task.resume()
+                    }
                 }
             } else {   // その他の情報タグ画像
                 let warnImageView = UIImageView(frame: CGRect.init(x: CGFloat(dWid * 0.8 * 0.08), y: CGFloat(dHei * 0.3), width: dHei * 0.35, height: dHei * 0.35))
@@ -277,6 +305,48 @@ class detailView: UIView {
     }
     
     /*
+         * 動画再生ボタンが押されたとき（標準ブラウザSafariで開く）
+         */
+        @objc func onClick_playVideo(_ sender: UIButton) {
+            // ▼▼▼ Optionalを安全にアンラップ ▼▼▼
+            guard let rawUrl = pinData.movie else { return }
+            
+            var videoId = ""
+            
+            // 1. 動画IDを抽出 (埋め込みURLなどが来てもIDを抜き出す)
+            if rawUrl.contains("youtu.be/") {
+                if let range = rawUrl.range(of: "youtu.be/") {
+                    let sub = rawUrl[range.upperBound...]
+                    videoId = String(sub).components(separatedBy: "?")[0]
+                }
+            } else if rawUrl.contains("v=") {
+                if let range = rawUrl.range(of: "v=") {
+                    let sub = rawUrl[range.upperBound...]
+                    videoId = String(sub).components(separatedBy: "&")[0]
+                }
+            } else if rawUrl.contains("/embed/") {
+                if let range = rawUrl.range(of: "/embed/") {
+                    let sub = rawUrl[range.upperBound...]
+                    videoId = String(sub).components(separatedBy: "?")[0]
+                }
+            }
+            
+            var finalUrlString = rawUrl
+            if !videoId.isEmpty {
+                // Safariで確実に再生させるため、普通の視聴URL (watch?v=...) に変換する
+                finalUrlString = "https://www.youtube.com/watch?v=" + videoId
+            }
+            
+            // 2. 外部ブラウザ（Safariアプリ）を起動する
+            // これならサンドボックスエラーもError 153も発生しません
+            if let url = URL(string: finalUrlString) {
+                if UIApplication.shared.canOpenURL(url) {
+                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                }
+            }
+        }
+    
+    /*
      * 詳細画面を消去する
      */
     func deleteDetailView() {
@@ -284,7 +354,7 @@ class detailView: UIView {
         for view in self.subviews {
             view.removeFromSuperview()
         }
-        backgroundView.removeFromSuperview()
+        backgroundView?.removeFromSuperview()
         delegate?.detailViewFinish()
     }
     
@@ -300,4 +370,17 @@ class detailView: UIView {
         return backgroundView
     }
     
+}
+
+extension UIView {
+    func parentViewController() -> UIViewController? {
+        var parentResponder: UIResponder? = self
+        while true {
+            guard let nextResponder = parentResponder?.next else { return nil }
+            parentResponder = nextResponder
+            if let viewController = nextResponder as? UIViewController {
+                return viewController
+            }
+        }
+    }
 }
