@@ -18,6 +18,12 @@ CerdAR/UnityApp/Libraries/**/*.a
 CerdAR/UnityApp/Data/*.assets
 CerdAR/UnityApp/Data/Raw/
 
+# ただし、Unityが生成する中間コード(Classes, Libraries内のソース)は含める
+!CerdAR/UnityApp/Classes/
+!CerdAR/UnityApp/Libraries/*.h
+!CerdAR/UnityApp/Libraries/*.cpp
+!CerdAR/UnityApp/Libraries/*.mm
+
 # もし特定の巨大ファイルがわかっている場合は直接指定
 CerdAR/UnityApp/Libraries/libiPhone-lib.a
 
