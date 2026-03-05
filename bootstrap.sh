@@ -22,6 +22,13 @@ else
   exit 1
 fi
 
+# =========================================================================
+# 【追記】Xcodeプロジェクトから不要な '-mno-thumb' フラグを自動削除
+# =========================================================================
+log "Fixing unsupported '-mno-thumb' flag..."
+sed -i '' 's/-mno-thumb//g' "${CERDAR_DIR}/UnityApp/Unity-iPhone.xcodeproj/project.pbxproj"
+# =========================================================================
+
 # 2) CocoaPods セットアップ
 if [[ -f "${CERDAR_DIR}/Podfile" ]]; then
   log "Running pod install (if needed)..."
