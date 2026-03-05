@@ -671,13 +671,6 @@
         {
             "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
-            "fullManagedTypeName": "Readme",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "Assembly-CSharp.dll",
-            "nativeClass": "",
             "fullManagedTypeName": "Swing",
             "moduleName": "",
             "usedInScenes": []

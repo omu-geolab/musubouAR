@@ -5,27 +5,17 @@ DerivedData/
 *.dSYM/
 
 # ===== CocoaPods =====
-# Pods自体は除外して、各Macで pod install するのが一般的です
 CerdAR/Pods/
 
+# ===== Carthage =====
+Carthage/Build/
+Carthage/Checkouts/
+
 # ===== Unity (generated artifacts) =====
-# 【重要】Libraries全体を除外するのをやめ、巨大なバイナリファイルだけを指定します
-# CerdAR/UnityApp/Libraries/  <-- これをコメントアウトまたは削除
-
 # 100MBを超える、またはGitHubに向かない巨大なバイナリのみを除外
-CerdAR/UnityApp/Libraries/*.a
 CerdAR/UnityApp/Libraries/**/*.a
-CerdAR/UnityApp/Data/*.assets
+CerdAR/UnityApp/Data/**/*.assets
 CerdAR/UnityApp/Data/Raw/
-
-# ただし、Unityが生成する中間コード(Classes, Libraries内のソース)は含める
-!CerdAR/UnityApp/Classes/
-!CerdAR/UnityApp/Libraries/*.h
-!CerdAR/UnityApp/Libraries/*.cpp
-!CerdAR/UnityApp/Libraries/*.mm
-
-# もし特定の巨大ファイルがわかっている場合は直接指定
-CerdAR/UnityApp/Libraries/libiPhone-lib.a
 
 # secrets
 CerdAR/.netrc
