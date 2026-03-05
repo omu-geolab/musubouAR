@@ -13,7 +13,7 @@ Carthage/Checkouts/
 
 # ===== Unity (generated artifacts) =====
 # 100MBを超える、またはGitHubに向かない巨大なバイナリのみを除外
-CerdAR/UnityApp/Libraries/**/*.a
+CerdAR/UnityApp/Libraries/libiPhone-lib.a
 CerdAR/UnityApp/Data/**/*.assets
 CerdAR/UnityApp/Data/Raw/
 
