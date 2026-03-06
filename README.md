@@ -33,7 +33,13 @@ cd musubouAR
 ```shell-session
 ./bootstrap.sh
 ```
-Xcodeで CerdAR.xcworkspace を開き、ビルドを実行
+```shell-session
+cd CerdAR
+```
+```shell-session
+open CerdAR.xcworkspace
+```
+Xcodeでビルドを実行
 
 * AR表示機能のソースコード（Unity）は[こちら](https://github.com/omu-geolab/musubouAR-Unity)
 
