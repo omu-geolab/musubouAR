@@ -932,6 +932,7 @@ IL2CPP_EXTERN_C RuntimeClass* PlaneDetectionMode_t22DC72CB3F42DDC9A2472A66F81194
 IL2CPP_EXTERN_C RuntimeClass* PreferCameraConfigurationChooser_t50630FE3BDE9C3BC4A0C9D34FEF6A1592CE4A631_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Queue_1_tF1B197AEB6333A56836D412CCD9B9658C6402177_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* RectOffset_tE3A58467CD0749AD9D3E1271F9E315B38F39AE70_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* SafariCallbackReceiver_tF820DF478FA6914C075267F3F697600041C84C37_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* SceneManager_tEC9D10ECC0377F8AE5AEEB5A789FFD24364440FA_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Single_tE07797BA3C98D4CA9B5A19413C19A76688AB899E_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* StringBuilder_t_il2cpp_TypeInfo_var;
@@ -29087,6 +29088,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool String_IsNullOrEmpty_m9AFBB5335B441B94E884B8A9D4A27AD60E3D7F7C (String_t* ___value0, const RuntimeMethod* method);
 // System.Void DialogInfoController::close()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DialogInfoController_close_m443CCB6E6C96A6DE81C9688109B04FA69A8A9113 (DialogInfoController_t562CDE70D1D379DB74216C56D66032C64085CC74 * __this, const RuntimeMethod* method);
+// System.Void SafariCallbackReceiver::MuteAndPrepare()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafariCallbackReceiver_MuteAndPrepare_m487B4FA31C0E2B7A406751A681918D94AD788C46 (const RuntimeMethod* method);
 // System.Void DialogInfoController::_LaunchSafariView(System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DialogInfoController__LaunchSafariView_mB7735E4811EA5B7D123518620A05CFB04BB7166C (String_t* ___url0, const RuntimeMethod* method);
 // System.Void DialogInfoController/<StartDowload>d__15::.ctor(System.Int32)
@@ -42430,6 +42433,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DialogInfoController_openYoutube_m06F37B
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&CharU5BU5D_t7B7FC5BC8091AA3B9CB0B29CDD80B5EE9254AA34_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_tEB68BCBEB8EFD60F8043C67146DC05E7F50F374B_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GlobalAR_t17B42CA7105FCE6F67C362698FA868C1065D0275_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SafariCallbackReceiver_tF820DF478FA6914C075267F3F697600041C84C37_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral109F24FE754618B6711730BF8202FE3DD259F9A5);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral7178FB088E62F4F9DEAC4160DCFD6D393E109799);
@@ -42457,7 +42461,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DialogInfoController_openYoutube_m06F37B
 		L_4 = String_op_Equality_m2B91EE68355F142F67095973D32EB5828B7B73CB(L_2, L_3, /*hidden argument*/NULL);
 		if (!L_4)
 		{
-			goto IL_0123;
+			goto IL_0128;
 		}
 	}
 	{
@@ -42471,7 +42475,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DialogInfoController_openYoutube_m06F37B
 		L_7 = Properties_get_movie_m8A23142B10AECCF9B51E9966F6D8F3880CFF4FFB_inline(L_6, /*hidden argument*/NULL);
 		if (!L_7)
 		{
-			goto IL_0123;
+			goto IL_0128;
 		}
 	}
 	{
@@ -42639,12 +42643,15 @@ IL_0107:
 		L_56 = String_Concat_m4B4AB72618348C5DFBFBA8DED84B9E2EBDB55E1B(_stringLiteral7178FB088E62F4F9DEAC4160DCFD6D393E109799, L_55, /*hidden argument*/NULL);
 		IL2CPP_RUNTIME_CLASS_INIT(Debug_tEB68BCBEB8EFD60F8043C67146DC05E7F50F374B_il2cpp_TypeInfo_var);
 		Debug_Log_mC26E5AD0D8D156C7FFD173AA15827F69225E9DB8(L_56, /*hidden argument*/NULL);
+		// SafariCallbackReceiver.MuteAndPrepare();
+		IL2CPP_RUNTIME_CLASS_INIT(SafariCallbackReceiver_tF820DF478FA6914C075267F3F697600041C84C37_il2cpp_TypeInfo_var);
+		SafariCallbackReceiver_MuteAndPrepare_m487B4FA31C0E2B7A406751A681918D94AD788C46(/*hidden argument*/NULL);
 		// _LaunchSafariView(finalUrl);
 		String_t* L_57 = V_1;
 		DialogInfoController__LaunchSafariView_mB7735E4811EA5B7D123518620A05CFB04BB7166C(L_57, /*hidden argument*/NULL);
 	}
 
-IL_0123:
+IL_0128:
 	{
 		// }
 		return;

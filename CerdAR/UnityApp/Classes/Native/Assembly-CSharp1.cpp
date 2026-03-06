@@ -583,6 +583,8 @@ struct RotationController_tB2A64B43923416B9D49E72D427BA8B80093418BA;
 struct Rotator_tCB9A0EBD724197D00641AF0CB383B4ACCC887A35;
 // RuleWaterController
 struct RuleWaterController_t5C5C4302946D7E56472FA9A7F47017BC474A7443;
+// SafariCallbackReceiver
+struct SafariCallbackReceiver_tF820DF478FA6914C075267F3F697600041C84C37;
 // Microsoft.Win32.SafeHandles.SafeFileHandle
 struct SafeFileHandle_tC77A9860A03C31DC46AD2C08EC10EACDC3B7A662;
 // System.Runtime.Serialization.SafeSerializationManager
@@ -798,6 +800,7 @@ IL2CPP_EXTERN_C RuntimeClass* Path_tF1D95B78D57C1C1211BA6633FF2AC22FD6C48921_il2
 IL2CPP_EXTERN_C RuntimeClass* PlaceMultipleObjectsOnPlane_t242CDC3265AD61014B00144DB89337086CC7490A_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* PlaceOnPlane_t6659ED8C91B68F98402B2264DB0F621F319A03F4_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* PlaneClassification_tAC2E2E9609D4396BC311E2987CA3EFA5115EDD10_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* SafariCallbackReceiver_tF820DF478FA6914C075267F3F697600041C84C37_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* ScreenSpaceJointVisualizer_t0916FAA5C8DA17D0D0C7F361BD0E4D4FD8F34E53_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* StringBuilder_t_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A_il2cpp_TypeInfo_var;
@@ -821,6 +824,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteral175E647915858EC1BB09271F1CB4AF024992F3E1
 IL2CPP_EXTERN_C String_t* _stringLiteral1AC5DFEE519A17680DD5AD69890D39778EDA0847;
 IL2CPP_EXTERN_C String_t* _stringLiteral1AE4176E20B80B6E6D5DDEEA32CFF8C9879BB0CB;
 IL2CPP_EXTERN_C String_t* _stringLiteral1EA9FDAF69DF72C9D1CF16DE8ADB89BCAF623EE6;
+IL2CPP_EXTERN_C String_t* _stringLiteral21CE6552DD2EE7541B4E76DE3F1FBB53CC3CA38F;
 IL2CPP_EXTERN_C String_t* _stringLiteral2283489AC66F8A7F3D0168302B1143CCCAD4E3F4;
 IL2CPP_EXTERN_C String_t* _stringLiteral22B38E7C101B2484AD7F8AE01AA88877E7090F3C;
 IL2CPP_EXTERN_C String_t* _stringLiteral23114468D04FA2B7A2DA455B545DB914D0A3ED94;
@@ -854,6 +858,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteral6C8E3945F6538B554A01E538813EEA83B8C2ABCD
 IL2CPP_EXTERN_C String_t* _stringLiteral6D9AC610F9725B897F92C257BBFBB80B12BDFB9A;
 IL2CPP_EXTERN_C String_t* _stringLiteral6E1CE004DBBF4E6D83804FAD4823454546E65F9D;
 IL2CPP_EXTERN_C String_t* _stringLiteral6EB7B45E0EB25E50E69D2A698A5F85553479DB0F;
+IL2CPP_EXTERN_C String_t* _stringLiteral70060A41DADB8A7C2CB49A9ECBA17C61B5486A91;
 IL2CPP_EXTERN_C String_t* _stringLiteral716160CEE5DFD4758FAFB0DEFCFA5B891164DFEE;
 IL2CPP_EXTERN_C String_t* _stringLiteral71A6E084B8CFFE23C92143EFB8E61DF4BB80BB09;
 IL2CPP_EXTERN_C String_t* _stringLiteral745B3CD8BAF782837AA29DFB2B66A8B255A2711E;
@@ -981,6 +986,7 @@ IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_get_Current_m8F54706BF35C304C986
 IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_get_Current_m98F82DCCF5C9518973A5FB956F7CAAB87854279E_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_get_Current_mEA4B964622A0E870B6F2FDE23FADF8BC9EBAD6C4_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Func_2__ctor_mCF46717A9C82E77DF2E4371B3994A9359F426D2A_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* GameObject_AddComponent_TisSafariCallbackReceiver_tF820DF478FA6914C075267F3F697600041C84C37_m7E3BF2CCD8B1DE9A9FBB5C3380C91DD3A566085E_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* GameObject_AddComponent_TisTextMesh_t830C2452CE189A0D35CD9ED26B6B74D506B01273_mFC38716F8D0DCF6656476102C13234C43AC9DB6F_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* GameObject_GetComponentInChildren_TisMeshRenderer_tCD983A2F635E12BCB0BAA2E635D96A318757908B_m4D003AE0E929BFDFE76762C00146548B0BB0D339_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* GameObject_GetComponent_TisBoneController_tE016B260A258DA0FE0B6DC25A5C29E37A65F5538_m78CDE8D27CA6251E5249A2388551AF3D09ED3240_RuntimeMethod_var;
@@ -15176,6 +15182,31 @@ public:
 };
 
 
+// SafariCallbackReceiver
+struct SafariCallbackReceiver_tF820DF478FA6914C075267F3F697600041C84C37  : public MonoBehaviour_t37A501200D970A8257124B0EAE00A0FF3DDC354A
+{
+public:
+
+public:
+};
+
+struct SafariCallbackReceiver_tF820DF478FA6914C075267F3F697600041C84C37_StaticFields
+{
+public:
+	// System.Single SafariCallbackReceiver::previousVolume
+	float ___previousVolume_4;
+
+public:
+	inline static int32_t get_offset_of_previousVolume_4() { return static_cast<int32_t>(offsetof(SafariCallbackReceiver_tF820DF478FA6914C075267F3F697600041C84C37_StaticFields, ___previousVolume_4)); }
+	inline float get_previousVolume_4() const { return ___previousVolume_4; }
+	inline float* get_address_of_previousVolume_4() { return &___previousVolume_4; }
+	inline void set_previousVolume_4(float value)
+	{
+		___previousVolume_4 = value;
+	}
+};
+
+
 // UnityEngine.XR.ARFoundation.Samples.ScaleController
 struct ScaleController_t97188C492B03BB7A7E0748F95518B93CB5546FC5  : public MonoBehaviour_t37A501200D970A8257124B0EAE00A0FF3DDC354A
 {
@@ -20539,6 +20570,19 @@ inline MakeAppearOnPlane_tC179FA4DDED478C5943A6F04A05105BD5491A11C * Component_G
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float RotationController_get_angle_m6E3BB762FFD942D9D0EF2FF6E2BA87B8E26E75EB (RotationController_tB2A64B43923416B9D49E72D427BA8B80093418BA * __this, const RuntimeMethod* method);
 // System.String System.String::Concat(System.String,System.String,System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Concat_m89EAB4C6A96B0E5C3F87300D6BE78D386B9EFC44 (String_t* ___str00, String_t* ___str11, String_t* ___str22, const RuntimeMethod* method);
+// System.Single UnityEngine.AudioListener::get_volume()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float AudioListener_get_volume_m42CB4AE6FDAE4430D1153AE8B1B363B1C3B30344 (const RuntimeMethod* method);
+// System.Void UnityEngine.AudioListener::set_volume(System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioListener_set_volume_mDC667AECD1CAE741AE6978A9ADE6FEA6EF5B1BEE (float ___value0, const RuntimeMethod* method);
+// System.Void UnityEngine.GameObject::.ctor(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameObject__ctor_mDF8BF31EAE3E03F24421531B25FB4BEDB7C87144 (GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * __this, String_t* ___name0, const RuntimeMethod* method);
+// !!0 UnityEngine.GameObject::AddComponent<SafariCallbackReceiver>()
+inline SafariCallbackReceiver_tF820DF478FA6914C075267F3F697600041C84C37 * GameObject_AddComponent_TisSafariCallbackReceiver_tF820DF478FA6914C075267F3F697600041C84C37_m7E3BF2CCD8B1DE9A9FBB5C3380C91DD3A566085E (GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * __this, const RuntimeMethod* method)
+{
+	return ((  SafariCallbackReceiver_tF820DF478FA6914C075267F3F697600041C84C37 * (*) (GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 *, const RuntimeMethod*))GameObject_AddComponent_TisRuntimeObject_mBDBD6EC58A4409E35E4C5D08757C36E4938256B1_gshared)(__this, method);
+}
+// System.Void UnityEngine.Object::DontDestroyOnLoad(UnityEngine.Object)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Object_DontDestroyOnLoad_m03007A68ABBA4CCD8C27B944964983395E7640F9 (Object_tF2F3778131EFF286AF62B7B013A170F95A91571A * ___target0, const RuntimeMethod* method);
 // UnityEngine.UI.Slider UnityEngine.XR.ARFoundation.Samples.ScaleController::get_slider()
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Slider_tBF39A11CC24CBD3F8BD728982ACAEAE43989B51A * ScaleController_get_slider_m4759BCE9036C2F489DB791862A8F651EC4879762_inline (ScaleController_t97188C492B03BB7A7E0748F95518B93CB5546FC5 * __this, const RuntimeMethod* method);
 // System.Single UnityEngine.XR.ARFoundation.Samples.ScaleController::get_max()
@@ -32295,6 +32339,112 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RuleWaterController__ctor_mF93D8C950CB3B
 		// public float heigth = 1.25f;
 		__this->set_heigth_4((1.25f));
 		MonoBehaviour__ctor_mC0995D847F6A95B1A553652636C38A2AA8B13BED(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void SafariCallbackReceiver::MuteAndPrepare()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafariCallbackReceiver_MuteAndPrepare_m487B4FA31C0E2B7A406751A681918D94AD788C46 (const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameObject_AddComponent_TisSafariCallbackReceiver_tF820DF478FA6914C075267F3F697600041C84C37_m7E3BF2CCD8B1DE9A9FBB5C3380C91DD3A566085E_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tF2F3778131EFF286AF62B7B013A170F95A91571A_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SafariCallbackReceiver_tF820DF478FA6914C075267F3F697600041C84C37_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral21CE6552DD2EE7541B4E76DE3F1FBB53CC3CA38F);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		// previousVolume = AudioListener.volume;
+		float L_0;
+		L_0 = AudioListener_get_volume_m42CB4AE6FDAE4430D1153AE8B1B363B1C3B30344(/*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(SafariCallbackReceiver_tF820DF478FA6914C075267F3F697600041C84C37_il2cpp_TypeInfo_var);
+		((SafariCallbackReceiver_tF820DF478FA6914C075267F3F697600041C84C37_StaticFields*)il2cpp_codegen_static_fields_for(SafariCallbackReceiver_tF820DF478FA6914C075267F3F697600041C84C37_il2cpp_TypeInfo_var))->set_previousVolume_4(L_0);
+		// AudioListener.volume = 0f;
+		AudioListener_set_volume_mDC667AECD1CAE741AE6978A9ADE6FEA6EF5B1BEE((0.0f), /*hidden argument*/NULL);
+		// if (GameObject.Find("SafariCallbackReceiver") == null)
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_1;
+		L_1 = GameObject_Find_m20157C941F1A9DA0E33E0ACA1324FAA41C2B199B(_stringLiteral21CE6552DD2EE7541B4E76DE3F1FBB53CC3CA38F, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Object_tF2F3778131EFF286AF62B7B013A170F95A91571A_il2cpp_TypeInfo_var);
+		bool L_2;
+		L_2 = Object_op_Equality_mEE9EC7EB5C7DC3E95B94AB904E1986FC4D566D54(L_1, (Object_tF2F3778131EFF286AF62B7B013A170F95A91571A *)NULL, /*hidden argument*/NULL);
+		if (!L_2)
+		{
+			goto IL_003c;
+		}
+	}
+	{
+		// GameObject go = new GameObject("SafariCallbackReceiver");
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_3 = (GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 *)il2cpp_codegen_object_new(GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319_il2cpp_TypeInfo_var);
+		GameObject__ctor_mDF8BF31EAE3E03F24421531B25FB4BEDB7C87144(L_3, _stringLiteral21CE6552DD2EE7541B4E76DE3F1FBB53CC3CA38F, /*hidden argument*/NULL);
+		// go.AddComponent<SafariCallbackReceiver>();
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_4 = L_3;
+		NullCheck(L_4);
+		SafariCallbackReceiver_tF820DF478FA6914C075267F3F697600041C84C37 * L_5;
+		L_5 = GameObject_AddComponent_TisSafariCallbackReceiver_tF820DF478FA6914C075267F3F697600041C84C37_m7E3BF2CCD8B1DE9A9FBB5C3380C91DD3A566085E(L_4, /*hidden argument*/GameObject_AddComponent_TisSafariCallbackReceiver_tF820DF478FA6914C075267F3F697600041C84C37_m7E3BF2CCD8B1DE9A9FBB5C3380C91DD3A566085E_RuntimeMethod_var);
+		// DontDestroyOnLoad(go); // シーンが切り替わっても破棄されないようにする
+		IL2CPP_RUNTIME_CLASS_INIT(Object_tF2F3778131EFF286AF62B7B013A170F95A91571A_il2cpp_TypeInfo_var);
+		Object_DontDestroyOnLoad_m03007A68ABBA4CCD8C27B944964983395E7640F9(L_4, /*hidden argument*/NULL);
+	}
+
+IL_003c:
+	{
+		// }
+		return;
+	}
+}
+// System.Void SafariCallbackReceiver::OnSafariClosed(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafariCallbackReceiver_OnSafariClosed_m6A2B0236F8C571E1617265E64B38CF8C5E347EE5 (SafariCallbackReceiver_tF820DF478FA6914C075267F3F697600041C84C37 * __this, String_t* ___message0, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_tEB68BCBEB8EFD60F8043C67146DC05E7F50F374B_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SafariCallbackReceiver_tF820DF478FA6914C075267F3F697600041C84C37_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral70060A41DADB8A7C2CB49A9ECBA17C61B5486A91);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		// Debug.Log("Safari View Controller closed. Restoring audio.");
+		IL2CPP_RUNTIME_CLASS_INIT(Debug_tEB68BCBEB8EFD60F8043C67146DC05E7F50F374B_il2cpp_TypeInfo_var);
+		Debug_Log_mC26E5AD0D8D156C7FFD173AA15827F69225E9DB8(_stringLiteral70060A41DADB8A7C2CB49A9ECBA17C61B5486A91, /*hidden argument*/NULL);
+		// AudioListener.volume = previousVolume;
+		IL2CPP_RUNTIME_CLASS_INIT(SafariCallbackReceiver_tF820DF478FA6914C075267F3F697600041C84C37_il2cpp_TypeInfo_var);
+		float L_0 = ((SafariCallbackReceiver_tF820DF478FA6914C075267F3F697600041C84C37_StaticFields*)il2cpp_codegen_static_fields_for(SafariCallbackReceiver_tF820DF478FA6914C075267F3F697600041C84C37_il2cpp_TypeInfo_var))->get_previousVolume_4();
+		AudioListener_set_volume_mDC667AECD1CAE741AE6978A9ADE6FEA6EF5B1BEE(L_0, /*hidden argument*/NULL);
+		// }
+		return;
+	}
+}
+// System.Void SafariCallbackReceiver::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafariCallbackReceiver__ctor_m9C695EB83592F925A1960FBFEE3410E4A7D4F748 (SafariCallbackReceiver_tF820DF478FA6914C075267F3F697600041C84C37 * __this, const RuntimeMethod* method)
+{
+	{
+		MonoBehaviour__ctor_mC0995D847F6A95B1A553652636C38A2AA8B13BED(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void SafariCallbackReceiver::.cctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafariCallbackReceiver__cctor_mFD742D5529D3647178DF490E2375C1B05F055D09 (const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SafariCallbackReceiver_tF820DF478FA6914C075267F3F697600041C84C37_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		// private static float previousVolume = 1f;
+		((SafariCallbackReceiver_tF820DF478FA6914C075267F3F697600041C84C37_StaticFields*)il2cpp_codegen_static_fields_for(SafariCallbackReceiver_tF820DF478FA6914C075267F3F697600041C84C37_il2cpp_TypeInfo_var))->set_previousVolume_4((1.0f));
 		return;
 	}
 }
