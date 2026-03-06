@@ -35,6 +35,8 @@ cd musubouAR
 ```
 Xcodeで CerdAR.xcworkspace を開き、ビルドを実行
 
+* AR表示機能のソースコード（Unity）は[こちら](https://github.com/omu-geolab/musubouAR-Unity)
+
 ### MUSUBOU-ARの使い方 ###
 * [使い方ガイドなど](https://www.hdcdp.jp/musubou-ar/)
 * [アプリ用データ作成ツール](https://cerdar.reearth.io/)
