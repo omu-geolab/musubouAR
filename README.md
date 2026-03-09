@@ -3,7 +3,7 @@ MUSUBOU-ARは、身のまわりの防災関連情報や仮想的な災害情報�
 このアプリは，科学技術振興機構(JST) 平成27年度 科学技術コミュニケーション推進事業 問題解決型科学技術コミュニケーション支援ネットワーク形成型[「公立大学防災センター連携による地区防災教室ネットワークの構築」](https://www.jst.go.jp/sis/scenario/list/2020/02/post-19.html) ならびに、[平成30年度日本建設情報総合センター（JACIC）研究助成](http://www.jacic.or.jp/josei/itiran_2017.html)「防災教育向けARアプリの開発とその活用に関する研究」の中で、[大阪市立大学都市防災教育研究センター（CERD）](https://www.cerd.osaka-cu.ac.jp/)が開発した成果物をオープンソース化したものです。
 
 * [ライセンスについて](https://bitbucket.org/nro2dai/cerd-ar/src/a30a858468e8554325dc7e79d2ebd7a112c019f9/LICENSE.md?fileviewer=file-view-default)
-* 現行バージョン：　4.0
+* 現行バージョン：　4.5
 
 ### 紹介動画など ###
 
