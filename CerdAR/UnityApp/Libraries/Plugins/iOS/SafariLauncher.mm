@@ -1,6 +1,6 @@
 #import <SafariServices/SafariServices.h>
 
-// Unity側の関数を宣言（ビルド警告を防ぐため）
+// Unity側の関数を宣言
 extern "C" void UnitySendMessage(const char *, const char *, const char *);
 
 // SFSafariViewControllerの閉じる動作を検知するためのデリゲート
@@ -9,8 +9,11 @@ extern "C" void UnitySendMessage(const char *, const char *, const char *);
 
 @implementation SafariDelegate
 - (void)safariViewControllerDidFinish:(SFSafariViewController *)controller {
-    // Safariが閉じられたら、Unity側の "SafariCallbackReceiver" というオブジェクトに通知を送る
+    // 1. Unity側へのミュート解除通知
     UnitySendMessage("SafariCallbackReceiver", "OnSafariClosed", "");
+    
+    // 2. ★追加：iOSネイティブ側（Swift等）へのミュート解除通知
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"UnmuteBackgroundSound" object:nil];
 }
 @end
 
@@ -22,6 +25,10 @@ extern "C" {
 }
 
 void _LaunchSafariView(const char *url) {
+    
+    // ★追加：Safariを開く直前にiOSネイティブ側（Swift等）へミュート指示の通知を飛ばす
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"MuteBackgroundSound" object:nil];
+
     NSString *urlString = [NSString stringWithUTF8String:url];
     NSURL *nsUrl = [NSURL URLWithString:urlString];
     
@@ -29,7 +36,6 @@ void _LaunchSafariView(const char *url) {
         dispatch_async(dispatch_get_main_queue(), ^{
             SFSafariViewController *sfvc = [[SFSafariViewController alloc] initWithURL:nsUrl];
             
-            // デリゲートの初期化と設定（閉じたときの検知用）
             if (safariDelegate == nil) {
                 safariDelegate = [[SafariDelegate alloc] init];
             }

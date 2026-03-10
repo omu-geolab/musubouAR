@@ -103,22 +103,62 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
     //    @IBOutlet weak var toCon_button: UIButton!
     // MARK:- ライフサイクル
     
-    // ★追加: 音を消す（一時停止する）処理
-        @objc func muteBackgroundSound() {
-            // ⚠️ ここは実際のコードに合わせて書き換えてください
-            // (例: AVAudioPlayerを使っている場合)
-            // myAudioPlayer?.pause()
-            // あるいは音量を0にする
-            // myAudioPlayer?.volume = 0.0
+    // ① Safariが開いたときに呼ばれる（ミュート開始）
+    @objc func muteBackgroundSound() {
+        print("🔴 [AudioDebug] muteBackgroundSound() が呼ばれました")
+        isVideoMuted = true
+        wasPlayingBeforeMute = audioPlayerIntr?.isPlaying ?? false
+        audioPlayerIntr?.volume = 0.0
+        audioPlayerIntr?.pause()
+        
+        // ★タイマーのリセットと起動（0.5秒ごとに監視スタート）
+        safariWaitCount = 0
+        safariCheckTimer?.invalidate()
+        safariCheckTimer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(checkSafariStatus), userInfo: nil, repeats: true)
+    }
+
+    // ② 0.5秒ごとにSafariが画面にいるかチェックする監視員
+    @objc func checkSafariStatus() {
+        safariWaitCount += 1
+        
+        // 現在iOSの画面の一番手前に表示されているViewを取得
+        var topController = UIApplication.shared.windows.first { $0.isKeyWindow }?.rootViewController
+        while let presented = topController?.presentedViewController {
+            topController = presented
         }
         
-        // ★追加: 音を戻す（再開する）処理
-        func unmuteBackgroundSound() {
-            // ⚠️ ここは実際のコードに合わせて書き換えてください
-            // myAudioPlayer?.play()
-            // あるいは音量を元に戻す
-            // myAudioPlayer?.volume = 1.0
+        if topController is SFSafariViewController {
+            // Safariが手前にいるので何もしない（正常）
+        } else {
+            // 画面の最前面にSafariがいない場合
+            // ※Safariが開くまでのアニメーションのタイムラグを考慮し、2回(1秒)連続で見つからなければ「完全に閉じた」と判定する
+            if safariWaitCount > 2 {
+                print("🟢 [AudioDebug] タイマー監視によりSafariの終了を検知しました！")
+                
+                // タイマーを止めて、ミュート解除を強制発動
+                safariCheckTimer?.invalidate()
+                safariCheckTimer = nil
+                unmuteBackgroundSound()
+            }
         }
+    }
+        
+    // ③ Safariが閉じたときに呼ばれる（ミュート解除）
+    @objc func unmuteBackgroundSound() {
+        print("🟢 [AudioDebug] unmuteBackgroundSound() が呼ばれました")
+        isVideoMuted = false
+        audioPlayerIntr?.volume = 1.0
+        
+        if wasPlayingBeforeMute {
+            audioPlayerIntr?.play()
+            print("🟢 [AudioDebug] play() を実行して音を再開しました！")
+        }
+        }
+    
+    var isVideoMuted: Bool = false
+    var wasPlayingBeforeMute: Bool = false // ミュート前に音が鳴っていたかを記憶する
+    var safariCheckTimer: Timer?      // 追加：Safari監視タイマー
+    var safariWaitCount: Int = 0      // 追加：誤作動防止用のカウンター
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -1668,7 +1708,9 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
                 audioPlayerNear.stop()
             }
             if audioPlayerIntr != nil {
-                audioPlayerIntr.play()
+                if !isVideoMuted {
+                    audioPlayerIntr.play()
+                }
                 if vibration.isVibration == false {
                     vibration.vibIntrusionStart()
                 }
