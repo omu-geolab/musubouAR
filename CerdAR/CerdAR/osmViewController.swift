@@ -102,8 +102,29 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
     //    @IBOutlet weak var toCam_button: UIButton!
     //    @IBOutlet weak var toCon_button: UIButton!
     // MARK:- ライフサイクル
+    
+    // ★追加: 音を消す（一時停止する）処理
+        @objc func muteBackgroundSound() {
+            // ⚠️ ここは実際のコードに合わせて書き換えてください
+            // (例: AVAudioPlayerを使っている場合)
+            // myAudioPlayer?.pause()
+            // あるいは音量を0にする
+            // myAudioPlayer?.volume = 0.0
+        }
+        
+        // ★追加: 音を戻す（再開する）処理
+        func unmuteBackgroundSound() {
+            // ⚠️ ここは実際のコードに合わせて書き換えてください
+            // myAudioPlayer?.play()
+            // あるいは音量を元に戻す
+            // myAudioPlayer?.volume = 1.0
+        }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // ★追加: 詳細画面から「MuteBackgroundSound」の通知が来たら、ミュート処理を実行する
+        NotificationCenter.default.addObserver(self, selector: #selector(muteBackgroundSound), name: Notification.Name("MuteBackgroundSound"), object: nil)
 //        MPVolumeView.setVolume(0.2)
         WorkoutService.shared.delegate = self
         WorkoutService.shared.ExpportAllWorkouts()
@@ -2054,5 +2075,15 @@ extension MPVolumeView {
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.01) {
             slider?.value = volume
         }
+    }
+}
+
+import SafariServices
+
+// ★追加: Safariが閉じられたことを検知する
+extension osmViewController: SFSafariViewControllerDelegate {
+    public func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
+        // Safariが閉じられたら、音を元に戻す
+        unmuteBackgroundSound()
     }
 }
