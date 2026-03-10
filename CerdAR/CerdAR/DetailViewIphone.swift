@@ -111,15 +111,22 @@ class DetailViewIphone: UIView {
         // 2. SFSafariViewController (アプリ内ブラウザ) を起動
         if let url = URL(string: finalUrlString) {
             
-            // ★重要手順1: 先に親ViewControllerを確保する
-            // (画面を閉じてからだと、親との繋がりが切れて取得できなくなるため)
             guard let parentVC = self.parentViewController() else { return }
             
-            // ★重要手順2: Safariを開く前に、詳細画面(自分)を閉じる
+            // ★追加1: Safariを開く前に「音をミュートして」という通知を全体に飛ばす
+            NotificationCenter.default.post(name: Notification.Name("MuteBackgroundSound"), object: nil)
+            
+            // Safariを開く前に、詳細画面(自分)を閉じる
             self.deleteDetailView()
             
-            // ★重要手順3: 確保しておいた親VCを使って Safari View Controller を表示
             let safariVC = SFSafariViewController(url: url)
+            
+            // ★追加2: Safariが閉じられたことを、親のViewControllerで検知できるようにする
+            if let delegateVC = parentVC as? SFSafariViewControllerDelegate {
+                safariVC.delegate = delegateVC
+            }
+            
+            // 確保しておいた親VCを使って Safari View Controller を表示
             parentVC.present(safariVC, animated: true, completion: nil)
         }
     }
@@ -346,5 +353,4 @@ class DetailViewIphone: UIView {
         }
     }
 }
-
 
