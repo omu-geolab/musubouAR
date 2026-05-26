@@ -1,4 +1,4 @@
-### MUSUBOU-AR（旧名称：CERD-AR）について ###
+# MUSUBOU-AR（旧名称：CERD-AR）
 MUSUBOU-ARは、身のまわりの防災関連情報や仮想的な災害情報を、現実世界の上で可視化がおこなえる拡張現実（AR）アプリです。
 このアプリは，科学技術振興機構(JST) 平成27年度 科学技術コミュニケーション推進事業 問題解決型科学技術コミュニケーション支援ネットワーク形成型[「公立大学防災センター連携による地区防災教室ネットワークの構築」](https://www.jst.go.jp/sis/scenario/list/2020/02/post-19.html) ならびに、[平成30年度日本建設情報総合センター（JACIC）研究助成](http://www.jacic.or.jp/josei/itiran_2017.html)「防災教育向けARアプリの開発とその活用に関する研究」の中で、[大阪市立大学都市防災教育研究センター（CERD）](https://www.cerd.osaka-cu.ac.jp/)が開発した成果物をオープンソース化したものです。
 
@@ -23,36 +23,33 @@ MUSUBOU-ARは、身のまわりの防災関連情報や仮想的な災害情報�
 
 * **GISレイヤの重畳・AR表示機能**：XYZタイル形式のGISデータを重畳・AR表示できます。
 
-### 機能の説明スライドなど ###
+### Xcodeでのビルド前の準備 ###
+```shell-session
+git clone https://github.com/omu-geolab/musubouAR.git
+```
+```shell-session
+cd musubouAR
+```
+```shell-session
+./bootstrap.sh
+```
+```shell-session
+cd CerdAR
+```
+```shell-session
+open CerdAR.xcworkspace
+```
+Xcodeでビルドを実行
 
-![expand.png](https://bitbucket.org/repo/yEpMMp/images/650239671-expand.png)
-![仮想災害.png](https://bitbucket.org/repo/yEpMMp/images/1046686472-%E4%BB%AE%E6%83%B3%E7%81%BD%E5%AE%B3.png)
-
-### 仮想災害のアニメーション表示例 ###
-
-![fire.png](https://bitbucket.org/repo/yEpMMp/images/2409425470-fire.png)
-![flood.png](https://bitbucket.org/repo/yEpMMp/images/1537738340-flood.png)
-![house.png](https://bitbucket.org/repo/yEpMMp/images/1384585069-house.png)!
-![rock.png](https://bitbucket.org/repo/yEpMMp/images/4235115275-rock.png)
-![block.png](https://bitbucket.org/repo/yEpMMp/images/916872342-block.png)
-
-### GISレイヤの表示例 ###
-
-![gismap.PNG](https://bitbucket.org/repo/yEpMMp/images/2596667567-gismap.PNG)
-![GISa.png](https://bitbucket.org/repo/yEpMMp/images/2461469203-GISa.png)
-![GISb.png](https://bitbucket.org/repo/yEpMMp/images/2353364791-GISb.png)
+* AR表示機能のソースコード（Unity）は[こちら](https://github.com/omu-geolab/musubouAR-Unity)
 
 ### MUSUBOU-ARの使い方 ###
-
-* [アプリのビルド・インストール方法について](https://bitbucket.org/nro2dai/cerd-ar/wiki/%E3%82%A2%E3%83%97%E3%83%AA%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E6%96%B9%E6%B3%95(XCODE13.1%E7%94%A8))
-* [データのインポート方法について](https://bitbucket.org/nro2dai/cerd-ar/wiki/Data%20Import)（現在準備中）
-* [データファイル(GeoJSON)の詳細について](https://bitbucket.org/nro2dai/cerd-ar/wiki/GeoJSON)（現在準備中）
-* [アプリ用データ作成ツール（ベータ版）](https://cerd-ocu.github.io/CERD-ARmap/)
-* [GISデータのインポート方法について](https://bitbucket.org/nro2dai/cerd-ar/wiki/GIS%20Data%20Import)
+* [使い方ガイドなど](https://www.hdcdp.jp/musubou-ar/)
+* [アプリ用データ作成ツール](https://cerdar.reearth.io/)
 
 ### サンプルデータファイル（data.geojson） ###
 
-* [大阪公立大学周辺](https://www.musubou.net/musubou-ar/data.geojson)
+* [大阪公立大学周辺など](https://www.musubou.net/musubou-ar/data.geojson)
 
 ### AppStore公開版 ###
 
@@ -65,7 +62,7 @@ MUSUBOU-ARは、身のまわりの防災関連情報や仮想的な災害情報�
 * 有限会社ロケージング
 
 ### 研究資金 ###
-
+* [科学技術振興機構(JST) 共創の場形成支援プログラム (COI-NEXT) 本格型 (2023年4月〜)](https://miraiinfra.otri.osaka-u.ac.jp/)
 * [科学技術振興機構(JST) SDGsの達成に向けた共創的研究開発プログラム（SOLVE for SDGs） (2020年10月〜)](https://www.jst.go.jp/ristex/solve/project/solution/solution20_mitamurapj.html)
 * [日本建設情報総合センター（JACIC）研究助成 (2018年9月-2019年11月)](https://www.jacic.or.jp/josei/itiran_2017.html)
 * [科学技術振興機構(JST) 科学技術コミュニケーション推進事業 (2015年7月〜2018年3月)](https://www.jst.go.jp/sis/scenario/list/2020/02/post-19.html)
