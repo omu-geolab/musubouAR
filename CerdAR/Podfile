@@ -34,4 +34,22 @@ post_install do |installer|
       end
     end
   end
+
+# 3. Xcodeアップデート対策: プライベートヘッダ(netinet6/in6.h)の直接インポートを自動で無効化する
+  require 'fileutils'
+  Dir.glob("Pods/**/*.{h,m,mm,c}").each do |file|
+    begin
+      content = File.read(file)
+      if content.include?('#import <netinet6/in6.h>')
+        FileUtils.chmod("u+w", file)
+        new_content = content.gsub('#import <netinet6/in6.h>', '// #import <netinet6/in6.h>')
+        File.write(file, new_content)
+        puts "Patched private header import in: #{file}"
+      end
+    rescue => e
+      puts "Error patching #{file}: #{e}"
+    end
+  end
+
+
 end
