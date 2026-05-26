@@ -163,7 +163,7 @@
 		5618426CB484775724369718 /* Il2CppGenericComDefinitions11.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD2748B196BAA0C1A2618F4A /* Il2CppGenericComDefinitions11.cpp */; };
 		5623C57617FDCB0800090B9E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		5623C57717FDCB0800090B9E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 830B5C100E5ED4C100C7819F /* UIKit.framework */; };
-		5623C57D17FDCB0900090B9E = {isa = PBXBuildFile; fileRef = 5623C57B17FDCB0900090B9E /* InfoPlist.strings */; };
+		5623C57D17FDCB0900090B9E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5623C57B17FDCB0900090B9E /* InfoPlist.strings */; };
 		5623C57F17FDCB0900090B9E /* Unity_iPhone_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5623C57E17FDCB0900090B9E /* Unity_iPhone_Tests.m */; };
 		56BB454FA17E630012FEA290 /* Il2CppGenericComDefinitions87.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 86EF4F0E9F32DFB3E5852BE1 /* Il2CppGenericComDefinitions87.cpp */; };
 		56C56C9817D6015200616839 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56C56C9717D6015100616839 /* Images.xcassets */; };
@@ -279,6 +279,7 @@
 		93BC419ABCFE829A695F95B3 /* Il2CppGenericComDefinitions33.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18994D63A078C4A7E1D2445F /* Il2CppGenericComDefinitions33.cpp */; };
 		93CD4FA6945FB5946010AAEC /* UnityEngine.IMGUIModule_CodeGen.c in Sources */ = {isa = PBXBuildFile; fileRef = E78443FFA4529000FAB435EA /* UnityEngine.IMGUIModule_CodeGen.c */; };
 		94464D49B9D608355DA3C11D /* Il2CppGenericComDefinitions2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0ACF4CCB9ADF34311D532F5E /* Il2CppGenericComDefinitions2.cpp */; };
+		9486081F2FC5E7B800255FE8 /* Data in Resources */ = {isa = PBXBuildFile; fileRef = AA31BF961B55660D0013FB1B /* Data */; };
 		94CE4804A73B116CFAF98FA1 /* Il2CppGenericComDefinitions20.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 583F44E4984B9B9EB734300A /* Il2CppGenericComDefinitions20.cpp */; };
 		98EB400793B548F578F170F4 /* Unity.XR.ARFoundation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1D134432AAA948C5BE625BD5 /* Unity.XR.ARFoundation.cpp */; };
 		98FD493184D3E742B8F08E61 /* UnityEngine.UnityWebRequestModule_Attr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D2654494A8F9471A4E3C15FE /* UnityEngine.UnityWebRequestModule_Attr.cpp */; };
@@ -632,7 +633,7 @@
 		1CF7481A9F20E662FA76B1FA /* Unity.XR.ARFoundation_Attr.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Unity.XR.ARFoundation_Attr.cpp; path = Classes/Native/Unity.XR.ARFoundation_Attr.cpp; sourceTree = SOURCE_ROOT; };
 		1D134432AAA948C5BE625BD5 /* Unity.XR.ARFoundation.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Unity.XR.ARFoundation.cpp; path = Classes/Native/Unity.XR.ARFoundation.cpp; sourceTree = SOURCE_ROOT; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		1D6058910D05DD3D006BFB54 /* Unity-Target-New.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Unity-Target-New.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D6058910D05DD3D006BFB54 /* Unity-Target-New.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "Unity-Target-New.app"; path = "musubouar-unity.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D734C50845819E436BD95ED /* LaunchScreen-iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchScreen-iPad.png"; sourceTree = SOURCE_ROOT; };
 		1DC74DD59EE1704980F9E88C /* Il2CppGenericComDefinitions38.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Il2CppGenericComDefinitions38.cpp; path = Classes/Native/Il2CppGenericComDefinitions38.cpp; sourceTree = SOURCE_ROOT; };
 		1DC84DCFAF0228F2162E638C /* Il2CppGenericComDefinitions30.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Il2CppGenericComDefinitions30.cpp; path = Classes/Native/Il2CppGenericComDefinitions30.cpp; sourceTree = SOURCE_ROOT; };
@@ -981,7 +982,7 @@
 		A9054A5B83535658BFE71DE5 /* mscorlib11.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = mscorlib11.cpp; path = Classes/Native/mscorlib11.cpp; sourceTree = SOURCE_ROOT; };
 		A97745CE84EFD8E2417E356F /* Il2CppCCalculateFieldValues.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Il2CppCCalculateFieldValues.cpp; path = Classes/Native/Il2CppCCalculateFieldValues.cpp; sourceTree = SOURCE_ROOT; };
 		A9B04DF3AACF82ACAF2E4660 /* UnityEngine.Physics2DModule_CodeGen.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = UnityEngine.Physics2DModule_CodeGen.c; path = Classes/Native/UnityEngine.Physics2DModule_CodeGen.c; sourceTree = SOURCE_ROOT; };
-		AA31BF961B55660D0013FB1B /* Data */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Data; sourceTree = "<group>"; };
+		AA31BF961B55660D0013FB1B /* Data */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Data; sourceTree = SOURCE_ROOT; };
 		AA374AE3953C48435A69CEF9 /* System.Configuration_Attr.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = System.Configuration_Attr.cpp; path = Classes/Native/System.Configuration_Attr.cpp; sourceTree = SOURCE_ROOT; };
 		AA5D99861AFAD3C800B27605 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		AAA84D9D8B3FA32DE755332E /* Unity.XR.ARSubsystems_CodeGen.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = Unity.XR.ARSubsystems_CodeGen.c; path = Classes/Native/Unity.XR.ARSubsystems_CodeGen.c; sourceTree = SOURCE_ROOT; };
@@ -2163,7 +2164,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5623C57D17FDCB0900090B9E,
+				5623C57D17FDCB0900090B9E /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2171,6 +2172,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9486081F2FC5E7B800255FE8 /* Data in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2737,10 +2739,7 @@
 				LD_GENERATE_MAP_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_CFLAGS = (
-					"$(inherited)",
-					"-mno-thumb",
-				);
+				OTHER_CFLAGS = "$(inherited) ";
 				OTHER_CPLUSPLUSFLAGS = (
 					"$(inherited)",
 					"$(OTHER_CFLAGS)",
@@ -2779,10 +2778,7 @@
 				LD_GENERATE_MAP_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
-				OTHER_CFLAGS = (
-					"$(inherited)",
-					"-mno-thumb",
-				);
+				OTHER_CFLAGS = "$(inherited) ";
 				OTHER_CPLUSPLUSFLAGS = (
 					"$(inherited)",
 					"$(OTHER_CFLAGS)",
@@ -2942,10 +2938,7 @@
 				LD_GENERATE_MAP_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_CFLAGS = (
-					"$(inherited)",
-					"-mno-thumb",
-				);
+				OTHER_CFLAGS = "$(inherited) ";
 				OTHER_CPLUSPLUSFLAGS = (
 					"$(inherited)",
 					"$(OTHER_CFLAGS)",
@@ -3051,10 +3044,7 @@
 				LD_GENERATE_MAP_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_CFLAGS = (
-					"$(inherited)",
-					"-mno-thumb",
-				);
+				OTHER_CFLAGS = "$(inherited) ";
 				OTHER_CPLUSPLUSFLAGS = (
 					"$(inherited)",
 					"$(OTHER_CFLAGS)",
