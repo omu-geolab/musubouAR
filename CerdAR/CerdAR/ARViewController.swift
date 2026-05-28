@@ -1387,7 +1387,7 @@ extension ARViewController: ARSCNViewDelegate {
 //                    NSLog("Terrain load complete")
 //                }
 //            }, textureProgress: { progress, total in
-//                
+//
 //            }) { image, fetchError in
 //                if let fetchError = fetchError {
 //                    NSLog("Texture load failed: \(fetchError.localizedDescription)")
@@ -1520,26 +1520,48 @@ extension ARViewController: MGLMapViewDelegate {
     }
     func mapView(_ mapView: MGLMapView, didFinishLoading style: MGLStyle) {
         // Add a new raster source and layer.
-        let source = MGLRasterTileSource(identifier: "darkmatter", tileURLTemplates: [serverName], options: [ .tileSize: 256 ])
-        let rasterLayer = MGLRasterStyleLayer(identifier: "darkmatter", source: source)
-        
-        rasterLayer.rasterOpacity = NSExpression(forConstantValue: 0.5)
-        mapView.style?.addSource(source)
-        if let layer = mapView.style?.layer(withIdentifier: "darkmatter") {
-            mapView.style?.insertLayer(rasterLayer, above: layer)
-            self.rasterLayer = rasterLayer
-        }else{
-            mapView.style?.insertLayer(rasterLayer, at: 10)
+        let sourceIdentifier = "darkmatter"
+        let rasterLayerIdentifier = "darkmatter"
+
+        // The style is rebuilt when the base map is changed, so avoid duplicate
+        // source/layer registration before adding the GIS raster layer again.
+        if let existingLayer = style.layer(withIdentifier: rasterLayerIdentifier) {
+            style.removeLayer(existingLayer)
         }
-        
+
+        if let existingSource = style.source(withIdentifier: sourceIdentifier) {
+            style.removeSource(existingSource)
+        }
+
+        let source = MGLRasterTileSource(
+            identifier: sourceIdentifier,
+            tileURLTemplates: [serverName],
+            options: [.tileSize: 256]
+        )
+        let rasterLayer = MGLRasterStyleLayer(identifier: rasterLayerIdentifier, source: source)
+
+        rasterLayer.rasterOpacity = NSExpression(forConstantValue: 0.5)
+        style.addSource(source)
+
+        if let referenceLayer = style.layer(withIdentifier: "some-layer") {
+            style.insertLayer(rasterLayer, above: referenceLayer)
+        } else {
+            // Do not use insertLayer(_:at:) here.
+            // Some Mapbox styles have fewer layers after a base-map switch,
+            // and inserting at a numeric index can crash inside Mapbox.
+            style.addLayer(rasterLayer)
+        }
+
+        self.rasterLayer = rasterLayer
+
         if(gisDisplayMode != gisMode.gis){
-            if let layer = self.mapView.style?.layer(withIdentifier: "darkmatter"){
+            if let layer = style.layer(withIdentifier: rasterLayerIdentifier){
                 layer.isVisible = false
             }
         }
         self.updateFace()
         loadGeoJson()
-  
+
     }
     func mapView(_ mapView: MGLMapView, annotationCanShowCallout annotation: MGLAnnotation) -> Bool {
         // Always allow callouts to popup when annotations are tapped.

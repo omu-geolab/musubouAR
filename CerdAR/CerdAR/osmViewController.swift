@@ -64,7 +64,7 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
     var warningEnter:[TagData] = []
     var warningNear:[TagData] = []
     var warningSafeCount = 0
-    var warningTimer: Timer! 
+    var warningTimer: Timer!
     
     var polygon = [MGLPolygon]() // 災害円
     var polyNum = 0 // 災害円のインデックス
@@ -1333,29 +1333,49 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
     }
     //var rasterLayer : MGLRasterStyleLayer
     func changeLayer(server:String){
-        if let layermap = mapView.style?.layer(withIdentifier: rasterLayer?.identifier ?? "") {
-            mapView.style?.removeLayer(layermap)
+        guard let style = mapView.style else {
+            return
         }
-        
-        if let sourcemap = mapView.style?.source(withIdentifier: source?.identifier ?? ""){
-            mapView.style?.removeSource(sourcemap)
+
+        let layerIdentifier = "darkmatter"
+        let sourceIdentifier = "darkmatter"
+
+        if let existingLayer = style.layer(withIdentifier: layerIdentifier) {
+            style.removeLayer(existingLayer)
+        } else if let layermap = style.layer(withIdentifier: rasterLayer?.identifier ?? "") {
+            style.removeLayer(layermap)
         }
-        source = MGLRasterTileSource(identifier: "darkmatter", tileURLTemplates: [server], options: [ .tileSize: 256 ])
-        if(source == nil){return}
-        let layerStyle = MGLRasterStyleLayer(identifier: "darkmatter", source: source!)
-        
+
+        if let existingSource = style.source(withIdentifier: sourceIdentifier) {
+            style.removeSource(existingSource)
+        } else if let sourcemap = style.source(withIdentifier: source?.identifier ?? "") {
+            style.removeSource(sourcemap)
+        }
+
+        let newSource = MGLRasterTileSource(
+            identifier: sourceIdentifier,
+            tileURLTemplates: [server],
+            options: [.tileSize: 256]
+        )
+        source = newSource
+
+        let layerStyle = MGLRasterStyleLayer(identifier: layerIdentifier, source: newSource)
         layerStyle.rasterOpacity = NSExpression(forConstantValue: 0.8)
-        self.mapView.style?.addSource(source!)
-        if let layer = mapView.style?.layer(withIdentifier: "darkmatter") {
-            mapView.style?.insertLayer(layerStyle, above: layer)
-            
-        }else{
-            self.mapView.style?.insertLayer(layerStyle, at: 10)
-            
+
+        style.addSource(newSource)
+
+        if let referenceLayer = style.layer(withIdentifier: "some-layer") {
+            style.insertLayer(layerStyle, above: referenceLayer)
+        } else {
+            // Do not use insertLayer(_:at:) here.
+            // Some Mapbox styles have fewer layers after a base-map switch,
+            // and inserting at a numeric index can crash inside Mapbox.
+            style.addLayer(layerStyle)
         }
+
         self.rasterLayer = layerStyle
         gisDisplayMode = gisMode.gis
-        
+
     }
     /// 設定画面を閉じる
     func closeConfigBackground() {
@@ -1462,49 +1482,60 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
     func drawPolyline(geoJson: Data) {
         // Add our GeoJSON data to the map as an MGLGeoJSONSource.
         // We can then reference this data from an MGLStyleLayer.
-        
+
         // MGLMapView.style is optional, so you must guard against it not being set.
         guard let style = self.mapView.style else { return }
-        
+
+        // Remove previous polyline layers/source before adding them again.
+        // This prevents duplicate layer/source errors after style reloads.
+        if let existingCasingLayer = style.layer(withIdentifier: "polyline-case") {
+            style.removeLayer(existingCasingLayer)
+        }
+        if let existingDashedLayer = style.layer(withIdentifier: "polyline-dash") {
+            style.removeLayer(existingDashedLayer)
+        }
+        if let existingLayer = style.layer(withIdentifier: "polyline") {
+            style.removeLayer(existingLayer)
+        }
+        if let existingSource = style.source(withIdentifier: "polyline") {
+            style.removeSource(existingSource)
+        }
+
         guard let shapeFromGeoJSON = try? MGLShape(data: geoJson, encoding: String.Encoding.utf8.rawValue) else {
             fatalError("Could not generate MGLShape")
         }
-        
+
         let source = MGLShapeSource(identifier: "polyline", shape: shapeFromGeoJSON, options: nil)
         style.addSource(source)
-        
+
         // Create new layer for the line.
         let layer = MGLLineStyleLayer(identifier: "polyline", source: source)
-        
+
         // Set the line join and cap to a rounded end.
         layer.lineJoin = NSExpression(forConstantValue: "round")
         layer.lineCap = NSExpression(forConstantValue: "round")
-        
-        // Default color if no stroke property
+
+        // Default color if no stroke property exists.
         let defaultColor = UIColor(red: 59/255, green: 178/255, blue: 208/255, alpha: 1)
-        
-        // Set the line color to a constant blue color.
-//        layer.lineColor = NSExpression(forConstantValue: UIColor(red: 59/255, green: 178/255, blue: 208/255, alpha: 1))
         layer.lineColor = NSExpression(format: "TERNARY(stroke != nil, stroke, %@)", defaultColor)
-        
-        
-        // Use `NSExpression` to smoothly adjust the line width from 2pt to 20pt between zoom levels 14 and 18. The `interpolationBase` parameter allows the values to interpolate along an exponential curve.
-        layer.lineWidth = NSExpression(format: "mgl_interpolate:withCurveType:parameters:stops:($zoomLevel, 'linear', nil, %@)",
-                                       [14: 2, 18: 20])
-        
+
+        // Use `NSExpression` to smoothly adjust the line width from 2pt to 20pt between zoom levels 14 and 18.
+        layer.lineWidth = NSExpression(
+            format: "mgl_interpolate:withCurveType:parameters:stops:($zoomLevel, 'linear', nil, %@)",
+            [14: 2, 18: 20]
+        )
+
         // We can also add a second layer that will draw a stroke around the original line.
         let casingLayer = MGLLineStyleLayer(identifier: "polyline-case", source: source)
-        // Copy these attributes from the main line layer.
         casingLayer.lineJoin = layer.lineJoin
         casingLayer.lineCap = layer.lineCap
-        // Line gap width represents the space before the outline begins, so should match the main line’s line width exactly.
         casingLayer.lineGapWidth = layer.lineWidth
-        // Stroke color slightly darker than the line color.
-//        casingLayer.lineColor = NSExpression(forConstantValue: UIColor(red: 41/255, green: 145/255, blue: 171/255, alpha: 1))
         casingLayer.lineColor = NSExpression(format: "TERNARY(stroke != nil, stroke, %@)", defaultColor)
-        // Use `NSExpression` to gradually increase the stroke width between zoom levels 14 and 18.
-        casingLayer.lineWidth = NSExpression(format: "mgl_interpolate:withCurveType:parameters:stops:($zoomLevel, 'linear', nil, %@)", [14: 1, 18: 4])
-        
+        casingLayer.lineWidth = NSExpression(
+            format: "mgl_interpolate:withCurveType:parameters:stops:($zoomLevel, 'linear', nil, %@)",
+            [14: 1, 18: 4]
+        )
+
         // Just for fun, let’s add another copy of the line with a dash pattern.
         let dashedLayer = MGLLineStyleLayer(identifier: "polyline-dash", source: source)
         dashedLayer.lineJoin = layer.lineJoin
@@ -1512,17 +1543,19 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         dashedLayer.lineColor = NSExpression(forConstantValue: UIColor.white)
         dashedLayer.lineOpacity = NSExpression(forConstantValue: 0.5)
         dashedLayer.lineWidth = layer.lineWidth
-        // Dash pattern in the format [dash, gap, dash, gap, ...]. You’ll want to adjust these values based on the line cap style.
         dashedLayer.lineDashPattern = NSExpression(forConstantValue: [0, 1.5])
-        
+
         // Street Mapの場合
         if let symbolLayer = style.layer(withIdentifier: "admin-1-boundary") ?? style.layer(withIdentifier: "admin-3-4-boundaries") {
             style.insertLayer(layer, below: symbolLayer)
-            
+
             // 衛星画像の場合
         } else {
-            style.insertLayer(layer, at: 4) // 4 は 適当
+            // Do not use insertLayer(_:at:) here.
+            // Some styles have too few layers and Mapbox can throw std::out_of_range.
+            style.addLayer(layer)
         }
+
         style.insertLayer(dashedLayer, above: layer)
         style.insertLayer(casingLayer, above: dashedLayer)
     }
