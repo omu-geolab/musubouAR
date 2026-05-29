@@ -115,7 +115,10 @@ path = ARGV[0]
 dir  = File.dirname(path)
 text = File.read(path)
 
-new_text = text.gsub(/^\s*#import <netinet6\/in6\.h>\s*$/, "// removed private header: netinet6/in6.h")
+new_text = text
+  .gsub(/^\s*#import\s+<netinet6\/in6\.h>\s*$/, "#import <netinet/in.h>")
+  .gsub(/^\s*#include\s+<netinet6\/in6\.h>\s*$/, "#include <netinet/in.h>")
+  .gsub(/(#import <netinet\/in\.h>\n)+/, "#import <netinet/in.h>\n")
 
 if text == new_text
   puts "[bootstrap] No patch needed for #{path}"
