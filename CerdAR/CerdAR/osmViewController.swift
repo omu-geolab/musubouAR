@@ -1364,17 +1364,17 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
 
         style.addSource(newSource)
 
-        if let referenceLayer = style.layer(withIdentifier: "some-layer") {
-            style.insertLayer(layerStyle, above: referenceLayer)
+        if let referenceLayer = style.layer(withIdentifier: "admin-1-boundary") ?? style.layer(withIdentifier: "admin-3-4-boundaries") {
+            style.insertLayer(layerStyle, below: referenceLayer)
         } else {
-            // Do not use insertLayer(_:at:) here.
-            // Some Mapbox styles have fewer layers after a base-map switch,
-            // and inserting at a numeric index can crash inside Mapbox.
             style.addLayer(layerStyle)
         }
 
         self.rasterLayer = layerStyle
         gisDisplayMode = gisMode.gis
+
+        // GISレイヤ追加後にルートを再描画し、ルートをGISレイヤより上に表示する
+        loadGeoJson()
 
     }
     /// 設定画面を閉じる
@@ -1545,11 +1545,15 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
         dashedLayer.lineWidth = layer.lineWidth
         dashedLayer.lineDashPattern = NSExpression(forConstantValue: [0, 1.5])
 
+        // GISレイヤが表示されている場合は、まち歩きルートをGISレイヤより上に表示する
+        if let gisLayer = style.layer(withIdentifier: "darkmatter") {
+            style.insertLayer(layer, above: gisLayer)
+
         // Street Mapの場合
-        if let symbolLayer = style.layer(withIdentifier: "admin-1-boundary") ?? style.layer(withIdentifier: "admin-3-4-boundaries") {
+        } else if let symbolLayer = style.layer(withIdentifier: "admin-1-boundary") ?? style.layer(withIdentifier: "admin-3-4-boundaries") {
             style.insertLayer(layer, below: symbolLayer)
 
-            // 衛星画像の場合
+        // 衛星画像など、基準レイヤが見つからない場合
         } else {
             // Do not use insertLayer(_:at:) here.
             // Some styles have too few layers and Mapbox can throw std::out_of_range.
