@@ -1364,12 +1364,9 @@ class osmViewController: UIViewController, CLLocationManagerDelegate, MGLMapView
 
         style.addSource(newSource)
 
-        if let referenceLayer = style.layer(withIdentifier: "some-layer") {
-            style.insertLayer(layerStyle, above: referenceLayer)
+        if let referenceLayer = style.layer(withIdentifier: "admin-1-boundary") ?? style.layer(withIdentifier: "admin-3-4-boundaries") {
+            style.insertLayer(layerStyle, below: referenceLayer)
         } else {
-            // Do not use insertLayer(_:at:) here.
-            // Some Mapbox styles have fewer layers after a base-map switch,
-            // and inserting at a numeric index can crash inside Mapbox.
             style.addLayer(layerStyle)
         }
 
