@@ -56,7 +56,7 @@ Build the project in Xcode.
 
 ### Using MUSUBOU-AR
 
-* [User guides](https://www.hdcdp.jp/musubou-ar/)
+* [User guides for data creation tool](https://www.omu.ac.jp/i/geo/assets/MUSUBOU-AR_WebTool_20260827.pdf)
 * [Data creation tool for the app](https://cerdar.reearth.io/)
 
 ### Sample Data File (data.geojson)
