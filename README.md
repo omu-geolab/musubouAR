@@ -61,6 +61,12 @@ Xcodeでビルドを実行
 * [応用技術株式会社](https://www.apptec.co.jp/)
 * 有限会社ロケージング
 
+### 引用情報 ###
+
+```
+Yoshida, D., Nguyen, V. T., Hayashi, H., and Ishihara, K.: MUSUBOU-AR: An Open-Source Geospatial AR Framework for Integrating Public GIS Data, Field Authoring, and Disaster Walking Tours, Int. Arch. Photogramm. Remote Sens. Spatial Inf. Sci., L-4/W1-2026, 367–374, https://doi.org/10.5194/isprs-archives-L-4-W1-2026-367-2026, 2026.
+```
+
 ### 研究資金 ###
 * [科学技術振興機構(JST) 共創の場形成支援プログラム (COI-NEXT) 本格型 (2023年4月〜)](https://miraiinfra.otri.osaka-u.ac.jp/)
 * [科学技術振興機構(JST) SDGsの達成に向けた共創的研究開発プログラム（SOLVE for SDGs） (2020年10月〜)](https://www.jst.go.jp/ristex/solve/project/solution/solution20_mitamurapj.html)
