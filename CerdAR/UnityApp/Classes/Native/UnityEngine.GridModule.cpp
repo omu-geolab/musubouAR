@@ -12,6 +12,8 @@
 
 
 
+// UnityEngine.GridLayout
+struct GridLayout_t7BA9C388D3466CA1F18CAD50848F670F670D5D29;
 // System.String
 struct String_t;
 // System.Void
@@ -92,6 +94,22 @@ public:
 	{
 		___Zero_1 = value;
 	}
+};
+
+
+// System.Void
+struct Void_t700C6383A2A510C2CF4DD86DABD5CA9FF70ADAC5 
+{
+public:
+	union
+	{
+		struct
+		{
+		};
+		uint8_t Void_t700C6383A2A510C2CF4DD86DABD5CA9FF70ADAC5__padding[1];
+	};
+
+public:
 };
 
 
@@ -184,6 +202,13 @@ public:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+// System.Void UnityEngine.GridLayout::DoNothing()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GridLayout_DoNothing_m36201F4787709460C994921B16CAC95CD490E0A1 (GridLayout_t7BA9C388D3466CA1F18CAD50848F670F670D5D29 * __this, const RuntimeMethod* method)
+{
+	{
+		return;
+	}
+}
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif

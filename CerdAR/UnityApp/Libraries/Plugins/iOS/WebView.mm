@@ -29,33 +29,6 @@
 extern "C" UIViewController *UnityGetGLViewController();
 extern "C" void UnitySendMessage(const char *, const char *, const char *);
 
-// cf. https://stackoverflow.com/questions/26383031/wkwebview-causes-my-view-controller-to-leak/33365424#33365424
-@interface WeakScriptMessageDelegate : NSObject<WKScriptMessageHandler>
-
-@property (nonatomic, weak) id<WKScriptMessageHandler> scriptDelegate;
-
-- (instancetype)initWithDelegate:(id<WKScriptMessageHandler>)scriptDelegate;
-
-@end
-
-@implementation WeakScriptMessageDelegate
-
-- (instancetype)initWithDelegate:(id<WKScriptMessageHandler>)scriptDelegate
-{
-    self = [super init];
-    if (self) {
-        _scriptDelegate = scriptDelegate;
-    }
-    return self;
-}
-
-- (void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message
-{
-    [self.scriptDelegate userContentController:userContentController didReceiveScriptMessage:message];
-}
-
-@end
-
 @protocol WebViewProtocol <NSObject>
 @property (nonatomic, getter=isOpaque) BOOL opaque;
 @property (nullable, nonatomic, copy) UIColor *backgroundColor UI_APPEARANCE_SELECTOR;
@@ -129,7 +102,6 @@ extern "C" void UnitySendMessage(const char *, const char *, const char *);
     UIView <WebViewProtocol> *webView;
     NSString *gameObjectName;
     NSMutableDictionary *customRequestHeader;
-    BOOL googleAppRedirectionEnabled;
     BOOL alertDialogEnabled;
     NSRegularExpression *allowRegex;
     NSRegularExpression *denyRegex;
@@ -144,18 +116,12 @@ extern "C" void UnitySendMessage(const char *, const char *, const char *);
 static WKProcessPool *_sharedProcessPool;
 static NSMutableArray *_instances = [[NSMutableArray alloc] init];
 
-- (BOOL)isInitialized
-{
-    return webView != nil;
-}
-
-- (id)initWithGameObjectName:(const char *)gameObjectName_ transparent:(BOOL)transparent zoom:(BOOL)zoom ua:(const char *)ua enableWKWebView:(BOOL)enableWKWebView contentMode:(WKContentMode)contentMode allowsLinkPreview:(BOOL)allowsLinkPreview allowsBackForwardNavigationGestures:(BOOL)allowsBackForwardNavigationGestures radius:(int)radius
+- (id)initWithGameObjectName:(const char *)gameObjectName_ transparent:(BOOL)transparent zoom:(BOOL)zoom ua:(const char *)ua enableWKWebView:(BOOL)enableWKWebView contentMode:(WKContentMode)contentMode allowsLinkPreview:(BOOL)allowsLinkPreview
 {
     self = [super init];
 
     gameObjectName = [NSString stringWithUTF8String:gameObjectName_];
     customRequestHeader = [[NSMutableDictionary alloc] init];
-    googleAppRedirectionEnabled = false;
     alertDialogEnabled = true;
     allowRegex = nil;
     denyRegex = nil;
@@ -169,24 +135,11 @@ static NSMutableArray *_instances = [[NSMutableArray alloc] init];
         }
         WKWebViewConfiguration *configuration = [[WKWebViewConfiguration alloc] init];
         WKUserContentController *controller = [[WKUserContentController alloc] init];
-        [controller addScriptMessageHandler:[[WeakScriptMessageDelegate alloc] initWithDelegate:self] name:@"unityControl"];
-        [controller addScriptMessageHandler:[[WeakScriptMessageDelegate alloc] initWithDelegate:self] name:@"saveDataURL"];
-        {
-            NSString *str = @"\
-window.Unity = { \
-    call: function(msg) { \
-        window.webkit.messageHandlers.unityControl.postMessage(msg); \
-    }, \
-    saveDataURL: function(fileName, dataURL) { \
-        window.webkit.messageHandlers.saveDataURL.postMessage(fileName + '\t' + dataURL); \
-    } \
-}; \
-";
-            WKUserScript *script = [[WKUserScript alloc] initWithSource:str injectionTime:WKUserScriptInjectionTimeAtDocumentStart forMainFrameOnly:YES];
-            [controller addUserScript:script];
-        }
+        [controller addScriptMessageHandler:self name:@"unityControl"];
         if (!zoom) {
-            NSString *str = @"\
+            WKUserScript *script
+                = [[WKUserScript alloc]
+                      initWithSource:@"\
 (function() { \
     var meta = document.querySelector('meta[name=viewport]'); \
     if (meta == null) { \
@@ -197,8 +150,9 @@ window.Unity = { \
     var head = document.getElementsByTagName('head')[0]; \
     head.appendChild(meta); \
 })(); \
-";
-            WKUserScript *script = [[WKUserScript alloc] initWithSource:str injectionTime:WKUserScriptInjectionTimeAtDocumentEnd forMainFrameOnly:YES];
+"
+                       injectionTime:WKUserScriptInjectionTimeAtDocumentEnd
+                    forMainFrameOnly:YES];
             [controller addUserScript:script];
         }
         configuration.userContentController = controller;
@@ -231,21 +185,10 @@ window.Unity = { \
         }
 #endif
         WKWebView *wkwebView = [[WKWebView alloc] initWithFrame:view.frame configuration:configuration];
-#if UNITYWEBVIEW_DEVELOPMENT
-        NSOperatingSystemVersion version = { 16, 4, 0 };
-        if ([[NSProcessInfo processInfo] isOperatingSystemAtLeastVersion:version]) {
-            wkwebView.inspectable = true;
-        }
-#endif
         wkwebView.allowsLinkPreview = allowsLinkPreview;
-        wkwebView.allowsBackForwardNavigationGestures = allowsBackForwardNavigationGestures;
         webView = wkwebView;
         webView.UIDelegate = self;
         webView.navigationDelegate = self;
-        if (radius > 0) {
-            webView.layer.cornerRadius = radius;
-            webView.layer.masksToBounds = YES;
-        }
         if (ua != NULL && strcmp(ua, "") != 0) {
             ((WKWebView *)webView).customUserAgent = [[NSString alloc] initWithUTF8String:ua];
         }
@@ -271,12 +214,6 @@ window.Unity = { \
 
     [view addSubview:webView];
 
-    //set webview for Unity 6 accessibility hierarchy
-    NSMutableArray<UIAccessibilityElement *> *accessibilityElements
-        = view.accessibilityElements ? [view.accessibilityElements mutableCopy] : [NSMutableArray array];
-    [accessibilityElements addObject:(UIAccessibilityElement *)webView];
-    view.accessibilityElements = accessibilityElements;
-    
     return self;
 }
 
@@ -288,19 +225,10 @@ window.Unity = { \
         if ([webView0 isKindOfClass:[WKWebView class]]) {
             webView0.UIDelegate = nil;
             webView0.navigationDelegate = nil;
-            [((WKWebView *)webView0).configuration.userContentController removeScriptMessageHandlerForName:@"saveDataURL"];
-            [((WKWebView *)webView0).configuration.userContentController removeScriptMessageHandlerForName:@"unityControl"];
         }
         [webView0 stopLoading];
         [webView0 removeFromSuperview];
         [webView0 removeObserver:self forKeyPath:@"loading"];
-        
-        //remove the WebViewObject from Unity hierarchy tree
-        UIView *view = UnityGetGLViewController().view;
-        NSMutableArray<UIAccessibilityElement *> *accessibilityElements
-            = view.accessibilityElements ? [view.accessibilityElements mutableCopy] : [NSMutableArray array];
-        [accessibilityElements removeObject: (UIAccessibilityElement *)webView0];
-        view.accessibilityElements = accessibilityElements;
     }
     basicAuthPassword = nil;
     basicAuthUserName = nil;
@@ -311,58 +239,8 @@ window.Unity = { \
     gameObjectName = nil;
 }
 
-+ (void)resetSharedProcessPool
-{
-    // cf. https://stackoverflow.com/questions/33156567/getting-all-cookies-from-wkwebview/49744695#49744695
-    _sharedProcessPool = [[WKProcessPool alloc] init];
-    [_instances enumerateObjectsUsingBlock:^(CWebViewPlugin *obj, NSUInteger idx, BOOL *stop) {
-        if ([obj->webView isKindOfClass:[WKWebView class]]) {
-            WKWebView *webView = (WKWebView *)obj->webView;
-            webView.configuration.processPool = _sharedProcessPool;
-        }
-    }];
-}
-
-+ (void)clearCookie:(const char *)name of:(const char *)url
-{
-    NSURL *nsurl = [NSURL URLWithString:[[NSString alloc] initWithUTF8String:url]];
-    if (nsurl == nil) {
-        return;
-    }
-    NSString *nsname = [NSString stringWithUTF8String:name];
-    if (@available(iOS 9.0, *)) {
-        WKHTTPCookieStore *cookieStore = WKWebsiteDataStore.defaultDataStore.httpCookieStore;
-        [cookieStore
-            getAllCookies:^(NSArray<NSHTTPCookie *> *array) {
-                [array
-                    enumerateObjectsUsingBlock:^(NSHTTPCookie *cookie, NSUInteger idx, BOOL *stop) {
-                        if ([cookie.name isEqualToString:nsname]
-                            && [cookie.domain isEqualToString:nsurl.host]
-                            && [cookie.path isEqualToString:nsurl.path]) {
-                            [cookieStore deleteCookie:cookie completionHandler:^{}];
-                        }
-                    }];
-            }];
-    } else {
-        NSHTTPCookieStorage *cookieStorage = [NSHTTPCookieStorage sharedHTTPCookieStorage];
-        if (cookieStorage == nil) {
-            // cf. https://stackoverflow.com/questions/33876295/nshttpcookiestorage-sharedhttpcookiestorage-comes-up-empty-in-10-11
-            cookieStorage = [NSHTTPCookieStorage sharedCookieStorageForGroupContainerIdentifier:@"Cookies"];
-        }
-        [[cookieStorage cookies] enumerateObjectsUsingBlock:^(NSHTTPCookie *cookie, NSUInteger idx, BOOL *stop) {
-            if ([cookie.name isEqualToString:nsname]
-                && [cookie.domain isEqualToString:nsurl.host]
-                && [cookie.path isEqualToString:nsurl.path]) {
-                [cookieStorage deleteCookie:cookie];
-            }
-        }];
-    }
-}
-
 + (void)clearCookies
 {
-    [CWebViewPlugin resetSharedProcessPool];
-
     // cf. https://dev.classmethod.jp/smartphone/remove-webview-cookies/
     NSString *libraryPath = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES).firstObject;
     NSString *cookiesPath = [libraryPath stringByAppendingPathComponent:@"Cookies"];
@@ -381,7 +259,6 @@ window.Unity = { \
 
     NSOperatingSystemVersion version = { 9, 0, 0 };
     if ([[NSProcessInfo processInfo] isOperatingSystemAtLeastVersion:version]) {
-        // cf. https://stackoverflow.com/questions/46465070/how-to-delete-cookies-from-wkhttpcookiestore/47928399#47928399
         NSSet *websiteDataTypes = [WKWebsiteDataStore allWebsiteDataTypes];
         NSDate *date = [NSDate dateWithTimeIntervalSince1970:0];
         [[WKWebsiteDataStore defaultDataStore] removeDataOfTypes:websiteDataTypes
@@ -392,132 +269,67 @@ window.Unity = { \
 
 + saveCookies
 {
-    [CWebViewPlugin resetSharedProcessPool];
+    // cf. https://stackoverflow.com/questions/33156567/getting-all-cookies-from-wkwebview/49744695#49744695
+    _sharedProcessPool = [[WKProcessPool alloc] init];
+    [_instances enumerateObjectsUsingBlock:^(CWebViewPlugin *obj, NSUInteger idx, BOOL *stop) {
+        if ([obj->webView isKindOfClass:[WKWebView class]]) {
+            WKWebView *webView = (WKWebView *)obj->webView;
+            webView.configuration.processPool = _sharedProcessPool;
+        }
+    }];
 }
 
-- (void)getCookies:(const char *)url
++ (const char *)getCookies:(const char *)url
 {
-    NSOperatingSystemVersion version = { 9, 0, 0 };
-    if ([[NSProcessInfo processInfo] isOperatingSystemAtLeastVersion:version]) {
-        NSURL *nsurl = [NSURL URLWithString:[[NSString alloc] initWithUTF8String:url]];
-        WKHTTPCookieStore *cookieStore = WKWebsiteDataStore.defaultDataStore.httpCookieStore;
-        [cookieStore
-            getAllCookies:^(NSArray<NSHTTPCookie *> *array) {
-                NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-                formatter.locale = [NSLocale localeWithLocaleIdentifier:@"en_US_POSIX"];
-                [formatter setDateFormat:@"EEE, dd MMM yyyy HH:mm:ss zzz"];
-                NSMutableString *result = [NSMutableString string];
-                [array enumerateObjectsUsingBlock:^(NSHTTPCookie *cookie, NSUInteger idx, BOOL *stop) {
-                        if ([cookie.domain isEqualToString:nsurl.host]) {
-                            [result appendString:[NSString stringWithFormat:@"%@=%@", cookie.name, cookie.value]];
-                            if ([cookie.domain length] > 0) {
-                                [result appendString:[NSString stringWithFormat:@"; "]];
-                                [result appendString:[NSString stringWithFormat:@"Domain=%@", cookie.domain]];
-                            }
-                            if ([cookie.path length] > 0) {
-                                [result appendString:[NSString stringWithFormat:@"; "]];
-                                [result appendString:[NSString stringWithFormat:@"Path=%@", cookie.path]];
-                            }
-                            if (cookie.expiresDate != nil) {
-                                [result appendString:[NSString stringWithFormat:@"; "]];
-                                [result appendString:[NSString stringWithFormat:@"Expires=%@", [formatter stringFromDate:cookie.expiresDate]]];
-                            }
-                            [result appendString:[NSString stringWithFormat:@"; "]];
-                            [result appendString:[NSString stringWithFormat:@"Version=%zd", cookie.version]];
-                            [result appendString:[NSString stringWithFormat:@"\n"]];
-                        }
-                    }];
-                UnitySendMessage([gameObjectName UTF8String], "CallOnCookies", [result UTF8String]);
-            }];
-    } else {
-        [CWebViewPlugin resetSharedProcessPool];
-        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-        formatter.locale = [NSLocale localeWithLocaleIdentifier:@"en_US_POSIX"];
-        [formatter setDateFormat:@"EEE, dd MMM yyyy HH:mm:ss zzz"];
-        NSMutableString *result = [NSMutableString string];
-        NSHTTPCookieStorage *cookieStorage = [NSHTTPCookieStorage sharedHTTPCookieStorage];
-        if (cookieStorage == nil) {
-            // cf. https://stackoverflow.com/questions/33876295/nshttpcookiestorage-sharedhttpcookiestorage-comes-up-empty-in-10-11
-            cookieStorage = [NSHTTPCookieStorage sharedCookieStorageForGroupContainerIdentifier:@"Cookies"];
+    // cf. https://stackoverflow.com/questions/33156567/getting-all-cookies-from-wkwebview/49744695#49744695
+    _sharedProcessPool = [[WKProcessPool alloc] init];
+    [_instances enumerateObjectsUsingBlock:^(CWebViewPlugin *obj, NSUInteger idx, BOOL *stop) {
+        if ([obj->webView isKindOfClass:[WKWebView class]]) {
+            WKWebView *webView = (WKWebView *)obj->webView;
+            webView.configuration.processPool = _sharedProcessPool;
         }
-        [[cookieStorage cookiesForURL:[NSURL URLWithString:[[NSString alloc] initWithUTF8String:url]]]
-            enumerateObjectsUsingBlock:^(NSHTTPCookie *cookie, NSUInteger idx, BOOL *stop) {
-                [result appendString:[NSString stringWithFormat:@"%@=%@", cookie.name, cookie.value]];
-                if ([cookie.domain length] > 0) {
-                    [result appendString:[NSString stringWithFormat:@"; "]];
-                    [result appendString:[NSString stringWithFormat:@"Domain=%@", cookie.domain]];
-                }
-                if ([cookie.path length] > 0) {
-                    [result appendString:[NSString stringWithFormat:@"; "]];
-                    [result appendString:[NSString stringWithFormat:@"Path=%@", cookie.path]];
-                }
-                if (cookie.expiresDate != nil) {
-                    [result appendString:[NSString stringWithFormat:@"; "]];
-                    [result appendString:[NSString stringWithFormat:@"Expires=%@", [formatter stringFromDate:cookie.expiresDate]]];
-                }
-                [result appendString:[NSString stringWithFormat:@"; "]];
-                [result appendString:[NSString stringWithFormat:@"Version=%zd", cookie.version]];
-                [result appendString:[NSString stringWithFormat:@"\n"]];
-            }];
-        UnitySendMessage([gameObjectName UTF8String], "CallOnCookies", [result UTF8String]);
+    }];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    formatter.locale = [NSLocale localeWithLocaleIdentifier:@"en_US_POSIX"];
+    [formatter setDateFormat:@"EEE, dd MMM yyyy HH:mm:ss zzz"];
+    NSMutableString *result = [NSMutableString string];
+    NSHTTPCookieStorage *cookieStorage = [NSHTTPCookieStorage sharedHTTPCookieStorage];
+    if (cookieStorage == nil) {
+        // cf. https://stackoverflow.com/questions/33876295/nshttpcookiestorage-sharedhttpcookiestorage-comes-up-empty-in-10-11
+        cookieStorage = [NSHTTPCookieStorage sharedCookieStorageForGroupContainerIdentifier:@"Cookies"];
     }
+    [[cookieStorage cookiesForURL:[NSURL URLWithString:[[NSString alloc] initWithUTF8String:url]]]
+        enumerateObjectsUsingBlock:^(NSHTTPCookie *cookie, NSUInteger idx, BOOL *stop) {
+            [result appendString:[NSString stringWithFormat:@"%@=%@", cookie.name, cookie.value]];
+            if ([cookie.domain length] > 0) {
+                [result appendString:[NSString stringWithFormat:@"; "]];
+                [result appendString:[NSString stringWithFormat:@"Domain=%@", cookie.domain]];
+            }
+            if ([cookie.path length] > 0) {
+                [result appendString:[NSString stringWithFormat:@"; "]];
+                [result appendString:[NSString stringWithFormat:@"Path=%@", cookie.path]];
+            }
+            if (cookie.expiresDate != nil) {
+                [result appendString:[NSString stringWithFormat:@"; "]];
+                [result appendString:[NSString stringWithFormat:@"Expires=%@", [formatter stringFromDate:cookie.expiresDate]]];
+            }
+            [result appendString:[NSString stringWithFormat:@"; "]];
+            [result appendString:[NSString stringWithFormat:@"Version=%zd", cookie.version]];
+            [result appendString:[NSString stringWithFormat:@"\n"]];
+        }];
+    const char *s = [result UTF8String];
+    char *r = (char *)malloc(strlen(s) + 1);
+    strcpy(r, s);
+    return r;
 }
 
 - (void)userContentController:(WKUserContentController *)userContentController
       didReceiveScriptMessage:(WKScriptMessage *)message {
 
     // Log out the message received
-    //NSLog(@"Received event %@", message.body);
-    if ([message.name isEqualToString:@"unityControl"]) {
-        UnitySendMessage([gameObjectName UTF8String], "CallFromJS", [[NSString stringWithFormat:@"%@", message.body] UTF8String]);
-    } else if ([message.name isEqualToString:@"saveDataURL"]) {
-        NSRange range = [message.body rangeOfString:@"\t"];
-        if (range.location == NSNotFound) {
-            return;
-        }
-        NSString *fileName = [[message.body substringWithRange:NSMakeRange(0, range.location)] lastPathComponent];
-        NSString *dataURL = [message.body substringFromIndex:(range.location + 1)];
-        range = [dataURL rangeOfString:@"data:"];
-        if (range.location != 0) {
-            return;
-        }
-        NSString *tmp = [dataURL substringFromIndex:[@"data:" length]];
-        range = [tmp rangeOfString:@";"];
-        if (range.location == NSNotFound) {
-            return;
-        }
-        NSString *base64data = [tmp substringFromIndex:(range.location + 1 + [@"base64," length])];
-        NSString *type = [tmp substringWithRange:NSMakeRange(0, range.location)];
-        NSData *data = [[NSData alloc] initWithBase64EncodedString:base64data options:0];
-        NSString *path = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
-        path = [path stringByAppendingString:@"/Downloads"];
-        BOOL isDir;
-        NSError *err = nil;
-        if ([[NSFileManager defaultManager] fileExistsAtPath:path isDirectory:&isDir]) {
-            if (!isDir) {
-                return;
-            }
-        } else {
-            [[NSFileManager defaultManager] createDirectoryAtPath:path withIntermediateDirectories:YES attributes:nil error:&err];
-            if (err != nil) {
-                return;
-            }
-        }
-        NSString *prefix  = [path stringByAppendingString:@"/"];
-        path = [prefix stringByAppendingString:fileName];
-        int count = 0;
-        while ([[NSFileManager defaultManager] fileExistsAtPath:path]) {
-            count++;
-            NSString *name = [fileName stringByDeletingPathExtension];
-            NSString *ext = [fileName pathExtension];
-            if (ext.length == 0) {
-                path = [NSString stringWithFormat:@"%@%@ (%d)", prefix, name, count];
-            } else {
-                path = [NSString stringWithFormat:@"%@%@ (%d).%@", prefix, name, count, ext];
-            }
-        }
-        [data writeToFile:path atomically:YES];
-    }
+    NSLog(@"Received event %@", message.body);
+    UnitySendMessage([gameObjectName UTF8String], "CallFromJS",
+                     [[NSString stringWithFormat:@"%@", message.body] UTF8String]);
 
     /*
     // Then pull something from the device using the message body
@@ -590,19 +402,10 @@ window.Unity = { \
         return;
     }
     if ([url rangeOfString:@"//itunes.apple.com/"].location != NSNotFound) {
-        if (@available(iOS 10.0, *)) {
-            [[UIApplication sharedApplication] openURL:nsurl options:@{} completionHandler:nil];
-        } else {
-            [[UIApplication sharedApplication] openURL:nsurl];
-        }
+        [[UIApplication sharedApplication] openURL:nsurl];
         decisionHandler(WKNavigationActionPolicyCancel);
         return;
-        
-    }
-    
-    
-        
-     else if ([url hasPrefix:@"unity:"]) {
+    } else if ([url hasPrefix:@"unity:"]) {
         UnitySendMessage([gameObjectName UTF8String], "CallFromJS", [[url substringFromIndex:6] UTF8String]);
         decisionHandler(WKNavigationActionPolicyCancel);
         return;
@@ -611,16 +414,11 @@ window.Unity = { \
         decisionHandler(WKNavigationActionPolicyCancel);
         return;
     } else if (![url hasPrefix:@"about:blank"]  // for loadHTML(), cf. #365
-               && ![url hasPrefix:@"about:srcdoc"] // for iframe srcdoc attribute
                && ![url hasPrefix:@"file:"]
                && ![url hasPrefix:@"http:"]
                && ![url hasPrefix:@"https:"]) {
         if([[UIApplication sharedApplication] canOpenURL:nsurl]) {
-            if (@available(iOS 10.0, *)) {
-                [[UIApplication sharedApplication] openURL:nsurl options:@{} completionHandler:nil];
-            } else {
-                [[UIApplication sharedApplication] openURL:nsurl];
-            }
+            [[UIApplication sharedApplication] openURL:nsurl];
         }
         decisionHandler(WKNavigationActionPolicyCancel);
         return;
@@ -642,14 +440,6 @@ window.Unity = { \
         }
     }
     UnitySendMessage([gameObjectName UTF8String], "CallOnStarted", [url UTF8String]);
-    // cf. https://stackoverflow.com/questions/37086605/disable-wkwebview-for-opening-links-to-redirect-to-apps-installed-on-my-iphone/76948270#76948270
-    if (!googleAppRedirectionEnabled
-        && [url hasPrefix:@"https://www.google.com/"]
-        && navigationAction.navigationType == WKNavigationTypeLinkActivated) {
-        [webView load:navigationAction.request];
-        decisionHandler(WKNavigationActionPolicyCancel);
-        return;
-    }
     decisionHandler(WKNavigationActionPolicyAllow);
 }
 
@@ -809,13 +599,6 @@ window.Unity = { \
     if (webView == nil)
         return;
     webView.userInteractionEnabled = enabled;
-}
-
-- (void)setGoogleAppRedirectionEnabled:(BOOL)enabled
-{
-    if (webView == nil)
-        return;
-    googleAppRedirectionEnabled = enabled;
 }
 
 - (void)setAlertDialogEnabled:(BOOL)enabled
@@ -1012,27 +795,15 @@ window.Unity = { \
     NSDate *date = [NSDate dateWithTimeIntervalSince1970:0];
     [[WKWebsiteDataStore defaultDataStore] removeDataOfTypes:types modifiedSince:date completionHandler:^{}];
 }
-
-- (void)setAllMediaPlaybackSuspended:(BOOL)suspended
-{
-    NSOperatingSystemVersion version = { 15, 0, 0 };
-    if ([[NSProcessInfo processInfo] isOperatingSystemAtLeastVersion:version]) {
-        if ([webView isKindOfClass:[WKWebView class]]) {
-            [(WKWebView *)webView setAllMediaPlaybackSuspended:suspended completionHandler:nil];
-        }
-    }
-}
 @end
 
 extern "C" {
-    BOOL _CWebViewPlugin_IsInitialized(void *instance);
-    void *_CWebViewPlugin_Init(const char *gameObjectName, BOOL transparent, BOOL zoom, const char *ua, BOOL enableWKWebView, int contentMode, BOOL allowsLinkPreview, BOOL allowsBackForwardNavigationGestures, int radius);
+    void *_CWebViewPlugin_Init(const char *gameObjectName, BOOL transparent, BOOL zoom, const char *ua, BOOL enableWKWebView, int contentMode, BOOL allowsLinkPreview);
     void _CWebViewPlugin_Destroy(void *instance);
     void _CWebViewPlugin_SetMargins(
         void *instance, float left, float top, float right, float bottom, BOOL relative);
     void _CWebViewPlugin_SetVisibility(void *instance, BOOL visibility);
     void _CWebViewPlugin_SetInteractionEnabled(void *instance, BOOL enabled);
-    void _CWebViewPlugin_SetGoogleAppRedirectionEnabled(void *instance, BOOL enabled);
     void _CWebViewPlugin_SetAlertDialogEnabled(void *instance, BOOL visibility);
     void _CWebViewPlugin_SetScrollbarsVisibility(void *instance, BOOL visibility);
     void _CWebViewPlugin_SetScrollBounceEnabled(void *instance, BOOL enabled);
@@ -1049,25 +820,15 @@ extern "C" {
     void _CWebViewPlugin_AddCustomHeader(void *instance, const char *headerKey, const char *headerValue);
     void _CWebViewPlugin_RemoveCustomHeader(void *instance, const char *headerKey);
     void _CWebViewPlugin_ClearCustomHeader(void *instance);
-    void _CWebViewPlugin_ClearCookie(const char *url, const char *name);
     void _CWebViewPlugin_ClearCookies();
     void _CWebViewPlugin_SaveCookies();
-    void _CWebViewPlugin_GetCookies(void *instance, const char *url);
+    const char *_CWebViewPlugin_GetCookies(const char *url);
     const char *_CWebViewPlugin_GetCustomHeaderValue(void *instance, const char *headerKey);
     void _CWebViewPlugin_SetBasicAuthInfo(void *instance, const char *userName, const char *password);
     void _CWebViewPlugin_ClearCache(void *instance, BOOL includeDiskFiles);
-    void _CWebViewPlugin_SetSuspended(void *instance, BOOL suspended);
 }
 
-BOOL _CWebViewPlugin_IsInitialized(void *instance)
-{
-    if (instance == NULL)
-        return NO;
-    CWebViewPlugin *webViewPlugin = (__bridge CWebViewPlugin *)instance;
-    return [webViewPlugin isInitialized];
-}
-
-void *_CWebViewPlugin_Init(const char *gameObjectName, BOOL transparent, BOOL zoom, const char *ua, BOOL enableWKWebView, int contentMode, BOOL allowsLinkPreview, BOOL allowsBackForwardNavigationGestures, int radius)
+void *_CWebViewPlugin_Init(const char *gameObjectName, BOOL transparent, BOOL zoom, const char *ua, BOOL enableWKWebView, int contentMode, BOOL allowsLinkPreview)
 {
     if (! (enableWKWebView && [WKWebView class]))
         return nil;
@@ -1083,7 +844,7 @@ void *_CWebViewPlugin_Init(const char *gameObjectName, BOOL transparent, BOOL zo
         wkContentMode = WKContentModeRecommended;
         break;
     }
-    CWebViewPlugin *webViewPlugin = [[CWebViewPlugin alloc] initWithGameObjectName:gameObjectName transparent:transparent zoom:zoom ua:ua enableWKWebView:enableWKWebView contentMode:wkContentMode allowsLinkPreview:allowsLinkPreview allowsBackForwardNavigationGestures:allowsBackForwardNavigationGestures radius:radius];
+    CWebViewPlugin *webViewPlugin = [[CWebViewPlugin alloc] initWithGameObjectName:gameObjectName transparent:transparent zoom:zoom ua:ua enableWKWebView:enableWKWebView contentMode:wkContentMode allowsLinkPreview:allowsLinkPreview];
     [_instances addObject:webViewPlugin];
     return (__bridge_retained void *)webViewPlugin;
 }
@@ -1121,14 +882,6 @@ void _CWebViewPlugin_SetInteractionEnabled(void *instance, BOOL enabled)
         return;
     CWebViewPlugin *webViewPlugin = (__bridge CWebViewPlugin *)instance;
     [webViewPlugin setInteractionEnabled:enabled];
-}
-
-void _CWebViewPlugin_SetGoogleAppRedirectionEnabled(void *instance, BOOL enabled)
-{
-    if (instance == NULL)
-        return;
-    CWebViewPlugin *webViewPlugin = (__bridge CWebViewPlugin *)instance;
-    [webViewPlugin setGoogleAppRedirectionEnabled:enabled];
 }
 
 void _CWebViewPlugin_SetAlertDialogEnabled(void *instance, BOOL enabled)
@@ -1259,11 +1012,6 @@ void _CWebViewPlugin_ClearCustomHeader(void *instance)
     [webViewPlugin clearCustomRequestHeader];
 }
 
-void _CWebViewPlugin_ClearCookie(const char *url, const char *name)
-{
-    [CWebViewPlugin clearCookie:name of:url];
-}
-
 void _CWebViewPlugin_ClearCookies()
 {
     [CWebViewPlugin clearCookies];
@@ -1274,10 +1022,9 @@ void _CWebViewPlugin_SaveCookies()
     [CWebViewPlugin saveCookies];
 }
 
-void _CWebViewPlugin_GetCookies(void *instance, const char *url)
+const char *_CWebViewPlugin_GetCookies(const char *url)
 {
-    CWebViewPlugin *webViewPlugin = (__bridge CWebViewPlugin *)instance;
-    [webViewPlugin getCookies:url];
+    return [CWebViewPlugin getCookies:url];
 }
 
 const char *_CWebViewPlugin_GetCustomHeaderValue(void *instance, const char *headerKey)
@@ -1304,11 +1051,4 @@ void _CWebViewPlugin_ClearCache(void *instance, BOOL includeDiskFiles)
     [webViewPlugin clearCache:includeDiskFiles];
 }
 
-void _CWebViewPlugin_SetSuspended(void *instance, BOOL suspended)
-{
-    if (instance == NULL)
-        return;
-    CWebViewPlugin *webViewPlugin = (__bridge CWebViewPlugin *)instance;
-    [webViewPlugin setAllMediaPlaybackSuspended:suspended];
-}
 #endif // !(__IPHONE_OS_VERSION_MIN_REQUIRED < __IPHONE_9_0)

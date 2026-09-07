@@ -458,15 +458,6 @@
         },
         {
             "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "LightProbeGroup",
-            "fullManagedTypeName": "UnityEngine.LightProbeGroup",
-            "moduleName": "Core",
-            "usedInScenes": [
-                "Assets/Scenes/Meshing/OcclusionMeshes.unity"
-            ]
-        },
-        {
-            "managedAssemblyName": "UnityEngine.dll",
             "nativeClass": "Cubemap",
             "fullManagedTypeName": "UnityEngine.Cubemap",
             "moduleName": "Core",
@@ -665,6 +656,13 @@
             "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
             "fullManagedTypeName": "QuitBehavior",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "Readme",
             "moduleName": "",
             "usedInScenes": []
         },
