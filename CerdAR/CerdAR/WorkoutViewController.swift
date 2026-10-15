@@ -192,24 +192,35 @@ extension WorkoutViewController:WorkoutCellDelegate {
    
     func send(workout: HKWorkout) {
         if !isLogin {
-            GIDSignIn.sharedInstance.signIn(with: signInConfig, presenting: self) { user, error in
-                guard error == nil else { return }
-                guard let user = user else { return }
+
+            GIDSignIn.sharedInstance.configuration = signInConfig
+
+            GIDSignIn.sharedInstance.signIn(withPresenting: self) { signInResult, error in
+                guard error == nil else {
+                    print("Google Sign-In error: \(error!.localizedDescription)")
+                    return
+                }
+
+                guard let signInResult = signInResult else {
+                    return
+                }
+
+                let user = signInResult.user
 
                 if let emailAddress = user.profile?.email {
                     email = emailAddress
                     isLogin = true
                     self.sendFile(workout: workout)
                 }
-              }
-        }else {
+            }
+
+        } else {
             sendFile(workout: workout)
         }
-       
-        
-
     }
+
 }
+
 extension WorkoutViewController:UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 220
