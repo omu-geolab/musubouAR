@@ -18,7 +18,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        GIDSignIn.sharedInstance.configuration = signInConfig
     }
     
     @IBAction func closeLogin(_ sender: Any) {
@@ -44,13 +44,22 @@ class LoginViewController: UIViewController {
        
     }
     @IBAction func signIn(_ sender: Any) {
-        GIDSignIn.sharedInstance.signIn(with: signInConfig, presenting: self) { user, error in
-            guard error == nil else { return }
-            guard let user = user else { return }
+        GIDSignIn.sharedInstance.signIn(withPresenting: self) { signInResult, error in
+            guard error == nil else {
+                print("Google Sign-In error: \(error!.localizedDescription)")
+                return
+            }
+
+            guard let signInResult = signInResult else {
+                return
+            }
+
+            let user = signInResult.user
 
             if let emailAddress = user.profile?.email {
                 email = emailAddress
                 isLogin = true
+
                 let view = UIStoryboard(name: "WorkoutsView", bundle: .main)
                 if let vc = view.instantiateInitialViewController() as? WorkoutViewController {
                     vc.modalPresentationStyle = .fullScreen
@@ -60,8 +69,7 @@ class LoginViewController: UIViewController {
                     })
                 }
             }
-
-          }
+        }
     }
     func validateEmail(candidate: String) -> Bool {
            let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}"
