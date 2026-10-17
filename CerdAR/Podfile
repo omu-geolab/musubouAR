@@ -27,10 +27,6 @@ post_install do |installer|
         # iOSのターゲットバージョンを15.0に引き上げ
         config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '15.0'
         
-        # 外部ライブラリの署名エラーを回避（追加部分）
-        config.build_settings['EXPANDED_CODE_SIGN_IDENTITY'] = ""
-        config.build_settings['CODE_SIGNING_REQUIRED'] = "NO"
-        config.build_settings['CODE_SIGNING_ALLOWED'] = "NO"
       end
     end
   end
